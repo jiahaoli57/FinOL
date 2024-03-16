@@ -4,12 +4,8 @@
     <list default="true" id="55cefa66-5375-4865-a26f-13f44be25333" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/../.gitattributes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/FinOL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FinOL.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace(冲突时的文件备份2024-03-08 10-54-27).xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +41,7 @@
       <workItem from="1710573371155" duration="84000" />
       <workItem from="1710573471398" duration="411000" />
       <workItem from="1710573900159" duration="44000" />
+      <workItem from="1710574766959" duration="23000" />
     </task>
     <servers />
   </component>
