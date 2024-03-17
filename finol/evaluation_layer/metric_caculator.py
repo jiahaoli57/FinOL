@@ -74,7 +74,7 @@ def caculate_TCW(NUM_PERIODS, NUM_ASSETS, model, test_loader):
     TRANSACTIOS_COSTS_RATE = METRIC_CONFIG.get("PRACTICAL_METRICS")["TRANSACTIOS_COSTS_RATE"]
     TRANSACTIOS_COSTS_RATE_INTERVAL = METRIC_CONFIG.get("PRACTICAL_METRICS")["TRANSACTIOS_COSTS_RATE_INTERVAL"]
 
-    for tc_rate in np.arange(0, TRANSACTIOS_COSTS_RATE, TRANSACTIOS_COSTS_RATE_INTERVAL):
+    for tc_rate in np.arange(0, TRANSACTIOS_COSTS_RATE + TRANSACTIOS_COSTS_RATE_INTERVAL, TRANSACTIOS_COSTS_RATE_INTERVAL):
         portfolio_o = np.zeros(NUM_ASSETS)
         label_list = []
         portfolio_list = []
@@ -100,105 +100,55 @@ def caculate_TCW(NUM_PERIODS, NUM_ASSETS, model, test_loader):
 
         result = np.cumprod(daily_return_list)
         df.loc[len(df)] = [tc_rate, result[-1]]
-    return df
+    return df["TCW"]
 
 
-def caculate_metric(model, test_loader):
-    label_list = []
-    portfolio_list = []
+def caculate_metric(train_model_output, load_dataset_output):
+    model = train_model_output["best_model"]
+    logdir = train_model_output["logdir"]
+    if model == None:
+        model = torch.load(logdir + '/best_model_'+DATASET_NAME+'.pt')
+
+    model.eval()
+    test_loader = load_dataset_output["test_loader"]
+    NUM_TEST_PERIODS = load_dataset_output["NUM_TEST_PERIODS"]
+    NUM_ASSETS = load_dataset_output["NUM_ASSETS"]
+
+    portfolios = torch.zeros((NUM_TEST_PERIODS, NUM_ASSETS))
+    labels = torch.zeros((NUM_TEST_PERIODS, NUM_ASSETS))
 
     start_time = time.time()
-    for i, data in enumerate(test_loader, 1):
+    for i, data in enumerate(test_loader, 0):
         x_data, label = data
-        label_list.append(label)
+        labels[i, :] = label
 
         portfolio = model(x_data.float())
-        portfolio_list.append(portfolio)
+        portfolios[i, :] = portfolio
 
     runtime = time.time() - start_time
-    labels = torch.cat(label_list, dim=0)
-    portfolios = torch.cat(portfolio_list, dim=0)
 
-    CW = None
-    DCW = None
-    APY = None
-    SR = None
-    VR = None
-    ATO = None
-    TCW = None
-    RT = None
     labels = labels.cpu().detach().numpy()
     portfolios = portfolios.cpu().detach().numpy()
-    NUM_PERIODS = portfolios.shape[0]
-    NUM_ASSETS = portfolios.shape[1]
 
     daily_return = np.sum(labels * portfolios, axis=1)
     total_return = np.cumprod(daily_return)
 
+    caculate_metric_output = {}
+
     if METRIC_CONFIG.get('INCLUDE_PROFIT_METRICS'):
-        CW = caculate_CW(total_return)
-        DCW = total_return
-        APY = caculate_APY(total_return)
-        SR, sigma = caculate_SR(daily_return, APY)
+        caculate_metric_output["CW"] = caculate_CW(total_return)
+        caculate_metric_output["DCW"] = total_return
+        caculate_metric_output["APY"] = caculate_APY(total_return)
+        caculate_metric_output["SR"], sigma = caculate_SR(daily_return, caculate_metric_output["APY"])
 
     if METRIC_CONFIG.get('INCLUDE_RISK_METRICS'):
-        VR = sigma
-        MDD, DDD = caculate_MDD(total_return)
+        caculate_metric_output["VR"] = sigma
+        caculate_metric_output["MDD"], caculate_metric_output["DDD"] = caculate_MDD(total_return)
 
     if METRIC_CONFIG.get("PRACTICAL_METRICS")["INCLUDE_PRACTICAL_METRICS"]:
-        ATO = caculate_ATO(NUM_PERIODS, NUM_ASSETS, model, test_loader)
-        TCW = caculate_TCW(NUM_PERIODS, NUM_ASSETS, model, test_loader)
-        RT = runtime
+        caculate_metric_output["ATO"] = caculate_ATO(NUM_TEST_PERIODS, NUM_ASSETS, model, test_loader)
+        caculate_metric_output["TCW"] = caculate_TCW(NUM_TEST_PERIODS, NUM_ASSETS, model, test_loader)
+        caculate_metric_output["RT"] = runtime
 
-
-    caculate_metric_output = {
-        "CW": CW,
-        "DCW": DCW,
-        "APY": APY,
-        "SR": SR,
-        "VR": VR,
-        "MDD": MDD,
-        "DDD": DDD,
-        "ATO": ATO,
-        "TCW": TCW,
-        "RT": RT,
-    }
+    caculate_metric_output["logdir"] = logdir
     return caculate_metric_output
-# # Calculate some numerical results based on the rewards and other metrics
-#
-# daily_return = all_reward_list
-# total_return = test_wealth_list
-#
-# # Calculate and print the average turnover (AT) rate
-# print(f'Final AT rate: {sum(dai_TO) / (2 * (len(dai_TO) - 1))}')
-#
-#
-# day = 252  # Number of trading days in a year
-# T = len(dai_TO)  # Total number of trading periods
-# y = T / day  # Number of years
-#
-# APY = pow(total_return[-1], 1 / y) - 1  # APY formula
-# print(f'y: {y}')
-# print(f'APY: {APY}')
-#
-
-#
-
-#
-# # Calculate and print the volatility ratio (VR)
-# VR = sigma  # Volatility ratio is the same as standard deviation of daily returns (annualized)
-# print(f'VR: {VR}')
-#
-# # Create a table to display the numerical results using rich.table module
-# table = Table(title="Numerical results")
-#
-# table.add_column("Metrics", style="cyan")  # no_wrap=True
-# table.add_column("Results", style="magenta")
-#
-# table.add_row("Return", f'&{round(test_wealth, 2)}&{round(APY, 2)}&{round(SR, 2)}')
-# table.add_row("Risk", f'&{round(sigma, 2)}&{round(MDD, 2)}')
-# table.add_row("TO", f'&{round((sum(dai_TO) / (2 * (len(dai_TO) - 1))) * 100, 2)}\%')
-# table.add_row("Ablation Study", f'&{round(test_wealth, 2)}&{round(SR, 2)}&{round(MDD, 2)}')
-#
-# console = Console()
-# console.print(table)

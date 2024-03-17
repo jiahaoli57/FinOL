@@ -239,19 +239,23 @@ def data_cleaning(df):
     # return
 
 
-def data_normalization(df):
+def zscore_calculation(df):
+    df_normalized = df.copy()
+    numeric_features = df.select_dtypes(include=['int', 'float']).columns
+    scaler = select_scaler()
+    zscore = scaler.fit(df_normalized[numeric_features])  # zscore is different for different assets
+
+    return zscore
+
+
+def data_normalization(df, zscore):
     """
     Normalize all numeric features in DataFrame
     """
-
-    # Create a copy of the DataFrame
     df_normalized = df.copy()
-
-    # Only numerical features are scaled
-    numeric_features = df.select_dtypes(include=['int', 'float']).columns
-
     scaler = select_scaler()
-    df_normalized[numeric_features] = scaler.fit_transform(df_normalized[numeric_features])
+    numeric_features = df.select_dtypes(include=['int', 'float']).columns
+    df_normalized[numeric_features] = zscore.transform(df_normalized[numeric_features])
 
     return df_normalized
 
@@ -383,9 +387,10 @@ def load_dataset():
             train, val, test = data_splitting(df)
             train_label, val_label, test_label = data_splitting(df_label)
 
-            train_normalization = data_normalization(train)
-            val_normalization = data_normalization(val)
-            test_normalization = data_normalization(test)
+            zscore_train = zscore_calculation(train)
+            train_normalization = data_normalization(train, zscore_train)
+            val_normalization = data_normalization(val, zscore_train)
+            test_normalization = data_normalization(test, zscore_train)
 
             nan_count = df.isna().sum().sum()
             if nan_count != 0:
@@ -419,17 +424,16 @@ def load_dataset():
         val_ids = TensorDataset(ds_val, label_val)
         test_ids = TensorDataset(ds_test, label_test)
 
-        train_loader = DataLoader(train_ids, batch_size=BATCH_SIZE, shuffle=False, drop_last=False)
-        val_loader = DataLoader(val_ids, batch_size=BATCH_SIZE, shuffle=False, drop_last=False)
+        train_loader = DataLoader(train_ids, batch_size=BATCH_SIZE[DATASET_NAME], shuffle=False, drop_last=False)
+        val_loader = DataLoader(val_ids, batch_size=BATCH_SIZE[DATASET_NAME], shuffle=False, drop_last=False)
         test_loader = DataLoader(test_ids, batch_size=1, shuffle=False, drop_last=False)
 
     else:
         print("No Excel files found.")
 
-
-    from scipy import io
+    # from scipy import io
     # Save the price relative tensor to a mat file with the data set name
-    io.savemat('price_relative_' + DATASET_NAME + '.mat', {'data': df_label_MATLAB.values})
+    # io.savemat('price_relative_' + DATASET_NAME + '.mat', {'data': df_label_MATLAB.values})
 
     load_dataset_output = {
         "train_loader": train_loader,

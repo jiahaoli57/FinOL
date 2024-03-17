@@ -2,24 +2,168 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55cefa66-5375-4865-a26f-13f44be25333" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/finol/evaluation_layer/logdir/Tutorial_3/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorials/TUT.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitattributes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.log" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/1/final_practical_result.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/NYSE(O)/final_practical_result.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/1/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/NYSE(O)/transaction_costs_adjusted_cumulative_wealth.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/2/final_practical_result.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/NYSE(N)/final_practical_result.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/2/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/NYSE(N)/transaction_costs_adjusted_cumulative_wealth.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/3/final_practical_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/3/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/4/final_practical_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/4/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/5/final_practical_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/5/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/6/final_practical_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/6/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/7/final_practical_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/7/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/8/final_practical_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/8/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/9/final_practical_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/9/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/ato.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/tcw.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/1/daily_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/1/daily_return.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/1/final_profit_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/2/daily_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/2/daily_return.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/2/final_profit_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/3/daily_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/3/daily_return.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/3/final_profit_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/4/daily_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/4/daily_return.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/4/final_profit_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/5/daily_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/5/daily_return.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/5/final_profit_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/6/daily_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/6/daily_return.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/6/final_profit_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/7/daily_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/7/daily_return.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/7/final_profit_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/8/daily_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/8/daily_return.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/8/final_profit_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/9/daily_cumulative_wealth.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/9/daily_return.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/9/final_profit_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/cw_apy_sr_PREVIOUS.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/daily_cw_PREVIOUS.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/1/daily_drawdown.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/1/final_risk_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/2/daily_drawdown.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/2/final_risk_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/3/daily_drawdown.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/3/final_risk_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/4/daily_drawdown.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/4/final_risk_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/5/daily_drawdown.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/5/final_risk_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/6/daily_drawdown.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/6/daily_return.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/6/final_risk_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/7/daily_drawdown.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/7/final_risk_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/8/daily_drawdown.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/8/final_risk_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/9/daily_drawdown.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/9/final_risk_result.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/vr_mdd_PREVIOUS.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/data_layer/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/data_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/data_layer/scaler_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/scaler_selector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-53-19/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-53-56/best_model_CRYPTO.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-53-56/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-53-56/last_model_CRYPTO.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-53-56/loss_CRYPTO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-55-00/best_model_CRYPTO.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-55-00/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-55-00/last_model_CRYPTO.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-58-39/best_model_CRYPTO.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-58-39/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-58-39/last_model_CRYPTO.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-10-06/best_model_NYSE(O).pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-10-06/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-10-06/last_model_NYSE(O).pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-10-06/loss_NYSE(O).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-16-53/best_model_NYSE(O).pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-16-53/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-16-53/last_model_NYSE(O).pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-16-53/loss_NYSE(O).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-27-54/best_model_NYSE(O).pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-27-54/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-27-54/last_model_NYSE(O).pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-27-54/loss_NYSE(O).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-45-10/best_model_NYSE(O).pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-45-10/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-45-10/last_model_NYSE(O).pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_15-06-10/best_model_NYSE(O).pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_15-06-10/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_15-06-10/last_model_NYSE(O).pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/Tutorial_3/best_model_SP500.pt" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/logdir/Tutorial_3/best_model_SP500.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/Tutorial_3/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/logdir/Tutorial_3/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/benchmark_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/benchmark_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/metric_caculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/metric_caculator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/model_evaluator.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/model_evaluator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/criterion_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/criterion_selector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finolconfig.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/main.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/tutorial_1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/tutorial_2.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/tutorial_3.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_4.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/tutorial_4.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_5.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/tutorial_5.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2dlCe0mL62FpJ7eEhnRqJIoacfA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,6 +173,140 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol\evaluation_layer" />
+      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol\evaluation_layer\logdir" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.model_trainer">
+    <configuration name="LSRE_CAAN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FinOL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/model_layer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="benchmark_loader" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FinOL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/evaluation_layer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/evaluation_layer/benchmark_loader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="model_evaluator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FinOL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/evaluation_layer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/evaluation_layer/model_evaluator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="model_trainer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FinOL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/optimization_layer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FinOL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.benchmark_loader" />
+      <item itemvalue="Python.model_evaluator" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.LSRE_CAAN" />
+      <item itemvalue="Python.model_trainer" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.model_trainer" />
+        <item itemvalue="Python.model_evaluator" />
+        <item itemvalue="Python.benchmark_loader" />
+        <item itemvalue="Python.LSRE_CAAN" />
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -41,7 +319,11 @@
       <workItem from="1710573371155" duration="84000" />
       <workItem from="1710573471398" duration="411000" />
       <workItem from="1710573900159" duration="44000" />
-      <workItem from="1710574766959" duration="23000" />
+      <workItem from="1710574766959" duration="11325000" />
+      <workItem from="1710588123744" duration="349000" />
+      <workItem from="1710589257034" duration="11178000" />
+      <workItem from="1710603462663" duration="9035000" />
+      <workItem from="1710643876891" duration="15268000" />
     </task>
     <servers />
   </component>
@@ -58,5 +340,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FinOL$model_evaluator.coverage" NAME="model_evaluator 覆盖结果" MODIFIED="1710660428337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/evaluation_layer" />
+    <SUITE FILE_PATH="coverage/FinOL$config.coverage" NAME="config 覆盖结果" MODIFIED="1710576380376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol" />
+    <SUITE FILE_PATH="coverage/FinOL$LSRE_CAAN.coverage" NAME="LSRE_CAAN 覆盖结果" MODIFIED="1710595432525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/model_layer" />
+    <SUITE FILE_PATH="coverage/FinOL$test.coverage" NAME="test 覆盖结果" MODIFIED="1710576961075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FinOL$benchmark_loader.coverage" NAME="benchmark_loader 覆盖结果" MODIFIED="1710595511506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/evaluation_layer" />
+    <SUITE FILE_PATH="coverage/FinOL$model_trainer.coverage" NAME="model_trainer 覆盖结果" MODIFIED="1710662179884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/optimization_layer" />
   </component>
 </project>

@@ -3,10 +3,10 @@ from rich import print
 from finol.config import *
 
 scaler_dict = {
+    'StandardScaler': preprocessing.StandardScaler,
     'MinMaxScaler': preprocessing.MinMaxScaler,
     'MaxAbsScaler': preprocessing.MaxAbsScaler,
     'RobustScaler': preprocessing.RobustScaler,
-    'StandardScaler': preprocessing.StandardScaler,
 }
 
 

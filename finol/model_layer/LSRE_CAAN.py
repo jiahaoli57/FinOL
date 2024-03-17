@@ -243,13 +243,6 @@ class LSRE_CAAN(nn.Module):
 
         # [batch_size, num_assets, num_features_augmented] -> [batch_size, num_assets, window_size, num_features_original]
         x = x.view(batch_size, num_assets, window_size, num_features_original)
-
-        # [batch_size, num_assets, window_size, num_features_original] -> [batch_size, window_size, num_assets * num_features_original]
-        # x = x.reshape(batch_size, num_assets, window_size, -1)
-        # x = x.transpose(1, 2)
-        # x = x.reshape(batch_size, window_size, -1)
-
-        # x = rearrange(x, 'b m n d -> b n (m d)')
         x = rearrange(x, 'b m n d -> (b m) n d')
 
         # print(f'x.shape: {x.shape}')
@@ -297,31 +290,35 @@ class LSRE_CAAN(nn.Module):
         # else:
 
         portfolio = F.softmax(final_scores, dim=-1)
-
         return portfolio  # with size [batch_size, num_assets] or [num_assets, 1]
 
 if __name__ == '__main__':
-    batch_size = 2
-    num_assets = 4
-    num_features_augmented = 9
-    num_features_original = 3
-    window_size = 3
+    batch_size = 128
+    num_assets = 26
+    num_features_augmented = 1430
+    num_features_original = 143
+    window_size = 10
 
     # 创建一个示例输入张量
     x = torch.arange(batch_size * num_assets * num_features_augmented).reshape(batch_size, num_assets, num_features_augmented)
     print("原始张量:")
-    print(x)
     print("原始张量形状:", x.shape)
 
-    # 将张量 x 转换为形状为 [batch_size, num_assets, window_size, num_features_original] 的张量
-    x_transformed = x.view(batch_size, num_assets, window_size, num_features_original)
-    print("转换后的张量:")
-    print(x_transformed)
-    print("转换后的张量形状:", x_transformed.shape)
-    print('*' * 50)
-    print(
-        x_transformed[0, 1, 2, :]
-    )
+    model = LSRE_CAAN(
+            num_assets=num_assets,
+            num_features_augmented=num_features_augmented,
+            num_features_original=num_features_original,
+            window_size=window_size)
+    out = model(x)
+    # # 将张量 x 转换为形状为 [batch_size, num_assets, window_size, num_features_original] 的张量
+    # x_transformed = x.view(batch_size, num_assets, window_size, num_features_original)
+    # print("转换后的张量:")
+    # print(x_transformed)
+    # print("转换后的张量形状:", x_transformed.shape)
+    # print('*' * 50)
+    # print(
+    #     x_transformed[0, 1, 2, :]
+    # )
 
     # x_transformed = x_transformed.reshape(batch_size, num_assets, window_size, -1)
     # x_transformed = x_transformed.transpose(1,2)

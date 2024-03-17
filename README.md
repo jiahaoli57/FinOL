@@ -68,7 +68,7 @@ Online portfolio selection (OLPS) is an important issue in operations research c
 adjust portfolios according to market changes. In the past, OLPS research relied on a general database called ``OLPS`` 
 containing price relatives data of financial assets across different markets. However, with the widespread adoption of 
 data-driven technologies like machine learning in finance, ``OLPS`` can no longer meet the needs of OLPS research because 
-due to the lack of support for complex data types, high-dimensional feature spaces, and multi-source data fusion. To solve 
+due to the lack of support for high-dimensional feature spaces. To solve 
 this problem, we propose ``FinOL``, an open finance platform for advancing research in data-driven OLPS. ``FinOL`` expands 
 and enriches the previous ``OLPS`` database, containing 9 benchmark financial datasets from 1962 to present across global 
 markets. To promote fair comparisons, we evaluate a large number of past classic OLPS methods on ``FinOL``, providing 
