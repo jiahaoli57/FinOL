@@ -2,136 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55cefa66-5375-4865-a26f-13f44be25333" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/finol/evaluation_layer/logdir/Tutorial_3/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorials/TUT.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitattributes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_1_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_1_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_1_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_2_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_2_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_2_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_1_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_1_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_1_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_2_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_2_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_2_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_1_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_1_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_1_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_2_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_2_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_2_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_1_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_1_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_1_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_2_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_2_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_2_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.log" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.out" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_1_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_1_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_1_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_2_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_2_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_2_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_1_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_1_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_1_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_2_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_2_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_2_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_1_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_1_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_1_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_2_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_2_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_2_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_1_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_1_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_1_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_2_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_2_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_2_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_1_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_1_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_1_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_2_DCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_2_DDD.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_2_TCW.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.log" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/1/final_practical_result.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/NYSE(O)/final_practical_result.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/1/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/NYSE(O)/transaction_costs_adjusted_cumulative_wealth.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/2/final_practical_result.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/NYSE(N)/final_practical_result.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/2/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/NYSE(N)/transaction_costs_adjusted_cumulative_wealth.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/3/final_practical_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/3/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/4/final_practical_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/4/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/5/final_practical_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/5/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/6/final_practical_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/6/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/7/final_practical_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/7/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/8/final_practical_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/8/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/9/final_practical_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/9/transaction_costs_adjusted_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/ato.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/practical_metrics/tcw.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/1/daily_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/1/daily_return.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/1/final_profit_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/2/daily_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/2/daily_return.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/2/final_profit_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/3/daily_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/3/daily_return.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/3/final_profit_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/4/daily_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/4/daily_return.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/4/final_profit_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/5/daily_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/5/daily_return.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/5/final_profit_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/6/daily_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/6/daily_return.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/6/final_profit_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/7/daily_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/7/daily_return.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/7/final_profit_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/8/daily_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/8/daily_return.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/8/final_profit_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/9/daily_cumulative_wealth.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/9/daily_return.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/9/final_profit_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/cw_apy_sr_PREVIOUS.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/profit_metrics/daily_cw_PREVIOUS.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/1/daily_drawdown.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/1/final_risk_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/2/daily_drawdown.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/2/final_risk_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/3/daily_drawdown.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/3/final_risk_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/4/daily_drawdown.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/4/final_risk_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/5/daily_drawdown.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/5/final_risk_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/6/daily_drawdown.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/6/daily_return.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/6/final_risk_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/7/daily_drawdown.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/7/final_risk_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/8/daily_drawdown.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/8/final_risk_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/9/daily_drawdown.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/9/final_risk_result.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/benchmark_results/risk_metrics/vr_mdd_PREVIOUS.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/data_layer/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/data_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/data_layer/scaler_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/scaler_selector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-53-19/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-53-56/best_model_CRYPTO.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-53-56/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-53-56/last_model_CRYPTO.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-53-56/loss_CRYPTO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-55-00/best_model_CRYPTO.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-55-00/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-55-00/last_model_CRYPTO.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-58-39/best_model_CRYPTO.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-58-39/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-13_21-58-39/last_model_CRYPTO.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-10-06/best_model_NYSE(O).pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-10-06/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-10-06/last_model_NYSE(O).pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-10-06/loss_NYSE(O).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-16-53/best_model_NYSE(O).pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-16-53/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-16-53/last_model_NYSE(O).pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-16-53/loss_NYSE(O).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-27-54/best_model_NYSE(O).pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-27-54/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-27-54/last_model_NYSE(O).pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-27-54/loss_NYSE(O).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-45-10/best_model_NYSE(O).pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-45-10/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_14-45-10/last_model_NYSE(O).pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_15-06-10/best_model_NYSE(O).pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_15-06-10/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/2024-03-14_15-06-10/last_model_NYSE(O).pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/Tutorial_3/best_model_SP500.pt" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/logdir/Tutorial_3/best_model_SP500.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/Tutorial_3/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/logdir/Tutorial_3/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/benchmark_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/benchmark_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/metric_caculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/metric_caculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/model_evaluator.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/model_evaluator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/criterion_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/criterion_selector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finolconfig.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/main.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/tutorial_1.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/tutorial_2.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/tutorial_3.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_4.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/tutorial_4.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_5.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/tutorial_5.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +110,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -324,6 +262,9 @@
       <workItem from="1710589257034" duration="11178000" />
       <workItem from="1710603462663" duration="9035000" />
       <workItem from="1710643876891" duration="15268000" />
+      <workItem from="1710662345397" duration="739000" />
+      <workItem from="1710663335073" duration="1587000" />
+      <workItem from="1710664955131" duration="315000" />
     </task>
     <servers />
   </component>
@@ -335,7 +276,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
