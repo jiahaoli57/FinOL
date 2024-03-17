@@ -3,7 +3,6 @@ import json5
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
-from rich import print
 from finol import utils
 from finol.config import *
 

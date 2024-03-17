@@ -1,5 +1,5 @@
 __version__ = "0.0.1"
-__author__ = "FinOL developers"
+__author__ = "Jiahao Li"
 
 #
 from finol.benchmark_results import *

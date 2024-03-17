@@ -1,9 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55cefa66-5375-4865-a26f-13f44be25333" name="变更" comment="》">
-      <change beforePath="$PROJECT_DIR$/finol/update.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/update/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
+    <list default="true" id="55cefa66-5375-4865-a26f-13f44be25333" name="变更" comment="commit">
+      <change afterPath="$PROJECT_DIR$/finol/tutorials/_.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finol/tutorials/main.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/data_layer/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/data_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/data_layer/scaler_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/scaler_selector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/benchmark_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/benchmark_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/DJIA_PLOT_ALL_1_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/DJIA_PLOT_ALL_1_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/DJIA_PLOT_ALL_1_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/DJIA_PLOT_ALL_2_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/DJIA_PLOT_ALL_2_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/DJIA_PLOT_ALL_2_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/DJIA_PLOT_ALL_3_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/DJIA_PLOT_ALL_3_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/DJIA_PLOT_ALL_3_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/DJIA_PLOT_ALL_4_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/DJIA_PLOT_ALL_4_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/DJIA_PLOT_ALL_4_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/DJIA_PLOT_ALL_5_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/DJIA_PLOT_ALL_5_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/DJIA_PLOT_ALL_5_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/best_model_DJIA.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/last_model_DJIA.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-29-14/loss_DJIA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/DJIA_PLOT_ALL_1_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/DJIA_PLOT_ALL_1_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/DJIA_PLOT_ALL_1_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/DJIA_PLOT_ALL_2_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/DJIA_PLOT_ALL_2_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/DJIA_PLOT_ALL_2_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/DJIA_PLOT_ALL_3_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/DJIA_PLOT_ALL_3_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/DJIA_PLOT_ALL_3_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/DJIA_PLOT_ALL_4_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/DJIA_PLOT_ALL_4_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/DJIA_PLOT_ALL_4_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/DJIA_PLOT_ALL_5_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/DJIA_PLOT_ALL_5_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/DJIA_PLOT_ALL_5_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/best_model_DJIA.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/last_model_DJIA.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_12-33-29/loss_DJIA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/DJIA_PLOT_ALL_1_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/DJIA_PLOT_ALL_1_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/DJIA_PLOT_ALL_1_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/DJIA_PLOT_ALL_2_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/DJIA_PLOT_ALL_2_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/DJIA_PLOT_ALL_2_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/DJIA_PLOT_ALL_3_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/DJIA_PLOT_ALL_3_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/DJIA_PLOT_ALL_3_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/DJIA_PLOT_ALL_4_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/DJIA_PLOT_ALL_4_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/DJIA_PLOT_ALL_4_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/DJIA_PLOT_ALL_5_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/DJIA_PLOT_ALL_5_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/DJIA_PLOT_ALL_5_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/best_model_DJIA.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/last_model_DJIA.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-02-07/loss_DJIA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-07-42/best_model_TSE.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-07-42/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-07-42/last_model_TSE.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-07-42/loss_TSE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-12-15/best_model_TSE.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-12-15/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-12-15/last_model_TSE.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-12-15/loss_TSE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/TSE_PLOT_ALL_1_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/TSE_PLOT_ALL_1_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/TSE_PLOT_ALL_1_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/TSE_PLOT_ALL_2_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/TSE_PLOT_ALL_2_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/TSE_PLOT_ALL_2_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/TSE_PLOT_ALL_3_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/TSE_PLOT_ALL_3_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/TSE_PLOT_ALL_3_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/TSE_PLOT_ALL_4_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/TSE_PLOT_ALL_4_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/TSE_PLOT_ALL_4_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/TSE_PLOT_ALL_5_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/TSE_PLOT_ALL_5_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/TSE_PLOT_ALL_5_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/best_model_TSE.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/last_model_TSE.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_13-16-51/loss_TSE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_14-09-27/best_model_TSE.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_14-09-27/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_14-09-27/last_model_TSE.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_14-09-27/loss_TSE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_15-56-24/best_model_CRYPTO.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_15-56-24/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/2024-03-17_15-56-24/last_model_CRYPTO.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/Tutorial_3/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/Tutorial_3/best_model_SP500.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/logdir/Tutorial_3/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/model_layer/model_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/model_selector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/criterion_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/criterion_selector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/optimizer_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/optimizer_selector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/price_relative_CRYPTO.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/price_relative_NYSE(O).mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/.ipynb_checkpoints/tutorial_1-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/TUT.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/main.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/test.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_1.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_2.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_3.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_4.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_5.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +132,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -44,15 +163,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol\evaluation_layer" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol\evaluation_layer\logdir" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.model_trainer">
+  <component name="RunManager" selected="Python.main">
     <configuration name="LSRE_CAAN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FinOL" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -89,6 +209,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/evaluation_layer/benchmark_loader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FinOL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../../../../../python_project/finol_1" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../../../../../python_project/finol_1/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -141,42 +283,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FinOL" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.benchmark_loader" />
       <item itemvalue="Python.model_evaluator" />
-      <item itemvalue="Python.test" />
       <item itemvalue="Python.LSRE_CAAN" />
       <item itemvalue="Python.model_trainer" />
+      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.model_trainer" />
         <item itemvalue="Python.model_evaluator" />
         <item itemvalue="Python.benchmark_loader" />
         <item itemvalue="Python.LSRE_CAAN" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +318,9 @@
       <workItem from="1710643876891" duration="15268000" />
       <workItem from="1710662345397" duration="739000" />
       <workItem from="1710663335073" duration="1587000" />
-      <workItem from="1710664955131" duration="676000" />
+      <workItem from="1710664955131" duration="4908000" />
+      <workItem from="1710672298228" duration="599000" />
+      <workItem from="1710672918152" duration="286000" />
     </task>
     <task id="LOCAL-00001" summary="》">
       <created>1710665343080</created>
@@ -207,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710665343080</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit">
+      <created>1710665718464</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710665718464</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,11 +372,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="》" />
-    <option name="LAST_COMMIT_MESSAGE" value="》" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FinOL$model_evaluator.coverage" NAME="model_evaluator 覆盖结果" MODIFIED="1710660428337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/evaluation_layer" />
     <SUITE FILE_PATH="coverage/FinOL$config.coverage" NAME="config 覆盖结果" MODIFIED="1710576380376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol" />
+    <SUITE FILE_PATH="coverage/FinOL$main.coverage" NAME="main 覆盖结果" MODIFIED="1710671791650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../../../../../python_project/finol_1" />
     <SUITE FILE_PATH="coverage/FinOL$LSRE_CAAN.coverage" NAME="LSRE_CAAN 覆盖结果" MODIFIED="1710595432525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/model_layer" />
     <SUITE FILE_PATH="coverage/FinOL$test.coverage" NAME="test 覆盖结果" MODIFIED="1710576961075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FinOL$benchmark_loader.coverage" NAME="benchmark_loader 覆盖结果" MODIFIED="1710595511506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/evaluation_layer" />

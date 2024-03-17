@@ -1,11 +1,9 @@
 import torch
-from rich import print
 from finol.config import *
 
 
 def LOG_SINGLE_PERIOD_WEALTH(preds, labels):
     dot_product = torch.sum(preds * labels, dim=-1)
-    # log_max_dot_product = torch.log(dot_product)
     log_max_dot_product = torch.log(torch.clamp(dot_product, min=1e-6))
     loss = - torch.mean(log_max_dot_product)
     return loss

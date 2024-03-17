@@ -1,13 +1,12 @@
 import os
 import matplotlib.pyplot as plt
 plt.style.use('seaborn-talk')
-
+from rich import print
 
 GET_LATEST_FINOL = True
 TUTORIAL_MODE = True
 TUTORIAL_NAME = "TUTORIAL_5"
 ROOT_PATH = os.path.dirname(os.path.realpath(__file__))
-
 
 # Parameters related to data_layer
 DATASET_NAME = "NYSE(O)"  # Available options: NYSE(O), NYSE(N), DJIA, SP500, TSE, SSE, HSI, CMEG, CRYPTO, TUTORIAL
@@ -192,7 +191,7 @@ PLOT_ALL_2 = ["AICTR", "KTPT", "SP", "CW-OGD", "Best"]
 ################################################################################################################
 
 if TUTORIAL_MODE:
-    DATASET_NAME = "CRYPTO"  # NYSE(O), NYSE(N), DJIA, SP500, TSE, SSE, HSI, CMEG, CRYPTO, TUTORIAL
+    DATASET_NAME = "TSE"  # NYSE(O), NYSE(N), DJIA, SP500, TSE, SSE, HSI, CMEG, CRYPTO, TUTORIAL
     DATASET_SPLIT_CONFIG = {
         "NYSE(O)": {
             "TRAIN_START_TIMESTAMP": "1962-07-03",
@@ -279,11 +278,11 @@ if TUTORIAL_MODE:
     }
     DATA_AUGMENTATION_CONFIG = {
         "WINDOW_DATA": {
-            "INCLUDE_WINDOW_DATA": False,
+            "INCLUDE_WINDOW_DATA": True,
             "WINDOW_SIZE": 10
         }
     }
-    SCALER = "RobustScaler"  # StandardScaler, MinMaxScaler, MaxAbsScaler, RobustScaler
+    SCALER = "MinMaxScaler"  # StandardScaler, MinMaxScaler, MaxAbsScaler, RobustScaler
     BATCH_SIZE = {
         "NYSE(O)": 256,
         "NYSE(N)": 256,
@@ -298,7 +297,7 @@ if TUTORIAL_MODE:
 
 
     # Parameters related to model_layer
-    MODEL_NAME = "LSTM"
+    MODEL_NAME = "CNN"
     MODEL_CONFIG = {
         "DNN": {
             "HIDDEN_SIZE": 32
@@ -363,11 +362,11 @@ if TUTORIAL_MODE:
     PLOT_ALL_1 = ["EG", "PPT", "RMR", "RPRT", "Best"]
     PLOT_ALL_2 = ["AICTR", "KTPT", "SP", "CW-OGD", "Best"]
 
-    # PLOT_ALL_1 = BENCHMARK_BASELINE + [MODEL_NAME]
-    # PLOT_ALL_2 = FOLLOW_THE_WINNER + [MODEL_NAME]
-    # PLOT_ALL_3 = FOLLOW_THE_LOSER + [MODEL_NAME]
-    # PLOT_ALL_4 = PATTERN_MATCHING + [MODEL_NAME]
-    # PLOT_ALL_5 = META_LEARNING + [MODEL_NAME]
+    PLOT_ALL_1 = BENCHMARK_BASELINE + [MODEL_NAME]
+    PLOT_ALL_2 = FOLLOW_THE_WINNER + [MODEL_NAME]
+    PLOT_ALL_3 = FOLLOW_THE_LOSER + [MODEL_NAME]
+    PLOT_ALL_4 = PATTERN_MATCHING + [MODEL_NAME]
+    PLOT_ALL_5 = META_LEARNING + [MODEL_NAME]
 
     if TUTORIAL_NAME == "TUTORIAL_1":
         DATASET_NAME = TUTORIAL_NAME

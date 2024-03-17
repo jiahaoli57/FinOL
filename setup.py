@@ -11,16 +11,17 @@ from shutil import rmtree
 
 from setuptools import find_packages, setup, Command
 
+from finol import __version__
+from finol import __author__
+
 # Package meta-data.
 NAME = 'finol'
-DESCRIPTION = 'FinOL represents a pioneering open database for facilitating data-driven financial research. As an ' \
-              'ambitious project, it collects and organizes extensive assets from global markets over half a century, ' \
-              'it provides a long-awaited unified platform to advance data-driven OLPS research.'
-URL = 'https://github.com/ai4finol/finol'
+DESCRIPTION = 'A plug-and-play Python library for data-driven OLPS research'
+URL = 'https://github.com/jiahaoli57/FinOL'
 EMAIL = 'finol.official@gmail.com'
-AUTHOR = 'Jiahao Li'
+AUTHOR = __author__
 REQUIRES_PYTHON = '>=3.9.0'
-VERSION = '0.0.2'
+VERSION = __version__
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -122,7 +123,7 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy'
     ],

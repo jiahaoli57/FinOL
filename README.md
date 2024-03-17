@@ -10,7 +10,7 @@
 [![License](https://img.shields.io/github/license/jiahaoli57/FinOL)](License)
 [![Document](https://img.shields.io/badge/docs-latest-red)](https://finol.readthedocs.io/en/latest/)
 
-[![](https://dcbadge.vercel.app/api/server/3tEwzBBT)](https://discord.gg/3tEwzBBT)
+[![](https://dcbadge.vercel.app/api/server/KCXQt7r3)](https://discord.gg/KCXQt7r3)
 
 [//]: # ([![GitHub stars]&#40;https://img.shields.io/github/stars/ai4finol/finol?color=orange&#41;]&#40;https://github.com/ai4finol/finol/stargazers&#41;)
 
@@ -27,7 +27,7 @@ it provides a long-awaited unified platform to advance data-driven OLPS research
 
 | Update                     | Status                                                                                      |
 |----------------------------|---------------------------------------------------------------------------------------------|
-| Release  ``FinOL``  v0.0.1 | [Released v0.0.1](https://github.com/ai4finol/finol/releases/tag/v1.0.0) on 28 January 2024 |
+| Release  ``FinOL``  v0.0.1 | [Released v0.0.1](https://github.com/jiahaoli57/finol/releases/tag/v0.0.1) on 17 March 2024 |
 
 </div>
 

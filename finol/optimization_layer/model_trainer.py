@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch.nn.functional as F
 import pandas as pd
-from rich import print
 from shutil import copy2
 from IPython import display
 from tqdm import tqdm

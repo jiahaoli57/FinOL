@@ -1,6 +1,5 @@
 import torch
 import torch_optimizer as optim
-from rich import print
 from finol.model_layer.DNN import *
 from finol.model_layer.RNN import *
 from finol.model_layer.LSTM import *

@@ -1,5 +1,4 @@
 from sklearn import preprocessing
-from rich import print
 from finol.config import *
 
 scaler_dict = {

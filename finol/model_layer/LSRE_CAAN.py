@@ -229,7 +229,7 @@ class LSRE_CAAN(nn.Module):
         self.linear_key = torch.nn.Linear(value_dim, value_dim).to(DEVICE)
         self.linear_value = torch.nn.Linear(value_dim, value_dim).to(DEVICE)
         self.linear_winner = torch.nn.Linear(value_dim, 1).to(DEVICE)
-        self.dropout = nn.Dropout(p=DROPOUT)  # 添加dropout层
+        self.dropout = nn.Dropout(p=DROPOUT)
 
         self.lsre_linear = torch.nn.Linear(LATENT_DIM, 1).to(DEVICE)
 
@@ -241,31 +241,23 @@ class LSRE_CAAN(nn.Module):
         window_size = self.window_size
         num_features_original = self.num_features_original
 
-        # [batch_size, num_assets, num_features_augmented] -> [batch_size, num_assets, window_size, num_features_original]
         x = x.view(batch_size, num_assets, window_size, num_features_original)
         x = rearrange(x, 'b m n d -> (b m) n d')
 
-        # print(f'x.shape: {x.shape}')
-        # n, d, device = x.shape[1], x.shape[2], x.device  # n: window size; d: number of features
         n, d = x.shape[1], x.shape[2]  # n: window size; d: number of features
 
         # LSRE
         # x = self.token_emb(x)  # optional
         pos_emb = self.pos_emb(torch.arange(n, device=DEVICE))
-        # print(f'pos_emb.shape: {pos_emb.shape}')
 
         pos_emb = rearrange(pos_emb, 'n d -> () n d')
         x = x + pos_emb
-        # stock_rep = self.lsre(x, mask=None, queries=None)  # [num_assets, window_size, num_feats] -> [num_assets, latent_dim]
         stock_rep = self.lsre(x, mask=None, queries=None)  # [batch_size * num_assets, latent_dim]
-        # print(f'stock_rep.shape: {stock_rep.shape}')
         stock_rep = self.dropout(stock_rep)
 
         # CAAN
         x = stock_rep.view(batch_size, num_assets, self.latent_dim)
-        # x = stock_rep  #  [batch_size, num_assets, num_features_original]
 
-        # 计算查询（Query）、键（Key）和值（Value）
         query = self.linear_query(x)  # [batch_size, num_assets, LATENT_DIM]
         key = self.linear_key(x)  # [batch_size, num_assets, LATENT_DIM]
         value = self.linear_value(x)  # [batch_size, num_assets, LATENT_DIM]
@@ -274,8 +266,6 @@ class LSRE_CAAN(nn.Module):
         beta = F.softmax(beta, dim=-1).unsqueeze(-1)
         x = torch.sum(value.unsqueeze(1) * beta, dim=2)  # [batch_size, num_assets, latent_dim]
 
-        # 打印输出张量的形状
-        # print(output.shape)
         final_scores = self.linear_winner(x).squeeze()  # [BATCH_SIZE, NUM_ASSETS]
 
         # Portfolio Management
@@ -290,45 +280,4 @@ class LSRE_CAAN(nn.Module):
         # else:
 
         portfolio = F.softmax(final_scores, dim=-1)
-        return portfolio  # with size [batch_size, num_assets] or [num_assets, 1]
-
-if __name__ == '__main__':
-    batch_size = 128
-    num_assets = 26
-    num_features_augmented = 1430
-    num_features_original = 143
-    window_size = 10
-
-    # 创建一个示例输入张量
-    x = torch.arange(batch_size * num_assets * num_features_augmented).reshape(batch_size, num_assets, num_features_augmented)
-    print("原始张量:")
-    print("原始张量形状:", x.shape)
-
-    model = LSRE_CAAN(
-            num_assets=num_assets,
-            num_features_augmented=num_features_augmented,
-            num_features_original=num_features_original,
-            window_size=window_size)
-    out = model(x)
-    # # 将张量 x 转换为形状为 [batch_size, num_assets, window_size, num_features_original] 的张量
-    # x_transformed = x.view(batch_size, num_assets, window_size, num_features_original)
-    # print("转换后的张量:")
-    # print(x_transformed)
-    # print("转换后的张量形状:", x_transformed.shape)
-    # print('*' * 50)
-    # print(
-    #     x_transformed[0, 1, 2, :]
-    # )
-
-    # x_transformed = x_transformed.reshape(batch_size, num_assets, window_size, -1)
-    # x_transformed = x_transformed.transpose(1,2)
-    # x_transformed = x_transformed.reshape(batch_size, window_size, -1)
-    # print("转换后的张量:")
-    # print(x_transformed)
-    # print("转换后的张量形状:", x_transformed.shape)
-    # print('*' * 50)
-    # print(
-    #     x_transformed[0, 0, :]
-    # )
-
-    # LSRE_CAAN()
+        return portfolio

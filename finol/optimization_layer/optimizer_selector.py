@@ -1,6 +1,5 @@
 import torch
 import torch_optimizer as optim
-from rich import print
 from finol.config import *
 
 optimizer_dict = {
