@@ -1,7 +1,6 @@
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __author__ = "Jiahao Li"
 
-#
 from finol.benchmark_results import *
 from finol.data_layer import *
 from finol.evaluation_layer import *
