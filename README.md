@@ -93,6 +93,4 @@ For inquiries, please get in touch with us at finol.official@gmail.com (Monday t
 
 [//]: # (## Useful Links)
 
-[//]: # (* [My homepage]&#40;https://jiahaoli57.github.io/&#41;)
-
  

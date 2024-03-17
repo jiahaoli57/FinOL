@@ -1,75 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55cefa66-5375-4865-a26f-13f44be25333" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_1_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_1_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_1_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_2_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_2_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CMEG_PLOT_ALL_2_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_1_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_1_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_1_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_2_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_2_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/CRYPTO_PLOT_ALL_2_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_1_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_1_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_1_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_2_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_2_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/DJIA_PLOT_ALL_2_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_1_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_1_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_1_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_2_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_2_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/HSI_PLOT_ALL_2_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.log" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.out" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/JOC-template.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_1_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_1_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_1_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_2_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_2_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(N)_PLOT_ALL_2_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_1_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_1_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_1_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_2_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_2_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/NYSE(O)_PLOT_ALL_2_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_1_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_1_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_1_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_2_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_2_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SP500_PLOT_ALL_2_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_1_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_1_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_1_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_2_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_2_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/SSE_PLOT_ALL_2_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_1_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_1_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_1_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_1_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_1_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_1_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_2_DCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_2_DCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_2_DDD.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_2_DDD.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_2_TCW.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/JOC-template/TSE_PLOT_ALL_2_TCW.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.log" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../2024.01.26-JOC/Rebuttal Template/ReviewResponse.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="55cefa66-5375-4865-a26f-13f44be25333" name="变更" comment="》">
+      <change beforePath="$PROJECT_DIR$/finol/update.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/update/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,8 +198,16 @@
       <workItem from="1710643876891" duration="15268000" />
       <workItem from="1710662345397" duration="739000" />
       <workItem from="1710663335073" duration="1587000" />
-      <workItem from="1710664955131" duration="315000" />
+      <workItem from="1710664955131" duration="676000" />
     </task>
+    <task id="LOCAL-00001" summary="》">
+      <created>1710665343080</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710665343080</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,11 +224,26 @@
                   <entry key="Show.Git.Branches" value="true" />
                 </map>
               </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
             </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="》" />
+    <option name="LAST_COMMIT_MESSAGE" value="》" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FinOL$model_evaluator.coverage" NAME="model_evaluator 覆盖结果" MODIFIED="1710660428337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/evaluation_layer" />
