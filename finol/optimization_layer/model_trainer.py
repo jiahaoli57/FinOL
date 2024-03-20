@@ -19,7 +19,7 @@ from finol.optimization_layer.optimizer_selector import *
 from finol.evaluation_layer.benchmark_loader import *
 from finol.config import *
 
-logdir = ROOT_PATH + '/evaluation_layer/logdir/' + str(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()))
+logdir = PARENT_PATH + '/logdir/' + str(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()))
 
 is_ipython = 'inline' in matplotlib.get_backend()
 metadata = [
@@ -46,8 +46,8 @@ def plot_loss_notebook(train_loss_list, val_loss_list):
         plt.ion()
         plt.figure(figsize=(12, 5))
         plt.clf()
-        plt.plot(train_loss_list, linestyle='-', marker=MARKERS[0], color='black', alpha=ALPHA, label='train loss')
-        plt.plot(val_loss_list, linestyle=':', marker=MARKERS[1], color='black', alpha=ALPHA, label='val loss')
+        plt.plot(train_loss_list, linestyle='-', marker=MARKERS[0], markevery=MARKEVERY, color='black', alpha=ALPHA, label='train loss')
+        plt.plot(val_loss_list, linestyle=':', marker=MARKERS[1], markevery=MARKEVERY, color='black', alpha=ALPHA, label='val loss')
         plt.xlabel('Epoch')
         plt.ylabel('Loss')
         y_start = 1.0
@@ -71,8 +71,8 @@ def plot_loss(train_loss_list, val_loss_list):
     # not_ipython = 'inline' not in matplotlib.get_backend()
     if not is_ipython:
         plt.figure(figsize=(12, 5))
-        plt.plot(np.array(train_loss_list), linestyle='-', marker=MARKERS[0], color='black', alpha=ALPHA, label='train loss')
-        plt.plot(np.array(val_loss_list), linestyle=':', marker=MARKERS[1], color='black', alpha=ALPHA, label='val loss')
+        plt.plot(np.array(train_loss_list), linestyle='-', marker=MARKERS[0], markevery=MARKEVERY, color='black', alpha=ALPHA, label='train loss')
+        plt.plot(np.array(val_loss_list), linestyle=':', marker=MARKERS[1], markevery=MARKEVERY, color='black', alpha=ALPHA, label='val loss')
         plt.xlabel('Epoch')
         plt.ylabel('Loss')
         plt.legend()
@@ -90,8 +90,8 @@ def plot_loss(train_loss_list, val_loss_list):
 
 
 def train_model(load_dataset_output):
-    torch.manual_seed(42)
-    os.mkdir(logdir)
+    torch.manual_seed(MANUAL_SEED)
+    os.makedirs(logdir)
     copy2(ROOT_PATH + '/config.py', logdir)
 
     print(
@@ -100,6 +100,9 @@ def train_model(load_dataset_output):
     train_loader = load_dataset_output['train_loader']
     val_loader = load_dataset_output['val_loader']
     test_loader = load_dataset_output['test_loader']
+    NUM_TRAIN_PERIODS = load_dataset_output['NUM_TRAIN_PERIODS']
+    NUM_VAL_PERIODS = load_dataset_output['NUM_VAL_PERIODS']
+    NUM_TEST_PERIODS = load_dataset_output['NUM_TEST_PERIODS']
 
     model = select_model(load_dataset_output)
     optimizer = select_optimizer(model)

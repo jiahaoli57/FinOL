@@ -3,5 +3,10 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/finol-0.0.2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/finol-0.0.3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/finol/data" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/finol/data/FinOL_data" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/finol/data_layer/finol_data" vcs="Git" />
   </component>
 </project>

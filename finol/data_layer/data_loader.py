@@ -2,8 +2,6 @@ import os
 import time
 import torch
 
-import json5
-import argparse
 import pandas as pd
 import talib as ta
 import numpy as np
@@ -13,23 +11,21 @@ import matplotlib.pyplot as plt
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
 
-from finol import utils
 from finol.data_layer.scaler_selector import *
 from finol.config import *
 
 
 def data_accessing(folder_path):
-    excel_files = []
+    raw_files = []
     for file_name in tqdm(os.listdir(folder_path), desc="Data Loading"):
         if file_name.endswith('.xlsx') or file_name.endswith('.xls'):
             file_path = os.path.join(folder_path, file_name)
             try:
                 dataframe = pd.read_excel(file_path)
-                excel_files.append(dataframe)
+                raw_files.append(dataframe)
             except Exception as e:
                 print(f"An error occurred while loading file {file_path}: {str(e)}")
-        # break
-    return excel_files
+    return raw_files
 
 
 def feature_engineering(df):
@@ -226,7 +222,6 @@ def data_augmentation(df):
         df = pd.concat([df] + [df.shift(i).add_prefix(f'prev_{i}_') for i in range(1, WINDOW_SIZE)], axis=1)
     else:
         WINDOW_SIZE = 1
-
     return df, WINDOW_SIZE
 
 
@@ -235,15 +230,16 @@ def data_cleaning(df):
     Clean the DataFrame by removing rows with missing values.
     """
     return df.dropna(how='any')
-    # return
 
 
 def zscore_calculation(df):
     df_normalized = df.copy()
     numeric_features = df.select_dtypes(include=['int', 'float']).columns
     scaler = select_scaler()
-    zscore = scaler.fit(df_normalized[numeric_features])  # zscore is different for different assets
-
+    if scaler != None:
+        zscore = scaler.fit(df_normalized[numeric_features])  # zscore is different for different assets
+    else:
+        zscore = None
     return zscore
 
 
@@ -252,10 +248,11 @@ def data_normalization(df, zscore):
     Normalize all numeric features in DataFrame
     """
     df_normalized = df.copy()
-    scaler = select_scaler()
     numeric_features = df.select_dtypes(include=['int', 'float']).columns
-    df_normalized[numeric_features] = zscore.transform(df_normalized[numeric_features])
-
+    if zscore != None:
+        df_normalized[numeric_features] = zscore.transform(df_normalized[numeric_features])
+    else:
+        df_normalized[numeric_features] = df_normalized[numeric_features]
     return df_normalized
 
 
@@ -263,14 +260,6 @@ def data_splitting(df):
     """
     Split the DataFrame into train, validation, and test sets.
     """
-
-    # from sklearn.model_selection import train_test_split
-    # train, test = train_test_split(df, test_size=TEST_SIZE, shuffle=False)
-    # train, val = train_test_split(train, test_size=VAL_SIZE, shuffle=False)
-    # print(train)
-    # print(val)
-    # print(test)
-    # time.sleep(1111)
 
     train_start = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TRAIN_START_TIMESTAMP"])
     train_end = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TRAIN_END_TIMESTAMP"])
@@ -282,10 +271,6 @@ def data_splitting(df):
     train = df[df.index <= train_end]
     val = df[(df.index >= val_start) & (df.index <= val_end)]
     test = df[(df.index >= test_start) & (df.index <= test_end)]
-    # print(train)
-    # print(val)
-    # print(test)
-    # time.sleep(1111)
     return train, val, test
 
 
@@ -296,7 +281,6 @@ def load_dataset():
     Returns:
     - df (DataFrame): Processed DataFrame
     """
-
     ds_train = []
     ds_val = []
     ds_test = []
@@ -305,66 +289,12 @@ def load_dataset():
     label_test = []
     df_label_MATLAB = pd.DataFrame()
 
-    raw_files = data_accessing(ROOT_PATH + '/data_layer/data/' + DATASET_NAME)
-    # print(raw_files[0])
-    # df = raw_files[0]
-    #
-    # # Create figure and axis objects
-    # fig, ax1 = plt.subplots()
-    #
-    # # Convert DATE column to numpy array
-    # DATE_values = np.array(df['DATE'].astype(str))
-    #
-    # # Convert other columns to numpy arrays
-    # OPEN_values = np.array(df['OPEN'])
-    # HIGH_values = np.array(df['HIGH'])
-    # LOW_values = np.array(df['LOW'])
-    # CLOSE_values = np.array(df['CLOSE'])
-    # VOLUME_values = np.array(df['VOLUME'])
-    #
-    # # Plot 'OPEN', 'HIGH', 'LOW', 'CLOSE' on the first axis
-    # ax1.plot(DATE_values, OPEN_values, color='blue', label='OPEN')
-    # ax1.plot(DATE_values, HIGH_values, color='green', label='HIGH')
-    # ax1.plot(DATE_values, LOW_values, color='red', label='LOW')
-    # ax1.plot(DATE_values, CLOSE_values, color='purple', label='CLOSE')
-    #
-    # # Set x-axis tick marks and rotate labels
-    # plt.xticks(np.arange(0, len(DATE_values), 100), rotation=45)
-    #
-    # # Set left y-axis label and title
-    # ax1.set_ylabel('Price')
-    # ax1.set_title("AA")
-    #
-    # # Create a second axis for VOLUME
-    # ax2 = ax1.twinx()
-    #
-    # # Plot 'VOLUME' on the second axis
-    # ax2.plot(DATE_values, VOLUME_values, color='orange', label='VOLUME')
-    #
-    # # Set right y-axis label
-    # ax2.set_ylabel('Volume')
-    #
-    # # Add legend
-    # lines = ax1.get_lines() + ax2.get_lines()
-    # labels = [line.get_label() for line in lines]
-    # ax1.legend(lines, labels, loc='best')
-    #
-    # # Adjust the spacing between subplots
-    # plt.tight_layout()
-    # # Autoformat the date labels
-    # plt.xticks(np.arange(0, len(DATE_values), 500), rotation=45)
-    # plt.savefig('.eps',
-    #             format='eps',
-    #             dpi=300,
-    #             bbox_inches='tight')
-    # # Show the plot
-    # plt.show()
-    #
-    # time.sleep(1111)
+    raw_files = data_accessing(ROOT_PATH + '/data/datasets/' + DATASET_NAME)
     if len(raw_files) > 0:
         print(f"Successfully loaded {len(raw_files)} Excel file(s):")
         # feature_engineering(excel_files)
         for i, df in tqdm(enumerate(raw_files), total=len(raw_files), desc="Data Processing"):
+
             # print(f"Excel file {i+1}:")
             df = data_cleaning(df)
 
@@ -446,7 +376,6 @@ def load_dataset():
         'NUM_FEATURES_ORIGINAL': int(ds_train.shape[2] / (WINDOW_SIZE)),
         'WINDOW_SIZE': WINDOW_SIZE
     }
-
     return load_dataset_output
 
 

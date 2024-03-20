@@ -44,6 +44,7 @@ def caculate_MDD(total_return):
     MDD = max(mddvec)  # Maximum drawdown value
     return MDD, mddvec
 
+
 def caculate_ATO(NUM_PERIODS, NUM_ASSETS, model, test_loader):
     portfolio_o = np.zeros(NUM_ASSETS)
     label_list = []
@@ -67,6 +68,7 @@ def caculate_ATO(NUM_PERIODS, NUM_ASSETS, model, test_loader):
 
     ATO = sum(daily_turno_list) / (2 * (NUM_PERIODS))
     return ATO
+
 
 def caculate_TCW(NUM_PERIODS, NUM_ASSETS, model, test_loader):
     df = pd.DataFrame(columns=['Rate', 'TCW'])

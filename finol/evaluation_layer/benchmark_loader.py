@@ -41,8 +41,8 @@ def plot_dataframe(df, column_names, plot_type, logdir):
     df = df[column_names]
     num_columns = len(df.columns)
 
-    # colors = ['black'] * (num_columns - 1) + ['red']
-    colors = ['black'] * (num_columns)
+    colors = ['black'] * (num_columns - 1) + ['red']
+    # colors = ['black'] * (num_columns)
     lines = ['-'] * (num_columns - 1) + [':']
     markers = ['o', '^', '<', '>', 's', 'p', 'h', '+', 'x', '|', '_']
 
@@ -78,9 +78,9 @@ def load_benchmark(caculate_metric_output=None):
         logdir = ROOT_PATH
 
     if METRIC_CONFIG.get('INCLUDE_PROFIT_METRICS'):
-        daily_return = pd.read_excel(ROOT_PATH + r'/benchmark_results/profit_metrics/'+DATASET_NAME+'/daily_return.xlsx')
-        daily_cumulative_wealth = pd.read_excel(ROOT_PATH + r'/benchmark_results/profit_metrics/'+DATASET_NAME+'/daily_cumulative_wealth.xlsx')
-        final_profit_result = pd.read_excel(ROOT_PATH + r'/benchmark_results/profit_metrics/'+DATASET_NAME+'/final_profit_result.xlsx')
+        daily_return = pd.read_excel(ROOT_PATH + '/data/benchmark_results/profit_metrics/'+DATASET_NAME+'/daily_return.xlsx')
+        daily_cumulative_wealth = pd.read_excel(ROOT_PATH + '/data/benchmark_results/profit_metrics/'+DATASET_NAME+'/daily_cumulative_wealth.xlsx')
+        final_profit_result = pd.read_excel(ROOT_PATH + '/data/benchmark_results/profit_metrics/'+DATASET_NAME+'/final_profit_result.xlsx')
 
         daily_return = daily_return.dropna(axis=1, how="any")
         daily_cumulative_wealth = daily_cumulative_wealth.dropna(axis=1, how="any")
@@ -96,13 +96,13 @@ def load_benchmark(caculate_metric_output=None):
         )
         plot_dataframe(daily_cumulative_wealth, PLOT_ALL_1, 'DCW', logdir)
         plot_dataframe(daily_cumulative_wealth, PLOT_ALL_2, 'DCW', logdir)
-        # plot_dataframe(daily_cumulative_wealth, PLOT_ALL_3, 'DCW', logdir)
-        # plot_dataframe(daily_cumulative_wealth, PLOT_ALL_4, 'DCW', logdir)
-        # plot_dataframe(daily_cumulative_wealth, PLOT_ALL_5, 'DCW', logdir)
+        plot_dataframe(daily_cumulative_wealth, PLOT_ALL_3, 'DCW', logdir)
+        plot_dataframe(daily_cumulative_wealth, PLOT_ALL_4, 'DCW', logdir)
+        plot_dataframe(daily_cumulative_wealth, PLOT_ALL_5, 'DCW', logdir)
 
     if METRIC_CONFIG.get('INCLUDE_RISK_METRICS'):
-        daily_drawdown = pd.read_excel(ROOT_PATH + r'/benchmark_results/risk_metrics/'+DATASET_NAME+'/daily_drawdown.xlsx')
-        final_risk_result = pd.read_excel(ROOT_PATH + r'/benchmark_results/risk_metrics/'+DATASET_NAME+'/final_risk_result.xlsx')
+        daily_drawdown = pd.read_excel(ROOT_PATH + '/data/benchmark_results/risk_metrics/'+DATASET_NAME+'/daily_drawdown.xlsx')
+        final_risk_result = pd.read_excel(ROOT_PATH + '/data/benchmark_results/risk_metrics/'+DATASET_NAME+'/final_risk_result.xlsx')
 
         daily_drawdown = daily_drawdown.dropna(axis=1, how="any")
         final_risk_result = final_risk_result.dropna(axis=1, how="any")
@@ -116,13 +116,13 @@ def load_benchmark(caculate_metric_output=None):
         )
         plot_dataframe(daily_drawdown, PLOT_ALL_1, 'DDD', logdir)
         plot_dataframe(daily_drawdown, PLOT_ALL_2, 'DDD', logdir)
-        # plot_dataframe(daily_drawdown, PLOT_ALL_3, 'DDD', logdir)
-        # plot_dataframe(daily_drawdown, PLOT_ALL_4, 'DDD', logdir)
-        # plot_dataframe(daily_drawdown, PLOT_ALL_5, 'DDD', logdir)
+        plot_dataframe(daily_drawdown, PLOT_ALL_3, 'DDD', logdir)
+        plot_dataframe(daily_drawdown, PLOT_ALL_4, 'DDD', logdir)
+        plot_dataframe(daily_drawdown, PLOT_ALL_5, 'DDD', logdir)
 
     if METRIC_CONFIG.get('PRACTICAL_METRICS')['INCLUDE_PRACTICAL_METRICS']:
-        transaction_costs_adjusted_cumulative_wealth = pd.read_excel(ROOT_PATH + r'/benchmark_results/practical_metrics/'+DATASET_NAME+'/transaction_costs_adjusted_cumulative_wealth.xlsx')
-        final_practical_result = pd.read_excel(ROOT_PATH + r'/benchmark_results/practical_metrics/'+DATASET_NAME+'/final_practical_result.xlsx')
+        transaction_costs_adjusted_cumulative_wealth = pd.read_excel(ROOT_PATH + '/data/benchmark_results/practical_metrics/'+DATASET_NAME+'/transaction_costs_adjusted_cumulative_wealth.xlsx')
+        final_practical_result = pd.read_excel(ROOT_PATH + '/data/benchmark_results/practical_metrics/'+DATASET_NAME+'/final_practical_result.xlsx')
 
         transaction_costs_adjusted_cumulative_wealth = transaction_costs_adjusted_cumulative_wealth.dropna(axis=1, how="any")
         final_practical_result = final_practical_result.dropna(axis=1, how="any")
@@ -136,9 +136,9 @@ def load_benchmark(caculate_metric_output=None):
         )
         plot_dataframe(transaction_costs_adjusted_cumulative_wealth, PLOT_ALL_1, 'TCW', logdir)
         plot_dataframe(transaction_costs_adjusted_cumulative_wealth, PLOT_ALL_2, 'TCW', logdir)
-        # plot_dataframe(transaction_costs_adjusted_cumulative_wealth, PLOT_ALL_3, 'TCW', logdir)
-        # plot_dataframe(transaction_costs_adjusted_cumulative_wealth, PLOT_ALL_4, 'TCW', logdir)
-        # plot_dataframe(transaction_costs_adjusted_cumulative_wealth, PLOT_ALL_5, 'TCW', logdir)
+        plot_dataframe(transaction_costs_adjusted_cumulative_wealth, PLOT_ALL_3, 'TCW', logdir)
+        plot_dataframe(transaction_costs_adjusted_cumulative_wealth, PLOT_ALL_4, 'TCW', logdir)
+        plot_dataframe(transaction_costs_adjusted_cumulative_wealth, PLOT_ALL_5, 'TCW', logdir)
 
 
 

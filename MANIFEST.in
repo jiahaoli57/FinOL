@@ -1,0 +1,3 @@
+include finol/tutorials/*
+include finol/main/*
+include *.whl
