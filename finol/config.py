@@ -11,7 +11,7 @@ plt.style.use('seaborn-talk')
 from rich import print
 
 TUTORIAL_MODE = True
-TUTORIAL_NAME = "TUTORIAL_5"
+TUTORIAL_NAME = "TUTORIAL_1"
 
 # Parameters related to data_layer
 DATASET_NAME = "TSE"  # Available options: NYSE(O), NYSE(N), DJIA, SP500, TSE, SSE, HSI, CMEG, CRYPTO, TUTORIAL
@@ -192,3 +192,23 @@ PLOT_ALL_2 = FOLLOW_THE_WINNER + [MODEL_NAME]
 PLOT_ALL_3 = FOLLOW_THE_LOSER + [MODEL_NAME]
 PLOT_ALL_4 = PATTERN_MATCHING + [MODEL_NAME]
 PLOT_ALL_5 = META_LEARNING + [MODEL_NAME]
+
+
+
+################################################################################################################
+############################################# FOR TUTORIAL ONLY ################################################
+################################################################################################################
+
+if TUTORIAL_MODE:
+    if TUTORIAL_NAME == "TUTORIAL_1":
+        DATASET_NAME = TUTORIAL_NAME
+        DATASET_SPLIT_CONFIG = {
+            DATASET_NAME: {
+                "TRAIN_START_TIMESTAMP": "2023-05-23",
+                "TRAIN_END_TIMESTAMP": "2023-10-24",
+                "VAL_START_TIMESTAMP": "2023-10-25",
+                "VAL_END_TIMESTAMP": "2023-11-26",
+                "TEST_START_TIMESTAMP": "2023-11-27",
+                "TEST_END_TIMESTAMP": "2023-12-28"
+            }
+        }
