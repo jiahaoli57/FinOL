@@ -26,9 +26,10 @@ it provides a long-awaited unified platform to advance data-driven OLPS research
 
 <div align="center">
 
-| Update                     | Status                                                                                      |
-|----------------------------|---------------------------------------------------------------------------------------------|
-| Release  ``FinOL``  v0.0.1 | [Released v0.0.1](https://github.com/jiahaoli57/finol/releases/tag/v0.0.1) on 17 March 2024 |
+| Update                                                                               | Status                      |
+|--------------------------------------------------------------------------------------|-----------------------------|
+| Release  ``FinOL`` [tutorials](finol/tutorials)                                      | Released on 22 March 2024   |
+| Release  ``FinOL`` [v0.0.1](https://github.com/jiahaoli57/finol/releases/tag/v0.0.1) | Released on 21 March 2024   |
 
 </div>
 

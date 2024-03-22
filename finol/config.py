@@ -11,7 +11,7 @@ plt.style.use('seaborn-talk')
 from rich import print
 
 TUTORIAL_MODE = True
-TUTORIAL_NAME = "TUTORIAL_2"
+TUTORIAL_NAME = "TUTORIAL_4"
 
 # Parameters related to data_layer
 DATASET_NAME = "TSE"  # Available options: NYSE(O), NYSE(N), DJIA, SP500, TSE, SSE, HSI, CMEG, CRYPTO, TUTORIAL

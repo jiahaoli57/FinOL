@@ -63,8 +63,8 @@ def caculate_ATO(NUM_PERIODS, NUM_ASSETS, model, test_loader):
         daily_turno = (abs(portfolio_o - portfolio).sum())
         daily_turno_list.append(daily_turno)
 
-        r_0 = np.sum(label * portfolio) * (1 - ((0 / 2) * daily_turno))
-        portfolio_o = portfolio * label / r_0
+        daily_return = np.sum(label * portfolio) * (1 - ((0 / 2) * daily_turno))
+        portfolio_o = portfolio * label / daily_return
 
     ATO = sum(daily_turno_list) / (2 * (NUM_PERIODS))
     return ATO
@@ -95,10 +95,10 @@ def caculate_TCW(NUM_PERIODS, NUM_ASSETS, model, test_loader):
             daily_turno = (abs(portfolio_o - portfolio).sum())
             daily_turno_list.append(daily_turno)
 
-            r_0 = np.sum(label * portfolio) * (1 - ((tc_rate / 2) * daily_turno))
-            portfolio_o = portfolio * label / r_0
+            daily_return = np.sum(label * portfolio) * (1 - ((tc_rate / 2) * daily_turno))
+            portfolio_o = portfolio * label / daily_return
 
-            daily_return_list.append(r_0)
+            daily_return_list.append(daily_return)
 
         result = np.cumprod(daily_return_list)
         df.loc[len(df)] = [tc_rate, result[-1]]

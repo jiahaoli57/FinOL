@@ -2,11 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="commit">
-      <change afterPath="$PROJECT_DIR$/finol/tutorials/tutorial_2.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finol/tutorials/tutorial_3.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finol/tutorials/tutorial_4.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finol/tutorials/tutorial_5.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MANIFEST.in" beforeDir="false" afterPath="$PROJECT_DIR$/MANIFEST.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finol/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/metric_caculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/metric_caculator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finol/tutorials/_.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/tutorials/_.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/tutorials/tutorial_3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/tutorials/tutorial_3.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-29-17/best_model_TSE.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-29-17/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-29-17/last_model_TSE.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-29-17/loss_TSE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_1_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_1_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_1_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_2_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_2_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_2_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_3_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_3_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_3_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_4_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_4_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_4_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_5_DCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_5_DDD.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_5_TCW.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/best_model_TSE.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/last_model_TSE.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/loss_TSE.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +53,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="dba9531d-010b-459a-a4f6-8e109ccc025c" />
@@ -53,6 +88,35 @@
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol\tutorials" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="model_trainer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FinOL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/optimization_layer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.model_trainer" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -62,7 +126,10 @@
       <option name="presentableId" value="Default" />
       <updated>1710941755793</updated>
       <workItem from="1710941757373" duration="302000" />
-      <workItem from="1711000873881" duration="6250000" />
+      <workItem from="1711000873881" duration="6280000" />
+      <workItem from="1711010677920" duration="11020000" />
+      <workItem from="1711077071100" duration="1599000" />
+      <workItem from="1711078703242" duration="4118000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1711007390528</created>
@@ -71,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711007390528</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit">
+      <created>1711010632921</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711010632921</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,5 +165,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FinOL$model_trainer.coverage" NAME="model_trainer 覆盖结果" MODIFIED="1711080559189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/optimization_layer" />
   </component>
 </project>
