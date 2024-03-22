@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="commit">
-      <change afterPath="$PROJECT_DIR$/finol/tutorials/tutorial_4.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finol/tutorials/tutorial_5.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MANIFEST.in" beforeDir="false" afterPath="$PROJECT_DIR$/MANIFEST.in" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/metric_caculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/metric_caculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/tutorials/_.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/tutorials/_.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/tutorials/tutorial_3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/tutorials/tutorial_3.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-29-17/best_model_TSE.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-29-17/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-29-17/last_model_TSE.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-29-17/loss_TSE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_1_DCW.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_1_DDD.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_1_TCW.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_2_DCW.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_2_DDD.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_2_TCW.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_3_DCW.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_3_DDD.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_3_TCW.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_4_DCW.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_4_DDD.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_4_TCW.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_5_DCW.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_5_DDD.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/TSE_PLOT_ALL_5_TCW.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/best_model_TSE.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/last_model_TSE.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logdir/2024-03-20_18-42-35/loss_TSE.png" beforeDir="false" />
-    </list>
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +96,7 @@
       <workItem from="1711000873881" duration="6280000" />
       <workItem from="1711010677920" duration="11020000" />
       <workItem from="1711077071100" duration="1599000" />
-      <workItem from="1711078703242" duration="4118000" />
+      <workItem from="1711078703242" duration="4438000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1711007390528</created>
@@ -145,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711010632921</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commit">
+      <created>1711082956521</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711082956521</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
