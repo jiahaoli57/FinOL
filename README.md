@@ -69,10 +69,10 @@ continue evolving.
 
 ## Why should I use FinOL?
 
-
 1. ``FinOL`` contributes comprehensive datasets spanning diverse market conditions and asset classes to enable large-scale empirical validation;
 2. ``FinOL`` contributes the most extensive benchmark results to date for portfolio selection methods, providing the academic community an unbiased performance assessment;
 3. ``FinOL`` contributes a user-friendly Python library for data-driven OLPS research, providing a comprehensive toolkit for academics to develop, test, and validate new OLPS methods.
+
 
 ## Installation
 
@@ -113,6 +113,29 @@ load_dataset_output = load_dataset()
 train_model_output = train_model(load_dataset_output)
 evaluate_model_output = evaluate_model(load_dataset_output, train_model_output)
 ```
+
+## Supported Datasets
+
+<div align="center">
+
+| Name        | Market         | Country/Region   | Data Frequency | # of Assets | Data Range                     | # of Periods              | # of Features  |
+|-------------|----------------|------------------|----------------|-------------|--------------------------------|---------------------------|----------------|
+| NYSE(O)     | Stock          | United States    | Daily          | 26          | 03/July./1962 - 31/Dec./1984   | 5,651: 3,390/1,130/1,131  | 143            |
+| NYSE(N)     | Stock          | United States    | Daily          | 403         | 02/Jan./1985 - 30/June./2010   | 6,430: 3,858/1,286/1,286  | 143            |
+| DJIA        | Stock          | United States    | Daily          | 28          | 14/Jan./2001 - 14/Jan./2003    | 500: 300/100/100          | 143            |
+| SP500       | Stock          | United States    | Daily          | 339         | 02/Jan./1998 - 31/Jan./2003    | 1,268: 756/256/256        | 143            |
+| TSE         | Stock          | Canada           | Daily          | 48          | 12/Jan./1995 - 31/Dec./1998    | 1,001: 600/200/200        | 143            |
+| SSE         | Stock          | China            | Weekly         | 30          | 05/July./2010 - 26/June./2023  | 678: 406/136/136          | 143            |
+| HSI         | Stock          | Hong Kong, China | Weekly         | 53          | 05/July./2010 - 26/June./2023  | 678: 406/136/136          | 143            |
+| CMEG        | Futures        | United States    | Weekly         | 25          | 05/July./2010 - 26/June./2023  | 678: 406/136/136          | 143            |
+| CRYPTO      | Cryptocurrency | World            | Daily          | 43          | 09/Nov./2017 - 01/Mar./2024    | 2,305: 1,421/442/442      | 143            |
+
+</div>
+
+## Supported Metrics
+
+## Supported Baselines
+
 
 ## File Structure
 ```
