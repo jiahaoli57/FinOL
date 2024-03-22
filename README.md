@@ -123,15 +123,15 @@ evaluate_model_output = evaluate_model(load_dataset_output, train_model_output)
 
 | Name                                                                           |     Market     |  Country/Region  | Data Frequency | # of Assets  |          Data Range           |       # of Periods       |
 |--------------------------------------------------------------------------------|:--------------:|:----------------:|:--------------:|:------------:|:-----------------------------:|:------------------------:|
-| [NYSE(O)](https://github.com/ai4finol/FinOL_data/tree/main/datasets/NYSE(O))   |     Stock      |  United States   |     Daily      |      26      | 03/July./1962 - 31/Dec./1984  | 5,651: 3,390/1,130/1,131 |
-| [NYSE(N)](https://github.com/ai4finol/FinOL_data/tree/main/datasets/NYSE(N))   |     Stock      |  United States   |     Daily      |     403      | 02/Jan./1985 - 30/June./2010  | 6,430: 3,858/1,286/1,286 |
-| [DJIA](https://github.com/ai4finol/FinOL_data/tree/main/datasets/DJIA)         |     Stock      |  United States   |     Daily      |      28      |  14/Jan./2001 - 14/Jan./2003  |     500: 300/100/100     |
-| [SP500](https://github.com/ai4finol/FinOL_data/tree/main/datasets/SP500)       |     Stock      |  United States   |     Daily      |     339      |  02/Jan./1998 - 31/Jan./2003  |    1,268: 756/256/256    |
-| [TSE](https://github.com/ai4finol/FinOL_data/tree/main/datasets/TSE)           |     Stock      |      Canada      |     Daily      |      48      |  12/Jan./1995 - 31/Dec./1998  |    1,001: 600/200/200    |
-| [SSE](https://github.com/ai4finol/FinOL_data/tree/main/datasets/SSE)           |     Stock      |      China       |     Weekly     |      30      | 05/July./2010 - 26/June./2023 |     678: 406/136/136     |
-| [HSI](https://github.com/ai4finol/FinOL_data/tree/main/datasets/HSI)           |     Stock      | Hong Kong, China |     Weekly     |      53      | 05/July./2010 - 26/June./2023 |     678: 406/136/136     |
-| [CMEG](https://github.com/ai4finol/FinOL_data/tree/main/datasets/CMEG)         |    Futures     |  United States   |     Weekly     |      25      | 05/July./2010 - 26/June./2023 |     678: 406/136/136     |
-| [CRYPTO](https://github.com/ai4finol/FinOL_data/tree/main/datasets/CRYPTO)     | Cryptocurrency |      World       |     Daily      |      43      |  09/Nov./2017 - 01/Mar./2024  |   2,305: 1,421/442/442   |
+| [NYSE(O)](https://github.com/ai4finol/FinOL_data/tree/main/datasets/NYSE(O))   |     Stock      |  United States   |     Daily      |      26      | 03/July./1962 <br>-<br> 31/Dec./1984  | 5,651:<br> 3,390/1,130/1,131 |
+| [NYSE(N)](https://github.com/ai4finol/FinOL_data/tree/main/datasets/NYSE(N))   |     Stock      |  United States   |     Daily      |     403      | 02/Jan./1985 <br>-<br> 30/June./2010  | 6,430:<br> 3,858/1,286/1,286 |
+| [DJIA](https://github.com/ai4finol/FinOL_data/tree/main/datasets/DJIA)         |     Stock      |  United States   |     Daily      |      28      |  14/Jan./2001 <br>-<br> 14/Jan./2003  |     500:<br> 300/100/100     |
+| [SP500](https://github.com/ai4finol/FinOL_data/tree/main/datasets/SP500)       |     Stock      |  United States   |     Daily      |     339      |  02/Jan./1998 <br>-<br> 31/Jan./2003  |    1,268:<br> 756/256/256    |
+| [TSE](https://github.com/ai4finol/FinOL_data/tree/main/datasets/TSE)           |     Stock      |      Canada      |     Daily      |      48      |  12/Jan./1995 <br>-<br> 31/Dec./1998  |    1,001:<br> 600/200/200    |
+| [SSE](https://github.com/ai4finol/FinOL_data/tree/main/datasets/SSE)           |     Stock      |      China       |     Weekly     |      30      | 05/July./2010 <br>-<br> 26/June./2023 |     678:<br> 406/136/136     |
+| [HSI](https://github.com/ai4finol/FinOL_data/tree/main/datasets/HSI)           |     Stock      | Hong Kong, China |     Weekly     |      53      | 05/July./2010 <br>-<br> 26/June./2023 |     678:<br> 406/136/136     |
+| [CMEG](https://github.com/ai4finol/FinOL_data/tree/main/datasets/CMEG)         |    Futures     |  United States   |     Weekly     |      25      | 05/July./2010 <br>-<br> 26/June./2023 |     678:<br> 406/136/136     |
+| [CRYPTO](https://github.com/ai4finol/FinOL_data/tree/main/datasets/CRYPTO)     | Cryptocurrency |      World       |     Daily      |      43      |  09/Nov./2017 <br>-<br> 01/Mar./2024  |   2,305:<br> 1,421/442/442   |
 
 </div>
 
