@@ -131,8 +131,6 @@ FinOL
 │    ├─ data
 │    │    ├─ benchmark_results
 │    │    │    ├─ __init__.py
-│    │    │    ├─ __pycache__
-│    │    │    │    └─ __init__.cpython-39.pyc
 │    │    │    ├─ other
 │    │    │    │    └─ price_relative
 │    │    │    │           ├─ price_relative_CMEG.mat
@@ -288,6 +286,9 @@ FinOL
 ├─ requirements.txt
 └─ setup.py
 ```
+## Related Publications
+
+
 ## Contact Us
 
 For inquiries, please get in touch with us at finol.official@gmail.com (Monday to Friday, 9:00 AM to 6:00 PM)
