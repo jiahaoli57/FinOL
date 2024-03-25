@@ -121,13 +121,14 @@ evaluate_model_output = evaluate_model(load_dataset_output, train_model_output)
 
 <div align="center">
 
-| Name                                                                           |     Market     |  Country/Region  | Data Frequency | # of Assets  |          Data Range           |       # of Periods       |
-|--------------------------------------------------------------------------------|:--------------:|:----------------:|:--------------:|:------------:|:-----------------------------:|:------------------------:|
+| Name                                                                           |     Market     |  Country/Region  | Data Frequency | # of Assets  |              Data Range               |         # of Periods         |
+|--------------------------------------------------------------------------------|:--------------:|:----------------:|:--------------:|:------------:|:-------------------------------------:|:----------------------------:|
 | [NYSE(O)](https://github.com/ai4finol/FinOL_data/tree/main/datasets/NYSE(O))   |     Stock      |  United States   |     Daily      |      26      | 03/July./1962 <br>-<br> 31/Dec./1984  | 5,651:<br> 3,390/1,130/1,131 |
 | [NYSE(N)](https://github.com/ai4finol/FinOL_data/tree/main/datasets/NYSE(N))   |     Stock      |  United States   |     Daily      |     403      | 02/Jan./1985 <br>-<br> 30/June./2010  | 6,430:<br> 3,858/1,286/1,286 |
 | [DJIA](https://github.com/ai4finol/FinOL_data/tree/main/datasets/DJIA)         |     Stock      |  United States   |     Daily      |      28      |  14/Jan./2001 <br>-<br> 14/Jan./2003  |     500:<br> 300/100/100     |
 | [SP500](https://github.com/ai4finol/FinOL_data/tree/main/datasets/SP500)       |     Stock      |  United States   |     Daily      |     339      |  02/Jan./1998 <br>-<br> 31/Jan./2003  |    1,268:<br> 756/256/256    |
 | [TSE](https://github.com/ai4finol/FinOL_data/tree/main/datasets/TSE)           |     Stock      |      Canada      |     Daily      |      48      |  12/Jan./1995 <br>-<br> 31/Dec./1998  |    1,001:<br> 600/200/200    |
+||
 | [SSE](https://github.com/ai4finol/FinOL_data/tree/main/datasets/SSE)           |     Stock      |      China       |     Weekly     |      30      | 05/July./2010 <br>-<br> 26/June./2023 |     678:<br> 406/136/136     |
 | [HSI](https://github.com/ai4finol/FinOL_data/tree/main/datasets/HSI)           |     Stock      | Hong Kong, China |     Weekly     |      53      | 05/July./2010 <br>-<br> 26/June./2023 |     678:<br> 406/136/136     |
 | [CMEG](https://github.com/ai4finol/FinOL_data/tree/main/datasets/CMEG)         |    Futures     |  United States   |     Weekly     |      25      | 05/July./2010 <br>-<br> 26/June./2023 |     678:<br> 406/136/136     |
@@ -135,7 +136,44 @@ evaluate_model_output = evaluate_model(load_dataset_output, train_model_output)
 
 </div>
 
-[//]: # (## Supported Baselines)
+## Supported Baselines
+
+<div align="center">
+
+| Name             |             Category             |                                                                             Source                                                                             |                              Journal/Conference                               |
+|------------------|:--------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------:|
+| Market           | Classic OLPS: Benchmark baseline |                                                                               --                                                                               |                                      --                                       |
+| Best             | Classic OLPS: Benchmark baseline |                                                                               --                                                                               |                                      --                                       |
+| UCRP             | Classic OLPS: Benchmark baseline | [Kelly 1956](https://ieeexplore.ieee.org/abstract/document/6771227/); [Cover 1991](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9965.1991.tb00002.x) |          _The Bell System Technical Journal_; _Mathematical Finance_          |
+| BCRP             | Classic OLPS: Benchmark baseline |                                    [Cover 1991](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9965.1991.tb00002.x)                                    |                            _Mathematical Finance_                             |
+||
+| UP               | Classic OLPS: Follow-the-winner  |                                    [Cover 1991](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9965.1991.tb00002.x)                                    |                            _Mathematical Finance_                             |
+| EG               | Classic OLPS: Follow-the-winner  |                                    [Helmbold et al. 1998](https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9965.00058)                                     |                            _Mathematical Finance_                             |
+| SCRP             | Classic OLPS: Follow-the-winner  |                                    [Gaivoronski and Stella 2000](https://link.springer.com/article/10.1023/A:1019271201970)                                    |                        _Annals of Operations Research_                        |
+| PPT              | Classic OLPS: Follow-the-winner  |                                            [Lai et al. 2018](https://ieeexplore.ieee.org/abstract/document/7942104)                                            |          _IEEE Transactions on Neural Networks and Learning Systems_          |
+| SSPO             | Classic OLPS: Follow-the-winner  |                                                 [Lai et al. 2018](https://www.jmlr.org/papers/v19/17-558.html)                                                 |                  _The Journal of Machine Learning Research_                   |
+||
+| ANTI<sup>1</sup> |  Classic OLPS: Follow-the-loser  |                [Borodin et al. 2004](https://proceedings.neurips.cc/paper_files/paper/2003/hash/8c9f32e03aeb2e3000825c8c875c4edd-Abstract.html)                |              _Advances in Neural Information Processing Systems_              |
+| ANTI<sup>2</sup> |  Classic OLPS: Follow-the-loser  |                [Borodin et al. 2004](https://proceedings.neurips.cc/paper_files/paper/2003/hash/8c9f32e03aeb2e3000825c8c875c4edd-Abstract.html)                |              _Advances in Neural Information Processing Systems_              |
+| PAMR             |  Classic OLPS: Follow-the-loser  |                                         [Li et al. 2012](https://link.springer.com/article/10.1007/s10994-012-5281-z)                                          |                            _Machine Learning_                                 |
+| CWMR-Var         |  Classic OLPS: Follow-the-loser  |                                              [Li et al. 2013](https://dl.acm.org/doi/abs/10.1145/2435209.2435213)                                              |              _ACM Transactions on Knowledge Discovery from Data_              | 
+| CWMR-Stdev       |  Classic OLPS: Follow-the-loser  |                                              [Li et al. 2013](https://dl.acm.org/doi/abs/10.1145/2435209.2435213)                                              |              _ACM Transactions on Knowledge Discovery from Data_              | 
+| OLMAR-S          |  Classic OLPS: Follow-the-loser  |                                     [Li et al. 2015](https://www.sciencedirect.com/science/article/pii/S0004370215000168)                                      |                           _Artificial Intelligence_                           | 
+| OLMAR-E          |  Classic OLPS: Follow-the-loser  |                                     [Li et al. 2015](https://www.sciencedirect.com/science/article/pii/S0004370215000168)                                      |                           _Artificial Intelligence_                           | 
+| RMR              |  Classic OLPS: Follow-the-loser  |                                           [Huang et al. 2016](https://ieeexplore.ieee.org/abstract/document/7465840)                                           |             _IEEE Transactions on Knowledge and Data Engineering_             | 
+| RPRT             |  Classic OLPS: Follow-the-loser  |                                           [Lai et al. 2020](https://ieeexplore.ieee.org/abstract/document/8411138/)                                            |         _IEEE Transactions on Systems, Man, and Cybernetics: Systems_         | 
+|                  |
+| AICTR            |  Classic OLPS: Pattern-matching  |                                            [Lai et al. 2018](https://ieeexplore.ieee.org/abstract/document/8356708)                                            |          _IEEE Transactions on Neural Networks and Learning Systems_          | 
+| KTPT             |  Classic OLPS: Pattern-matching  |                                         [Lai et al. 2018](https://link.springer.com/article/10.1007/s10618-018-0579-5)                                         |                     _Data Mining and Knowledge Discovery_                     | 
+|                  | 
+| SP               |   Classic OLPS: Meta-learning    |                                        [Singer 1997](https://www.worldscientific.com/doi/abs/10.1142/s0129065797000434)                                        |                   _International Journal of Neural Systems_                   | 
+| ONS              |   Classic OLPS: Meta-learning    |                                           [Agarwal et al. 2006](https://dl.acm.org/doi/abs/10.1145/1143844.1143846)                                            |                _International Conference on Machine Learning_                 | 
+| GRW              |   Classic OLPS: Meta-learning    |                                  [Levina and Shafer 2008](https://www.worldscientific.com/doi/abs/10.1142/S0218488508005364)                                   | _International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems_ | 
+| WAAS             |   Classic OLPS: Meta-learning    |                                       [Zhang and Yang 2017](https://link.springer.com/article/10.1007/s10614-016-9585-0)                                       |                           _Computational Economics_                           | 
+| CW-OGD           |   Classic OLPS: Meta-learning    |                       [Zhang et al. 2021](https://www.sciencedirect.com/science/article/pii/S0950705121007954)                                                 |                           _Knowledge-Based Systems_                           | 
+</div>
+
+
 [//]: # (## Supported Metrics)
 
 
