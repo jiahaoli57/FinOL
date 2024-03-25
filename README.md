@@ -47,6 +47,7 @@ it provides a long-awaited unified platform to advance data-driven OLPS research
   - [Supported Datasets](#supported-datasets)
   - [Supported Baselines](#supported-baselines)
   - [Supported Metrics](#supported-metrics)
+  - [License](#license)
   - [Contact Us](#contact-us)
 
 ## About
@@ -174,8 +175,23 @@ evaluate_model_output = evaluate_model(load_dataset_output, train_model_output)
 </div>
 
 
-[//]: # (## Supported Metrics)
+## Supported Metrics
 
+<div align="center">
+
+| Name                                                | Abbreviation |     Category     |
+|-----------------------------------------------------|:------------:|:----------------:|
+| Cumulative Wealth                                   |      CW      |  Profit Metric   |
+| Annualized Percentage Yield                         |     APY      |  Profit Metric   |
+| Sharpe Ratio                                        |      SR      |  Profit Metric   |
+|                                                     |
+| Volatility Risk                                     |      VR      |   Risk Metric    |
+| Maximum DrawDown                                    |     MDD      |   Risk Metric    |
+|                                                     | 
+| Average Turnover                                    |     ATO      | Practical Metric |
+| Transaction Costs-Adjusted Cumulative Wealth        |     TCW      | Practical Metric |
+| Running Time                                        |      RT      | Practical Metric |
+</div>
 
 ## File Structure
 ```
@@ -349,8 +365,15 @@ FinOL
 ├─ requirements.txt
 └─ setup.py
 ```
-## Related Publications
 
+[//]: # (## Related Publications)
+
+
+## License
+
+Released under the [MIT License](https://github.com/jiahaoli57/finol/blob/main/LICENSE).
+
+See ``LICENSE`` for more information.
 
 ## Contact Us
 
