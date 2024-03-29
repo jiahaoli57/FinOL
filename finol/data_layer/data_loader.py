@@ -29,6 +29,7 @@ def data_accessing(folder_path):
 
 
 def feature_engineering(df):
+    ohlcv_features_df = pd.DataFrame()
     overlap_features_df = pd.DataFrame()
     momentum_features_df = pd.DataFrame()
     volume_features_df = pd.DataFrame()
@@ -36,6 +37,16 @@ def feature_engineering(df):
     price_features_df = pd.DataFrame()
     volatility_features_df = pd.DataFrame()
     pattern_features_df = pd.DataFrame()
+
+    if FEATURE_ENGINEERING_CONFIG.get('INCLUDE_OHLCV_FEATURES', True):
+        ohlcv_features = {
+            'OPEN': df.OPEN,
+            'HIGH': df.HIGH,
+            'LOW': df.LOW,
+            'CLOSE': df.CLOSE,
+            'VOLUME': df.VOLUME
+        }
+        ohlcv_features_df = pd.DataFrame(ohlcv_features)
 
     if FEATURE_ENGINEERING_CONFIG.get('INCLUDE_OVERLAP_FEATURES', True):
         overlap_features = {
@@ -210,7 +221,7 @@ def feature_engineering(df):
         }
         pattern_features_df = pd.DataFrame(pattern_features)
 
-    _ = pd.concat([df, overlap_features_df, momentum_features_df, volume_features_df, cycle_features_df,
+    _ = pd.concat([ohlcv_features_df, overlap_features_df, momentum_features_df, volume_features_df, cycle_features_df,
                     price_features_df, volatility_features_df, pattern_features_df], axis=1)
     _.set_index('DATE', inplace=True)
     return _

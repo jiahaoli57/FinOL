@@ -373,8 +373,6 @@ FinOL
 
 Released under the [MIT License](https://github.com/jiahaoli57/finol/blob/main/LICENSE).
 
-See ``LICENSE`` for more information.
-
 ## Contact Us
 
 For inquiries, please get in touch with us at finol.official@gmail.com (Monday to Friday, 9:00 AM to 6:00 PM)

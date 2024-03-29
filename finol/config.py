@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 plt.style.use('seaborn-talk')
 from rich import print
 
-TUTORIAL_MODE = True
+TUTORIAL_MODE = False
 TUTORIAL_NAME = "TUTORIAL_4"
 
 # Parameters related to data_layer
@@ -87,7 +87,7 @@ DATASET_SPLIT_CONFIG = {
         "VAL_END_TIMESTAMP": "2022-11-26",  # [461 rows x 5 columns]
         "TEST_START_TIMESTAMP": "2022-11-27",
         "TEST_END_TIMESTAMP": "2024-03-01"  # [461 rows x 5 columns]
-    },
+    }
 }
 FEATURE_ENGINEERING_CONFIG = {
     "INCLUDE_OHLCV_FEATURES": True,
@@ -105,7 +105,7 @@ DATA_AUGMENTATION_CONFIG = {
         "WINDOW_SIZE": 10
     }
 }
-SCALER = "StandardScaler"  # None, StandardScaler, MinMaxScaler, MaxAbsScaler, RobustScaler
+SCALER = "MinMaxScaler"  # None, StandardScaler, MinMaxScaler, MaxAbsScaler, RobustScaler
 BATCH_SIZE = {
     "NYSE(O)": 128,
     "NYSE(N)": 128,
@@ -163,7 +163,8 @@ LEARNING_RATE = 1e-4
 CRITERION_NAME = "LOG_SINGLE_PERIOD_WEALTH"
 LAMBDA_L2 = 0.001
 DEVICE = "cpu"
-NUM_EPOCHES = 100
+NUM_EPOCHES = 1000
+from finol.optimization_layer import criterion_selector
 
 # Parameters related to evaluation_layer
 MARKERS = ['o', '^', '<', '>', 's', 'p', 'h', '+', 'x', '|', '_']

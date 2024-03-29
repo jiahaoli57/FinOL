@@ -4,6 +4,12 @@
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/data_layer/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/data_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/main/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/main/main.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/criterion_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/criterion_selector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/tutorials/_.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/tutorials/_.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +106,10 @@
       <workItem from="1711010677920" duration="11020000" />
       <workItem from="1711077071100" duration="1599000" />
       <workItem from="1711078703242" duration="14181000" />
-      <workItem from="1711362767110" duration="3579000" />
+      <workItem from="1711362767110" duration="6747000" />
+      <workItem from="1711425551478" duration="4759000" />
+      <workItem from="1711619106552" duration="1666000" />
+      <workItem from="1711648189037" duration="13070000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1711007390528</created>
@@ -193,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711364709708</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="commit">
+      <created>1711368291603</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1711368291603</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

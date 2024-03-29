@@ -113,6 +113,7 @@ def train_model(load_dataset_output):
     best_val_loss = float('inf')
 
     for e in tqdm(range(NUM_EPOCHES), desc="Training"):
+        model.train()
         train_loss = 0
         for i, data in enumerate(train_loader, 1):
             x_data, label = data
@@ -128,6 +129,7 @@ def train_model(load_dataset_output):
         train_loss_list.append(train_loss)
 
         with torch.no_grad():
+            model.eval()
             val_loss = 0
             for i, data in enumerate(val_loader, 1):
                 val_data, label = data
