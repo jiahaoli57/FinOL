@@ -119,7 +119,7 @@ BATCH_SIZE = {
 }
 
 # Parameters related to model_layer
-MODEL_NAME = "DNN"
+MODEL_NAME = "LSTM"
 MODEL_CONFIG = {
     "DNN": {
         "NUM_LAYERS": 1,
