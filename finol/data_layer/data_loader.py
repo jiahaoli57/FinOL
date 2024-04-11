@@ -353,12 +353,12 @@ def load_dataset():
             label_val.append(torch.from_numpy(val_label['LABEL'].values))
             label_test.append(torch.from_numpy(test_label['LABEL'].values))
 
-        ds_train = torch.stack(ds_train).permute(1, 0, 2)  # [num_assets, num_train_periods, num_feats] -> [num_train_periods, num_assets, num_feats]
-        ds_val = torch.stack(ds_val).permute(1, 0, 2)
-        ds_test = torch.stack(ds_test).permute(1, 0, 2)
-        label_train = torch.stack(label_train).transpose(0, 1)  # [num_assets, num_train_periods] -> [num_train_periods, num_assets]
-        label_val = torch.stack(label_val).transpose(0, 1)
-        label_test = torch.stack(label_test).transpose(0, 1)
+        ds_train = torch.stack(ds_train).permute(1, 0, 2).to(DEVICE)  # [num_assets, num_train_periods, num_feats] -> [num_train_periods, num_assets, num_feats]
+        ds_val = torch.stack(ds_val).permute(1, 0, 2).to(DEVICE)
+        ds_test = torch.stack(ds_test).permute(1, 0, 2).to(DEVICE)
+        label_train = torch.stack(label_train).transpose(0, 1).to(DEVICE)  # [num_assets, num_train_periods] -> [num_train_periods, num_assets]
+        label_val = torch.stack(label_val).transpose(0, 1).to(DEVICE)
+        label_test = torch.stack(label_test).transpose(0, 1).to(DEVICE)
 
         train_ids = TensorDataset(ds_train, label_train)
         val_ids = TensorDataset(ds_val, label_val)
