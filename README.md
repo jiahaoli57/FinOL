@@ -80,7 +80,7 @@ continue evolving.
 
 ## Installation
 
-### Installing from source (PRIORITY SELECTION)
+### Installing from source (PRIORITY OPTION)
 To install the bleeding edge version, clone this repository with:
 ```bash
 > git clone https://github.com/jiahaoli57/finol.git
