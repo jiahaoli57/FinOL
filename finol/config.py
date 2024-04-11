@@ -4,7 +4,7 @@ PARENT_PATH = os.path.dirname(ROOT_PATH)
 
 from finol import utils
 utils.download_data()
-utils.check_update(GET_LATEST_FINOL=True)
+utils.check_update(GET_LATEST_FINOL=False)
 
 import matplotlib.pyplot as plt
 plt.style.use('seaborn-talk')
