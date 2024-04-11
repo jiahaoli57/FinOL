@@ -80,16 +80,16 @@ continue evolving.
 
 ## Installation
 
+### Installing from source (PRIORITY SELECTION)
+To install the bleeding edge version, clone this repository with:
+```bash
+> git clone https://github.com/jiahaoli57/finol.git
+```
+
 ### Installing via PIP
 ``FinOL`` is available on [PyPI](https://pypi.org/project/finol), therefore you can install the latest released version with:
 ```bash
 > pip install finol -t your_own_dir
-```
-
-### Installing from source
-To install the bleeding edge version, clone this repository with:
-```bash
-> git clone https://github.com/jiahaoli57/finol.git
 ```
 
 ## Examples and Tutorials
