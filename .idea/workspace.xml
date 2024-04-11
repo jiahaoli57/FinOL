@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="commit" />
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="commit">
+      <change beforePath="$PROJECT_DIR$/finol/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/__init__.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +135,7 @@
       <workItem from="1711962732874" duration="2129000" />
       <workItem from="1712026921096" duration="6000" />
       <workItem from="1712063917604" duration="832000" />
-      <workItem from="1712849618830" duration="1521000" />
+      <workItem from="1712849618830" duration="1842000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1711007390528</created>
@@ -261,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712851043939</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="commit">
+      <created>1712851242360</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1712851242360</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
