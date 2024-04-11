@@ -119,7 +119,7 @@ BATCH_SIZE = {
 }
 
 # Parameters related to model_layer
-MODEL_NAME = "LSTM"
+MODEL_NAME = "DNN"
 MODEL_CONFIG = {
     "DNN": {
         "NUM_LAYERS": 1,
@@ -163,7 +163,7 @@ LEARNING_RATE = 1e-4
 CRITERION_NAME = "LOG_SINGLE_PERIOD_WEALTH"
 LAMBDA_L2 = 0.001
 DEVICE = "cpu"
-NUM_EPOCHES = 1000
+NUM_EPOCHES = 100
 from finol.optimization_layer import criterion_selector
 
 # Parameters related to evaluation_layer
