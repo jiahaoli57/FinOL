@@ -89,7 +89,7 @@ continue evolving.
 ### Installing from source
 To install the bleeding edge version, clone this repository with:
 ```bash
-> git clone https://github.com/FinOL/finol
+> git clone https://github.com/jiahaoli57/finol.git
 ```
 
 ## Examples and Tutorials

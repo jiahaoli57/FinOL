@@ -50,7 +50,7 @@ DATASET_SPLIT_CONFIG = {
     },
     "TSE": {
         "TRAIN_START_TIMESTAMP": "1995-01-12",
-        "TRAIN_END_TIMESTAMP": "1997-05-28",  # [600 rows x 5 columns] NUM OF PERIODS IN TRAINING SETS ARE UNCERATIN
+        "TRAIN_END_TIMESTAMP": "1997-05-28",  # [600 rows x 5 columns]
         "VAL_START_TIMESTAMP": "1997-05-29",
         "VAL_END_TIMESTAMP": "1998-03-13",  # [200 rows x 5 columns]
         "TEST_START_TIMESTAMP": "1998-03-16",
