@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="commit">
-      <change afterPath="$PROJECT_DIR$/finol/main/_.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finol/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finol/main/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/main/main.ipynb" afterDir="false" />
@@ -154,7 +153,7 @@
       <workItem from="1712854515170" duration="760000" />
       <workItem from="1712900804754" duration="5000" />
       <workItem from="1712914590581" duration="711000" />
-      <workItem from="1713154948224" duration="2735000" />
+      <workItem from="1713154948224" duration="4215000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1711007390528</created>
@@ -338,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712854719953</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="commit">
+      <created>1713157995015</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1713157995015</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

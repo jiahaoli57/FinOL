@@ -2,6 +2,7 @@ import time
 import torch
 import os
 import matplotlib
+import random
 
 import torch.nn as nn
 import matplotlib.pyplot as plt
@@ -39,6 +40,17 @@ metadata = [
     ('DEVICE', DEVICE),
     ('NUM_EPOCHES', NUM_EPOCHES)
 ]
+
+def set_seed(seed=MANUAL_SEED):
+    os.environ['PYTHONHASHSEED'] = str(seed)
+    # os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+        torch.backends.cudnn.deterministic = True
 
 
 def plot_loss_notebook(train_loss_list, val_loss_list):
@@ -90,7 +102,7 @@ def plot_loss(train_loss_list, val_loss_list):
 
 
 def train_model(load_dataset_output):
-    torch.manual_seed(MANUAL_SEED)
+    set_seed()
     os.makedirs(logdir)
     copy2(ROOT_PATH + '/config.py', logdir)
 

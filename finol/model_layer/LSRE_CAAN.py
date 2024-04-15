@@ -12,6 +12,7 @@ CROSS_HEADS = MODEL_CONFIG.get("LSRE-CAAN")["CROSS_HEADS"]
 LATENT_HEADS = MODEL_CONFIG.get("LSRE-CAAN")["LATENT_HEADS"]
 CROSS_DIM_HEAD = MODEL_CONFIG.get("LSRE-CAAN")["CROSS_DIM_HEAD"]
 LATENT_DIM_HEAD = MODEL_CONFIG.get("LSRE-CAAN")["LATENT_DIM_HEAD"]
+HIDDEN_SIZE = MODEL_CONFIG.get("LSRE-CAAN")["HIDDEN_SIZE"]
 
 
 def exists(val):
@@ -41,9 +42,9 @@ def cache_fn(f):
 class PreNorm(nn.Module):
     def __init__(self, dim, fn, context_dim=None, device=None):
         super().__init__()
-        self.fn = fn.to(DEVICE)
-        self.norm = nn.LayerNorm(dim).to(DEVICE)
-        self.norm_context = nn.LayerNorm(context_dim).to(DEVICE) if exists(context_dim) else None
+        self.fn = fn
+        self.norm = nn.LayerNorm(dim)
+        self.norm_context = nn.LayerNorm(context_dim) if exists(context_dim) else None
 
     def forward(self, x, **kwargs):
         x = self.norm(x)
@@ -68,12 +69,12 @@ class FeedForward(nn.Module):
     def __init__(self, dim, device=None):
         super().__init__()
         self.net = nn.Sequential(
-            nn.Linear(dim, dim).to(DEVICE),
+            nn.Linear(dim, dim),
             QuickGELU(),
-        ).to(DEVICE)
+        )
 
     def forward(self, x):
-        return self.net(x).to(DEVICE)
+        return self.net(x)
 
 
 class Attention(nn.Module):
@@ -84,14 +85,14 @@ class Attention(nn.Module):
         self.scale = dim_head ** -0.5
         self.heads = heads
 
-        self.to_q = nn.Linear(query_dim, inner_dim, bias=False).to(DEVICE)
-        self.to_kv = nn.Linear(context_dim, inner_dim * 2, bias=False).to(DEVICE)
-        self.to_out = nn.Linear(inner_dim, query_dim).to(DEVICE)
+        self.to_q = nn.Linear(query_dim, inner_dim, bias=False)
+        self.to_kv = nn.Linear(context_dim, inner_dim * 2, bias=False)
+        self.to_out = nn.Linear(inner_dim, query_dim)
 
     def forward(self, x, context=None, mask=None):
         h = self.heads
 
-        q = self.to_q(x).to(DEVICE)
+        q = self.to_q(x)
         context = default(context, x)  # return context if exists(context) else x
         k, v = self.to_kv(context).chunk(2, dim=-1)
 
@@ -102,15 +103,15 @@ class Attention(nn.Module):
         if exists(mask):
             mask = rearrange(mask, 'b ... -> b (...)')
             max_neg_value = -torch.finfo(sim.dtype).max
-            mask = repeat(mask, 'b j -> (b h) () j', h=h).to(DEVICE)
-            sim.masked_fill_(~mask, max_neg_value).to(DEVICE)
+            mask = repeat(mask, 'b j -> (b h) () j', h=h)
+            sim.masked_fill_(~mask, max_neg_value)
 
         # attention, what we cannot get enough of
-        attn = sim.softmax(dim=-1).to(DEVICE)
+        attn = sim.softmax(dim=-1)
 
-        out = einsum('b i j, b j d -> b i d', attn, v).to(DEVICE)
-        out = rearrange(out, '(b h) n d -> b n (h d)', h=h).to(DEVICE)
-        return self.to_out(out).to(DEVICE)
+        out = einsum('b i j, b j d -> b i d', attn, v)
+        out = rearrange(out, '(b h) n d -> b n (h d)', h=h)
+        return self.to_out(out)
 
 
 class LSRE(nn.Module):
@@ -137,16 +138,16 @@ class LSRE(nn.Module):
             device,
     ):
         super().__init__()
-        self.latents = nn.Parameter(torch.randn(num_latents, latent_dim)).to(DEVICE)
+        self.latents = nn.Parameter(torch.randn(num_latents, latent_dim))
         self.cross_attend_blocks = nn.ModuleList([
             PreNorm(latent_dim, Attention(latent_dim, dim, heads=cross_heads, dim_head=cross_dim_head, device=DEVICE),
-                    context_dim=dim, device=DEVICE).to(DEVICE),
-            PreNorm(latent_dim, FeedForward(latent_dim, device=device).to(DEVICE), device=DEVICE)
+                    context_dim=dim, device=DEVICE),
+            PreNorm(latent_dim, FeedForward(latent_dim, device=device), device=DEVICE)
         ])
         get_latent_attn = lambda: PreNorm(latent_dim,
                                           Attention(latent_dim, heads=latent_heads, dim_head=latent_dim_head,
-                                                    device=DEVICE).to(DEVICE), device=DEVICE)
-        get_latent_ff = lambda: PreNorm(latent_dim, FeedForward(latent_dim, device=DEVICE).to(device), device=DEVICE)
+                                                    device=DEVICE), device=DEVICE)
+        get_latent_ff = lambda: PreNorm(latent_dim, FeedForward(latent_dim, device=DEVICE), device=DEVICE)
         get_latent_attn, get_latent_ff = map(cache_fn, (get_latent_attn, get_latent_ff))
 
         self.layers = nn.ModuleList([])
@@ -204,7 +205,7 @@ class LSRE_CAAN(nn.Module):
         self.num_features_augmented = num_features_augmented
         self.num_features_original = num_features_original
         self.window_size = window_size
-        self.dim = num_features_original
+        self.dim = HIDDEN_SIZE
         self.Prop_winners = 1
         self.token_emb = nn.Linear(num_features_original, self.dim)
         self.pos_emb = nn.Embedding(window_size, self.dim)

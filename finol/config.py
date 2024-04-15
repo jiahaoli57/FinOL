@@ -102,7 +102,7 @@ FEATURE_ENGINEERING_CONFIG = {
 DATA_AUGMENTATION_CONFIG = {
     "WINDOW_DATA": {
         "INCLUDE_WINDOW_DATA": True,
-        "WINDOW_SIZE": 100
+        "WINDOW_SIZE": 30
     }
 }
 SCALER = "MinMaxScaler"  # None, StandardScaler, MinMaxScaler, MaxAbsScaler, RobustScaler
@@ -146,12 +146,12 @@ MODEL_CONFIG = {
     },
     "LSRE-CAAN": {
         "NUM_LAYERS": 4,
-        "NUM_LATENTS": 16,
-        "LATENT_DIM": 32,
+        "NUM_LATENTS": 8,
+        "LATENT_DIM": 16,
         "CROSS_HEADS": 1,
         "LATENT_HEADS": 1,
-        "CROSS_DIM_HEAD": 64,
-        "LATENT_DIM_HEAD": 32,
+        "CROSS_DIM_HEAD": 32,
+        "LATENT_DIM_HEAD": 16,
         "HIDDEN_SIZE": 32,
     },
 }

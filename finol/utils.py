@@ -23,3 +23,4 @@ def download_data():
     github_url = 'https://github.com/ai4finol/finol_data.git'
     local_path = ROOT_PATH + r'\data'
     subprocess.run(['git', 'clone', github_url, local_path])
+
