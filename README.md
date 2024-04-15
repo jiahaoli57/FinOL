@@ -27,11 +27,11 @@ it provides a long-awaited unified platform to advance data-driven OLPS research
 
 <div align="center">
 
-| Update                                                                                                                                      | Status                        | Label         |
-|---------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|---------------|
-| New feature! Support the "Winner Assets Selection" feature in [AlphaPortfolio](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486) | Released on 4 April 2024      | Enhancement   |
-| Release  ``FinOL`` [tutorials](finol/tutorials)                                                                                             | Released on 22 March 2024     | Documentation |
-| Release  ``FinOL`` [v0.0.1](https://github.com/jiahaoli57/finol/releases/tag/v0.0.1)                                                        | Released on 21 March 2024     | N/A           |
+| Update                                                                                                                                      |             Status             |     Label      |
+|---------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------:|:--------------:|
+| New feature! Support the "Winner Assets Selection" feature in [AlphaPortfolio](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486) | Released on 4 April 2024       | Enhancement    |
+| Release  ``FinOL`` [tutorials](finol/tutorials)                                                                                             |   Released on 22 March 2024    | Documentation  |
+| Release  ``FinOL`` [v0.0.1](https://github.com/jiahaoli57/finol/releases/tag/v0.0.1)                                                        |   Released on 21 March 2024    |      N/A       |
 </div>
 
 
