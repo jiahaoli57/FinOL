@@ -14,7 +14,7 @@ TUTORIAL_MODE = False
 TUTORIAL_NAME = "TUTORIAL_4"
 
 # Parameters related to data_layer
-DATASET_NAME = "TSE"  # Available options: NYSE(O), NYSE(N), DJIA, SP500, TSE, SSE, HSI, CMEG, CRYPTO, TUTORIAL
+DATASET_NAME = "SSE"  # Available options: NYSE(O), NYSE(N), DJIA, SP500, TSE, SSE, HSI, CMEG, CRYPTO, TUTORIAL
 DATASET_SPLIT_CONFIG = {
     "NYSE(O)": {
         "TRAIN_START_TIMESTAMP": "1962-07-03",
@@ -102,7 +102,7 @@ FEATURE_ENGINEERING_CONFIG = {
 DATA_AUGMENTATION_CONFIG = {
     "WINDOW_DATA": {
         "INCLUDE_WINDOW_DATA": True,
-        "WINDOW_SIZE": 10
+        "WINDOW_SIZE": 100
     }
 }
 SCALER = "MinMaxScaler"  # None, StandardScaler, MinMaxScaler, MaxAbsScaler, RobustScaler
@@ -119,7 +119,7 @@ BATCH_SIZE = {
 }
 
 # Parameters related to model_layer
-MODEL_NAME = "DNN"
+MODEL_NAME = "LSRE-CAAN"
 MODEL_CONFIG = {
     "DNN": {
         "NUM_LAYERS": 1,
@@ -145,6 +145,7 @@ MODEL_CONFIG = {
         "HIDDEN_SIZE": 32,
     },
     "LSRE-CAAN": {
+        "NUM_LAYERS": 4,
         "NUM_LATENTS": 16,
         "LATENT_DIM": 32,
         "CROSS_HEADS": 1,
@@ -158,12 +159,13 @@ DROPOUT = 0.1
 
 # Parameters related to optimization_layer
 MANUAL_SEED = 42
-OPTIMIZER_NAME = "Adam"
+OPTIMIZER_NAME = "Lamb"
 LEARNING_RATE = 1e-4
 CRITERION_NAME = "LOG_SINGLE_PERIOD_WEALTH"
 LAMBDA_L2 = 0.001
-DEVICE = "cpu"
-NUM_EPOCHES = 100
+DEVICE = "cuda"
+NUM_EPOCHES = 1000
+from finol.optimization_layer import optimizer_selector
 from finol.optimization_layer import criterion_selector
 
 # Parameters related to evaluation_layer

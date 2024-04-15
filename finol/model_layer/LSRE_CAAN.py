@@ -5,6 +5,7 @@ from torch import nn, einsum
 from einops import rearrange, repeat
 from finol.config import *
 
+NUM_LAYERS = MODEL_CONFIG.get("LSRE-CAAN")["NUM_LAYERS"]
 NUM_LATENTS = MODEL_CONFIG.get("LSRE-CAAN")["NUM_LATENTS"]
 LATENT_DIM = MODEL_CONFIG.get("LSRE-CAAN")["LATENT_DIM"]
 CROSS_HEADS = MODEL_CONFIG.get("LSRE-CAAN")["CROSS_HEADS"]
@@ -205,33 +206,32 @@ class LSRE_CAAN(nn.Module):
         self.window_size = window_size
         self.dim = num_features_original
         self.Prop_winners = 1
-        # self.token_emb = nn.Linear(num_features_original, self.dim).to(DEVICE)
-        self.pos_emb = nn.Embedding(window_size, self.dim).to(DEVICE)
+        self.token_emb = nn.Linear(num_features_original, self.dim)
+        self.pos_emb = nn.Embedding(window_size, self.dim)
         self.latent_dim = LATENT_DIM
 
-        depth = 1
         self.lsre = LSRE(
-            depth=depth,  # 1
+            depth=NUM_LAYERS,
             dim=self.dim,  # num_feats
-            num_latents=NUM_LATENTS,  # 1
-            # latent_dim=LATENT_DIM,  # 32
-            latent_dim=self.latent_dim,  # 32
-            cross_heads=CROSS_HEADS,  # 1
-            latent_heads=LATENT_HEADS,  # 1
-            cross_dim_head=CROSS_DIM_HEAD,  # 64
-            latent_dim_head=LATENT_DIM_HEAD,  # 32
+            num_latents=NUM_LATENTS,
+            # latent_dim=LATENT_DIM,
+            latent_dim=self.latent_dim,
+            cross_heads=CROSS_HEADS,
+            latent_heads=LATENT_HEADS,
+            cross_dim_head=CROSS_DIM_HEAD,
+            latent_dim_head=LATENT_DIM_HEAD,
             device=DEVICE,
             **kwargs
         )
 
         value_dim = LATENT_DIM
-        self.linear_query = torch.nn.Linear(value_dim, value_dim).to(DEVICE)
-        self.linear_key = torch.nn.Linear(value_dim, value_dim).to(DEVICE)
-        self.linear_value = torch.nn.Linear(value_dim, value_dim).to(DEVICE)
-        self.linear_winner = torch.nn.Linear(value_dim, 1).to(DEVICE)
+        self.linear_query = torch.nn.Linear(value_dim, value_dim)
+        self.linear_key = torch.nn.Linear(value_dim, value_dim)
+        self.linear_value = torch.nn.Linear(value_dim, value_dim)
+        self.linear_winner = torch.nn.Linear(value_dim, 1)
         self.dropout = nn.Dropout(p=DROPOUT)
 
-        self.lsre_linear = torch.nn.Linear(LATENT_DIM, 1).to(DEVICE)
+        self.lsre_linear = torch.nn.Linear(LATENT_DIM, 1)
 
     def forward(
             self,
@@ -247,7 +247,7 @@ class LSRE_CAAN(nn.Module):
         n, d = x.shape[1], x.shape[2]  # n: window size; d: number of features
 
         # LSRE
-        # x = self.token_emb(x)  # optional
+        x = self.token_emb(x)  # optional
         pos_emb = self.pos_emb(torch.arange(n, device=DEVICE))
 
         pos_emb = rearrange(pos_emb, 'n d -> () n d')
