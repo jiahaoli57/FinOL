@@ -49,5 +49,5 @@ class Transformer(nn.Module):
         output = self.dropout(output)
         output = F.relu(output)
         output = self.linear(output).squeeze(-1)
-        portfolio = F.softmax(output, dim=-1)
-        return portfolio
+        # portfolio = F.softmax(output, dim=-1)
+        return output

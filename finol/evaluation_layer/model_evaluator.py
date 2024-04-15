@@ -18,12 +18,9 @@ def evaluate_model(load_dataset_output, train_model_output):
 
 
 if __name__ == '__main__':
-    load_benchmark_output = load_benchmark()
-    # load_dataset_output = load_dataset()
-    # # train_model_output = train_model(load_dataset_output)
-    # train_model_output = {
-    #     "last_model": None,
-    #     "best_model": None,
-    #     "logdir": ROOT_PATH + '/evaluation_layer/logdir/2024-03-16_22-18-05'
-    # }
-    # evaluate_model_output = evaluate_model(load_dataset_output, train_model_output)
+    # load_benchmark_output = load_benchmark()
+    load_dataset_output = load_dataset()
+    train_model_output = {
+        "logdir": ROOT_PATH[:-5] + '/logdir/2024-04-15_19-15-29'
+    }
+    evaluate_model_output = evaluate_model(load_dataset_output, train_model_output)

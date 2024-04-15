@@ -19,6 +19,7 @@ from finol.optimization_layer.criterion_selector import *
 from finol.optimization_layer.optimizer_selector import *
 from finol.evaluation_layer.benchmark_loader import *
 from finol.config import *
+from finol import portfolio_selection
 
 logdir = PARENT_PATH + '/logdir/' + str(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()))
 
@@ -111,6 +112,7 @@ def train_model(load_dataset_output):
     )
     train_loader = load_dataset_output['train_loader']
     val_loader = load_dataset_output['val_loader']
+    NUM_ASSETS = load_dataset_output['NUM_ASSETS']
     test_loader = load_dataset_output['test_loader']
     NUM_TRAIN_PERIODS = load_dataset_output['NUM_TRAIN_PERIODS']
     NUM_VAL_PERIODS = load_dataset_output['NUM_VAL_PERIODS']
@@ -129,7 +131,8 @@ def train_model(load_dataset_output):
         train_loss = 0
         for i, data in enumerate(train_loader, 1):
             x_data, label = data
-            portfolio = model(x_data.float())
+            final_scores = model(x_data.float())
+            portfolio = portfolio_selection(final_scores)
             loss = criterion(portfolio, label.float())
 
             optimizer.zero_grad()
@@ -145,7 +148,8 @@ def train_model(load_dataset_output):
             val_loss = 0
             for i, data in enumerate(val_loader, 1):
                 val_data, label = data
-                portfolio = model(val_data.float())
+                final_scores = model(val_data.float())
+                portfolio = portfolio_selection(final_scores)
                 loss = criterion(portfolio, label.float())
                 val_loss += loss.item()
 
@@ -154,7 +158,7 @@ def train_model(load_dataset_output):
 
             if val_loss < best_val_loss:
                 best_val_loss = val_loss
-                torch.save(model, logdir + '/best_model_'+DATASET_NAME+'.pt')
+                torch.save(model, logdir + '/best_model_' + DATASET_NAME + '.pt')
             torch.save(model, logdir + '/last_model_' + DATASET_NAME + '.pt')
 
         if (e + 1) % 10 == 0:
@@ -164,8 +168,6 @@ def train_model(load_dataset_output):
     plot_loss(train_loss_list, val_loss_list)
 
     train_model_output = {
-        "last_model": torch.load(logdir + '/last_model_'+DATASET_NAME+'.pt'),
-        "best_model": torch.load(logdir + '/best_model_'+DATASET_NAME+'.pt'),
         "logdir": logdir,
     }
     return train_model_output

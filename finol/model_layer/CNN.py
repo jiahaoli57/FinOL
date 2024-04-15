@@ -49,5 +49,5 @@ class CNN(nn.Module):
         out = out.view(batch_size, self.num_assets, 1).squeeze(-1)
 
         # Decision Making
-        portfolio = F.softmax(out, dim=-1)
-        return portfolio
+        # portfolio = F.softmax(out, dim=-1)
+        return out

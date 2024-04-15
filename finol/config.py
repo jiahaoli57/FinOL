@@ -2,14 +2,11 @@ import os
 ROOT_PATH = os.path.dirname(os.path.realpath(__file__))
 PARENT_PATH = os.path.dirname(ROOT_PATH)
 
-from finol import utils
-utils.download_data()
-utils.check_update(GET_LATEST_FINOL=False)
-
 import matplotlib.pyplot as plt
 plt.style.use('seaborn-talk')
 from rich import print
 
+GET_LATEST_FINOL = False
 TUTORIAL_MODE = False
 TUTORIAL_NAME = "TUTORIAL_4"
 
@@ -102,19 +99,19 @@ FEATURE_ENGINEERING_CONFIG = {
 DATA_AUGMENTATION_CONFIG = {
     "WINDOW_DATA": {
         "INCLUDE_WINDOW_DATA": True,
-        "WINDOW_SIZE": 30
+        "WINDOW_SIZE": 5
     }
 }
-SCALER = "MinMaxScaler"  # None, StandardScaler, MinMaxScaler, MaxAbsScaler, RobustScaler
+SCALER = "RobustScaler"  # None, StandardScaler, MinMaxScaler, MaxAbsScaler, RobustScaler
 BATCH_SIZE = {
     "NYSE(O)": 128,
     "NYSE(N)": 128,
-    "DJIA": 32,
+    "DJIA": 64,
     "SP500": 64,
     "TSE": 64,
-    "SSE": 32,
-    "HSI": 32,
-    "CMEG": 32,
+    "SSE": 64,
+    "HSI": 64,
+    "CMEG": 64,
     "CRYPTO": 128,
 }
 
@@ -122,7 +119,7 @@ BATCH_SIZE = {
 MODEL_NAME = "LSRE-CAAN"
 MODEL_CONFIG = {
     "DNN": {
-        "NUM_LAYERS": 1,
+        "NUM_LAYERS": 4,
         "HIDDEN_SIZE": 32
     },
     "RNN": {
@@ -130,7 +127,7 @@ MODEL_CONFIG = {
         "HIDDEN_SIZE": 32
     },
     "LSTM": {
-        "NUM_LAYERS": 1,
+        "NUM_LAYERS": 4,
         "HIDDEN_SIZE": 32
     },
     "CNN": {
@@ -145,22 +142,23 @@ MODEL_CONFIG = {
         "HIDDEN_SIZE": 32,
     },
     "LSRE-CAAN": {
-        "NUM_LAYERS": 4,
+        "NUM_LAYERS": 1,
         "NUM_LATENTS": 8,
         "LATENT_DIM": 16,
         "CROSS_HEADS": 1,
         "LATENT_HEADS": 1,
         "CROSS_DIM_HEAD": 32,
         "LATENT_DIM_HEAD": 16,
-        "HIDDEN_SIZE": 32,
+        "HIDDEN_SIZE": 16,
     },
 }
 DROPOUT = 0.1
+PROP_WINNERS = 0.5
 
 # Parameters related to optimization_layer
 MANUAL_SEED = 42
 OPTIMIZER_NAME = "Lamb"
-LEARNING_RATE = 1e-4
+LEARNING_RATE = 1e-3
 CRITERION_NAME = "LOG_SINGLE_PERIOD_WEALTH"
 LAMBDA_L2 = 0.001
 DEVICE = "cuda"

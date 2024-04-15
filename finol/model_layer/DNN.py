@@ -45,5 +45,5 @@ class DNN(nn.Module):
             out = self.dropout(out)
 
         out = out.squeeze(-1)
-        portfolio = F.softmax(out, dim=-1)
-        return portfolio
+        # portfolio = F.softmax(out, dim=-1)
+        return out

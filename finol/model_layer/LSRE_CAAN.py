@@ -205,9 +205,8 @@ class LSRE_CAAN(nn.Module):
         self.num_features_augmented = num_features_augmented
         self.num_features_original = num_features_original
         self.window_size = window_size
-        self.dim = HIDDEN_SIZE
-        self.Prop_winners = 1
-        self.token_emb = nn.Linear(num_features_original, self.dim)
+        self.dim = num_features_original
+        # self.token_emb = nn.Linear(num_features_original, self.dim)
         self.pos_emb = nn.Embedding(window_size, self.dim)
         self.latent_dim = LATENT_DIM
 
@@ -248,37 +247,24 @@ class LSRE_CAAN(nn.Module):
         n, d = x.shape[1], x.shape[2]  # n: window size; d: number of features
 
         # LSRE
-        x = self.token_emb(x)  # optional
+        # x = self.token_emb(x)  # optional
         pos_emb = self.pos_emb(torch.arange(n, device=DEVICE))
 
         pos_emb = rearrange(pos_emb, 'n d -> () n d')
         x = x + pos_emb
-        stock_rep = self.lsre(x, mask=None, queries=None)  # [batch_size * num_assets, latent_dim]
+        stock_rep = self.lsre(x, mask=None, queries=None)  # [BATCH_SIZE * NUM_ASSETS, LATENT_DIM]
         stock_rep = self.dropout(stock_rep)
 
         # CAAN
         x = stock_rep.view(batch_size, num_assets, self.latent_dim)
 
-        query = self.linear_query(x)  # [batch_size, num_assets, LATENT_DIM]
-        key = self.linear_key(x)  # [batch_size, num_assets, LATENT_DIM]
-        value = self.linear_value(x)  # [batch_size, num_assets, LATENT_DIM]
+        query = self.linear_query(x)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
+        key = self.linear_key(x)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
+        value = self.linear_value(x)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
 
-        beta = torch.matmul(query, key.transpose(1, 2)) / torch.sqrt(torch.tensor(float(query.shape[-1])))  # [BATCH_SIZE, num_assets, num_assets]
+        beta = torch.matmul(query, key.transpose(1, 2)) / torch.sqrt(torch.tensor(float(query.shape[-1])))  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
         beta = F.softmax(beta, dim=-1).unsqueeze(-1)
-        x = torch.sum(value.unsqueeze(1) * beta, dim=2)  # [batch_size, num_assets, latent_dim]
+        x = torch.sum(value.unsqueeze(1) * beta, dim=2)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
 
-        final_scores = self.linear_winner(x).squeeze()  # [BATCH_SIZE, NUM_ASSETS]
-
-        # Portfolio Management
-        # if self.Prop_winners != 1:
-        #     # Prop_winners: proportion of winners, i.e. G in Section 4.2
-        #     num_winners = int(self.num_assets * self.Prop_winners)
-        #     assert num_winners != 0 and num_winners <= self.num_assets
-        #     rank = torch.argsort(final_scores)
-        #     winners = set(rank.detach().cpu().numpy()[-num_winners:])  # <class 'set'>
-        #     winners_mask = torch.Tensor([0 if i in winners else 1 for i in range(rank.shape[0])]).to(DEVICE)
-        #     portfolio = F.softmax(final_scores - 1e9 * winners_mask, dim=0)
-        # else:
-
-        portfolio = F.softmax(final_scores, dim=-1)
-        return portfolio
+        final_scores = self.linear_winner(x).squeeze(-1)  # [BATCH_SIZE, NUM_ASSETS]
+        return final_scores

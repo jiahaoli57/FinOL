@@ -4,6 +4,7 @@ import torch
 import numpy as np
 import pandas as pd
 from finol.config import *
+from finol import *
 
 if DATASET_NAME in ["SSE", "HSI", "CMEG"]:
     day = 52
@@ -56,7 +57,8 @@ def caculate_ATO(NUM_PERIODS, NUM_ASSETS, model, test_loader):
         label = label.cpu().detach().numpy()
         label_list.append(label)
 
-        portfolio = model(x_data.float())
+        final_scores = model(x_data.float())
+        portfolio = actual_portfolio_selection(final_scores)
         portfolio = portfolio.cpu().detach().numpy()
         portfolio_list.append(portfolio)
 
@@ -88,7 +90,8 @@ def caculate_TCW(NUM_PERIODS, NUM_ASSETS, model, test_loader):
             label = label.cpu().detach().numpy()
             label_list.append(label)
 
-            portfolio = model(x_data.float())
+            final_scores = model(x_data.float())
+            portfolio = actual_portfolio_selection(final_scores)
             portfolio = portfolio.cpu().detach().numpy()
             portfolio_list.append(portfolio)
 
@@ -106,12 +109,10 @@ def caculate_TCW(NUM_PERIODS, NUM_ASSETS, model, test_loader):
 
 
 def caculate_metric(train_model_output, load_dataset_output):
-    model = train_model_output["best_model"]
     logdir = train_model_output["logdir"]
-    if model == None:
-        model = torch.load(logdir + '/best_model_'+DATASET_NAME+'.pt')
-
+    model = torch.load(logdir + '/best_model_' + DATASET_NAME + '.pt').to(DEVICE)
     model.eval()
+
     test_loader = load_dataset_output["test_loader"]
     NUM_TEST_PERIODS = load_dataset_output["NUM_TEST_PERIODS"]
     NUM_ASSETS = load_dataset_output["NUM_ASSETS"]
@@ -124,7 +125,9 @@ def caculate_metric(train_model_output, load_dataset_output):
         x_data, label = data
         labels[i, :] = label
 
-        portfolio = model(x_data.float())
+        final_scores = model(x_data.float())
+        portfolio = actual_portfolio_selection(final_scores)
+        # print(portfolio)
         portfolios[i, :] = portfolio
 
     runtime = time.time() - start_time

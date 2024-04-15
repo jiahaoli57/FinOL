@@ -44,5 +44,5 @@ class LSTM(nn.Module):
         # Decision Making
         out = out.view(batch_size, self.num_assets, HIDDEN_SIZE)
         out = self.fc(out).squeeze(-1)
-        portfolio = F.softmax(out, dim=-1)
-        return portfolio
+        # portfolio = F.softmax(out, dim=-1)
+        return out
