@@ -11,7 +11,7 @@ TUTORIAL_MODE = False
 TUTORIAL_NAME = "TUTORIAL_4"
 
 # Parameters related to data_layer
-DATASET_NAME = "SSE"  # Available options: NYSE(O), NYSE(N), DJIA, SP500, TSE, SSE, HSI, CMEG, CRYPTO, TUTORIAL
+DATASET_NAME = "DJIA_WEEKLY"  # Available options: NYSE(O), NYSE(N), DJIA, SP500, TSE, SSE, HSI, CMEG, DJIA_WEEKLY, CRYPTO, TUTORIAL
 DATASET_SPLIT_CONFIG = {
     "NYSE(O)": {
         "TRAIN_START_TIMESTAMP": "1962-07-03",
@@ -77,6 +77,14 @@ DATASET_SPLIT_CONFIG = {
         "TEST_START_TIMESTAMP": "2020-11-23",
         "TEST_END_TIMESTAMP": "2023-06-26"  # [136 rows x 5 columns]
     },
+    "DJIA_WEEKLY": {
+        "TRAIN_START_TIMESTAMP": "2010-07-05",
+        "TRAIN_END_TIMESTAMP": "2018-04-09",  # [406 rows x 5 columns]
+        "VAL_START_TIMESTAMP": "2018-04-16",
+        "VAL_END_TIMESTAMP": "2020-11-16",  # [136 rows x 5 columns]
+        "TEST_START_TIMESTAMP": "2020-11-23",
+        "TEST_END_TIMESTAMP": "2023-06-26"  # [136 rows x 5 columns]
+    },
     "CRYPTO": {
         "TRAIN_START_TIMESTAMP": "2017-11-09",
         "TRAIN_END_TIMESTAMP": "2021-08-22",  # [1383 rows x 5 columns]
@@ -99,19 +107,21 @@ FEATURE_ENGINEERING_CONFIG = {
 DATA_AUGMENTATION_CONFIG = {
     "WINDOW_DATA": {
         "INCLUDE_WINDOW_DATA": True,
-        "WINDOW_SIZE": 5
+        "WINDOW_SIZE": 30
     }
 }
-SCALER = "RobustScaler"  # None, StandardScaler, MinMaxScaler, MaxAbsScaler, RobustScaler
+LOAD_DATALOADER = False
+SCALER = "MaxAbsScaler"  # None, StandardScaler, MinMaxScaler, MaxAbsScaler, RobustScaler
 BATCH_SIZE = {
     "NYSE(O)": 128,
     "NYSE(N)": 128,
     "DJIA": 64,
     "SP500": 64,
     "TSE": 64,
-    "SSE": 64,
-    "HSI": 64,
-    "CMEG": 64,
+    "SSE": 128,
+    "HSI": 128,
+    "CMEG": 128,
+    "DJIA_WEEKLY": 128,
     "CRYPTO": 128,
 }
 
@@ -142,18 +152,17 @@ MODEL_CONFIG = {
         "HIDDEN_SIZE": 32,
     },
     "LSRE-CAAN": {
-        "NUM_LAYERS": 1,
+        "NUM_LAYERS": 4,
         "NUM_LATENTS": 8,
         "LATENT_DIM": 16,
         "CROSS_HEADS": 1,
         "LATENT_HEADS": 1,
         "CROSS_DIM_HEAD": 32,
         "LATENT_DIM_HEAD": 16,
-        "HIDDEN_SIZE": 16,
     },
 }
 DROPOUT = 0.1
-PROP_WINNERS = 0.5
+PROP_WINNERS = 0.25
 
 # Parameters related to optimization_layer
 MANUAL_SEED = 42
@@ -163,10 +172,12 @@ CRITERION_NAME = "LOG_SINGLE_PERIOD_WEALTH"
 LAMBDA_L2 = 0.001
 DEVICE = "cuda"
 NUM_EPOCHES = 1000
-from finol.optimization_layer import optimizer_selector
-from finol.optimization_layer import criterion_selector
 
 # Parameters related to evaluation_layer
+INTERPRETABLE_ANALYSIS_CONFIG = {
+    "INCLUDE_INTERPRETABILITY_ANALYSIS": True,
+    "INCLUDE_ECONOMIC_DISTILLATION": True,
+}
 MARKERS = ['o', '^', '<', '>', 's', 'p', 'h', '+', 'x', '|', '_']
 MARKEVERY = 10
 ALPHA = 0.5
@@ -193,8 +204,6 @@ PLOT_ALL_2 = FOLLOW_THE_WINNER + [MODEL_NAME]
 PLOT_ALL_3 = FOLLOW_THE_LOSER + [MODEL_NAME]
 PLOT_ALL_4 = PATTERN_MATCHING + [MODEL_NAME]
 PLOT_ALL_5 = META_LEARNING + [MODEL_NAME]
-
-
 
 ################################################################################################################
 ############################################# FOR TUTORIAL ONLY ################################################

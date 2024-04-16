@@ -225,7 +225,18 @@ def feature_engineering(df):
     _ = pd.concat([df['DATE'], ohlcv_features_df, overlap_features_df, momentum_features_df, volume_features_df, cycle_features_df,
                     price_features_df, volatility_features_df, pattern_features_df], axis=1)
     _.set_index('DATE', inplace=True)
-    return _
+    DETAILED_FEATURE_LIST = _.columns.tolist()
+    DETAILED_NUM_FEATURES = {
+        'OHLCV_FEATURES': ohlcv_features_df.shape[1],
+        'OVERLAP_FEATURES': overlap_features_df.shape[1],
+        'MOMENTUM_FEATURES': momentum_features_df.shape[1],
+        'VOLUME_FEATURES': volume_features_df.shape[1],
+        'CYCLE_FEATURES': cycle_features_df.shape[1],
+        'PRICE_FEATURES': price_features_df.shape[1],
+        'VOLATILITY_FEATURES': volatility_features_df.shape[1],
+        'PATTERN_FEATURES': pattern_features_df.shape[1],
+    }
+    return _, DETAILED_FEATURE_LIST, DETAILED_NUM_FEATURES
 
 
 def data_augmentation(df):
@@ -293,107 +304,117 @@ def load_dataset():
     Returns:
     - df (DataFrame): Processed DataFrame
     """
-    download_data()
-
-    ds_train = []
-    ds_val = []
-    ds_test = []
-    label_train = []
-    label_val = []
-    label_test = []
-    df_label_MATLAB = pd.DataFrame()
-
-    raw_files = data_accessing(ROOT_PATH + '/data/datasets/' + DATASET_NAME)
-    if len(raw_files) > 0:
-        print(f"Successfully loaded {len(raw_files)} Excel file(s):")
-        # feature_engineering(excel_files)
-        for i, df in tqdm(enumerate(raw_files), total=len(raw_files), desc="Data Processing"):
-
-            # print(f"Excel file {i+1}:")
-            df = data_cleaning(df)
-
-            df = feature_engineering(df)
-            df = data_cleaning(df)
-
-            df, WINDOW_SIZE = data_augmentation(df)
-            df = data_cleaning(df)
-
-            df_label = pd.DataFrame({'LABEL': df['CLOSE'].shift(-1) / df['CLOSE']})
-            df_label.iloc[-1, -1] = 1
-
-            # df_label_temp = df_label.copy()
-            # test_start = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TEST_START_TIMESTAMP"])
-            # test_end = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TEST_END_TIMESTAMP"])
-            # df_label_temp = df_label_temp[(df_label_temp.index >= test_start) & (df_label_temp.index <= test_end)]
-            # df_label_MATLAB = pd.concat([df_label_MATLAB, df_label_temp], axis=1)
-
-            train, val, test = data_splitting(df)
-            train_label, val_label, test_label = data_splitting(df_label)
-
-            zscore_train = zscore_calculation(train)
-            train_normalization = data_normalization(train, zscore_train)
-            val_normalization = data_normalization(val, zscore_train)
-            test_normalization = data_normalization(test, zscore_train)
-
-            nan_count = df.isna().sum().sum()
-            if nan_count != 0:
-                print(f'nan_count: {nan_count}')
-                time.sleep(1111)
-
-            nan_count = df.isnull().sum().sum()
-            if nan_count != 0:
-                print(f'nan_count: {nan_count}')
-                time.sleep(1111)
-
-            train_normalization = data_cleaning(train_normalization)
-            val_normalization = data_cleaning(val_normalization)
-            test_normalization = data_cleaning(test_normalization)
-
-            ds_train.append(torch.from_numpy(train_normalization.values))
-            ds_val.append(torch.from_numpy(val_normalization.values))
-            ds_test.append(torch.from_numpy(test_normalization.values))
-            label_train.append(torch.from_numpy(train_label['LABEL'].values))
-            label_val.append(torch.from_numpy(val_label['LABEL'].values))
-            label_test.append(torch.from_numpy(test_label['LABEL'].values))
-
-        ds_train = torch.stack(ds_train).permute(1, 0, 2).to(DEVICE)  # [num_assets, num_train_periods, num_feats] -> [num_train_periods, num_assets, num_feats]
-        ds_val = torch.stack(ds_val).permute(1, 0, 2).to(DEVICE)
-        ds_test = torch.stack(ds_test).permute(1, 0, 2).to(DEVICE)
-        label_train = torch.stack(label_train).transpose(0, 1).to(DEVICE)  # [num_assets, num_train_periods] -> [num_train_periods, num_assets]
-        label_val = torch.stack(label_val).transpose(0, 1).to(DEVICE)
-        label_test = torch.stack(label_test).transpose(0, 1).to(DEVICE)
-
-        train_ids = TensorDataset(ds_train, label_train)
-        val_ids = TensorDataset(ds_val, label_val)
-        test_ids = TensorDataset(ds_test, label_test)
-
-        train_loader = DataLoader(train_ids, batch_size=BATCH_SIZE[DATASET_NAME], shuffle=False, drop_last=False)
-        val_loader = DataLoader(val_ids, batch_size=BATCH_SIZE[DATASET_NAME], shuffle=False, drop_last=False)
-        test_loader = DataLoader(test_ids, batch_size=1, shuffle=False, drop_last=False)
-
+    if LOAD_DATALOADER:
+        load_dataset_output = torch.load(ROOT_PATH + '/data/datasets/' + DATASET_NAME + '_load_dataset_output.pt')
     else:
-        print("No Excel files found.")
+        download_data()
 
-    # from scipy import io
-    # Save the price relative tensor to a mat file with the data set name
-    # io.savemat('price_relative_' + DATASET_NAME + '.mat', {'data': df_label_MATLAB.values})
+        ds_train = []
+        ds_val = []
+        ds_test = []
+        label_train = []
+        label_val = []
+        label_test = []
+        # df_label_MATLAB = pd.DataFrame()
 
-    load_dataset_output = {
-        "train_loader": train_loader,
-        "val_loader": val_loader,
-        "test_loader": test_loader,
-        'NUM_TRAIN_PERIODS': ds_train.shape[0],
-        'NUM_VAL_PERIODS': ds_val.shape[0],
-        'NUM_TEST_PERIODS': ds_test.shape[0],
-        'NUM_ASSETS': ds_train.shape[1],
-        'NUM_FEATURES_AUGMENTED': ds_train.shape[2],
-        'NUM_FEATURES_ORIGINAL': int(ds_train.shape[2] / (WINDOW_SIZE)),
-        'WINDOW_SIZE': WINDOW_SIZE
-    }
+        raw_files = data_accessing(ROOT_PATH + '/data/datasets/' + DATASET_NAME)
+        if len(raw_files) > 0:
+            print(f"Successfully loaded {len(raw_files)} Excel file(s):")
+            # feature_engineering(excel_files)
+            for i, df in tqdm(enumerate(raw_files), total=len(raw_files), desc="Data Processing"):
+
+                # print(f"Excel file {i+1}:")
+                df = data_cleaning(df)
+
+                df, DETAILED_FEATURE_LIST, DETAILED_NUM_FEATURES = feature_engineering(df)
+                df = data_cleaning(df)
+
+                df, WINDOW_SIZE = data_augmentation(df)
+                df = data_cleaning(df)
+
+                df_label = pd.DataFrame({'LABEL': df['CLOSE'].shift(-1) / df['CLOSE']})
+                df_label.iloc[-1, -1] = 1
+
+                # df_label_temp = df_label.copy()
+                # test_start = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TEST_START_TIMESTAMP"])
+                # test_end = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TEST_END_TIMESTAMP"])
+                # df_label_temp = df_label_temp[(df_label_temp.index >= test_start) & (df_label_temp.index <= test_end)]
+                # df_label_MATLAB = pd.concat([df_label_MATLAB, df_label_temp], axis=1)
+
+                train, val, test = data_splitting(df)
+                train_label, val_label, test_label = data_splitting(df_label)
+
+                zscore_train = zscore_calculation(train)
+                train_normalization = data_normalization(train, zscore_train)
+                val_normalization = data_normalization(val, zscore_train)
+                test_normalization = data_normalization(test, zscore_train)
+
+                nan_count = df.isna().sum().sum()
+                if nan_count != 0:
+                    print(f'nan_count: {nan_count}')
+                    time.sleep(1111)
+
+                nan_count = df.isnull().sum().sum()
+                if nan_count != 0:
+                    print(f'nan_count: {nan_count}')
+                    time.sleep(1111)
+
+                train_normalization = data_cleaning(train_normalization)
+                val_normalization = data_cleaning(val_normalization)
+                test_normalization = data_cleaning(test_normalization)
+
+                ds_train.append(torch.from_numpy(train_normalization.values))
+                ds_val.append(torch.from_numpy(val_normalization.values))
+                ds_test.append(torch.from_numpy(test_normalization.values))
+                label_train.append(torch.from_numpy(train_label['LABEL'].values))
+                label_val.append(torch.from_numpy(val_label['LABEL'].values))
+                label_test.append(torch.from_numpy(test_label['LABEL'].values))
+
+            ds_train = torch.stack(ds_train).permute(1, 0, 2).to(DEVICE)  # [num_assets, num_train_periods, num_feats] -> [num_train_periods, num_assets, num_feats]
+            ds_val = torch.stack(ds_val).permute(1, 0, 2).to(DEVICE)
+            ds_test = torch.stack(ds_test).permute(1, 0, 2).to(DEVICE)
+            label_train = torch.stack(label_train).transpose(0, 1).to(DEVICE)  # [num_assets, num_train_periods] -> [num_train_periods, num_assets]
+            label_val = torch.stack(label_val).transpose(0, 1).to(DEVICE)
+            label_test = torch.stack(label_test).transpose(0, 1).to(DEVICE)
+
+            train_ids = TensorDataset(ds_train, label_train)
+            val_ids = TensorDataset(ds_val, label_val)
+            test_ids = TensorDataset(ds_test, label_test)
+
+            train_loader = DataLoader(train_ids, batch_size=BATCH_SIZE[DATASET_NAME], shuffle=False, drop_last=False)
+            val_loader = DataLoader(val_ids, batch_size=BATCH_SIZE[DATASET_NAME], shuffle=False, drop_last=False)
+            test_loader = DataLoader(test_ids, batch_size=1, shuffle=False, drop_last=False)
+
+            # Save the price relative tensor to a mat file with the data set name
+            from scipy import io
+            io.savemat('price_relative_' + DATASET_NAME + '.mat', {'data': df_label_MATLAB.values})
+        else:
+            print("No Excel files found.")
+
+        # from scipy import io
+        # Save the price relative tensor to a mat file with the data set name
+        # io.savemat('price_relative_' + DATASET_NAME + '.mat', {'data': df_label_MATLAB.values})
+
+        load_dataset_output = {
+            "train_loader": train_loader,
+            "val_loader": val_loader,
+            "test_loader": test_loader,
+            'NUM_TRAIN_PERIODS': ds_train.shape[0],
+            'NUM_VAL_PERIODS': ds_val.shape[0],
+            'NUM_TEST_PERIODS': ds_test.shape[0],
+            'NUM_ASSETS': ds_train.shape[1],
+            'NUM_FEATURES_AUGMENTED': ds_train.shape[2],
+            'NUM_FEATURES_ORIGINAL': int(ds_train.shape[2] / (WINDOW_SIZE)),
+            'DETAILED_NUM_FEATURES': DETAILED_NUM_FEATURES,
+            'WINDOW_SIZE': WINDOW_SIZE,
+            'FEATURE_LIST': [feature[8:] for feature, include in FEATURE_ENGINEERING_CONFIG.items() if include],
+            'DETAILED_FEATURE_LIST': DETAILED_FEATURE_LIST,
+
+        }
+        torch.save(load_dataset_output, ROOT_PATH + '/data/datasets/' + DATASET_NAME + '_load_dataset_output.pt')
     return load_dataset_output
 
 
 if __name__ == '__main__':
-    # utils.check_update(GET_LATEST_FINOL)
     load_dataset_output = load_dataset()
-    print(load_dataset_output)
+    # print(load_dataset_output)

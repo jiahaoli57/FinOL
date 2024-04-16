@@ -12,7 +12,6 @@ CROSS_HEADS = MODEL_CONFIG.get("LSRE-CAAN")["CROSS_HEADS"]
 LATENT_HEADS = MODEL_CONFIG.get("LSRE-CAAN")["LATENT_HEADS"]
 CROSS_DIM_HEAD = MODEL_CONFIG.get("LSRE-CAAN")["CROSS_DIM_HEAD"]
 LATENT_DIM_HEAD = MODEL_CONFIG.get("LSRE-CAAN")["LATENT_DIM_HEAD"]
-HIDDEN_SIZE = MODEL_CONFIG.get("LSRE-CAAN")["HIDDEN_SIZE"]
 
 
 def exists(val):
@@ -87,7 +86,7 @@ class Attention(nn.Module):
 
         self.to_q = nn.Linear(query_dim, inner_dim, bias=False)
         self.to_kv = nn.Linear(context_dim, inner_dim * 2, bias=False)
-        self.to_out = nn.Linear(inner_dim, query_dim)
+        self.to_out = nn.Linear(inner_dim, query_dim)  # query_dim = latent_dim
 
     def forward(self, x, context=None, mask=None):
         h = self.heads

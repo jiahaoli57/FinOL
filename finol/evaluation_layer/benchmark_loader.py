@@ -64,7 +64,6 @@ def plot_dataframe(df, column_names, plot_type, logdir):
                 bbox_inches='tight')
     plt.show()
 
-
 def load_benchmark(caculate_metric_output=None):
     """
     Load baseline results from a CSV file for specified target classes.

@@ -127,7 +127,6 @@ def caculate_metric(train_model_output, load_dataset_output):
 
         final_scores = model(x_data.float())
         portfolio = actual_portfolio_selection(final_scores)
-        # print(portfolio)
         portfolios[i, :] = portfolio
 
     runtime = time.time() - start_time

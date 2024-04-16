@@ -41,7 +41,7 @@ def actual_portfolio_selection(final_scores):
         portfolio = F.softmax(final_scores, dim=-1)
     else:
         NUM_SELECTED_ASSETS = int(NUM_ASSETS * PROP_WINNERS)
-        assert NUM_SELECTED_ASSETS >= 0
+        assert NUM_SELECTED_ASSETS > 0
         assert NUM_SELECTED_ASSETS <= NUM_ASSETS
 
         values, indices = torch.topk(final_scores, k=NUM_SELECTED_ASSETS)
