@@ -27,12 +27,14 @@ it provides a long-awaited unified platform to advance data-driven OLPS research
 
 <div align="center">
 
-| Update                                                                                                                                                       | Status                        | Label         |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------|:--------------|
-| New feature! ``FinOL`` now supports the "Interpretability Analysis" feature in [AlphaStock](https://dl.acm.org/doi/abs/10.1145/3292500.3330647)              | Supported since 16 April 2024 | Enhancement   |
-| New feature! ``FinOL`` now supports the "Winner Assets Selection" feature in [AlphaPortfolio](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486)   | Supported since 14 April 2024 | Enhancement   |
-| Release  ``FinOL`` [tutorials](finol/tutorials)                                                                                                              | Released on 22 March 2024     | Documentation |
-| Release  ``FinOL`` [v0.0.1](https://github.com/jiahaoli57/finol/releases/tag/v0.0.1)                                                                         | Released on 21 March 2024     | Release       |
+| Update                                                                                                                                        | Status                        | Label         |
+|-----------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------|:--------------|
+| New model! ``FinOL`` is going to support the "[AlphaPortfolio](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486)" model            | IN DEVELOPMENT & COMING SOON  | Enhancement   |
+| New feature! ``FinOL`` is going to support the "[Economic Distillation](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486)" feature | IN DEVELOPMENT & COMING SOON  | Enhancement   |
+| New feature! ``FinOL`` now supports the "[Interpretability Analysis](https://dl.acm.org/doi/abs/10.1145/3292500.3330647)" feature             | Supported since 16 April 2024 | Enhancement   |
+| New feature! ``FinOL`` now supports the "[Winner Assets Selection](https://dl.acm.org/doi/abs/10.1145/3292500.3330647)" feature               | Supported since 14 April 2024 | Enhancement   |
+| Release  ``FinOL`` [tutorials](finol/tutorials)                                                                                               | Released on 22 March 2024     | Documentation |
+| Release  ``FinOL`` [v0.0.1](https://github.com/jiahaoli57/finol/releases/tag/v0.0.1)                                                          | Released on 21 March 2024     | Release       |
 </div>
 
 
