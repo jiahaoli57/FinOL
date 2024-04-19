@@ -29,6 +29,7 @@ it provides a long-awaited unified platform to advance data-driven OLPS research
 
 | Update                                                                                                                                      | Status                        | Label         |
 |---------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------|:--------------|
+| New metric! ``FinOL`` is going to support the [_t_-test](https://www.sciencedirect.com/science/article/pii/S0004370215000168) metric        | Coming soon......             | Enhancement   |
 | New model! ``FinOL`` is going to support the [AlphaPortfolio](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486) model            | Coming soon......             | Enhancement   |
 | New model! ``FinOL`` is going to support the [AlphaStock](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) model                         | Coming soon......             | Enhancement   |
 | New feature! ``FinOL`` is going to support the [Economic Distillation](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486) feature | Coming soon......             | Enhancement   |
@@ -100,6 +101,7 @@ For Linux users, use:
 > mv -force finol_/finol .
 > rm -rf finol_
 ```
+
 ### Installing via PIP
 ``FinOL`` is available on [PyPI](https://pypi.org/project/finol), therefore you can install the latest released version with:
 ```bash
