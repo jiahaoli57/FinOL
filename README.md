@@ -89,10 +89,17 @@ continue evolving.
 For Windows users, to install the bleeding edge version, clone this repository with:
 ```bash
 > git clone https://github.com/jiahaoli57/finol.git
-> rename finol finol_
-> move -force finol_/finol .
+> mv finol finol_
+> mv -force finol_/finol .
+> Remove-Item -Recurse -Force finol_
 ```
-
+For Linux users, use:
+```bash
+> git clone https://github.com/jiahaoli57/finol.git
+> mv finol finol_
+> mv -force finol_/finol .
+> rm -rf finol_
+```
 ### Installing via PIP
 ``FinOL`` is available on [PyPI](https://pypi.org/project/finol), therefore you can install the latest released version with:
 ```bash
