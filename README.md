@@ -103,7 +103,7 @@ For Linux users, use:
 ### Installing via PIP
 ``FinOL`` is available on [PyPI](https://pypi.org/project/finol), therefore you can install the latest released version with:
 ```bash
-> pip install finol -t your_own_dir
+>  pip install finol -t .
 ```
 
 ## Examples and Tutorials
