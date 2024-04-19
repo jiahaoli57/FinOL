@@ -89,9 +89,8 @@ continue evolving.
 For Windows users, to install the bleeding edge version, clone this repository with:
 ```bash
 > git clone https://github.com/jiahaoli57/finol.git
-> Rename-Item "finol" -NewName "finol_"
-> move finol_\* .
-> Get-ChildItem -Directory | Where-Object { $_.Name -ne "finol" } | Remove-Item -Recurse -Force
+> rename finol finol_
+> move -force finol_/finol .
 ```
 
 ### Installing via PIP
