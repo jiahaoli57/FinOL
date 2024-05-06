@@ -1,5 +1,6 @@
 import torch
 import torch.nn.functional as F
+
 from functools import wraps
 from torch import nn, einsum
 from einops import rearrange, repeat
@@ -69,7 +70,8 @@ class FeedForward(nn.Module):
         super().__init__()
         self.net = nn.Sequential(
             nn.Linear(dim, dim),
-            QuickGELU(),
+            # QuickGELU(),
+            # nn.Linear(dim, dim)
         )
 
     def forward(self, x):
@@ -179,7 +181,8 @@ class LSRE(nn.Module):
             x = self_attn(x) + x
             x = self_ff(x) + x  # x.shape = torch.Size([num_assets, num_latents, latent_dim])
 
-        return torch.mean(x, dim=1)  # [batch_size, num_latents, latent_dim] -> [batch_size, latent_dim]
+        # return torch.mean(x, dim=1)  # [batch_size, num_latents, latent_dim] -> [batch_size, latent_dim]
+        return x[:, -1, :].squeeze()  # [batch_size, num_latents, latent_dim] -> [batch_size, latent_dim]
 
 
 class LSRE_CAAN(nn.Module):
@@ -229,8 +232,12 @@ class LSRE_CAAN(nn.Module):
         self.linear_value = torch.nn.Linear(value_dim, value_dim)
         self.linear_winner = torch.nn.Linear(value_dim, 1)
         self.dropout = nn.Dropout(p=DROPOUT)
-
         self.lsre_linear = torch.nn.Linear(LATENT_DIM, 1)
+
+        if MODEL_NAME == 'LSRE-CAAN-d':
+            self.ab_study_linear_1 = torch.nn.Linear(num_features_original, value_dim)
+        if MODEL_NAME == 'LSRE-CAAN-dd':
+            self.ab_study_linear_1 = torch.nn.Linear(value_dim, 1)
 
     def forward(
             self,
@@ -251,19 +258,30 @@ class LSRE_CAAN(nn.Module):
 
         pos_emb = rearrange(pos_emb, 'n d -> () n d')
         x = x + pos_emb
-        stock_rep = self.lsre(x, mask=None, queries=None)  # [BATCH_SIZE * NUM_ASSETS, LATENT_DIM]
-        stock_rep = self.dropout(stock_rep)
 
-        # CAAN
+        if MODEL_NAME == 'LSRE-CAAN-d':
+            # stock_rep = torch.mean(x, dim=1)
+            stock_rep = rearrange(x, 'b n d -> b d n')
+            stock_rep = stock_rep[:, :, -1].squeeze(-1)
+            stock_rep = self.ab_study_linear_1(stock_rep)
+        else:
+            stock_rep = self.lsre(x, mask=None, queries=None)  # [BATCH_SIZE * NUM_ASSETS, LATENT_DIM]
+
+        stock_rep = self.dropout(stock_rep)
         x = stock_rep.view(batch_size, num_assets, self.latent_dim)
 
-        query = self.linear_query(x)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
-        key = self.linear_key(x)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
-        value = self.linear_value(x)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
+        if MODEL_NAME == 'LSRE-CAAN-dd':
+            final_scores = self.ab_study_linear_1(x).squeeze(-1)
+        else:
+            # CAAN
+            query = self.linear_query(x)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
+            key = self.linear_key(x)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
+            value = self.linear_value(x)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
 
-        beta = torch.matmul(query, key.transpose(1, 2)) / torch.sqrt(torch.tensor(float(query.shape[-1])))  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
-        beta = F.softmax(beta, dim=-1).unsqueeze(-1)
-        x = torch.sum(value.unsqueeze(1) * beta, dim=2)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
+            beta = torch.matmul(query, key.transpose(1, 2)) / torch.sqrt(torch.tensor(float(query.shape[-1])))  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
+            beta = F.softmax(beta, dim=-1).unsqueeze(-1)
+            x = torch.sum(value.unsqueeze(1) * beta, dim=2)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
 
-        final_scores = self.linear_winner(x).squeeze(-1)  # [BATCH_SIZE, NUM_ASSETS]
+            final_scores = self.linear_winner(x).squeeze(-1)  # [BATCH_SIZE, NUM_ASSETS]
+
         return final_scores
