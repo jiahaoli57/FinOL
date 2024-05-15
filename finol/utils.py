@@ -2,12 +2,14 @@ import sys
 import subprocess
 import os
 import time
+import json
+import requests
 
 import torch
 
 import torch.nn.functional as F
 
-from finol.update import *
+from finol.update import get_latest_version
 from finol.config import *
 from finol import __version__
 
@@ -32,6 +34,7 @@ def download_data():
 
 def portfolio_selection(final_scores):
     portfolio = F.softmax(final_scores, dim=-1)
+    assert torch.all(portfolio >= 0), "Portfolio contains non-negative values."
     return portfolio
 
 
@@ -48,4 +51,35 @@ def actual_portfolio_selection(final_scores):
         winners_mask = torch.ones_like(final_scores, device=DEVICE)
         winners_mask.scatter_(1, indices, 0).detach()
         portfolio = F.softmax(final_scores - 1e9 * winners_mask, dim=-1)
+    assert torch.all(portfolio >= 0), "Portfolio contains non-negative values."
     return portfolio
+
+
+def send_message_dingding(dingding_message):
+    headers_dingding = {
+        "Content-Type": "application/json",
+        "Charset": "UTF-8"
+    }
+    content = f'\n' \
+              f'message：\tmodel finish training & testing\n' \
+              f'logdir：\t{dingding_message["logdir"]}\n' \
+              f'CW：\t{dingding_message["CW"]}\n' \
+
+    webhook = "https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"  # your own dingding api
+    message = {
+        "msgtype": "text",
+        "text": {
+            "content": content
+        },
+        "at": {
+            "isAtAll": True
+        }
+    }
+    message_json = json.dumps(message)
+    try:
+        info = requests.post(url=webhook, data=message_json, headers=headers_dingding, verify=False).json()
+    except Exception as e:
+        print(f'{e}')
+        return
+    if info.get("errcode") != 0:
+        print(f'{info}')

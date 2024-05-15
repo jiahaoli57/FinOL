@@ -1,17 +1,23 @@
 import os
+import time
+
 ROOT_PATH = os.path.dirname(os.path.realpath(__file__))
 PARENT_PATH = os.path.dirname(ROOT_PATH)
 
 import matplotlib.pyplot as plt
-plt.style.use('seaborn-talk')
+plt.style.use('seaborn-paper')
+plt.rcParams['font.family'] = 'Microsoft YaHei'
 from rich import print
 
+CHINESE_PLOT = True
 GET_LATEST_FINOL = False
 TUTORIAL_MODE = False
 TUTORIAL_NAME = "TUTORIAL_4"
 
-# Parameters related to data_layer
-DATASET_NAME = "DJIA_WEEKLY"  # Available options: NYSE(O), NYSE(N), DJIA, SP500, TSE, SSE, HSI, CMEG, DJIA_WEEKLY, CRYPTO, TUTORIAL
+##########################################################################################
+############################  Parameters related to data_layer ###########################
+##########################################################################################
+DATASET_NAME = "Nasdaq-100"  # Available options: NYSE(O), NYSE(N), DJIA, SP500, TSE, SSE, HSI, CMEG, DJIA(N), CRYPTO, TUTORIAL, Nasdaq-100
 DATASET_SPLIT_CONFIG = {
     "NYSE(O)": {
         "TRAIN_START_TIMESTAMP": "1962-07-03",
@@ -61,30 +67,6 @@ DATASET_SPLIT_CONFIG = {
         "TEST_START_TIMESTAMP": "2020-11-23",
         "TEST_END_TIMESTAMP": "2023-06-26"  # [136 rows x 5 columns]
     },
-    "HSI": {
-        "TRAIN_START_TIMESTAMP": "2010-07-05",
-        "TRAIN_END_TIMESTAMP": "2018-04-09",  # [406 rows x 5 columns]
-        "VAL_START_TIMESTAMP": "2018-04-16",
-        "VAL_END_TIMESTAMP": "2020-11-16",  # [136 rows x 5 columns]
-        "TEST_START_TIMESTAMP": "2020-11-23",
-        "TEST_END_TIMESTAMP": "2023-06-26"  # [136 rows x 5 columns]
-    },
-    "CMEG": {
-        "TRAIN_START_TIMESTAMP": "2010-07-05",
-        "TRAIN_END_TIMESTAMP": "2018-04-09",  # [406 rows x 5 columns]
-        "VAL_START_TIMESTAMP": "2018-04-16",
-        "VAL_END_TIMESTAMP": "2020-11-16",  # [136 rows x 5 columns]
-        "TEST_START_TIMESTAMP": "2020-11-23",
-        "TEST_END_TIMESTAMP": "2023-06-26"  # [136 rows x 5 columns]
-    },
-    "DJIA_WEEKLY": {
-        "TRAIN_START_TIMESTAMP": "2010-07-05",
-        "TRAIN_END_TIMESTAMP": "2018-04-09",  # [406 rows x 5 columns]
-        "VAL_START_TIMESTAMP": "2018-04-16",
-        "VAL_END_TIMESTAMP": "2020-11-16",  # [136 rows x 5 columns]
-        "TEST_START_TIMESTAMP": "2020-11-23",
-        "TEST_END_TIMESTAMP": "2023-06-26"  # [136 rows x 5 columns]
-    },
     "CRYPTO": {
         "TRAIN_START_TIMESTAMP": "2017-11-09",
         "TRAIN_END_TIMESTAMP": "2021-08-22",  # [1383 rows x 5 columns]
@@ -94,8 +76,13 @@ DATASET_SPLIT_CONFIG = {
         "TEST_END_TIMESTAMP": "2024-03-01"  # [461 rows x 5 columns]
     }
 }
+DATASET_SPLIT_CONFIG["HSI"] = DATASET_SPLIT_CONFIG["SSE"].copy()
+DATASET_SPLIT_CONFIG["CMEG"] = DATASET_SPLIT_CONFIG["SSE"].copy()
+DATASET_SPLIT_CONFIG["DJIA(N)"] = DATASET_SPLIT_CONFIG["SSE"].copy()
+DATASET_SPLIT_CONFIG["Nasdaq-100"] = DATASET_SPLIT_CONFIG["SSE"].copy()
+
 FEATURE_ENGINEERING_CONFIG = {
-    "INCLUDE_OHLCV_FEATURES": True,
+    "INCLUDE_OHLCV_FEATURES": False,
     "INCLUDE_OVERLAP_FEATURES": True,
     "INCLUDE_MOMENTUM_FEATURES": True,
     "INCLUDE_VOLUME_FEATURES": True,
@@ -107,11 +94,10 @@ FEATURE_ENGINEERING_CONFIG = {
 DATA_AUGMENTATION_CONFIG = {
     "WINDOW_DATA": {
         "INCLUDE_WINDOW_DATA": True,
-        "WINDOW_SIZE": 30
+        "WINDOW_SIZE": 50
     }
 }
-LOAD_DATALOADER = False
-SCALER = "MaxAbsScaler"  # None, StandardScaler, MinMaxScaler, MaxAbsScaler, RobustScaler
+SCALER = "StandardScaler"  # None, StandardScaler, MinMaxScaler, MaxAbsScaler, RobustScaler
 BATCH_SIZE = {
     "NYSE(O)": 128,
     "NYSE(N)": 128,
@@ -119,11 +105,14 @@ BATCH_SIZE = {
     "SP500": 64,
     "TSE": 64,
     "SSE": 128,
-    "HSI": 128,
-    "CMEG": 128,
-    "DJIA_WEEKLY": 128,
     "CRYPTO": 128,
 }
+BATCH_SIZE["HSI"] = BATCH_SIZE["SSE"]
+BATCH_SIZE["CMEG"] = BATCH_SIZE["SSE"]
+BATCH_SIZE["DJIA(N)"] = BATCH_SIZE["SSE"]
+BATCH_SIZE["Nasdaq-100"] = BATCH_SIZE["SSE"]
+
+LOAD_DATALOADER = True
 
 # Parameters related to model_layer
 MODEL_NAME = "LSRE-CAAN"
@@ -152,41 +141,68 @@ MODEL_CONFIG = {
         "HIDDEN_SIZE": 32,
     },
     "LSRE-CAAN": {
-        "NUM_LAYERS": 4,
-        "NUM_LATENTS": 8,
-        "LATENT_DIM": 16,
-        "CROSS_HEADS": 1,
-        "LATENT_HEADS": 1,
-        "CROSS_DIM_HEAD": 32,
-        "LATENT_DIM_HEAD": 16,
+        "NUM_LAYERS": 1,  # paper setting: 1
+        "NUM_LATENTS": 8,  # paper setting: 1
+        "LATENT_DIM": 16,  # paper setting: 32
+        "CROSS_HEADS": 1,  # paper setting: 1
+        "LATENT_HEADS": 1,  # paper setting: 1
+        "CROSS_DIM_HEAD": 32,  # paper setting: 64
+        "LATENT_DIM_HEAD": 16,  # paper setting: 32
     },
 }
-DROPOUT = 0.1
-PROP_WINNERS = 0.25
+MODEL_CONFIG["LSRE-CAAN-d"] = MODEL_CONFIG["LSRE-CAAN"].copy()
+MODEL_CONFIG["LSRE-CAAN-dd"] = MODEL_CONFIG["LSRE-CAAN"].copy()
 
-# Parameters related to optimization_layer
-MANUAL_SEED = 42
+DROPOUT = 0.1
+PROP_WINNERS = 0.5
+
+##########################################################################################
+######################## Parameters related to optimization_layer ########################
+##########################################################################################
+MANUAL_SEED = 3442
 OPTIMIZER_NAME = "Lamb"
 LEARNING_RATE = 1e-3
-CRITERION_NAME = "LOG_SINGLE_PERIOD_WEALTH"
-LAMBDA_L2 = 0.001
+CRITERION_NAME = "LOG_WEALTH_L2_DIVERSIFICATION"
+LAMBDA_L2 = 5e-4
 DEVICE = "cuda"
 NUM_EPOCHES = 1000
+SAVE_EVERY = 100
+PLOT_LOSS = False
 
-# Parameters related to evaluation_layer
+
+##########################################################################################
+######################### Parameters related to evaluation_layer #########################
+##########################################################################################
 INTERPRETABLE_ANALYSIS_CONFIG = {
     "INCLUDE_INTERPRETABILITY_ANALYSIS": True,
     "INCLUDE_ECONOMIC_DISTILLATION": True,
+    "PROP_DISTILLED_FEATURES": 0.7,
+    "Y_NAME": "PORTFOLIOS",  # SCORES, PORTFOLIOS
+    "DISTILLER_NAME": "Lasso"
 }
-MARKERS = ['o', '^', '<', '>', 's', 'p', 'h', '+', 'x', '|', '_']
-MARKEVERY = 10
+MARKERS = ['o', '^', '<', '>', 's', 'p', 'h', 'H', 'D', 'd']
+MARKEVERY = {
+    'NYSE(O)': 50,
+    'NYSE(N)': 55,
+    'DJIA': 3,
+    'SP500': 7,
+    'TSE': 6,
+    'SSE': 4,
+    'CRYPTO': 13,
+    }
+MARKEVERY["HSI"] = MARKEVERY["SSE"]
+MARKEVERY["CMEG"] = MARKEVERY["SSE"]
+MARKEVERY["DJIA(N)"] = MARKEVERY["SSE"]
+MARKEVERY["Nasdaq-100"] = MARKEVERY["SSE"]
+MARKEVERY = MARKEVERY.get(DATASET_NAME, 10)
+
 ALPHA = 0.5
 METRIC_CONFIG = {
     "INCLUDE_PROFIT_METRICS": True,
     "INCLUDE_RISK_METRICS": True,
     "PRACTICAL_METRICS": {
         "INCLUDE_PRACTICAL_METRICS": True,
-        "TRANSACTIOS_COSTS_RATE": 1/100,
+        "TRANSACTIOS_COSTS_RATE": 0.5/100,
         "TRANSACTIOS_COSTS_RATE_INTERVAL": 1/1000,
     }
 }
@@ -196,14 +212,24 @@ FOLLOW_THE_LOSER = ["ANTI1", "ANTI2", "PAMR", "CWMR-Var", "CWMR-Stdev", "OLMAR-S
 PATTERN_MATCHING = ["AICTR", "KTPT"]
 META_LEARNING = ["SP", "ONS", "GRW", "WAAS", "CW-OGD"]
 
-# PLOT_ALL_1 = ["EG", "PPT", "RMR", "RPRT", "Best"]
-# PLOT_ALL_2 = ["AICTR", "KTPT", "SP", "CW-OGD", "Best"]
+# PLOT_ALL_1 = BENCHMARK_BASELINE + [MODEL_NAME]
+# PLOT_ALL_2 = FOLLOW_THE_WINNER + [MODEL_NAME]
+# PLOT_ALL_3 = FOLLOW_THE_LOSER + [MODEL_NAME]
+# PLOT_ALL_4 = PATTERN_MATCHING + [MODEL_NAME]
+# PLOT_ALL_5 = META_LEARNING + [MODEL_NAME]
 
-PLOT_ALL_1 = BENCHMARK_BASELINE + [MODEL_NAME]
-PLOT_ALL_2 = FOLLOW_THE_WINNER + [MODEL_NAME]
-PLOT_ALL_3 = FOLLOW_THE_LOSER + [MODEL_NAME]
-PLOT_ALL_4 = PATTERN_MATCHING + [MODEL_NAME]
-PLOT_ALL_5 = META_LEARNING + [MODEL_NAME]
+PLOT_ALL_1 = ["Market", "SCRP", "OLMAR-E", "RMR", "CW-OGD"] + [MODEL_NAME]
+# PLOT_ALL_2 = ["Market", "UP", "EG", "PAMR", "OLMAR-E", "RPRT", "KTPT", "CW-OGD"] + [MODEL_NAME]
+# PLOT_ALL_3 = ["Market", "UP", "EG", "PAMR", "OLMAR-E", "RPRT", "KTPT", "CW-OGD"] + [MODEL_NAME]
+# PLOT_ALL_4 = ["Market", "UP", "EG", "PAMR", "OLMAR-E", "RPRT", "KTPT", "CW-OGD"] + [MODEL_NAME]
+# PLOT_ALL_5 = ["Market", "UP", "EG", "PAMR", "OLMAR-E", "RPRT", "KTPT", "CW-OGD"] + [MODEL_NAME]
+
+if INTERPRETABLE_ANALYSIS_CONFIG['INCLUDE_ECONOMIC_DISTILLATION']:
+    PLOT_ALL_1 = PLOT_ALL_1 + [MODEL_NAME + ' (ED)']
+    # PLOT_ALL_2 = PLOT_ALL_2 + [MODEL_NAME + ' (ED)']
+    # PLOT_ALL_3 = PLOT_ALL_3 + [MODEL_NAME + ' (ED)']
+    # PLOT_ALL_4 = PLOT_ALL_4 + [MODEL_NAME + ' (ED)']
+    # PLOT_ALL_5 = PLOT_ALL_5 + [MODEL_NAME + ' (ED)']
 
 ################################################################################################################
 ############################################# FOR TUTORIAL ONLY ################################################
@@ -353,7 +379,7 @@ if TUTORIAL_MODE:
     DROPOUT = 0.1
 
     # Parameters related to optimization_layer
-    MANUAL_SEED = 42
+    MANUAL_SEED = 3442
     OPTIMIZER_NAME = "Adam"
     LEARNING_RATE = 1e-4
     CRITERION_NAME = "LOG_SINGLE_PERIOD_WEALTH"

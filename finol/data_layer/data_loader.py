@@ -1,17 +1,12 @@
-import os
 import time
 import torch
-
 import pandas as pd
 import talib as ta
-import numpy as np
-from tqdm import tqdm
-import matplotlib.pyplot as plt
 
+from tqdm import tqdm
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
-
-from finol.data_layer.scaler_selector import *
+from finol.data_layer.scaler_selector import select_scaler
 from finol.config import *
 from finol.utils import download_data
 
@@ -283,7 +278,6 @@ def data_splitting(df):
     """
     Split the DataFrame into train, validation, and test sets.
     """
-
     train_start = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TRAIN_START_TIMESTAMP"])
     train_end = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TRAIN_END_TIMESTAMP"])
     val_start = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["VAL_START_TIMESTAMP"])
@@ -295,6 +289,17 @@ def data_splitting(df):
     val = df[(df.index >= val_start) & (df.index <= val_end)]
     test = df[(df.index >= test_start) & (df.index <= test_end)]
     return train, val, test
+
+
+def label_making(raw_df, df):
+    raw_df.set_index('DATE', inplace=True)
+    df_label = pd.DataFrame({'LABEL': raw_df.CLOSE.shift(-1) / raw_df.CLOSE})
+    df_label.iloc[-1, -1] = 1
+
+    df_label = pd.merge(df, df_label, left_index=True, right_index=True, how='outer')
+    df_label = df_label.dropna(how='any')
+    df_label = df_label['LABEL'].to_frame()
+    return df_label
 
 
 def load_dataset():
@@ -315,15 +320,15 @@ def load_dataset():
         label_train = []
         label_val = []
         label_test = []
-        # df_label_MATLAB = pd.DataFrame()
+        df_label_MATLAB = pd.DataFrame()
 
         raw_files = data_accessing(ROOT_PATH + '/data/datasets/' + DATASET_NAME)
         if len(raw_files) > 0:
             print(f"Successfully loaded {len(raw_files)} Excel file(s):")
             # feature_engineering(excel_files)
             for i, df in tqdm(enumerate(raw_files), total=len(raw_files), desc="Data Processing"):
+                raw_df = df.copy()
 
-                # print(f"Excel file {i+1}:")
                 df = data_cleaning(df)
 
                 df, DETAILED_FEATURE_LIST, DETAILED_NUM_FEATURES = feature_engineering(df)
@@ -332,14 +337,13 @@ def load_dataset():
                 df, WINDOW_SIZE = data_augmentation(df)
                 df = data_cleaning(df)
 
-                df_label = pd.DataFrame({'LABEL': df['CLOSE'].shift(-1) / df['CLOSE']})
-                df_label.iloc[-1, -1] = 1
+                df_label = label_making(raw_df, df)
 
-                # df_label_temp = df_label.copy()
-                # test_start = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TEST_START_TIMESTAMP"])
-                # test_end = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TEST_END_TIMESTAMP"])
-                # df_label_temp = df_label_temp[(df_label_temp.index >= test_start) & (df_label_temp.index <= test_end)]
-                # df_label_MATLAB = pd.concat([df_label_MATLAB, df_label_temp], axis=1)
+                df_label_temp = df_label.copy()
+                test_start = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TEST_START_TIMESTAMP"])
+                test_end = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TEST_END_TIMESTAMP"])
+                df_label_temp = df_label_temp[(df_label_temp.index >= test_start) & (df_label_temp.index <= test_end)]
+                df_label_MATLAB = pd.concat([df_label_MATLAB, df_label_temp], axis=1)
 
                 train, val, test = data_splitting(df)
                 train_label, val_label, test_label = data_splitting(df_label)
@@ -386,8 +390,8 @@ def load_dataset():
             test_loader = DataLoader(test_ids, batch_size=1, shuffle=False, drop_last=False)
 
             # Save the price relative tensor to a mat file with the data set name
-            # from scipy import io
-            # io.savemat('price_relative_' + DATASET_NAME + '.mat', {'data': df_label_MATLAB.values})
+            from scipy import io
+            io.savemat('price_relative_' + DATASET_NAME + '.mat', {'data': df_label_MATLAB.values})
         else:
             print("No Excel files found.")
 
@@ -403,7 +407,7 @@ def load_dataset():
             'NUM_FEATURES_ORIGINAL': int(ds_train.shape[2] / (WINDOW_SIZE)),
             'DETAILED_NUM_FEATURES': DETAILED_NUM_FEATURES,
             'WINDOW_SIZE': WINDOW_SIZE,
-            'FEATURE_LIST': [feature[8:] for feature, include in FEATURE_ENGINEERING_CONFIG.items() if include],
+            'OVERALL_FEATURE_LIST': [feature[8:] for feature, include in FEATURE_ENGINEERING_CONFIG.items() if include],
             'DETAILED_FEATURE_LIST': DETAILED_FEATURE_LIST,
 
         }

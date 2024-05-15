@@ -1,5 +1,6 @@
 import torch.nn as nn
 import torch.nn.functional as F
+
 from einops import rearrange
 from finol.config import *
 
@@ -41,7 +42,7 @@ class LSTM(nn.Module):
         out = self.dropout(out)
         out = out[:, -1, :]
 
-        # Decision Making
+        # Final Scores for Assets
         out = out.view(batch_size, self.num_assets, HIDDEN_SIZE)
         out = self.fc(out).squeeze(-1)
         # portfolio = F.softmax(out, dim=-1)

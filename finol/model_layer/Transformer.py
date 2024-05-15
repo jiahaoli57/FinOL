@@ -1,5 +1,6 @@
 import torch.nn as nn
 import torch.nn.functional as F
+
 from einops import rearrange
 from finol.config import *
 
@@ -44,7 +45,7 @@ class Transformer(nn.Module):
         output = self.model(x)
         output = output[:, -1, :]
 
-        # Decision Making
+        # Final Scores for Assets
         output = output.view(batch_size, self.num_assets, self.num_features_original)
         output = self.dropout(output)
         output = F.relu(output)

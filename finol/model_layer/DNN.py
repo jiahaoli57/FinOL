@@ -1,5 +1,6 @@
 import torch.nn as nn
 import torch.nn.functional as F
+
 from finol.config import *
 
 NUM_LAYERS = MODEL_CONFIG.get("DNN")["NUM_LAYERS"]
@@ -44,6 +45,6 @@ class DNN(nn.Module):
             out = self.relu(out)
             out = self.dropout(out)
 
+        # Final Scores for Assets
         out = out.squeeze(-1)
-        # portfolio = F.softmax(out, dim=-1)
         return out

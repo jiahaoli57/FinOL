@@ -1,12 +1,13 @@
 import time
-
 import torch
 import numpy as np
 import pandas as pd
-from finol.config import *
-from finol import *
 
-if DATASET_NAME in ["SSE", "HSI", "CMEG"]:
+from finol.config import *
+from finol.utils import actual_portfolio_selection
+
+
+if DATASET_NAME in ["SSE", "HSI", "CMEG", "DJIA(N)", 'Nasdaq-100']:
     day = 52
 else:
     day = 252
@@ -48,19 +49,14 @@ def caculate_MDD(total_return):
 
 def caculate_ATO(NUM_PERIODS, NUM_ASSETS, model, test_loader):
     portfolio_o = np.zeros(NUM_ASSETS)
-    label_list = []
-    portfolio_list = []
     daily_turno_list = []
-    # start_time = time.time()
-    for i, data in enumerate(test_loader, 1):
+    for i, data in enumerate(test_loader):
         x_data, label = data
         label = label.cpu().detach().numpy()
-        label_list.append(label)
 
         final_scores = model(x_data.float())
         portfolio = actual_portfolio_selection(final_scores)
         portfolio = portfolio.cpu().detach().numpy()
-        portfolio_list.append(portfolio)
 
         daily_turno = (abs(portfolio_o - portfolio).sum())
         daily_turno_list.append(daily_turno)
@@ -80,20 +76,16 @@ def caculate_TCW(NUM_PERIODS, NUM_ASSETS, model, test_loader):
 
     for tc_rate in np.arange(0, TRANSACTIOS_COSTS_RATE + TRANSACTIOS_COSTS_RATE_INTERVAL, TRANSACTIOS_COSTS_RATE_INTERVAL):
         portfolio_o = np.zeros(NUM_ASSETS)
-        label_list = []
-        portfolio_list = []
         daily_turno_list = []
         daily_return_list = []
         # start_time = time.time()
         for i, data in enumerate(test_loader, 1):
             x_data, label = data
             label = label.cpu().detach().numpy()
-            label_list.append(label)
 
             final_scores = model(x_data.float())
             portfolio = actual_portfolio_selection(final_scores)
             portfolio = portfolio.cpu().detach().numpy()
-            portfolio_list.append(portfolio)
 
             daily_turno = (abs(portfolio_o - portfolio).sum())
             daily_turno_list.append(daily_turno)
@@ -108,7 +100,7 @@ def caculate_TCW(NUM_PERIODS, NUM_ASSETS, model, test_loader):
     return df["TCW"]
 
 
-def caculate_metric(train_model_output, load_dataset_output):
+def caculate_metric(load_dataset_output, train_model_output):
     logdir = train_model_output["logdir"]
     model = torch.load(logdir + '/best_model_' + DATASET_NAME + '.pt').to(DEVICE)
     model.eval()

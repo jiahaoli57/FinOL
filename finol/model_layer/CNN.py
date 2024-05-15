@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+
 from einops import rearrange
 from finol.config import *
 
@@ -39,7 +40,7 @@ class CNN(nn.Module):
     def forward(self, x):
         batch_size = x.shape[0]
 
-        # # Input Transformation
+        # Input Transformation
         x = x.view(batch_size, self.num_assets, self.window_size, self.num_features_original)
         x = rearrange(x, 'b m n d -> (b m) n d')
         x = x.transpose(1, 2)  # [batch_size * num_assets, seq_len, num_inputs] -> [batch_size * num_assets, num_inputs, seq_len]
@@ -48,6 +49,6 @@ class CNN(nn.Module):
         out = self.net(x)
         out = out.view(batch_size, self.num_assets, 1).squeeze(-1)
 
-        # Decision Making
-        # portfolio = F.softmax(out, dim=-1)
+        # Final Scores for Assets
+        out = out
         return out
