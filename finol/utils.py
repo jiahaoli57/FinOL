@@ -65,7 +65,7 @@ def send_message_dingding(dingding_message):
               f'logdir：\t{dingding_message["logdir"]}\n' \
               f'CW：\t{dingding_message["CW"]}\n' \
 
-    webhook = "https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"  # your own dingding api
+    webhook = "https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxxxxxxxxxxxxxxxxx"  # your own dingding api
     message = {
         "msgtype": "text",
         "text": {

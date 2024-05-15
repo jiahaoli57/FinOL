@@ -181,4 +181,4 @@ def train_model(load_dataset_output, seed):
 
 if __name__ == '__main__':
     load_dataset_output = load_dataset()
-    train_model_output = train_model(load_dataset_output, seed)
+    train_model_output = train_model(load_dataset_output, MANUAL_SEED)
