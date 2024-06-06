@@ -7,4 +7,4 @@ from finol.config import *
 seed = MANUAL_SEED
 load_dataset_output = load_dataset()
 train_model_output = train_model(load_dataset_output, seed)
-evaluate_model_output = evaluate_model(load_dataset_output, train_model_output, seed)
+evaluate_model_output = evaluate_model(load_dataset_output, train_model_output)
