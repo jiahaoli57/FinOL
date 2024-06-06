@@ -30,8 +30,8 @@ it provides a long-awaited unified platform to advance data-driven OLPS research
 | Update                                                                                                                               | Status                        | Label         |
 |--------------------------------------------------------------------------------------------------------------------------------------|:------------------------------|:--------------|
 | New metric! ``FinOL`` is going to support the [_t_-test](https://www.sciencedirect.com/science/article/pii/S0004370215000168) metric | Coming soon......             | Enhancement   |
-| New model! ``FinOL`` is going to support the [AlphaPortfolio](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486) model     | Coming soon......             | Enhancement   |
 | New model! ``FinOL`` is going to support the [AlphaStock](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) model                  | Coming soon......             | Enhancement   |
+| New model! ``FinOL`` now supports the [AlphaPortfolio](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486) model            | Supported since 06 June 2024  | Enhancement   |
 | New feature! ``FinOL`` now supports the [Economic Distillation](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486) feature | Supported since 15 May 2024   | Enhancement   |
 | New feature! ``FinOL`` now supports the [Interpretability Analysis](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) feature      | Supported since 16 April 2024 | Enhancement   |
 | New feature! ``FinOL`` now supports the [Winner Assets Selection](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) feature        | Supported since 14 April 2024 | Enhancement   |

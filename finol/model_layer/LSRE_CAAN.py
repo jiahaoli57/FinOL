@@ -6,13 +6,41 @@ from torch import nn, einsum
 from einops import rearrange, repeat
 from finol.config import *
 
-NUM_LAYERS = MODEL_CONFIG.get("LSRE-CAAN")["NUM_LAYERS"]
-NUM_LATENTS = MODEL_CONFIG.get("LSRE-CAAN")["NUM_LATENTS"]
-LATENT_DIM = MODEL_CONFIG.get("LSRE-CAAN")["LATENT_DIM"]
-CROSS_HEADS = MODEL_CONFIG.get("LSRE-CAAN")["CROSS_HEADS"]
-LATENT_HEADS = MODEL_CONFIG.get("LSRE-CAAN")["LATENT_HEADS"]
-CROSS_DIM_HEAD = MODEL_CONFIG.get("LSRE-CAAN")["CROSS_DIM_HEAD"]
-LATENT_DIM_HEAD = MODEL_CONFIG.get("LSRE-CAAN")["LATENT_DIM_HEAD"]
+MODEL_CONFIG = MODEL_CONFIG.get("LSRE-CAAN", {})
+NUM_LAYERS = MODEL_CONFIG["NUM_LAYERS"]
+NUM_LATENTS = MODEL_CONFIG["NUM_LATENTS"]
+LATENT_DIM = MODEL_CONFIG["LATENT_DIM"]
+CROSS_HEADS = MODEL_CONFIG["CROSS_HEADS"]
+LATENT_HEADS = MODEL_CONFIG["LATENT_HEADS"]
+CROSS_DIM_HEAD = MODEL_CONFIG["CROSS_DIM_HEAD"]
+LATENT_DIM_HEAD = MODEL_CONFIG["LATENT_DIM_HEAD"]
+DROPOUT = MODEL_CONFIG["DROPOUT"]
+
+"""
+                       Table 7: Hyper-parameters of the LSRE-CAAN framework.
++---------------------------+--------+------------------------------------------------------------------+
+| Hyper-parameter           | Choice | Description                                                      |
++---------------------------+--------+------------------------------------------------------------------+
+| Depth of net (L)          | 1      | The number of process layers in LSRE.                            |
+| Number of latents (M)     | 1      | The number of latents.                                           |
+| Latent dimension (D)      | 32     | The size of the latent space.                                    | 
+| Number of cross-heads     | 1      | The number of heads for cross-attention.                         | 
+| Number of latent-heads    | 1      | The number of heads for latent self-attention.                   | 
+| Cross-attention dimension | 64     | The number of dimensions per cross-attention head.               | 
+| Self-attention dimension  | 32     | The number of dimensions per latent self-attention head.         | 
+| Dropout ratio             | None   | No dropout is used following Jaegle et al. (2022).               | 
+| Embedding dimension       | None   | No Embedding layer is used, as illustrated in Section 4.1.       | 
++---------------------------+--------+------------------------------------------------------------------+
+| Optimizer                 | LAMB   | An optimizer specifically designed for Transformer-based models. |
+| Learning rate             | 0.001  | Parameter of the LAMB optimizer.                                 |
+| Weight decay rate         | 0.01   | Parameter of the LAMB optimizer.                                 |
+| Training steps            | 10^4   | Training times.                                                  |
+| Episode length (T)        | 50     | The length of an episode.                                        |
++---------------------------+--------+------------------------------------------------------------------+
+| G                         | m/2    | Half of the assets are identified as winners.                    |
+| W                         | 100    | The look-back window size.                                       |
++---------------------------+--------+------------------------------------------------------------------+
+"""
 
 
 def exists(val):
@@ -117,7 +145,7 @@ class Attention(nn.Module):
 
 class LSRE(nn.Module):
     r"""
-    This class implements the LSRE model proposed in my paper
+    This class implements the Long Sequence Representations Extractor (LSRE) module
 
     For more details, please refer to the papers `Online portfolio management via deep reinforcement learning with
     high-frequency data <https://www.sciencedirect.com/science/article/abs/pii/S030645732200348X>` and `Perceiver IO: A
@@ -179,10 +207,10 @@ class LSRE(nn.Module):
         # layers
         for self_attn, self_ff in self.layers:
             x = self_attn(x) + x
-            x = self_ff(x) + x  # x.shape = torch.Size([num_assets, num_latents, latent_dim])
+            x = self_ff(x) + x
 
-        # return torch.mean(x, dim=1)  # [batch_size, num_latents, latent_dim] -> [batch_size, latent_dim]
-        return x[:, -1, :].squeeze()  # [batch_size, num_latents, latent_dim] -> [batch_size, latent_dim]
+        # return torch.mean(x, dim=1)  # [batch_size * NUM_ASSETS, num_latents, latent_dim] -> [batch_size * NUM_ASSETS, latent_dim]
+        return x[:, -1, :].squeeze()  # [batch_size * NUM_ASSETS, num_latents, latent_dim] -> [batch_size * NUM_ASSETS, latent_dim]
 
 
 class LSRE_CAAN(nn.Module):
@@ -243,6 +271,7 @@ class LSRE_CAAN(nn.Module):
             self,
             x
     ):
+        # Input Transformation
         batch_size, num_assets, num_features_augmented = x.shape  # n: window size; d: number of features
         window_size = self.window_size
         num_features_original = self.num_features_original
@@ -265,7 +294,7 @@ class LSRE_CAAN(nn.Module):
             stock_rep = stock_rep[:, :, -1].squeeze(-1)
             stock_rep = self.ab_study_linear_1(stock_rep)
         else:
-            stock_rep = self.lsre(x, mask=None, queries=None)  # [BATCH_SIZE * NUM_ASSETS, LATENT_DIM]
+            stock_rep = self.lsre(x, mask=None, queries=None)  # [batch_size * num_assets, LATENT_DIM]
 
         stock_rep = self.dropout(stock_rep)
         x = stock_rep.view(batch_size, num_assets, self.latent_dim)
@@ -274,14 +303,15 @@ class LSRE_CAAN(nn.Module):
             final_scores = self.ab_study_linear_1(x).squeeze(-1)
         else:
             # CAAN
-            query = self.linear_query(x)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
-            key = self.linear_key(x)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
-            value = self.linear_value(x)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
+            query = self.linear_query(x)  # [batch_size, num_assets, LATENT_DIM]
+            key = self.linear_key(x)  # [batch_size, num_assets, LATENT_DIM]
+            value = self.linear_value(x)  # [batch_size, num_assets, LATENT_DIM]
 
-            beta = torch.matmul(query, key.transpose(1, 2)) / torch.sqrt(torch.tensor(float(query.shape[-1])))  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
+            beta = torch.matmul(query, key.transpose(1, 2)) / torch.sqrt(torch.tensor(float(query.shape[-1])))  # [batch_size, num_assets, LATENT_DIM]
             beta = F.softmax(beta, dim=-1).unsqueeze(-1)
-            x = torch.sum(value.unsqueeze(1) * beta, dim=2)  # [BATCH_SIZE, NUM_ASSETS, LATENT_DIM]
+            x = torch.sum(value.unsqueeze(1) * beta, dim=2)  # [batch_size, num_assets, LATENT_DIM]
 
-            final_scores = self.linear_winner(x).squeeze(-1)  # [BATCH_SIZE, NUM_ASSETS]
+            final_scores = self.linear_winner(x).squeeze(-1)  # [batch_size, num_assets]
 
         return final_scores
+

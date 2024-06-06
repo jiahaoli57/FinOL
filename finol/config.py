@@ -148,6 +148,14 @@ MODEL_CONFIG = {
         "LATENT_HEADS": 1,  # paper setting: 1
         "CROSS_DIM_HEAD": 32,  # paper setting: 64
         "LATENT_DIM_HEAD": 16,  # paper setting: 32
+        "DROPOUT": 0.,  # paper setting: 0
+    },
+    "AlphaPortfolio": {
+        "DIM_EMBEDDING": 256,  # paper setting: 256
+        "DIM_FEEDFORWARD": 1024,  # paper setting: 1024
+        "NUM_HEADS": 4,  # paper setting: 4
+        "NUM_LAYERS": 1,  # paper setting: 1
+        "DROPOUT": 0.2,  # paper setting: 0.2
     },
 }
 MODEL_CONFIG["LSRE-CAAN-d"] = MODEL_CONFIG["LSRE-CAAN"].copy()
