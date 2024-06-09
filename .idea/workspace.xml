@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="commit">
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="optimize code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/benchmark_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/benchmark_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,14 +285,7 @@
       <workItem from="1715751058997" duration="8669000" />
       <workItem from="1716262791803" duration="605000" />
       <workItem from="1717664285580" duration="15009000" />
-      <workItem from="1717924820059" duration="3974000" />
-    </task>
-    <task id="LOCAL-00009" summary="commit">
-      <created>1711102324067</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1711102324067</updated>
+      <workItem from="1717924820059" duration="4447000" />
     </task>
     <task id="LOCAL-00010" summary="commit">
       <created>1711102526375</created>
@@ -631,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717925849746</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="optimize code">
+      <created>1717929975479</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1717929975479</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -651,12 +650,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add &quot;interpretability analysis&quot; feature; optimize code" />
     <MESSAGE value="add &quot;Economic Distillation&quot; feature; optimize code" />
-    <MESSAGE value="optimize code" />
     <MESSAGE value="add &quot;AlphaPortfolio&quot; model" />
     <MESSAGE value="new release" />
     <MESSAGE value="new feature" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="optimize code" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimize code" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FinOL$model_evaluator.coverage" NAME="model_evaluator 覆盖结果" MODIFIED="1714745535492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/evaluation_layer" />
