@@ -8,8 +8,10 @@
 [![Python 3.9](https://shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-3916/)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20windows%20%7C%20macos-lightgrey)](Platform)
 [![License](https://img.shields.io/github/license/jiahaoli57/FinOL)](LICENSE)
-[![PyPI Downloads](https://img.shields.io/pypi/dm/finol)](https://pypi.org/project/finol)
-[![Discord](https://img.shields.io/discord/1201132123722104902)](https://discord.gg/KCXQt7r3)
+
+[//]: # ([![PyPI Downloads]&#40;https://img.shields.io/pypi/dm/finol&#41;]&#40;https://pypi.org/project/finol&#41;)
+
+[//]: # ([![Discord]&#40;https://img.shields.io/discord/1201132123722104902&#41;]&#40;https://discord.gg/KCXQt7r3&#41;)
 
 [//]: # ([![Document]&#40;https://img.shields.io/badge/docs-latest-red&#41;]&#40;https://finol.readthedocs.io/en/latest/&#41;)
 [//]: # ([![]&#40;https://dcbadge.vercel.app/api/server/KCXQt7r3&#41;]&#40;https://discord.gg/KCXQt7r3&#41;)
