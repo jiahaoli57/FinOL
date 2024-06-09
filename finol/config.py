@@ -9,7 +9,7 @@ plt.style.use('seaborn-paper')
 plt.rcParams['font.family'] = 'Microsoft YaHei'
 from rich import print
 
-CHINESE_PLOT = True
+CHINESE_PLOT = False
 GET_LATEST_FINOL = False
 TUTORIAL_MODE = False
 TUTORIAL_NAME = "TUTORIAL_4"
@@ -114,7 +114,9 @@ BATCH_SIZE["Nasdaq-100"] = BATCH_SIZE["SSE"]
 
 LOAD_DATALOADER = True
 
-# Parameters related to model_layer
+##########################################################################################
+########################### Parameters related to model_layer ############################
+##########################################################################################
 MODEL_NAME = "LSRE-CAAN"
 MODEL_CONFIG = {
     "DNN": {
@@ -174,7 +176,7 @@ CRITERION_NAME = "LOG_WEALTH_L2_DIVERSIFICATION"
 LAMBDA_L2 = 5e-4
 DEVICE = "cuda"
 NUM_EPOCHES = 1000
-SAVE_EVERY = 100
+SAVE_EVERY = 1
 PLOT_LOSS = False
 
 
@@ -182,8 +184,8 @@ PLOT_LOSS = False
 ######################### Parameters related to evaluation_layer #########################
 ##########################################################################################
 INTERPRETABLE_ANALYSIS_CONFIG = {
-    "INCLUDE_INTERPRETABILITY_ANALYSIS": True,
-    "INCLUDE_ECONOMIC_DISTILLATION": True,
+    "INCLUDE_INTERPRETABILITY_ANALYSIS": False,
+    "INCLUDE_ECONOMIC_DISTILLATION": False,
     "PROP_DISTILLED_FEATURES": 0.7,
     "Y_NAME": "PORTFOLIOS",  # SCORES, PORTFOLIOS
     "DISTILLER_NAME": "Lasso"

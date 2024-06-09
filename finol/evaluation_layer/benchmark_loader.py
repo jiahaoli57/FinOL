@@ -45,7 +45,7 @@ def plot_dataframe(df, column_names, plot_type, logdir):
         plt.xticks(ticks=[0, 1.25, 2.5, 3.75, 5, 7.5, 10], labels=[0, 0.125, 0.25, 0.375, 0.5, 0.75, 1])
 
     df = df[column_names]
-    df = df.rename(columns={df.columns[-2]: 'Teacher-Model', df.columns[-1]: 'Student-Model'})
+    # df = df.rename(columns={df.columns[-2]: 'Teacher-Model', df.columns[-1]: 'Student-Model'})
     num_columns = len(df.columns)
 
     if INTERPRETABLE_ANALYSIS_CONFIG['INCLUDE_ECONOMIC_DISTILLATION']:
@@ -169,8 +169,6 @@ def load_benchmark(caculate_metric_output, economic_distiller_caculate_metric_ou
         # plot_dataframe(transaction_costs_adjusted_cumulative_wealth, PLOT_ALL_4, 'TCW', logdir)
         # plot_dataframe(transaction_costs_adjusted_cumulative_wealth, PLOT_ALL_5, 'TCW', logdir)
 
-    gap = caculate_metric_output["CW"] - economic_distiller_caculate_metric_output["RT"]
-    print(gap)
     load_benchmark_output = {}
     load_benchmark_output['logdir'] = caculate_metric_output['logdir']
     load_benchmark_output['CW'] = caculate_metric_output["CW"]
