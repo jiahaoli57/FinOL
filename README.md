@@ -227,15 +227,15 @@ research. Here are some examples:
 
 2. Daily Cumulative Wealth Visualization
 <p align="center">
-<img src="figure/dcw.png" width="90%" alt>
+<img src="figure/dcw.png" width="70%" alt>
 
 3. Daily DrawDown
 <p align="center">
-<img src="figure/dcw.png" width="90%" alt>
+<img src="figure/dcw.png" width="70%" alt>
 
 4. Transaction Cost-Adjusted Cumulative Wealth
 <p align="center">
-<img src="figure/tcw.png" width="90%" alt>
+<img src="figure/tcw.png" width="70%" alt>
 
 5. Comprehensive Radar Chart
 <p align="center">
