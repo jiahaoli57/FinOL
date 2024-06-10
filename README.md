@@ -214,7 +214,7 @@ evaluate_model_output = evaluate_model(load_dataset_output, train_model_output)
 | Running Time                                        |      RT      | Practical Metric |
 </div>
 
-## Visualization Toolkit
+## Supported Visualization
 The FInOL project provides a suite of visualization tools to facilitate a comprehensive evaluation of data-driven OLPS 
 research. Here are some examples:
 
