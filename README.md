@@ -235,7 +235,7 @@ research. Here are some examples:
 
 4. Transaction Cost-Adjusted Cumulative Wealth
 <p align="center">
-<img src="figure/tcw.png" width="70%" alt>
+<img src="figure/tcw.png" width="71%" alt>
 
 5. Comprehensive Radar Chart
 <p align="center">
