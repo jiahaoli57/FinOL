@@ -83,3 +83,7 @@ def send_message_dingding(dingding_message):
         return
     if info.get("errcode") != 0:
         print(f'{info}')
+
+
+def get_variable_name(var):
+    return next(key for key, value in globals().items() if value is var)

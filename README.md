@@ -29,19 +29,19 @@ it provides a long-awaited unified platform to advance data-driven OLPS research
 
 <div align="center">
 
-| Update                                                                                                                                                                                                                                             | Status                        | Label         |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------|:--------------|
-| New release! ``FinOL`` is going to release the official website                                                                                                                                                                                    | Coming soon......             | Release       |
-| New metric! ``FinOL`` is going to support the [_t_-test](https://www.sciencedirect.com/science/article/pii/S0004370215000168) metric                                                                                                               | Coming soon......             | Enhancement   |
-| New feature! ``FinOL`` is going to support the [Radar Chart](https://en.wikipedia.org/wiki/Radar_chart) evaluation                                                                                                                                 | Coming soon......             | Enhancement   |
-| New feature! ``FinOL`` is going to support the [Auto Hyperparameter Tuning](https://dl.acm.org/doi/abs/10.1145/3292500.3330701?casa_token=omrKeFfE32AAAAAA:RuAEcSZUofIcSFtqcqyBXyxtOdf8gv-WWr6wGAEcpHEF2XRgSGFyn8Dowc2vWjJtFbgg670RWeJbeg) feature | Coming soon......             | Enhancement   |
-| New model! ``FinOL`` is going to support the [AlphaStock](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) model                                                                                                                                | Coming soon......             | Enhancement   |
-| New model! ``FinOL`` now supports the [AlphaPortfolio](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486) model                                                                                                                          | Supported since 06 June 2024  | Enhancement   |
-| New feature! ``FinOL`` now supports the [Economic Distillation](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486) feature                                                                                                               | Supported since 15 May 2024   | Enhancement   |
-| New feature! ``FinOL`` now supports the [Interpretability Analysis](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) feature                                                                                                                    | Supported since 16 April 2024 | Enhancement   |
-| New feature! ``FinOL`` now supports the [Winner Assets Selection](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) feature                                                                                                                      | Supported since 14 April 2024 | Enhancement   |
-| Release  ``FinOL`` [tutorials](finol/tutorials)                                                                                                                                                                                                    | Released on 22 March 2024     | Release       |
-| Release  ``FinOL`` [v0.0.1](https://github.com/jiahaoli57/finol/releases/tag/v0.0.1)                                                                                                                                                               | Released on 21 March 2024     | Release       |
+| Update                                                                                                                                                                                                                                             | Status                        | Label        |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------|:-------------|
+| New release! ``FinOL`` is going to release the official website                                                                                                                                                                                    | Coming soon......             | Release      |
+| New metric! ``FinOL`` is going to support the [_t_-test](https://www.sciencedirect.com/science/article/pii/S0004370215000168) metric                                                                                                               | Coming soon......             | Enhancement  |
+| New feature! ``FinOL`` is going to support the [Auto Hyperparameter Tuning](https://dl.acm.org/doi/abs/10.1145/3292500.3330701?casa_token=omrKeFfE32AAAAAA:RuAEcSZUofIcSFtqcqyBXyxtOdf8gv-WWr6wGAEcpHEF2XRgSGFyn8Dowc2vWjJtFbgg670RWeJbeg) feature | Coming soon......             | Enhancement  |
+| New model! ``FinOL`` is going to support the [AlphaStock](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) model                                                                                                                                | Coming soon......             | Enhancement  |
+| New feature! ``FinOL`` now supports the [Radar Chart](https://en.wikipedia.org/wiki/Radar_chart) evaluation                                                                                                                                        | Supported since 10 June 2024  | Enhancement  |
+| New model! ``FinOL`` now supports the [AlphaPortfolio](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486) model                                                                                                                          | Supported since 06 June 2024  | Enhancement  |
+| New feature! ``FinOL`` now supports the [Economic Distillation](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486) feature                                                                                                               | Supported since 15 May 2024   | Enhancement  |
+| New feature! ``FinOL`` now supports the [Interpretability Analysis](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) feature                                                                                                                    | Supported since 16 April 2024 | Enhancement  |
+| New feature! ``FinOL`` now supports the [Winner Assets Selection](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) feature                                                                                                                      | Supported since 14 April 2024 | Enhancement  |
+| Release  ``FinOL`` [tutorials](finol/tutorials)                                                                                                                                                                                                    | Released on 22 March 2024     | Release      |
+| Release  ``FinOL`` [v0.0.1](https://github.com/jiahaoli57/finol/releases/tag/v0.0.1)                                                                                                                                                               | Released on 21 March 2024     | Release      |
 </div>
 
 
@@ -213,6 +213,33 @@ evaluate_model_output = evaluate_model(load_dataset_output, train_model_output)
 | Transaction Costs-Adjusted Cumulative Wealth        |     TCW      | Practical Metric |
 | Running Time                                        |      RT      | Practical Metric |
 </div>
+
+## Visualization Toolkit
+The FInOL project provides a suite of visualization tools to facilitate a comprehensive evaluation of data-driven OLPS 
+research. Here are some examples:
+
+1. Dynamic Training/Validation Loss Visualization
+<p align="center">
+<img src="figure/loss.png" width="100%" alt>
+
+[//]: # (<em>Visualization of Train Normalization Data for Asset "AA"</em>)
+</p>
+
+2. Daily Cumulative Wealth Visualization
+<p align="center">
+<img src="figure/dcw.png" width="90%" alt>
+
+3. Daily DrawDown
+<p align="center">
+<img src="figure/dcw.png" width="90%" alt>
+
+4. Transaction Cost-Adjusted Cumulative Wealth
+<p align="center">
+<img src="figure/tcw.png" width="90%" alt>
+
+5. Comprehensive Radar Chart
+<p align="center">
+<img src="figure/radar.png" width="40%" alt>
 
 ## File Structure
 ```

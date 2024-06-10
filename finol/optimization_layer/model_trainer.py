@@ -109,7 +109,7 @@ def plot_loss(train_loss_list, val_loss_list, logdir):
 def train_model(load_dataset_output, seed):
     logdir = PARENT_PATH + '/logdir/' + str(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()))
     set_seed(seed=seed)
-    print(seed)
+    # print(seed)
     os.makedirs(logdir)
     copy2(ROOT_PATH + '/config.py', logdir)
 

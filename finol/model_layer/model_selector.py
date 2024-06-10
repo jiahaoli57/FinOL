@@ -7,6 +7,7 @@ from finol.model_layer.LSTM import LSTM
 from finol.model_layer.CNN import CNN
 from finol.model_layer.Transformer import Transformer
 from finol.model_layer.LSRE_CAAN import LSRE_CAAN
+from finol.model_layer.AlphaPortfolio import AlphaPortfolio
 from finol.config import *
 
 model_dict = {
@@ -18,6 +19,7 @@ model_dict = {
     'LSRE-CAAN': LSRE_CAAN,
     'LSRE-CAAN-d': LSRE_CAAN,
     'LSRE-CAAN-dd': LSRE_CAAN,
+    'AlphaPortfolio': AlphaPortfolio
 }
 
 

@@ -1,10 +1,8 @@
 import pandas as pd
 
+from finol.evaluation_layer.radar_chart import plot_radar_chart
 from finol.config import *
-
-
-def get_variable_name(var):
-    return next(key for key, value in globals().items() if value is var)
+from finol.utils import get_variable_name
 
 
 def plot_dataframe(df, column_names, plot_type, logdir):
@@ -12,7 +10,7 @@ def plot_dataframe(df, column_names, plot_type, logdir):
 
     if plot_type == 'DCW':
         markevery = MARKEVERY
-        if CHINESE_PLOT:
+        if PLOT_CHINESE:
             xlabel = '交易期'
             ylabel = '逐期累积财富'
         else:
@@ -21,7 +19,7 @@ def plot_dataframe(df, column_names, plot_type, logdir):
 
     elif plot_type == 'DDD':
         markevery = MARKEVERY
-        if CHINESE_PLOT:
+        if PLOT_CHINESE:
             xlabel = '交易期'
             ylabel = '逐期下行风险'
         else:
@@ -33,7 +31,7 @@ def plot_dataframe(df, column_names, plot_type, logdir):
         TRANSACTIOS_COSTS_RATE = METRIC_CONFIG.get("PRACTICAL_METRICS")["TRANSACTIOS_COSTS_RATE"]
         TRANSACTIOS_COSTS_RATE_INTERVAL = METRIC_CONFIG.get("PRACTICAL_METRICS")["TRANSACTIOS_COSTS_RATE_INTERVAL"]
         markevery = 1
-        if CHINESE_PLOT:
+        if PLOT_CHINESE:
             xlabel = '交易费用率 (%)'
             ylabel = '考虑交易费用的累积财富'
         else:
@@ -50,10 +48,12 @@ def plot_dataframe(df, column_names, plot_type, logdir):
 
     if INTERPRETABLE_ANALYSIS_CONFIG['INCLUDE_ECONOMIC_DISTILLATION']:
         colors = ['black'] * (num_columns - 2) + ['red'] * 2
+        lines = ['-'] * (num_columns - 1) + [':']
     else:
         colors = ['black'] * (num_columns - 1) + ['red'] * 1
+        lines = ['-'] * (num_columns)
 
-    lines = ['-'] * (num_columns - 1) + [':']
+
 
     if plot_type == 'TCW':
         for i, column in enumerate(df.columns):
@@ -169,12 +169,16 @@ def load_benchmark(caculate_metric_output, economic_distiller_caculate_metric_ou
         # plot_dataframe(transaction_costs_adjusted_cumulative_wealth, PLOT_ALL_4, 'TCW', logdir)
         # plot_dataframe(transaction_costs_adjusted_cumulative_wealth, PLOT_ALL_5, 'TCW', logdir)
 
+    if PLOT_RADAR_CHART:
+        plot_radar_chart(final_profit_result, final_risk_result, PLOT_ALL_1, logdir)
+
     load_benchmark_output = {}
     load_benchmark_output['logdir'] = caculate_metric_output['logdir']
     load_benchmark_output['CW'] = caculate_metric_output["CW"]
     load_benchmark_output['TCW'] = caculate_metric_output["TCW"].iloc[-6]
     print(load_benchmark_output['TCW'])
     return load_benchmark_output
+
 
 if __name__ == '__main__':
     # utils.check_update()

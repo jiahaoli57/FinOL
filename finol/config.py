@@ -9,7 +9,6 @@ plt.style.use('seaborn-paper')
 plt.rcParams['font.family'] = 'Microsoft YaHei'
 from rich import print
 
-CHINESE_PLOT = False
 GET_LATEST_FINOL = False
 TUTORIAL_MODE = False
 TUTORIAL_NAME = "TUTORIAL_4"
@@ -17,7 +16,7 @@ TUTORIAL_NAME = "TUTORIAL_4"
 ##########################################################################################
 ############################  Parameters related to data_layer ###########################
 ##########################################################################################
-DATASET_NAME = "Nasdaq-100"  # Available options: NYSE(O), NYSE(N), DJIA, SP500, TSE, SSE, HSI, CMEG, DJIA(N), CRYPTO, TUTORIAL, Nasdaq-100
+DATASET_NAME = "CMEG"  # Available options: NYSE(O), NYSE(N), DJIA, SP500, TSE, SSE, HSI, CMEG, DJIA(N), CRYPTO, TUTORIAL, Nasdaq-100
 DATASET_SPLIT_CONFIG = {
     "NYSE(O)": {
         "TRAIN_START_TIMESTAMP": "1962-07-03",
@@ -94,7 +93,7 @@ FEATURE_ENGINEERING_CONFIG = {
 DATA_AUGMENTATION_CONFIG = {
     "WINDOW_DATA": {
         "INCLUDE_WINDOW_DATA": True,
-        "WINDOW_SIZE": 50
+        "WINDOW_SIZE": 5
     }
 }
 SCALER = "StandardScaler"  # None, StandardScaler, MinMaxScaler, MaxAbsScaler, RobustScaler
@@ -112,12 +111,12 @@ BATCH_SIZE["CMEG"] = BATCH_SIZE["SSE"]
 BATCH_SIZE["DJIA(N)"] = BATCH_SIZE["SSE"]
 BATCH_SIZE["Nasdaq-100"] = BATCH_SIZE["SSE"]
 
-LOAD_DATALOADER = True
+LOAD_DATALOADER = False
 
 ##########################################################################################
 ########################### Parameters related to model_layer ############################
 ##########################################################################################
-MODEL_NAME = "LSRE-CAAN"
+MODEL_NAME = "AlphaPortfolio"
 MODEL_CONFIG = {
     "DNN": {
         "NUM_LAYERS": 4,
@@ -144,12 +143,12 @@ MODEL_CONFIG = {
     },
     "LSRE-CAAN": {
         "NUM_LAYERS": 1,  # paper setting: 1
-        "NUM_LATENTS": 8,  # paper setting: 1
-        "LATENT_DIM": 16,  # paper setting: 32
+        "NUM_LATENTS": 1,  # paper setting: 1
+        "LATENT_DIM": 32,  # paper setting: 32
         "CROSS_HEADS": 1,  # paper setting: 1
         "LATENT_HEADS": 1,  # paper setting: 1
-        "CROSS_DIM_HEAD": 32,  # paper setting: 64
-        "LATENT_DIM_HEAD": 16,  # paper setting: 32
+        "CROSS_DIM_HEAD": 64,  # paper setting: 64
+        "LATENT_DIM_HEAD": 32,  # paper setting: 32
         "DROPOUT": 0.,  # paper setting: 0
     },
     "AlphaPortfolio": {
@@ -177,12 +176,14 @@ LAMBDA_L2 = 5e-4
 DEVICE = "cuda"
 NUM_EPOCHES = 1000
 SAVE_EVERY = 1
-PLOT_LOSS = False
+PLOT_LOSS = True
 
 
 ##########################################################################################
 ######################### Parameters related to evaluation_layer #########################
 ##########################################################################################
+PLOT_CHINESE = False
+PLOT_RADAR_CHART = True
 INTERPRETABLE_ANALYSIS_CONFIG = {
     "INCLUDE_INTERPRETABILITY_ANALYSIS": False,
     "INCLUDE_ECONOMIC_DISTILLATION": False,

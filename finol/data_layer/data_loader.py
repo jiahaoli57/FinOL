@@ -390,8 +390,8 @@ def load_dataset():
             test_loader = DataLoader(test_ids, batch_size=1, shuffle=False, drop_last=False)
 
             # Save the price relative tensor to a mat file with the data set name
-            from scipy import io
-            io.savemat('price_relative_' + DATASET_NAME + '.mat', {'data': df_label_MATLAB.values})
+            # from scipy import io
+            # io.savemat('price_relative_' + DATASET_NAME + '.mat', {'data': df_label_MATLAB.values})
         else:
             print("No Excel files found.")
 
