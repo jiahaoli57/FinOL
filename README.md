@@ -231,7 +231,7 @@ research. Here are some examples:
 
 3. Daily DrawDown
 <p align="center">
-<img src="figure/dcw.png" width="70%" alt>
+<img src="figure/dcw.png" width="71%" alt>
 
 4. Transaction Cost-Adjusted Cumulative Wealth
 <p align="center">
