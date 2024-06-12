@@ -339,11 +339,11 @@ def load_dataset():
 
                 df_label = label_making(raw_df, df)
 
-                df_label_temp = df_label.copy()
-                test_start = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TEST_START_TIMESTAMP"])
-                test_end = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TEST_END_TIMESTAMP"])
-                df_label_temp = df_label_temp[(df_label_temp.index >= test_start) & (df_label_temp.index <= test_end)]
-                df_label_MATLAB = pd.concat([df_label_MATLAB, df_label_temp], axis=1)
+                # df_label_temp = df_label.copy()
+                # test_start = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TEST_START_TIMESTAMP"])
+                # test_end = pd.to_datetime(DATASET_SPLIT_CONFIG.get(DATASET_NAME)["TEST_END_TIMESTAMP"])
+                # df_label_temp = df_label_temp[(df_label_temp.index >= test_start) & (df_label_temp.index <= test_end)]
+                # df_label_MATLAB = pd.concat([df_label_MATLAB, df_label_temp], axis=1)
 
                 train, val, test = data_splitting(df)
                 train_label, val_label, test_label = data_splitting(df_label)
