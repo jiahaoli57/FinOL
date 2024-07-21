@@ -6,9 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'finol'
-copyright = '2024, finol contributors'
-author = 'finol contributors'
+project = 'FinOL'
+copyright = '2024, FinOL contributors'
+author = 'FinOL contributors'
 release = 'MIT'
 
 # -- General configuration ---------------------------------------------------
