@@ -1,43 +1,29 @@
 import torch.nn as nn
-import torch.nn.functional as F
 
-from finol.config import *
-
-NUM_LAYERS = MODEL_CONFIG.get("DNN")["NUM_LAYERS"]
-HIDDEN_SIZE = MODEL_CONFIG.get("DNN")["HIDDEN_SIZE"]
+from finol.data_layer.ScalerSelector import ScalerSelector
+from finol.utils import load_config
 
 
 class DNN(nn.Module):
-    def __init__(
-            self,
-            *,
-            num_assets,
-            num_features_augmented,
-            num_features_original,
-            window_size,
-            **kwargs
-    ):
+    def __init__(self, model_args, model_params):
         super().__init__()
-        self.input_size = num_features_augmented
-        self.num_feats = num_features_original
-        self.output_size = num_assets
-        self.num_features_augmented = num_features_augmented
-        self.num_features_original = num_features_original
-        self.window_size = window_size
+        self.config = load_config()
 
         self.layers = nn.ModuleList()
-        self.layers.append(nn.Linear(self.num_features_augmented, HIDDEN_SIZE))
-
-        for _ in range(NUM_LAYERS):
-            self.layers.append(nn.Linear(HIDDEN_SIZE, HIDDEN_SIZE))
-
-        self.layers.append(nn.Linear(HIDDEN_SIZE, 1))
+        self.layers.append(nn.Linear(model_args["NUM_FEATURES_AUGMENTED"], model_params["HIDDEN_SIZE"]))
+        for _ in range(model_params["NUM_LAYERS"]):
+            self.layers.append(nn.Linear(model_params["HIDDEN_SIZE"], model_params["HIDDEN_SIZE"]))
+        self.layers.append(nn.Linear(model_params["HIDDEN_SIZE"], 1))
         self.relu = nn.ReLU()
-        self.dropout = nn.Dropout(p=DROPOUT)
+        self.dropout = nn.Dropout(p=model_params["DROPOUT"])
 
     def forward(self, x):
-        # batch_size, num_assets, num_features_augmented = x.shape  # n: window size; d: number of features
-        # x = x.view(batch_size, num_assets, self.window_size, self.num_features_original)
+        batch_size, num_assets, num_features_augmented = x.shape
+        # x = x.view(batch_size, num_assets, window_size, num_features_original)
+
+        """Input Transformation"""
+        if self.config["SCALER"].startswith("Window"):
+            x = ScalerSelector().window_normalize(x)
 
         out = x
         for layer in self.layers:
@@ -45,6 +31,6 @@ class DNN(nn.Module):
             out = self.relu(out)
             out = self.dropout(out)
 
-        # Final Scores for Assets
-        out = out.squeeze(-1)
-        return out
+        """Final Scores for Assets"""
+        final_scores = out.squeeze(-1)
+        return final_scores

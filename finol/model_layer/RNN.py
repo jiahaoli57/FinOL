@@ -1,51 +1,38 @@
 import torch.nn as nn
-import torch.nn.functional as F
 
 from einops import rearrange
-from finol.config import *
-
-NUM_LAYERS = MODEL_CONFIG.get("RNN")["NUM_LAYERS"]
-HIDDEN_SIZE = MODEL_CONFIG.get("RNN")["HIDDEN_SIZE"]
+from finol.data_layer.ScalerSelector import ScalerSelector
+from finol.utils import load_config
 
 
 class RNN(nn.Module):
-    def __init__(
-            self,
-            *,
-            num_assets,
-            num_features_augmented,
-            num_features_original,
-            window_size,
-            **kwargs
-    ):
+    def __init__(self, model_args, model_params):
         super().__init__()
+        self.config = load_config()
+        self.model_args = model_args
+        self.model_params = model_params
 
-        self.num_assets = num_assets
-        self.num_features_augmented = num_features_augmented
-        self.num_features_original = num_features_original
-        self.window_size = window_size
-
-        self.rnn = nn.RNN(input_size=num_features_original, hidden_size=HIDDEN_SIZE, num_layers=NUM_LAYERS, batch_first=True)
-        self.fc = nn.Linear(HIDDEN_SIZE, num_assets)
+        self.rnn = nn.RNN(input_size=model_args["NUM_FEATURES_ORIGINAL"], hidden_size=model_params["HIDDEN_SIZE"],
+                          num_layers=model_params["NUM_LAYERS"], batch_first=True)
         self.relu = nn.ReLU()
-        self.dropout = nn.Dropout(DROPOUT)
-        self.fc2 = nn.Linear(HIDDEN_SIZE, 1)
-
+        self.dropout = nn.Dropout(model_params["DROPOUT"])
+        self.fc = nn.Linear(model_params["HIDDEN_SIZE"], 1)
 
     def forward(self, x):
-        batch_size = x.shape[0]
+        batch_size, num_assets, num_features_augmented = x.shape
 
-        # Input Transformation
-        x = x.view(batch_size, self.num_assets, self.window_size, self.num_features_original)
-        x = rearrange(x, 'b m n d -> (b m) n d')
+        """Input Transformation"""
+        x = x.view(batch_size, num_assets, self.model_args["WINDOW_SIZE"], self.model_args["NUM_FEATURES_ORIGINAL"])
+        x = rearrange(x, "b m n d -> (b m) n d")
+        if self.config["SCALER"].startswith("Window"):
+            x = ScalerSelector().window_normalize(x)
 
-        # Temporal Representation Extraction
+        """Temporal Representation Extraction"""
         out, _ = self.rnn(x)
         out = self.dropout(out)
         out = out[:, -1, :]
 
-        # Final Scores for Assets
-        out = out.view(batch_size, self.num_assets, HIDDEN_SIZE)
-        out = self.fc2(out).squeeze(-1)
-        # portfolio = F.softmax(out, dim=-1)
-        return out
+        """Final Scores for Assets"""
+        out = out.view(batch_size, num_assets, self.model_params["HIDDEN_SIZE"])
+        final_scores = self.fc(out).squeeze(-1)
+        return final_scores

@@ -1,54 +1,47 @@
+import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
 from einops import rearrange
-from finol.config import *
-
-NUM_LAYERS = MODEL_CONFIG.get("Transformer")["NUM_LAYERS"]
-NUM_HEADS = MODEL_CONFIG.get("Transformer")["NUM_HEADS"]
-HIDDEN_SIZE = MODEL_CONFIG.get("Transformer")["HIDDEN_SIZE"]
+from finol.data_layer.ScalerSelector import ScalerSelector
+from finol.utils import load_config
 
 
 class Transformer(nn.Module):
-    def __init__(
-            self,
-            *,
-            num_assets,
-            num_features_augmented,
-            num_features_original,
-            window_size,
-            **kwargs
-    ):
+    def __init__(self, model_args, model_params):
         super().__init__()
-        self.input_size = num_features_original
-        self.num_feats = num_features_original
-        self.output_size = num_assets
-        self.num_features_augmented = num_features_augmented
-        self.num_features_original = num_features_original
-        self.window_size = window_size
+        self.config = load_config()
+        self.model_args = model_args
+        self.model_params = model_params
 
-        self.model = nn.TransformerEncoderLayer(d_model=self.input_size, nhead=NUM_HEADS, dim_feedforward=HIDDEN_SIZE, batch_first=True)
-        self.dropout = nn.Dropout(p=DROPOUT)
-        self.linear = nn.Linear(self.input_size, 1)
+        self.token_emb = nn.Linear(model_args["NUM_FEATURES_ORIGINAL"], model_params["DIM_EMBEDDING"])
+        self.pos_emb = nn.Embedding(model_args["WINDOW_SIZE"], model_params["DIM_EMBEDDING"])
+        self.transformer_encoder = nn.TransformerEncoderLayer(model_params["DIM_EMBEDDING"], nhead=model_params["NUM_HEADS"], dim_feedforward=model_params["DIM_FEEDFORWARD"], batch_first=True)
+        self.dropout = nn.Dropout(p=model_params["DROPOUT"])
+        self.fc = nn.Linear(model_params["DIM_EMBEDDING"], 1)
 
-    def forward(
-            self,
-            x
-    ):
-        batch_size = x.shape[0]
+    def forward(self, x):
+        batch_size, num_assets, num_features_augmented = x.shape
+        DEVICE = x.device
 
-        # Input Transformation
-        x = x.view(batch_size, self.num_assets, self.window_size, self.num_features_original)
-        x = rearrange(x, 'b m n d -> (b m) n d')
+        """Input Transformation"""
+        x = x.view(batch_size, num_assets, self.model_args["WINDOW_SIZE"], self.model_args["NUM_FEATURES_ORIGINAL"])
+        x = rearrange(x, "b m n d -> (b m) n d")
+        if self.config["SCALER"].startswith("Window"):
+            x = ScalerSelector().window_normalize(x)
 
-        # Temporal Representation Extraction
-        output = self.model(x)
+        """Temporal Representation Extraction"""
+        x = self.token_emb(x)  # [batch_size * num_assets, window_size, num_features_original] -> [batch_size * num_assets, window_size, DIM_EMBEDDING]
+        pos_emb = self.pos_emb(torch.arange(self.model_args["WINDOW_SIZE"], device=DEVICE))
+        pos_emb = rearrange(pos_emb, "n d -> () n d")
+        x = x + pos_emb
+
+        output = self.transformer_encoder(x)
         output = output[:, -1, :]
 
-        # Final Scores for Assets
-        output = output.view(batch_size, self.num_assets, self.num_features_original)
+        """Final Scores for Assets"""
+        output = output.view(batch_size, num_assets, self.model_params["DIM_EMBEDDING"])
         output = self.dropout(output)
         output = F.relu(output)
-        output = self.linear(output).squeeze(-1)
-        # portfolio = F.softmax(output, dim=-1)
-        return output
+        final_scores = self.fc(output).squeeze(-1)
+        return final_scores

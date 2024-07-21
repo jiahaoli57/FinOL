@@ -1,16 +1,10 @@
 import torch
 import torch.nn.functional as F
 
-from torch import nn, einsum
-from einops import rearrange, repeat
-from finol.config import *
-
-MODEL_CONFIG = MODEL_CONFIG.get("AlphaPortfolio", {})
-DIM_EMBEDDING = MODEL_CONFIG["DIM_EMBEDDING"]  # 256
-DIM_FEEDFORWARD = MODEL_CONFIG["DIM_FEEDFORWARD"]  # 1024
-NUM_HEADS = MODEL_CONFIG["NUM_HEADS"]  # 4
-NUM_LAYERS = MODEL_CONFIG["NUM_LAYERS"]  # 1
-DROPOUT = MODEL_CONFIG["DROPOUT"]  # 0.2
+from torch import nn
+from einops import rearrange
+from finol.data_layer.ScalerSelector import ScalerSelector
+from finol.utils import load_config
 
 """
      Table C.1: Hyperparameters of TE-CAAN-Based AP
@@ -26,26 +20,26 @@ DROPOUT = MODEL_CONFIG["DROPOUT"]  # 0.2
 
 
 class SREM(nn.Module):
-    r"""
+    """
     This class implements the Sequence Representations Extraction (SREM) module
 
     For more details, please refer to the papers `AlphaPortfolio: Direct Construction through Reinforcement Learning
     and Interpretable AI <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3698800>` and `Attention is all you need
     <https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html>`
     """
-    def __init__(self, num_features_original, window_size):
+    def __init__(self, model_args, model_params):
         super().__init__()
-        self.token_emb = nn.Linear(num_features_original, DIM_EMBEDDING)
-        self.pos_emb = nn.Embedding(window_size, DIM_EMBEDDING)
+        self.token_emb = nn.Linear(model_args["NUM_FEATURES_ORIGINAL"], model_params["DIM_EMBEDDING"])
+        self.pos_emb = nn.Embedding(model_args["WINDOW_SIZE"], model_params["DIM_EMBEDDING"])
         self.transformer_encoder = nn.TransformerEncoder(
             nn.TransformerEncoderLayer(
-                d_model=DIM_EMBEDDING,
-                nhead=NUM_HEADS,
-                dim_feedforward=DIM_FEEDFORWARD,
-                dropout=DROPOUT,
+                d_model=model_params["DIM_EMBEDDING"],
+                nhead=model_params["NUM_HEADS"],
+                dim_feedforward=model_params["DIM_FEEDFORWARD"],
+                dropout=model_params["DROPOUT"],
                 batch_first=True,
             ),
-            num_layers=NUM_LAYERS,
+            num_layers=model_params["NUM_LAYERS"],
         )
 
     def forward(self, x):
@@ -54,10 +48,10 @@ class SREM(nn.Module):
             x (Tensor): the sequence to the encoder (required).
                         shape (batch_size * num_assets, window_size, num_features_original)
         """
-        n, d = x.shape[1], x.shape[2]  # n: window size; d: number of features
+        _, n, d, device = x.shape[0], x.shape[1], x.shape[2], x.device  # n: window size; d: number of features
         x = self.token_emb(x)  # [batch_size * num_assets, window_size, num_features_original] -> [batch_size * num_assets, window_size, DIM_EMBEDDING]
-        pos_emb = self.pos_emb(torch.arange(n, device=DEVICE))
-        pos_emb = rearrange(pos_emb, 'n d -> () n d')
+        pos_emb = self.pos_emb(torch.arange(n, device=device))
+        pos_emb = rearrange(pos_emb, "n d -> () n d")
         x = x + pos_emb
 
         x = self.transformer_encoder(x)  # [batch_size * num_assets, window_size, DIM_EMBEDDING] -> [batch_size * num_assets, window_size, DIM_EMBEDDING]
@@ -66,15 +60,15 @@ class SREM(nn.Module):
 
 
 class CAAN(nn.Module):
-    r"""
+    """
     This class implements the Cross Asset Attention Network (CAAN) module
     """
-    def __init__(self, DIM_EMBEDDING):
+    def __init__(self, model_params):
         super().__init__()
-        self.linear_query = torch.nn.Linear(DIM_EMBEDDING, DIM_EMBEDDING)
-        self.linear_key = torch.nn.Linear(DIM_EMBEDDING, DIM_EMBEDDING)
-        self.linear_value = torch.nn.Linear(DIM_EMBEDDING, DIM_EMBEDDING)
-        self.linear_winner = torch.nn.Linear(DIM_EMBEDDING, 1)
+        self.linear_query = torch.nn.Linear(model_params["DIM_EMBEDDING"], model_params["DIM_EMBEDDING"])
+        self.linear_key = torch.nn.Linear(model_params["DIM_EMBEDDING"], model_params["DIM_EMBEDDING"])
+        self.linear_value = torch.nn.Linear(model_params["DIM_EMBEDDING"], model_params["DIM_EMBEDDING"])
+        self.linear_winner = torch.nn.Linear(model_params["DIM_EMBEDDING"], 1)
 
     def forward(self, x):
         query = self.linear_query(x)  # [batch_size, num_assets, DIM_EMBEDDING]
@@ -91,64 +85,63 @@ class CAAN(nn.Module):
 
 
 class AlphaPortfolio(nn.Module):
-    r"""
+    """
     This class implements the AlphaPortfolio model
 
     For more details, please refer to the paper `AlphaPortfolio: Direct Construction through Reinforcement Learning
     and Interpretable AI <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3698800>`
     """
-    def __init__(
-            self,
-            *,
-            num_assets,
-            num_features_augmented,
-            num_features_original,
-            window_size,
-            **kwargs
-    ):
+    def __init__(self, model_args, model_params):
         super().__init__()
-        self.num_features_original = num_features_original
-        self.window_size = window_size
-        self.srem = SREM(num_features_original, window_size)
-        self.caan = CAAN(DIM_EMBEDDING)
+        self.config = load_config()
+        self.model_args = model_args
+        self.model_params = model_params
 
-    def forward(
-            self,
-            x
-    ):
-        # Input Transformation
-        batch_size, num_assets, num_features_augmented = x.shape  # n: window size; d: number of features
-        window_size = self.window_size
-        num_features_original = self.num_features_original
+        self.srem = SREM(model_args, model_params)
+        self.caan = CAAN(model_params)
 
-        x = x.view(batch_size, num_assets, window_size, num_features_original)
-        x = rearrange(x, 'b m n d -> (b m) n d')
+    def forward(self, x):
+        batch_size, num_assets, num_features_augmented = x.shape
 
-        # Sequence Representations Extraction (SREM)
+        """Input Transformation"""
+        x = x.view(batch_size, num_assets, self.model_args["WINDOW_SIZE"], self.model_args["NUM_FEATURES_ORIGINAL"])
+        x = rearrange(x, "b m n d -> (b m) n d")
+        if self.config["SCALER"].startswith("Window"):
+            x = ScalerSelector().window_normalize(x)
+
+        """Sequence Representations Extraction (SREM)"""
         stock_rep = self.srem(x)  # [batch_size * num_assets, window_size, DIM_EMBEDDING] -> [batch_size * num_assets, DIM_EMBEDDING]
+        x = stock_rep.view(batch_size, num_assets, self.model_params["DIM_EMBEDDING"])  # [batch_size * num_assets, DIM_EMBEDDING] -> [batch_size, num_assets, DIM_EMBEDDING]
 
-        x = stock_rep.view(batch_size, num_assets, DIM_EMBEDDING)  # [batch_size * num_assets, DIM_EMBEDDING] -> [batch_size, num_assets, DIM_EMBEDDING]
-
-        # Cross Asset Attention Network (CAAN)
+        """Cross Asset Attention Network (CAAN)"""
         final_scores = self.caan(x)
 
         return final_scores
 
 
-if __name__ == '__main__':
-    torch.manual_seed(MANUAL_SEED)
+if __name__ == "__main__":
+    # config = load_config()
+    DEVICE = "cuda"
+    torch.manual_seed(0)
     batch_size = 128
     num_assets = 6
     window_size = 30
     num_features_original = 10
     num_features_augmented = window_size * num_features_original
-    x = torch.ones(batch_size, num_assets, num_features_augmented).to(DEVICE)
-    model = AlphaPortfolio(
-        num_assets=num_assets,
-        num_features_augmented=num_features_augmented,
-        num_features_original=num_features_original,
-        window_size=window_size,
-    ).to(DEVICE)
+    # x = torch.ones(batch_size, num_assets, num_features_augmented).to(DEVICE)
+    x = torch.rand(batch_size, num_assets, num_features_augmented).to(DEVICE)
+    model_args = {
+        "NUM_FEATURES_ORIGINAL": num_features_original,
+        "WINDOW_SIZE": window_size,
+    }
+    model_params = {
+        "DIM_EMBEDDING": 256,
+        "DIM_FEEDFORWARD": 1021,
+        "NUM_HEADS": 4,
+        "NUM_LAYERS": 1,
+        "DROPOUT": 0.2,
+    }
+    model = AlphaPortfolio(model_args, model_params).to(DEVICE)
     final_scores = model(x)
     print(final_scores)
 

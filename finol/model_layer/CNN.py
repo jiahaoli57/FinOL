@@ -1,54 +1,42 @@
-import torch
 import torch.nn as nn
-import torch.nn.functional as F
 
 from einops import rearrange
-from finol.config import *
-
-OUT_CHANNELS = MODEL_CONFIG.get("CNN")["OUT_CHANNELS"]
-KERNEL_SIZE = MODEL_CONFIG.get("CNN")["KERNEL_SIZE"]
-STRIDE = MODEL_CONFIG.get("CNN")["STRIDE"]
-HIDDEN_SIZE = MODEL_CONFIG.get("CNN")["HIDDEN_SIZE"]
+from finol.data_layer.ScalerSelector import ScalerSelector
+from finol.utils import load_config
 
 
 class CNN(nn.Module):
-    def __init__(
-            self,
-            *,
-            num_assets,
-            num_features_augmented,
-            num_features_original,
-            window_size,
-            **kwargs
-    ):
-        super(CNN, self).__init__()
-        self.num_assets = num_assets
-        self.num_features_augmented = num_features_augmented
-        self.num_features_original = num_features_original
-        self.window_size = window_size
+    def __init__(self, model_args, model_params):
+        super().__init__()
+        self.config = load_config()
+        self.model_args = model_args
+        self.model_params = model_params
 
         self.net = nn.Sequential(
-            nn.Conv1d(num_features_original, OUT_CHANNELS, KERNEL_SIZE, STRIDE),
+            nn.Conv1d(model_args["NUM_FEATURES_ORIGINAL"], model_params["OUT_CHANNELS"], model_params["KERNEL_SIZE"], model_params["STRIDE"]),
             nn.ReLU(),
             nn.AdaptiveAvgPool1d(1),
             nn.Flatten(),
-            nn.Linear(OUT_CHANNELS, HIDDEN_SIZE),
+            nn.Linear(model_params["OUT_CHANNELS"], model_params["HIDDEN_SIZE"]),
             nn.ReLU(),
-            nn.Linear(HIDDEN_SIZE, 1),
+            nn.Linear(model_params["HIDDEN_SIZE"], 1),
         )
 
     def forward(self, x):
-        batch_size = x.shape[0]
+        batch_size, num_assets, num_features_augmented = x.shape
 
-        # Input Transformation
-        x = x.view(batch_size, self.num_assets, self.window_size, self.num_features_original)
-        x = rearrange(x, 'b m n d -> (b m) n d')
+        """Input Transformation"""
+        x = x.view(batch_size, num_assets, self.model_args["WINDOW_SIZE"], self.model_args["NUM_FEATURES_ORIGINAL"])
+        x = rearrange(x, "b m n d -> (b m) n d")
         x = x.transpose(1, 2)  # [batch_size * num_assets, seq_len, num_inputs] -> [batch_size * num_assets, num_inputs, seq_len]
 
-        # Temporal Representation Extraction
-        out = self.net(x)
-        out = out.view(batch_size, self.num_assets, 1).squeeze(-1)
+        if self.config["SCALER"].startswith("Window"):
+            x = ScalerSelector().window_normalize(x)
 
-        # Final Scores for Assets
-        out = out
-        return out
+        """Temporal Representation Extraction"""
+        out = self.net(x)
+        out = out.view(batch_size, num_assets, 1).squeeze(-1)
+
+        """Final Scores for Assets"""
+        final_scores = out
+        return final_scores
