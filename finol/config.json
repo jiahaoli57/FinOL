@@ -139,7 +139,7 @@
         "DNN": {
             "NUM_LAYERS": 3,
             "HIDDEN_SIZE": 128,
-            "DROPOUT": 0.35000000000000003
+            "DROPOUT": 0.35
         },
         "LSRE-CAAN": {
             "NUM_LAYERS": 3,
