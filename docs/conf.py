@@ -4,7 +4,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 
-import finol
+# import finol
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -13,7 +13,7 @@ project = 'FinOL'
 copyright = '2024, FinOL contributors'
 author = 'FinOL contributors'
 release = 'MIT'
-version = finol.__version__
+# version = finol.__version__
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
