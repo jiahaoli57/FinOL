@@ -2,45 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="optimize code">
-      <change afterPath="$PROJECT_DIR$/finol/data_layer/DatasetLoader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finol/data_layer/ScalerSelector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finol/evaluation_layer/BenchmarkLoader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finol/evaluation_layer/DistillerSelector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finol/model_layer/ModelSelector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finol/optimization_layer/ModelTrainer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finol/optimization_layer/OptunaOptimizer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finol/tk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/make.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/conf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finol/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/data_layer/data_loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/data_layer/scaler_selector.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/benchmark_loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/distiller_selector.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/economic_distiller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/EconomicDistiller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/economic_distiller_metric_caculator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/metric_caculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/MetricCaculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/model_evaluator.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/ModelEvaluator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/main/_.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/main/_.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/main/auto_tuning.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/main/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/main/main.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/main/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/AlphaPortfolio.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/AlphaPortfolio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/CNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/CNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/DNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/DNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/LSTM.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/LSTM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/RNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/RNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/Transformer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/Transformer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/model_selector.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/criterion_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/CriterionSelector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/optimizer_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/OptimizerSelector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/tutorials/_.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/tutorials/_.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/tutorials/tutorial_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/tutorials/tutorial_1.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/tutorials/tutorial_2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/tutorials/tutorial_2.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/tutorials/tutorial_3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/tutorials/tutorial_3.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/tutorials/tutorial_4.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/tutorials/tutorial_4.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +36,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -243,10 +211,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.OptunaOptimizer" />
-      <item itemvalue="Python.ModelTrainer" />
       <item itemvalue="Python.AlphaPortfolio" />
+      <item itemvalue="Python.ModelTrainer" />
+      <item itemvalue="Python.OptunaOptimizer" />
+      <item itemvalue="Python.main" />
       <item itemvalue="Python.tk" />
     </list>
     <recent_temporary>
@@ -366,6 +334,7 @@
       <workItem from="1720627434758" duration="8462000" />
       <workItem from="1721058029352" duration="87508000" />
       <workItem from="1721387352676" duration="67813000" />
+      <workItem from="1721578097822" duration="421000" />
     </task>
     <task id="LOCAL-00017" summary="commit">
       <created>1712850370324</created>
