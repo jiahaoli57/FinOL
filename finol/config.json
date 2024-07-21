@@ -1,0 +1,645 @@
+{
+    "_note1": "-------------------------------------- General Configuration --------------------------------------",
+    "GET_LATEST_FINOL": false,
+    "DEVICE": "cuda",
+    "MANUAL_SEED": 0,
+    "_note2": "-------------------------------------- Data Layer Configuration --------------------------------------",
+    "LOAD_LOCAL_DATALOADER": false,
+    "DATASET_NAME": "CRYPTO",
+    "DATASET_SPLIT_CONFIG": {
+        "NYSE(O)": {
+            "TRAIN_START_TIMESTAMP": "1962-07-03",
+            "TRAIN_END_TIMESTAMP": "1976-01-21",
+            "VAL_START_TIMESTAMP": "1976-01-22",
+            "VAL_END_TIMESTAMP": "1980-07-11",
+            "TEST_START_TIMESTAMP": "1980-07-14",
+            "TEST_END_TIMESTAMP": "1984-12-31"
+        },
+        "NYSE(N)": {
+            "TRAIN_START_TIMESTAMP": "1985-01-02",
+            "TRAIN_END_TIMESTAMP": "2000-04-06",
+            "VAL_START_TIMESTAMP": "2000-04-07",
+            "VAL_END_TIMESTAMP": "2005-05-20",
+            "TEST_START_TIMESTAMP": "2005-05-23",
+            "TEST_END_TIMESTAMP": "2010-06-30"
+        },
+        "DJIA": {
+            "TRAIN_START_TIMESTAMP": "2001-01-14",
+            "TRAIN_END_TIMESTAMP": "2002-04-01",
+            "VAL_START_TIMESTAMP": "2002-04-02",
+            "VAL_END_TIMESTAMP": "2002-08-21",
+            "TEST_START_TIMESTAMP": "2002-08-22",
+            "TEST_END_TIMESTAMP": "2003-01-14"
+        },
+        "SP500": {
+            "TRAIN_START_TIMESTAMP": "1998-01-02",
+            "TRAIN_END_TIMESTAMP": "2001-01-12",
+            "VAL_START_TIMESTAMP": "2001-01-16",
+            "VAL_END_TIMESTAMP": "2002-01-25",
+            "TEST_START_TIMESTAMP": "2002-01-28",
+            "TEST_END_TIMESTAMP": "2003-01-31"
+        },
+        "TSE": {
+            "TRAIN_START_TIMESTAMP": "1995-01-12",
+            "TRAIN_END_TIMESTAMP": "1997-05-28",
+            "VAL_START_TIMESTAMP": "1997-05-29",
+            "VAL_END_TIMESTAMP": "1998-03-13",
+            "TEST_START_TIMESTAMP": "1998-03-16",
+            "TEST_END_TIMESTAMP": "1998-12-31"
+        },
+        "SSE": {
+            "TRAIN_START_TIMESTAMP": "2010-07-05",
+            "TRAIN_END_TIMESTAMP": "2018-04-09",
+            "VAL_START_TIMESTAMP": "2018-04-16",
+            "VAL_END_TIMESTAMP": "2020-11-16",
+            "TEST_START_TIMESTAMP": "2020-11-23",
+            "TEST_END_TIMESTAMP": "2023-06-26"
+        },
+        "HSI": {
+            "TRAIN_START_TIMESTAMP": "2010-07-05",
+            "TRAIN_END_TIMESTAMP": "2018-04-09",
+            "VAL_START_TIMESTAMP": "2018-04-16",
+            "VAL_END_TIMESTAMP": "2020-11-16",
+            "TEST_START_TIMESTAMP": "2020-11-23",
+            "TEST_END_TIMESTAMP": "2023-06-26"
+        },
+        "CMEG": {
+            "TRAIN_START_TIMESTAMP": "2010-07-05",
+            "TRAIN_END_TIMESTAMP": "2018-04-09",
+            "VAL_START_TIMESTAMP": "2018-04-16",
+            "VAL_END_TIMESTAMP": "2020-11-16",
+            "TEST_START_TIMESTAMP": "2020-11-23",
+            "TEST_END_TIMESTAMP": "2023-06-26"
+        },
+        "CRYPTO": {
+            "TRAIN_START_TIMESTAMP": "2017-11-09",
+            "TRAIN_END_TIMESTAMP": "2021-08-22",
+            "VAL_START_TIMESTAMP": "2021-08-23",
+            "VAL_END_TIMESTAMP": "2022-11-26",
+            "TEST_START_TIMESTAMP": "2022-11-27",
+            "TEST_END_TIMESTAMP": "2024-03-01"
+        }
+    },
+    "FEATURE_ENGINEERING_CONFIG": {
+        "INCLUDE_OHLCV_FEATURES": true,
+        "INCLUDE_OVERLAP_FEATURES": true,
+        "INCLUDE_MOMENTUM_FEATURES": true,
+        "INCLUDE_VOLUME_FEATURES": true,
+        "INCLUDE_CYCLE_FEATURES": true,
+        "INCLUDE_PRICE_FEATURES": true,
+        "INCLUDE_VOLATILITY_FEATURES": true,
+        "INCLUDE_PATTERN_FEATURES": true
+    },
+    "DATA_AUGMENTATION_CONFIG": {
+        "WINDOW_DATA": {
+            "INCLUDE_WINDOW_DATA": true,
+            "WINDOW_SIZE": 10
+        }
+    },
+    "SCALER": "WindowStandardScaler",
+    "BATCH_SIZE": {
+        "NYSE(O)": 128,
+        "NYSE(N)": 128,
+        "DJIA": 64,
+        "SP500": 64,
+        "TSE": 64,
+        "SSE": 64,
+        "HSI": 64,
+        "CMEG": 64,
+        "CRYPTO": 128
+    },
+    "NUM_DAYS_PER_YEAR": {
+        "NYSE(O)": 252,
+        "NYSE(N)": 252,
+        "DJIA": 252,
+        "SP500": 252,
+        "TSE": 252,
+        "SSE": 52,
+        "HSI": 52,
+        "CMEG": 52,
+        "CRYPTO": 252
+    },
+    "_note3": "-------------------------------------- Model Layer Configuration --------------------------------------",
+    "MODEL_NAME": "LSRE-CAAN",
+    "MODEL_PARAMS": {
+        "AlphaPortfolio": {
+            "NUM_LAYERS": 1,
+            "DIM_EMBEDDING": 224,
+            "DIM_FEEDFORWARD": 224,
+            "NUM_HEADS": 1,
+            "DROPOUT": 0.45
+        },
+        "CNN": {
+            "OUT_CHANNELS": 128,
+            "KERNEL_SIZE": 3,
+            "STRIDE": 1,
+            "HIDDEN_SIZE": 32,
+            "DROPOUT": 0.1
+        },
+        "DNN": {
+            "NUM_LAYERS": 3,
+            "HIDDEN_SIZE": 128,
+            "DROPOUT": 0.35000000000000003
+        },
+        "LSRE-CAAN": {
+            "NUM_LAYERS": 3,
+            "NUM_LATENTS": 12,
+            "LATENT_DIM": 224,
+            "CROSS_HEADS": 3,
+            "LATENT_HEADS": 3,
+            "CROSS_DIM_HEAD": 128,
+            "LATENT_DIM_HEAD": 64,
+            "DROPOUT": 0.0
+        },
+        "LSRE-CAAN-d": {
+            "NUM_LAYERS": 1,
+            "NUM_LATENTS": 1,
+            "LATENT_DIM": 32,
+            "CROSS_HEADS": 1,
+            "LATENT_HEADS": 1,
+            "CROSS_DIM_HEAD": 64,
+            "LATENT_DIM_HEAD": 32,
+            "DROPOUT": 0
+        },
+        "LSRE-CAAN-dd": {
+            "NUM_LAYERS": 1,
+            "NUM_LATENTS": 1,
+            "LATENT_DIM": 32,
+            "CROSS_HEADS": 1,
+            "LATENT_HEADS": 1,
+            "CROSS_DIM_HEAD": 64,
+            "LATENT_DIM_HEAD": 32,
+            "DROPOUT": 0
+        },
+        "LSTM": {
+            "NUM_LAYERS": 3,
+            "HIDDEN_SIZE": 256,
+            "DROPOUT": 0
+        },
+        "RNN": {
+            "NUM_LAYERS": 3,
+            "HIDDEN_SIZE": 224,
+            "DROPOUT": 0.0
+        },
+        "Transformer": {
+            "NUM_LAYERS": 2,
+            "DIM_EMBEDDING": 256,
+            "DIM_FEEDFORWARD": 32,
+            "NUM_HEADS": 1,
+            "DROPOUT": 0.05
+        }
+    },
+    "MODEL_PARAMS_SPACE": {
+        "AlphaPortfolio": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "DIM_EMBEDDING": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "DIM_FEEDFORWARD": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "NUM_HEADS": {
+                "type": "int",
+                "range": [
+                    1,
+                    1
+                ],
+                "step": 1
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "DNN": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "HIDDEN_SIZE": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "LSRE-CAAN": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "NUM_LATENTS": {
+                "type": "int",
+                "range": [
+                    1,
+                    12
+                ],
+                "step": 1
+            },
+            "LATENT_DIM": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "CROSS_HEADS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "LATENT_HEADS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "CROSS_DIM_HEAD": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "LATENT_DIM_HEAD": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "LSRE-CAAN-d": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "NUM_LATENTS": {
+                "type": "int",
+                "range": [
+                    1,
+                    12
+                ],
+                "step": 1
+            },
+            "LATENT_DIM": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "CROSS_HEADS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "LATENT_HEADS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "CROSS_DIM_HEAD": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "LATENT_DIM_HEAD": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "LSRE-CAAN-dd": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "NUM_LATENTS": {
+                "type": "int",
+                "range": [
+                    1,
+                    12
+                ],
+                "step": 1
+            },
+            "LATENT_DIM": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "CROSS_HEADS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "LATENT_HEADS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "CROSS_DIM_HEAD": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "LATENT_DIM_HEAD": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "LSTM": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "HIDDEN_SIZE": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "RNN": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "HIDDEN_SIZE": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "Transformer": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "DIM_EMBEDDING": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "DIM_FEEDFORWARD": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "NUM_HEADS": {
+                "type": "int",
+                "range": [
+                    1,
+                    1
+                ],
+                "step": 1
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        }
+    },
+    "TUNE_PARAMETERS": false,
+    "NUM_TRIALS": 20,
+    "_note4": "-------------------------------------- Optimization Layer Configuration --------------------------------------",
+    "NUM_EPOCHES": 200,
+    "SAVE_EVERY": 1,
+    "OPTIMIZER_NAME": "Adam",
+    "LEARNING_RATE": 0.001,
+    "CRITERION_NAME": "LOG_WEALTH",
+    "LAMBDA_L2": 0.0005,
+    "PLOT_DYNAMIC_LOSS": true,
+    "_note5": "-------------------------------------- Evaluation Layer Configuration --------------------------------------",
+    "PLOT_CHINESE": false,
+    "PROP_WINNERS": 0.5,
+    "INTERPRETABLE_ANALYSIS_CONFIG": {
+        "INCLUDE_INTERPRETABILITY_ANALYSIS": false,
+        "INCLUDE_ECONOMIC_DISTILLATION": false,
+        "PROP_DISTILLED_FEATURES": 0.7,
+        "DISTILLER_NAME": "Lasso",
+        "Y_NAME": "PORTFOLIOS"
+    },
+    "MARKERS": [
+        "o",
+        "^",
+        "<",
+        ">",
+        "s",
+        "p",
+        "h",
+        "H",
+        "D",
+        "d"
+    ],
+    "MARKEVERY": {
+        "NYSE(O)": 50,
+        "NYSE(N)": 55,
+        "DJIA": 3,
+        "SP500": 7,
+        "TSE": 6,
+        "SSE": 4,
+        "HSI": 4,
+        "CMEG": 4,
+        "CRYPTO": 13
+    },
+    "METRIC_CONFIG": {
+        "PRACTICAL_METRICS": {
+            "TRANSACTIOS_COSTS_RATE": 0.005,
+            "TRANSACTIOS_COSTS_RATE_INTERVAL": 0.001
+        }
+    },
+    "BENCHMARK_BASELINE": [
+        "Market",
+        "Best",
+        "UCRP",
+        "BCRP"
+    ],
+    "FOLLOW_THE_WINNER": [
+        "UP",
+        "EG",
+        "SCRP",
+        "PPT",
+        "SSPO"
+    ],
+    "FOLLOW_THE_LOSER": [
+        "ANTI1",
+        "ANTI2",
+        "PAMR",
+        "CWMR-Var",
+        "CWMR-Stdev",
+        "OLMAR-S",
+        "OLMAR-E",
+        "RMR",
+        "RPRT"
+    ],
+    "PATTERN_MATCHING": [
+        "AICTR",
+        "KTPT"
+    ],
+    "META_LEARNING": [
+        "SP",
+        "ONS",
+        "GRW",
+        "WAAS",
+        "CW-OGD"
+    ],
+    "COMPARED_BASELINE": [
+        "Market",
+        "Best",
+        "SSPO",
+        "OLMAR-E",
+        "CW-OGD"
+    ]
+}
