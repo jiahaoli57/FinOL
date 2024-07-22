@@ -104,10 +104,10 @@ optional = [
 #]
 
 [project.urls]
-homepage = "https://optuna.org/"
-repository = "https://github.com/optuna/optuna"
-documentation = "https://optuna.readthedocs.io"
-bugtracker = "https://github.com/optuna/optuna/issues"
+#homepage = "https://finol.org/"
+repository = "https://github.com/jiahaoli57/finol"
+documentation = "https://finol.readthedocs.io"
+bugtracker = "https://github.com/finol/finol/issues"
 
 #[project.scripts]
 #optuna = "optuna.cli:main"
