@@ -93,15 +93,15 @@ optional = [
   "scipy",  # optuna/samplers/_gp
   "torch",  # optuna/samplers/_gp
 ]
-test = [
-  "coverage",
-  "fakeredis[lua]",
-  "kaleido",
-  "moto",
-  "pytest",
-  "scipy>=1.9.2; python_version>='3.8'",
-  "torch",
-]
+#test = [
+#  "coverage",
+#  "fakeredis[lua]",
+#  "kaleido",
+#  "moto",
+#  "pytest",
+#  "scipy>=1.9.2; python_version>='3.8'",
+#  "torch",
+#]
 
 [project.urls]
 homepage = "https://optuna.org/"
