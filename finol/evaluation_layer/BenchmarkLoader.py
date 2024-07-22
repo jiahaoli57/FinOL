@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from finol.evaluation_layer.radar_chart import plot_radar_chart
 from finol.utils import ROOT_PATH, load_config
 
-plt.style.use("seaborn-paper")
+plt.style.use("seaborn-v0_8-paper")
 plt.rcParams["font.family"] = "Microsoft YaHei"
 warnings.simplefilter(action="ignore", category=FutureWarning)
 

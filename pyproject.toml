@@ -47,9 +47,10 @@ dependencies = [
 ]
 dynamic = ["version"]
 
-#[tool.poetry.dependencies]
+[tool.poetry.dependencies]
 ##python = "^3.7"
 #torch = { version = "^1.9.0", extras = ["cuda"] }
+ta-lib = { version = "*", source = "conda-forge" }
 
 [project.optional-dependencies]
 #cuda = [
