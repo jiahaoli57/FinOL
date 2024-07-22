@@ -19,6 +19,7 @@
 [//]: # ([![GitHub stars]&#40;https://img.shields.io/github/stars/ai4finol/finol?color=orange&#41;]&#40;https://github.com/ai4finol/finol/stargazers&#41;)
 
 </div>
+
 ***
 ``FinOL`` represents a pioneering open database for facilitating data-driven OLPS research. As an
 ambitious project, it collects and organizes extensive assets from global markets over half a century,
