@@ -39,9 +39,12 @@ dependencies = [
   "scikit-learn",
   "torch_optimizer",
   "tqdm",
-  {version = "^1.9.0", name = "torch", extras = ["cu111"]}
 ]
 dynamic = ["version"]
+
+[tool.poetry.dependencies]
+#python = "^3.7"
+torch = { version = "^1.9.0", extras = ["cuda"] }
 
 [project.optional-dependencies]
 #benchmark = [
