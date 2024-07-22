@@ -24,6 +24,16 @@ formats: all
 #    - pdf
 #    - epub
 
+# Optionally set the version of Python and requirements required to build your docs
+python:
+  # `sphinx` requires either Python >= 3.8 or `typed-ast` to reflect type comments
+  # in the documentation. See: https://github.com/sphinx-doc/sphinx/pull/6984
+  install:
+    - method: pip
+      path: .
+      extra_requirements:
+        - document
+
 # Optional but recommended, declare the Python requirements required
 # to build your documentation
 # See https://docs.readthedocs.io/en/stable/guides/reproducible-builds.html
