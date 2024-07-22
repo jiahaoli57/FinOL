@@ -43,25 +43,25 @@ dependencies = [
 dynamic = ["version"]
 
 [project.optional-dependencies]
-benchmark = [
-  "asv>=0.5.0",
-  "botorch",
-  "cma",
-  "virtualenv"
-]
-checking = [
-  "black",
-  "blackdoc",
-  "flake8",
-  "isort",
-  "mypy",
-  "mypy_boto3_s3",
-  "types-PyYAML",
-  "types-redis",
-  "types-setuptools",
-  "types-tqdm",
-  "typing_extensions>=3.10.0.0",
-]
+#benchmark = [
+#  "asv>=0.5.0",
+#  "botorch",
+#  "cma",
+#  "virtualenv"
+#]
+#checking = [
+#  "black",
+#  "blackdoc",
+#  "flake8",
+#  "isort",
+#  "mypy",
+#  "mypy_boto3_s3",
+#  "types-PyYAML",
+#  "types-redis",
+#  "types-setuptools",
+#  "types-tqdm",
+#  "typing_extensions>=3.10.0.0",
+#]
 document = [
 #  "ase",
 #  "cmaes>=0.10.0",  # optuna/samplers/_cmaes.py.
