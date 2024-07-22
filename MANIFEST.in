@@ -1,5 +1,6 @@
 include finol/tutorials/*
 include finol/main/*
+include finol/config.json
 include *.whl
 exclude logdir/*
 exclude requirements.txt

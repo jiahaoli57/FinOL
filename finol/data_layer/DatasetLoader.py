@@ -318,6 +318,7 @@ class DatasetLoader:
         """
         # print(self.config["MANUAL_SEED"])
         logdir = make_logdir()
+        download_data()
 
         if self.config["LOAD_LOCAL_DATALOADER"]:
             try:
@@ -329,8 +330,6 @@ class DatasetLoader:
                     f"Local dataloader does not exist, please modify LOAD_LOCAL_DATALOADER as `False`"
                 )
         else:
-            download_data()
-
             ds_train = []
             ds_val = []
             ds_test = []

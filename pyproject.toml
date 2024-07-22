@@ -32,7 +32,9 @@ classifiers = [
 ]
 requires-python = ">=3.7"
 dependencies = [
-  "torch_optimizer",
+  "torch_optimizer",  # ModelTrainer
+  "optuna",  # ModelTrainer
+  "captum",
 #  "colorlog",
 #  "numpy",
 #  "packaging>=20.0",
