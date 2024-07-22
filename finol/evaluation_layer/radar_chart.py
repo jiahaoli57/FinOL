@@ -7,7 +7,6 @@ from matplotlib.projections import register_projection
 from matplotlib.projections.polar import PolarAxes
 from matplotlib.spines import Spine
 from matplotlib.transforms import Affine2D
-from finol.config import *
 from finol.utils import get_variable_name
 
 

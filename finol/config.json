@@ -1,7 +1,7 @@
 {
     "_note1": "-------------------------------------- General Configuration --------------------------------------",
     "GET_LATEST_FINOL": false,
-    "DEVICE": "cpu",
+    "DEVICE": "cuda",
     "MANUAL_SEED": 0,
     "_note2": "-------------------------------------- Data Layer Configuration --------------------------------------",
     "LOAD_LOCAL_DATALOADER": false,
@@ -554,7 +554,7 @@
     "TUNE_PARAMETERS": false,
     "NUM_TRIALS": 20,
     "_note4": "-------------------------------------- Optimization Layer Configuration --------------------------------------",
-    "NUM_EPOCHES": 200,
+    "NUM_EPOCHES": 20,
     "SAVE_EVERY": 1,
     "OPTIMIZER_NAME": "Adam",
     "LEARNING_RATE": 0.001,

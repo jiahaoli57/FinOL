@@ -13,8 +13,6 @@ from finol.optimization_layer.OptimizerSelector import OptimizerSelector
 from finol.optimization_layer.OptunaOptimizer import OptunaOptimizer
 from finol.utils import load_config, portfolio_selection, set_seed
 
-is_ipython = "inline" in matplotlib.get_backend()
-
 
 class ModelTrainer:
     def __init__(self, load_dataset_output):
@@ -24,8 +22,11 @@ class ModelTrainer:
         self.train_loader = load_dataset_output["train_loader"]  # train_loader \ test_loader_for_train
         self.val_loader = load_dataset_output["val_loader"]  # val_loader \ test_loader_for_train
 
+        self.is_ipython = "inline" in matplotlib.get_backend()
+        print(self.is_ipython)
+
     def plot_loss_notebook(self):
-        if is_ipython:
+        if self.is_ipython:
             plt.ion()
             plt.figure()  # figsize=(12, 5)
             plt.clf()
@@ -48,7 +49,7 @@ class ModelTrainer:
 
     def plot_loss(self):
         # not_ipython = "inline" not in matplotlib.get_backend()
-        if not is_ipython:
+        if not self.is_ipython:
             plt.figure()  # figsize=(12, 5)
             plt.plot(np.array(self.avg_train_loss_list), linestyle="-", marker=self.config["MARKERS"][0], markevery=int(self.config["NUM_EPOCHES"]/20), color="black", alpha=0.5, label="train loss")
             plt.plot(np.array(self.avg_val_loss_list), linestyle=":", marker=self.config["MARKERS"][1], markevery=int(self.config["NUM_EPOCHES"]/20), color="black", alpha=0.5, label="val loss")
