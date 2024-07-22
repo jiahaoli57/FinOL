@@ -33,11 +33,15 @@ classifiers = [
 requires-python = ">=3.7"
 dependencies = [
   "captum",
+  "IPython",
+  "matplotlib",
   "numpy",
+  "openpyxl",
   "optuna",
   "pandas",
   "requests",
   "scikit-learn",
+  "torch",
   "torch_optimizer",
   "tqdm",
 ]
@@ -48,10 +52,10 @@ dynamic = ["version"]
 #torch = { version = "^1.9.0", extras = ["cuda"] }
 
 [project.optional-dependencies]
-cuda = [
-  "torch==1.10.0+cu113",
-  "torchvision==0.10.0+cu113",
-]
+#cuda = [
+#  "torch==1.10.0+cu113",
+#  "torchvision==0.10.0+cu113",
+#]
 #benchmark = [
 #  "asv>=0.5.0",
 #  "botorch",

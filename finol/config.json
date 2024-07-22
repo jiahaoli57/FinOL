@@ -1,11 +1,11 @@
 {
     "_note1": "-------------------------------------- General Configuration --------------------------------------",
     "GET_LATEST_FINOL": false,
-    "DEVICE": "cuda",
+    "DEVICE": "cpu",
     "MANUAL_SEED": 0,
     "_note2": "-------------------------------------- Data Layer Configuration --------------------------------------",
     "LOAD_LOCAL_DATALOADER": false,
-    "DATASET_NAME": "CRYPTO",
+    "DATASET_NAME": "DJIA",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
             "TRAIN_START_TIMESTAMP": "1962-07-03",
@@ -120,7 +120,7 @@
         "CRYPTO": 252
     },
     "_note3": "-------------------------------------- Model Layer Configuration --------------------------------------",
-    "MODEL_NAME": "LSRE-CAAN",
+    "MODEL_NAME": "DNN",
     "MODEL_PARAMS": {
         "AlphaPortfolio": {
             "NUM_LAYERS": 1,

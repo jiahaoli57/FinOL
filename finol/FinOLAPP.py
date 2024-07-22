@@ -201,7 +201,7 @@ class FinOLApp:
         self.NUM_EPOCHES_var = tk.IntVar()
         self.NUM_EPOCHES_entry = tk.Entry(self.optimization_config_frame, textvariable=self.NUM_EPOCHES_var)
         self.NUM_EPOCHES_entry.grid(row=1, column=1, padx=10, pady=1)
-        self.NUM_EPOCHES_var.set(200)
+        self.NUM_EPOCHES_var.set(100)
 
         # SAVE_EVERY
         tk.Label(self.optimization_config_frame, text="Save Every:").grid(row=1, column=2, padx=10, pady=1)
