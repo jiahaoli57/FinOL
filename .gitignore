@@ -1,1 +1,5 @@
+/build
+/dist
 /docs/build/
+/FinOL.egg-info
+/logdir
