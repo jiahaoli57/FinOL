@@ -34,7 +34,7 @@ requires-python = ">=3.7"
 dependencies = [
   "captum",
   "IPython",
-  "matplotlib=3.5.0",
+  "matplotlib==3.5.0",
   "numpy",
   "openpyxl",
   "optuna",

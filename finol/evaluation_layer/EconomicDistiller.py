@@ -10,7 +10,7 @@ from finol.evaluation_layer.MetricCaculator import MetricCaculator
 from finol.evaluation_layer.DistillerSelector import DistillerSelector
 from finol.utils import load_config, portfolio_selection, actual_portfolio_selection
 
-plt.style.use("seaborn-paper")
+# plt.style.use("seaborn-paper")
 # plt.rcParams["font.family"] = "Microsoft YaHei"
 warnings.filterwarnings("ignore")
 warnings.simplefilter(action="ignore", category=FutureWarning)
