@@ -1,5 +1,5 @@
 #[build-system]
-#requires = ["setuptools >= 61.1.0", "wheel"]
+requires = ["setuptools >= 61.1.0", "wheel"]
 #build-backend = "setuptools.build_meta"
 
 [project]
@@ -32,15 +32,14 @@ classifiers = [
 ]
 requires-python = ">=3.7"
 dependencies = [
-  "torch_optimizer",  # ModelTrainer
-  "optuna",  # ModelTrainer
   "captum",
+  "numpy",
+  "optuna",
+  "requests",
   "scikit-learn",
-#  "numpy",
-#  "packaging>=20.0",
-#  "sqlalchemy>=1.3.0",
-#  "tqdm",
-#  "PyYAML",  # Only used in `optuna/cli.py`.
+  "torch_optimizer",
+  "tqdm",
+  {version = "^1.9.0", name = "torch", extras = ["cu111"]}
 ]
 dynamic = ["version"]
 
@@ -82,19 +81,19 @@ document = [
 #  "torch",
 #  "torchvision",
 ]
-optional = [
-  "boto3",  # optuna/artifacts/_boto3.py.
-  "cmaes>=0.10.0",  # optuna/samplers/_cmaes.py.
-  "google-cloud-storage",  # optuna/artifacts/_gcs.py.
-  "matplotlib!=3.6.0",  # optuna/visualization/matplotlib.
-  "pandas",  # optuna/study.py.
-  "plotly>=4.9.0",  # optuna/visualization.
-  "redis",  # optuna/storages/redis.py.
-  "scikit-learn>=0.24.2",
-  # optuna/visualization/param_importances.py.
-  "scipy",  # optuna/samplers/_gp
-  "torch",  # optuna/samplers/_gp
-]
+#optional = [
+#  "boto3",  # optuna/artifacts/_boto3.py.
+#  "cmaes>=0.10.0",  # optuna/samplers/_cmaes.py.
+#  "google-cloud-storage",  # optuna/artifacts/_gcs.py.
+#  "matplotlib!=3.6.0",  # optuna/visualization/matplotlib.
+#  "pandas",  # optuna/study.py.
+#  "plotly>=4.9.0",  # optuna/visualization.
+#  "redis",  # optuna/storages/redis.py.
+#  "scikit-learn>=0.24.2",
+#  # optuna/visualization/param_importances.py.
+#  "scipy",  # optuna/samplers/_gp
+#  "torch",  # optuna/samplers/_gp
+#]
 #test = [
 #  "coverage",
 #  "fakeredis[lua]",
