@@ -7,6 +7,7 @@ from finol.utils import ROOT_PATH, load_config
 
 plt.style.use("seaborn-v0_8-paper")
 plt.rcParams["font.family"] = "Microsoft YaHei"
+warnings.filterwarnings("ignore")
 warnings.simplefilter(action="ignore", category=FutureWarning)
 
 
