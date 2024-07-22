@@ -17,12 +17,15 @@ from finol.utils import *
 
 
 class FinOLApp:
-    def __init__(self, root):
-        self.root = root
+    def __init__(self):
+        self.root = tk.Tk()
         self.root.title("FinOL: Towards Open Benchmarking for Data-Driven Online Portfolio Selection")
         self.create_widgets()
 
         self.experiment_details = {}
+
+    def run(self):
+        self.root.mainloop()
 
     def create_widgets(self):
         ###############################
@@ -478,6 +481,5 @@ class FinOLApp:
 
 
 if __name__ == "__main__":
-    root = tk.Tk()
-    app = FinOLApp(root)
-    root.mainloop()
+    app = FinOLApp()
+    app.run()
