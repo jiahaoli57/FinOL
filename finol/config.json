@@ -4,7 +4,7 @@
     "DEVICE": "cuda",
     "MANUAL_SEED": 0,
     "_note2": "-------------------------------------- Data Layer Configuration --------------------------------------",
-    "LOAD_LOCAL_DATALOADER": false,
+    "LOAD_LOCAL_DATALOADER": true,
     "DATASET_NAME": "DJIA",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {

@@ -17,6 +17,9 @@ from finol import __version__
 ROOT_PATH = os.path.dirname(os.path.realpath(__file__))
 PARENT_PATH = os.path.dirname(ROOT_PATH)
 
+print("ROOT_PATH", ROOT_PATH)
+print("PARENT_PATH", PARENT_PATH)
+print()
 
 def check_update():
     config = load_config()
@@ -35,10 +38,11 @@ def check_update():
 
 
 def make_logdir():
-    logdir = PARENT_PATH + "/logdir/" + str(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()))
+    # logdir = PARENT_PATH + "/logdir/" + str(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()))
+    logdir_path = os.path.join(ROOT_PATH, "logdir/")
+    logdir = logdir_path + str(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()))
     os.makedirs(logdir)
     copy2(ROOT_PATH + "/config.json", logdir)
-
     return logdir
 
 
@@ -57,6 +61,7 @@ def download_data():
     github_url = "https://github.com/ai4finol/finol_data.git"
     # local_path = ROOT_PATH + r"\data"  # useless in Colab, so we use the following command
     local_path = os.path.join(ROOT_PATH, "data")
+    print("download", local_path)
     subprocess.run(["git", "clone", github_url, local_path])
 
 
