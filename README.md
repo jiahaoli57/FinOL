@@ -1,7 +1,7 @@
 # FinOL: Towards Open Benchmarking for Data-Driven Online Portfolio Selection
 
 <div align="center">
-<img align="center" src=figure/finol_logo.png width="80%"/> 
+<img align="center" src=figure/finol_logo.png width="70%"/> 
 
 <div>&nbsp;</div>
 
