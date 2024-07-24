@@ -1,5 +1,6 @@
 import torch
 import optuna
+import optuna.visualization.matplotlib as mpl
 import matplotlib.pyplot as plt
 
 from tqdm import tqdm
@@ -106,8 +107,23 @@ class OptunaOptimizer:
         # To further visualize the results, you can upload the generated {MODEL_NAME}.db file to the Optuna Dashboard:
         # https://optuna.github.io/optuna-dashboard/
         # optuna.visualization.plot_optimization_history(self.study).show()
-        optuna.visualization.matplotlib.plot_intermediate_values(self.study)
-        optuna.visualization.matplotlib.plot_optimization_history(self.study)
+        plots = [
+            mpl.plot_contour,
+            mpl.plot_edf,
+            # mpl.plot_hypervolume_history,
+            mpl.plot_intermediate_values,
+            mpl.plot_optimization_history,
+            mpl.plot_parallel_coordinate,
+            mpl.plot_param_importances,
+            # mpl.plot_pareto_front,
+            mpl.plot_rank,
+            mpl.plot_slice,
+            mpl.plot_terminator_improvement,
+            mpl.plot_timeline,
+        ]
+        for plot_func in plots:
+            plot_func(self.study)
+            # plt.tight_layout()
 
         # Showing optimization results
         print("Number of finished trials:", len(self.study.trials))
