@@ -6,7 +6,7 @@ we recommend to install ``FinOL`` via pip:
 
 .. code-block:: bash
 
-   $ pip install finol
+   $ pip install --upgrade finol
 
 You can also install the development version of ``FinOL``
 from master branch of Git repository:

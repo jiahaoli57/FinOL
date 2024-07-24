@@ -158,17 +158,6 @@ Why should I use FinOL?
    OLPS research, providing a comprehensive toolkit for academics to
    develop, test, and validate new OLPS methods.
 
-Installation
-------------
-
-
-``FinOL`` is available on `PyPI <https://pypi.org/project/finol>`__,
-we recommend to install ``FinOL`` via pip:
-
-.. code:: bash
-
-   > pip install finol
-
 
 Examples and Tutorials
 ----------------------
