@@ -97,5 +97,5 @@ practitioners who are new to the field of financial modeling.
 
 
 .. |Open in Colab| image:: https://colab.research.google.com/assets/colab-badge.svg
-  :target: https://colab.research.google.com/github/jiahaoli57/FinOL/blob/main/finol/tutorials/tutorial_main.ipynb
+  :target: https://colab.research.google.com/github/jiahaoli57/FinOL/blob/main/finol/tutorials/tutorial_quickstart.ipynb
 
