@@ -7,12 +7,14 @@ from tqdm import tqdm
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
 from finol.data_layer.ScalerSelector import ScalerSelector
-from finol.utils import ROOT_PATH, load_config, update_config, make_logdir, download_data
+from finol.utils import ROOT_PATH, load_config, update_config, make_logdir, check_update, download_data
 
 
 class DatasetLoader:
     def __init__(self):
         self.config = load_config()
+        check_update()
+        download_data()
 
     def data_accessing(self, folder_path):
         raw_files = []

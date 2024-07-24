@@ -1,5 +1,5 @@
 #[build-system]
-requires = ["setuptools >= 61.1.0", "wheel"]
+#requires = ["setuptools >= 61.1.0", "wheel"]
 #build-backend = "setuptools.build_meta"
 
 [project]
@@ -50,7 +50,7 @@ dynamic = ["version"]
 [tool.poetry.dependencies]
 ##python = "^3.7"
 #torch = { version = "^1.9.0", extras = ["cuda"] }
-ta-lib = { version = "*", source = "conda-forge" }
+#ta-lib = { version = "*", source = "conda-forge" }
 
 [project.optional-dependencies]
 #cuda = [
