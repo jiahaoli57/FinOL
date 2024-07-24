@@ -131,14 +131,14 @@ richer representation.
 To lower the barriers for the research community, ``FinOL`` provides a complete data-training-testing suite with just 
 three lines of command.
 ```python3
-from finol.data_layer.data_loader import *
-from finol.optimization_layer.model_trainer import *
-from finol.evaluation_layer.model_evaluator import *
+from finol.data_layer.DatasetLoader import DatasetLoader
+from finol.optimization_layer.ModelTrainer import ModelTrainer
+from finol.evaluation_layer.ModelEvaluator import ModelEvaluator
 
 
-load_dataset_output = load_dataset()
-train_model_output = train_model(load_dataset_output)
-evaluate_model_output = evaluate_model(load_dataset_output, train_model_output)
+load_dataset_output = DatasetLoader().load_dataset()
+train_model_output = ModelTrainer(load_dataset_output).train_model()
+evaluate_model_output = ModelEvaluator(load_dataset_output, train_model_output).evaluate_model()
 ```
 
 ## Supported Datasets
