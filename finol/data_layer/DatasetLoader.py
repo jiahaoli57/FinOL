@@ -7,7 +7,7 @@ from tqdm import tqdm
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
 from finol.data_layer.ScalerSelector import ScalerSelector
-from finol.utils import ROOT_PATH, load_config, make_logdir, download_data
+from finol.utils import ROOT_PATH, load_config, update_config, make_logdir, download_data
 
 
 class DatasetLoader:
@@ -326,10 +326,16 @@ class DatasetLoader:
                 load_dataset_output["logdir"] = logdir
                 print("Local dataloader loaded successfully!")
             except Exception:
-                raise ValueError(
-                    f"Local dataloader does not exist, please modify LOAD_LOCAL_DATALOADER as `False`"
-                )
-        else:
+                self.config["LOAD_LOCAL_DATALOADER"] = False
+                update_config(self.config)
+                print("Local dataloader does not exist, the config['LOAD_LOCAL_DATALOADER'] is modified as `False` "
+                      "automatically")
+
+        # Ensure that the config is updated in all cases
+        update_config(self.config)
+
+        # Clear data structures if LOAD_LOCAL_DATALOADER is False
+        if not self.config["LOAD_LOCAL_DATALOADER"]:
             ds_train = []
             ds_val = []
             ds_test = []
