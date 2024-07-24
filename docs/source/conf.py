@@ -19,8 +19,8 @@ release = 'MIT'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    "recommonmark",
-    "sphinx_markdown_tables",
+    # "recommonmark",
+    # "sphinx_markdown_tables",
     "sphinx_rtd_theme",
     "sphinx_copybutton"
 ]
