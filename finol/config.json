@@ -137,9 +137,9 @@
             "DROPOUT": 0.1
         },
         "DNN": {
-            "NUM_LAYERS": 3,
-            "HIDDEN_SIZE": 128,
-            "DROPOUT": 0.35
+            "NUM_LAYERS": 2,
+            "HIDDEN_SIZE": 224,
+            "DROPOUT": 0.25
         },
         "LSRE-CAAN": {
             "NUM_LAYERS": 3,
@@ -551,10 +551,10 @@
             }
         }
     },
-    "TUNE_PARAMETERS": false,
+    "TUNE_PARAMETERS": true,
     "NUM_TRIALS": 20,
     "_note4": "-------------------------------------- Optimization Layer Configuration --------------------------------------",
-    "NUM_EPOCHES": 200,
+    "NUM_EPOCHES": 20,
     "SAVE_EVERY": 1,
     "OPTIMIZER_NAME": "Adam",
     "LEARNING_RATE": 0.001,
