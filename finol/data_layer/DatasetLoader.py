@@ -318,7 +318,6 @@ class DatasetLoader:
         """
         # print(self.config["MANUAL_SEED"])
         logdir = make_logdir()
-        download_data()
 
         if self.config["LOAD_LOCAL_DATALOADER"]:
             try:

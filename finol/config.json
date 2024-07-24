@@ -1,6 +1,5 @@
 {
     "_note1": "-------------------------------------- General Configuration --------------------------------------",
-    "GET_LATEST_FINOL": false,
     "DEVICE": "cuda",
     "MANUAL_SEED": 0,
     "_note2": "-------------------------------------- Data Layer Configuration --------------------------------------",

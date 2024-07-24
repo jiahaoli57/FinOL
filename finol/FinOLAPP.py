@@ -34,26 +34,20 @@ class FinOLApp:
         self.general_config_frame = tk.LabelFrame(self.root, text="General Configuration", font=("Helvetica", 10, "bold"))
         self.general_config_frame.pack(padx=10, pady=1, fill="none")
 
-        # GET_LATEST_FINOL
-        self.GET_LATEST_FINOL_var = tk.BooleanVar(value=False)
-        GET_LATEST_FINOL_chk = tk.Checkbutton(self.general_config_frame, text="Get Latest FinOL", variable=self.GET_LATEST_FINOL_var)
-        GET_LATEST_FINOL_chk.grid(row=0, column=0, padx=10, pady=1)
-
         # DEVICE
         self.DEVICE_options = ["cpu", "cuda"]
-        tk.Label(self.general_config_frame, text="Select Device:").grid(row=0, column=1, padx=10, pady=1)
+        tk.Label(self.general_config_frame, text="Select Device:").grid(row=0, column=0, padx=10, pady=1)
         self.DEVICE_var = tk.StringVar()
         self.DEVICE_dropdown = ttk.Combobox(self.general_config_frame, textvariable=self.DEVICE_var, values=self.DEVICE_options)
-        self.DEVICE_dropdown.grid(row=0, column=2, padx=10, pady=1)
+        self.DEVICE_dropdown.grid(row=0, column=1, padx=10, pady=1)
         self.DEVICE_dropdown.current(0)
 
         # MANUAL_SEED
-        tk.Label(self.general_config_frame, text="Set Seed:").grid(row=0, column=3, padx=10, pady=1)
+        tk.Label(self.general_config_frame, text="Set Seed:").grid(row=0, column=2, padx=10, pady=1)
         self.MANUAL_SEED_var = tk.IntVar()
         self.MANUAL_SEED_entry = tk.Entry(self.general_config_frame, textvariable=self.MANUAL_SEED_var)
-        self.MANUAL_SEED_entry.grid(row=0, column=4, padx=10, pady=1)
+        self.MANUAL_SEED_entry.grid(row=0, column=3, padx=10, pady=1)
         self.MANUAL_SEED_var.set(0)
-
 
         ############################
         # Data Layer Configuration #
@@ -403,7 +397,6 @@ class FinOLApp:
     def load_dataset(self):
         config = load_config()
 
-        config["GET_LATEST_FINOL"] = self.GET_LATEST_FINOL_var.get()
         config["DEVICE"] = self.DEVICE_var.get()
         config["MANUAL_SEED"] = self.MANUAL_SEED_var.get()
 

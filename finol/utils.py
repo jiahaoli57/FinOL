@@ -21,20 +21,16 @@ print("ROOT_PATH", ROOT_PATH)
 print("PARENT_PATH", PARENT_PATH)
 print()
 
-def check_update():
-    config = load_config()
-    GET_LATEST_FINOL = config["GET_LATEST_FINOL"]
 
+def check_update():
     latest = get_latest_version()
     if __version__ == latest:
         print("The current FinOL is latest")
     else:
-        print("The current FinOL is not latest, please update by `pip install --upgrade finol`")
-        print("Before updating, remember to back up any modifications you made to the FinOL project, such as added model code.")
-        print("Note that `pip install --upgrade finol` will overwrite all files except the `logdir` folder, so you don't need to back up the `logdir`.")
-
-        if GET_LATEST_FINOL:
-            sys.exit()
+        print("The current FinOL is not latest, please consider updating by `pip install --upgrade finol`")
+        # print("Before updating, remember to back up any modifications you made to the FinOL project, such as added model code.")
+        # print("Note that `pip install --upgrade finol` will overwrite all files except the `logdir` folder, so you don't need to back up the `logdir`.")
+        # sys.exit()
 
 
 def make_logdir():

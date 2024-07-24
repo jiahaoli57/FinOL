@@ -122,7 +122,8 @@ class OptunaOptimizer:
             mpl.plot_timeline,
         ]
         for plot_func in plots:
-            plot_func(self.study)
+            fig = plot_func(self.study)
+            plt.show()
             # plt.tight_layout()
 
         # Showing optimization results
