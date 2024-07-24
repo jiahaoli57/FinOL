@@ -554,7 +554,7 @@
     "TUNE_PARAMETERS": false,
     "NUM_TRIALS": 20,
     "_note4": "-------------------------------------- Optimization Layer Configuration --------------------------------------",
-    "NUM_EPOCHES": 20,
+    "NUM_EPOCHES": 200,
     "SAVE_EVERY": 1,
     "OPTIMIZER_NAME": "Adam",
     "LEARNING_RATE": 0.001,
