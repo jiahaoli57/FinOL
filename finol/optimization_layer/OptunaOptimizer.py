@@ -105,8 +105,8 @@ class OptunaOptimizer:
 
         # To further visualize the results, you can upload the generated {MODEL_NAME}.db file to the Optuna Dashboard:
         # https://optuna.github.io/optuna-dashboard/
-        optuna.visualization.plot_intermediate_values(self.study).show()
-        optuna.visualization.plot_optimization_history(self.study).show()
+        optuna.visualization.matplotlib.plot_intermediate_values(self.study).show()
+        optuna.visualization.matplotlib.plot_optimization_history(self.study).show()
 
         # Showing optimization results
         print("Number of finished trials:", len(self.study.trials))
