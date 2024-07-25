@@ -727,5 +727,5 @@ Indices and tables
 .. https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/KDDI_logos.svg/2560px-KDDI_logos.svg.png
 .. https://www.foresightacademy.com/ForesightInclude/img/logo.png
 .. |finol_logo| image:: ../images/finol_logo.png
-  :width: 700
+  :width: 650
   :alt: finol_logo
