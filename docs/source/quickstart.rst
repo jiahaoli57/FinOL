@@ -32,16 +32,17 @@ The specific configuration method is as follows:
 
 .. code:: python3
 
-   from finol.utils import load_config, update_config
+    from finol.utils import load_config, update_config
 
-   config = load_config()
-   config["DEVICE"] = "cpu"
-   config["DATASET_NAME"] = "DJIA"
-   config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"] = 15
-   config["SCALER"] = "WindowMinMaxScaler"
-   config["MODEL_NAME"] = "DNN"
-   config["TUNE_PARAMETERS"] = True
-   update_config(config)
+    config = load_config()
+    config["DEVICE"] = "cuda" if torch.cuda.is_available() else "cpu"  # "cpu"
+    config["LOAD_LOCAL_DATALOADER"] = True
+    config["DATASET_NAME"] = "DJIA"
+    config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"] = 15
+    config["SCALER"] = "WindowMinMaxScaler"
+    config["MODEL_NAME"] = "DNN"
+    config["TUNE_PARAMETERS"] = True  # False
+    update_config(config)
 
 |Open in Colab|
 
