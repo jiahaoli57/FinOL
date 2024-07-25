@@ -1,7 +1,6 @@
 Quickstart
 ==========
 
-
 This guide will help you get started with ``FinOL``.
 To lower the barriers for the research community,
 ``FinOL`` provides a complete data-training-testing suite

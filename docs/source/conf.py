@@ -61,7 +61,7 @@ html_theme = "sphinx_rtd_theme"  # 'alabaster'
 #
 html_theme_options = {"logo_only": True, "navigation_with_keys": True}
 # html_favicon = "../image/favicon.ico"
-html_logo = "../images/finol_logo.png"
+html_logo = "../images/finol_logo_pure.png"
 
 
 

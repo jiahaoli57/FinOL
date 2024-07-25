@@ -1,7 +1,6 @@
 File Structure
 ==============
 
-
 ::
 
    FinOL

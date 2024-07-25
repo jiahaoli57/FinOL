@@ -1,8 +1,6 @@
 Installation
 ============
 
-
-
 ``FinOL`` is available on `PyPI <https://pypi.org/project/finol>`__,
 we recommend to install ``FinOL`` via pip:
 
