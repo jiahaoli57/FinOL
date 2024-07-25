@@ -36,7 +36,7 @@ The specific configuration method is as follows:
 
     config = load_config()
     config["DEVICE"] = "cuda" if torch.cuda.is_available() else "cpu"  # "cpu"
-    config["LOAD_LOCAL_DATALOADER"] = True
+    config["LOAD_LOCAL_DATALOADER"] = True  # False
     config["DATASET_NAME"] = "DJIA"
     config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"] = 15
     config["SCALER"] = "WindowMinMaxScaler"
