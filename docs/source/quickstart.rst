@@ -1,8 +1,6 @@
 Quickstart
 ==========
 
-.. toctree::
-   :maxdepth: 1
 
 This guide will help you get started with ``FinOL``.
 To lower the barriers for the research community,
@@ -61,7 +59,7 @@ exeriments without the need to write any code.
     :align: center
 .. centered:: *Overall Framework of FinOL GUI*
 
-Data Layer panel
+Data Layer Panel
 ~~~~~~~~~~~~~~~~
 
 In the data layer panel, users can choose from a variety of available datasets,
@@ -69,7 +67,7 @@ such as DJIA, S&P500, and Nasdaq Composite.
 .. The GUI also displays information about each dataset,
 such as the number of samples and features, to help users make an informed decision.
 
-Model Layer panel
+Model Layer Panel
 ~~~~~~~~~~~~~~~~~
 
 The model layer panel allows users to select the model architecture and other settings.
@@ -77,14 +75,14 @@ Users can choose from a range of pre-defined models or create their own custom m
 .. The xx provides detailed information about each model and its parameters,
 making it easier for users to understand and customize the model.
 
-Optimization Layer panel
+Optimization Layer Panel
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 The optimization layer panel enables users to monitor the training process.
 Users can view real-time metrics, such as loss,
 and adjust the training parameters as needed.
 
-Evaluation Layer panel
+Evaluation Layer Panel
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The evaluation layer panel enables users to evaluate the trained model's performance.
@@ -99,4 +97,3 @@ practitioners who are new to the field of financial modeling.
 
 .. |Open in Colab| image:: https://colab.research.google.com/assets/colab-badge.svg
   :target: https://colab.research.google.com/github/jiahaoli57/FinOL/blob/main/finol/tutorials/tutorial_quickstart.ipynb
-

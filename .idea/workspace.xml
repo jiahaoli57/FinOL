@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs; optimize code" />
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs; optimize code">
+      <change afterPath="$PROJECT_DIR$/docs/source/contact_us.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/file_structure.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/license.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/supported_baselines.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/supported_datasets.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/supported_metrics.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/supported_visualization.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/installation.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/installation.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/quickstart.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/quickstart.rst" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,17 +86,17 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/figure" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/source" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\source" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\figure" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol\tutorials" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\images" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol\data\datasets" />
-      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\source\api" />
@@ -352,28 +364,7 @@
       <workItem from="1721058029352" duration="87508000" />
       <workItem from="1721387352676" duration="67813000" />
       <workItem from="1721578097822" duration="73547000" />
-      <workItem from="1721823180766" duration="11239000" />
-    </task>
-    <task id="LOCAL-00085" summary="build docs">
-      <created>1721626591654</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1721626591654</updated>
-    </task>
-    <task id="LOCAL-00086" summary="build docs">
-      <created>1721626793043</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1721626793044</updated>
-    </task>
-    <task id="LOCAL-00087" summary="build docs">
-      <created>1721626808109</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1721626808109</updated>
+      <workItem from="1721823180766" duration="12610000" />
     </task>
     <task id="LOCAL-00088" summary="build docs">
       <created>1721627102653</created>
@@ -697,7 +688,28 @@
       <option name="project" value="LOCAL" />
       <updated>1721847705852</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="build docs; optimize code">
+      <created>1721888190510</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1721888190510</updated>
+    </task>
+    <task id="LOCAL-00135" summary="build docs; optimize code">
+      <created>1721888499853</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1721888499853</updated>
+    </task>
+    <task id="LOCAL-00136" summary="build docs; optimize code">
+      <created>1721888512048</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1721888512048</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
