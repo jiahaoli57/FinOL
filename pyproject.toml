@@ -32,18 +32,18 @@ classifiers = [
 ]
 requires-python = ">=3.7"
 dependencies = [
-  "captum",
-  "IPython",
-  "matplotlib==3.5.0",
-  "numpy",
-  "openpyxl",
-  "optuna",
-  "pandas",
-  "requests",
-  "scikit-learn",
-  "torch",
-  "torch_optimizer",
-  "tqdm",
+#  "captum",
+#  "IPython",
+#  "matplotlib==3.5.0",
+#  "numpy",
+#  "openpyxl",
+#  "optuna",
+#  "pandas",
+#  "requests",
+#  "scikit-learn",
+#  "torch",
+#  "torch_optimizer",
+#  "tqdm",
 ]
 dynamic = ["version"]
 
@@ -162,7 +162,7 @@ bugtracker = "https://github.com/finol/finol/issues"
 #
 #[tool.isort]
 profile = 'black'
-src_paths = ['finol']
+#src_paths = ['finol']
 #skip_glob = ['docs/source/conf.py', '**/alembic/versions/*.py', 'tutorial/**/*.py']
 #line_length = 99
 #lines_after_imports = 2
