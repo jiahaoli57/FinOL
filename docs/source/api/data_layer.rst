@@ -9,5 +9,5 @@ The :mod:`~finol.data_layer` module contains data layer related classes and func
    :toctree: generated/
    :nosignatures:
 
-   finol.data_layer.DatasetLoader
-   finol.data_layer.ScalerSelector
+   dataset_loader.DatasetLoader
+   scaler_selector.ScalerSelector
