@@ -6,7 +6,6 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('../..'))
-
 import finol
 # import warnings
 # import plotly.io as pio
