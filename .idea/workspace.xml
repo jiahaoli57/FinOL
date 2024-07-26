@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs; optimize code">
-      <change afterPath="$PROJECT_DIR$/docs/source/_templates/autosummary/class.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/data_layer.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/api/data_layer.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finol/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finol/data_layer/DatasetLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/DatasetLoader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/data_layer/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/ModelEvaluator.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/ModelEvaluator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +98,29 @@
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ModelEvaluator">
+  <component name="RunManager" selected="Python.DatasetLoader">
+    <configuration name="DatasetLoader" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FinOL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/data_layer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/data_layer/DatasetLoader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="FinOLAPP" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FinOL" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -217,42 +231,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FinOL" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/main" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/main/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.ModelTrainer" />
-      <item itemvalue="Python.main" />
       <item itemvalue="Python.FinOLAPP" />
       <item itemvalue="Python.install_ta_lib" />
       <item itemvalue="Python.ModelEvaluator" />
+      <item itemvalue="Python.DatasetLoader" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.DatasetLoader" />
         <item itemvalue="Python.ModelEvaluator" />
         <item itemvalue="Python.ModelTrainer" />
         <item itemvalue="Python.FinOLAPP" />
         <item itemvalue="Python.install_ta_lib" />
-        <item itemvalue="Python.FinOLAPP" />
       </list>
     </recent_temporary>
   </component>
@@ -364,21 +356,7 @@
       <workItem from="1721058029352" duration="87508000" />
       <workItem from="1721387352676" duration="67813000" />
       <workItem from="1721578097822" duration="73547000" />
-      <workItem from="1721823180766" duration="31549000" />
-    </task>
-    <task id="LOCAL-00091" summary="build docs">
-      <created>1721628502322</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1721628502322</updated>
-    </task>
-    <task id="LOCAL-00092" summary="build docs">
-      <created>1721628520758</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1721628520758</updated>
+      <workItem from="1721823180766" duration="32234000" />
     </task>
     <task id="LOCAL-00093" summary="build docs">
       <created>1721628550767</created>
@@ -709,7 +687,21 @@
       <option name="project" value="LOCAL" />
       <updated>1721974439297</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="build docs; optimize code">
+      <created>1721974468376</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1721974468376</updated>
+    </task>
+    <task id="LOCAL-00141" summary="build docs; optimize code">
+      <created>1721974493113</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1721974493113</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -774,6 +766,7 @@
     <SUITE FILE_PATH="coverage/FinOL$LSRE_CAAN.coverage" NAME="LSRE_CAAN 覆盖结果" MODIFIED="1719831017932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/model_layer" />
     <SUITE FILE_PATH="coverage/FinOL$model_auto_tuning.coverage" NAME="model_auto_tuning 覆盖结果" MODIFIED="1720341071413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/model_layer" />
     <SUITE FILE_PATH="coverage/FinOL$install_ta_lib.coverage" NAME="install_ta_lib 覆盖结果" MODIFIED="1721652534256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol" />
+    <SUITE FILE_PATH="coverage/FinOL$DatasetLoader.coverage" NAME="DatasetLoader 覆盖结果" MODIFIED="1721975073468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/data_layer" />
     <SUITE FILE_PATH="coverage/FinOL$ModelTrainer.coverage" NAME="ModelTrainer 覆盖结果" MODIFIED="1721825649080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/optimization_layer" />
     <SUITE FILE_PATH="coverage/FinOL$model_trainer.coverage" NAME="ModelTrainer 覆盖结果" MODIFIED="1720347530384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/optimization_layer" />
     <SUITE FILE_PATH="coverage/FinOL$__init__.coverage" NAME="__init__ 覆盖结果" MODIFIED="1713451765838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol" />

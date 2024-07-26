@@ -11,12 +11,15 @@ from finol.utils import ROOT_PATH, load_config, update_config, make_logdir, chec
 
 
 class DatasetLoader:
+    """
+    DatasetLoader is a class that provides methods to load various datasets.
+    """
     def __init__(self):
         self.config = load_config()
         check_update()
         download_data()
 
-    def data_accessing(self, folder_path):
+    def data_accessing(self, folder_path: str) -> list[pd.DataFrame]:
         raw_files = []
         for file_name in tqdm(os.listdir(folder_path), desc="Data Loading"):
             if file_name.endswith(".xlsx") or file_name.endswith(".xls"):
@@ -28,7 +31,7 @@ class DatasetLoader:
                     print(f"An error occurred while loading file {file_path}: {str(e)}")
         return raw_files
 
-    def feature_engineering(self, df):
+    def feature_engineering(self, df) -> pd.DataFrame:
         ohlcv_features_df = pd.DataFrame()
         overlap_features_df = pd.DataFrame()
         momentum_features_df = pd.DataFrame()
