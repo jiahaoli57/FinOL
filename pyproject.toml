@@ -128,7 +128,7 @@ bugtracker = "https://github.com/finol/finol/issues"
 #optuna = "optuna.cli:main"
 #
 #[tool.setuptools.packages.find]
-include = ["finol*"]
+include = ["finol"]
 #
 #[tool.setuptools.dynamic]
 #version = {attr = "optuna.version.__version__"}
