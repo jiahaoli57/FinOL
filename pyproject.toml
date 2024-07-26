@@ -86,6 +86,7 @@ document = [
 #  "pillow",
 #  "plotly>=4.9.0",  # optuna/visualization.
 #  "scikit-learn",
+  "typed-ast",
   "sphinx",
   "sphinx-gallery",
 #  "sphinx-plotly-directive",
