@@ -1,7 +1,7 @@
 from finol.evaluation_layer.EconomicDistiller import EconomicDistiller
 from finol.evaluation_layer.MetricCaculator import MetricCaculator
 from finol.evaluation_layer.BenchmarkLoader import BenchmarkLoader
-from finol.utils import ROOT_PATH, load_config, send_message_dingding
+from finol.utils import load_config, send_message_dingding
 
 
 class ModelEvaluator:
@@ -23,9 +23,10 @@ class ModelEvaluator:
 
 if __name__ == "__main__":
     from finol.data_layer.DatasetLoader import DatasetLoader
+    from finol.utils import ROOT_PATH
     load_dataset_output = DatasetLoader().load_dataset()
     train_model_output = {
-        # "logdir": ROOT_PATH[:-5] + "/logdir/" + DATASET_NAME + "-" + MODEL_NAME
-        "logdir": ROOT_PATH[:-5] + "/logdir/2024-07-16_18-55-57"
+        # "logdir": ROOT_PATH + "/logdir/" + DATASET_NAME + "-" + MODEL_NAME
+        "logdir": ROOT_PATH + "/logdir/2024-07-23_15-13-24"
     }
     evaluate_model_output = ModelEvaluator(load_dataset_output, train_model_output).evaluate_model()

@@ -59,7 +59,6 @@ def download_data():
     github_url = "https://github.com/ai4finol/finol_data.git"
     # local_path = ROOT_PATH + r"\data"  # useless in Colab, so we use the following command
     local_path = os.path.join(ROOT_PATH, "data")
-    print("download", local_path)
     subprocess.run(["git", "clone", github_url, local_path])
 
 

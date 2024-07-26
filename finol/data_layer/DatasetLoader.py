@@ -11,6 +11,27 @@ from finol.utils import ROOT_PATH, load_config, update_config, make_logdir, chec
 
 
 class DatasetLoader:
+    """Mean Decrease Impurity (MDI) parameter importance evaluator.
+
+    This evaluator fits fits a random forest regression model that predicts the objective values
+    of :class:`~optuna.trial.TrialState.COMPLETE` trials given their parameter configurations.
+    Feature importances are then computed using MDI.
+
+    .. note::
+
+        This evaluator requires the `sklearn <https://scikit-learn.org/stable/>`__ Python package
+        and is based on `sklearn.ensemble.RandomForestClassifier.feature_importances_
+        <https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier.feature_importances_>`__.
+
+    Args:
+        n_trees:
+            Number of trees in the random forest.
+        max_depth:
+            The maximum depth of each tree in the random forest.
+        seed:
+            Seed for the random forest.
+    """
+
     def __init__(self):
         self.config = load_config()
         check_update()

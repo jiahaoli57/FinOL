@@ -20,7 +20,7 @@ DESCRIPTION = 'A plug-and-play Python library for data-driven OLPS research'
 URL = 'https://github.com/jiahaoli57/FinOL'
 EMAIL = 'finol.official@gmail.com'
 AUTHOR = __author__
-REQUIRES_PYTHON = '>=3.9.0'
+REQUIRES_PYTHON = '>=3.7.0'
 VERSION = __version__
 
 # What packages are required for this module to be executed?

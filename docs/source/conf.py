@@ -3,7 +3,11 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../..'))
 
+import finol
 from datetime import datetime
 
 # -- Project information -----------------------------------------------------
@@ -19,6 +23,15 @@ release = 'MIT'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.doctest",
+    "sphinx.ext.imgconverter",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.viewcode",
+    "sphinx.ext.githubpages",
     # "recommonmark",
     # "sphinx_markdown_tables",
     "sphinx_rtd_theme",
@@ -74,6 +87,13 @@ html_css_files = ["css/custom.css"]
 
 
 # -- Extension configuration -------------------------------------------------
+autosummary_generate = True
+autodoc_typehints = "description"
+autodoc_default_options = {
+    "members": True,
+    "inherited-members": True,
+    "exclude-members": "with_traceback",
+}
 
 # sphinx_copybutton option to not copy prompt.
 copybutton_prompt_text = "$ "
