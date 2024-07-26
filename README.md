@@ -150,6 +150,7 @@ richer representation.
 ## Using FinOL
 To lower the barriers for the research community, ``FinOL`` provides a complete data-training-testing suite with just 
 three lines of command.
+
 ```python3
 from finol.data_layer.dataset_loader import DatasetLoader
 from finol.optimization_layer.model_trainer import ModelTrainer
