@@ -1,6 +1,6 @@
-from finol.data_layer.DatasetLoader import DatasetLoader
-from finol.optimization_layer.ModelTrainer import ModelTrainer
-from finol.evaluation_layer.ModelEvaluator import ModelEvaluator
+from finol.data_layer.dataset_loader import DatasetLoader
+from finol.optimization_layer.model_trainer import ModelTrainer
+from finol.evaluation_layer.model_evaluator import ModelEvaluator
 
 
 load_dataset_output = DatasetLoader().load_dataset()
