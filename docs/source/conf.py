@@ -13,7 +13,8 @@ sys.path.insert(0, os.path.abspath('../..'))
 # sys.path.insert(0, os.path.abspath('../../finol/data_layer'))
 # sys.path.insert(0, os.path.abspath('../../finol/data_layer/'))
 import finol
-from finol.data_layer import dataset_loader
+from finol import data_layer
+# from finol.data_layer import dataset_loader
 # from finol.data_layer.dataset_loader import DatasetLoader
 
 # import warnings
