@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs" />
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -352,14 +354,7 @@
       <workItem from="1721058029352" duration="87508000" />
       <workItem from="1721387352676" duration="67813000" />
       <workItem from="1721578097822" duration="73547000" />
-      <workItem from="1721823180766" duration="54781000" />
-    </task>
-    <task id="LOCAL-00106" summary="build docs">
-      <created>1721648520117</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1721648520117</updated>
+      <workItem from="1721823180766" duration="55172000" />
     </task>
     <task id="LOCAL-00107" summary="build docs">
       <created>1721651793742</created>
@@ -697,7 +692,14 @@
       <option name="project" value="LOCAL" />
       <updated>1722005995108</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="build docs">
+      <created>1722007434730</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1722007434730</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
