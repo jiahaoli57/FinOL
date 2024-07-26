@@ -11,14 +11,14 @@ Command Line Usage
 
 .. code:: python3
 
-   from finol.data_layer.DatasetLoader import DatasetLoader
-   from finol.optimization_layer.ModelTrainer import ModelTrainer
-   from finol.evaluation_layer.ModelEvaluator import ModelEvaluator
+    from finol.data_layer.dataset_loader import DatasetLoader
+    from finol.optimization_layer.model_trainer import ModelTrainer
+    from finol.evaluation_layer.model_evaluator import ModelEvaluator
 
 
-   load_dataset_output = DatasetLoader().load_dataset()
-   train_model_output = ModelTrainer(load_dataset_output).train_model()
-   evaluate_model_output = ModelEvaluator(load_dataset_output, train_model_output).evaluate_model()
+    load_dataset_output = DatasetLoader().load_dataset()
+    train_model_output = ModelTrainer(load_dataset_output).train_model()
+    evaluate_model_output = ModelEvaluator(load_dataset_output, train_model_output).evaluate_model()
 
 Before running the above commands, users can first
 configure some parameters through the config file to customize
