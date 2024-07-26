@@ -10,6 +10,7 @@ sys.path.insert(0, os.path.abspath('..'))
 sys.path.insert(0, os.path.abspath('../..'))
 sys.path.insert(0, os.path.abspath('../../finol'))
 sys.path.insert(0, os.path.abspath('../../finol/data_layer'))
+sys.path.insert(0, os.path.abspath('../../finol/data_layer/'))
 import finol
 # import warnings
 # import plotly.io as pio
@@ -147,6 +148,7 @@ autodoc_default_options = {
     "inherited-members": True,
     "exclude-members": "with_traceback",
 }
+# autodoc_mock_imports = ["finol"]
 
 # sphinx_copybutton option to not copy prompt.
 copybutton_prompt_text = "$ "

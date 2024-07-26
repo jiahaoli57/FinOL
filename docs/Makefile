@@ -27,5 +27,6 @@ doctest:
 
 # Copy from https://sphinx-gallery.github.io/stable/advanced.html#cleaning-the-gallery-files
 clean:
-	rm -rf $(BUILDDIR)/*
-	rm -rf source/api/generated/
+ 	rm -rf $(BUILDDIR)/*
+	rm -rf source/api/generated/*
+	rm -rf build/*
