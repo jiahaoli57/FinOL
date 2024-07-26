@@ -32,18 +32,18 @@ classifiers = [
 ]
 requires-python = ">=3.7"
 dependencies = [
-#  "captum",
-#  "IPython",
-#  "matplotlib==3.5.0",
-#  "numpy",
-#  "openpyxl",
-#  "optuna",
-#  "pandas",
-#  "requests",
-#  "scikit-learn",
-#  "torch",
-#  "torch_optimizer",
-#  "tqdm",
+  "captum",
+  "IPython",
+  "matplotlib==3.5.0",
+  "numpy",
+  "openpyxl",
+  "optuna",
+  "pandas",
+  "requests",
+  "scikit-learn",
+  "torch",
+  "torch_optimizer",
+  "tqdm",
 ]
 dynamic = ["version"]
 
