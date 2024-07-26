@@ -13,6 +13,7 @@ from finol.utils import ROOT_PATH, load_config, update_config, make_logdir, chec
 class DatasetLoader:
     """
     DatasetLoader is a class that provides methods to load various datasets.
+
     """
     def __init__(self):
         self.config = load_config()
@@ -21,6 +22,7 @@ class DatasetLoader:
 
     def data_accessing(self, folder_path: str) -> list[pd.DataFrame]:
         """
+        Load raw data files from a specified folder path and return a list of DataFrames.
 
         :param folder_path:
         :return: raw_files
@@ -38,11 +40,11 @@ class DatasetLoader:
 
     def feature_engineering(self, df: pd.DataFrame) -> tuple[pd.DataFrame, list[str], dict[str, int]]:
         """
-        Performs feature engineering on the input DataFrame to generate various types of features.
+        Perform feature engineering on the input DataFrame to generate various types of features.
 
         :param df: The input DataFrame containing the raw data.
-        :return: A tuple containing the processed DataFrame, a list of the detailed feature names, and a dictionary
-        containing the number of features for each category.
+        :return: A tuple containing the processed DataFrame, a list of the detailed feature names, \
+        and a dictionary containing the number of features for each category.
         """
         ohlcv_features_df = pd.DataFrame()
         overlap_features_df = pd.DataFrame()
@@ -131,7 +133,7 @@ class DatasetLoader:
                 "STOCHRSI_D": ta.STOCHRSI(df.CLOSE)[1],  # Stochastic RSI %D
                 "TRIX": ta.TRIX(df.CLOSE),  # 1-day Rate-Of-Change (ROC) of a Triple Smooth EMA
                 "ULTOSC": ta.ULTOSC(df.HIGH, df.LOW, df.CLOSE),  # Ultimate Oscillator
-                "WILLR": ta.WILLR(df.HIGH, df.LOW, df.CLOSE)  # Williams" %R
+                "WILLR": ta.WILLR(df.HIGH, df.LOW, df.CLOSE)  # Williams' %R
             }
             momentum_features_df = pd.DataFrame(momentum_features)
 
@@ -257,8 +259,6 @@ class DatasetLoader:
             "VOLATILITY_FEATURES": volatility_features_df.shape[1],
             "PATTERN_FEATURES": pattern_features_df.shape[1],
         }
-        print(DETAILED_FEATURE_LIST)
-        print(DETAILED_NUM_FEATURES)
         return _, DETAILED_FEATURE_LIST, DETAILED_NUM_FEATURES
 
     def data_augmentation(self, df):

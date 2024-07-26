@@ -188,6 +188,7 @@ Visualization of Train Normalization Data for Asset “AA”
    quickstart
    api/index
    supported_datasets
+   supported_features
    supported_baselines
    supported_metrics
    supported_visualization

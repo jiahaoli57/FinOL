@@ -1,3 +1,5 @@
+.. _supported_baselines:
+
 Supported Baselines
 ===================
 
