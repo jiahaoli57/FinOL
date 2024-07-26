@@ -3,7 +3,7 @@
     "DEVICE": "cuda",
     "MANUAL_SEED": 0,
     "_note2": "-------------------------------------- Data Layer Configuration --------------------------------------",
-    "LOAD_LOCAL_DATALOADER": false,
+    "LOAD_LOCAL_DATALOADER": true,
     "DATASET_NAME": "DJIA",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
@@ -550,10 +550,10 @@
             }
         }
     },
-    "TUNE_PARAMETERS": true,
+    "TUNE_PARAMETERS": false,
     "NUM_TRIALS": 20,
     "_note4": "-------------------------------------- Optimization Layer Configuration --------------------------------------",
-    "NUM_EPOCHES": 20,
+    "NUM_EPOCHES": 100,
     "SAVE_EVERY": 1,
     "OPTIMIZER_NAME": "Adam",
     "LEARNING_RATE": 0.001,

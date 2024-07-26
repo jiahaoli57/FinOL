@@ -1,6 +1,6 @@
-from finol.evaluation_layer.EconomicDistiller import EconomicDistiller
-from finol.evaluation_layer.MetricCaculator import MetricCaculator
-from finol.evaluation_layer.BenchmarkLoader import BenchmarkLoader
+from finol.evaluation_layer.economic_distiller import EconomicDistiller
+from finol.evaluation_layer.metric_caculator import MetricCaculator
+from finol.evaluation_layer.benchmark_loader import BenchmarkLoader
 from finol.utils import load_config, send_message_dingding
 
 
@@ -22,7 +22,7 @@ class ModelEvaluator:
 
 
 if __name__ == "__main__":
-    from finol.data_layer.DatasetLoader import DatasetLoader
+    from finol.data_layer import DatasetLoader
     from finol.utils import ROOT_PATH
     load_dataset_output = DatasetLoader().load_dataset()
     train_model_output = {

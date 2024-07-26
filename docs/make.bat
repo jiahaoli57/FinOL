@@ -9,6 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=source
 set BUILDDIR=build
+set SPHINXPROJ=FinOL
 
 %SPHINXBUILD% >NUL 2>NUL
 if errorlevel 9009 (

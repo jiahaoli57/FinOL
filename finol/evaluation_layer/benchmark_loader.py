@@ -2,7 +2,7 @@ import warnings
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from finol.evaluation_layer.radar_chart import plot_radar_chart
+# from finol.evaluation_layer.radar_chart import plot_radar_chart
 from finol.utils import ROOT_PATH, load_config
 
 # plt.style.use("seaborn-paper")
@@ -232,7 +232,7 @@ class BenchmarkLoader:
         # plot_dataframe(transaction_costs_adjusted_cumulative_wealth, PLOT_ALL_4, "TCW", logdir)
         # plot_dataframe(transaction_costs_adjusted_cumulative_wealth, PLOT_ALL_5, "TCW", logdir)
 
-        plot_radar_chart(final_profit_result, final_risk_result, self.COMPARED_BASELINE, logdir)
+        # plot_radar_chart(final_profit_result, final_risk_result, self.COMPARED_BASELINE, logdir)
 
         load_benchmark_output = {}
         load_benchmark_output["logdir"] = self.caculate_metric_output["logdir"]

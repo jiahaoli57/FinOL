@@ -1,7 +1,7 @@
 import torch
 import torch_optimizer as optim
 
-from finol.utils import *
+from finol.utils import load_config
 
 optimizer_dict = {
     'Adadelta': torch.optim.Adadelta,

@@ -7,10 +7,10 @@ import numpy as np
 
 from IPython import display
 from tqdm import tqdm
-from finol.model_layer.ModelSelector import ModelSelector
-from finol.optimization_layer.CriterionSelector import CriterionSelector
-from finol.optimization_layer.OptimizerSelector import OptimizerSelector
-from finol.optimization_layer.OptunaOptimizer import OptunaOptimizer
+from finol.model_layer.model_selector import ModelSelector
+from finol.optimization_layer.criterion_selector import CriterionSelector
+from finol.optimization_layer.optimizer_selector import OptimizerSelector
+from finol.optimization_layer.optuna_optimizer import OptunaOptimizer
 from finol.utils import load_config, portfolio_selection, set_seed
 
 

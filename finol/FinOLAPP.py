@@ -2,10 +2,10 @@ import time
 import json
 import tkinter as tk
 from tkinter import messagebox, ttk
-from finol.data_layer.DatasetLoader import DatasetLoader
-from finol.optimization_layer.ModelTrainer import ModelTrainer
-from finol.evaluation_layer.ModelEvaluator import ModelEvaluator
-from finol.utils import *
+from finol.data_layer import DatasetLoader
+from finol.optimization_layer import ModelTrainer
+from finol.evaluation_layer import ModelEvaluator
+from finol.utils import load_config, update_config
 
 
 # def format_string(input_string):

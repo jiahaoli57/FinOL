@@ -4,7 +4,7 @@ import torch.nn.functional as F
 from functools import wraps
 from torch import nn, einsum
 from einops import rearrange, repeat
-from finol.data_layer.ScalerSelector import ScalerSelector
+from finol.data_layer.scaler_selector import ScalerSelector
 from finol.utils import load_config
 
 """

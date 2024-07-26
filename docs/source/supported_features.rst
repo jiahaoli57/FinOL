@@ -3,6 +3,13 @@
 Supported Features
 ==================
 
+This section provides detailed definitions for the key data features in ``FinOL``.
+These features can help describe and analyze financial time series from multiple perspectives.
+The following tables categorize these features into 8 main groups and list the name, function call and description
+for each feature. For the detailed computation process, please refer to
+:func:`~finol.data_layer.DatasetLoader.feature_engineering`.
+
+
 .. contents::
     :local:
 
@@ -336,3 +343,184 @@ Pattern Features
    * - CDL2CROWS
      - ``ta.CDL2CROWS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
      - Two Crows
+   * - CDL3BLACKCROWS
+     - ``ta.CDL3BLACKCROWS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Three Black Crows
+   * - CDL3INSIDE
+     - ``ta.CDL3INSIDE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Three Inside Up/Down
+   * - CDL3LINESTRIKE
+     - ``ta.CDL3LINESTRIKE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Three-Line Strike
+   * - CDL3OUTSIDE
+     - ``ta.CDL3OUTSIDE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Three Outside Up/Down
+   * - CDL3STARSINSOUTH
+     - ``ta.CDL3STARSINSOUTH(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Three Stars In The South
+   * - CDL3WHITESOLDIERS
+     - ``ta.CDL3WHITESOLDIERS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Three Advancing White Soldiers
+   * - CDLABANDONEDBABY
+     - ``ta.CDLABANDONEDBABY(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Abandoned Baby
+   * - CDLADVANCEBLOCK
+     - ``ta.CDLADVANCEBLOCK(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Advance Block
+   * - CDLBELTHOLD
+     - ``ta.CDLBELTHOLD(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Belt-Hold
+   * - CDLBREAKAWAY
+     - ``ta.CDLBREAKAWAY(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Breakaway
+   * - CDLCLOSINGMARUBOZU
+     - ``ta.CDLCLOSINGMARUBOZU(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Closing Marubozu
+   * - CDLCONCEALBABYSWALL
+     - ``ta.CDLCONCEALBABYSWALL(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Concealing Baby Swallow
+   * - CDLCOUNTERATTACK
+     - ``ta.CDLCOUNTERATTACK(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Counterattack
+   * - CDLDARKCLOUDCOVER
+     - ``ta.CDLDARKCLOUDCOVER(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Dark Cloud Cover
+   * - CDLDOJI
+     - ``ta.CDLDOJI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Doji
+   * - CDLDOJISTAR
+     - ``ta.CDLDOJISTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Doji Star
+   * - CDLDRAGONFLYDOJI
+     - ``ta.CDLDRAGONFLYDOJI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Dragonfly Doji
+   * - CDLENGULFING
+     - ``ta.CDLENGULFING(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Engulfing Pattern
+   * - CDLEVENINGDOJISTAR
+     - ``ta.CDLEVENINGDOJISTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Evening Doji Star
+   * - CDLEVENINGSTAR
+     - ``ta.CDLEVENINGSTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Evening Star
+   * - CDLGAPSIDESIDEWHITE
+     - ``ta.CDLGAPSIDESIDEWHITE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Up/Down-Gap Side-By-Side White Lines
+
+   * - CDLGRAVESTONEDOJI
+     - ``ta.CDLGRAVESTONEDOJI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Gravestone Doji
+   * - CDLHAMMER
+     - ``ta.CDLHAMMER(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Hammer
+   * - CDLHANGINGMAN
+     - ``ta.CDLHANGINGMAN(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Hanging Man
+   * - CDLHARAMI
+     - ``ta.CDLHARAMI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Harami Pattern
+   * - CDLHARAMICROSS
+     - ``ta.CDLHARAMICROSS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Harami Cross Pattern
+   * - CDLHIGHWAVE
+     - ``ta.CDLHIGHWAVE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - High-Wave Candle
+   * - CDLHIKKAKE
+     - ``ta.CDLHIKKAKE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Hikkake Pattern
+   * - CDLHIKKAKEMOD
+     - ``ta.CDLHIKKAKEMOD(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Modified Hikkake Pattern
+   * - CDLHOMINGPIGEON
+     - ``ta.CDLHOMINGPIGEON(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Homing Pigeon
+   * - CDLIDENTICAL3CROWS
+     - ``ta.CDLIDENTICAL3CROWS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Identical Three Crows
+   * - CDLINNECK
+     - ``ta.CDLINNECK(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - In-Neck Pattern
+   * - CDLINVERTEDHAMMER
+     - ``ta.CDLINVERTEDHAMMER(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Inverted Hammer
+   * - CDLKICKING
+     - ``ta.CDLKICKING(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Kicking
+   * - CDLKICKINGBYLENGTH
+     - ``ta.CDLKICKINGBYLENGTH(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Kicking - Bull/Bear Determined by the Longer Marubozu
+   * - CDLLADDERBOTTOM
+     - ``ta.CDLLADDERBOTTOM(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Ladder Bottom
+   * - CDLLONGLEGGEDDOJI
+     - ``ta.CDLLONGLEGGEDDOJI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Long Legged Doji
+   * - CDLLONGLINE
+     - ``ta.CDLLONGLINE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Long Line Candle
+   * - CDLMARUBOZU
+     - ``ta.CDLMARUBOZU(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Marubozu
+   * - CDLMATCHINGLOW
+     - ``ta.CDLMATCHINGLOW(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Matching Low
+   * - CDLMATHOLD
+     - ``ta.CDLMATHOLD(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Mat Hold
+   * - CDLMORNINGDOJISTAR
+     - ``ta.CDLMORNINGDOJISTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Morning Doji Star
+   * - CDLMORNINGSTAR
+     - ``ta.CDLMORNINGSTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Morning Star
+   * - CDLONNECK
+     - ``ta.CDLONNECK(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - On-Neck Pattern
+   * - CDLPIERCING
+     - ``ta.CDLPIERCING(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Piercing Pattern
+   * - CDLRICKSHAWMAN
+     - ``ta.CDLRICKSHAWMAN(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Rickshaw Man
+   * - CDLRISEFALL3METHODS
+     - ``ta.CDLRISEFALL3METHODS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Rising/Falling Three Methods
+   * - CDLSEPARATINGLINES
+     - ``ta.CDLSEPARATINGLINES(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Separating Lines
+   * - CDLSHOOTINGSTAR
+     - ``ta.CDLSHOOTINGSTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Shooting Star
+   * - CDLSHORTLINE
+     - ``ta.CDLSHORTLINE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Short Line Candle
+   * - CDLSPINNINGTOP
+     - ``ta.CDLSPINNINGTOP(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Spinning Top
+   * - CDLSTALLEDPATTERN
+     - ``ta.CDLSTALLEDPATTERN(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Stalled Pattern
+   * - CDLSTICKSANDWICH
+     - ``ta.CDLSTICKSANDWICH(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Stick Sandwich
+   * - CDLTAKURI
+     - ``ta.CDLTAKURI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Takuri (Dragonfly Doji with Very Long Lower Shadow)
+   * - CDLTASUKIGAP
+     - ``ta.CDLTASUKIGAP(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Tasuki Gap
+   * - CDLTHRUSTING
+     - ``ta.CDLTHRUSTING(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Thrusting Pattern
+   * - CDLTRISTAR
+     - ``ta.CDLTRISTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Tristar Pattern
+   * - CDLUNIQUE3RIVER
+     - ``ta.CDLUNIQUE3RIVER(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Unique 3 River
+   * - CDLUPSIDEGAP2CROWS
+     - ``ta.CDLUPSIDEGAP2CROWS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Upside Gap Two Crows
+   * - CDLXSIDEGAP3METHODS
+     - ``ta.CDLXSIDEGAP3METHODS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
+     - Upside/Downside Gap Three Methods

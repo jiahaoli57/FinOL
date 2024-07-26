@@ -1,3 +1,4 @@
+import time
 import torch
 import warnings
 import numpy as np
@@ -6,8 +7,8 @@ import torch.nn as nn
 import matplotlib.pyplot as plt
 
 from captum.attr import Saliency
-from finol.evaluation_layer.MetricCaculator import MetricCaculator
-from finol.evaluation_layer.DistillerSelector import DistillerSelector
+from finol.evaluation_layer.metric_caculator import MetricCaculator
+from finol.evaluation_layer.distiller_selector import DistillerSelector
 from finol.utils import load_config, portfolio_selection, actual_portfolio_selection
 
 # plt.style.use("seaborn-paper")

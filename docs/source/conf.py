@@ -8,16 +8,21 @@ import sys
 sys.path.insert(0, os.path.abspath('../..'))
 
 import finol
-from datetime import datetime
+# import warnings
+# import plotly.io as pio
+# from datetime import datetime
+# from sphinx_gallery.sorting import FileNameSortKey
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "FinOL"
-# copyright = f'2024–{datetime.now().year}, FinOL contributors'
-copyright = f"2024, FinOL contributors"
-author = "FinOL contributors"
+# copyright = f'2024–{datetime.now().year}, {finol.__author__}'
+copyright = f"2024, {finol.__author__}"
+author = f"{finol.__author__}"
 release = "MIT"
+# The short X.Y version
+version = finol.__version__
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -38,7 +43,7 @@ extensions = [
     "sphinx_copybutton"
 ]
 
-templates_path = ['_templates']
+templates_path = ["_templates"]
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -73,7 +78,7 @@ html_theme = "sphinx_rtd_theme"  # 'alabaster'
 # documentation.
 #
 html_theme_options = {"logo_only": True, "navigation_with_keys": True}
-# html_favicon = "../image/favicon.ico"
+html_favicon = "../images/finol_logo_icon.png"
 html_logo = "../images/finol_logo_pure.png"
 
 
@@ -83,6 +88,51 @@ html_logo = "../images/finol_logo_pure.png"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 html_css_files = ["css/custom.css"]
+
+
+
+# Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title,
+#  author, documentclass [howto, manual, or own class]).
+latex_documents = [
+    (master_doc, "FinOL.tex", "FinOL Documentation", f"{finol.__author__}", "manual"),
+]
+
+# -- Options for manual page output ------------------------------------------
+
+# One entry per manual page. List of tuples
+# (source start file, name, description, authors, manual section).
+man_pages = [(master_doc, "finol", "FinOL Documentation", [author], 1)]
+
+# -- Options for Texinfo output ----------------------------------------------
+
+# Grouping the document tree into Texinfo files. List of tuples
+# (source start file, target name, title, author,
+#  dir menu entry, description, category)
+texinfo_documents = [
+    (
+        master_doc,
+        "FinOL",
+        "FinOL Documentation",
+        author,
+        "FinOL",
+        "One line description of project.",
+        f"{finol.__author__}",
+    ),
+]
+
+intersphinx_mapping = {
+    "python": ("https://docs.python.org/3", None),
+    "distributed": ("https://distributed.dask.org/en/stable", None),
+    "lightgbm": ("https://lightgbm.readthedocs.io/en/stable", None),
+    "matplotlib": ("https://matplotlib.org/stable", None),
+    "numpy": ("https://numpy.org/doc/stable", None),
+    "scipy": ("https://docs.scipy.org/doc/scipy", None),
+    "sklearn": ("https://scikit-learn.org/stable", None),
+    "torch": ("https://pytorch.org/docs/stable", None),
+    "pandas": ("https://pandas.pydata.org/docs", None),
+    "plotly": ("https://plotly.com/python-api-reference", None),
+}
 
 
 
@@ -97,3 +147,4 @@ autodoc_default_options = {
 
 # sphinx_copybutton option to not copy prompt.
 copybutton_prompt_text = "$ "
+

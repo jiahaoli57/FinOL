@@ -6,7 +6,7 @@ import pandas as pd
 from tqdm import tqdm
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
-from finol.data_layer.ScalerSelector import ScalerSelector
+from finol.data_layer.scaler_selector import ScalerSelector
 from finol.utils import ROOT_PATH, load_config, update_config, make_logdir, check_update, download_data
 
 
@@ -15,12 +15,17 @@ class DatasetLoader:
     DatasetLoader is a class that provides methods to load various datasets.
 
     """
-    def __init__(self):
+    def __init__(
+            self
+    ):
         self.config = load_config()
         check_update()
         download_data()
 
-    def data_accessing(self, folder_path: str) -> list[pd.DataFrame]:
+    def data_accessing(
+            self,
+            folder_path: str
+    ) -> list[pd.DataFrame]:
         """
         Load raw data files from a specified folder path and return a list of DataFrames.
 
@@ -261,7 +266,12 @@ class DatasetLoader:
         }
         return _, DETAILED_FEATURE_LIST, DETAILED_NUM_FEATURES
 
-    def data_augmentation(self, df):
+    def data_augmentation(self, df: pd.DataFrame) -> tuple[pd.DataFrame, int]:
+        """
+
+        :param df:
+        :return:
+        """
         if self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["INCLUDE_WINDOW_DATA"]:
             WINDOW_SIZE = self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"]
             df = pd.concat([df] + [df.shift(i).add_prefix(f"prev_{i}_") for i in range(1, WINDOW_SIZE)], axis=1)

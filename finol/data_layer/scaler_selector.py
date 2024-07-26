@@ -86,11 +86,13 @@ scaler_dict = {
 }
 
 
-class ScalerSelector():
+class ScalerSelector:
     def __init__(self):
         self.config = load_config()
 
     def select_scaler(self):
+        """
+        """
         scaler_cls = scaler_dict.get(self.config["SCALER"], None)
         if scaler_cls is None:
             raise ValueError(f"Invalid scaler name: {self.config['SCALER']}. Supported scalers are: {scaler_dict.keys()}")

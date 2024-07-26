@@ -1,5 +1,5 @@
-from finol.data_layer.DatasetLoader import DatasetLoader
-from finol.data_layer.ScalerSelector import ScalerSelector
+from finol.data_layer.dataset_loader import DatasetLoader
+from finol.data_layer.scaler_selector import ScalerSelector
 
 
 __all__ = [

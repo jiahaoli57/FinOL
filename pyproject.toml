@@ -8,7 +8,7 @@ description = "An open financial platform for facilitating data-driven OLPS rese
 readme = "README.md"
 license = {file = "LICENSE"}
 authors = [
-  {name = "FinOL contributors"}
+  {name = "FinOL Contributors"}
 ]
 classifiers = [
   "Development Status :: 5 - Production/Stable",
@@ -86,9 +86,8 @@ document = [
 #  "pillow",
 #  "plotly>=4.9.0",  # optuna/visualization.
 #  "scikit-learn",
-#  "sphinx",
-#  "sphinx-copybutton",
-#  "sphinx-gallery",
+  "sphinx",
+  "sphinx-gallery",
 #  "sphinx-plotly-directive",
   "sphinx_rtd_theme",
   "sphinx_copybutton",
