@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.abspath('..'))
 sys.path.insert(0, os.path.abspath('../..'))
 sys.path.insert(0, os.path.abspath('../../finol'))
 sys.path.insert(0, os.path.abspath('../../finol/data_layer'))
-# import finol
+import finol
 # import warnings
 # import plotly.io as pio
 # from datetime import datetime
