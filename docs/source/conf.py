@@ -149,6 +149,8 @@ autodoc_default_options = {
     "exclude-members": "with_traceback",
 }
 # autodoc_mock_imports = ["finol"]
+autosummary_imported_members = True
+
 
 # sphinx_copybutton option to not copy prompt.
 copybutton_prompt_text = "$ "
