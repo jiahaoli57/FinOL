@@ -128,7 +128,7 @@ bugtracker = "https://github.com/finol/finol/issues"
 #optuna = "optuna.cli:main"
 #
 #[tool.setuptools.packages.find]
-#include = ["optuna*"]
+include = ["finol*"]
 #
 #[tool.setuptools.dynamic]
 #version = {attr = "optuna.version.__version__"}
@@ -161,8 +161,8 @@ bugtracker = "https://github.com/finol/finol/issues"
 #'''
 #
 #[tool.isort]
-#profile = 'black'
-#src_paths = ['optuna', 'tests', 'docs', 'benchmarks']
+profile = 'black'
+src_paths = ['finol']
 #skip_glob = ['docs/source/conf.py', '**/alembic/versions/*.py', 'tutorial/**/*.py']
 #line_length = 99
 #lines_after_imports = 2
