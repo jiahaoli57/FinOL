@@ -94,45 +94,45 @@ html_css_files = ["css/custom.css"]
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, "FinOL.tex", "FinOL Documentation", f"{finol.__author__}", "manual"),
-]
+# latex_documents = [
+#     (master_doc, "FinOL.tex", "FinOL Documentation", f"{finol.__author__}", "manual"),
+# ]
 
 # -- Options for manual page output ------------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "finol", "FinOL Documentation", [author], 1)]
+# man_pages = [(master_doc, "finol", "FinOL Documentation", [author], 1)]
 
 # -- Options for Texinfo output ----------------------------------------------
 
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-texinfo_documents = [
-    (
-        master_doc,
-        "FinOL",
-        "FinOL Documentation",
-        author,
-        "FinOL",
-        "One line description of project.",
-        f"{finol.__author__}",
-    ),
-]
-
-intersphinx_mapping = {
-    "python": ("https://docs.python.org/3", None),
-    "distributed": ("https://distributed.dask.org/en/stable", None),
-    "lightgbm": ("https://lightgbm.readthedocs.io/en/stable", None),
-    "matplotlib": ("https://matplotlib.org/stable", None),
-    "numpy": ("https://numpy.org/doc/stable", None),
-    "scipy": ("https://docs.scipy.org/doc/scipy", None),
-    "sklearn": ("https://scikit-learn.org/stable", None),
-    "torch": ("https://pytorch.org/docs/stable", None),
-    "pandas": ("https://pandas.pydata.org/docs", None),
-    "plotly": ("https://plotly.com/python-api-reference", None),
-}
+# texinfo_documents = [
+#     (
+#         master_doc,
+#         "FinOL",
+#         "FinOL Documentation",
+#         author,
+#         "FinOL",
+#         "One line description of project.",
+#         f"{finol.__author__}",
+#     ),
+# ]
+#
+# intersphinx_mapping = {
+#     "python": ("https://docs.python.org/3", None),
+#     "distributed": ("https://distributed.dask.org/en/stable", None),
+#     "lightgbm": ("https://lightgbm.readthedocs.io/en/stable", None),
+#     "matplotlib": ("https://matplotlib.org/stable", None),
+#     "numpy": ("https://numpy.org/doc/stable", None),
+#     "scipy": ("https://docs.scipy.org/doc/scipy", None),
+#     "sklearn": ("https://scikit-learn.org/stable", None),
+#     "torch": ("https://pytorch.org/docs/stable", None),
+#     "pandas": ("https://pandas.pydata.org/docs", None),
+#     "plotly": ("https://plotly.com/python-api-reference", None),
+# }
 
 
 
