@@ -20,6 +20,11 @@ class DatasetLoader:
         download_data()
 
     def data_accessing(self, folder_path: str) -> list[pd.DataFrame]:
+        """
+
+        :param folder_path:
+        :return: raw_files
+        """
         raw_files = []
         for file_name in tqdm(os.listdir(folder_path), desc="Data Loading"):
             if file_name.endswith(".xlsx") or file_name.endswith(".xls"):
@@ -31,7 +36,14 @@ class DatasetLoader:
                     print(f"An error occurred while loading file {file_path}: {str(e)}")
         return raw_files
 
-    def feature_engineering(self, df) -> pd.DataFrame:
+    def feature_engineering(self, df: pd.DataFrame) -> tuple[pd.DataFrame, list[str], dict[str, int]]:
+        """
+        Performs feature engineering on the input DataFrame to generate various types of features.
+
+        :param df: The input DataFrame containing the raw data.
+        :return: A tuple containing the processed DataFrame, a list of the detailed feature names, and a dictionary
+        containing the number of features for each category.
+        """
         ohlcv_features_df = pd.DataFrame()
         overlap_features_df = pd.DataFrame()
         momentum_features_df = pd.DataFrame()
@@ -245,6 +257,8 @@ class DatasetLoader:
             "VOLATILITY_FEATURES": volatility_features_df.shape[1],
             "PATTERN_FEATURES": pattern_features_df.shape[1],
         }
+        print(DETAILED_FEATURE_LIST)
+        print(DETAILED_NUM_FEATURES)
         return _, DETAILED_FEATURE_LIST, DETAILED_NUM_FEATURES
 
     def data_augmentation(self, df):
