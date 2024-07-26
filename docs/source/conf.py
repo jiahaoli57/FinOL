@@ -5,13 +5,13 @@
 
 import os
 import sys
-# sys.path.insert(0, os.path.abspath('.'))
-# sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('..'))
 sys.path.insert(0, os.path.abspath('../..'))
-# sys.path.insert(0, os.path.abspath('../../finol'))
-# sys.path.insert(0, os.path.abspath('../../finol/data_layer'))
-# sys.path.insert(0, os.path.abspath('../../finol/data_layer/'))
-# import finol
+sys.path.insert(0, os.path.abspath('../../finol'))
+sys.path.insert(0, os.path.abspath('../../finol/data_layer'))
+sys.path.insert(0, os.path.abspath('../../finol/data_layer/'))
+import finol
 # import warnings
 # import plotly.io as pio
 # from datetime import datetime
@@ -23,10 +23,10 @@ sys.path.insert(0, os.path.abspath('../..'))
 project = "FinOL"
 # copyright = f'2024–{datetime.now().year}, {finol.__author__}'
 # copyright = f"2024, {finol.__author__}"
-# author = f"{finol.__author__}"
+author = f"{finol.__author__}"
 release = "MIT"
 # The short X.Y version
-# version = finol.__version__
+version = finol.__version__
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
