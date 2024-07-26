@@ -13,11 +13,11 @@ from datetime import datetime
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'FinOL'
+project = "FinOL"
 # copyright = f'2024–{datetime.now().year}, FinOL contributors'
-copyright = f'2024, FinOL contributors'
-author = 'FinOL contributors'
-release = 'MIT'
+copyright = f"2024, FinOL contributors"
+author = "FinOL contributors"
+release = "MIT"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
