@@ -4,6 +4,7 @@ import torch
 import pandas as pd
 
 from tqdm import tqdm
+from typing import List, Tuple, Dict
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
 from finol.data_layer.scaler_selector import ScalerSelector
@@ -25,7 +26,7 @@ class DatasetLoader:
     def data_accessing(
             self,
             folder_path: str
-    ) -> list[pd.DataFrame]:
+    ) -> List[pd.DataFrame]:
         """
         Load raw data files from a specified folder path and return a list of DataFrames.
 
@@ -43,7 +44,7 @@ class DatasetLoader:
                     print(f"An error occurred while loading file {file_path}: {str(e)}")
         return raw_files
 
-    def feature_engineering(self, df: pd.DataFrame) -> tuple[pd.DataFrame, list[str], dict[str, int]]:
+    def feature_engineering(self, df: pd.DataFrame) -> Tuple[pd.DataFrame, List[str], Dict[str, int]]:
         """
         Perform feature engineering on the input DataFrame to generate various types of features.
 
@@ -266,7 +267,7 @@ class DatasetLoader:
         }
         return _, DETAILED_FEATURE_LIST, DETAILED_NUM_FEATURES
 
-    def data_augmentation(self, df: pd.DataFrame) -> tuple[pd.DataFrame, int]:
+    def data_augmentation(self, df: pd.DataFrame) -> Tuple[pd.DataFrame, int]:
         """
 
         :param df:
