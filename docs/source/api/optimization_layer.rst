@@ -12,4 +12,4 @@ The :mod:`~finol.optimization_layer` module contains optimization layer related 
     finol.optimization_layer.CriterionSelector
     finol.optimization_layer.ModelTrainer
     finol.optimization_layer.OptimizerSelector
-    finol.optimization_layer.OptunaOptimizer"
+    finol.optimization_layer.OptunaOptimizer

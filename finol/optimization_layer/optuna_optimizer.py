@@ -137,6 +137,6 @@ class OptunaOptimizer:
 
 
 if __name__ == "__main__":
-    from finol.data_layer.DatasetLoader import DatasetLoader
+    from finol.data_layer.dataset_loader import DatasetLoader
     load_dataset_output = DatasetLoader().load_dataset()
     OptunaOptimizer(load_dataset_output=load_dataset_output).train_via_optuna()
