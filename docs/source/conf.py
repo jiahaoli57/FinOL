@@ -14,6 +14,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 # sys.path.insert(0, os.path.abspath('../../finol/data_layer/'))
 import finol
 from finol import data_layer, model_layer, optimization_layer, evaluation_layer
+from finol import utils
 # from finol.data_layer import dataset_loader
 # from finol.data_layer.dataset_loader import DatasetLoader
 
@@ -27,11 +28,11 @@ from finol import data_layer, model_layer, optimization_layer, evaluation_layer
 
 project = "FinOL"
 # copyright = f'2024–{datetime.now().year}, {finol.__author__}'
-# copyright = f"2024, {finol.__author__}"
-# author = f"{finol.__author__}"
+copyright = f"2024, {finol.__author__}"
+author = f"{finol.__author__}"
 release = "MIT"
 # The short X.Y version
-# version = finol.__version__
+version = finol.__version__
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -49,7 +50,9 @@ extensions = [
     # "recommonmark",
     # "sphinx_markdown_tables",
     "sphinx_rtd_theme",
-    "sphinx_copybutton"
+    "sphinx_copybutton",
+    # "sphinx-jsonschema",
+    "sphinxemoji.sphinxemoji",
 ]
 
 templates_path = ["_templates"]

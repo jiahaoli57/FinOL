@@ -1,7 +1,7 @@
 .. _supported_datasets:
 
-Supported Datasets
-==================
+Datasets
+========
 
 .. container::
 

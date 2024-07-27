@@ -1,7 +1,7 @@
 .. _supported_features:
 
-Supported Features
-==================
+Features
+========
 
 This section provides detailed definitions for the key data features in ``FinOL``.
 These features can help describe and analyze financial time series from multiple perspectives.
@@ -12,6 +12,8 @@ for each feature. For the detailed computation process, please refer to
 
 .. contents::
     :local:
+
+.. _OHLCV_features:
 
 OHLCV Features
 --------------
@@ -38,6 +40,7 @@ OHLCV Features
      - ``df.VOLUME``
      - Trading Volume
 
+.. _overlap_features:
 
 Overlap Features
 ----------------
@@ -109,6 +112,7 @@ Overlap Features
      - ``ta.WMA(df.CLOSE)``
      - Weighted Moving Average
 
+.. _momentum_features:
 
 Momentum Features
 -----------------
@@ -240,6 +244,8 @@ Momentum Features
      - ``ta.WILLR(df.HIGH, df.LOW, df.CLOSE)``
      - Williams' %R
 
+.. _volume_features:
+
 Volume Features
 ---------------
 
@@ -258,6 +264,8 @@ Volume Features
    * - OBV
      - ``ta.OBV(df.CLOSE, df.VOLUME)``
      - On Balance Volume
+
+.. _cycle_features:
 
 Cycle Features
 --------------
@@ -290,6 +298,8 @@ Cycle Features
      - ``ta.HT_TRENDMODE(df.CLOSE)``
      - Hilbert Transform - Trend vs Cycle Mode
 
+.. _price_features:
+
 Price Features
 --------------
 
@@ -312,6 +322,8 @@ Price Features
      - ``ta.WCLPRICE(df.HIGH, df.LOW, df.CLOSE)``
      - Weighted Close Price
 
+.. _volatility_features:
+
 Volatility Features
 -------------------
 
@@ -330,6 +342,8 @@ Volatility Features
    * - TRANGE
      - ``ta.TRANGE(df.HIGH, df.LOW, df.CLOSE)``
      - True Range
+
+.. _pattern_features:
 
 Pattern Features
 ----------------
@@ -406,7 +420,6 @@ Pattern Features
    * - CDLGAPSIDESIDEWHITE
      - ``ta.CDLGAPSIDESIDEWHITE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
      - Up/Down-Gap Side-By-Side White Lines
-
    * - CDLGRAVESTONEDOJI
      - ``ta.CDLGRAVESTONEDOJI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``
      - Gravestone Doji

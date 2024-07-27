@@ -87,6 +87,10 @@ scaler_dict = {
 
 
 class ScalerSelector:
+    """
+    This class is responsible for selecting different types of scaler based on the user's configuration.
+
+    """
     def __init__(self):
         self.config = load_config()
 

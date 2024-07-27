@@ -156,8 +156,7 @@ class FinOLApp:
         # ttk.Label(self.model_config_frame, text=" "*150).grid(row=100, column=0, columnspan=4, padx=10, pady=0)
 
         # MODEL_NAME
-        self.MODEL_NAME_options = ["DNN", "RNN", "LSTM", "CNN", "Transformer", "LSRE-CAAN", "LSRE-CAAN-d", "LSRE-CAAN-dd",
-                                   "AlphaPortfolio"]
+        self.MODEL_NAME_options = ["AlphaPortfolio", "CNN", "DNN", "LSRE-CAAN", "LSTM", "RNN", "Transformer",]
         tk.Label(self.model_config_frame, text="Select Model:").grid(row=1, column=0, padx=10, pady=1)
         self.MODEL_NAME_var = tk.StringVar()
         self.MODEL_NAME_dropdown = ttk.Combobox(self.model_config_frame, textvariable=self.MODEL_NAME_var, values=self.MODEL_NAME_options)

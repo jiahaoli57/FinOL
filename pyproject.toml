@@ -33,7 +33,7 @@ classifiers = [
 requires-python = ">=3.7"
 dependencies = [
   "captum",
-  "einops",
+  "einops",  # model_layer
   "IPython",
   "matplotlib==3.5.0",
   "numpy",

@@ -12,8 +12,8 @@ FinOL: Towards open benchmarking for data-driven OLPS
 ambitious project, it collects and organizes extensive assets from global markets over half a century,
 it provides a long-awaited unified platform to advance data-driven OLPS research.
 
-What's NEW!
------------
+|:star:| What's NEW!
+--------------------
 
 .. container::
 
@@ -158,26 +158,6 @@ Why should I use FinOL?
    develop, test, and validate new OLPS methods.
 
 
-Examples and Tutorials
-----------------------
-
-You can find useful tutorials on how to use ``FinOL`` in the
-`tutorials <finol/tutorials/README.md>`__ folder.
-
-Here we show a simple application (taken from
-`tutorial_2 <tutorials/tutorial_2.ipynb>`__): we transform asset “AA”
-into a richer representation.
-
-.. raw:: html
-
-   <p align="center">
-
-Visualization of Train Normalization Data for Asset “AA”
-
-.. raw:: html
-
-   </p>
-
 
 .. toctree::
    :maxdepth: 2
@@ -187,11 +167,7 @@ Visualization of Train Normalization Data for Asset “AA”
    installation
    quickstart
    api/index
-   supported_datasets
-   supported_features
-   supported_baselines
-   supported_metrics
-   supported_visualization
+   supported_resources/index
    file_structure
    license
    contact_us

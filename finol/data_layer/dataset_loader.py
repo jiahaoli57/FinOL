@@ -13,7 +13,7 @@ from finol.utils import ROOT_PATH, load_config, update_config, make_logdir, chec
 
 class DatasetLoader:
     """
-    DatasetLoader is a class that provides methods to load various datasets.
+    This class is responsible for loading different types of datasets.
 
     """
     def __init__(

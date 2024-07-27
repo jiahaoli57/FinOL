@@ -4,7 +4,7 @@
     "MANUAL_SEED": 0,
     "_note2": "-------------------------------------- Data Layer Configuration --------------------------------------",
     "LOAD_LOCAL_DATALOADER": true,
-    "DATASET_NAME": "DJIA",
+    "DATASET_NAME": "CRYPTO",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
             "TRAIN_START_TIMESTAMP": "1962-07-03",
@@ -119,7 +119,7 @@
         "CRYPTO": 252
     },
     "_note3": "-------------------------------------- Model Layer Configuration --------------------------------------",
-    "MODEL_NAME": "DNN",
+    "MODEL_NAME": "AlphaPortfolio",
     "MODEL_PARAMS": {
         "AlphaPortfolio": {
             "NUM_LAYERS": 1,
@@ -136,9 +136,9 @@
             "DROPOUT": 0.1
         },
         "DNN": {
-            "NUM_LAYERS": 2,
-            "HIDDEN_SIZE": 224,
-            "DROPOUT": 0.25
+            "NUM_LAYERS": 3,
+            "HIDDEN_SIZE": 128,
+            "DROPOUT": 0.35000000000000003
         },
         "LSRE-CAAN": {
             "NUM_LAYERS": 3,
@@ -550,8 +550,6 @@
             }
         }
     },
-    "TUNE_PARAMETERS": false,
-    "NUM_TRIALS": 20,
     "_note4": "-------------------------------------- Optimization Layer Configuration --------------------------------------",
     "NUM_EPOCHES": 100,
     "SAVE_EVERY": 1,
@@ -559,6 +557,9 @@
     "LEARNING_RATE": 0.001,
     "CRITERION_NAME": "LOG_WEALTH",
     "LAMBDA_L2": 0.0005,
+    "TUNE_PARAMETERS": false,
+    "SAMPLER_NAME": "TPESampler",
+    "NUM_TRIALS": 20,
     "PLOT_DYNAMIC_LOSS": true,
     "_note5": "-------------------------------------- Evaluation Layer Configuration --------------------------------------",
     "PLOT_CHINESE": false,
