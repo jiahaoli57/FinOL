@@ -1,7 +1,7 @@
 .. _supported_baselines:
 
-Baselines
-=========
+Supported Baselines
+===================
 
 .. container::
 

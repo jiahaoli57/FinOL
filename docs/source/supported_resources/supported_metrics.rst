@@ -1,6 +1,6 @@
 .. _supported_metrics:
 
-Metrics
+Supported Metrics
 =======
 
 .. container::

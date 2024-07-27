@@ -1,6 +1,6 @@
 .. _supported_visualization:
 
-Visualization
+Supported Visualization
 =============
 
 The FInOL project provides a suite of visualization tools to facilitate
