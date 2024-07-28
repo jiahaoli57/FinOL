@@ -1,6 +1,6 @@
 .. _supported_datasets:
 
-Supported Datasets
+FinOL Datasets
 ========
 
 .. container::

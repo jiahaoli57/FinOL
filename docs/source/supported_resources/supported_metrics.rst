@@ -1,6 +1,6 @@
 .. _supported_metrics:
 
-Supported Metrics
+FinOL Metrics
 =======
 
 .. container::

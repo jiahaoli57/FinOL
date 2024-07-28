@@ -1,6 +1,6 @@
 .. _supported_features:
 
-Supported Features
+FinOL Features
 ========
 
 This section provides detailed definitions for the key data features in ``FinOL``.

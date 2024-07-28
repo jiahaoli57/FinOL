@@ -1,6 +1,6 @@
 .. _supported_baselines:
 
-Supported Baselines
+FinOL Baselines
 ===================
 
 .. container::
