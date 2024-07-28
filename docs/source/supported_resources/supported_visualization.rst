@@ -3,7 +3,7 @@
 FinOL Visualization
 =============
 
-The FInOL project provides a suite of visualization tools to facilitate
+The FinOL project provides a suite of visualization tools to facilitate
 a comprehensive evaluation of data-driven OLPS research. Here are some
 examples:
 
