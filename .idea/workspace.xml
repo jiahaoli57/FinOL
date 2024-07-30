@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
-      <change afterPath="$PROJECT_DIR$/finol/finol_logo_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/other_modules.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/api/other_modules.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/FinOLAPP.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/FinOLAPP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/data_layer/dataset_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/dataset_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/economic_distiller.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/economic_distiller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/criterion_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/criterion_selector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/optuna_optimizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/optuna_optimizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-    </list>
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -365,14 +353,7 @@
       <workItem from="1721387352676" duration="67813000" />
       <workItem from="1721578097822" duration="73547000" />
       <workItem from="1721823180766" duration="104259000" />
-      <workItem from="1722153913354" duration="55316000" />
-    </task>
-    <task id="LOCAL-00165" summary="build docs">
-      <created>1722013036241</created>
-      <option name="number" value="00165" />
-      <option name="presentableId" value="LOCAL-00165" />
-      <option name="project" value="LOCAL" />
-      <updated>1722013036241</updated>
+      <workItem from="1722153913354" duration="55803000" />
     </task>
     <task id="LOCAL-00166" summary="build docs">
       <created>1722013465276</created>
@@ -710,7 +691,14 @@
       <option name="project" value="LOCAL" />
       <updated>1722150197685</updated>
     </task>
-    <option name="localTasksCounter" value="214" />
+    <task id="LOCAL-00214" summary="build docs">
+      <created>1722306682511</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1722306682511</updated>
+    </task>
+    <option name="localTasksCounter" value="215" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

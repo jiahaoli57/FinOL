@@ -1,7 +1,8 @@
 include finol/tutorials/*
 include finol/main/*
-include finol/config.json
+include finol/finol/config.json
 include *.whl
+include finol/finol/finol_logo_icon.png
 exclude logdir/*
 exclude finol/logdir/*
 exclude requirements.txt
