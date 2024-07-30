@@ -164,7 +164,7 @@ bugtracker = "https://github.com/finol/finol/issues"
 #'''
 #
 #[tool.isort]
-profile = 'black'
+#profile = 'black'
 #src_paths = ['finol']
 #skip_glob = ['docs/source/conf.py', '**/alembic/versions/*.py', 'tutorial/**/*.py']
 #line_length = 99

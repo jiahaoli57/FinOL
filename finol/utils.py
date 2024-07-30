@@ -55,11 +55,38 @@ def update_config(config):
         json.dump(config, f, indent=4)
 
 
+def detect_device(config):
+    if config["DEVICE"] == "auto":
+        # Detect available device
+        if torch.cuda.is_available():
+            config["DEVICE"] = "cuda"
+        else:
+            config["DEVICE"] = "cpu"
+    return config
+
+
 def download_data():
-    github_url = "https://github.com/ai4finol/finol_data.git"
+    # github_url = "https://github.com/ai4finol/finol_data.git"
+    # github_url = "git://github.com/ai4finol/finol_data.git"
+    # github_url = "http://github.com/ai4finol/finol_data.git"
     # local_path = ROOT_PATH + r"\data"  # useless in Colab, so we use the following command
-    local_path = os.path.join(ROOT_PATH, "data")
-    subprocess.run(["git", "clone", github_url, local_path])
+    # local_path = os.path.join(ROOT_PATH, "data")
+    # subprocess.run(["git", "clone", github_url, local_path])
+
+    github_urls = [
+        "http://github.com/ai4finol/finol_data.git"
+        "git://github.com/ai4finol/finol_data.git",
+        "https://github.com/ai4finol/finol_data.git",
+    ]
+    for github_url in github_urls:
+        try:
+            # local_path = ROOT_PATH + r"\data"  # useless in Colab, so we use the following command
+            local_path = os.path.join(ROOT_PATH, "data")
+            subprocess.run(["git", "clone", github_url, local_path])
+            break
+        except subprocess.CalledProcessError as e:
+            print(f"Error downloading data from {github_url}: {e}")
+            continue
 
 
 def portfolio_selection(final_scores):
