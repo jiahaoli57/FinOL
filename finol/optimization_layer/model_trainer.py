@@ -51,8 +51,9 @@ class ModelTrainer:
         # not_ipython = "inline" not in matplotlib.get_backend()
         if not self.is_ipython:
             plt.figure()  # figsize=(12, 5)
-            plt.plot(np.array(self.avg_train_loss_list), linestyle="-", marker=self.config["MARKERS"][0], markevery=int(self.config["NUM_EPOCHES"]/20), color="black", alpha=0.5, label="train loss")
-            plt.plot(np.array(self.avg_val_loss_list), linestyle=":", marker=self.config["MARKERS"][1], markevery=int(self.config["NUM_EPOCHES"]/20), color="black", alpha=0.5, label="val loss")
+            plt.plot(np.array(self.avg_train_loss_list), linestyle="-", marker=self.config["MARKERS"][0], color="black", alpha=0.5, label="train loss")
+            plt.plot(np.array(self.avg_val_loss_list), linestyle=":", marker=self.config["MARKERS"][1], color="black", alpha=0.5, label="val loss")
+            # markevery = int(self.config["NUM_EPOCHES"] / 20)
             plt.xlabel("Epoch")
             plt.ylabel("Loss")
             plt.legend()

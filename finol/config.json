@@ -1,7 +1,7 @@
 {
     "_note1": "-------------------------------------- General Configuration --------------------------------------",
     "DEVICE": "cuda",
-    "MANUAL_SEED": 0,
+    "MANUAL_SEED": 3407,
     "_note2": "-------------------------------------- Data Layer Configuration --------------------------------------",
     "LOAD_LOCAL_DATALOADER": true,
     "DATASET_NAME": "CRYPTO",
@@ -95,7 +95,7 @@
             "WINDOW_SIZE": 10
         }
     },
-    "SCALER": "WindowStandardScaler",
+    "SCALER": "WindowMinMaxScaler",
     "BATCH_SIZE": {
         "NYSE(O)": 128,
         "NYSE(N)": 128,
@@ -123,8 +123,8 @@
     "MODEL_PARAMS": {
         "AlphaPortfolio": {
             "NUM_LAYERS": 1,
-            "DIM_EMBEDDING": 224,
-            "DIM_FEEDFORWARD": 224,
+            "DIM_EMBEDDING": 256,
+            "DIM_FEEDFORWARD": 256,
             "NUM_HEADS": 1,
             "DROPOUT": 0.45
         },
@@ -133,12 +133,12 @@
             "KERNEL_SIZE": 3,
             "STRIDE": 1,
             "HIDDEN_SIZE": 32,
-            "DROPOUT": 0.1
+            "DROPOUT": 0.2
         },
         "DNN": {
-            "NUM_LAYERS": 3,
-            "HIDDEN_SIZE": 128,
-            "DROPOUT": 0.35000000000000003
+            "NUM_LAYERS": 2,
+            "HIDDEN_SIZE": 192,
+            "DROPOUT": 0.2
         },
         "LSRE-CAAN": {
             "NUM_LAYERS": 3,
@@ -555,11 +555,13 @@
     "SAVE_EVERY": 1,
     "OPTIMIZER_NAME": "Adam",
     "LEARNING_RATE": 0.001,
-    "CRITERION_NAME": "LOG_WEALTH",
+    "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.0005,
-    "TUNE_PARAMETERS": false,
-    "SAMPLER_NAME": "TPESampler",
+    "TUNE_PARAMETERS": true,
     "NUM_TRIALS": 20,
+    "SAMPLER_NAME": "RandomSampler",
+    "PRUNER_NAME": "MedianPruner",
+    "WRAPPED_PRUNER_NAME": "MedianPruner",
     "PLOT_DYNAMIC_LOSS": true,
     "_note5": "-------------------------------------- Evaluation Layer Configuration --------------------------------------",
     "PLOT_CHINESE": false,
@@ -569,7 +571,7 @@
         "INCLUDE_ECONOMIC_DISTILLATION": false,
         "PROP_DISTILLED_FEATURES": 0.7,
         "DISTILLER_NAME": "Lasso",
-        "Y_NAME": "PORTFOLIOS"
+        "Y_NAME": "Portfolios"
     },
     "MARKERS": [
         "o",

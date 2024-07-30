@@ -354,10 +354,10 @@ class DatasetLoader:
                 load_dataset_output = torch.load(ROOT_PATH + "/data/datasets/" + self.config["DATASET_NAME"] + "_load_dataset_output.pt")
                 load_dataset_output["logdir"] = logdir
                 print("Local dataloader loaded successfully!")
-            except Exception:
+            except Exception as e:
                 self.config["LOAD_LOCAL_DATALOADER"] = False
                 update_config(self.config)
-                print("Local dataloader does not exist, the config['LOAD_LOCAL_DATALOADER'] is modified as `False` "
+                print(f"Local dataloader failed: {e}, the config['LOAD_LOCAL_DATALOADER'] is modified as `False` "
                       "automatically")
 
         # Ensure that the config is updated in all cases

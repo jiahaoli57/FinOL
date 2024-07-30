@@ -1,3 +1,5 @@
+import time
+
 import torch
 import optuna
 import optuna.visualization.matplotlib as mpl
@@ -94,14 +96,42 @@ class OptunaOptimizer:
 
         return value
 
+    def select_sampler(self):
+        sampler_name = self.config["SAMPLER_NAME"]
+        print(f"Sampler is {sampler_name}")
+        sampler_kwargs = {"seed": self.config["MANUAL_SEED"]}
+
+        if sampler_name == "GridSampler":
+            model_sampled_params = self.config["MODEL_PARAMS_SPACE"][self.config["MODEL_NAME"]]
+            search_space = {}
+            for param_name, param_space in model_sampled_params.items():
+                param_type = param_space["type"]
+                param_range = param_space["range"]
+                if param_type == "int" or param_type == "float":
+                    search_space[param_name] = param_range
+            sampler_kwargs = {"search_space": search_space}
+
+        return getattr(optuna.samplers, sampler_name)(**sampler_kwargs)
+
+    def select_pruner(self):
+        pruner_name = self.config["PRUNER_NAME"]
+        print(f"Pruner is {pruner_name}")
+        pruner_kwargs = {}
+
+        if pruner_name == "PatientPruner":
+            pruner_kwargs["wrapped_pruner"] = getattr(optuna.pruners, self.config["WRAPPED_PRUNER_NAME"])()
+            pruner_kwargs["patience"] = 1
+
+        return getattr(optuna.pruners, pruner_name)(**pruner_kwargs)
+
     def train_via_optuna(self):
         # Creating Optuna object and defining its parameters
         self.study = optuna.create_study(
-            direction="minimize", sampler=optuna.samplers.TPESampler(seed=self.config["MANUAL_SEED"]),
-            pruner=optuna.pruners.MedianPruner(),
+            direction="minimize",
+            sampler=self.select_sampler(),
+            pruner=self.select_pruner(),
             storage="sqlite:///" + self.logdir + "/" + self.config["MODEL_NAME"] + "_" + self.config["DATASET_NAME"] + "_OPTUNA_" + self.config["MODEL_NAME"] + ".db"
         )
-        print(f"Sampler is {self.study.sampler.__class__.__name__}")
         self.study.optimize(self.objective, n_trials=self.config["NUM_TRIALS"])
 
         # To further visualize the results, you can upload the generated {MODEL_NAME}.db file to the Optuna Dashboard:

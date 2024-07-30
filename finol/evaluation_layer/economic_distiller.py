@@ -48,7 +48,7 @@ class EconomicDistiller:
         model = torch.load(self.logdir + "/best_model_" + self.config["DATASET_NAME"] + ".pt").to(self.config["DEVICE"])
         model.eval()
 
-        if self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["Y_NAME"] == "PORTFOLIOS":
+        if self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["Y_NAME"] == "Portfolios":
             model = ModifiedModel(model).to(self.config["DEVICE"])
             model.eval()
 
@@ -149,9 +149,9 @@ class EconomicDistiller:
                 # pred -> portfolio
                 y_pred = torch.from_numpy(y_pred).to(self.config["DEVICE"])
                 # print(y_pred)
-                if self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["Y_NAME"] == "SCORES":
+                if self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["Y_NAME"] == "Scores":
                     portfolio = actual_portfolio_selection(y_pred.unsqueeze(0))
-                elif self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["Y_NAME"] == "PORTFOLIOS":
+                elif self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["Y_NAME"] == "Portfolios":
                     positive_y_pred = torch.clamp(y_pred, min=1e-2)
                     portfolio = positive_y_pred / torch.sum(positive_y_pred)
 

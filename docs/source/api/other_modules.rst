@@ -88,8 +88,7 @@ Model Layer Configuration
      - Specifies the type of model to be used. Each model type corresponds to a different neural network architecture.
      - ``CNN``, ``DNN``, ``RNN``, ``LSTM``, ``CNN``, ``Transformer``, ``LSRE-CAAN``, ``AlphaPortfolio``
    * - ``MODEL_PARAMS``
-     - A dictionary that contains the model parameters and their values. The keys are parameter names (as strings), and
-       the values are either integers or floats.
+     - A dictionary that contains the model parameters and their values.
      - ``Dict[String, Union[Integer, Float]]``
    * - ``MODEL_PARAMS_SPACE``
      -  A tuple of dictionaries, where each dictionary represents a set of model hyperparameters to be explored during
@@ -115,7 +114,7 @@ Optimization Layer Configuration
    * - ``OPTIMIZER_NAME``
      -
      - "Adadelta", "Adagrad", "Adam", "AdamW", "Adamax", "ASGD", "SGD", "RAdam", "Rprop",
-                                       "RMSprop", "NAdam", "A2GradExp", "A2GradInc", "A2GradUni", "AccSGD", "AdaBelief",
+       "RMSprop", "NAdam", "A2GradExp", "A2GradInc", "A2GradUni", "AccSGD", "AdaBelief",
                                        "AdaBound", "AdaMod", "Adafactor", "AdamP", "AggMo", "Apollo", "DiffGrad", "LARS",
                                        "Lamb", "MADGRAD", "NovoGrad", "PID", "QHAdam", "QHM", "Ranger", "RangerQH", "RangerVA",
                                        "SGDP", "SGDW", "SWATS", "Yogi"
@@ -132,13 +131,19 @@ Optimization Layer Configuration
      - Determines whether to perform hyperparameter tuning. If set to ``true``, the specified model parameters will be
        tuned during training.
      - ``Boolean``
-   * - ``SAMPLER_NAME``
-     - Specifies the algorithm to be used for hyperparameter optimization. See `optuna.samplers <https://optuna.readthedocs.io/en/stable/reference/samplers/index.html>`__
-       and `"Which sampler should be used?" <https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/003_efficient_optimization_algorithms.html#which-sampler-and-pruner-should-be-used>`__ for more details.
-     - ``RandomSampler``, ``GridSampler``, ``TPESampler``, ``CmaEsSampler``, ``NSGAIISampler``, ``QMCSampler``, ``GPSampler``, ``BoTorchSampler``, ``BruteForceSampler``
    * - ``NUM_TRIALS``
      - The number of trials to perform during hyperparameter tuning. This determines how many different sets of hyperparameters will be tested.
      - ``Integer``
+   * - ``SAMPLER_NAME``
+     - Specifies the algorithm to be used for hyperparameter tuning. See `optuna.samplers <https://optuna.readthedocs.io/en/stable/reference/samplers/index.html>`__
+       and `"Which sampler should be used?" <https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/003_efficient_optimization_algorithms.html#which-sampler-and-pruner-should-be-used>`__ for more details.
+     - ``BruteForceSampler``, ``CmaEsSampler``, ``GridSampler``, ``NSGAIISampler``, ``NSGAIIISampler``, ``QMCSampler``, ``RandomSampler``, ``TPESampler``, ``GPSampler``
+   * - ``PRUNER_NAME``
+     - Specifies the pruner to be used for hyperparameter tuning. See `optuna.pruners <https://optuna.readthedocs.io/en/stable/reference/pruners.html>`__ for more details.
+     - ``HyperbandPruner``, ``MedianPruner``,  ``NopPruner``, ``PatientPruner``, ``SuccessiveHalvingPruner``, ``WilcoxonPruner``
+   * - ``WRAPPED_PRUNER_NAME``
+     - Specifies the wrapped pruner to be used for hyperparameter tuning. This parameter is only used when the ``PRUNER_NAME`` is set to ``PatientPruner``.
+     - ``HyperbandPruner``, ``MedianPruner``,  ``SuccessiveHalvingPruner``, ``WilcoxonPruner``
 
 
 Evaluation Layer Configuration

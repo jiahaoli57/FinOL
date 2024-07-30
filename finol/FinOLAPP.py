@@ -1,6 +1,8 @@
 import time
 import json
 import tkinter as tk
+
+from PIL import Image, ImageTk
 from tkinter import messagebox, ttk
 from finol.data_layer import DatasetLoader
 from finol.optimization_layer import ModelTrainer
@@ -18,10 +20,15 @@ from finol.utils import load_config, update_config
 
 class FinOLApp:
     def __init__(self):
+        self.config = load_config()
+
         self.root = tk.Tk()
+        # self.root.state("zoomed")
+        icon = Image.open('finol_logo_icon.png')
+        photo = ImageTk.PhotoImage(icon)
+        self.root.iconphoto(False, photo)
         self.root.title("FinOL: Towards Open Benchmarking for Data-Driven Online Portfolio Selection")
         self.create_widgets()
-
         self.experiment_details = {}
 
     def run(self):
@@ -32,22 +39,13 @@ class FinOLApp:
         # General Layer Configuration #
         ###############################
         self.general_config_frame = tk.LabelFrame(self.root, text="General Configuration", font=("Helvetica", 10, "bold"))
-        self.general_config_frame.pack(padx=10, pady=1, fill="none")
+        self.general_config_frame.pack(padx=100, pady=1, fill="none")
 
         # DEVICE
-        self.DEVICE_options = ["cpu", "cuda"]
-        tk.Label(self.general_config_frame, text="Select Device:").grid(row=0, column=0, padx=10, pady=1)
-        self.DEVICE_var = tk.StringVar()
-        self.DEVICE_dropdown = ttk.Combobox(self.general_config_frame, textvariable=self.DEVICE_var, values=self.DEVICE_options)
-        self.DEVICE_dropdown.grid(row=0, column=1, padx=10, pady=1)
-        self.DEVICE_dropdown.current(0)
+        self.create_dropdown(self.general_config_frame, ["cpu", "cuda"], "Select Device:", 0, 0, 0, "StringVar", ["DEVICE"])
 
         # MANUAL_SEED
-        tk.Label(self.general_config_frame, text="Set Seed:").grid(row=0, column=2, padx=10, pady=1)
-        self.MANUAL_SEED_var = tk.IntVar()
-        self.MANUAL_SEED_entry = tk.Entry(self.general_config_frame, textvariable=self.MANUAL_SEED_var)
-        self.MANUAL_SEED_entry.grid(row=0, column=3, padx=10, pady=1)
-        self.MANUAL_SEED_var.set(0)
+        self.create_entry(self.general_config_frame, "Set Seed:", 0, 2, 3407, "IntVar", ["MANUAL_SEED"])
 
         ############################
         # Data Layer Configuration #
@@ -56,91 +54,55 @@ class FinOLApp:
         self.data_config_frame.pack(padx=10, pady=1, fill="none")
 
         # DATASET_NAME
-        self.DATASET_NAME_options = ["NYSE(O)", "NYSE(N)", "DJIA", "SP500", "TSE", "SSE", "HSI", "CMEG", "CRYPTO"]
-        tk.Label(self.data_config_frame, text="Select Dataset:").grid(row=0, column=0, padx=10, pady=1)
-        self.DATASET_NAME_var = tk.StringVar()
-        self.DATASET_NAME_dropdown = ttk.Combobox(self.data_config_frame, textvariable=self.DATASET_NAME_var, values=self.DATASET_NAME_options)
-        self.DATASET_NAME_dropdown.grid(row=0, column=1, padx=10, pady=1)
-        self.DATASET_NAME_dropdown.current(0)
+        self.create_dropdown(self.data_config_frame, ["NYSE(O)", "NYSE(N)", "DJIA", "SP500", "TSE", "SSE", "HSI", "CMEG", "CRYPTO"],
+                             "Select Dataset:", 0, 0, 0, "StringVar", ["DATASET_NAME"])
 
         # SCALER
-        self.SCALER_options = ["None", "StandardScaler", "MinMaxScaler", "MaxAbsScaler", "RobustScaler",
-                       "WindowStandardScaler", "WindowMinMaxScaler", "WindowMaxAbsScaler", "WindowRobustScaler"]
-        tk.Label(self.data_config_frame, text="Select Scaler:").grid(row=0, column=2, padx=10, pady=1)
-        self.SCALER_var = tk.StringVar()
-        self.SCALER_dropdown = ttk.Combobox(self.data_config_frame, textvariable=self.SCALER_var, values=self.SCALER_options)
-        self.SCALER_dropdown.grid(row=0, column=3, padx=10, pady=1)
-        self.SCALER_dropdown.current(5)
+        self.create_dropdown(self.data_config_frame, ["None", "StandardScaler", "MinMaxScaler", "MaxAbsScaler", "RobustScaler",
+                       "WindowStandardScaler", "WindowMinMaxScaler", "WindowMaxAbsScaler", "WindowRobustScaler"],
+                             "Select Scaler:", 0, 2, 6, "StringVar", ["SCALER"])
 
-        separator = ttk.Separator(self.data_config_frame,  orient="horizontal")
-        separator.grid(row=1, column=0, columnspan=4, padx=10, pady=1, sticky="ew")
-        separator_label = ttk.Label(self.data_config_frame, text="Auto Feature Engineering")
-        separator_label.grid(row=1, column=0, columnspan=4, padx=10, pady=1)
+        # create_separator
+        self.create_separator(frame=self.data_config_frame, row=1, text="Auto Feature Engineering")
 
         # INCLUDE_OHLCV_FEATURES
-        self.INCLUDE_OHLCV_FEATURES_var = tk.BooleanVar(value=True)
-        self.INCLUDE_OHLCV_FEATURES_chk = tk.Checkbutton(self.data_config_frame, text="Include OHLCV Features", variable=self.INCLUDE_OHLCV_FEATURES_var)
-        self.INCLUDE_OHLCV_FEATURES_chk.grid(row=2, column=0)
+        self.create_checkbox(self.data_config_frame, "Include OHLCV Features", 2, 0, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_OHLCV_FEATURES"])
 
         # INCLUDE_OVERLAP_FEATURES
-        self.INCLUDE_OVERLAP_FEATURES_var = tk.BooleanVar(value=True)
-        self.INCLUDE_OVERLAP_FEATURES_chk = tk.Checkbutton(self.data_config_frame, text="Include Overlap Features", variable=self.INCLUDE_OVERLAP_FEATURES_var)
-        self.INCLUDE_OVERLAP_FEATURES_chk.grid(row=2, column=1)
+        self.create_checkbox(self.data_config_frame, "Include Overlap Features", 2, 1, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_OVERLAP_FEATURES"])
 
         # INCLUDE_MOMENTUM_FEATURES
-        self.INCLUDE_MOMENTUM_FEATURES_var = tk.BooleanVar(value=True)
-        self.INCLUDE_MOMENTUM_FEATURES_chk = tk.Checkbutton(self.data_config_frame, text="Include Momentum Features", variable=self.INCLUDE_MOMENTUM_FEATURES_var)
-        self.INCLUDE_MOMENTUM_FEATURES_chk.grid(row=2, column=2)
+        self.create_checkbox(self.data_config_frame, "Include Momentum Features", 2, 2, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_MOMENTUM_FEATURES"])
 
         # INCLUDE_VOLUME_FEATURES
-        self.INCLUDE_VOLUME_FEATURES_var = tk.BooleanVar(value=True)
-        self.INCLUDE_VOLUME_FEATURES_chk = tk.Checkbutton(self.data_config_frame, text="Include Volume Features", variable=self.INCLUDE_VOLUME_FEATURES_var)
-        self.INCLUDE_VOLUME_FEATURES_chk.grid(row=2, column=3)
+        self.create_checkbox(self.data_config_frame, "Include Volume Features", 2, 3, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_VOLUME_FEATURES"])
 
         # INCLUDE_CYCLE_FEATURES
-        self.INCLUDE_CYCLE_FEATURES_var = tk.BooleanVar(value=True)
-        self.INCLUDE_CYCLE_FEATURES_chk = tk.Checkbutton(self.data_config_frame, text="Include Cycle Features", variable=self.INCLUDE_CYCLE_FEATURES_var)
-        self.INCLUDE_CYCLE_FEATURES_chk.grid(row=3, column=0)
+        self.create_checkbox(self.data_config_frame, "Include Cycle Features", 3, 0, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_CYCLE_FEATURES"])
 
         #  INCLUDE_PRICE_FEATURES
-        self.INCLUDE_PRICE_FEATURES_var = tk.BooleanVar(value=True)
-        self.INCLUDE_PRICE_FEATURES_chk = tk.Checkbutton(self.data_config_frame, text="Include Price Features", variable=self.INCLUDE_PRICE_FEATURES_var)
-        self.INCLUDE_PRICE_FEATURES_chk.grid(row=3, column=1)
+        self.create_checkbox(self.data_config_frame, "Include Price Features", 3, 1, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_PRICE_FEATURES"])
 
         # INCLUDE_VOLATILITY_FEATURES
-        self.INCLUDE_VOLATILITY_FEATURES_var = tk.BooleanVar(value=True)
-        self.INCLUDE_VOLATILITY_FEATURES_chk = tk.Checkbutton(self.data_config_frame, text="Include Volatility Features", variable=self.INCLUDE_VOLATILITY_FEATURES_var)
-        self.INCLUDE_VOLATILITY_FEATURES_chk.grid(row=3, column=2)
+        self.create_checkbox(self.data_config_frame, "Include Volatility Features", 3, 2, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_VOLATILITY_FEATURES"])
 
         #  INCLUDE_PATTERN_FEATURES
-        self.INCLUDE_PATTERN_FEATURES_var = tk.BooleanVar(value=True)
-        self.INCLUDE_PATTERN_FEATURES_chk = tk.Checkbutton(self.data_config_frame, text="Include Pattern Features", variable=self.INCLUDE_PATTERN_FEATURES_var)
-        self.INCLUDE_PATTERN_FEATURES_chk.grid(row=3, column=3)
+        self.create_checkbox(self.data_config_frame, "Include Pattern Features", 3, 3, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_PATTERN_FEATURES"])
 
-        separator = ttk.Separator(self.data_config_frame,  orient="horizontal")
-        separator.grid(row=4, column=0, columnspan=4, padx=10, pady=1, sticky="ew")
-        separator_label = ttk.Label(self.data_config_frame, text="Data Augmentation")
-        separator_label.grid(row=4, column=0, columnspan=4, padx=10, pady=1)
+        # create_separator
+        self.create_separator(frame=self.data_config_frame, row=4, text="Data Augmentation")
 
         # INCLUDE_WINDOW_DATA
-        self.INCLUDE_WINDOW_DATA_var = tk.BooleanVar(value=True)
-        self.INCLUDE_WINDOW_DATA_chk = tk.Checkbutton(self.data_config_frame, text="Include Window Data", variable=self.INCLUDE_WINDOW_DATA_var, command=self.base_on_INCLUDE_WINDOW_DATA)
-        self.INCLUDE_WINDOW_DATA_chk.grid(row=5, column=0)
+        self.create_checkbox(self.data_config_frame, "Include Window Data", 5, 0, True, ["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "INCLUDE_WINDOW_DATA"])
 
         # WINDOW_SIZE
-        tk.Label(self.data_config_frame, text="Set Window Size:").grid(row=5, column=1, padx=10, pady=1)
-        self.WINDOW_SIZE_var = tk.IntVar()
-        self.WINDOW_SIZE_entry = tk.Entry(self.data_config_frame, textvariable=self.WINDOW_SIZE_var)
-        self.WINDOW_SIZE_entry.grid(row=5, column=2)
-        self.WINDOW_SIZE_var.set(10)
+        self.create_entry(self.data_config_frame, "Set Window Size:", 5, 1, 10, "IntVar", ["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "WINDOW_SIZE"])
 
-        separator = ttk.Separator(self.data_config_frame,  orient="horizontal")
-        separator.grid(row=6, column=0, columnspan=4, padx=10, pady=1, sticky="ew")
+        # create_separator
+        self.create_separator(frame=self.data_config_frame, row=6)
 
         # LOAD_LOCAL_DATALOADER
-        self.LOAD_LOCAL_DATALOADER_var = tk.BooleanVar(value=False)
-        self.LOAD_LOCAL_DATALOADER_checkbox = tk.Checkbutton(self.data_config_frame, text="Load Local Dataloader", variable=self.LOAD_LOCAL_DATALOADER_var, command=self.base_on_LOAD_LOCAL_DATALOADER)
-        self.LOAD_LOCAL_DATALOADER_checkbox.grid(row=7, column=0, padx=10, pady=1)
+        self.create_checkbox(self.data_config_frame, "Load Local Dataloader", 7, 0, False, ["LOAD_LOCAL_DATALOADER"])
 
         # load_button
         self.load_button = tk.Button(self.root, text="Load Dataset", command=self.load_dataset)
@@ -156,29 +118,11 @@ class FinOLApp:
         # ttk.Label(self.model_config_frame, text=" "*150).grid(row=100, column=0, columnspan=4, padx=10, pady=0)
 
         # MODEL_NAME
-        self.MODEL_NAME_options = ["AlphaPortfolio", "CNN", "DNN", "LSRE-CAAN", "LSTM", "RNN", "Transformer",]
-        tk.Label(self.model_config_frame, text="Select Model:").grid(row=1, column=0, padx=10, pady=1)
-        self.MODEL_NAME_var = tk.StringVar()
-        self.MODEL_NAME_dropdown = ttk.Combobox(self.model_config_frame, textvariable=self.MODEL_NAME_var, values=self.MODEL_NAME_options)
-        self.MODEL_NAME_dropdown.grid(row=1, column=1, padx=10, pady=1)
-        self.MODEL_NAME_dropdown.current(0)
+        self.create_dropdown(self.model_config_frame, ["--", "AlphaPortfolio", "CNN", "DNN", "LSRE-CAAN", "LSTM", "RNN", "Transformer",],
+                             "Select Model:", 0, 2, 0, "StringVar", ["MODEL_NAME"])
 
-        separator = ttk.Separator(self.model_config_frame,  orient="horizontal")
-        separator.grid(row=2, column=0, columnspan=4, padx=10, pady=1, sticky="ew")
-        separator_label = ttk.Label(self.model_config_frame, text="Auto Hyper-parameters Tuning")
-        separator_label.grid(row=2, column=0, columnspan=4, padx=10, pady=1)
-
-        # TUNE_PARAMETERS
-        self.TUNE_PARAMETERS_var = tk.BooleanVar(value=False)
-        self.TUNE_PARAMETERS_checkbox = tk.Checkbutton(self.model_config_frame, text="Tune Hyper-parameters", variable=self.TUNE_PARAMETERS_var, command=self.base_on_TUNE_PARAMETERS)
-        self.TUNE_PARAMETERS_checkbox.grid(row=3, column=0, padx=10, pady=1)
-
-        # NUM_TRIALS
-        tk.Label(self.model_config_frame, text="Number of Trials:").grid(row=3, column=1, padx=10, pady=1)
-        self.NUM_TRIALS_var = tk.IntVar()
-        self.NUM_TRIALS_entry = tk.Entry(self.model_config_frame, textvariable=self.NUM_TRIALS_var)
-        self.NUM_TRIALS_entry.grid(row=3, column=2)
-        self.NUM_TRIALS_var.set(20)
+        # create_separator
+        self.create_separator(frame=self.model_config_frame, row=1, text="Model Parameters")
 
         ####################################
         # Optimization Layer Configuration #
@@ -190,68 +134,65 @@ class FinOLApp:
         # ttk.Label(self.optimization_config_frame, text=" "*150).grid(row=1000, column=0, columnspan=4, padx=10, pady=0)
 
         # NUM_EPOCHES
-        tk.Label(self.optimization_config_frame, text="Number of Epoches:").grid(row=1, column=0, padx=10, pady=1)
-        self.NUM_EPOCHES_var = tk.IntVar()
-        self.NUM_EPOCHES_entry = tk.Entry(self.optimization_config_frame, textvariable=self.NUM_EPOCHES_var)
-        self.NUM_EPOCHES_entry.grid(row=1, column=1, padx=10, pady=1)
-        self.NUM_EPOCHES_var.set(100)
+        self.create_entry(self.optimization_config_frame, "Number of Epoches:", 1, 0, 100, "IntVar", ["NUM_EPOCHES"])
 
         # SAVE_EVERY
-        tk.Label(self.optimization_config_frame, text="Save Every:").grid(row=1, column=2, padx=10, pady=1)
-        self.SAVE_EVERY_var = tk.IntVar()
-        self.SAVE_EVERY_entry = tk.Entry(self.optimization_config_frame, textvariable=self.SAVE_EVERY_var)
-        self.SAVE_EVERY_entry.grid(row=1, column=3, padx=10, pady=1)
-        self.SAVE_EVERY_var.set(1)
+        self.create_entry(self.optimization_config_frame, "Save Every:", 1, 2, 1, "IntVar", ["SAVE_EVERY"])
 
-        separator = ttk.Separator(self.optimization_config_frame,  orient="horizontal")
-        separator.grid(row=2, column=0, columnspan=4, padx=10, pady=1, sticky="ew")
-        separator_label = ttk.Label(self.optimization_config_frame, text="Optimizer Settings")
-        separator_label.grid(row=2, column=0, columnspan=4, padx=10, pady=1)
+        # create_separator
+        self.create_separator(frame=self.optimization_config_frame, row=2, text="Optimizer Settings")
 
         # OPTIMIZER_NAME
-        self.OPTIMIZER_NAME_options = ["Adadelta", "Adagrad", "Adam", "AdamW", "Adamax", "ASGD", "SGD", "RAdam", "Rprop",
+        self.create_dropdown(self.optimization_config_frame, ["Adadelta", "Adagrad", "Adam", "AdamW", "Adamax", "ASGD", "SGD", "RAdam", "Rprop",
                                        "RMSprop", "NAdam", "A2GradExp", "A2GradInc", "A2GradUni", "AccSGD", "AdaBelief",
                                        "AdaBound", "AdaMod", "Adafactor", "AdamP", "AggMo", "Apollo", "DiffGrad", "LARS",
                                        "Lamb", "MADGRAD", "NovoGrad", "PID", "QHAdam", "QHM", "Ranger", "RangerQH", "RangerVA",
-                                       "SGDP", "SGDW", "SWATS", "Yogi"]
-        tk.Label(self.optimization_config_frame, text="Select Optimizer:").grid(row=3, column=0, padx=10, pady=1)
-        self.OPTIMIZER_NAME_var = tk.StringVar()
-        self.OPTIMIZER_NAME_dropdown = ttk.Combobox(self.optimization_config_frame, textvariable=self.OPTIMIZER_NAME_var, values=self.OPTIMIZER_NAME_options)
-        self.OPTIMIZER_NAME_dropdown.grid(row=3, column=1, padx=10, pady=1)
-        self.OPTIMIZER_NAME_dropdown.current(2)
-
+                                       "SGDP", "SGDW", "SWATS", "Yogi"],
+                             "Select Optimizer:", 3, 0, 2, "StringVar", ["OPTIMIZER_NAME"])
         # LEARNING_RATE
-        tk.Label(self.optimization_config_frame, text="Set Learning Rate:").grid(row=3, column=2, padx=10, pady=1)
-        self.LEARNING_RATE_var = tk.DoubleVar()
-        self.LEARNING_RATE_entry = tk.Entry(self.optimization_config_frame, textvariable=self.LEARNING_RATE_var)
-        self.LEARNING_RATE_entry.grid(row=3, column=3, padx=10, pady=1)
-        self.LEARNING_RATE_var.set(0.001)
+        self.create_entry(self.optimization_config_frame, "Set Learning Rate:", 3, 2, 0.001, "DoubleVar", ["LEARNING_RATE"])
 
-        separator = ttk.Separator(self.optimization_config_frame,  orient="horizontal")
-        separator.grid(row=4, column=0, columnspan=4, padx=10, pady=1, sticky="ew")
-        separator_label = ttk.Label(self.optimization_config_frame, text="Criterion Settings")
-        separator_label.grid(row=4, column=0, columnspan=4, padx=10, pady=1)
+        # create_separator
+        self.create_separator(frame=self.optimization_config_frame, row=4, text="Criterion Settings")
 
         # CRITERION_NAME
-        self.CRITERION_NAME_options = ["LOG_WEALTH", "LOG_WEALTH_L2_DIVERSIFICATION", "LOG_WEALTH_L2_CONCENTRATION",
-                                       "L2_DIVERSIFICATION", "L2_CONCENTRATION", "SHARPE_RATIO", "VOLATILITY"]
-        tk.Label(self.optimization_config_frame, text="Select Criterion:").grid(row=6, column=0, padx=10, pady=1)
-        self.CRITERION_NAME_var = tk.StringVar()
-        self.CRITERION_NAME_dropdown = ttk.Combobox(self.optimization_config_frame, textvariable=self.CRITERION_NAME_var, values=self.CRITERION_NAME_options)
-        self.CRITERION_NAME_dropdown.grid(row=6, column=1, padx=10, pady=1)
-        self.CRITERION_NAME_dropdown.current(0)
+        self.create_dropdown(self.optimization_config_frame,
+                             ["LogWealth", "LogWealth_L2Diversification", "LogWealth_L2Concentration", "L2Diversification", "L2Concentration", "SharpeRatio", "Volatility"],
+                             "Select Criterion:", 6, 0, 0, "StringVar", ["CRITERION_NAME"])
 
         # LAMBDA_L2
-        tk.Label(self.optimization_config_frame, text="Set Lambda:").grid(row=6, column=2, padx=10, pady=1)
-        self.LAMBDA_L2_var = tk.DoubleVar()
-        self.LAMBDA_L2_entry = tk.Entry(self.optimization_config_frame, textvariable=self.LAMBDA_L2_var)
-        self.LAMBDA_L2_entry.grid(row=6, column=3, padx=10, pady=1)
-        self.LAMBDA_L2_var.set(0.0005)
+        self.create_entry(self.optimization_config_frame, "Set Lambda:", 6, 2, 0.0005, "DoubleVar", ["LAMBDA_L2"])
+        # trace_dropdown with default value
+        self.trace_dropdown(arg_name="CRITERION_NAME", var_value=self.config["CRITERION_NAME"])
 
-        # Trace changes to CRITERION_NAME_var
-        self.CRITERION_NAME_var.trace("w", self.base_on_CRITERION_NAME)
-        # Initial state update
-        self.base_on_CRITERION_NAME()
+        # create_separator
+        self.create_separator(frame=self.optimization_config_frame, row=100, text="Auto Hyper-parameters Tuning")
+
+        # NUM_TRIALS
+        self.create_entry(self.optimization_config_frame, "Number of Trials:", 101, 0, 20, "IntVar", ["NUM_TRIALS"])
+
+        # SAMPLER_NAME
+        self.create_dropdown(self.optimization_config_frame,
+                             ["BruteForceSampler", "CmaEsSampler", "GridSampler", "NSGAIISampler", "NSGAIIISampler",
+                              "QMCSampler", "RandomSampler", "TPESampler", "GPSampler",],
+                             "Select Sampler:", 101, 2, 6, "StringVar", ["SAMPLER_NAME"])
+
+        # PRUNER_NAME
+        self.create_dropdown(self.optimization_config_frame,
+                             ["HyperbandPruner", "MedianPruner", "NopPruner", "PatientPruner", "SuccessiveHalvingPruner", "WilcoxonPruner"],
+                             "Select Pruner:", 102, 0, 1, "StringVar", ["PRUNER_NAME"])
+
+        # WRAPPED_PRUNER_NAME
+        self.create_dropdown(self.optimization_config_frame,
+                             ["HyperbandPruner", "MedianPruner", "SuccessiveHalvingPruner", "WilcoxonPruner"],
+                             "Select Wrapped Pruner:", 102, 2, 1, "StringVar", ["WRAPPED_PRUNER_NAME"])
+        # trace_dropdown with default value
+        self.trace_dropdown(arg_name="PRUNER_NAME", var_value=self.config["PRUNER_NAME"])
+
+        # TUNE_PARAMETERS
+        self.create_checkbox(self.optimization_config_frame, "Tune Hyper-parameters", 103, 0, False, ["TUNE_PARAMETERS"])
+        # trace_dropdown with default value
+        self.trace_checkbox(["TUNE_PARAMETERS"], self.config["TUNE_PARAMETERS"])
 
         # train_button
         self.train_button = tk.Button(self.root, text="Train Model", command=self.train_model)
@@ -269,74 +210,40 @@ class FinOLApp:
         self.PLOT_CHINESE_checkbox.grid(row=0, column=0, padx=10, pady=1)
 
         # PROP_WINNERS
-        tk.Label(self.evaluation_config_frame, text="Proportion of Winners").grid(row=0, column=1, padx=10, pady=1)
-        self.PROP_WINNERS_var = tk.DoubleVar()
-        self.PROP_WINNERS_entry = tk.Entry(self.evaluation_config_frame, textvariable=self.PROP_WINNERS_var)
-        self.PROP_WINNERS_entry.grid(row=0, column=2, padx=10, pady=1)
-        self.PROP_WINNERS_var.set(0.5)
+        self.create_entry(self.evaluation_config_frame, "Proportion of Winners:", 0, 1, 0.5, "DoubleVar", ["PROP_WINNERS"])
 
-        separator = ttk.Separator(self.evaluation_config_frame,  orient="horizontal")
-        separator.grid(row=1, column=0, columnspan=4, padx=10, pady=1, sticky="ew")
-        separator_label = ttk.Label(self.evaluation_config_frame, text="Interpretability Analysis")
-        separator_label.grid(row=1, column=0, columnspan=4, padx=10, pady=1)
+        # create_separator
+        self.create_separator(frame=self.evaluation_config_frame, row=1, text="Interpretability Analysis")
 
         # INCLUDE_INTERPRETABILITY_ANALYSIS
-        self.INCLUDE_INTERPRETABILITY_ANALYSIS_var = tk.BooleanVar(value=False)
-        self.INCLUDE_INTERPRETABILITY_ANALYSIS_checkbox = tk.Checkbutton(self.evaluation_config_frame, text="Include Interpretability Analysis", variable=self.INCLUDE_INTERPRETABILITY_ANALYSIS_var)
-        self.INCLUDE_INTERPRETABILITY_ANALYSIS_checkbox.grid(row=2, column=0, padx=10, pady=1)
+        self.create_checkbox(self.evaluation_config_frame, "Include Interpretability Analysis", 2, 0, False, ["INTERPRETABLE_ANALYSIS_CONFIG", "INCLUDE_INTERPRETABILITY_ANALYSIS"])
 
         # INCLUDE_ECONOMIC_DISTILLATION
-        self.INCLUDE_ECONOMIC_DISTILLATION_var = tk.BooleanVar(value=False)
-        self.INCLUDE_ECONOMIC_DISTILLATION_checkbox = tk.Checkbutton(self.evaluation_config_frame, text="Include Economic Distillation", variable=self.INCLUDE_ECONOMIC_DISTILLATION_var)
-        self.INCLUDE_ECONOMIC_DISTILLATION_checkbox.grid(row=2, column=1, padx=10, pady=1)
+        self.create_checkbox(self.evaluation_config_frame, "Include Economic Distillation", 2, 1, False, ["INTERPRETABLE_ANALYSIS_CONFIG", "INCLUDE_ECONOMIC_DISTILLATION"])
 
         # PROP_DISTILLED_FEATURES
-        tk.Label(self.evaluation_config_frame, text="Proportion of Distilled Features:").grid(row=2, column=2, padx=10, pady=1)
-        self.PROP_DISTILLED_FEATURES_var = tk.DoubleVar()
-        self.PROP_DISTILLED_FEATURES_entry = tk.Entry(self.evaluation_config_frame, textvariable=self.PROP_DISTILLED_FEATURES_var)
-        self.PROP_DISTILLED_FEATURES_entry.grid(row=2, column=3, padx=10, pady=1)
-        self.PROP_DISTILLED_FEATURES_var.set(0.7)
+        self.create_entry(self.evaluation_config_frame, "Proportion of Distilled Features:", 2, 2, 0.7, "DoubleVar", ["INTERPRETABLE_ANALYSIS_CONFIG", "PROP_DISTILLED_FEATURES"])
 
         # DISTILLER_NAME
-        self.DISTILLER_NAME_options = ["LinearRegression", "Ridge", "RidgeCV", "SGDRegressor", "ElasticNet", "ElasticNetCV",
+        self.create_dropdown(self.evaluation_config_frame,
+                             ["LinearRegression", "Ridge", "RidgeCV", "SGDRegressor", "ElasticNet", "ElasticNetCV",
                                        "Lars", "LarsCV", "Lasso", "LassoCV", "LassoLars", "LassoLarsCV", "LassoLarsIC",
                                        "OrthogonalMatchingPursuit", "OrthogonalMatchingPursuitCV", "ARDRegression",
                                        "BayesianRidge", "HuberRegressor", "QuantileRegressor", "RANSACRegressor",
                                        "TheilSenRegressor", "PoissonRegressor", "TweedieRegressor", "GammaRegressor",
-                                       "PassiveAggressiveRegressor"]
-        tk.Label(self.evaluation_config_frame, text="Select Distiller:").grid(row=3, column=0, padx=10, pady=1)
-        self.DISTILLER_NAME_var = tk.StringVar()
-        self.DISTILLER_NAME_dropdown = ttk.Combobox(self.evaluation_config_frame, textvariable=self.DISTILLER_NAME_var, values=self.DISTILLER_NAME_options)
-        self.DISTILLER_NAME_dropdown.grid(row=3, column=1, padx=10, pady=1)
-        self.DISTILLER_NAME_dropdown.current(8)
+                                       "PassiveAggressiveRegressor"], "Select Distiller:", 3, 0, 8, "StringVar", ["INTERPRETABLE_ANALYSIS_CONFIG", "DISTILLER_NAME"])
 
         # Y_NAME
-        self.Y_NAME_options = ["SCORES", "PORTFOLIOS"]
-        tk.Label(self.evaluation_config_frame, text="Select Y Name:").grid(row=3, column=2, padx=10, pady=1)
-        self.Y_NAME_var = tk.StringVar()
-        self.Y_NAME_dropdown = ttk.Combobox(self.evaluation_config_frame, textvariable=self.Y_NAME_var, values=self.Y_NAME_options)
-        self.Y_NAME_dropdown.grid(row=3, column=3, padx=10, pady=1)
-        self.Y_NAME_dropdown.current(1)
+        self.create_dropdown(self.evaluation_config_frame, ["Scores", "Portfolios"], "Select Y Name:", 3, 2, 1, "StringVar", ["INTERPRETABLE_ANALYSIS_CONFIG", "Y_NAME"])
 
-        separator = ttk.Separator(self.evaluation_config_frame,  orient="horizontal")
-        separator.grid(row=4, column=0, columnspan=4, padx=10, pady=1, sticky="ew")
-        separator_label = ttk.Label(self.evaluation_config_frame, text="Metric Settings")
-        separator_label.grid(row=4, column=0, columnspan=4, padx=10, pady=1)
+        # separator
+        self.create_separator(frame=self.evaluation_config_frame, row=4, text="Metric Settings")
 
         # TRANSACTIOS_COSTS_RATE
-        tk.Label(self.evaluation_config_frame, text="Set Transactios Costs Rate:").grid(row=5, column=0, padx=10, pady=1)
-        self.TRANSACTIOS_COSTS_RATE_var = tk.DoubleVar()
-        self.TRANSACTIOS_COSTS_RATE_entry = tk.Entry(self.evaluation_config_frame, textvariable=self.TRANSACTIOS_COSTS_RATE_var)
-        self.TRANSACTIOS_COSTS_RATE_entry.grid(row=5, column=1, padx=10, pady=1)
-        self.TRANSACTIOS_COSTS_RATE_var.set(0.005)
+        self.create_entry(self.evaluation_config_frame, "Set Transactios Costs Rate:", 5, 0, 0.005, "DoubleVar", ["METRIC_CONFIG", "PRACTICAL_METRICS", "TRANSACTIOS_COSTS_RATE"])
 
         # TRANSACTIOS_COSTS_RATE_INTERVAL
-        tk.Label(self.evaluation_config_frame, text="Set Transactios Costs Rate Interval:").grid(row=5, column=2, padx=10, pady=1)
-        self.TRANSACTIOS_COSTS_RATE_INTERVAL_var = tk.DoubleVar()
-        self.TRANSACTIOS_COSTS_RATE_INTERVAL_entry = tk.Entry(self.evaluation_config_frame, textvariable=self.TRANSACTIOS_COSTS_RATE_INTERVAL_var)
-        self.TRANSACTIOS_COSTS_RATE_INTERVAL_entry.grid(row=5, column=3, padx=10, pady=1)
-        self.TRANSACTIOS_COSTS_RATE_INTERVAL_var.set(0.001)
-
+        self.create_entry(self.evaluation_config_frame, "Set Transactios Costs Rate Interval:", 5, 2, 0.001, "DoubleVar", ["METRIC_CONFIG", "PRACTICAL_METRICS", "TRANSACTIOS_COSTS_RATE_INTERVAL"])
 
         self.evaluate_button = tk.Button(self.root, text="Evaluate Model", command=self.evaluate_model)
         self.evaluate_button.pack(padx=10, pady=5)
@@ -347,127 +254,241 @@ class FinOLApp:
         # self.result_frame = tk.LabelFrame(self.root, text="Results")
         # self.result_frame.pack(padx=10, pady=1, fill="both", expand=True)
 
-    def base_on_CRITERION_NAME(self, *args):
-        # Enable or disable the text box based on the selected value
-        selected_value = self.CRITERION_NAME_var.get()
-        if selected_value == "LOG_WEALTH_L2_DIVERSIFICATION" or selected_value == "LOG_WEALTH_L2_CONCENTRATION":
-            self.LAMBDA_L2_entry.config(state="normal")
-        else:
-            self.LAMBDA_L2_entry.config(state="disabled")
+    def create_checkbox(self, frame, text, row, column, default_value, arg_name):
+        pady = 1
+        var = tk.BooleanVar(value=default_value)
+        checkbox = tk.Checkbutton(frame, text=text, variable=var)
+        checkbox.grid(row=row, column=column, padx=10, pady=pady)
 
-    def base_on_LOAD_LOCAL_DATALOADER(self):
-        if self.LOAD_LOCAL_DATALOADER_var.get():
-            self.SCALER_dropdown.config(state="disabled")
-            self.INCLUDE_OHLCV_FEATURES_chk.config(state="disabled")
-            self.INCLUDE_OVERLAP_FEATURES_chk.config(state="disabled")
-            self.INCLUDE_MOMENTUM_FEATURES_chk.config(state="disabled")
-            self.INCLUDE_VOLUME_FEATURES_chk.config(state="disabled")
-            self.INCLUDE_CYCLE_FEATURES_chk.config(state="disabled")
-            self.INCLUDE_PRICE_FEATURES_chk.config(state="disabled")
-            self.INCLUDE_VOLATILITY_FEATURES_chk.config(state="disabled")
-            self.INCLUDE_PATTERN_FEATURES_chk.config(state="disabled")
-            self.INCLUDE_WINDOW_DATA_chk.config(state="disabled")
-            self.WINDOW_SIZE_entry.config(state="disabled")
-        else:
-            self.SCALER_dropdown.config(state="normal")
-            self.INCLUDE_OHLCV_FEATURES_chk.config(state="normal")
-            self.INCLUDE_OVERLAP_FEATURES_chk.config(state="normal")
-            self.INCLUDE_MOMENTUM_FEATURES_chk.config(state="normal")
-            self.INCLUDE_VOLUME_FEATURES_chk.config(state="normal")
-            self.INCLUDE_CYCLE_FEATURES_chk.config(state="normal")
-            self.INCLUDE_PRICE_FEATURES_chk.config(state="normal")
-            self.INCLUDE_VOLATILITY_FEATURES_chk.config(state="normal")
-            self.INCLUDE_PATTERN_FEATURES_chk.config(state="normal")
-            self.INCLUDE_WINDOW_DATA_chk.config(state="normal")
-            self.WINDOW_SIZE_entry.config(state="normal")
+        checkbox_mapping = {
+            "INCLUDE_OHLCV_FEATURES": "INCLUDE_OHLCV_FEATURES_checkbox",
+            "INCLUDE_OVERLAP_FEATURES": "INCLUDE_OVERLAP_FEATURES_checkbox",
+            "INCLUDE_MOMENTUM_FEATURES": "INCLUDE_MOMENTUM_FEATURES_checkbox",
+            "INCLUDE_VOLUME_FEATURES": "INCLUDE_VOLUME_FEATURES_checkbox",
+            "INCLUDE_CYCLE_FEATURES": "INCLUDE_CYCLE_FEATURES_checkbox",
+            "INCLUDE_PRICE_FEATURES": "INCLUDE_PRICE_FEATURES_checkbox",
+            "INCLUDE_VOLATILITY_FEATURES": "INCLUDE_VOLATILITY_FEATURES_checkbox",
+            "INCLUDE_PATTERN_FEATURES": "INCLUDE_PATTERN_FEATURES_checkbox",
+            "INCLUDE_WINDOW_DATA": "INCLUDE_WINDOW_DATA_checkbox",
+            "TUNE_PARAMETERS": "TUNE_PARAMETERS_checkbox",
+        }
+        for key, attr in checkbox_mapping.items():
+            if key in arg_name:
+                setattr(self, attr, checkbox)
+                break
 
-    def base_on_TUNE_PARAMETERS(self):
-        if self.TUNE_PARAMETERS_var.get():
-            self.NUM_TRIALS_entry.config(state="normal")
-        else:
-            self.NUM_TRIALS_entry.config(state="disabled")
+        # write default value to config
+        self.write_var_to_config(arg_name, var.get())
 
-    def base_on_INCLUDE_WINDOW_DATA(self):
-        if self.INCLUDE_WINDOW_DATA_var.get():
-            self.WINDOW_SIZE_entry.config(state="normal")
-        else:
-            self.WINDOW_SIZE_entry.config(state="disabled")
+        # trace var change, write new var value to config
+        var.trace("w", lambda *args: self.write_var_to_config(arg_name, var.get()))
 
-    def load_dataset(self):
-        config = load_config()
+        # trace var change, modify others state
+        var.trace("w", lambda *args: self.trace_checkbox(arg_name, var.get()))
 
-        config["DEVICE"] = self.DEVICE_var.get()
-        config["MANUAL_SEED"] = self.MANUAL_SEED_var.get()
+    def trace_checkbox(self, arg_name, var_value):
+        if "LOAD_LOCAL_DATALOADER" in arg_name:
+            widgets = [
+                self.SCALER_dropdown,
+                self.INCLUDE_WINDOW_DATA_checkbox,
+                self.INCLUDE_OHLCV_FEATURES_checkbox,
+                self.INCLUDE_OVERLAP_FEATURES_checkbox,
+                self.INCLUDE_MOMENTUM_FEATURES_checkbox,
+                self.INCLUDE_VOLUME_FEATURES_checkbox,
+                self.INCLUDE_CYCLE_FEATURES_checkbox,
+                self.INCLUDE_PRICE_FEATURES_checkbox,
+                self.INCLUDE_VOLATILITY_FEATURES_checkbox,
+                self.INCLUDE_PATTERN_FEATURES_checkbox,
+                self.WINDOW_SIZE_entry
+            ]
+            state = "disabled" if var_value else "normal"
+            for widget in widgets:
+                widget.config(state=state)
 
-        config["LOAD_LOCAL_DATALOADER"] = self.LOAD_LOCAL_DATALOADER_var.get()
-        config["DATASET_NAME"] = self.DATASET_NAME_var.get()
-        config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OHLCV_FEATURES"] = self.INCLUDE_OHLCV_FEATURES_var.get()
-        config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OVERLAP_FEATURES"] = self.INCLUDE_OVERLAP_FEATURES_var.get()
-        config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_MOMENTUM_FEATURES"] = self.INCLUDE_MOMENTUM_FEATURES_var.get()
-        config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLUME_FEATURES"] = self.INCLUDE_VOLUME_FEATURES_var.get()
-        config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_CYCLE_FEATURES"] = self.INCLUDE_CYCLE_FEATURES_var.get()
-        config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PRICE_FEATURES"] = self.INCLUDE_PRICE_FEATURES_var.get()
-        config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLATILITY_FEATURES"] = self.INCLUDE_VOLATILITY_FEATURES_var.get()
-        config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PATTERN_FEATURES"] = self.INCLUDE_PATTERN_FEATURES_var.get()
-        config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["INCLUDE_WINDOW_DATA"] = self.INCLUDE_WINDOW_DATA_var.get()
-        config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"] = self.WINDOW_SIZE_var.get()
-        config["SCALER"] = self.SCALER_var.get()
+        if "TUNE_PARAMETERS" in arg_name:
+            widgets = [
+                self.NUM_TRIALS_entry,
+                self.SAMPLER_NAME_dropdown,
+                self.PRUNER_NAME_dropdown,
+                self.WRAPPED_PRUNER_NAME_dropdown,
+            ]
+            state = "normal" if var_value else "disabled"
+            for widget in widgets:
+                widget.config(state=state)
 
-        update_config(config)
+        if "INCLUDE_WINDOW_DATA" in arg_name:
+            widgets = [self.WINDOW_SIZE_entry,]
+            state = "normal" if var_value else "disabled"
+            for widget in widgets:
+                widget.config(state=state)
+
+    def create_dropdown(self, frame, options, text, row, column, default_value, value_type, arg_name):
+        pady = 1
+        tk.Label(frame, text=text).grid(row=row, column=column, padx=10, pady=pady)
+        var = getattr(tk, value_type)()
+        dropdown = ttk.Combobox(frame, textvariable=var, values=options)
+        dropdown.grid(row=row, column=column+1, padx=10, pady=pady)
+        dropdown.current(default_value)
+
+        dropdown_mapping = {
+            "SCALER": "SCALER_dropdown",
+            "MODEL_NAME": "MODEL_NAME_dropdown",
+            "SAMPLER_NAME": "SAMPLER_NAME_dropdown",
+            "PRUNER_NAME": "PRUNER_NAME_dropdown",
+            "WRAPPED_PRUNER_NAME": "WRAPPED_PRUNER_NAME_dropdown",
+        }
+        for key, attr in dropdown_mapping.items():
+            if key in arg_name:
+                setattr(self, attr, dropdown)
+                break
+
+        print("MODEL_NAME", arg_name, var.get())
+        # write default value to config
+        self.write_var_to_config(arg_name, var.get())
+
+        # trace var change, write new var value to config
+        var.trace("w", lambda *args: self.write_var_to_config(arg_name, var.get()))
+
+        # trace var change, modify others state
+        var.trace("w", lambda *args: self.trace_dropdown(arg_name, var.get()))
+
+    def trace_dropdown(self, arg_name, var_value):
+        if "CRITERION_NAME" in arg_name:
+            widgets = [self.LAMBDA_L2_entry,]
+            state = "normal" if var_value == "LogWealth_L2Diversification" or var_value == "LogWealth_L2Concentration" else "disabled"
+            for widget in widgets:
+                widget.config(state=state)
+
+        if "MODEL_NAME" in arg_name:
+            MODEL_NAME = var_value
+            print("MODEL_NAME:", var_value)
+            for widget in self.model_config_frame.winfo_children():
+                if str(widget) in [".!labelframe3.!label", ".!labelframe3.!combobox",]:
+                    pass
+                else:
+                    widget.destroy()
+
+            # write default value to config
+            self.write_var_to_config(["MODEL_NAME"], MODEL_NAME)
+
+            # create_separator
+            self.create_separator(frame=self.model_config_frame, row=2, text="Model Parameters")
+
+            if MODEL_NAME == "AlphaPortfolio":
+                self.create_entry(self.model_config_frame, "Number of Layers:", row=3, column=0, default_value=1,
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "NUM_LAYERS"])
+                self.create_entry(self.model_config_frame, "Dimension of Embedding:", row=3, column=2, default_value=256,
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DIM_EMBEDDING"])
+                self.create_entry(self.model_config_frame, "Dimension of Feedforward:", row=3, column=4, default_value=1021,
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DIM_FEEDFORWARD"])
+                self.create_entry(self.model_config_frame, "Number of Heads:", row=4, column=0, default_value=4,
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "NUM_HEADS"])
+                self.create_entry(self.model_config_frame, "Dropout Rate:", row=4, column=2, default_value=0.2,
+                                  value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
+
+            elif MODEL_NAME == "CNN":
+                self.create_entry(self.model_config_frame, "Out Channels:", row=3, column=0, default_value=128,
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "OUT_CHANNELS"])
+                self.create_entry(self.model_config_frame, "Kernel Size:", row=3, column=2, default_value=3,
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "KERNEL_SIZE"])
+                self.create_entry(self.model_config_frame, "Stride:", row=3, column=4, default_value=1,
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "STRIDE"])
+                self.create_entry(self.model_config_frame, "Hidden Size:", row=4, column=0, default_value=32,
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "HIDDEN_SIZE"])
+                self.create_entry(self.model_config_frame, "Dropout Rate:", row=4, column=2, default_value=0.2,
+                                  value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
+
+
+
+            # # trace var change, write new var value to config
+            # self.MODEL_NAME_var.trace("w", lambda *args: self.write_var_to_config(["MODEL_NAME"], MODEL_NAME))
+
+        if "PRUNER_NAME" in arg_name:
+            widgets = [self.WRAPPED_PRUNER_NAME_dropdown,]
+            state = "normal" if var_value == "PatientPruner" else "disabled"
+            for widget in widgets:
+                widget.config(state=state)
+
+
+    def create_separator(self, frame, row, text=None):
+        # separator = ttk.Separator(frame, orient="horizontal")
+        # separator.grid(row=row, column=0, columnspan=6, padx=10, pady=1, sticky="ew")
+        separator_label = ttk.Label(frame, text="-"*200)
+        separator_label.grid(row=row, column=0, columnspan=6, padx=10, pady=1)
+        if text != None:
+            separator_label = ttk.Label(frame, text=text)
+            separator_label.grid(row=row, column=0, columnspan=6, padx=10, pady=1)
+
+    def create_entry(self, frame, text, row, column, default_value, value_type, arg_name):
+        pady = 1
+        tk.Label(frame, text=text).grid(row=row, column=column, padx=10, pady=pady)
+        var = getattr(tk, value_type)()
+        entry = tk.Entry(frame, textvariable=var)
+        entry.grid(row=row, column=column + 1, padx=10, pady=pady)
+        var.set(default_value)
+
+        entry_mapping = {
+            "WINDOW_SIZE": "WINDOW_SIZE_entry",
+            "LAMBDA_L2": "LAMBDA_L2_entry",
+            "NUM_TRIALS": "NUM_TRIALS_entry",
+        }
+        for key, attr in entry_mapping.items():
+            if key in arg_name:
+                setattr(self, attr, entry)
+                break
+
+        # write default value to config
+        self.write_var_to_config(arg_name, var.get())
+
+        # trace var change, write new var value to config
+        var.trace("w", lambda *args: self.write_var_to_config(arg_name, var.get()))
+
+
+    def write_var_to_config(self, arg_name, var_value):
+        if not isinstance(arg_name, list):
+            raise ValueError("arg_name must be list")
 
         try:
-            self.load_dataset_output = DatasetLoader().load_dataset()
-            messagebox.showinfo("Success", f"Dataset '{self.DATASET_NAME_var.get()}' loaded successfully!")
-        except Exception as e:
-            messagebox.showerror("Error", f"Failed to load dataset '{self.DATASET_NAME_var.get()}': {e}")
+            if isinstance(arg_name, list):
+                if len(arg_name) == 1:
+                    a = arg_name[0]
+                    self.config[a] = var_value
+                if len(arg_name) == 2:
+                    a, b = arg_name
+                    self.config[a][b] = var_value
+                if len(arg_name) == 3:
+                    a, b, c = arg_name
+                    print(a, b, c)
+                    self.config[a][b][c] = var_value
 
+            update_config(self.config)
+        except Exception as e:
+            print(e)
+
+    def load_dataset(self):
+        try:
+            self.load_dataset_output = DatasetLoader().load_dataset()
+            messagebox.showinfo("Success", f"Dataset '{self.config['DATASET_NAME']}' loaded successfully!")
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to load dataset '{self.config['DATASET_NAME']}': {e}")
 
     def train_model(self):
-        config = load_config()
-
-        config["MODEL_NAME"] = self.MODEL_NAME_var.get()
-        config["TUNE_PARAMETERS"] = self.TUNE_PARAMETERS_var.get()
-        config["NUM_TRIALS"] = self.NUM_TRIALS_var.get()
-
-        config["NUM_EPOCHES"] = self.NUM_EPOCHES_var.get()
-        config["SAVE_EVERY"] = self.SAVE_EVERY_var.get()
-        config["OPTIMIZER_NAME"] = self.OPTIMIZER_NAME_var.get()
-        config["LEARNING_RATE"] = self.LEARNING_RATE_var.get()
-        config["CRITERION_NAME"] = self.CRITERION_NAME_var.get()
-        config["LAMBDA_L2"] = self.LAMBDA_L2_var.get()
-
-        update_config(config)
-
         if hasattr(self, 'load_dataset_output'):
             try:
                 self.train_model_output = ModelTrainer(self.load_dataset_output).train_model()
-                messagebox.showinfo("Success", f"Model '{self.MODEL_NAME_var.get()}' trained successfully!")
+                messagebox.showinfo("Success", f"Model '{self.config['MODEL_NAME']}' trained successfully!")
             except Exception as e:
-                messagebox.showerror("Error", f"Failed to train model '{self.MODEL_NAME_var.get()}': {e}")
+                messagebox.showerror("Error", f"Failed to train model '{self.config['MODEL_NAME']}': {e}")
         else:
             messagebox.showwarning("Warning", "Please load the dataset first!")
 
     def evaluate_model(self):
-        config = load_config()
-
-        config["PLOT_CHINESE"] = self.PLOT_CHINESE_var.get()
-        config["PROP_WINNERS"] = self.PROP_WINNERS_var.get()
-        config["INTERPRETABLE_ANALYSIS_CONFIG"]["INCLUDE_INTERPRETABILITY_ANALYSIS"] = self.INCLUDE_INTERPRETABILITY_ANALYSIS_var.get()
-        config["INTERPRETABLE_ANALYSIS_CONFIG"]["INCLUDE_ECONOMIC_DISTILLATION"] = self.INCLUDE_ECONOMIC_DISTILLATION_var.get()
-        config["INTERPRETABLE_ANALYSIS_CONFIG"]["PROP_DISTILLED_FEATURES"] = self.PROP_DISTILLED_FEATURES_var.get()
-        config["INTERPRETABLE_ANALYSIS_CONFIG"]["DISTILLER_NAME"] = self.DISTILLER_NAME_var.get()
-        config["INTERPRETABLE_ANALYSIS_CONFIG"]["Y_NAME"] = self.Y_NAME_var.get()
-        config["METRIC_CONFIG"]["PRACTICAL_METRICS"]["TRANSACTIOS_COSTS_RATE"] = self.TRANSACTIOS_COSTS_RATE_var.get()
-        config["METRIC_CONFIG"]["PRACTICAL_METRICS"]["TRANSACTIOS_COSTS_RATE_INTERVAL"] = self.TRANSACTIOS_COSTS_RATE_INTERVAL_var.get()
-
-        update_config(config)
-
         if hasattr(self, 'load_dataset_output') and hasattr(self, 'train_model_output'):
             try:
                 self.evaluate_model_output = ModelEvaluator(self.load_dataset_output, self.train_model_output).evaluate_model()
-                messagebox.showinfo("Success", f"Model '{self.MODEL_NAME_var.get()}' evaluated successfully!")
+                messagebox.showinfo("Success", f"Model '{self.config['MODEL_NAME']}' evaluated successfully!")
             except Exception as e:
-                messagebox.showerror("Error", f"Failed to evaluate model: '{self.MODEL_NAME_var.get()}': {e}")
+                messagebox.showerror("Error", f"Failed to evaluate model: '{self.config['MODEL_NAME']}': {e}")
         else:
             messagebox.showwarning("Warning", "Please load the dataset and train the model first!")
 
