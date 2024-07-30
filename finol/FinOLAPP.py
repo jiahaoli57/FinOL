@@ -7,7 +7,7 @@ from tkinter import messagebox, ttk
 from finol.data_layer import DatasetLoader
 from finol.optimization_layer import ModelTrainer
 from finol.evaluation_layer import ModelEvaluator
-from finol.utils import load_config, update_config
+from finol.utils import ROOT_PATH, load_config, update_config, detect_device
 
 
 # def format_string(input_string):
@@ -21,12 +21,13 @@ from finol.utils import load_config, update_config
 class FinOLApp:
     def __init__(self):
         self.config = load_config()
-
         self.root = tk.Tk()
+
+        # self.root.tk.call('source', 'forest-light.tcl')
+        # ttk.Style().theme_use("winnative")  # alt classic
+
         # self.root.state("zoomed")
-        icon = Image.open('finol_logo_icon.png')
-        photo = ImageTk.PhotoImage(icon)
-        self.root.iconphoto(False, photo)
+        self.root.iconphoto(False, ImageTk.PhotoImage(Image.open(ROOT_PATH + "/finol_logo_icon.png")))
         self.root.title("FinOL: Towards Open Benchmarking for Data-Driven Online Portfolio Selection")
         self.create_widgets()
         self.experiment_details = {}
@@ -42,10 +43,14 @@ class FinOLApp:
         self.general_config_frame.pack(padx=100, pady=1, fill="none")
 
         # DEVICE
-        self.create_dropdown(self.general_config_frame, ["cpu", "cuda"], "Select Device:", 0, 0, 0, "StringVar", ["DEVICE"])
+        options = ["auto", "cpu", "cuda"]
+        self.create_dropdown(self.general_config_frame, options, "Select Device:", 0, 0, options.index(self.config["DEVICE"]), "StringVar", ["DEVICE"])
+        # trace_dropdown with default value
+        self.config = detect_device(self.config)
+        update_config(self.config)
 
         # MANUAL_SEED
-        self.create_entry(self.general_config_frame, "Set Seed:", 0, 2, 3407, "IntVar", ["MANUAL_SEED"])
+        self.create_entry(self.general_config_frame, "Set Seed:", 0, 2, self.config["MANUAL_SEED"], "IntVar", ["MANUAL_SEED"])
 
         ############################
         # Data Layer Configuration #
@@ -54,55 +59,59 @@ class FinOLApp:
         self.data_config_frame.pack(padx=10, pady=1, fill="none")
 
         # DATASET_NAME
-        self.create_dropdown(self.data_config_frame, ["NYSE(O)", "NYSE(N)", "DJIA", "SP500", "TSE", "SSE", "HSI", "CMEG", "CRYPTO"],
-                             "Select Dataset:", 0, 0, 0, "StringVar", ["DATASET_NAME"])
+        options = ["NYSE(O)", "NYSE(N)", "DJIA", "SP500", "TSE", "SSE", "HSI", "CMEG", "CRYPTO"]
+        self.create_dropdown(self.data_config_frame, options, "Select Dataset:", 0, 0, options.index(self.config["DATASET_NAME"]), "StringVar", ["DATASET_NAME"])
 
         # SCALER
-        self.create_dropdown(self.data_config_frame, ["None", "StandardScaler", "MinMaxScaler", "MaxAbsScaler", "RobustScaler",
-                       "WindowStandardScaler", "WindowMinMaxScaler", "WindowMaxAbsScaler", "WindowRobustScaler"],
-                             "Select Scaler:", 0, 2, 6, "StringVar", ["SCALER"])
+        options = ["None", "StandardScaler", "MinMaxScaler", "MaxAbsScaler", "RobustScaler", "WindowStandardScaler",
+                   "WindowMinMaxScaler", "WindowMaxAbsScaler", "WindowRobustScaler"]
+        self.create_dropdown(self.data_config_frame, options, "Select Scaler:", 0, 2, options.index(self.config["SCALER"]), "StringVar", ["SCALER"])
 
         # create_separator
         self.create_separator(frame=self.data_config_frame, row=1, text="Auto Feature Engineering")
 
         # INCLUDE_OHLCV_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include OHLCV Features", 2, 0, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_OHLCV_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include OHLCV Features", 2, 0, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OHLCV_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_OHLCV_FEATURES"])
 
         # INCLUDE_OVERLAP_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Overlap Features", 2, 1, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_OVERLAP_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Overlap Features", 2, 1, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OVERLAP_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_OVERLAP_FEATURES"])
 
         # INCLUDE_MOMENTUM_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Momentum Features", 2, 2, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_MOMENTUM_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Momentum Features", 2, 2, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_MOMENTUM_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_MOMENTUM_FEATURES"])
 
         # INCLUDE_VOLUME_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Volume Features", 2, 3, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_VOLUME_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Volume Features", 2, 3, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLUME_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_VOLUME_FEATURES"])
 
         # INCLUDE_CYCLE_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Cycle Features", 3, 0, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_CYCLE_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Cycle Features", 3, 0, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_CYCLE_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_CYCLE_FEATURES"])
 
         #  INCLUDE_PRICE_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Price Features", 3, 1, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_PRICE_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Price Features", 3, 1, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PRICE_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_PRICE_FEATURES"])
 
         # INCLUDE_VOLATILITY_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Volatility Features", 3, 2, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_VOLATILITY_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Volatility Features", 3, 2, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLATILITY_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_VOLATILITY_FEATURES"])
 
         #  INCLUDE_PATTERN_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Pattern Features", 3, 3, True, ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_PATTERN_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Pattern Features", 3, 3, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PATTERN_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_PATTERN_FEATURES"])
 
         # create_separator
         self.create_separator(frame=self.data_config_frame, row=4, text="Data Augmentation")
 
         # INCLUDE_WINDOW_DATA
-        self.create_checkbox(self.data_config_frame, "Include Window Data", 5, 0, True, ["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "INCLUDE_WINDOW_DATA"])
+        self.create_checkbox(self.data_config_frame, "Include Window Data", 5, 0, self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["INCLUDE_WINDOW_DATA"], ["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "INCLUDE_WINDOW_DATA"])
 
         # WINDOW_SIZE
-        self.create_entry(self.data_config_frame, "Set Window Size:", 5, 1, 10, "IntVar", ["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "WINDOW_SIZE"])
+        self.create_entry(self.data_config_frame, "Set Window Size:", 5, 1, self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"], "IntVar", ["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "WINDOW_SIZE"])
+        # trace_checkbox with default value
+        self.trace_checkbox(["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "INCLUDE_WINDOW_DATA"], self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["INCLUDE_WINDOW_DATA"])
 
         # create_separator
         self.create_separator(frame=self.data_config_frame, row=6)
 
         # LOAD_LOCAL_DATALOADER
-        self.create_checkbox(self.data_config_frame, "Load Local Dataloader", 7, 0, False, ["LOAD_LOCAL_DATALOADER"])
+        self.create_checkbox(self.data_config_frame, "Load Local Dataloader", 7, 0, self.config["LOAD_LOCAL_DATALOADER"], ["LOAD_LOCAL_DATALOADER"])
+        # trace_checkbox with default value
+        self.trace_checkbox(["LOAD_LOCAL_DATALOADER"], self.config["LOAD_LOCAL_DATALOADER"])
 
         # load_button
         self.load_button = tk.Button(self.root, text="Load Dataset", command=self.load_dataset)
@@ -118,8 +127,8 @@ class FinOLApp:
         # ttk.Label(self.model_config_frame, text=" "*150).grid(row=100, column=0, columnspan=4, padx=10, pady=0)
 
         # MODEL_NAME
-        self.create_dropdown(self.model_config_frame, ["--", "AlphaPortfolio", "CNN", "DNN", "LSRE-CAAN", "LSTM", "RNN", "Transformer",],
-                             "Select Model:", 0, 2, 0, "StringVar", ["MODEL_NAME"])
+        options = ["--", "AlphaPortfolio", "CNN", "DNN", "LSRE-CAAN", "LSTM", "RNN", "Transformer",]
+        self.create_dropdown(self.model_config_frame, options, "Select Model:", 0, 2, options.index(self.config["MODEL_NAME"]), "StringVar", ["MODEL_NAME"])
 
         # create_separator
         self.create_separator(frame=self.model_config_frame, row=1, text="Model Parameters")
@@ -130,68 +139,61 @@ class FinOLApp:
         self.optimization_config_frame = tk.LabelFrame(self.root, text="Optimization Layer Configuration", font=("Helvetica", 10, "bold"))
         self.optimization_config_frame.pack(padx=10, pady=1, fill="none")
 
-        # ttk.Label(self.optimization_config_frame, text=" "*150).grid(row=0, column=0, columnspan=4, padx=10, pady=0)
-        # ttk.Label(self.optimization_config_frame, text=" "*150).grid(row=1000, column=0, columnspan=4, padx=10, pady=0)
-
         # NUM_EPOCHES
-        self.create_entry(self.optimization_config_frame, "Number of Epoches:", 1, 0, 100, "IntVar", ["NUM_EPOCHES"])
+        self.create_entry(self.optimization_config_frame, "Number of Epoches:", 1, 0, self.config["NUM_EPOCHES"], "IntVar", ["NUM_EPOCHES"])
 
         # SAVE_EVERY
-        self.create_entry(self.optimization_config_frame, "Save Every:", 1, 2, 1, "IntVar", ["SAVE_EVERY"])
+        self.create_entry(self.optimization_config_frame, "Save Every:", 1, 2, self.config["SAVE_EVERY"], "IntVar", ["SAVE_EVERY"])
 
         # create_separator
         self.create_separator(frame=self.optimization_config_frame, row=2, text="Optimizer Settings")
 
         # OPTIMIZER_NAME
-        self.create_dropdown(self.optimization_config_frame, ["Adadelta", "Adagrad", "Adam", "AdamW", "Adamax", "ASGD", "SGD", "RAdam", "Rprop",
-                                       "RMSprop", "NAdam", "A2GradExp", "A2GradInc", "A2GradUni", "AccSGD", "AdaBelief",
-                                       "AdaBound", "AdaMod", "Adafactor", "AdamP", "AggMo", "Apollo", "DiffGrad", "LARS",
-                                       "Lamb", "MADGRAD", "NovoGrad", "PID", "QHAdam", "QHM", "Ranger", "RangerQH", "RangerVA",
-                                       "SGDP", "SGDW", "SWATS", "Yogi"],
-                             "Select Optimizer:", 3, 0, 2, "StringVar", ["OPTIMIZER_NAME"])
+        options = ["Adadelta", "Adagrad", "Adam", "AdamW", "Adamax", "ASGD", "SGD", "RAdam", "Rprop", "RMSprop",
+                   "NAdam", "A2GradExp", "A2GradInc", "A2GradUni", "AccSGD", "AdaBelief", "AdaBound", "AdaMod",
+                   "Adafactor", "AdamP", "AggMo", "Apollo", "DiffGrad", "LARS", "Lamb", "MADGRAD", "NovoGrad", "PID",
+                   "QHAdam", "QHM", "Ranger", "RangerQH", "RangerVA", "SGDP", "SGDW", "SWATS", "Yogi"]
+        self.create_dropdown(self.optimization_config_frame, options, "Select Optimizer:", 3, 0, options.index(self.config["OPTIMIZER_NAME"]), "StringVar", ["OPTIMIZER_NAME"])
+
         # LEARNING_RATE
-        self.create_entry(self.optimization_config_frame, "Set Learning Rate:", 3, 2, 0.001, "DoubleVar", ["LEARNING_RATE"])
+        self.create_entry(self.optimization_config_frame, "Set Learning Rate:", 3, 2, self.config["LEARNING_RATE"], "DoubleVar", ["LEARNING_RATE"])
 
         # create_separator
         self.create_separator(frame=self.optimization_config_frame, row=4, text="Criterion Settings")
 
         # CRITERION_NAME
-        self.create_dropdown(self.optimization_config_frame,
-                             ["LogWealth", "LogWealth_L2Diversification", "LogWealth_L2Concentration", "L2Diversification", "L2Concentration", "SharpeRatio", "Volatility"],
-                             "Select Criterion:", 6, 0, 0, "StringVar", ["CRITERION_NAME"])
+        options = ["LogWealth", "LogWealth_L2Diversification", "LogWealth_L2Concentration", "L2Diversification", "L2Concentration", "SharpeRatio", "Volatility"]
+        self.create_dropdown(self.optimization_config_frame, options, "Select Criterion:", 6, 0, options.index(self.config["CRITERION_NAME"]), "StringVar", ["CRITERION_NAME"])
 
         # LAMBDA_L2
-        self.create_entry(self.optimization_config_frame, "Set Lambda:", 6, 2, 0.0005, "DoubleVar", ["LAMBDA_L2"])
+        self.create_entry(self.optimization_config_frame, "Set Lambda:", 6, 2, self.config["LAMBDA_L2"], "DoubleVar", ["LAMBDA_L2"])
         # trace_dropdown with default value
-        self.trace_dropdown(arg_name="CRITERION_NAME", var_value=self.config["CRITERION_NAME"])
+        self.trace_dropdown(["CRITERION_NAME"], self.config["CRITERION_NAME"])
 
         # create_separator
         self.create_separator(frame=self.optimization_config_frame, row=100, text="Auto Hyper-parameters Tuning")
 
         # NUM_TRIALS
-        self.create_entry(self.optimization_config_frame, "Number of Trials:", 101, 0, 20, "IntVar", ["NUM_TRIALS"])
+        self.create_entry(self.optimization_config_frame, "Number of Trials:", 101, 0, self.config["NUM_TRIALS"], "IntVar", ["NUM_TRIALS"])
 
         # SAMPLER_NAME
-        self.create_dropdown(self.optimization_config_frame,
-                             ["BruteForceSampler", "CmaEsSampler", "GridSampler", "NSGAIISampler", "NSGAIIISampler",
-                              "QMCSampler", "RandomSampler", "TPESampler", "GPSampler",],
-                             "Select Sampler:", 101, 2, 6, "StringVar", ["SAMPLER_NAME"])
+        options = ["BruteForceSampler", "CmaEsSampler", "GridSampler", "NSGAIISampler", "NSGAIIISampler", "QMCSampler",
+                   "RandomSampler", "TPESampler", "GPSampler",]
+        self.create_dropdown(self.optimization_config_frame, options, "Select Sampler:", 101, 2, options.index(self.config["SAMPLER_NAME"]), "StringVar", ["SAMPLER_NAME"])
 
         # PRUNER_NAME
-        self.create_dropdown(self.optimization_config_frame,
-                             ["HyperbandPruner", "MedianPruner", "NopPruner", "PatientPruner", "SuccessiveHalvingPruner", "WilcoxonPruner"],
-                             "Select Pruner:", 102, 0, 1, "StringVar", ["PRUNER_NAME"])
+        options = ["HyperbandPruner", "MedianPruner", "NopPruner", "PatientPruner", "SuccessiveHalvingPruner", "WilcoxonPruner"]
+        self.create_dropdown(self.optimization_config_frame, options, "Select Pruner:", 102, 0, options.index(self.config["PRUNER_NAME"]), "StringVar", ["PRUNER_NAME"])
 
         # WRAPPED_PRUNER_NAME
-        self.create_dropdown(self.optimization_config_frame,
-                             ["HyperbandPruner", "MedianPruner", "SuccessiveHalvingPruner", "WilcoxonPruner"],
-                             "Select Wrapped Pruner:", 102, 2, 1, "StringVar", ["WRAPPED_PRUNER_NAME"])
+        options = ["HyperbandPruner", "MedianPruner", "SuccessiveHalvingPruner", "WilcoxonPruner"]
+        self.create_dropdown(self.optimization_config_frame, options, "Select Wrapped Pruner:", 102, 2, options.index(self.config["WRAPPED_PRUNER_NAME"]), "StringVar", ["WRAPPED_PRUNER_NAME"])
         # trace_dropdown with default value
-        self.trace_dropdown(arg_name="PRUNER_NAME", var_value=self.config["PRUNER_NAME"])
+        self.trace_dropdown(["PRUNER_NAME"], self.config["PRUNER_NAME"])
 
         # TUNE_PARAMETERS
-        self.create_checkbox(self.optimization_config_frame, "Tune Hyper-parameters", 103, 0, False, ["TUNE_PARAMETERS"])
-        # trace_dropdown with default value
+        self.create_checkbox(self.optimization_config_frame, "Tune Hyper-parameters", 103, 0, self.config["TUNE_PARAMETERS"], ["TUNE_PARAMETERS"])
+        # trace_checkbox with default value
         self.trace_checkbox(["TUNE_PARAMETERS"], self.config["TUNE_PARAMETERS"])
 
         # train_button
@@ -204,46 +206,48 @@ class FinOLApp:
         self.evaluation_config_frame = tk.LabelFrame(self.root, text="Evaluation Layer Configuration", font=("Helvetica", 10, "bold"))
         self.evaluation_config_frame.pack(padx=10, pady=1, fill="none")
 
-        # PLOT_CHINESE
-        self.PLOT_CHINESE_var = tk.BooleanVar(value=False)
-        self.PLOT_CHINESE_checkbox = tk.Checkbutton(self.evaluation_config_frame, text="Plot Chinese", variable=self.PLOT_CHINESE_var)
-        self.PLOT_CHINESE_checkbox.grid(row=0, column=0, padx=10, pady=1)
+        # PLOT_LANGUAGE
+        # self.PLOT_CHINESE_var = tk.BooleanVar(value=False)
+        # self.PLOT_CHINESE_checkbox = tk.Checkbutton(self.evaluation_config_frame, text="Plot Chinese", variable=self.PLOT_CHINESE_var)
+        # self.PLOT_CHINESE_checkbox.grid(row=0, column=0, padx=10, pady=1)
+        options = ["EN", "CN"]
+        self.create_dropdown(self.evaluation_config_frame, options, "Select Plot Language:", 0, 0, options.index(self.config["PLOT_LANGUAGE"]), "StringVar", ["PLOT_LANGUAGE"])
 
         # PROP_WINNERS
-        self.create_entry(self.evaluation_config_frame, "Proportion of Winners:", 0, 1, 0.5, "DoubleVar", ["PROP_WINNERS"])
+        self.create_entry(self.evaluation_config_frame, "Proportion of Winners:", 0, 2, self.config["PROP_WINNERS"], "DoubleVar", ["PROP_WINNERS"])
 
         # create_separator
         self.create_separator(frame=self.evaluation_config_frame, row=1, text="Interpretability Analysis")
 
         # INCLUDE_INTERPRETABILITY_ANALYSIS
-        self.create_checkbox(self.evaluation_config_frame, "Include Interpretability Analysis", 2, 0, False, ["INTERPRETABLE_ANALYSIS_CONFIG", "INCLUDE_INTERPRETABILITY_ANALYSIS"])
+        self.create_checkbox(self.evaluation_config_frame, "Include Interpretability Analysis", 2, 0, self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["INCLUDE_INTERPRETABILITY_ANALYSIS"], ["INTERPRETABLE_ANALYSIS_CONFIG", "INCLUDE_INTERPRETABILITY_ANALYSIS"])
 
         # INCLUDE_ECONOMIC_DISTILLATION
-        self.create_checkbox(self.evaluation_config_frame, "Include Economic Distillation", 2, 1, False, ["INTERPRETABLE_ANALYSIS_CONFIG", "INCLUDE_ECONOMIC_DISTILLATION"])
+        self.create_checkbox(self.evaluation_config_frame, "Include Economic Distillation", 2, 1, self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["INCLUDE_ECONOMIC_DISTILLATION"], ["INTERPRETABLE_ANALYSIS_CONFIG", "INCLUDE_ECONOMIC_DISTILLATION"])
 
         # PROP_DISTILLED_FEATURES
-        self.create_entry(self.evaluation_config_frame, "Proportion of Distilled Features:", 2, 2, 0.7, "DoubleVar", ["INTERPRETABLE_ANALYSIS_CONFIG", "PROP_DISTILLED_FEATURES"])
+        self.create_entry(self.evaluation_config_frame, "Proportion of Distilled Features:", 2, 2, self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["PROP_DISTILLED_FEATURES"], "DoubleVar", ["INTERPRETABLE_ANALYSIS_CONFIG", "PROP_DISTILLED_FEATURES"])
 
         # DISTILLER_NAME
-        self.create_dropdown(self.evaluation_config_frame,
-                             ["LinearRegression", "Ridge", "RidgeCV", "SGDRegressor", "ElasticNet", "ElasticNetCV",
-                                       "Lars", "LarsCV", "Lasso", "LassoCV", "LassoLars", "LassoLarsCV", "LassoLarsIC",
-                                       "OrthogonalMatchingPursuit", "OrthogonalMatchingPursuitCV", "ARDRegression",
-                                       "BayesianRidge", "HuberRegressor", "QuantileRegressor", "RANSACRegressor",
-                                       "TheilSenRegressor", "PoissonRegressor", "TweedieRegressor", "GammaRegressor",
-                                       "PassiveAggressiveRegressor"], "Select Distiller:", 3, 0, 8, "StringVar", ["INTERPRETABLE_ANALYSIS_CONFIG", "DISTILLER_NAME"])
+        options = ["LinearRegression", "Ridge", "RidgeCV", "SGDRegressor", "ElasticNet", "ElasticNetCV", "Lars",
+                   "LarsCV", "Lasso", "LassoCV", "LassoLars", "LassoLarsCV", "LassoLarsIC", "OrthogonalMatchingPursuit",
+                   "OrthogonalMatchingPursuitCV", "ARDRegression", "BayesianRidge", "HuberRegressor", "QuantileRegressor",
+                   "RANSACRegressor", "TheilSenRegressor", "PoissonRegressor", "TweedieRegressor", "GammaRegressor",
+                   "PassiveAggressiveRegressor"]
+        self.create_dropdown(self.evaluation_config_frame, options, "Select Distiller:", 3, 0, options.index(self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["DISTILLER_NAME"]), "StringVar", ["INTERPRETABLE_ANALYSIS_CONFIG", "DISTILLER_NAME"])
 
         # Y_NAME
-        self.create_dropdown(self.evaluation_config_frame, ["Scores", "Portfolios"], "Select Y Name:", 3, 2, 1, "StringVar", ["INTERPRETABLE_ANALYSIS_CONFIG", "Y_NAME"])
+        options = ["Scores", "Portfolios"]
+        self.create_dropdown(self.evaluation_config_frame, options, "Select Y Name:", 3, 2, options.index(self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["Y_NAME"]), "StringVar", ["INTERPRETABLE_ANALYSIS_CONFIG", "Y_NAME"])
 
         # separator
         self.create_separator(frame=self.evaluation_config_frame, row=4, text="Metric Settings")
 
         # TRANSACTIOS_COSTS_RATE
-        self.create_entry(self.evaluation_config_frame, "Set Transactios Costs Rate:", 5, 0, 0.005, "DoubleVar", ["METRIC_CONFIG", "PRACTICAL_METRICS", "TRANSACTIOS_COSTS_RATE"])
+        self.create_entry(self.evaluation_config_frame, "Set Transactios Costs Rate:", 5, 0, self.config["METRIC_CONFIG"]["PRACTICAL_METRICS"]["TRANSACTIOS_COSTS_RATE"], "DoubleVar", ["METRIC_CONFIG", "PRACTICAL_METRICS", "TRANSACTIOS_COSTS_RATE"])
 
         # TRANSACTIOS_COSTS_RATE_INTERVAL
-        self.create_entry(self.evaluation_config_frame, "Set Transactios Costs Rate Interval:", 5, 2, 0.001, "DoubleVar", ["METRIC_CONFIG", "PRACTICAL_METRICS", "TRANSACTIOS_COSTS_RATE_INTERVAL"])
+        self.create_entry(self.evaluation_config_frame, "Set Transactios Costs Rate Interval:", 5, 2, self.config["METRIC_CONFIG"]["PRACTICAL_METRICS"]["TRANSACTIOS_COSTS_RATE_INTERVAL"], "DoubleVar", ["METRIC_CONFIG", "PRACTICAL_METRICS", "TRANSACTIOS_COSTS_RATE_INTERVAL"])
 
         self.evaluate_button = tk.Button(self.root, text="Evaluate Model", command=self.evaluate_model)
         self.evaluate_button.pack(padx=10, pady=5)
@@ -299,11 +303,15 @@ class FinOLApp:
                 self.INCLUDE_PRICE_FEATURES_checkbox,
                 self.INCLUDE_VOLATILITY_FEATURES_checkbox,
                 self.INCLUDE_PATTERN_FEATURES_checkbox,
-                self.WINDOW_SIZE_entry
+                self.WINDOW_SIZE_entry,
             ]
             state = "disabled" if var_value else "normal"
             for widget in widgets:
                 widget.config(state=state)
+
+            # double check
+            if self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["INCLUDE_WINDOW_DATA"] is False:
+                self.WINDOW_SIZE_entry.config(state="disabled")
 
         if "TUNE_PARAMETERS" in arg_name:
             widgets = [
@@ -342,7 +350,6 @@ class FinOLApp:
                 setattr(self, attr, dropdown)
                 break
 
-        print("MODEL_NAME", arg_name, var.get())
         # write default value to config
         self.write_var_to_config(arg_name, var.get())
 
@@ -353,6 +360,10 @@ class FinOLApp:
         var.trace("w", lambda *args: self.trace_dropdown(arg_name, var.get()))
 
     def trace_dropdown(self, arg_name, var_value):
+        if "DEVICE" in arg_name:
+            self.config = detect_device(self.config)
+            update_config(self.config)
+
         if "CRITERION_NAME" in arg_name:
             widgets = [self.LAMBDA_L2_entry,]
             state = "normal" if var_value == "LogWealth_L2Diversification" or var_value == "LogWealth_L2Concentration" else "disabled"
@@ -360,6 +371,9 @@ class FinOLApp:
                 widget.config(state=state)
 
         if "MODEL_NAME" in arg_name:
+            # reload the self.config as the config might change when running the optuna_optimizer.py
+            self.config = load_config()
+            #
             MODEL_NAME = var_value
             print("MODEL_NAME:", var_value)
             for widget in self.model_config_frame.winfo_children():
@@ -374,30 +388,38 @@ class FinOLApp:
             # create_separator
             self.create_separator(frame=self.model_config_frame, row=2, text="Model Parameters")
 
+            default_model_parms = self.config["MODEL_PARAMS"][MODEL_NAME]
             if MODEL_NAME == "AlphaPortfolio":
-                self.create_entry(self.model_config_frame, "Number of Layers:", row=3, column=0, default_value=1,
+                self.create_entry(self.model_config_frame, "Number of Layers:", row=3, column=0, default_value=default_model_parms["NUM_LAYERS"],
                                   value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "NUM_LAYERS"])
-                self.create_entry(self.model_config_frame, "Dimension of Embedding:", row=3, column=2, default_value=256,
+                self.create_entry(self.model_config_frame, "Dimension of Embedding:", row=3, column=2, default_value=default_model_parms["DIM_EMBEDDING"],
                                   value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DIM_EMBEDDING"])
-                self.create_entry(self.model_config_frame, "Dimension of Feedforward:", row=3, column=4, default_value=1021,
+                self.create_entry(self.model_config_frame, "Dimension of Feedforward:", row=3, column=4, default_value=default_model_parms["DIM_FEEDFORWARD"],
                                   value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DIM_FEEDFORWARD"])
-                self.create_entry(self.model_config_frame, "Number of Heads:", row=4, column=0, default_value=4,
+                self.create_entry(self.model_config_frame, "Number of Heads:", row=4, column=0, default_value=default_model_parms["NUM_HEADS"],
                                   value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "NUM_HEADS"])
-                self.create_entry(self.model_config_frame, "Dropout Rate:", row=4, column=2, default_value=0.2,
+                self.create_entry(self.model_config_frame, "Dropout Rate:", row=4, column=2, default_value=default_model_parms["DROPOUT"],
                                   value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
 
             elif MODEL_NAME == "CNN":
-                self.create_entry(self.model_config_frame, "Out Channels:", row=3, column=0, default_value=128,
+                self.create_entry(self.model_config_frame, "Out Channels:", row=3, column=0, default_value=default_model_parms["OUT_CHANNELS"],
                                   value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "OUT_CHANNELS"])
-                self.create_entry(self.model_config_frame, "Kernel Size:", row=3, column=2, default_value=3,
+                self.create_entry(self.model_config_frame, "Kernel Size:", row=3, column=2, default_value=default_model_parms["KERNEL_SIZE"],
                                   value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "KERNEL_SIZE"])
-                self.create_entry(self.model_config_frame, "Stride:", row=3, column=4, default_value=1,
+                self.create_entry(self.model_config_frame, "Stride:", row=3, column=4, default_value=default_model_parms["STRIDE"],
                                   value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "STRIDE"])
-                self.create_entry(self.model_config_frame, "Hidden Size:", row=4, column=0, default_value=32,
+                self.create_entry(self.model_config_frame, "Hidden Size:", row=4, column=0, default_value=default_model_parms["HIDDEN_SIZE"],
                                   value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "HIDDEN_SIZE"])
-                self.create_entry(self.model_config_frame, "Dropout Rate:", row=4, column=2, default_value=0.2,
+                self.create_entry(self.model_config_frame, "Dropout Rate:", row=4, column=2, default_value=default_model_parms["DROPOUT"],
                                   value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
 
+            elif MODEL_NAME == "DNN":
+                self.create_entry(self.model_config_frame, "Number of Layers:", row=3, column=0, default_value=default_model_parms["NUM_LAYERS"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "NUM_LAYERS"])
+                self.create_entry(self.model_config_frame, "Hidden Size:", row=3, column=2, default_value=default_model_parms["HIDDEN_SIZE"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "HIDDEN_SIZE"])
+                self.create_entry(self.model_config_frame, "Dropout Rate:", row=3, column=4, default_value=default_model_parms["DROPOUT"],
+                                  value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
 
 
             # # trace var change, write new var value to config
@@ -458,12 +480,12 @@ class FinOLApp:
                     self.config[a][b] = var_value
                 if len(arg_name) == 3:
                     a, b, c = arg_name
-                    print(a, b, c)
                     self.config[a][b][c] = var_value
 
             update_config(self.config)
         except Exception as e:
-            print(e)
+            pass
+            # print(e)
 
     def load_dataset(self):
         try:
@@ -476,11 +498,15 @@ class FinOLApp:
         if hasattr(self, 'load_dataset_output'):
             try:
                 self.train_model_output = ModelTrainer(self.load_dataset_output).train_model()
-                messagebox.showinfo("Success", f"Model '{self.config['MODEL_NAME']}' trained successfully!")
+                messagebox.showinfo("Success", f"Model ``{self.config['MODEL_NAME']}`` trained successfully!")
+
+                # once the model is trained, we update the parms for model in APP
+                self.trace_dropdown(["MODEL_NAME"], self.config['MODEL_NAME'])
             except Exception as e:
-                messagebox.showerror("Error", f"Failed to train model '{self.config['MODEL_NAME']}': {e}")
+                messagebox.showerror("Error", f"Failed to train model ``{self.config['MODEL_NAME']}``: {e}")
         else:
             messagebox.showwarning("Warning", "Please load the dataset first!")
+
 
     def evaluate_model(self):
         if hasattr(self, 'load_dataset_output') and hasattr(self, 'train_model_output'):

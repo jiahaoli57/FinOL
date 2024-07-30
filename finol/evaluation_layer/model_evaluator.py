@@ -27,6 +27,6 @@ if __name__ == "__main__":
     load_dataset_output = DatasetLoader().load_dataset()
     train_model_output = {
         # "logdir": ROOT_PATH + "/logdir/" + DATASET_NAME + "-" + MODEL_NAME
-        "logdir": ROOT_PATH + "/logdir/2024-07-23_15-13-24"
+        "logdir": ROOT_PATH + "/logdir/2024-07-27_21-12-11"
     }
     evaluate_model_output = ModelEvaluator(load_dataset_output, train_model_output).evaluate_model()

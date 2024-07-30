@@ -25,6 +25,7 @@ VERSION = __version__
 
 # What packages are required for this module to be executed?
 REQUIRED = [
+    "requests",
     # 'talib', 'torch_optimizer', 'einops', 'matplotlib'
 ]
 

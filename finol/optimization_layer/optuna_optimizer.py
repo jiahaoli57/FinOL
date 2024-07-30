@@ -1,11 +1,11 @@
 import time
-
 import torch
 import optuna
 import optuna.visualization.matplotlib as mpl
 import matplotlib.pyplot as plt
 
 from tqdm import tqdm
+from tabulate import tabulate
 from finol.model_layer.model_selector import ModelSelector
 from finol.optimization_layer.criterion_selector import CriterionSelector
 from finol.optimization_layer.optimizer_selector import OptimizerSelector
@@ -157,9 +157,12 @@ class OptunaOptimizer:
             # plt.tight_layout()
 
         # Showing optimization results
-        print("Number of finished trials:", len(self.study.trials))
-        print("Best trial parameters:", self.study.best_trial.params)
-        print("Best score:", self.study.best_value)
+        tabulate_data = [
+            ["Number of finished trials", len(self.study.trials)],
+            ["Best trial parameters", self.study.best_trial.params],
+            ["Best score", self.study.best_value]
+        ]
+        print(tabulate(tabulate_data, tablefmt="psql"))  # , headers=["Metric", "Value"]
 
         # Write config
         self.config["MODEL_PARAMS"][self.config["MODEL_NAME"]] = self.study.best_trial.params

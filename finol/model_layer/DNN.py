@@ -1,3 +1,5 @@
+import time
+
 import torch.nn as nn
 
 from finol.data_layer.scaler_selector import ScalerSelector

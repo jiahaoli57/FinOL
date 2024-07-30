@@ -23,7 +23,7 @@ class ModelTrainer:
         self.val_loader = load_dataset_output["val_loader"]  # val_loader \ test_loader_for_train
 
         self.is_ipython = "inline" in matplotlib.get_backend()
-        print(self.is_ipython)
+        # print(self.is_ipython)
 
     def plot_loss_notebook(self):
         if self.is_ipython:

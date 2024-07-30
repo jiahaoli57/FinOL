@@ -8,6 +8,7 @@ from finol.utils import load_config, actual_portfolio_selection
 
 class MetricCaculator:
     def __init__(self, load_dataset_output=None, train_model_output=None, mode="normal"):
+        self.daily_returns = None
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
         self.train_model_output = train_model_output

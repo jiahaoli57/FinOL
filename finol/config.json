@@ -1,10 +1,10 @@
 {
     "_note1": "-------------------------------------- General Configuration --------------------------------------",
     "DEVICE": "cuda",
-    "MANUAL_SEED": 3407,
+    "MANUAL_SEED": 0,
     "_note2": "-------------------------------------- Data Layer Configuration --------------------------------------",
-    "LOAD_LOCAL_DATALOADER": true,
-    "DATASET_NAME": "CRYPTO",
+    "LOAD_LOCAL_DATALOADER": false,
+    "DATASET_NAME": "TSE",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
             "TRAIN_START_TIMESTAMP": "1962-07-03",
@@ -119,14 +119,14 @@
         "CRYPTO": 252
     },
     "_note3": "-------------------------------------- Model Layer Configuration --------------------------------------",
-    "MODEL_NAME": "AlphaPortfolio",
+    "MODEL_NAME": "Transformer",
     "MODEL_PARAMS": {
         "AlphaPortfolio": {
             "NUM_LAYERS": 1,
-            "DIM_EMBEDDING": 256,
-            "DIM_FEEDFORWARD": 256,
-            "NUM_HEADS": 1,
-            "DROPOUT": 0.45
+            "DIM_EMBEDDING": 32,
+            "DIM_FEEDFORWARD": 32,
+            "NUM_HEADS": 4,
+            "DROPOUT": 0.2
         },
         "CNN": {
             "OUT_CHANNELS": 128,
@@ -136,12 +136,12 @@
             "DROPOUT": 0.2
         },
         "DNN": {
-            "NUM_LAYERS": 2,
-            "HIDDEN_SIZE": 192,
-            "DROPOUT": 0.2
+            "NUM_LAYERS": 4,
+            "HIDDEN_SIZE": 128,
+            "DROPOUT": 0.4
         },
         "LSRE-CAAN": {
-            "NUM_LAYERS": 3,
+            "NUM_LAYERS": 1,
             "NUM_LATENTS": 12,
             "LATENT_DIM": 224,
             "CROSS_HEADS": 3,
@@ -551,20 +551,21 @@
         }
     },
     "_note4": "-------------------------------------- Optimization Layer Configuration --------------------------------------",
-    "NUM_EPOCHES": 100,
+    "NUM_EPOCHES": 1,
     "SAVE_EVERY": 1,
-    "OPTIMIZER_NAME": "Adam",
+    "OPTIMIZER_NAME": "Lamb",
     "LEARNING_RATE": 0.001,
     "CRITERION_NAME": "LogWealth",
-    "LAMBDA_L2": 0.0005,
-    "TUNE_PARAMETERS": true,
+    "LAMBDA_L2": 0.005,
+    "TUNE_PARAMETERS": false,
     "NUM_TRIALS": 20,
-    "SAMPLER_NAME": "RandomSampler",
-    "PRUNER_NAME": "MedianPruner",
+    "SAMPLER_NAME": "TPESampler",
+    "PRUNER_NAME": "WilcoxonPruner",
     "WRAPPED_PRUNER_NAME": "MedianPruner",
     "PLOT_DYNAMIC_LOSS": true,
     "_note5": "-------------------------------------- Evaluation Layer Configuration --------------------------------------",
     "PLOT_CHINESE": false,
+    "PLOT_LANGUAGE": "EN",
     "PROP_WINNERS": 0.5,
     "INTERPRETABLE_ANALYSIS_CONFIG": {
         "INCLUDE_INTERPRETABILITY_ANALYSIS": false,

@@ -23,7 +23,7 @@ class DatasetLoader:
         check_update()
         download_data()
 
-    def data_accessing(
+    def access_data(
             self,
             folder_path: str
     ) -> List[pd.DataFrame]:
@@ -339,6 +339,19 @@ class DatasetLoader:
         df_label = df_label["LABEL"].to_frame()
         return df_label
 
+    def convert_to_64bit_types(self, df):
+        """Converts all int32 and float32 columns in a Pandas DataFrame to int64 and float64 types.
+
+        :param df: The Pandas DataFrame to have its data types converted.
+        :return: The DataFrame with the data types converted.
+        """
+        int32_cols = df.select_dtypes(include='int32').columns
+        float32_cols = df.select_dtypes(include='float32').columns
+
+        df = df.astype({col: 'int64' for col in int32_cols})
+        df = df.astype({col: 'float64' for col in float32_cols})
+        return df
+
     def load_dataset(self):
         """
         Load the raw dataset and perform some data processing operations
@@ -373,7 +386,7 @@ class DatasetLoader:
             label_test = []
             df_label_MATLAB = pd.DataFrame()
 
-            raw_files = self.data_accessing(ROOT_PATH + "/data/datasets/" + self.config["DATASET_NAME"])
+            raw_files = self.access_data(ROOT_PATH + "/data/datasets/" + self.config["DATASET_NAME"])
             if len(raw_files) > 0:
                 # feature_engineering(excel_files)
                 for i, df in tqdm(enumerate(raw_files), total=len(raw_files), desc="Data Processing"):
@@ -402,19 +415,13 @@ class DatasetLoader:
                     val_normalization = self.data_normalization(val, zscore_train)
                     test_normalization = self.data_normalization(test, zscore_train)
 
-                    nan_count = df.isna().sum().sum()
-                    if nan_count != 0:
-                        print(f"nan_count: {nan_count}")
-                        time.sleep(1111)
-
-                    nan_count = df.isnull().sum().sum()
-                    if nan_count != 0:
-                        print(f"nan_count: {nan_count}")
-                        time.sleep(1111)
-
                     train_normalization = self.data_cleaning(train_normalization)
                     val_normalization = self.data_cleaning(val_normalization)
                     test_normalization = self.data_cleaning(test_normalization)
+
+                    # train_normalization = self.convert_to_64bit_types(train_normalization)
+                    # val_normalization = self.convert_to_64bit_types(val_normalization)
+                    # test_normalization = self.convert_to_64bit_types(test_normalization)
 
                     ds_train.append(torch.from_numpy(train_normalization.values))
                     ds_val.append(torch.from_numpy(val_normalization.values))
@@ -459,7 +466,7 @@ class DatasetLoader:
 
             }
             torch.save(load_dataset_output, ROOT_PATH + "/data/datasets/" + self.config["DATASET_NAME"] + "_load_dataset_output.pt")
-        print(load_dataset_output)
+        # print(load_dataset_output)
         return load_dataset_output
 
 

@@ -42,6 +42,7 @@ dependencies = [
   "optuna",
   "pandas",
   "requests",
+  "rich",
   "scikit-learn",
   "torch",
   "torch_optimizer",
