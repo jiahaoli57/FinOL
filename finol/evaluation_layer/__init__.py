@@ -1,3 +1,4 @@
+from rich import print
 from finol.evaluation_layer.benchmark_loader import BenchmarkLoader
 from finol.evaluation_layer.distiller_selector import DistillerSelector
 from finol.evaluation_layer.economic_distiller import EconomicDistiller

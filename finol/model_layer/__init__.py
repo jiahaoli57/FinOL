@@ -1,3 +1,4 @@
+from rich import print
 from finol.model_layer.AlphaPortfolio import AlphaPortfolio
 from finol.model_layer.CNN import CNN
 from finol.model_layer.DNN import DNN

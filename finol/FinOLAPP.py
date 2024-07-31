@@ -162,7 +162,7 @@ class FinOLApp:
         self.create_separator(frame=self.optimization_config_frame, row=4, text="Criterion Settings")
 
         # CRITERION_NAME
-        options = ["LogWealth", "LogWealth_L2Diversification", "LogWealth_L2Concentration", "L2Diversification", "L2Concentration", "SharpeRatio", "Volatility"]
+        options = ["LogWealth", "LogWealthL2Diversification", "LogWealthL2Concentration", "L2Diversification", "L2Concentration", "SharpeRatio", "Volatility"]
         self.create_dropdown(self.optimization_config_frame, options, "Select Criterion:", 6, 0, options.index(self.config["CRITERION_NAME"]), "StringVar", ["CRITERION_NAME"])
 
         # LAMBDA_L2
@@ -366,7 +366,7 @@ class FinOLApp:
 
         if "CRITERION_NAME" in arg_name:
             widgets = [self.LAMBDA_L2_entry,]
-            state = "normal" if var_value == "LogWealth_L2Diversification" or var_value == "LogWealth_L2Concentration" else "disabled"
+            state = "normal" if var_value == "LogWealthL2Diversification" or var_value == "LogWealthL2Concentration" else "disabled"
             for widget in widgets:
                 widget.config(state=state)
 

@@ -1,19 +1,49 @@
+import time
+
 import torch
 
 from finol.utils import load_config
 
 
 class CriterionSelector:
+    """
+    Class to select and compute different loss criteria for portfolio selection.
+    """
     def __init__(self):
         self.config = load_config()
+        self.criterion_dict = {
+            "LogWealth": self.compute_log_wealth_loss,
+            "LogWealthL2Diversification": self.compute_log_wealth_l2_diversification_loss,
+            "LogWealthL2Concentration": self.compute_log_wealth_l2_concentration_loss,
+            "L2Diversification": self.compute_l2_diversification_loss,
+            "L2Concentration": self.compute_l2_concentration_loss,
+            "SharpeRatio": self.compute_sharpe_ratio_loss,
+            "Volatility": self.compute_volatility_loss,
+        }
 
-    def LogWealth(self, portfolios, labels):
+    def compute_log_wealth_loss(self, portfolios: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
+        """
+        Compute the ``LogWealth`` loss, which calculates the negative mean logarithm of the portfolio's daily returns.
+
+        :param portfolios: Portfolio weights tensor of shape (batch_size, num_assets).
+        :param labels: Label tensor representing asset returns of shape (batch_size, num_assets).
+        :return: ``LogWealth`` loss tensor, representing the negative mean logarithm of the portfolio's daily returns.
+        """
         daily_returns = torch.sum(portfolios * labels, dim=-1)
         log_returns = torch.log(torch.clamp(daily_returns, min=1e-6))
         loss = - torch.mean(log_returns)
         return loss
 
-    def LogWealth_L2Diversification(self, portfolios, labels):
+    def compute_log_wealth_l2_diversification_loss(self, portfolios: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
+        """
+        Compute the ``LogWealthL2Diversification`` loss, which extends the ``LogWealth`` loss by incorporating diversification measures.
+
+        This loss function calculates the negative mean logarithm of the portfolio's daily returns while considering diversification metrics.
+
+        :param portfolios: Portfolio weights tensor of shape (batch_size, num_assets).
+        :param labels: Label tensor representing asset returns of shape (batch_size, num_assets).
+        :return: ``LogWealthL2Diversification`` loss tensor, a modified version of ``LogWealth`` loss with diversification metrics included.
+        """
         daily_returns = torch.sum(portfolios * labels, dim=-1)
         log_returns = torch.log(torch.clamp(daily_returns, min=1e-6))
 
@@ -28,7 +58,14 @@ class CriterionSelector:
         loss = - torch.mean(log_returns) + self.config["LAMBDA_L2"] * torch.mean(diff_loss)
         return loss
 
-    def LogWealth_L2Concentration(self, portfolios, labels):
+    def compute_log_wealth_l2_concentration_loss(self, portfolios: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
+        """
+        Compute the ``LogWealthL2Concentration`` loss, which extends the ``LogWealth`` loss by incorporating concentration measures.
+
+        :param portfolios: Portfolio weights tensor of shape (batch_size, num_assets).
+        :param labels: Label tensor representing asset returns of shape (batch_size, num_assets).
+        :return: ``LogWealthL2Concentration`` loss tensor, a modified version of ``LogWealth`` loss with concentration metrics included.
+        """
         daily_returns = torch.sum(portfolios * labels, dim=-1)
         log_returns = torch.log(torch.clamp(daily_returns, min=1e-6))
 
@@ -43,7 +80,16 @@ class CriterionSelector:
         loss = - torch.mean(log_returns) - self.config["LAMBDA_L2"] * torch.mean(diff_loss)
         return loss
 
-    def L2Diversification(self, portfolios, labels):
+    def compute_l2_diversification_loss(self, portfolios: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
+        """
+        Compute the ``L2Diversification`` loss, which measures the diversification of a portfolio based on the L2 norm of consecutive portfolio weight differences.
+
+        This loss function calculates the mean L2 norm of the differences between consecutive portfolio weight vectors.
+
+        :param portfolios: Portfolio weights tensor of shape (batch_size, num_assets).
+        :param labels: Label tensor representing asset returns of shape (batch_size, num_assets).
+        :return: ``L2Diversification`` loss tensor, indicating the degree of diversification based on the L2 norm of portfolio weight differences.
+        """
         # Calculate the similarity loss
         # We use the L2 norm to measure the difference between consecutive predictions
         diff = portfolios[1:, :] - portfolios[:-1, :]
@@ -55,7 +101,16 @@ class CriterionSelector:
         loss = torch.mean(diff_loss)
         return loss
 
-    def L2Concentration(self, portfolios, labels):
+    def compute_l2_concentration_loss(self, portfolios: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
+        """
+        Compute the ``L2Concentration`` loss, which measures the concentration of a portfolio based on the L2 norm of consecutive portfolio weight differences.
+
+        This loss function calculates the negative mean L2 norm of the differences between consecutive portfolio weight vectors.
+
+        :param portfolios: Portfolio weights tensor of shape (batch_size, num_assets).
+        :param labels: Label tensor representing asset returns of shape (batch_size, num_assets).
+        :return: ``L2Concentration`` loss tensor, indicating the degree of concentration based on the negative mean L2 norm of portfolio weight differences.
+        """
         # Calculate the similarity loss
         # We use the L2 norm to measure the difference between consecutive predictions
         diff = portfolios[1:, :] - portfolios[:-1, :]
@@ -67,7 +122,16 @@ class CriterionSelector:
         loss = - torch.mean(diff_loss)
         return loss
 
-    def SharpeRatio(self, portfolios, labels):
+    def compute_sharpe_ratio_loss(self, portfolios: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
+        """
+        Compute the ``SharpeRatio`` loss, which evaluates the risk-adjusted return of the portfolios using the Sharpe Ratio.
+
+        This loss function calculates the negative Sharpe Ratio, which is the ratio of the mean excess return to the standard deviation of the excess return.
+
+        :param portfolios: Portfolio weights tensor of shape (batch_size, num_assets).
+        :param labels: Label tensor representing asset returns of shape (batch_size, num_assets).
+        :return: ``SharpeRatio`` loss tensor, indicating the negative Sharpe Ratio value for the portfolios.
+        """
         daily_returns = torch.sum(portfolios * labels, dim=-1)
         # log_returns = torch.log(torch.clamp(daily_returns, min=1e-6))
         excess_returns = daily_returns  # risk_free_rate = 0
@@ -79,13 +143,23 @@ class CriterionSelector:
         loss = - sharpe_ratio
         return loss
 
-    def Volatility(self, portfolios, labels):
+    def compute_volatility_loss(self, portfolios: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
+        """
+        Compute the ``Volatility`` loss, which measures the volatility of the portfolios based on the standard deviation of daily returns.
+
+        This loss function calculates the standard deviation of the daily portfolio returns.
+
+        :param portfolios: Portfolio weights tensor of shape (batch_size, num_assets).
+        :param labels: Label tensor representing asset returns of shape (batch_size, num_assets).
+        :return: ``Volatility`` loss tensor, representing the volatility of the portfolios based on the standard deviation of daily returns.
+        """
         daily_returns = torch.sum(portfolios * labels, dim=-1)
         volatility = torch.std(daily_returns)
         loss = volatility
         return loss
 
-    def __call__(self, preds, labels):
-        criterion = getattr(self, self.config["CRITERION_NAME"])
-
-        return criterion(preds, labels)
+    def __call__(self, portfolios: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
+        criterion_cls = self.criterion_dict.get(self.config["CRITERION_NAME"], None)
+        if criterion_cls is None:
+            raise ValueError(f"Invalid criterion name: {self.config['CRITERION_NAME']}. Supported criterions are: {self.criterion_dict.keys()}")
+        return criterion_cls(portfolios, labels)

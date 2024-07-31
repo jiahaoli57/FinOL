@@ -18,7 +18,7 @@ class OptunaOptimizer:
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
         self.train_loader = load_dataset_output["train_loader"]  # train_loader \ test_loader_for_train
-        self.val_loader = load_dataset_output["test_loader_for_train"]  # val_loader \ test_loader_for_train
+        self.val_loader = load_dataset_output["val_loader"]  # val_loader \ test_loader_for_train
         self.test_loader = load_dataset_output["test_loader_for_train"]  # val_loader \ test_loader_for_train
         self.logdir = load_dataset_output["logdir"]
 
@@ -48,7 +48,6 @@ class OptunaOptimizer:
 
         train_loss_list = []
         val_loss_list = []
-        test_loss_list = []
         best_val_loss = float("inf")
 
         for e in tqdm(range(self.config["NUM_EPOCHES"]), desc="Training"):
@@ -86,26 +85,8 @@ class OptunaOptimizer:
                     value = min(val_loss_list)  # use this
                     # value = val_loss  # real time val loss
 
-                    # if val_loss < best_val_loss:
-                    #     best_val_loss = val_loss
-                    #
-                    #     #######################
-                    #     with torch.no_grad():
-                    #         model.eval()
-                    #         test_loss = 0
-                    #         for i, data in enumerate(self.test_loader, 1):
-                    #             test_data, label = data
-                    #             final_scores = model(test_data.float())
-                    #             portfolio = portfolio_selection(final_scores)
-                    #             loss = criterion(portfolio, label.float())
-                    #             test_loss += loss.item()
-                    #
-                    #         test_loss /= len(self.test_loader)
-                    #         test_loss_list.append(test_loss)
-                    #         # value = sum(val_loss_list) / len(val_loss_list)
-                    #         value = test_loss
-                    #         # value = val_loss  # real time val loss
-                    #     #######################
+                    if val_loss < best_val_loss:
+                        best_val_loss = val_loss
 
             # Report intermediate objective value.
             trial.report(value, e)

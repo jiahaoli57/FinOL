@@ -263,7 +263,7 @@ class DatasetLoader:
 
     def augment_data(self, df: pd.DataFrame) -> Tuple[pd.DataFrame, int]:
         """
-        Augment the provided DataFrame based on the configuration settings.
+        Augment the provided DataFrame based on the configuration.
 
         :param df: Input DataFrame to be augmented.
         :return: Augmented DataFrame with window data and the window size used for augmentation.
