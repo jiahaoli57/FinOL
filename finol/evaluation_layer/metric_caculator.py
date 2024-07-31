@@ -36,11 +36,13 @@ class MetricCaculator:
     def caculate_MDD(self):
         # Calculate the Maximum DrawDown (MDD)
         self.mddvec = []
+        self.DMDD = []
         for i in range(self.num_trading_periods):
             j = i + 1
             temp = self.total_returns[:j]
             ddval = (max(temp) - temp[i]) / max(temp)  # Drawdown value for each trading period
             self.mddvec.append(ddval)
+            self.DMDD.append(max(self.mddvec))
         self.MDD = max(self.mddvec)  # Maximum drawdown value
 
     def caculate_ATO(self):
@@ -128,6 +130,7 @@ class MetricCaculator:
             "VR": self.sigma,
             "MDD": self.MDD,
             "DDD": self.mddvec,
+            "DMDD": self.DMDD,
             "ATO": self.ATO,
             "TCW": self.TCW,
             "RT": self.RT,

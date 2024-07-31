@@ -1,10 +1,10 @@
 {
-    "_note1": "-------------------------------------- General Configuration --------------------------------------",
+    "_note1": "--------------------------------------- General Configuration ------------------------------------------",
     "DEVICE": "cuda",
     "MANUAL_SEED": 0,
-    "_note2": "-------------------------------------- Data Layer Configuration --------------------------------------",
+    "_note2": "-------------------------------------- Data Layer Configuration ----------------------------------------",
     "LOAD_LOCAL_DATALOADER": false,
-    "DATASET_NAME": "TSE",
+    "DATASET_NAME": "CRYPTO",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
             "TRAIN_START_TIMESTAMP": "1962-07-03",
@@ -95,7 +95,7 @@
             "WINDOW_SIZE": 10
         }
     },
-    "SCALER": "WindowMinMaxScaler",
+    "SCALER": "StandardScaler",
     "BATCH_SIZE": {
         "NYSE(O)": 128,
         "NYSE(N)": 128,
@@ -118,13 +118,13 @@
         "CMEG": 52,
         "CRYPTO": 252
     },
-    "_note3": "-------------------------------------- Model Layer Configuration --------------------------------------",
-    "MODEL_NAME": "Transformer",
+    "_note3": "-------------------------------------- Model Layer Configuration ---------------------------------------",
+    "MODEL_NAME": "DNN",
     "MODEL_PARAMS": {
         "AlphaPortfolio": {
             "NUM_LAYERS": 1,
-            "DIM_EMBEDDING": 32,
-            "DIM_FEEDFORWARD": 32,
+            "DIM_EMBEDDING": 64,
+            "DIM_FEEDFORWARD": 64,
             "NUM_HEADS": 4,
             "DROPOUT": 0.2
         },
@@ -137,18 +137,18 @@
         },
         "DNN": {
             "NUM_LAYERS": 4,
-            "HIDDEN_SIZE": 128,
-            "DROPOUT": 0.4
+            "HIDDEN_SIZE": 192,
+            "DROPOUT": 0.05
         },
         "LSRE-CAAN": {
             "NUM_LAYERS": 1,
             "NUM_LATENTS": 12,
-            "LATENT_DIM": 224,
-            "CROSS_HEADS": 3,
-            "LATENT_HEADS": 3,
-            "CROSS_DIM_HEAD": 128,
+            "LATENT_DIM": 64,
+            "CROSS_HEADS": 1,
+            "LATENT_HEADS": 1,
+            "CROSS_DIM_HEAD": 64,
             "LATENT_DIM_HEAD": 64,
-            "DROPOUT": 0.0
+            "DROPOUT": 0.1
         },
         "LSRE-CAAN-d": {
             "NUM_LAYERS": 1,
@@ -550,20 +550,20 @@
             }
         }
     },
-    "_note4": "-------------------------------------- Optimization Layer Configuration --------------------------------------",
-    "NUM_EPOCHES": 1,
+    "_note4": "----------------------------------- Optimization Layer Configuration -----------------------------------",
+    "NUM_EPOCHES": 20,
     "SAVE_EVERY": 1,
-    "OPTIMIZER_NAME": "Lamb",
+    "OPTIMIZER_NAME": "Adam",
     "LEARNING_RATE": 0.001,
     "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
-    "TUNE_PARAMETERS": false,
-    "NUM_TRIALS": 20,
-    "SAMPLER_NAME": "TPESampler",
-    "PRUNER_NAME": "WilcoxonPruner",
+    "TUNE_PARAMETERS": true,
+    "NUM_TRIALS": 200,
+    "SAMPLER_NAME": "RandomSampler",
+    "PRUNER_NAME": "NopPruner",
     "WRAPPED_PRUNER_NAME": "MedianPruner",
     "PLOT_DYNAMIC_LOSS": true,
-    "_note5": "-------------------------------------- Evaluation Layer Configuration --------------------------------------",
+    "_note5": "------------------------------------ Evaluation Layer Configuration ------------------------------------",
     "PLOT_CHINESE": false,
     "PLOT_LANGUAGE": "EN",
     "PROP_WINNERS": 0.5,

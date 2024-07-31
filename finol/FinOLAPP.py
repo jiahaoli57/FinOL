@@ -375,7 +375,6 @@ class FinOLApp:
             self.config = load_config()
             #
             MODEL_NAME = var_value
-            print("MODEL_NAME:", var_value)
             for widget in self.model_config_frame.winfo_children():
                 if str(widget) in [".!labelframe3.!label", ".!labelframe3.!combobox",]:
                     pass
@@ -421,6 +420,24 @@ class FinOLApp:
                 self.create_entry(self.model_config_frame, "Dropout Rate:", row=3, column=4, default_value=default_model_parms["DROPOUT"],
                                   value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
 
+            elif MODEL_NAME == "LSRE-CAAN":
+                self.create_entry(self.model_config_frame, "Number of Layers:", row=3, column=0, default_value=default_model_parms["NUM_LAYERS"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "NUM_LAYERS"])
+                self.create_entry(self.model_config_frame, "Number of Latents:", row=3, column=2, default_value=default_model_parms["NUM_LATENTS"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "NUM_LATENTS"])
+                self.create_entry(self.model_config_frame, "Dimension of Latent:", row=3, column=4, default_value=default_model_parms["LATENT_DIM"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "LATENT_DIM"])
+                self.create_entry(self.model_config_frame, "Number of Cross Heads:", row=4, column=0, default_value=default_model_parms["CROSS_HEADS"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "CROSS_HEADS"])
+                self.create_entry(self.model_config_frame, "Number of Latent Heads:", row=4, column=2, default_value=default_model_parms["LATENT_HEADS"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "LATENT_HEADS"])
+                self.create_entry(self.model_config_frame, "Dimensions per Cross Head:", row=4, column=4, default_value=default_model_parms["CROSS_DIM_HEAD"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "CROSS_DIM_HEAD"])
+                self.create_entry(self.model_config_frame, "Dimensions per Latent Head:", row=5, column=0, default_value=default_model_parms["LATENT_DIM_HEAD"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "LATENT_DIM_HEAD"])
+                self.create_entry(self.model_config_frame, "Dropout Rate:", row=5, column=2, default_value=default_model_parms["DROPOUT"],
+                                  value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
+
 
             # # trace var change, write new var value to config
             # self.MODEL_NAME_var.trace("w", lambda *args: self.write_var_to_config(["MODEL_NAME"], MODEL_NAME))
@@ -435,7 +452,7 @@ class FinOLApp:
     def create_separator(self, frame, row, text=None):
         # separator = ttk.Separator(frame, orient="horizontal")
         # separator.grid(row=row, column=0, columnspan=6, padx=10, pady=1, sticky="ew")
-        separator_label = ttk.Label(frame, text="-"*200)
+        separator_label = ttk.Label(frame, text="-"*210)
         separator_label.grid(row=row, column=0, columnspan=6, padx=10, pady=1)
         if text != None:
             separator_label = ttk.Label(frame, text=text)
@@ -490,9 +507,9 @@ class FinOLApp:
     def load_dataset(self):
         try:
             self.load_dataset_output = DatasetLoader().load_dataset()
-            messagebox.showinfo("Success", f"Dataset '{self.config['DATASET_NAME']}' loaded successfully!")
+            messagebox.showinfo("Success", f"Dataset ``{self.config['DATASET_NAME']}`` loaded successfully!")
         except Exception as e:
-            messagebox.showerror("Error", f"Failed to load dataset '{self.config['DATASET_NAME']}': {e}")
+            messagebox.showerror("Error", f"Failed to load dataset ``{self.config['DATASET_NAME']}``: {e}")
 
     def train_model(self):
         if hasattr(self, 'load_dataset_output'):
@@ -512,9 +529,9 @@ class FinOLApp:
         if hasattr(self, 'load_dataset_output') and hasattr(self, 'train_model_output'):
             try:
                 self.evaluate_model_output = ModelEvaluator(self.load_dataset_output, self.train_model_output).evaluate_model()
-                messagebox.showinfo("Success", f"Model '{self.config['MODEL_NAME']}' evaluated successfully!")
+                messagebox.showinfo("Success", f"Model ``{self.config['MODEL_NAME']}`` evaluated successfully!")
             except Exception as e:
-                messagebox.showerror("Error", f"Failed to evaluate model: '{self.config['MODEL_NAME']}': {e}")
+                messagebox.showerror("Error", f"Failed to evaluate model: ``{self.config['MODEL_NAME']}``: {e}")
         else:
             messagebox.showwarning("Warning", "Please load the dataset and train the model first!")
 

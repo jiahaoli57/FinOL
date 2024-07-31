@@ -17,8 +17,9 @@ class OptunaOptimizer:
         super().__init__()
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
-        self.train_loader = load_dataset_output["train_loader"]
-        self.val_loader = load_dataset_output["val_loader"]
+        self.train_loader = load_dataset_output["train_loader"]  # train_loader \ test_loader_for_train
+        self.val_loader = load_dataset_output["test_loader_for_train"]  # val_loader \ test_loader_for_train
+        self.test_loader = load_dataset_output["test_loader_for_train"]  # val_loader \ test_loader_for_train
         self.logdir = load_dataset_output["logdir"]
 
     def sample_params(self, trial: optuna.Trial):
@@ -47,6 +48,7 @@ class OptunaOptimizer:
 
         train_loss_list = []
         val_loss_list = []
+        test_loss_list = []
         best_val_loss = float("inf")
 
         for e in tqdm(range(self.config["NUM_EPOCHES"]), desc="Training"):
@@ -81,11 +83,29 @@ class OptunaOptimizer:
                     val_loss /= len(self.val_loader)
                     val_loss_list.append(val_loss)
                     # value = sum(val_loss_list) / len(val_loss_list)
-                    value = min(val_loss_list)
+                    value = min(val_loss_list)  # use this
                     # value = val_loss  # real time val loss
 
-                    if val_loss < best_val_loss:
-                        best_val_loss = val_loss
+                    # if val_loss < best_val_loss:
+                    #     best_val_loss = val_loss
+                    #
+                    #     #######################
+                    #     with torch.no_grad():
+                    #         model.eval()
+                    #         test_loss = 0
+                    #         for i, data in enumerate(self.test_loader, 1):
+                    #             test_data, label = data
+                    #             final_scores = model(test_data.float())
+                    #             portfolio = portfolio_selection(final_scores)
+                    #             loss = criterion(portfolio, label.float())
+                    #             test_loss += loss.item()
+                    #
+                    #         test_loss /= len(self.test_loader)
+                    #         test_loss_list.append(test_loss)
+                    #         # value = sum(val_loss_list) / len(val_loss_list)
+                    #         value = test_loss
+                    #         # value = val_loss  # real time val loss
+                    #     #######################
 
             # Report intermediate objective value.
             trial.report(value, e)
@@ -98,7 +118,6 @@ class OptunaOptimizer:
 
     def select_sampler(self):
         sampler_name = self.config["SAMPLER_NAME"]
-        print(f"Sampler is {sampler_name}")
         sampler_kwargs = {"seed": self.config["MANUAL_SEED"]}
 
         if sampler_name == "GridSampler":
@@ -115,7 +134,6 @@ class OptunaOptimizer:
 
     def select_pruner(self):
         pruner_name = self.config["PRUNER_NAME"]
-        print(f"Pruner is {pruner_name}")
         pruner_kwargs = {}
 
         if pruner_name == "PatientPruner":
@@ -158,11 +176,13 @@ class OptunaOptimizer:
 
         # Showing optimization results
         tabulate_data = [
+            ["Sampler", self.config["SAMPLER_NAME"]],
+            ["Pruner", self.config["PRUNER_NAME"]],
             ["Number of finished trials", len(self.study.trials)],
             ["Best trial parameters", self.study.best_trial.params],
             ["Best score", self.study.best_value]
         ]
-        print(tabulate(tabulate_data, tablefmt="psql"))  # , headers=["Metric", "Value"]
+        print(tabulate(tabulate_data, headers=["Auto Hyper-parameters Tuning", "INFO"], tablefmt="psql"))  # , headers=["Metric", "Value"]
 
         # Write config
         self.config["MODEL_PARAMS"][self.config["MODEL_NAME"]] = self.study.best_trial.params

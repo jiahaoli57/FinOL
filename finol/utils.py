@@ -19,8 +19,6 @@ PARENT_PATH = os.path.dirname(ROOT_PATH)
 
 print("ROOT_PATH", ROOT_PATH)
 print("PARENT_PATH", PARENT_PATH)
-print()
-
 
 def check_update():
     latest = get_latest_version()
@@ -29,7 +27,7 @@ def check_update():
     else:
         print(f"The current FinOL (version: {__version__}) is not latest, "
               f"The latest version on https://pypi.org/project/finol is {latest}, "
-              f"please consider updating by `pip install --upgrade finol`")
+              f"please consider updating by ``pip install --upgrade finol``")
         # print("Before updating, remember to back up any modifications you made to the FinOL project, such as added model code.")
         # print("Note that `pip install --upgrade finol` will overwrite all files except the `logdir` folder, so you don't need to back up the `logdir`.")
         # sys.exit()

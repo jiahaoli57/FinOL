@@ -4,7 +4,7 @@ import torch
 import pandas as pd
 
 from tqdm import tqdm
-from typing import List, Tuple, Dict
+from typing import List, Tuple, Dict, Union
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
 from finol.data_layer.scaler_selector import ScalerSelector
@@ -13,25 +13,20 @@ from finol.utils import ROOT_PATH, load_config, update_config, make_logdir, chec
 
 class DatasetLoader:
     """
-    This class is responsible for loading different types of datasets.
+    This class loads different types of datasets.
 
     """
-    def __init__(
-            self
-    ):
+    def __init__(self):
         self.config = load_config()
         check_update()
         download_data()
 
-    def access_data(
-            self,
-            folder_path: str
-    ) -> List[pd.DataFrame]:
+    def access_data(self, folder_path: str) -> List[pd.DataFrame]:
         """
         Load raw data files from a specified folder path and return a list of DataFrames.
 
-        :param folder_path:
-        :return: raw_files
+        :param folder_path: Path to the folder containing raw data files.
+        :return: List of DataFrames containing the loaded raw data.
         """
         raw_files = []
         for file_name in tqdm(os.listdir(folder_path), desc="Data Loading"):
@@ -48,9 +43,8 @@ class DatasetLoader:
         """
         Perform feature engineering on the input DataFrame to generate various types of features.
 
-        :param df: The input DataFrame containing the raw data.
-        :return: A tuple containing the processed DataFrame, a list of the detailed feature names, \
-        and a dictionary containing the number of features for each category.
+        :param df: Input DataFrame to be engineered.
+        :return: Tuple containing the engineered DataFrame, detailed feature list, and number of features in each category.
         """
         ohlcv_features_df = pd.DataFrame()
         overlap_features_df = pd.DataFrame()
@@ -267,11 +261,12 @@ class DatasetLoader:
         }
         return _, DETAILED_FEATURE_LIST, DETAILED_NUM_FEATURES
 
-    def data_augmentation(self, df: pd.DataFrame) -> Tuple[pd.DataFrame, int]:
+    def augment_data(self, df: pd.DataFrame) -> Tuple[pd.DataFrame, int]:
         """
+        Augment the provided DataFrame based on the configuration settings.
 
-        :param df:
-        :return:
+        :param df: Input DataFrame to be augmented.
+        :return: Augmented DataFrame with window data and the window size used for augmentation.
         """
         if self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["INCLUDE_WINDOW_DATA"]:
             WINDOW_SIZE = self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"]
@@ -280,13 +275,22 @@ class DatasetLoader:
             WINDOW_SIZE = 1
         return df, WINDOW_SIZE
 
-    def data_cleaning(self, df):
+    def clean_data(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Clean the DataFrame by removing rows with missing values.
+
+        :param df: Input DataFrame to be cleaned.
+        :return: DataFrame with rows containing any missing values removed.
         """
         return df.dropna(how="any")
 
-    def zscore_calculation(self, df):
+    def calculate_zscore(self, df: pd.DataFrame) -> Union[object, None]:
+        """
+        Calculate the z-scores for numeric features in the provided DataFrame.
+
+        :param df: DataFrame containing the data for z-score calculation.
+        :return: Z-score object for the numeric features in the DataFrame, in some cases the return can be None.
+        """
         df_normalized = df.copy()
         numeric_features = df.select_dtypes(include=["int", "float"]).columns
         scaler = ScalerSelector().select_scaler()
@@ -296,9 +300,13 @@ class DatasetLoader:
             zscore = None
         return zscore
 
-    def data_normalization(self, df, zscore):
+    def normalize_data(self, df: pd.DataFrame, zscore: object) -> pd.DataFrame:
         """
-        Normalize all numeric features in DataFrame
+        Normalize all numeric features in DataFrame.
+
+        :param df: Input DataFrame to be normalized.
+        :param zscore: Z-score object used for normalization.
+        :return: DataFrame with normalized numeric features.
         """
         df_normalized = df.copy()
         numeric_features = df.select_dtypes(include=["int", "float"]).columns
@@ -308,14 +316,16 @@ class DatasetLoader:
             # print(df_normalized[numeric_features]["OPEN"].values)
             # print(df_normalized[numeric_features]["OPEN"].values.mean())  # -3.620599927440001e-16
             # print(df_normalized[numeric_features]["OPEN"].values.std())  # 1
-            # time.sleep(1111)
         else:
             df_normalized[numeric_features] = df_normalized[numeric_features]
         return df_normalized
 
-    def data_splitting(self, df):
+    def split_data(self, df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
         """
         Split the DataFrame into train, validation, and test sets.
+
+        :param df: Input DataFrame to be split.
+        :return: Tuple containing the train, validation, and test DataFrames.
         """
         train_start = pd.to_datetime(self.config["DATASET_SPLIT_CONFIG"][self.config["DATASET_NAME"]]["TRAIN_START_TIMESTAMP"])
         train_end = pd.to_datetime(self.config["DATASET_SPLIT_CONFIG"][self.config["DATASET_NAME"]]["TRAIN_END_TIMESTAMP"])
@@ -329,7 +339,14 @@ class DatasetLoader:
         test = df[(df.index >= test_start) & (df.index <= test_end)]
         return train, val, test
 
-    def label_making(self, raw_df, df):
+    def make_label(self, raw_df: pd.DataFrame, df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Generate labels, i.e. price relatives.
+
+        :param raw_df: Raw DataFrame containing 'CLOSE' prices.
+        :param df: DataFrame to merge the labels with.
+        :return: DataFrame containing the generated labels.
+        """
         raw_df.set_index("DATE", inplace=True)
         df_label = pd.DataFrame({"LABEL": raw_df.CLOSE.shift(-1) / raw_df.CLOSE})
         df_label.iloc[-1, -1] = 1
@@ -339,25 +356,11 @@ class DatasetLoader:
         df_label = df_label["LABEL"].to_frame()
         return df_label
 
-    def convert_to_64bit_types(self, df):
-        """Converts all int32 and float32 columns in a Pandas DataFrame to int64 and float64 types.
-
-        :param df: The Pandas DataFrame to have its data types converted.
-        :return: The DataFrame with the data types converted.
+    def load_dataset(self) -> Dict:
         """
-        int32_cols = df.select_dtypes(include='int32').columns
-        float32_cols = df.select_dtypes(include='float32').columns
+        Load the raw data, perform data pre-processing operations, and prepare DataLoader for training, validation, and testing.
 
-        df = df.astype({col: 'int64' for col in int32_cols})
-        df = df.astype({col: 'float64' for col in float32_cols})
-        return df
-
-    def load_dataset(self):
-        """
-        Load the raw dataset and perform some data processing operations
-    
-        Returns:
-        - df (DataFrame): Processed DataFrame
+        :return: Dictionary containing various data loaders and information about the dataset.
         """
         # print(self.config["MANUAL_SEED"])
         logdir = make_logdir()
@@ -391,15 +394,15 @@ class DatasetLoader:
                 # feature_engineering(excel_files)
                 for i, df in tqdm(enumerate(raw_files), total=len(raw_files), desc="Data Processing"):
                     raw_df = df.copy()
-                    df = self.data_cleaning(df)
+                    df = self.clean_data(df)
 
                     df, DETAILED_FEATURE_LIST, DETAILED_NUM_FEATURES = self.feature_engineering(df)
-                    df = self.data_cleaning(df)
+                    df = self.clean_data(df)
 
-                    df, WINDOW_SIZE = self.data_augmentation(df)
-                    df = self.data_cleaning(df)
+                    df, WINDOW_SIZE = self.augment_data(df)
+                    df = self.clean_data(df)
 
-                    df_label = self.label_making(raw_df, df)
+                    df_label = self.make_label(raw_df, df)
 
                     # df_label_temp = df_label.copy()
                     # test_start = pd.to_datetime(DATASET_SPLIT_CONFIG.get(dataset_name)["TEST_START_TIMESTAMP"])
@@ -407,21 +410,17 @@ class DatasetLoader:
                     # df_label_temp = df_label_temp[(df_label_temp.index >= test_start) & (df_label_temp.index <= test_end)]
                     # df_label_MATLAB = pd.concat([df_label_MATLAB, df_label_temp], axis=1)
 
-                    train, val, test = self.data_splitting(df)
-                    train_label, val_label, test_label = self.data_splitting(df_label)
+                    train, val, test = self.split_data(df)
+                    train_label, val_label, test_label = self.split_data(df_label)
 
-                    zscore_train = self.zscore_calculation(train)
-                    train_normalization = self.data_normalization(train, zscore_train)
-                    val_normalization = self.data_normalization(val, zscore_train)
-                    test_normalization = self.data_normalization(test, zscore_train)
+                    zscore_train = self.calculate_zscore(train)
+                    train_normalization = self.normalize_data(train, zscore_train)
+                    val_normalization = self.normalize_data(val, zscore_train)
+                    test_normalization = self.normalize_data(test, zscore_train)
 
-                    train_normalization = self.data_cleaning(train_normalization)
-                    val_normalization = self.data_cleaning(val_normalization)
-                    test_normalization = self.data_cleaning(test_normalization)
-
-                    # train_normalization = self.convert_to_64bit_types(train_normalization)
-                    # val_normalization = self.convert_to_64bit_types(val_normalization)
-                    # test_normalization = self.convert_to_64bit_types(test_normalization)
+                    train_normalization = self.clean_data(train_normalization)
+                    val_normalization = self.clean_data(val_normalization)
+                    test_normalization = self.clean_data(test_normalization)
 
                     ds_train.append(torch.from_numpy(train_normalization.values))
                     ds_val.append(torch.from_numpy(val_normalization.values))
