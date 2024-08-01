@@ -4,6 +4,7 @@ from finol.evaluation_layer.distiller_selector import DistillerSelector
 from finol.evaluation_layer.economic_distiller import EconomicDistiller
 from finol.evaluation_layer.metric_caculator import MetricCaculator
 from finol.evaluation_layer.model_evaluator import ModelEvaluator
+from finol.evaluation_layer.result_visualizer import ResultVisualizer
 
 
 __all__ = [
@@ -12,4 +13,5 @@ __all__ = [
     "EconomicDistiller",
     "MetricCaculator",
     "ModelEvaluator",
+    "ResultVisualizer",
 ]

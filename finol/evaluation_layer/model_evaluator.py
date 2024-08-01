@@ -24,7 +24,7 @@ class ModelEvaluator:
         load_benchmark_output = BenchmarkLoader(caculate_metric_output, economic_distiller_caculate_metric_output).load_benchmark()
 
         # Step 3: Visualize the results
-        visualization_output = ResultVisualizer(load_benchmark_output).visualize_result()
+        ResultVisualizer(load_benchmark_output).visualize_result()
 
         send_message_dingding(load_benchmark_output)
         return load_benchmark_output

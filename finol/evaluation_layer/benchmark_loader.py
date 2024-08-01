@@ -143,8 +143,12 @@ class BenchmarkLoader:
         load_benchmark_output["logdir"] = self.caculate_metric_output["logdir"]
         load_benchmark_output["top_5_baselines"] = self.top_5_baselines
         load_benchmark_output["daily_cumulative_wealth"] = daily_cumulative_wealth
+        load_benchmark_output["final_profit_result"] = final_profit_result
+        load_benchmark_output["daily_drawdown"] = daily_drawdown
         load_benchmark_output["daily_maximum_drawdown"] = daily_maximum_drawdown
+        load_benchmark_output["final_risk_result"] = final_risk_result
         load_benchmark_output["transaction_costs_adjusted_cumulative_wealth"] = transaction_costs_adjusted_cumulative_wealth
+        load_benchmark_output["final_practical_result"] = final_practical_result
         load_benchmark_output["CW"] = self.caculate_metric_output["CW"]
         load_benchmark_output["TCW"] = self.caculate_metric_output["TCW"]
         # print(load_benchmark_output["TCW"])
