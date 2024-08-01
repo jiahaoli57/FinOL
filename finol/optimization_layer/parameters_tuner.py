@@ -12,8 +12,11 @@ from finol.optimization_layer.optimizer_selector import OptimizerSelector
 from finol.utils import load_config, update_config, portfolio_selection, set_seed
 
 
-class OptunaOptimizer:
-    def __init__(self, load_dataset_output):
+class ParametersTuner:
+    """
+    Class to tune model hyper-parameters using auto ML library.
+    """
+    def __init__(self, load_dataset_output) -> None:
         super().__init__()
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
@@ -22,7 +25,13 @@ class OptunaOptimizer:
         self.test_loader = load_dataset_output["test_loader_for_train"]  # val_loader \ test_loader_for_train
         self.logdir = load_dataset_output["logdir"]
 
-    def sample_params(self, trial: optuna.Trial):
+    def sample_params(self, trial: optuna.Trial) -> None:
+        """
+        Samples model hyper-parameters for optimization.
+
+        :param trial: Optuna Trial object to sample the parameters.
+        :return: None
+        """
         model_sampled_params = self.config["MODEL_PARAMS_SPACE"][self.config["MODEL_NAME"]]
         self.sampled_params = {}
 
@@ -38,7 +47,13 @@ class OptunaOptimizer:
             else:
                 raise ValueError(f"Invalid parameter type: {param_type}")
 
-    def objective(self, trial: optuna.Trial):
+    def objective(self, trial: optuna.Trial) -> float:
+        """
+        Objective function for Optuna optimization. Trains the model using the sampled parameters and returns the validation loss.
+
+        :param trial: Optuna Trial object.
+        :return: Validation loss.
+        """
         self.sample_params(trial)
         set_seed(seed=self.config["MANUAL_SEED"])
 
@@ -94,10 +109,14 @@ class OptunaOptimizer:
             # Handle pruning based on the intermediate value.
             if trial.should_prune():
                 raise optuna.TrialPruned()
-
         return value
 
-    def select_sampler(self):
+    def select_sampler(self) -> optuna.samplers:
+        """
+        Selects and initializes an Optuna sampler based on the configuration.
+
+        :return: Initialized Optuna sampler object.
+        """
         sampler_name = self.config["SAMPLER_NAME"]
         sampler_kwargs = {"seed": self.config["MANUAL_SEED"]}
 
@@ -113,7 +132,12 @@ class OptunaOptimizer:
 
         return getattr(optuna.samplers, sampler_name)(**sampler_kwargs)
 
-    def select_pruner(self):
+    def select_pruner(self) -> optuna.pruners:
+        """
+        Selects and initializes an Optuna pruner based on the configuration.
+
+        :return: Initialized Optuna pruner object.
+        """
         pruner_name = self.config["PRUNER_NAME"]
         pruner_kwargs = {}
 
@@ -123,13 +147,20 @@ class OptunaOptimizer:
 
         return getattr(optuna.pruners, pruner_name)(**pruner_kwargs)
 
-    def train_via_optuna(self):
+    def tune_parameters(self) -> None:
+        """
+        Tune model hyper-parameters.
+
+        This method creates an Optuna study object, optimizes the objective function, visualizes the results, and prints out the optimization results.
+
+        :return: None
+        """
         # Creating Optuna object and defining its parameters
         self.study = optuna.create_study(
             direction="minimize",
             sampler=self.select_sampler(),
             pruner=self.select_pruner(),
-            storage="sqlite:///" + self.logdir + "/" + self.config["MODEL_NAME"] + "_" + self.config["DATASET_NAME"] + "_OPTUNA_" + self.config["MODEL_NAME"] + ".db"
+            storage="sqlite:///" + self.logdir + "/" + self.config["MODEL_NAME"] + "_" + self.config["DATASET_NAME"] + "_" + self.config["MODEL_NAME"] + ".db"
         )
         self.study.optimize(self.objective, n_trials=self.config["NUM_TRIALS"])
 
@@ -173,4 +204,4 @@ class OptunaOptimizer:
 if __name__ == "__main__":
     from finol.data_layer.dataset_loader import DatasetLoader
     load_dataset_output = DatasetLoader().load_dataset()
-    OptunaOptimizer(load_dataset_output=load_dataset_output).train_via_optuna()
+    ParametersTuner(load_dataset_output=load_dataset_output).tune_parameters()

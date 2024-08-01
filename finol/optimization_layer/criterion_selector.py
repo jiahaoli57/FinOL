@@ -9,7 +9,7 @@ class CriterionSelector:
     """
     Class to select and compute different loss criteria for portfolio selection.
     """
-    def __init__(self):
+    def __init__(self) -> None:
         self.config = load_config()
         self.criterion_dict = {
             "LogWealth": self.compute_log_wealth_loss,

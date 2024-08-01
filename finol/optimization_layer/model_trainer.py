@@ -11,15 +11,15 @@ from typing import List, Tuple, Dict, Union
 from finol.model_layer.model_selector import ModelSelector
 from finol.optimization_layer.criterion_selector import CriterionSelector
 from finol.optimization_layer.optimizer_selector import OptimizerSelector
-from finol.optimization_layer.optuna_optimizer import OptunaOptimizer
+from finol.optimization_layer.parameters_tuner import ParametersTuner
 from finol.utils import load_config, portfolio_selection, set_seed
 
 
 class ModelTrainer:
     """
-    Class to train a machine learning model using the provided dataset.
+    Class to train a machine learning model for portfolio selection.
     """
-    def __init__(self, load_dataset_output):
+    def __init__(self, load_dataset_output) -> None:
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
         self.logdir = load_dataset_output["logdir"]
@@ -30,11 +30,13 @@ class ModelTrainer:
         self.is_ipython = "inline" in matplotlib.get_backend()
         # print(self.is_ipython)
 
-    def plot_loss_notebook(self):
+    def plot_loss_notebook(self) -> None:
         """
         Plot the training and validation losses in a notebook environment.
 
         This method plots the average training and validation losses over epochs using matplotlib in an interactive notebook environment.
+
+        :return: None
         """
         if self.is_ipython:
             plt.ion()
@@ -57,11 +59,13 @@ class ModelTrainer:
             plt.clf()
             plt.close()
 
-    def plot_loss(self):
+    def plot_loss(self) -> None:
         """
         Plot the training and validation losses.
 
         This method plots the average training and validation losses over epochs using matplotlib.
+
+        :return: None
         """
         # not_ipython = "inline" not in matplotlib.get_backend()
         if not self.is_ipython:
@@ -93,7 +97,7 @@ class ModelTrainer:
         """
         if self.config["TUNE_PARAMETERS"]:
             # model, best_model = OptunaOptimizer(load_dataset_output=self.load_dataset_output).train_via_optuna()
-            OptunaOptimizer(load_dataset_output=self.load_dataset_output).train_via_optuna()
+            ParametersTuner(load_dataset_output=self.load_dataset_output).tune_parameters()
             pass
 
         set_seed(seed=self.config["MANUAL_SEED"])

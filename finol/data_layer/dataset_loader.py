@@ -16,7 +16,7 @@ class DatasetLoader:
     Class to load different types of datasets.
 
     """
-    def __init__(self):
+    def __init__(self) -> None:
         self.config = load_config()
         check_update()
         download_data()

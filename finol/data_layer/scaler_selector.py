@@ -9,7 +9,7 @@ class ScalerSelector:
     """
     Class to select different types of scalers and performs partial data standardization depending on the configuration.
     """
-    def __init__(self):
+    def __init__(self) -> None:
         self.config = load_config()
         self.scaler_dict = {
             "None": "None",
