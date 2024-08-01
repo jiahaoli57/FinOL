@@ -7,7 +7,7 @@ from finol.utils import load_config
 
 class ScalerSelector:
     """
-    This class selects different types of scalers and performs partial data standardization depending on the configuration.
+    Class to select different types of scalers and performs partial data standardization depending on the configuration.
     """
     def __init__(self):
         self.config = load_config()
