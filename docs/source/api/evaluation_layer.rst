@@ -14,3 +14,4 @@ The :mod:`~finol.evaluation_layer` module contains evaluation layer related clas
    finol.evaluation_layer.EconomicDistiller
    finol.evaluation_layer.MetricCaculator
    finol.evaluation_layer.ModelEvaluator
+   finol.evaluation_layer.ResultVisualizer
