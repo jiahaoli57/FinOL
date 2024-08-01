@@ -96,7 +96,6 @@ class ModelTrainer:
         :return: Dictionary containing the log directory for the trained model.
         """
         if self.config["TUNE_PARAMETERS"]:
-            # model, best_model = OptunaOptimizer(load_dataset_output=self.load_dataset_output).train_via_optuna()
             ParametersTuner(load_dataset_output=self.load_dataset_output).tune_parameters()
             pass
 

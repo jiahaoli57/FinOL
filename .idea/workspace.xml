@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="optimize code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/optimization_layer.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/api/optimization_layer.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/data_layer/dataset_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/dataset_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/data_layer/scaler_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/scaler_selector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/criterion_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/criterion_selector.py" afterDir="false" />
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
       <change beforePath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/optimizer_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/optimizer_selector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/optuna_optimizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/parameters_tuner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -387,14 +378,7 @@
       <workItem from="1721578097822" duration="73547000" />
       <workItem from="1721823180766" duration="104259000" />
       <workItem from="1722153913354" duration="126812000" />
-      <workItem from="1722496545282" duration="5304000" />
-    </task>
-    <task id="LOCAL-00174" summary="build docs">
-      <created>1722015196092</created>
-      <option name="number" value="00174" />
-      <option name="presentableId" value="LOCAL-00174" />
-      <option name="project" value="LOCAL" />
-      <updated>1722015196092</updated>
+      <workItem from="1722496545282" duration="5910000" />
     </task>
     <task id="LOCAL-00175" summary="build docs">
       <created>1722015655108</created>
@@ -732,7 +716,14 @@
       <option name="project" value="LOCAL" />
       <updated>1722484781131</updated>
     </task>
-    <option name="localTasksCounter" value="223" />
+    <task id="LOCAL-00223" summary="build docs">
+      <created>1722502520403</created>
+      <option name="number" value="00223" />
+      <option name="presentableId" value="LOCAL-00223" />
+      <option name="project" value="LOCAL" />
+      <updated>1722502520403</updated>
+    </task>
+    <option name="localTasksCounter" value="224" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -761,9 +752,9 @@
     <MESSAGE value="commit" />
     <MESSAGE value="add &quot;Radar Chart&quot; feature" />
     <MESSAGE value="build docs; optimize code" />
-    <MESSAGE value="build docs" />
     <MESSAGE value="optimize code" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimize code" />
+    <MESSAGE value="build docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="build docs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
