@@ -1,3 +1,4 @@
+from typing import List, Tuple, Dict, Union, Any
 from finol.evaluation_layer.economic_distiller import EconomicDistiller
 from finol.evaluation_layer.metric_caculator import MetricCaculator
 from finol.evaluation_layer.benchmark_loader import BenchmarkLoader
@@ -11,7 +12,11 @@ class ModelEvaluator:
         self.load_dataset_output = load_dataset_output
         self.train_model_output = train_model_output
 
-    def evaluate_model(self):
+    def evaluate_model(self) -> Dict:
+        """
+
+        :return: None
+        """
         # Step 0: Distill the model if needed
         economic_distiller_caculate_metric_output = None
         if self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["INCLUDE_INTERPRETABILITY_ANALYSIS"] or self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["INCLUDE_ECONOMIC_DISTILLATION"]:
@@ -24,10 +29,11 @@ class ModelEvaluator:
         load_benchmark_output = BenchmarkLoader(caculate_metric_output, economic_distiller_caculate_metric_output).load_benchmark()
 
         # Step 3: Visualize the results
-        ResultVisualizer(load_benchmark_output).visualize_result()
+        visualize_result_output = ResultVisualizer(load_benchmark_output).visualize_result()
 
-        send_message_dingding(load_benchmark_output)
-        return load_benchmark_output
+        # send_message_dingding(load_benchmark_output)
+        evaluate_model_output = load_benchmark_output
+        return evaluate_model_output
 
 
 if __name__ == "__main__":
