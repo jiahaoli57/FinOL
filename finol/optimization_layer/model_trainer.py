@@ -7,6 +7,7 @@ import numpy as np
 
 from IPython import display
 from tqdm import tqdm
+from typing import List, Tuple, Dict, Union
 from finol.model_layer.model_selector import ModelSelector
 from finol.optimization_layer.criterion_selector import CriterionSelector
 from finol.optimization_layer.optimizer_selector import OptimizerSelector
@@ -15,6 +16,9 @@ from finol.utils import load_config, portfolio_selection, set_seed
 
 
 class ModelTrainer:
+    """
+    Class to train a machine learning model using the provided dataset.
+    """
     def __init__(self, load_dataset_output):
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
@@ -27,6 +31,11 @@ class ModelTrainer:
         # print(self.is_ipython)
 
     def plot_loss_notebook(self):
+        """
+        Plot the training and validation losses in a notebook environment.
+
+        This method plots the average training and validation losses over epochs using matplotlib in an interactive notebook environment.
+        """
         if self.is_ipython:
             plt.ion()
             plt.figure()  # figsize=(12, 5)
@@ -49,6 +58,11 @@ class ModelTrainer:
             plt.close()
 
     def plot_loss(self):
+        """
+        Plot the training and validation losses.
+
+        This method plots the average training and validation losses over epochs using matplotlib.
+        """
         # not_ipython = "inline" not in matplotlib.get_backend()
         if not self.is_ipython:
             plt.figure()  # figsize=(12, 5)
@@ -67,7 +81,16 @@ class ModelTrainer:
                         bbox_inches="tight")
             plt.show()
 
-    def train_model(self):
+    def train_model(self) -> Dict:
+        """
+        Train the machine learning model using the specified dataset.
+
+        This method iterates over the specified number of epochs and trains the model using the training data.
+        It calculates and stores the training and validation losses, saves the best model based on validation loss,
+        and optionally plots the dynamic loss during training.
+
+        :return: Dictionary containing the log directory for the trained model.
+        """
         if self.config["TUNE_PARAMETERS"]:
             # model, best_model = OptunaOptimizer(load_dataset_output=self.load_dataset_output).train_via_optuna()
             OptunaOptimizer(load_dataset_output=self.load_dataset_output).train_via_optuna()
