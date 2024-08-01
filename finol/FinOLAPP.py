@@ -210,7 +210,7 @@ class FinOLApp:
         # self.PLOT_CHINESE_var = tk.BooleanVar(value=False)
         # self.PLOT_CHINESE_checkbox = tk.Checkbutton(self.evaluation_config_frame, text="Plot Chinese", variable=self.PLOT_CHINESE_var)
         # self.PLOT_CHINESE_checkbox.grid(row=0, column=0, padx=10, pady=1)
-        options = ["EN", "CN"]
+        options = ["en", "zh-CHS", "zh-CHT"]
         self.create_dropdown(self.evaluation_config_frame, options, "Select Plot Language:", 0, 0, options.index(self.config["PLOT_LANGUAGE"]), "StringVar", ["PLOT_LANGUAGE"])
 
         # PROP_WINNERS
@@ -239,15 +239,6 @@ class FinOLApp:
         # Y_NAME
         options = ["Scores", "Portfolios"]
         self.create_dropdown(self.evaluation_config_frame, options, "Select Y Name:", 3, 2, options.index(self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["Y_NAME"]), "StringVar", ["INTERPRETABLE_ANALYSIS_CONFIG", "Y_NAME"])
-
-        # separator
-        self.create_separator(frame=self.evaluation_config_frame, row=4, text="Metric Settings")
-
-        # TRANSACTIOS_COSTS_RATE
-        self.create_entry(self.evaluation_config_frame, "Set Transactios Costs Rate:", 5, 0, self.config["METRIC_CONFIG"]["PRACTICAL_METRICS"]["TRANSACTIOS_COSTS_RATE"], "DoubleVar", ["METRIC_CONFIG", "PRACTICAL_METRICS", "TRANSACTIOS_COSTS_RATE"])
-
-        # TRANSACTIOS_COSTS_RATE_INTERVAL
-        self.create_entry(self.evaluation_config_frame, "Set Transactios Costs Rate Interval:", 5, 2, self.config["METRIC_CONFIG"]["PRACTICAL_METRICS"]["TRANSACTIOS_COSTS_RATE_INTERVAL"], "DoubleVar", ["METRIC_CONFIG", "PRACTICAL_METRICS", "TRANSACTIOS_COSTS_RATE_INTERVAL"])
 
         self.evaluate_button = tk.Button(self.root, text="Evaluate Model", command=self.evaluate_model)
         self.evaluate_button.pack(padx=10, pady=5)

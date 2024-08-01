@@ -12,7 +12,7 @@ from finol.model_layer.model_selector import ModelSelector
 from finol.optimization_layer.criterion_selector import CriterionSelector
 from finol.optimization_layer.optimizer_selector import OptimizerSelector
 from finol.optimization_layer.parameters_tuner import ParametersTuner
-from finol.utils import load_config, portfolio_selection, set_seed
+from finol.utils import load_config, portfolio_selection, set_seed, add_prefix
 
 
 class ModelTrainer:
@@ -52,10 +52,7 @@ class ModelTrainer:
             display.display(plt.gcf())
             plt.tight_layout()
             # plt.yscale("log")
-            plt.savefig(self.logdir + "/" + self.config["DATASET_NAME"] + "_LOSS.pdf",
-                        format="pdf",
-                        dpi=300,
-                        bbox_inches="tight")
+            plt.savefig(self.logdir + "/" + add_prefix("loss.pdf"), format="pdf", dpi=300, bbox_inches="tight")
             plt.clf()
             plt.close()
 
@@ -79,10 +76,7 @@ class ModelTrainer:
             plt.grid(True)
             plt.tight_layout()
             # plt.yscale("log")
-            plt.savefig(self.logdir + "/" + self.config["DATASET_NAME"] + "_LOSS.pdf",
-                        format="pdf",
-                        dpi=300,
-                        bbox_inches="tight")
+            plt.savefig(self.logdir + "/" + add_prefix("loss.pdf"), format="pdf", dpi=300, bbox_inches="tight")
             plt.show()
 
     def train_model(self) -> Dict:
@@ -147,7 +141,7 @@ class ModelTrainer:
                         best_val_loss = val_loss
                         # best_model = model
                         # print("best_model", "e:", e)
-                        torch.save(model, self.logdir + "/best_model_" + self.config["DATASET_NAME"] + ".pt")
+                        torch.save(model, self.logdir + "/" + add_prefix("best_model.pt"))
 
             if self.config["PLOT_DYNAMIC_LOSS"]:
                 if (e + 1) % 10 == 0:
@@ -165,8 +159,7 @@ class ModelTrainer:
         # print(
         #     best_model
         # )
-        # torch.save(best_model, self.logdir + "/best_model_" + self.config["DATASET_NAME"] + ".pt")
-        # torch.save(model, self.logdir + "/last_model_" + self.config["DATASET_NAME"] + ".pt")
+        torch.save(model, self.logdir + "/" + add_prefix("last_model.pt"))
         return train_model_output
 
 

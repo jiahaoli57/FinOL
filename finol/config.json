@@ -557,15 +557,14 @@
     "LEARNING_RATE": 0.001,
     "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
-    "TUNE_PARAMETERS": true,
+    "TUNE_PARAMETERS": false,
     "NUM_TRIALS": 200,
     "SAMPLER_NAME": "RandomSampler",
     "PRUNER_NAME": "NopPruner",
     "WRAPPED_PRUNER_NAME": "MedianPruner",
     "PLOT_DYNAMIC_LOSS": true,
     "_note5": "------------------------------------ Evaluation Layer Configuration ------------------------------------",
-    "PLOT_CHINESE": false,
-    "PLOT_LANGUAGE": "EN",
+    "PLOT_LANGUAGE": "en",
     "PROP_WINNERS": 0.5,
     "INTERPRETABLE_ANALYSIS_CONFIG": {
         "INCLUDE_INTERPRETABILITY_ANALYSIS": false,
@@ -596,12 +595,6 @@
         "HSI": 4,
         "CMEG": 4,
         "CRYPTO": 13
-    },
-    "METRIC_CONFIG": {
-        "PRACTICAL_METRICS": {
-            "TRANSACTIOS_COSTS_RATE": 0.005,
-            "TRANSACTIOS_COSTS_RATE_INTERVAL": 0.001
-        }
     },
     "BENCHMARK_BASELINE": [
         "Market",

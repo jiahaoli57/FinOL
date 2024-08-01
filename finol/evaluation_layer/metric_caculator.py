@@ -3,7 +3,7 @@ import torch
 import numpy as np
 import pandas as pd
 
-from finol.utils import load_config, actual_portfolio_selection
+from finol.utils import load_config, actual_portfolio_selection, add_prefix
 
 
 class MetricCaculator:
@@ -51,7 +51,9 @@ class MetricCaculator:
     def caculate_TCW(self):
         df = pd.DataFrame(columns=["Rate", "TCW"])
 
-        for tc_rate in np.arange(0, self.config["METRIC_CONFIG"]["PRACTICAL_METRICS"]["TRANSACTIOS_COSTS_RATE"] + self.config["METRIC_CONFIG"]["PRACTICAL_METRICS"]["TRANSACTIOS_COSTS_RATE_INTERVAL"], self.config["METRIC_CONFIG"]["PRACTICAL_METRICS"]["TRANSACTIOS_COSTS_RATE_INTERVAL"]):
+        # tc = 0.005
+        # interval = 0.001
+        for tc_rate in np.arange(0, 0.005 + 0.001, 0.001):
             portfolio_o = np.zeros_like(self.portfolios[0, :])
 
             self.daily_turno_list = []
@@ -79,8 +81,7 @@ class MetricCaculator:
         self.DCW = self.total_returns
 
     def caculate_portfolios(self):
-        self.model = torch.load(self.logdir + "/best_model_" + self.config["DATASET_NAME"] + ".pt").to(self.config["DEVICE"])
-        # self.model = self.train_model_output["best_model"]
+        self.model = torch.load(self.logdir + "/" + add_prefix("best_model.pt")).to(self.config["DEVICE"])
         self.model.eval()
         self.test_loader = self.load_dataset_output["test_loader"]
         self.num_trading_periods = self.load_dataset_output["NUM_TEST_PERIODS"]  # Total number of trading periods

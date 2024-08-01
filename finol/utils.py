@@ -20,6 +20,7 @@ PARENT_PATH = os.path.dirname(ROOT_PATH)
 print("ROOT_PATH", ROOT_PATH)
 print("PARENT_PATH", PARENT_PATH)
 
+
 def check_update():
     latest = get_latest_version()
     if __version__ == latest:
@@ -51,6 +52,18 @@ def load_config():
 def update_config(config):
     with open(ROOT_PATH + "/config.json", "w") as f:
         json.dump(config, f, indent=4)
+
+
+def add_prefix(filename: str) -> str:
+    """
+    Add the specified prefix to the given filename.
+
+    :param filename:
+    :return:
+    """
+    config = load_config()
+    prefix = config["DATASET_NAME"] + "_" + config["MODEL_NAME"] + "_"
+    return prefix + filename
 
 
 def detect_device(config):

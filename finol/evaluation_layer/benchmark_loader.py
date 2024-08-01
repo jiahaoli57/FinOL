@@ -2,11 +2,12 @@ import time
 import warnings
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+
 
 from tabulate import tabulate
+from typing import List, Tuple, Dict, Union, Any
 # from finol.evaluation_layer.radar_chart import plot_radar_chart
-from finol.utils import ROOT_PATH, load_config
+from finol.utils import ROOT_PATH, load_config, add_prefix
 
 # plt.style.use("seaborn-paper")
 # plt.rcParams["font.family"] = "Microsoft YaHei"
@@ -15,110 +16,30 @@ from finol.utils import ROOT_PATH, load_config
 
 
 class BenchmarkLoader:
-    def __init__(self, caculate_metric_output, economic_distiller_caculate_metric_output):
+    def __init__(self, caculate_metric_output: Dict, economic_distiller_caculate_metric_output: Dict):
         self.config = load_config()
         self.caculate_metric_output = caculate_metric_output
         self.economic_distiller_caculate_metric_output = economic_distiller_caculate_metric_output
         self.logdir = self.caculate_metric_output["logdir"]
 
-    def plot_dataframe(self, df, plot_type):
-        if plot_type == "DCW":
-            df_copy = df.copy()
-            df_copy = df_copy.drop(df.columns[-1], axis=1)
-            df_copy.set_index('DATE', inplace=True)
-            last_row = df_copy.iloc[-1]
-            max_columns = last_row.nlargest(5).index.tolist()
-            self.column_names = max_columns + [self.config["MODEL_NAME"]]
-            if self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["INCLUDE_ECONOMIC_DISTILLATION"]:
-                self.column_names = self.column_names + [self.config["MODEL_NAME"] + ' (ED)']
-        else:
-            # self.column_names = self.config["COMPARED_BASELINE"] + [self.config["MODEL_NAME"]]
-            pass
-
-
-        fig = plt.figure()  # figsize=(9, 4)
-
-        if plot_type == "DCW":
-            markevery = self.config["MARKEVERY"][self.config["DATASET_NAME"]]
-            if self.config["PLOT_CHINESE"]:
-                xlabel = "交易期"
-                ylabel = "逐期累积财富"
-            else:
-                xlabel = "Trading Periods"
-                ylabel = "Daily Cumulative Wealth"
-
-        elif plot_type == "DMDD":
-            markevery = self.config["MARKEVERY"][self.config["DATASET_NAME"]]
-            if self.config["PLOT_CHINESE"]:
-                xlabel = "交易期"
-                ylabel = "逐期最大下行风险"
-            else:
-                xlabel = "Trading Periods"
-                ylabel = "Daily Maximum DrawDown"
-
-        elif plot_type == "TCW":
-            plt.figure()  # figsize=(6, 5)
-            # TRANSACTIOS_COSTS_RATE = self.config["METRIC_CONFIG"].get("PRACTICAL_METRICS")["TRANSACTIOS_COSTS_RATE"]
-            # TRANSACTIOS_COSTS_RATE_INTERVAL = self.config["METRIC_CONFIG"].get("PRACTICAL_METRICS")["TRANSACTIOS_COSTS_RATE_INTERVAL"]
-            TRANSACTIOS_COSTS_RATE = self.config["METRIC_CONFIG"]["PRACTICAL_METRICS"]["TRANSACTIOS_COSTS_RATE"]
-            TRANSACTIOS_COSTS_RATE_INTERVAL = self.config["METRIC_CONFIG"]["PRACTICAL_METRICS"]["TRANSACTIOS_COSTS_RATE_INTERVAL"]
-            markevery = 1
-            if self.config["PLOT_CHINESE"]:
-                xlabel = "交易费用率 (%)"
-                ylabel = "考虑交易费用的累积财富"
-            else:
-                xlabel = "Transaction Costs Rates (%)"
-                ylabel = "Costs-Adjusted Cumulative Wealth"
-
-            plt.xticks(ticks=[0, 2, 4, 6, 8, 10], labels=[0, 0.2, 0.4, 0.6, 0.8, 1])
-            plt.xticks(ticks=[0, 2.5, 5, 7.5, 10], labels=[0, 0.25, 0.5, 0.75, 1])
-            plt.xticks(ticks=[0, 1.25, 2.5, 3.75, 5, 7.5, 10], labels=[0, 0.125, 0.25, 0.375, 0.5, 0.75, 1])
-
-        df = df[self.column_names]
-        # df = df.rename(columns={df.columns[-2]: "Teacher-Model", df.columns[-1]: "Student-Model"})
-        num_columns = len(df.columns)
-
+    def find_top_5_baselines(self, df):
+        df_copy = df.copy()
+        df_copy = df_copy.drop(df.columns[-1], axis=1)
+        df_copy.set_index('DATE', inplace=True)
+        last_row = df_copy.iloc[-1]
+        max_columns = last_row.nlargest(5).index.tolist()
+        self.top_5_baselines = max_columns + [self.config["MODEL_NAME"]]
         if self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["INCLUDE_ECONOMIC_DISTILLATION"]:
-            colors = ["black"] * (num_columns - 2) + ["red"] * 2
-            lines = ["-"] * (num_columns - 1) + [":"]
-        else:
-            colors = ["black"] * (num_columns - 1) + ["red"] * 1
-            lines = ["-"] * (num_columns)
+            self.top_5_baselines = self.top_5_baselines + [self.config["MODEL_NAME"] + ' (ED)']
 
-        if plot_type == "TCW":
-            for i, column in enumerate(df.columns):
-                plt.plot(df[column].head(int(TRANSACTIOS_COSTS_RATE/TRANSACTIOS_COSTS_RATE_INTERVAL)+1), linestyle=lines[i], color=colors[i], marker=self.config["MARKERS"][i], markevery=markevery, alpha=0.5,
-                         label=column)
-        else:
-            for i, column in enumerate(df.columns):
-                plt.plot(df[column], linestyle=lines[i], color=colors[i], marker=self.config["MARKERS"][i], markevery=markevery, alpha=0.5,
-                         label=column)
-
-        plt.xlabel(xlabel)
-        plt.ylabel(ylabel)
-        plt.title(self.config["DATASET_NAME"])
-        plt.legend(loc="best")  # lower left  upper left
-        plt.grid(True)
-        # plt.yscale("log")
-        plt.tight_layout()
-        plt.savefig(self.logdir + "/" + self.config["MODEL_NAME"] + "_" + self.config["DATASET_NAME"] + "_" + plot_type + ".pdf",
-                    format="pdf",
-                    dpi=300,
-                    bbox_inches="tight")
-        plt.show()
-
-    def load_benchmark(self):
+    def load_benchmark(self) -> Dict[str, Any]:
         """
-        Load baseline results from a CSV file for specified target classes.
 
         Returns:
-        - None
         """
-        if self.caculate_metric_output != None:
-            logdir = self.caculate_metric_output["logdir"]
-        else:
-            logdir = ROOT_PATH
+        logdir = self.caculate_metric_output["logdir"]
 
+        # ------------------------------------------------------------------------------------------------------------ #
         daily_return = pd.read_excel(ROOT_PATH + "/data/benchmark_results/profit_metrics/" + self.config["DATASET_NAME"] + "/daily_return.xlsx")
         daily_cumulative_wealth = pd.read_excel(ROOT_PATH + "/data/benchmark_results/profit_metrics/" + self.config["DATASET_NAME"] + "/daily_cumulative_wealth.xlsx")
         final_profit_result = pd.read_excel(ROOT_PATH + "/data/benchmark_results/profit_metrics/" + self.config["DATASET_NAME"] + "/final_profit_result.xlsx")
@@ -126,95 +47,69 @@ class BenchmarkLoader:
         daily_return = daily_return.dropna(axis=1, how="any")
         daily_cumulative_wealth = daily_cumulative_wealth.dropna(axis=1, how="any")
         final_profit_result = final_profit_result.dropna(axis=1, how="any")
-        if self.caculate_metric_output != None:
+        if self.caculate_metric_output is not None:
             daily_cumulative_wealth[self.config["MODEL_NAME"]] = self.caculate_metric_output["DCW"]
             final_profit_result = final_profit_result.assign(**{self.config["MODEL_NAME"]: np.nan})
             final_profit_result.loc[0, self.config["MODEL_NAME"]] = self.caculate_metric_output["CW"]
             final_profit_result.loc[1, self.config["MODEL_NAME"]] = self.caculate_metric_output["APY"]
             final_profit_result.loc[2, self.config["MODEL_NAME"]] = self.caculate_metric_output["SR"]
-        if self.economic_distiller_caculate_metric_output != None:
+        if self.economic_distiller_caculate_metric_output is not None:
             daily_cumulative_wealth[self.config["MODEL_NAME"] + " (ED)"] = self.economic_distiller_caculate_metric_output["DCW"]
             final_profit_result = final_profit_result.assign(**{self.config["MODEL_NAME"] + " (ED)": np.nan})
             final_profit_result.loc[0, self.config["MODEL_NAME"] + " (ED)"] = self.economic_distiller_caculate_metric_output["CW"]
             final_profit_result.loc[1, self.config["MODEL_NAME"] + " (ED)"] = self.economic_distiller_caculate_metric_output["APY"]
             final_profit_result.loc[2, self.config["MODEL_NAME"] + " (ED)"] = self.economic_distiller_caculate_metric_output["SR"]
 
-        # dd = final_profit_result.drop("Metric", axis=1).T
-        # dd.columns = ["CW", "APY", "SR"]
-        # dd = dd.reset_index(drop=False)
-        # print(
-        #     dd
-        # )
-        # # time.sleep(1111)
-        # import dash
-        # from dash import dash_table
-        # from dash import html
-        # # Create Dash app
-        # app = dash.Dash(__name__)
-        # # Create Dash table from dataframe
-        # table = dash_table.DataTable(
-        #   data=dd.to_dict("records"),
-        #   columns=[{"name": i, "id": i} for i in dd.columns]
-        # )
-        # # Add sorting
-        # table.sort_action = "native"
-        # app.layout = html.Div([
-        #     html.H1("Interactive DataTable"),
-        #
-        #     html.Div([
-        #         html.H2("DataFrame 1"),
-        #         table
-        #     ]),
-        #
-        #     html.Div([
-        #         html.H3("DataFrame 2"),
-        #         table
-        #     ]),
-        # ])
-        # app.run_server(debug=True)
-        # time.sleep(1111)
-
-        self.plot_dataframe(daily_cumulative_wealth, "DCW")
+        self.find_top_5_baselines(daily_cumulative_wealth)
 
         tabulate_data = []
-        tabulate_data.append(["CW"] + list(final_profit_result.loc[0, self.column_names].values))
-        tabulate_data.append(["APY"] + list(final_profit_result.loc[1, self.column_names].values))
-        tabulate_data.append(["SR"] + list(final_profit_result.loc[2, self.column_names].values))
+        tabulate_data.append(["CW"] + list(final_profit_result.loc[0, self.top_5_baselines].values))
+        tabulate_data.append(["APY"] + list(final_profit_result.loc[1, self.top_5_baselines].values))
+        tabulate_data.append(["SR"] + list(final_profit_result.loc[2, self.top_5_baselines].values))
         print("Profitability comparison with the top five baselines:")
-        print(tabulate(tabulate_data, headers=["Profit Metric"] + list(final_profit_result.loc[0, self.column_names].index), tablefmt="psql", numalign="left"))
+        print(tabulate(tabulate_data, headers=["Profit Metric"] + list(final_profit_result.loc[0, self.top_5_baselines].index), tablefmt="psql", numalign="left"))
 
+        # save results
+        daily_cumulative_wealth.to_excel(logdir + "/" + add_prefix("daily_cumulative_wealth.xlsx"), index=False)
+        final_profit_result.to_excel(logdir + "/" + add_prefix("final_profit_result.xlsx"), index=False)
+
+        # ------------------------------------------------------------------------------------------------------------ #
         daily_drawdown = pd.read_excel(ROOT_PATH + "/data/benchmark_results/risk_metrics/" + self.config["DATASET_NAME"] + "/daily_drawdown.xlsx")
         final_risk_result = pd.read_excel(ROOT_PATH + "/data/benchmark_results/risk_metrics/" + self.config["DATASET_NAME"] + "/final_risk_result.xlsx")
 
         daily_drawdown = daily_drawdown.dropna(axis=1, how="any")
         final_risk_result = final_risk_result.dropna(axis=1, how="any")
 
-        daily_maximumdrawdown = daily_drawdown.copy()
+        # calculate daily MDD
+        daily_maximum_drawdown = daily_drawdown.copy()
         for col in daily_drawdown.columns:
-            daily_maximumdrawdown[f"{col}"] = daily_drawdown[col].cummax()
+            daily_maximum_drawdown[f"{col}"] = daily_drawdown[col].cummax()
 
         if self.caculate_metric_output != None:
             daily_drawdown[self.config["MODEL_NAME"]] = self.caculate_metric_output["DDD"]
-            daily_maximumdrawdown[self.config["MODEL_NAME"]] = self.caculate_metric_output["DMDD"]
+            daily_maximum_drawdown[self.config["MODEL_NAME"]] = self.caculate_metric_output["DMDD"]
             final_risk_result = final_risk_result.assign(**{self.config["MODEL_NAME"]: np.nan})
             final_risk_result.loc[0, self.config["MODEL_NAME"]] = self.caculate_metric_output["VR"]
             final_risk_result.loc[1, self.config["MODEL_NAME"]] = self.caculate_metric_output["MDD"]
         if self.economic_distiller_caculate_metric_output != None:
             daily_drawdown[self.config["MODEL_NAME"] + " (ED)"] = self.economic_distiller_caculate_metric_output["DDD"]
-            daily_maximumdrawdown[self.config["MODEL_NAME"] + " (ED)"] = self.economic_distiller_caculate_metric_output["DMDD"]
+            daily_maximum_drawdown[self.config["MODEL_NAME"] + " (ED)"] = self.economic_distiller_caculate_metric_output["DMDD"]
             final_risk_result = final_risk_result.assign(**{self.config["MODEL_NAME"] + " (ED)": np.nan})
             final_risk_result.loc[0, self.config["MODEL_NAME"] + " (ED)"] = self.economic_distiller_caculate_metric_output["VR"]
             final_risk_result.loc[1, self.config["MODEL_NAME"] + " (ED)"] = self.economic_distiller_caculate_metric_output["MDD"]
 
-        # self.plot_dataframe(daily_drawdown, "DDD")
-        self.plot_dataframe(daily_maximumdrawdown, "DMDD")
-
         tabulate_data = []
-        tabulate_data.append(["VR"] + list(final_risk_result.loc[0, self.column_names].values))
-        tabulate_data.append(["MDD"] + list(final_risk_result.loc[1, self.column_names].values))
+        tabulate_data.append(["VR"] + list(final_risk_result.loc[0, self.top_5_baselines].values))
+        tabulate_data.append(["MDD"] + list(final_risk_result.loc[1, self.top_5_baselines].values))
         print("Risk resilience comparison with the top five baselines:")
-        print(tabulate(tabulate_data, headers=["Risk Metric"] + list(final_risk_result.loc[0, self.column_names].index), tablefmt="psql", numalign="left"))
+        print(tabulate(tabulate_data, headers=["Risk Metric"] + list(final_risk_result.loc[0, self.top_5_baselines].index), tablefmt="psql", numalign="left"))
 
+        # save results
+        daily_drawdown.to_excel(logdir + "/" + add_prefix("daily_drawdown.xlsx"), index=False)
+        daily_maximum_drawdown.to_excel(logdir + "/" + add_prefix("daily_maximumdrawdown.xlsx"), index=False)
+        final_risk_result.to_excel(logdir + "/" + add_prefix("final_risk_result.xlsx"), index=False)
+
+        # ------------------------------------------------------------------------------------------------------------ #
         transaction_costs_adjusted_cumulative_wealth = pd.read_excel(ROOT_PATH + "/data/benchmark_results/practical_metrics/" + self.config["DATASET_NAME"] + "/transaction_costs_adjusted_cumulative_wealth.xlsx")
         final_practical_result = pd.read_excel(ROOT_PATH + "/data/benchmark_results/practical_metrics/" + self.config["DATASET_NAME"] + "/final_practical_result.xlsx")
 
@@ -231,20 +126,27 @@ class BenchmarkLoader:
             final_practical_result.loc[0, self.config["MODEL_NAME"] + " (ED)"] = self.economic_distiller_caculate_metric_output["ATO"]
             final_practical_result.loc[1, self.config["MODEL_NAME"] + " (ED)"] = self.economic_distiller_caculate_metric_output["RT"]
 
-        self.plot_dataframe(transaction_costs_adjusted_cumulative_wealth, "TCW")
-
         tabulate_data = []
-        tabulate_data.append(["ATO"] + list(final_practical_result.loc[0, self.column_names].values))
-        tabulate_data.append(["RT"] + list(final_practical_result.loc[1, self.column_names].values))
+        tabulate_data.append(["ATO"] + list(final_practical_result.loc[0, self.top_5_baselines].values))
+        tabulate_data.append(["RT"] + list(final_practical_result.loc[1, self.top_5_baselines].values))
         print("Practicality comparison with the top five baselines:")
-        print(tabulate(tabulate_data, headers=["Practical Metric"] + list(final_practical_result.loc[0, self.column_names].index), tablefmt="psql", numalign="left"))
+        print(tabulate(tabulate_data, headers=["Practical Metric"] + list(final_practical_result.loc[0, self.top_5_baselines].index), tablefmt="psql", numalign="left"))
 
+        # save results
+        transaction_costs_adjusted_cumulative_wealth.to_excel(logdir + "/" + add_prefix("transaction_costs_adjusted_cumulative_wealth.xlsx"), index=False)
+        final_practical_result.to_excel(logdir + "/" + add_prefix("final_practical_result.xlsx"), index=False)
+
+        # ------------------------------------------------------------------------------------------------------------ #
         # plot_radar_chart(final_profit_result, final_risk_result, self.COMPARED_BASELINE, logdir)
 
         load_benchmark_output = {}
         load_benchmark_output["logdir"] = self.caculate_metric_output["logdir"]
+        load_benchmark_output["top_5_baselines"] = self.top_5_baselines
+        load_benchmark_output["daily_cumulative_wealth"] = daily_cumulative_wealth
+        load_benchmark_output["daily_maximum_drawdown"] = daily_maximum_drawdown
+        load_benchmark_output["transaction_costs_adjusted_cumulative_wealth"] = transaction_costs_adjusted_cumulative_wealth
         load_benchmark_output["CW"] = self.caculate_metric_output["CW"]
-        load_benchmark_output["TCW"] = self.caculate_metric_output["TCW"].iloc[-6]
+        load_benchmark_output["TCW"] = self.caculate_metric_output["TCW"]
         # print(load_benchmark_output["TCW"])
         return load_benchmark_output
 
