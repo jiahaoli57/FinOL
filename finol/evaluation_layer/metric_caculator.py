@@ -229,8 +229,8 @@ class MetricCaculator:
         """
         Calculate various performance metrics based on the provided portfolios, labels.
 
-        :param portfolios: Portfolio sequence.
-        :param labels: Price relative sequence.
+        :param portfolios: Portfolio sequence :math:`\mathbf{b}_{1:n}`.
+        :param labels: Price relative sequence :math:`\mathbf{x}_{1:n}`.
         :param runtime: The runtime information. Required only when ``self.mode`` is ``ed`` (economic distillation).
         :return: Dictionary containing calculated performance metrics.
         """
