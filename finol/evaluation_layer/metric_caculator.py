@@ -25,7 +25,7 @@ class MetricCaculator:
 
     def caculate_annual_percentage_yield(self, num_trading_periods: float, final_cumulative_wealth: float) -> float:
         """
-        *Annualized Percentage Yield* (APY): Annualize the *Final Cumulative Wealth* based on the investment horizon :math:`n` to facilitate comparison across different periods.
+        *Annualized Percentage Yield* (APY): Annualize the *Final Cumulative Wealth* based on the investment horizon :math:`n` to facilitate comparison across different datasets.
 
         .. math::
 
