@@ -12,7 +12,7 @@ from finol.utils import load_config, add_prefix
 
 plt.rcParams["font.family"] = "Microsoft YaHei"
 
-def radar_factory(num_vars, frame='circle'):
+def radar_factory(num_vars, frame="circle"):
     """
     Create a radar chart with `num_vars` axes.
 
@@ -22,7 +22,7 @@ def radar_factory(num_vars, frame='circle'):
     ----------
     num_vars : int
         Number of variables for radar chart.
-    frame : {'circle', 'polygon'}
+    frame : {"circle", "polygon"}
         Shape of frame surrounding axes.
 
     """
@@ -41,13 +41,13 @@ def radar_factory(num_vars, frame='circle'):
 
     class RadarAxes(PolarAxes):
 
-        name = 'radar'
+        name = "radar"
         PolarTransform = RadarTransform
 
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
             # rotate plot such that the first axis is at the top
-            self.set_theta_zero_location('N')
+            self.set_theta_zero_location("N")
 
         def fill(self, *args, closed=True, **kwargs):
             """Override fill so that line is closed by default"""
@@ -72,28 +72,28 @@ def radar_factory(num_vars, frame='circle'):
         def _gen_axes_patch(self):
             # The Axes patch must be centered at (0.5, 0.5) and of radius 0.5
             # in axes coordinates.
-            if frame == 'circle':
+            if frame == "circle":
                 return Circle((0.5, 0.5), 0.5)
-            elif frame == 'polygon':
+            elif frame == "polygon":
                 return RegularPolygon((0.5, 0.5), num_vars,
                                       radius=.5, edgecolor="k")
             else:
                 raise ValueError("Unknown value for 'frame': %s" % frame)
 
         def _gen_axes_spines(self):
-            if frame == 'circle':
+            if frame == "circle":
                 return super()._gen_axes_spines()
-            elif frame == 'polygon':
-                # spine_type must be 'left'/'right'/'top'/'bottom'/'circle'.
+            elif frame == "polygon":
+                # spine_type must be "left"/"right"/"top"/"bottom"/"circle".
                 spine = Spine(axes=self,
-                              spine_type='circle',
+                              spine_type="circle",
                               path=Path.unit_regular_polygon(num_vars))
                 # unit_regular_polygon gives a polygon of radius 1 centered at
                 # (0, 0) but we want a polygon of radius 0.5 centered at (0.5,
                 # 0.5) in axes coordinates.
                 spine.set_transform(Affine2D().scale(.5).translate(.5, .5)
                                     + self.transAxes)
-                return {'polar': spine}
+                return {"polar": spine}
             else:
                 raise ValueError("Unknown value for 'frame': %s" % frame)
 
@@ -335,18 +335,18 @@ class ResultVisualizer:
         max_val = np.max(data_array, axis=0)
         scaled_data = (data_array - min_val) / (max_val - min_val)
 
-        theta = radar_factory(num_vars=5, frame='polygon')
-        labels = ['CW', '- MDD', '- VR', 'SR', 'APY']
+        theta = radar_factory(num_vars=5, frame="polygon")
+        labels = ["CW", "- MDD", "- VR", "SR", "APY"]
 
-        fig, ax = plt.subplots(subplot_kw=dict(projection='radar'))
-        colors = ['black'] * (num_columns - 1) + ['red'] * 1
+        fig, ax = plt.subplots(subplot_kw=dict(projection="radar"))
+        colors = ["black"] * (num_columns - 1) + ["red"] * 1
 
         # plot the four cases from the example data on separate axes
         ax.set_rgrids([0.2, 0.4, 0.6, 0.8])
 
         for d, color, marker in zip(scaled_data, colors, self.config["MARKERS"]):
             ax.plot(theta, d, color=color, alpha=0.5, marker=marker)
-            ax.fill(theta, d, facecolor=color, alpha=0.15, label='_nolegend_')
+            ax.fill(theta, d, facecolor=color, alpha=0.15, label="_nolegend_")
         ax.set_varlabels(labels)
 
         # add legend relative to top-left plot
