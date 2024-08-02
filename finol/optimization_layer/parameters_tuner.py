@@ -111,7 +111,7 @@ class ParametersTuner:
                 raise optuna.TrialPruned()
         return value
 
-    def select_sampler(self) -> optuna.samplers:
+    def select_sampler(self) -> object:
         """
         Selects and initializes an Optuna sampler based on the configuration.
 
@@ -132,7 +132,7 @@ class ParametersTuner:
 
         return getattr(optuna.samplers, sampler_name)(**sampler_kwargs)
 
-    def select_pruner(self) -> optuna.pruners:
+    def select_pruner(self) -> object:
         """
         Selects and initializes an Optuna pruner based on the configuration.
 
