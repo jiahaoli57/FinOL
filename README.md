@@ -9,15 +9,14 @@
 [![Read the Docs](https://readthedocs.org/projects/optuna/badge/?version=stable)](https://finol.readthedocs.io/en/latest/)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20windows%20%7C%20macos-lightgrey)](Platform)
 [![License](https://img.shields.io/github/license/jiahaoli57/FinOL)](LICENSE)
-
-[//]: # ([![PyPI Downloads]&#40;https://img.shields.io/pypi/dm/finol&#41;]&#40;https://pypi.org/project/finol&#41;)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/finol)](https://pypi.org/project/finol)
 
 [//]: # ([![Discord]&#40;https://img.shields.io/discord/1201132123722104902&#41;]&#40;https://discord.gg/KCXQt7r3&#41;)
-
 [//]: # ([![Document]&#40;https://img.shields.io/badge/docs-latest-red&#41;]&#40;https://finol.readthedocs.io/en/latest/&#41;)
 [//]: # ([![]&#40;https://dcbadge.vercel.app/api/server/KCXQt7r3&#41;]&#40;https://discord.gg/KCXQt7r3&#41;)
 [//]: # ([![GitHub stars]&#40;https://img.shields.io/github/stars/ai4finol/finol?color=orange&#41;]&#40;https://github.com/ai4finol/finol/stargazers&#41;)
 
+[//]: # ()
 </div>
 
 ***
