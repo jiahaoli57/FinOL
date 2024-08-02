@@ -344,14 +344,7 @@ class ResultVisualizer:
         # plot the four cases from the example data on separate axes
         ax.set_rgrids([0.2, 0.4, 0.6, 0.8])
 
-        # scale the data to [0, 1]
-        data_array = np.array(data)
-        min_val = np.min(data_array, axis=0)
-        max_val = np.max(data_array, axis=0)
-        scaled_data = (data_array - min_val) / (max_val - min_val)
-        case_data = scaled_data
-
-        for d, color, marker in zip(case_data, colors, self.config["MARKERS"]):
+        for d, color, marker in zip(scaled_data, colors, self.config["MARKERS"]):
             ax.plot(theta, d, color=color, alpha=0.5, marker=marker)
             ax.fill(theta, d, facecolor=color, alpha=0.15, label='_nolegend_')
         ax.set_varlabels(labels)
@@ -362,4 +355,3 @@ class ResultVisualizer:
         plt.tight_layout()
         plt.savefig(self.logdir + "/" + add_prefix(self.plot_type) + ".pdf", format="pdf", dpi=300, bbox_inches="tight")
         plt.show()
-        pass
