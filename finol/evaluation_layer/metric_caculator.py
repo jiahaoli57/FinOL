@@ -77,7 +77,7 @@ class MetricCaculator:
 
             \mathrm{MDD}=\\max_{0\leq t\leq n}\\left(\\frac{\\max_{0\leq k\leq t} S_k - S_t}{\\max_{0\leq k\leq t} S_k}\\right),
 
-        where :math:`S_t` is the cumulative wealth at the end of the :math:`n`-th trading period.
+        where :math:`S_t` is the cumulative wealth at the end of the :math:`t`-th trading period.
 
         :param daily_cumulative_wealth: *Daily Cumulative Wealth*.
         :return: Tuple containing the daily drawdown, daily maximum drawdown, and maximum drawdown.
