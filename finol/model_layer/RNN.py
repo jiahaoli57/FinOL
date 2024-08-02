@@ -12,8 +12,12 @@ class RNN(nn.Module):
         self.model_args = model_args
         self.model_params = model_params
 
-        self.rnn = nn.RNN(input_size=model_args["NUM_FEATURES_ORIGINAL"], hidden_size=model_params["HIDDEN_SIZE"],
-                          num_layers=model_params["NUM_LAYERS"], batch_first=True)
+        self.rnn = nn.RNN(
+            input_size=model_args["num_features_original"],
+            hidden_size=model_params["HIDDEN_SIZE"],
+            num_layers=model_params["NUM_LAYERS"],
+            batch_first=True
+        )
         self.relu = nn.ReLU()
         self.dropout = nn.Dropout(model_params["DROPOUT"])
         self.fc = nn.Linear(model_params["HIDDEN_SIZE"], 1)
@@ -22,7 +26,7 @@ class RNN(nn.Module):
         batch_size, num_assets, num_features_augmented = x.shape
 
         """Input Transformation"""
-        x = x.view(batch_size, num_assets, self.model_args["WINDOW_SIZE"], self.model_args["NUM_FEATURES_ORIGINAL"])
+        x = x.view(batch_size, num_assets, self.model_args["window_size"], self.model_args["num_features_original"])
         x = rearrange(x, "b m n d -> (b m) n d")
         if self.config["SCALER"].startswith("Window"):
             x = ScalerSelector().window_normalize(x)

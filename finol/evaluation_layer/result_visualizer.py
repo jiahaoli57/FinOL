@@ -118,15 +118,15 @@ class ResultVisualizer:
         for plot_type in ["DCW", "DMDD", "TCW", "RADAR"]:
             self.plot_type = plot_type
             if plot_type == "DCW":
-                self._plot_daily_cumulative_wealth()
+                self.plot_daily_cumulative_wealth()
             elif plot_type == "DMDD":
-                self._plot_daily_maximum_drawdown()
+                self.plot_daily_maximum_drawdown()
             elif plot_type == "TCW":
-                self._plot_transaction_costs_adjusted_wealth()
+                self.plot_transaction_costs_adjusted_wealth()
             elif plot_type == "RADAR":
-                self._plot_radar_chart()
+                self.plot_radar_chart()
 
-    def _plot_daily_cumulative_wealth(self) -> None:
+    def plot_daily_cumulative_wealth(self) -> None:
         """
         Visualize the daily cumulative wealth comparison between the model and the top baselines.
 
@@ -168,8 +168,7 @@ class ResultVisualizer:
         plt.show()
         plt.figure()
 
-
-    def _plot_daily_drawdown(self) -> None:
+    def plot_daily_drawdown(self) -> None:
         """
         Visualize the daily drawdown comparison between the model and the top baselines.
 
@@ -215,8 +214,7 @@ class ResultVisualizer:
         plt.show()
         plt.figure()
 
-
-    def _plot_daily_maximum_drawdown(self) -> None:
+    def plot_daily_maximum_drawdown(self) -> None:
         """
         Visualize the daily maximum drawdown comparison between the model and the top baselines.
 
@@ -262,7 +260,7 @@ class ResultVisualizer:
         plt.show()
         plt.figure()
 
-    def _plot_transaction_costs_adjusted_wealth(self) -> None:
+    def plot_transaction_costs_adjusted_wealth(self) -> None:
         """
         Visualize the transaction costs adjusted wealth comparison between the model and the top baselines.
 
@@ -314,7 +312,7 @@ class ResultVisualizer:
         plt.show()
         plt.figure()
 
-    def _plot_radar_chart(self) -> None:
+    def plot_radar_chart(self) -> None:
         """
         Visualize the radar chart comparison between the model and the top baselines.
 

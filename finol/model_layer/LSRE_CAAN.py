@@ -148,7 +148,7 @@ class LSRE(nn.Module):
         self.latents = nn.Parameter(torch.randn(model_params["NUM_LATENTS"], model_params["LATENT_DIM"]))
         # self.latents = nn.Parameter(torch.zeros(model_params["NUM_LATENTS"], model_params["LATENT_DIM"]))
         self.cross_attend_blocks = nn.ModuleList([
-            PreNorm(model_params["LATENT_DIM"], Attention(model_params["LATENT_DIM"], model_args["NUM_FEATURES_ORIGINAL"], heads=model_params["CROSS_HEADS"], dim_head=model_params["CROSS_DIM_HEAD"]), context_dim=model_args["NUM_FEATURES_ORIGINAL"]),
+            PreNorm(model_params["LATENT_DIM"], Attention(model_params["LATENT_DIM"], model_args["num_features_original"], heads=model_params["CROSS_HEADS"], dim_head=model_params["CROSS_DIM_HEAD"]), context_dim=model_args["num_features_original"]),
             PreNorm(model_params["LATENT_DIM"], FeedForward(model_params["LATENT_DIM"]))
         ])
         get_latent_attn = lambda: PreNorm(model_params["LATENT_DIM"], Attention(model_params["LATENT_DIM"], heads=model_params["LATENT_HEADS"], dim_head=model_params["LATENT_DIM_HEAD"]))
@@ -222,28 +222,28 @@ class LSRE_CAAN(nn.Module):
         self.model_params = model_params
 
         # self.token_emb = nn.Linear(num_features_original, self.dim)
-        self.pos_emb = nn.Embedding(model_args["WINDOW_SIZE"], model_args["NUM_FEATURES_ORIGINAL"])
+        self.pos_emb = nn.Embedding(model_args["window_size"], model_args["num_features_original"])
         self.lsre = LSRE(model_args, model_params)
         self.caan = CAAN(model_params)
         self.dropout = nn.Dropout(p=self.model_params["DROPOUT"])
         if self.config["MODEL_NAME"] == "LSRE-CAAN-d":
-            self.ab_study_linear_1 = torch.nn.Linear(num_features_original, self.model_params["LATENT_DIM"])
+            self.ab_study_linear_1 = torch.nn.Linear(model_args["num_features_original"], self.model_params["LATENT_DIM"])
         if self.config["MODEL_NAME"] == "LSRE-CAAN-dd":
             self.ab_study_linear_2 = torch.nn.Linear(self.model_params["LATENT_DIM"], 1)
 
     def forward(self, x):
         batch_size, num_assets, num_features_augmented = x.shape
-        DEVICE = x.device
+        device = x.device
 
         """Input Transformation"""
-        x = x.view(batch_size, num_assets, self.model_args["WINDOW_SIZE"], self.model_args["NUM_FEATURES_ORIGINAL"])
+        x = x.view(batch_size, num_assets, self.model_args["window_size"], self.model_args["num_features_original"])
         x = rearrange(x, "b m n d -> (b m) n d")
         if self.config["SCALER"].startswith("Window"):
             x = ScalerSelector().window_normalize(x)
 
         """Long Sequence Representations Extractor (LSRE)"""
         # x = self.token_emb(x)  # optional
-        pos_emb = self.pos_emb(torch.arange(self.model_args["WINDOW_SIZE"], device=DEVICE))
+        pos_emb = self.pos_emb(torch.arange(self.model_args["window_size"], device=device))
         pos_emb = rearrange(pos_emb, "n d -> () n d")
         x = x + pos_emb
 
@@ -267,20 +267,20 @@ class LSRE_CAAN(nn.Module):
         return final_scores
 
 
-if __name__ == "__main__":
-    DEVICE = "cuda"
-    torch.manual_seed(0)
-    batch_size = 2
-    num_assets = 2
-    window_size = 3
-    num_features_original = 4
-    num_features_augmented = window_size * num_features_original
-    x = torch.rand(batch_size, num_assets, num_features_augmented).to(DEVICE)
-    model = LSRE_CAAN(
-        num_assets=num_assets,
-        num_features_augmented=num_features_augmented,
-        num_features_original=num_features_original,
-        window_size=window_size,
-    ).to(DEVICE)
-    final_scores = model(x)
-    print(final_scores)
+# if __name__ == "__main__":
+    # DEVICE = "cuda"
+    # torch.manual_seed(0)
+    # batch_size = 2
+    # num_assets = 2
+    # window_size = 3
+    # num_features_original = 4
+    # num_features_augmented = window_size * num_features_original
+    # x = torch.rand(batch_size, num_assets, num_features_augmented).to(DEVICE)
+    # model = LSRE_CAAN(
+    #     num_assets=num_assets,
+    #     num_features_augmented=num_features_augmented,
+    #     num_features_original=num_features_original,
+    #     window_size=window_size,
+    # ).to(DEVICE)
+    # final_scores = model(x)
+    # print(final_scores)

@@ -20,7 +20,7 @@ class BenchmarkLoader:
         self.config = load_config()
         self.caculate_metric_output = caculate_metric_output
         self.economic_distiller_caculate_metric_output = economic_distiller_caculate_metric_output
-        self.logdir = self.caculate_metric_output["logdir"]
+        self.logdir = self.caculate_metric_output["LOGDIR"]
 
     def find_top_5_baselines(self, df):
         df_copy = df.copy()
@@ -63,7 +63,7 @@ class BenchmarkLoader:
         self.find_top_5_baselines(daily_cumulative_wealth)
 
         tabulate_data = []
-        tabulate_data.append(["CW"] + list(final_profit_result.loc[0, self.top_5_baselines].values))
+        tabulate_data.append(["FCW"] + list(final_profit_result.loc[0, self.top_5_baselines].values))
         tabulate_data.append(["APY"] + list(final_profit_result.loc[1, self.top_5_baselines].values))
         tabulate_data.append(["SR"] + list(final_profit_result.loc[2, self.top_5_baselines].values))
         print("Profitability comparison with the top five baselines:")
@@ -149,8 +149,8 @@ class BenchmarkLoader:
         load_benchmark_output["final_risk_result"] = final_risk_result
         load_benchmark_output["transaction_costs_adjusted_cumulative_wealth"] = transaction_costs_adjusted_cumulative_wealth
         load_benchmark_output["final_practical_result"] = final_practical_result
-        load_benchmark_output["CW"] = self.caculate_metric_output["CW"]
-        load_benchmark_output["TCW"] = self.caculate_metric_output["TCW"]
+        # load_benchmark_output["CW"] = self.caculate_metric_output["CW"]
+        # load_benchmark_output["TCW"] = self.caculate_metric_output["TCW"]
         # print(load_benchmark_output["TCW"])
         return load_benchmark_output
 

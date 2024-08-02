@@ -7,15 +7,16 @@ from finol.utils import load_config, send_message_dingding
 
 
 class ModelEvaluator:
-    def __init__(self, load_dataset_output, train_model_output):
+    def __init__(self, load_dataset_output, train_model_output) -> None:
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
         self.train_model_output = train_model_output
 
     def evaluate_model(self) -> Dict:
         """
+        Evaluate the model based on the loaded dataset and trained model.
 
-        :return: None
+        :return: Dictionary containing the evaluation output of the model.
         """
         # Step 0: Distill the model if needed
         economic_distiller_caculate_metric_output = None

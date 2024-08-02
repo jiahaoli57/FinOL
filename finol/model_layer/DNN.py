@@ -12,7 +12,7 @@ class DNN(nn.Module):
         self.config = load_config()
 
         self.layers = nn.ModuleList()
-        self.layers.append(nn.Linear(model_args["NUM_FEATURES_AUGMENTED"], model_params["HIDDEN_SIZE"]))
+        self.layers.append(nn.Linear(model_args["num_features_augmented"], model_params["HIDDEN_SIZE"]))
         for _ in range(model_params["NUM_LAYERS"]):
             self.layers.append(nn.Linear(model_params["HIDDEN_SIZE"], model_params["HIDDEN_SIZE"]))
         self.layers.append(nn.Linear(model_params["HIDDEN_SIZE"], 1))

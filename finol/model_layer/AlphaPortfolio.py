@@ -29,8 +29,8 @@ class SREM(nn.Module):
     """
     def __init__(self, model_args, model_params):
         super().__init__()
-        self.token_emb = nn.Linear(model_args["NUM_FEATURES_ORIGINAL"], model_params["DIM_EMBEDDING"])
-        self.pos_emb = nn.Embedding(model_args["WINDOW_SIZE"], model_params["DIM_EMBEDDING"])
+        self.token_emb = nn.Linear(model_args["num_features_original"], model_params["DIM_EMBEDDING"])
+        self.pos_emb = nn.Embedding(model_args["window_size"], model_params["DIM_EMBEDDING"])
         self.transformer_encoder = nn.TransformerEncoder(
             nn.TransformerEncoderLayer(
                 d_model=model_params["DIM_EMBEDDING"],
@@ -104,7 +104,7 @@ class AlphaPortfolio(nn.Module):
         batch_size, num_assets, num_features_augmented = x.shape
 
         """Input Transformation"""
-        x = x.view(batch_size, num_assets, self.model_args["WINDOW_SIZE"], self.model_args["NUM_FEATURES_ORIGINAL"])
+        x = x.view(batch_size, num_assets, self.model_args["window_size"], self.model_args["num_features_original"])
         x = rearrange(x, "b m n d -> (b m) n d")
         if self.config["SCALER"].startswith("Window"):
             x = ScalerSelector().window_normalize(x)
@@ -121,7 +121,7 @@ class AlphaPortfolio(nn.Module):
 
 if __name__ == "__main__":
     # config = load_config()
-    DEVICE = "cuda"
+    device = "cuda"
     torch.manual_seed(0)
     batch_size = 128
     num_assets = 6
@@ -129,10 +129,10 @@ if __name__ == "__main__":
     num_features_original = 10
     num_features_augmented = window_size * num_features_original
     # x = torch.ones(batch_size, num_assets, num_features_augmented).to(DEVICE)
-    x = torch.rand(batch_size, num_assets, num_features_augmented).to(DEVICE)
+    x = torch.rand(batch_size, num_assets, num_features_augmented).to(device)
     model_args = {
-        "NUM_FEATURES_ORIGINAL": num_features_original,
-        "WINDOW_SIZE": window_size,
+        "num_features_original": num_features_original,
+        "window_size": window_size,
     }
     model_params = {
         "DIM_EMBEDDING": 256,
@@ -141,7 +141,7 @@ if __name__ == "__main__":
         "NUM_LAYERS": 1,
         "DROPOUT": 0.2,
     }
-    model = AlphaPortfolio(model_args, model_params).to(DEVICE)
+    model = AlphaPortfolio(model_args, model_params).to(device)
     final_scores = model(x)
     print(final_scores)
 

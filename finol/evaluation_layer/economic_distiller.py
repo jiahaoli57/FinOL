@@ -36,13 +36,13 @@ class EconomicDistiller:
         self.logdir = train_model_output["logdir"]
 
         self.test_loader = load_dataset_output["test_loader"]
-        self.NUM_TEST_PERIODS = load_dataset_output["NUM_TEST_PERIODS"]
-        self.NUM_ASSETS = load_dataset_output["NUM_ASSETS"]
-        self.NUM_FEATURES_ORIGINAL = load_dataset_output["NUM_FEATURES_ORIGINAL"]
-        self.DETAILED_NUM_FEATURES = load_dataset_output["DETAILED_NUM_FEATURES"]
-        self.WINDOW_SIZE = load_dataset_output["WINDOW_SIZE"]
-        self.OVERALL_FEATURE_LIST = load_dataset_output["OVERALL_FEATURE_LIST"]
-        self.DETAILED_FEATURE_LIST = load_dataset_output["DETAILED_FEATURE_LIST"]
+        self.num_test_periods = load_dataset_output["num_test_periods"]
+        self.num_assets = load_dataset_output["num_assets"]
+        self.num_features_original = load_dataset_output["num_features_original"]
+        self.detailed_num_features = load_dataset_output["detailed_num_features"]
+        self.window_size = load_dataset_output["window_size"]
+        self.overall_feature_list = load_dataset_output["overall_feature_list"]
+        self.detailed_feature_list = load_dataset_output["detailed_feature_list"]
 
     def economic_distillation(self):
         model = torch.load(self.logdir + "/best_model_" + self.config["DATASET_NAME"] + ".pt").to(self.config["DEVICE"])
@@ -58,34 +58,34 @@ class EconomicDistiller:
 
         if self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["INCLUDE_INTERPRETABILITY_ANALYSIS"]:
             ig = Saliency(model)
-            feature_att = torch.zeros(self.NUM_TEST_PERIODS, self.NUM_ASSETS, self.NUM_FEATURES_ORIGINAL)
-            every_day_att = torch.zeros(self.NUM_TEST_PERIODS, self.NUM_FEATURES_ORIGINAL)
+            feature_att = torch.zeros(self.num_test_periods, self.num_assets, self.num_features_original)
+            every_day_att = torch.zeros(self.num_test_periods, self.num_features_original)
 
         for day, data in enumerate(self.test_loader):
             x_data, label = data
 
             if self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["INCLUDE_INTERPRETABILITY_ANALYSIS"]:
                 # Calculate the feature attributions for each asset using saliency method
-                for i in range(self.NUM_ASSETS):  # num_feats
+                for i in range(self.num_assets):  # num_feats
                     attributions = ig.attribute(x_data.float(), target=i, abs=False)
-                    attributions = attributions.view(1, self.NUM_ASSETS, self.WINDOW_SIZE, self.NUM_FEATURES_ORIGINAL)
-                    # attributions.shape = state.shape = torch.Size([1, NUM_ASSETS, WINDOW_SIZE, NUM_FEATURES_ORIGINAL])
-                    attributions = attributions[:, i, :, :]  # attributions_sum.shape: torch.Size([1, WINDOW_SIZE, NUM_FEATURES_ORIGINAL])
-                    attributions_mean = torch.mean(attributions, dim=(0, 1))  # [1, WINDOW_SIZE, NUM_FEATURES_ORIGINAL] -> [NUM_FEATURES_ORIGINAL]
+                    attributions = attributions.view(1, self.num_assets, self.window_size, self.num_features_original)
+                    # attributions.shape = state.shape = torch.Size([1, num_assets, window_size, num_features_original])
+                    attributions = attributions[:, i, :, :]  # attributions_sum.shape: torch.Size([1, window_size, num_features_original])
+                    attributions_mean = torch.mean(attributions, dim=(0, 1))  # [1, window_size, num_features_original] -> [num_features_original]
                     # print(attributions_sum.shape)
                     feature_att[day, i, :] = attributions_mean
-                every_day_att[day, :] = torch.mean(feature_att[day, :, :], dim=0)  # [NUM_ASSETS, NUM_FEATURES_ORIGINAL] -> [NUM_FEATURES_ORIGINAL]
+                every_day_att[day, :] = torch.mean(feature_att[day, :, :], dim=0)  # [num_assets, num_features_original] -> [num_features_original]
 
             if self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["INCLUDE_ECONOMIC_DISTILLATION"]:
                 final_scores = model(x_data.float())
 
                 if self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["PROP_DISTILLED_FEATURES"] != 1:
-                    _, indices = torch.topk(every_day_att[day, :], k=int(self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["PROP_DISTILLED_FEATURES"] * self.NUM_FEATURES_ORIGINAL))  # 获取top k索引
+                    _, indices = torch.topk(every_day_att[day, :], k=int(self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["PROP_DISTILLED_FEATURES"] * self.num_features_original))  # 获取top k索引
                 else:
-                    indices = torch.arange(0, self.NUM_FEATURES_ORIGINAL)
+                    indices = torch.arange(0, self.num_features_original)
 
-                flat_x_data = x_data.view(1, self.NUM_ASSETS, self.WINDOW_SIZE, self.NUM_FEATURES_ORIGINAL).squeeze(0)
-                linear_x_data = torch.mean(flat_x_data[:, :, indices], dim=1)  # [1, NUM_ASSETS, WINDOW_SIZE, NUM_FEATURES_ORIGINAL] -> [NUM_ASSETS, NUM_FEATURES_ORIGINAL] -> np
+                flat_x_data = x_data.view(1, self.num_assets, self.window_size, self.num_features_original).squeeze(0)
+                linear_x_data = torch.mean(flat_x_data[:, :, indices], dim=1)  # [1, num_assets, window_size, num_features_original] -> [num_assets, num_features_original] -> np
 
                 linear_x = linear_x_data.cpu().detach().numpy()
                 linear_y = final_scores.squeeze(0).cpu().detach().numpy()
@@ -93,7 +93,7 @@ class EconomicDistiller:
                 linear_model = DistillerSelector().select_distiller()
                 linear_model.fit(linear_x, linear_y)
 
-                coef = np.zeros(self.NUM_FEATURES_ORIGINAL)  # Initializes a zero vector whose length is the number of features
+                coef = np.zeros(self.num_features_original)  # Initializes a zero vector whose length is the number of features
                 real_coef = linear_model.coef_  # Take the actual non-zero coefficient
                 coef[indices] = real_coef  # Insert the actual nonzero coefficient into the corresponding position of the zero vector
 
@@ -111,8 +111,8 @@ class EconomicDistiller:
             fig = plt.figure(figsize=(9, 4))
             # Plot the average feature attribution for each feature across all time steps as a bar chart
             pre_num_features = 0
-            for i, unit in enumerate(self.OVERALL_FEATURE_LIST):
-                current_num_features = self.DETAILED_NUM_FEATURES[unit]
+            for i, unit in enumerate(self.overall_feature_list):
+                current_num_features = self.detailed_num_features[unit]
                 mean_result = torch.mean(every_day_att_mean[pre_num_features: current_num_features+pre_num_features])
                 plt.bar(unit, mean_result)
                 pre_num_features = current_num_features
@@ -130,8 +130,8 @@ class EconomicDistiller:
             plt.show()
 
         if self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["INCLUDE_ECONOMIC_DISTILLATION"]:
-            portfolios = torch.zeros((self.NUM_TEST_PERIODS, self.NUM_ASSETS))
-            labels = torch.zeros((self.NUM_TEST_PERIODS, self.NUM_ASSETS))
+            portfolios = torch.zeros((self.num_test_periods, self.num_assets))
+            labels = torch.zeros((self.num_test_periods, self.num_assets))
             start_time = time.time()
             for day, data in enumerate(self.test_loader):
                 x_data, label = data
@@ -140,8 +140,8 @@ class EconomicDistiller:
                 intercept = intercept_list[day]
                 indices = indices_list[day]
 
-                flat_x_data = x_data.view(1, self.NUM_ASSETS, self.WINDOW_SIZE, self.NUM_FEATURES_ORIGINAL).squeeze(0)
-                linear_x_data = torch.mean(flat_x_data, dim=1)  # [1, NUM_ASSETS, WINDOW_SIZE, NUM_FEATURES_ORIGINAL] -> [NUM_ASSETS, NUM_FEATURES_ORIGINAL]
+                flat_x_data = x_data.view(1, self.num_assets, self.window_size, self.num_features_original).squeeze(0)
+                linear_x_data = torch.mean(flat_x_data, dim=1)  # [1, num_assets, window_size, num_features_original] -> [num_assets, num_features_original]
 
                 x_new = linear_x_data.cpu().detach().numpy()
                 y_pred = np.dot(x_new, coef) + intercept
@@ -165,9 +165,9 @@ class EconomicDistiller:
             # Convert coefficients to ndarray
             coef_array = np.array(coef_list)
             pre_num_features = 0
-            mean_coef_array = np.zeros((self.NUM_TEST_PERIODS, len(self.OVERALL_FEATURE_LIST)))
-            for i, unit in enumerate(self.OVERALL_FEATURE_LIST):
-                current_num_features = self.DETAILED_NUM_FEATURES[unit]
+            mean_coef_array = np.zeros((self.num_test_periods, len(self.overall_feature_list)))
+            for i, unit in enumerate(self.overall_feature_list):
+                current_num_features = self.detailed_num_features[unit]
                 mean_result = np.mean(coef_array[:, pre_num_features: current_num_features + pre_num_features], axis=1)
                 mean_coef_array[:, i] = mean_result
                 pre_num_features = current_num_features
@@ -187,7 +187,7 @@ class EconomicDistiller:
             else:
                 plt.ylabel("Coefficients")
                 plt.xlabel("Trading Periods")
-            plt.legend(self.OVERALL_FEATURE_LIST)
+            plt.legend(self.overall_feature_list)
             plt.grid(True)
             plt.show()
 
@@ -203,43 +203,43 @@ class EconomicDistiller:
                 plt.ylabel("Feature")
                 plt.xlabel("Trading Periods")
 
-            OVERALL_FEATURE_LIST = []
+            overall_feature_list = []
             if self.config["PLOT_CHINESE"]:
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OHLCV_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("基础特征")
+                    overall_feature_list.append("基础特征")
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OVERLAP_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("重叠特征")
+                    overall_feature_list.append("重叠特征")
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_MOMENTUM_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("动量特征")
+                    overall_feature_list.append("动量特征")
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLUME_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("量价特征")
+                    overall_feature_list.append("量价特征")
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_CYCLE_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("周期特征")
+                    overall_feature_list.append("周期特征")
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PRICE_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("价格特征")
+                    overall_feature_list.append("价格特征")
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLATILITY_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("波动特征")
+                    overall_feature_list.append("波动特征")
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PATTERN_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("模式特征")
+                    overall_feature_list.append("模式特征")
             else:
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OHLCV_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("OHLCV Features")
+                    overall_feature_list.append("OHLCV Features")
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OVERLAP_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("Overlap Features")
+                    overall_feature_list.append("Overlap Features")
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_MOMENTUM_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("Momentum Features")
+                    overall_feature_list.append("Momentum Features")
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLUME_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("Volume Features")
+                    overall_feature_list.append("Volume Features")
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_CYCLE_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("Cycle Features")
+                    overall_feature_list.append("Cycle Features")
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PRICE_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("Price Features")
+                    overall_feature_list.append("Price Features")
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLATILITY_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("Volatility Features")
+                    overall_feature_list.append("Volatility Features")
                 if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PATTERN_FEATURES"]:
-                    OVERALL_FEATURE_LIST.append("Pattern Features")
+                    overall_feature_list.append("Pattern Features")
 
-            plt.yticks(range(len(OVERALL_FEATURE_LIST)), OVERALL_FEATURE_LIST)
+            plt.yticks(range(len(overall_feature_list)), overall_feature_list)
             plt.colorbar()
             plt.savefig(self.logdir + "/" + self.config["MODEL_NAME"] + "_" + self.config["DATASET_NAME"] + "_HEATMAP.pdf",
                         format="pdf",

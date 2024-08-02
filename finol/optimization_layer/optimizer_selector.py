@@ -61,8 +61,8 @@ class OptimizerSelector:
         """
         Selects an optimizer based on the configuration.
 
-        :param sampled_lr: Sampled learning rate or None. Only needed when optimizing the learning rate selection.
-        :param sampled_optimizer: Sampled optimizer or None. Only needed when optimizing the optimizer selection.
+        :param sampled_lr: Sampled learning rate or None. Required only when optimizing the learning rate selection.
+        :param sampled_optimizer: Sampled optimizer or None. Required only when optimizing the optimizer selection.
         :return: The selected optimizer for the model.
         :raises ValueError: If the optimizer name is invalid.
         """

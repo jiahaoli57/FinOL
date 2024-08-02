@@ -13,7 +13,7 @@ class CNN(nn.Module):
         self.model_params = model_params
 
         self.net = nn.Sequential(
-            nn.Conv1d(model_args["NUM_FEATURES_ORIGINAL"], model_params["OUT_CHANNELS"], model_params["KERNEL_SIZE"], model_params["STRIDE"]),
+            nn.Conv1d(model_args["num_features_original"], model_params["OUT_CHANNELS"], model_params["KERNEL_SIZE"], model_params["STRIDE"]),
             nn.ReLU(),
             nn.AdaptiveAvgPool1d(1),
             nn.Flatten(),
@@ -26,7 +26,7 @@ class CNN(nn.Module):
         batch_size, num_assets, num_features_augmented = x.shape
 
         """Input Transformation"""
-        x = x.view(batch_size, num_assets, self.model_args["WINDOW_SIZE"], self.model_args["NUM_FEATURES_ORIGINAL"])
+        x = x.view(batch_size, num_assets, self.model_args["window_size"], self.model_args["num_features_original"])
         x = rearrange(x, "b m n d -> (b m) n d")
         x = x.transpose(1, 2)  # [batch_size * num_assets, seq_len, num_inputs] -> [batch_size * num_assets, num_inputs, seq_len]
 

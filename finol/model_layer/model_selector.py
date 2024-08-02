@@ -12,8 +12,8 @@ class ModelSelector:
             from finol.model_layer.AlphaPortfolio import AlphaPortfolio
             model_dict["AlphaPortfolio"] = AlphaPortfolio
             self.model_args = {
-                "NUM_FEATURES_ORIGINAL": self.load_dataset_output["NUM_FEATURES_ORIGINAL"],
-                "WINDOW_SIZE": self.load_dataset_output["WINDOW_SIZE"],
+                "num_features_original": self.load_dataset_output["num_features_original"],
+                "window_size": self.load_dataset_output["window_size"],
             }
             self.model_params = {
                 "NUM_LAYERS": self.config["MODEL_PARAMS"]["AlphaPortfolio"]["NUM_LAYERS"],
@@ -27,8 +27,8 @@ class ModelSelector:
             from finol.model_layer.CNN import CNN
             model_dict["CNN"] = CNN
             self.model_args = {
-                "NUM_FEATURES_ORIGINAL": self.load_dataset_output["NUM_FEATURES_ORIGINAL"],
-                "WINDOW_SIZE": self.load_dataset_output["WINDOW_SIZE"],
+                "num_features_original": self.load_dataset_output["num_features_original"],
+                "window_size": self.load_dataset_output["window_size"],
             }
             self.model_params = {
                 "OUT_CHANNELS": self.config["MODEL_PARAMS"]["CNN"]["OUT_CHANNELS"],
@@ -42,7 +42,7 @@ class ModelSelector:
             from finol.model_layer.DNN import DNN
             model_dict["DNN"] = DNN
             self.model_args = {
-                "NUM_FEATURES_AUGMENTED": self.load_dataset_output["NUM_FEATURES_AUGMENTED"],
+                "num_features_augmented": self.load_dataset_output["num_features_augmented"],
             }
             self.model_params = {
                 "NUM_LAYERS": self.config["MODEL_PARAMS"]["DNN"]["NUM_LAYERS"],
@@ -56,8 +56,8 @@ class ModelSelector:
             model_dict["LSRE-CAAN-d"] = LSRE_CAAN
             model_dict["LSRE-CAAN-dd"] = LSRE_CAAN
             self.model_args = {
-                "NUM_FEATURES_ORIGINAL": self.load_dataset_output["NUM_FEATURES_ORIGINAL"],
-                "WINDOW_SIZE": self.load_dataset_output["WINDOW_SIZE"],
+                "num_features_original": self.load_dataset_output["num_features_original"],
+                "window_size": self.load_dataset_output["window_size"],
             }
             self.model_params = {
                 "NUM_LAYERS": self.config["MODEL_PARAMS"]["LSRE-CAAN"]["NUM_LAYERS"],
@@ -74,8 +74,8 @@ class ModelSelector:
             from finol.model_layer.LSTM import LSTM
             model_dict["LSTM"] = LSTM
             self.model_args = {
-                "NUM_FEATURES_ORIGINAL": self.load_dataset_output["NUM_FEATURES_ORIGINAL"],
-                "WINDOW_SIZE": self.load_dataset_output["WINDOW_SIZE"],
+                "num_features_original": self.load_dataset_output["num_features_original"],
+                "window_size": self.load_dataset_output["window_size"],
             }
             self.model_params = {
                 "NUM_LAYERS": self.config["MODEL_PARAMS"]["LSTM"]["NUM_LAYERS"],
@@ -87,8 +87,8 @@ class ModelSelector:
             from finol.model_layer.RNN import RNN
             model_dict["RNN"] = RNN
             self.model_args = {
-                "NUM_FEATURES_ORIGINAL": self.load_dataset_output["NUM_FEATURES_ORIGINAL"],
-                "WINDOW_SIZE": self.load_dataset_output["WINDOW_SIZE"],
+                "num_features_original": self.load_dataset_output["num_features_original"],
+                "window_size": self.load_dataset_output["window_size"],
             }
             self.model_params = {
                 "NUM_LAYERS": self.config["MODEL_PARAMS"]["RNN"]["NUM_LAYERS"],
@@ -100,8 +100,8 @@ class ModelSelector:
             from finol.model_layer.Transformer import Transformer
             model_dict["Transformer"] = Transformer
             self.model_args = {
-                "NUM_FEATURES_ORIGINAL": self.load_dataset_output["NUM_FEATURES_ORIGINAL"],
-                "WINDOW_SIZE": self.load_dataset_output["WINDOW_SIZE"],
+                "num_features_original": self.load_dataset_output["num_features_original"],
+                "window_size": self.load_dataset_output["window_size"],
             }
             self.model_params = {
                 "NUM_LAYERS": self.config["MODEL_PARAMS"]["Transformer"]["NUM_LAYERS"],

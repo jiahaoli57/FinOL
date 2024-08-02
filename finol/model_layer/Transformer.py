@@ -14,7 +14,7 @@ class Transformer(nn.Module):
         self.model_args = model_args
         self.model_params = model_params
 
-        self.token_emb = nn.Linear(model_args["NUM_FEATURES_ORIGINAL"], model_params["DIM_EMBEDDING"])
+        self.token_emb = nn.Linear(model_args["num_features_original"], model_params["DIM_EMBEDDING"])
         self.pos_emb = nn.Embedding(model_args["WINDOW_SIZE"], model_params["DIM_EMBEDDING"])
         self.transformer_encoder = nn.TransformerEncoderLayer(model_params["DIM_EMBEDDING"], nhead=model_params["NUM_HEADS"], dim_feedforward=model_params["DIM_FEEDFORWARD"], batch_first=True)
         self.dropout = nn.Dropout(p=model_params["DROPOUT"])
@@ -22,17 +22,17 @@ class Transformer(nn.Module):
 
     def forward(self, x):
         batch_size, num_assets, num_features_augmented = x.shape
-        DEVICE = x.device
+        device = x.device
 
         """Input Transformation"""
-        x = x.view(batch_size, num_assets, self.model_args["WINDOW_SIZE"], self.model_args["NUM_FEATURES_ORIGINAL"])
+        x = x.view(batch_size, num_assets, self.model_args["window_size"], self.model_args["num_features_original"])
         x = rearrange(x, "b m n d -> (b m) n d")
         if self.config["SCALER"].startswith("Window"):
             x = ScalerSelector().window_normalize(x)
 
         """Temporal Representation Extraction"""
         x = self.token_emb(x)  # [batch_size * num_assets, window_size, num_features_original] -> [batch_size * num_assets, window_size, DIM_EMBEDDING]
-        pos_emb = self.pos_emb(torch.arange(self.model_args["WINDOW_SIZE"], device=DEVICE))
+        pos_emb = self.pos_emb(torch.arange(self.model_args["window_size"], device=device))
         pos_emb = rearrange(pos_emb, "n d -> () n d")
         x = x + pos_emb
 
