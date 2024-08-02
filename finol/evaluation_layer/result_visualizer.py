@@ -329,15 +329,11 @@ class ResultVisualizer:
             _ = [df[strategy]["CW"], -df[strategy]["MDD"], -df[strategy]["VR"], df[strategy]["SR"], df[strategy]["APY"]]
             data += [_]
 
-        print(df)
-
         # scale the data to [0, 1]
         data_array = np.array(data)
         min_val = np.min(data_array, axis=0)
         max_val = np.max(data_array, axis=0)
         scaled_data = (data_array - min_val) / (max_val - min_val)
-
-        print(scaled_data)
 
         theta = radar_factory(num_vars=5, frame='polygon')
         labels = ['CW', '- MDD', '- VR', 'SR', 'APY']

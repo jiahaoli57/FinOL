@@ -20,7 +20,7 @@ class BenchmarkLoader:
         self.config = load_config()
         self.caculate_metric_output = caculate_metric_output
         self.economic_distiller_caculate_metric_output = economic_distiller_caculate_metric_output
-        self.logdir = self.caculate_metric_output["LOGDIR"]
+        self.logdir = self.caculate_metric_output["logdir"]
 
     def find_top_5_baselines(self, df):
         df_copy = df.copy()
