@@ -16,13 +16,21 @@ from finol.utils import ROOT_PATH, load_config, add_prefix
 
 
 class BenchmarkLoader:
-    def __init__(self, caculate_metric_output: Dict, economic_distiller_caculate_metric_output: Dict):
+    """
+    Class to load the benchmarks and perform comparisons.
+    """
+    def __init__(self, caculate_metric_output: Dict, economic_distiller_caculate_metric_output: Dict) -> None:
         self.config = load_config()
         self.caculate_metric_output = caculate_metric_output
         self.economic_distiller_caculate_metric_output = economic_distiller_caculate_metric_output
         self.logdir = self.caculate_metric_output["logdir"]
 
-    def find_top_5_baselines(self, df):
+    def find_top_5_baselines(self, df: pd.DataFrame) -> None:
+        """
+        Find the top 5 baselines based on the provided Benchmark DataFrame.
+
+        :param df: Benchmark DataFrame containing all baselines.
+        """
         df_copy = df.copy()
         df_copy = df_copy.drop(df.columns[-1], axis=1)
         df_copy.set_index('DATE', inplace=True)
@@ -34,8 +42,9 @@ class BenchmarkLoader:
 
     def load_benchmark(self) -> Dict[str, Any]:
         """
+        Load benchmark data and update final profit results with model metrics.
 
-        Returns:
+        Returns: Dictionary containing benchmark results and model's results.
         """
         logdir = self.caculate_metric_output["logdir"]
 
