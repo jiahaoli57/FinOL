@@ -3,7 +3,7 @@
     "DEVICE": "cuda",
     "MANUAL_SEED": 0,
     "_note2": "-------------------------------------- Data Layer Configuration ----------------------------------------",
-    "LOAD_LOCAL_DATALOADER": true,
+    "LOAD_LOCAL_DATALOADER": false,
     "DATASET_NAME": "CRYPTO",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
@@ -557,7 +557,7 @@
     "LEARNING_RATE": 0.001,
     "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
-    "TUNE_PARAMETERS": false,
+    "TUNE_PARAMETERS": true,
     "NUM_TRIALS": 200,
     "SAMPLER_NAME": "RandomSampler",
     "PRUNER_NAME": "NopPruner",
