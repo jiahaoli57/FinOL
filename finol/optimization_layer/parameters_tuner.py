@@ -182,7 +182,7 @@ class ParametersTuner:
             mpl.plot_timeline,
         ]
         for plot_func in plots:
-            fig = plot_func(self.study)
+            plot_func(self.study)
             plt.show()
             # plt.tight_layout()
 

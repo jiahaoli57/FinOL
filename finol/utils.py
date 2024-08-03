@@ -83,7 +83,7 @@ def download_data():
     # local_path = ROOT_PATH + r"\data"  # useless in Colab, so we use the following command
     # local_path = os.path.join(ROOT_PATH, "data")
     # subprocess.run(["git", "clone", github_url, local_path])
-    # print("Data downloading")
+    print("Data downloading......")
     github_urls = [
         "git://github.com/ai4finol/finol_data.git",
         "http://github.com/ai4finol/finol_data.git",
@@ -92,7 +92,7 @@ def download_data():
     for github_url in github_urls:
         try:
             # local_path = ROOT_PATH + r"\data"  # useless in Colab, so we use the following command
-            print(f"Data downloading via: {github_url}")
+            # print(f"Data downloading via: {github_url}")
             local_path = os.path.join(ROOT_PATH, "data")
             subprocess.run(["git", "clone", github_url, local_path])
         except subprocess.CalledProcessError as e:
