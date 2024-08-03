@@ -558,7 +558,7 @@
     "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
     "TUNE_PARAMETERS": true,
-    "NUM_TRIALS": 200,
+    "NUM_TRIALS": 20,
     "SAMPLER_NAME": "RandomSampler",
     "PRUNER_NAME": "NopPruner",
     "WRAPPED_PRUNER_NAME": "MedianPruner",

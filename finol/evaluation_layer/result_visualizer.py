@@ -10,7 +10,6 @@ from matplotlib.spines import Spine
 from matplotlib.transforms import Affine2D
 from finol.utils import load_config, add_prefix
 
-plt.rcParams["font.family"] = "Microsoft YaHei"
 
 def radar_factory(num_vars, frame="circle"):
     """
