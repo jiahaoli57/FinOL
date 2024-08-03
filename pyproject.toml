@@ -35,8 +35,8 @@ dependencies = [
   "captum",
   "cmaes>=0.10.0",  # optuna/samplers/_cmaes.py
   "einops",  # model_layer
-  "IPython",
-  "matplotlib==3.5.0",
+#  "IPython",  #
+  "matplotlib",  # ==3.5.0
   "numpy",
   "openpyxl",
   "optuna",

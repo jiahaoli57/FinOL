@@ -9,7 +9,7 @@ from tabulate import tabulate
 from finol.model_layer.model_selector import ModelSelector
 from finol.optimization_layer.criterion_selector import CriterionSelector
 from finol.optimization_layer.optimizer_selector import OptimizerSelector
-from finol.utils import load_config, update_config, portfolio_selection, set_seed
+from finol.utils import load_config, update_config, portfolio_selection, set_seed, add_prefix
 
 
 class ParametersTuner:
@@ -182,7 +182,9 @@ class ParametersTuner:
             mpl.plot_timeline,
         ]
         for plot_func in plots:
+            plt.figure()
             plot_func(self.study)
+            plt.savefig(self.logdir + "/" + add_prefix(str(plot_func)), format="pdf", dpi=300, bbox_inches="tight")
             plt.show()
             # plt.tight_layout()
 

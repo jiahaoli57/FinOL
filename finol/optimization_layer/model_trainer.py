@@ -5,7 +5,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
-from IPython import display
+# from IPython import display
 from tqdm import tqdm
 from typing import List, Tuple, Dict, Union
 from finol.model_layer.model_selector import ModelSelector
@@ -27,34 +27,34 @@ class ModelTrainer:
         self.val_loader = load_dataset_output["val_loader"]  # val_loader \ test_loader_for_train
         self.test_loader = load_dataset_output["test_loader"]  # test_loader \ test_loader_for_train
 
-        self.is_ipython = "inline" in matplotlib.get_backend()
+        # self.is_ipython = "inline" in matplotlib.get_backend()
         # print(self.is_ipython)
 
-    def plot_loss_notebook(self) -> None:
-        """
-        Plot the training and validation losses in a notebook environment.
-
-        This method plots the average training and validation losses over epochs using matplotlib in an interactive notebook environment.
-
-        :return: None
-        """
-        if self.is_ipython:
-            plt.ion()
-            plt.figure()  # figsize=(12, 5)
-            plt.clf()
-            plt.plot(self.avg_train_loss_list, linestyle="-", marker=self.config["MARKERS"][0], markevery=int(self.config["NUM_EPOCHES"]/20), color="black", alpha=0.5, label="train loss")
-            plt.plot(self.avg_val_loss_list, linestyle=":", marker=self.config["MARKERS"][1], markevery=int(self.config["NUM_EPOCHES"]/20), color="black", alpha=0.5, label="val loss")
-            plt.xlabel("Epoch")
-            plt.ylabel("Loss")
-            plt.legend()
-            plt.grid(True)
-            display.clear_output(wait=True)
-            display.display(plt.gcf())
-            plt.tight_layout()
-            # plt.yscale("log")
-            plt.savefig(self.logdir + "/" + add_prefix("loss.pdf"), format="pdf", dpi=300, bbox_inches="tight")
-            plt.clf()
-            plt.close()
+    # def plot_loss_notebook(self) -> None:
+    #     """
+    #     Plot the training and validation losses in a notebook environment.
+    #
+    #     This method plots the average training and validation losses over epochs using matplotlib in an interactive notebook environment.
+    #
+    #     :return: None
+    #     """
+    #     if self.is_ipython:
+    #         plt.ion()
+    #         plt.figure()  # figsize=(12, 5)
+    #         plt.clf()
+    #         plt.plot(self.avg_train_loss_list, linestyle="-", marker=self.config["MARKERS"][0], markevery=int(self.config["NUM_EPOCHES"]/20), color="black", alpha=0.5, label="train loss")
+    #         plt.plot(self.avg_val_loss_list, linestyle=":", marker=self.config["MARKERS"][1], markevery=int(self.config["NUM_EPOCHES"]/20), color="black", alpha=0.5, label="val loss")
+    #         plt.xlabel("Epoch")
+    #         plt.ylabel("Loss")
+    #         plt.legend()
+    #         plt.grid(True)
+    #         display.clear_output(wait=True)
+    #         display.display(plt.gcf())
+    #         plt.tight_layout()
+    #         # plt.yscale("log")
+    #         plt.savefig(self.logdir + "/" + add_prefix("loss.pdf"), format="pdf", dpi=300, bbox_inches="tight")
+    #         plt.clf()
+    #         plt.close()
 
     def plot_loss(self) -> None:
         """
@@ -65,19 +65,19 @@ class ModelTrainer:
         :return: None
         """
         # not_ipython = "inline" not in matplotlib.get_backend()
-        if not self.is_ipython:
-            plt.figure()  # figsize=(12, 5)
-            plt.plot(np.array(self.avg_train_loss_list), linestyle="-", marker=self.config["MARKERS"][0], color="black", alpha=0.5, label="train loss")
-            plt.plot(np.array(self.avg_val_loss_list), linestyle=":", marker=self.config["MARKERS"][1], color="black", alpha=0.5, label="val loss")
-            # markevery = int(self.config["NUM_EPOCHES"] / 20)
-            plt.xlabel("Epoch")
-            plt.ylabel("Loss")
-            plt.legend()
-            plt.grid(True)
-            plt.tight_layout()
-            # plt.yscale("log")
-            plt.savefig(self.logdir + "/" + add_prefix("loss.pdf"), format="pdf", dpi=300, bbox_inches="tight")
-            plt.show()
+        # if not self.is_ipython:
+        plt.figure()  # figsize=(12, 5)
+        plt.plot(np.array(self.avg_train_loss_list), linestyle="-", marker=self.config["MARKERS"][0], color="black", alpha=0.5, label="train loss")
+        plt.plot(np.array(self.avg_val_loss_list), linestyle=":", marker=self.config["MARKERS"][1], color="black", alpha=0.5, label="val loss")
+        # markevery = int(self.config["NUM_EPOCHES"] / 20)
+        plt.xlabel("Epoch")
+        plt.ylabel("Loss")
+        plt.legend()
+        plt.grid(True)
+        plt.tight_layout()
+        # plt.yscale("log")
+        plt.savefig(self.logdir + "/" + add_prefix("loss.pdf"), format="pdf", dpi=300, bbox_inches="tight")
+        plt.show()
 
     def train_model(self) -> Dict:
         """
@@ -143,12 +143,12 @@ class ModelTrainer:
                         # print("best_model", "e:", e)
                         torch.save(model, self.logdir + "/" + add_prefix("best_model.pt"))
 
-            if self.config["PLOT_DYNAMIC_LOSS"]:
-                if (e + 1) % 10 == 0:
-                    # print("Epoch: {}, Train Loss: {}, Val Loss: {}".format(e + 1, train_loss, val_loss))
-                    self.plot_loss_notebook()
+            # if self.config["PLOT_DYNAMIC_LOSS"]:
+            #     if (e + 1) % 10 == 0:
+            #         # print("Epoch: {}, Train Loss: {}, Val Loss: {}".format(e + 1, train_loss, val_loss))
+            #         self.plot_loss_notebook()
 
-        self.plot_loss_notebook()
+        # self.plot_loss_notebook()
         self.plot_loss()
 
         train_model_output = {

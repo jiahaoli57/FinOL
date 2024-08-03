@@ -8,7 +8,7 @@ from typing import List, Tuple, Dict, Union
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
 from finol.data_layer.scaler_selector import ScalerSelector
-from finol.utils import ROOT_PATH, load_config, update_config, make_logdir, check_update, download_data
+from finol.utils import ROOT_PATH, load_config, update_config, make_logdir, check_update, download_data, detect_device
 
 
 class DatasetLoader:
@@ -18,6 +18,9 @@ class DatasetLoader:
     """
     def __init__(self) -> None:
         self.config = load_config()
+        detect_device(self.config)
+        self.config = update_config(self.config)
+
         check_update()
         download_data()
 

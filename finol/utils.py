@@ -52,6 +52,7 @@ def load_config():
 def update_config(config):
     with open(ROOT_PATH + "/config.json", "w") as f:
         json.dump(config, f, indent=4)
+    return config
 
 
 def add_prefix(filename: str) -> str:
