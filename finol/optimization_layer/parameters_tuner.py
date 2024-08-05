@@ -15,6 +15,16 @@ from finol.utils import load_config, update_config, portfolio_selection, set_see
 class ParametersTuner:
     """
     Class to tune model hyper-parameters using auto ML library.
+
+    Example:
+        .. code:: python
+        >>> # Load dataset
+        >>> from finol.data_layer.dataset_loader import DatasetLoader
+        >>> load_dataset_output = DatasetLoader().load_dataset()
+        >>>
+        >>> # Tune model
+        >>> ParametersTuner(load_dataset_output=load_dataset_output).tune_parameters()
+
     """
     def __init__(self, load_dataset_output) -> None:
         super().__init__()

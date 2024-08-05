@@ -150,6 +150,7 @@ html_css_files = ["css/custom.css"]
 
 # -- Extension configuration -------------------------------------------------
 autosummary_generate = True
+autosummary_ignore_module_all = False  # ignore nn.Module if False
 autodoc_typehints = "description"
 autodoc_default_options = {
     "members": True,

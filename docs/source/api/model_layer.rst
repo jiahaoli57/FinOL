@@ -16,4 +16,5 @@ The :mod:`~finol.model_layer` module contains model layer related classes and fu
    finol.model_layer.LSTM
    finol.model_layer.RNN
    finol.model_layer.Transformer
+   finol.model_layer.UserModel
    finol.model_layer.ModelSelector

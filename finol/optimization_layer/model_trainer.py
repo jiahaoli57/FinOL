@@ -19,7 +19,7 @@ class ModelTrainer:
     """
     Class to train a machine learning model for portfolio selection.
     """
-    def __init__(self, load_dataset_output) -> None:
+    def __init__(self, load_dataset_output, customized_model=None) -> None:
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
         self.logdir = load_dataset_output["logdir"]

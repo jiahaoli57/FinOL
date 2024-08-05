@@ -1,4 +1,3 @@
-import time
 import torch
 import torch.nn as nn
 
@@ -6,20 +5,14 @@ from finol.data_layer.scaler_selector import ScalerSelector
 from finol.utils import load_config
 
 
-class DNN(nn.Module):
+# User-defined model class
+class UserModel(nn.Module):
     """
-    Deep Neural Network (DNN) model for asset scoring.
-
-    The DNN model takes an input tensor `x` of shape `(batch_size, num_assets, num_features_augmented)`,
-    where `num_features_augmented` represents the number of features (including any preprocessed or augmented
-    features) for each asset. The model applies a series of fully connected layers to the input,
-    with each layer followed by a ReLU activation and a dropout layer.
-
-    The final output of the model is a tensor of shape `(batch_size, num_assets)`, where each element
-    represents the predicted score for the corresponding asset.
+    UserModel is a base neural network model class inheriting from ``nn.Module``.
+    Users can extend this class and implement their desired model architecture and functionality.
 
     :param model_args: Dictionary containing model arguments, such as the number of features.
-    :param model_params: Dictionary containing model hyper-parameters, such as the number of layers, the hidden size, and the dropout rate.
+    :param model_params: Dictionary containing model hyper-parameters, such as the parameter1, parameter2, etc.
 
     Example:
         .. code:: python
@@ -29,10 +22,9 @@ class DNN(nn.Module):
         >>>
         >>> # Configuration
         >>> config = load_config()
-        >>> config["MODEL_NAME"] = "DNN"
-        >>> config["MODEL_PARAMS"]["DNN"]["NUM_LAYERS"] = 1
-        >>> config["MODEL_PARAMS"]["DNN"]["HIDDEN_SIZE"] = 64
-        >>> config["MODEL_PARAMS"]["DNN"]["DROPOUT"] = 0.1
+        >>> config["MODEL_NAME"] = "UserModel"
+        >>> config["MODEL_PARAMS"]["UserModel"]["PARAMETER1"] = 2
+        >>> config["MODEL_PARAMS"]["UserModel"]["PARAMETER1"] = 128
         >>> update_config(config)
         >>>
         >>> # Data Layer
@@ -49,20 +41,20 @@ class DNN(nn.Module):
         >>>     portfolio = portfolio_selection(final_scores)
         >>>     ...
 
-    """
-    def __init__(self, model_args, model_params) -> None:
-        super().__init__()
-        self.config = load_config()
-        self.model_args = model_args
-        self.model_params = model_params
+    .. warning::
+        When users define their own model, besides modifying this class, they must add different parameter keys and values
+        in the ``config.json`` at the location ``config["MODEL_PARAMS"]["UserModel"]``. Similarly, if users want to implement
+        automatic hyper-parameters tuning for their custom model, they also need to specify the range and type of different
+        parameters at ``config["MODEL_PARAMS_SPACE"]["UserModel"]``
 
-        self.layers = nn.ModuleList()
-        self.layers.append(nn.Linear(model_args["num_features_augmented"], model_params["HIDDEN_SIZE"]))
-        for _ in range(model_params["NUM_LAYERS"]):
-            self.layers.append(nn.Linear(model_params["HIDDEN_SIZE"], model_params["HIDDEN_SIZE"]))
-        self.layers.append(nn.Linear(model_params["HIDDEN_SIZE"], 1))
-        self.relu = nn.ReLU()
-        self.dropout = nn.Dropout(p=model_params["DROPOUT"])
+    1
+    """
+    def __init__(self, model_args, model_params):
+        super().__init__()
+        self.config = load_config
+        self.model_args = model_args
+        self.model_parms = model_params
+        # Define your model architecture here
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """
@@ -78,14 +70,10 @@ class DNN(nn.Module):
         if self.config["SCALER"].startswith("Window"):
             x = ScalerSelector().window_normalize(x)
 
-        out = x
-        for layer in self.layers:
-            out = layer(out)
-            out = self.relu(out)
-            out = self.dropout(out)
+        ...
 
-        """Final Scores for Assets"""
-        final_scores = out.squeeze(-1)
+        final_scores = x
+
         return final_scores
 
 
@@ -95,10 +83,10 @@ if __name__ == "__main__":
     from finol.utils import load_config, update_config, portfolio_selection
     # Configuration
     config = load_config()
-    config["MODEL_NAME"] = "DNN"
-    config["MODEL_PARAMS"]["DNN"]["NUM_LAYERS"] = 1
-    config["MODEL_PARAMS"]["DNN"]["HIDDEN_SIZE"] = 64
-    config["MODEL_PARAMS"]["DNN"]["DROPOUT"] = 0.1
+    config["MODEL_NAME"] = "UserModel"
+    config["MODEL_PARAMS"]["UserModel"]["PARAMETER1"] = 2
+    config["MODEL_PARAMS"]["UserModel"]["PARAMETER2"] = 128
+    ...
     update_config(config)
 
     # Data Layer

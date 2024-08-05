@@ -1,4 +1,4 @@
-from finol.utils import load_config
+from finol.utils import load_config, set_seed
 
 model_dict = {}
 
@@ -7,6 +7,7 @@ class ModelSelector:
     def __init__(self, load_dataset_output):
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
+        set_seed(seed=self.config["MANUAL_SEED"])
 
         if "AlphaPortfolio" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "AlphaPortfolio":
             from finol.model_layer.AlphaPortfolio import AlphaPortfolio
@@ -110,6 +111,13 @@ class ModelSelector:
                 "NUM_HEADS": self.config["MODEL_PARAMS"]["Transformer"]["NUM_HEADS"],
                 "DROPOUT": self.config["MODEL_PARAMS"]["Transformer"]["DROPOUT"],
             }
+
+        if "UserModel" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "UserModel":
+            from finol.model_layer.UserModel import UserModel
+            model_dict["UserModel"] = UserModel
+            self.model_args = {}
+            self.model_params = {}
+
 
     def select_model(self, sampled_params=None):
         model_cls = model_dict.get(self.config["MODEL_NAME"], None)

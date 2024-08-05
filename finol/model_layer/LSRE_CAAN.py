@@ -210,10 +210,108 @@ class CAAN(nn.Module):
 
 class LSRE_CAAN(nn.Module):
     r"""
-    This class implements the LSRE-CAAN model
+    This Class implements the LSRE-CAAN model.
 
-    For more details, please refer to the paper `Online portfolio management via deep reinforcement learning with
-    high-frequency data <https://www.sciencedirect.com/science/article/abs/pii/S030645732200348X>`
+    For more details, please refer to the paper `Online portfolio management via deep reinforcement learning with high-frequency data <https://www.sciencedirect.com/science/article/abs/pii/S030645732200348X>`__
+
+    :param model_args: Dictionary containing model arguments, such as the number of features.
+    :param model_params: Dictionary containing model hyperparameters, such as the number of layers, the hidden size, and the dropout rate.
+
+    Example:
+        .. code:: python
+        >>> # Generate random input data
+        >>> torch.manual_seed(0)
+        >>> device = "cuda"
+        >>> batch_size = 8
+        >>> num_assets = 3
+        >>> window_size = 5
+        >>> num_features_original = 10
+        >>> x = torch.rand(batch_size, num_assets, window_size * num_features_original).to(device)
+        >>>
+        >>> # Define model arguments and hyper-parameters
+        >>> model_args = {
+        >>>     "num_features_original": num_features_original,
+        >>>     "window_size": window_size
+        >>> }
+        >>> model_params = {
+        >>>     "NUM_LAYERS": 1,
+        >>>     "NUM_LATENTS": 1,
+        >>>     "LATENT_DIM": 32,
+        >>>     "CROSS_HEADS": 1,
+        >>>     "LATENT_HEADS": 1,
+        >>>     "CROSS_DIM_HEAD": 64,
+        >>>     "LATENT_DIM_HEAD": 32,
+        >>>     "DROPOUT": 0,
+        >>> }
+        >>>
+        >>> # Initialize LSRE_CAAN model
+        >>> model = LSRE_CAAN(model_args, model_params).to(device)
+        >>> print(f"model: {model}")
+        >>>
+        >>> # Perform forward pass
+        >>> final_scores = model(x)
+        >>> print(f"output scores: {final_scores}")
+        model: LSRE_CAAN(
+          (pos_emb): Embedding(5, 10)
+          (lsre): LSRE(
+            (cross_attend_blocks): ModuleList(
+              (0): PreNorm(
+                (fn): Attention(
+                  (to_q): Linear(in_features=32, out_features=64, bias=False)
+                  (to_kv): Linear(in_features=10, out_features=128, bias=False)
+                  (to_out): Linear(in_features=64, out_features=32, bias=True)
+                )
+                (norm): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+                (norm_context): LayerNorm((10,), eps=1e-05, elementwise_affine=True)
+              )
+              (1): PreNorm(
+                (fn): FeedForward(
+                  (net): Sequential(
+                    (0): Linear(in_features=32, out_features=32, bias=True)
+                  )
+                )
+                (norm): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+              )
+            )
+            (layers): ModuleList(
+              (0): ModuleList(
+                (0): PreNorm(
+                  (fn): Attention(
+                    (to_q): Linear(in_features=32, out_features=32, bias=False)
+                    (to_kv): Linear(in_features=32, out_features=64, bias=False)
+                    (to_out): Linear(in_features=32, out_features=32, bias=True)
+                  )
+                  (norm): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+                )
+                (1): PreNorm(
+                  (fn): FeedForward(
+                    (net): Sequential(
+                      (0): Linear(in_features=32, out_features=32, bias=True)
+                    )
+                  )
+                  (norm): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+                )
+              )
+            )
+          )
+          (caan): CAAN(
+            (linear_query): Linear(in_features=32, out_features=32, bias=True)
+            (linear_key): Linear(in_features=32, out_features=32, bias=True)
+            (linear_value): Linear(in_features=32, out_features=32, bias=True)
+            (linear_winner): Linear(in_features=32, out_features=1, bias=True)
+          )
+          (dropout): Dropout(p=0, inplace=False)
+        )
+        output scores: tensor([[-0.3649, -0.3649, -0.3649],
+                [-0.3591, -0.3591, -0.3591],
+                [-0.3700, -0.3700, -0.3700],
+                [-0.3523, -0.3523, -0.3523],
+                [-0.3642, -0.3642, -0.3642],
+                [-0.3603, -0.3603, -0.3602],
+                [-0.3523, -0.3523, -0.3523],
+                [-0.3499, -0.3499, -0.3499]], device='cuda:0',
+               grad_fn=<SqueezeBackward1>)
+
     """
     def __init__(self, model_args, model_params):
         super().__init__()
@@ -267,20 +365,38 @@ class LSRE_CAAN(nn.Module):
         return final_scores
 
 
-# if __name__ == "__main__":
-    # DEVICE = "cuda"
-    # torch.manual_seed(0)
-    # batch_size = 2
-    # num_assets = 2
-    # window_size = 3
-    # num_features_original = 4
-    # num_features_augmented = window_size * num_features_original
-    # x = torch.rand(batch_size, num_assets, num_features_augmented).to(DEVICE)
-    # model = LSRE_CAAN(
-    #     num_assets=num_assets,
-    #     num_features_augmented=num_features_augmented,
-    #     num_features_original=num_features_original,
-    #     window_size=window_size,
-    # ).to(DEVICE)
-    # final_scores = model(x)
-    # print(final_scores)
+if __name__ == "__main__":
+    # Generate random input data
+    torch.manual_seed(0)
+    device = "cuda"
+    batch_size = 2
+    num_assets = 3
+    window_size = 4
+    num_features_original = 5
+    x = torch.rand(batch_size, num_assets, window_size * num_features_original).to(device)
+
+    # Define model arguments and hyper-parameters
+    model_args = {
+        "num_features_original": num_features_original,
+        "window_size": window_size
+    }
+    model_params = {
+        "NUM_LAYERS": 1,
+        "NUM_LATENTS": 1,
+        "LATENT_DIM": 32,
+        "CROSS_HEADS": 1,
+        "LATENT_HEADS": 1,
+        "CROSS_DIM_HEAD": 64,
+        "LATENT_DIM_HEAD": 32,
+        "DROPOUT": 0,
+    }
+
+    # Initialize LSRE_CAAN model
+    model = LSRE_CAAN(model_args, model_params).to(device)
+    print("-"*60)
+    print(f"model: {model}")
+
+    # Perform forward pass
+    final_scores = model(x)
+    print("-"*60)
+    print(f"output scores: {final_scores}")
