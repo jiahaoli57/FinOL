@@ -21,25 +21,25 @@ Command Line Usage
     evaluate_model_output = ModelEvaluator(load_dataset_output, train_model_output).evaluate_model()
 
 Before running the above commands, users can first
-configure some parameters through the config file to customize
-the usage according to their needs. For example, setting the
-device to CPU, selecting a different dataset, adjusting the
-data preprocessing parameters, and choosing a different model, etc.
-The specific configuration method is as follows:
+configure some parameters through the config file
+to customize the usage according to their needs.
+For example, setting the device, selecting a dataset,
+adjusting the data pre-processing parameters, and choosing
+a model, etc. The specific configuration method is as follows:
 
 .. code:: python3
 
     from finol.utils import load_config, update_config
 
     config = load_config()
-    config["DEVICE"] = "cuda" if torch.cuda.is_available() else "cpu"  # "cpu"
-    config["LOAD_LOCAL_DATALOADER"] = True  # False
+    config["DEVICE"] = "auto"
     config["DATASET_NAME"] = "DJIA"
     config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"] = 15
     config["SCALER"] = "WindowMinMaxScaler"
     config["MODEL_NAME"] = "DNN"
     config["TUNE_PARAMETERS"] = True  # False
     update_config(config)
+    config
 
 |Open in Colab|
 
