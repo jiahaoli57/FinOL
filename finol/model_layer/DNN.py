@@ -10,7 +10,7 @@ class DNN(nn.Module):
     """
     Deep Neural Network (DNN) model for portfolio selection.
 
-    The DNN model takes an input tensor `x` of shape `(batch_size, num_assets, num_features_augmented)`,
+    The DNN model takes an input tensor ``x`` of shape `(batch_size, num_assets, num_features_augmented)`,
     where `num_features_augmented` represents the number of features (including any preprocessed or augmented
     features) for each asset. The model applies a series of fully connected layers to the input,
     with each layer followed by a ReLU activation and a dropout layer.
@@ -41,15 +41,23 @@ class DNN(nn.Module):
         >>> # Model Layer & Optimization Layer
         >>> ...
         >>> model = ModelSelector(load_dataset_output).select_model()
+        >>> print(f"model: {model}")
         >>> ...
         >>> train_loader = load_dataset_output["train_loader"]
         >>> for i, data in enumerate(train_loader, 1):
-        >>>     x_data, label = data
-        >>>     final_scores = model(x_data.float())
-        >>>     portfolio = portfolio_selection(final_scores)
-        >>>     ...
+        ...     x_data, label = data
+        ...     final_scores = model(x_data.float())
+        ...     portfolio = portfolio_selection(final_scores)
+        ...     print(f"batch {i} input shape: {x_data.shape}")
+        ...     print(f"batch {i} label shape: {label.shape}")
+        ...     print(f"batch {i} output shape: {portfolio.shape}")
+        ...     print("-"*50)
 
-    \
+    .. note::
+
+        Users can refer to this implementation and use it as a starting point for developing their own advanced DNN-based models.
+
+    \\
     """
     def __init__(self, model_args, model_params) -> None:
         super().__init__()
@@ -88,30 +96,3 @@ class DNN(nn.Module):
         """Final Scores for Assets"""
         final_scores = out.squeeze(-1)
         return final_scores
-
-
-if __name__ == "__main__":
-    from finol.data_layer.dataset_loader import DatasetLoader
-    from finol.model_layer.model_selector import ModelSelector
-    from finol.utils import load_config, update_config, portfolio_selection
-    # Configuration
-    config = load_config()
-    config["MODEL_NAME"] = "DNN"
-    config["MODEL_PARAMS"]["DNN"]["NUM_LAYERS"] = 1
-    config["MODEL_PARAMS"]["DNN"]["HIDDEN_SIZE"] = 64
-    config["MODEL_PARAMS"]["DNN"]["DROPOUT"] = 0.1
-    update_config(config)
-
-    # Data Layer
-    load_dataset_output = DatasetLoader().load_dataset()
-
-    # Model Layer & Optimization Layer
-    ...
-    model = ModelSelector(load_dataset_output).select_model()
-    ...
-    train_loader = load_dataset_output["train_loader"]
-    for i, data in enumerate(train_loader, 1):
-        x_data, label = data
-        final_scores = model(x_data.float())
-        portfolio = portfolio_selection(final_scores)
-        ...

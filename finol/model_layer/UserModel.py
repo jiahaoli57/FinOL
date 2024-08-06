@@ -8,7 +8,8 @@ from finol.utils import load_config
 # User-defined model class
 class UserModel(nn.Module):
     """
-    UserModel is a base neural network model class inheriting from ``nn.Module``.
+    UserModel as a base neural network model for portfolio selection.
+
     Users can extend this class and implement their desired model architecture and functionality.
 
     :param model_args: Dictionary containing model arguments, such as the number of features.
@@ -33,13 +34,17 @@ class UserModel(nn.Module):
         >>> # Model Layer & Optimization Layer
         >>> ...
         >>> model = ModelSelector(load_dataset_output).select_model()
+        >>> print(f"model: {model}")
         >>> ...
         >>> train_loader = load_dataset_output["train_loader"]
         >>> for i, data in enumerate(train_loader, 1):
-        >>>     x_data, label = data
-        >>>     final_scores = model(x_data.float())
-        >>>     portfolio = portfolio_selection(final_scores)
-        >>>     ...
+        ...     x_data, label = data
+        ...     final_scores = model(x_data.float())
+        ...     portfolio = portfolio_selection(final_scores)
+        ...     print(f"batch {i} input shape: {x_data.shape}")
+        ...     print(f"batch {i} label shape: {label.shape}")
+        ...     print(f"batch {i} output shape: {portfolio.shape}")
+        ...     print("-"*50)
 
     .. warning::
         When users define their own model, besides modifying this class, they must add different parameter keys and values
@@ -51,7 +56,7 @@ class UserModel(nn.Module):
     """
     def __init__(self, model_args, model_params):
         super().__init__()
-        self.config = load_config
+        self.config = load_config()
         self.model_args = model_args
         self.model_parms = model_params
         # Define your model architecture here
@@ -75,30 +80,3 @@ class UserModel(nn.Module):
         final_scores = x
 
         return final_scores
-
-
-if __name__ == "__main__":
-    from finol.data_layer.dataset_loader import DatasetLoader
-    from finol.model_layer.model_selector import ModelSelector
-    from finol.utils import load_config, update_config, portfolio_selection
-    # Configuration
-    config = load_config()
-    config["MODEL_NAME"] = "UserModel"
-    config["MODEL_PARAMS"]["UserModel"]["PARAMETER1"] = 2
-    config["MODEL_PARAMS"]["UserModel"]["PARAMETER2"] = 128
-    ...
-    update_config(config)
-
-    # Data Layer
-    load_dataset_output = DatasetLoader().load_dataset()
-
-    # Model Layer & Optimization Layer
-    ...
-    model = ModelSelector(load_dataset_output).select_model()
-    ...
-    train_loader = load_dataset_output["train_loader"]
-    for i, data in enumerate(train_loader, 1):
-        x_data, label = data
-        final_scores = model(x_data.float())
-        portfolio = portfolio_selection(final_scores)
-        ...

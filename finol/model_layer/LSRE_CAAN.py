@@ -232,6 +232,39 @@ class LSRE_CAAN(nn.Module):
     :param model_args: Dictionary containing model arguments, such as the number of features.
     :param model_params: Dictionary containing model hyperparameters, such as the number of layers, the number of latents, and the dropout rate.
 
+    Example:
+        .. code:: python
+        >>> from finol.data_layer.dataset_loader import DatasetLoader
+        >>> from finol.model_layer.model_selector import ModelSelector
+        >>> from finol.utils import load_config, update_config, portfolio_selection
+        >>>
+        >>> # Configuration
+        >>> config = load_config()
+        >>> config["MODEL_NAME"] = "LSRE_CAAN"
+        >>> config["MODEL_PARAMS"]["LSRE_CAAN"]["NUM_LAYERS"] = 1
+        >>> config["MODEL_PARAMS"]["LSRE_CAAN"]["NUM_LATENTS"] = 12
+        >>> config["MODEL_PARAMS"]["LSRE_CAAN"]["LATENT_DIM"] = 64
+        >>> ...
+        >>> update_config(config)
+        >>>
+        >>> # Data Layer
+        >>> load_dataset_output = DatasetLoader().load_dataset()
+        >>>
+        >>> # Model Layer & Optimization Layer
+        >>> ...
+        >>> model = ModelSelector(load_dataset_output).select_model()
+        >>> print(f"model: {model}")
+        >>> ...
+        >>> train_loader = load_dataset_output["train_loader"]
+        >>> for i, data in enumerate(train_loader, 1):
+        ...     x_data, label = data
+        ...     final_scores = model(x_data.float())
+        ...     portfolio = portfolio_selection(final_scores)
+        ...     print(f"batch {i} input shape: {x_data.shape}")
+        ...     print(f"batch {i} label shape: {label.shape}")
+        ...     print(f"batch {i} output shape: {portfolio.shape}")
+        ...     print("-"*50)
+
     \
     """
     def __init__(self, model_args, model_params):
@@ -250,7 +283,13 @@ class LSRE_CAAN(nn.Module):
         if self.config["MODEL_NAME"] == "LSRE-CAAN-dd":
             self.ab_study_linear_2 = torch.nn.Linear(self.model_params["LATENT_DIM"], 1)
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """
+        Forward pass of the model.
+
+        :param x: Input tensor of shape `(batch_size, num_assets, num_features_augmented)`.
+        :return: Output tensor of shape `(batch_size, num_assets)` containing the predicted scores for each asset.
+        """
         batch_size, num_assets, num_features_augmented = x.shape
         device = x.device
 
@@ -284,40 +323,3 @@ class LSRE_CAAN(nn.Module):
             final_scores = self.caan(x)
 
         return final_scores
-
-
-if __name__ == "__main__":
-    # Generate random input data
-    torch.manual_seed(0)
-    device = "cuda"
-    batch_size = 2
-    num_assets = 3
-    window_size = 4
-    num_features_original = 5
-    x = torch.rand(batch_size, num_assets, window_size * num_features_original).to(device)
-
-    # Define model arguments and hyper-parameters
-    model_args = {
-        "num_features_original": num_features_original,
-        "window_size": window_size
-    }
-    model_params = {
-        "NUM_LAYERS": 1,
-        "NUM_LATENTS": 1,
-        "LATENT_DIM": 32,
-        "CROSS_HEADS": 1,
-        "LATENT_HEADS": 1,
-        "CROSS_DIM_HEAD": 64,
-        "LATENT_DIM_HEAD": 32,
-        "DROPOUT": 0,
-    }
-
-    # Initialize LSRE_CAAN model
-    model = LSRE_CAAN(model_args, model_params).to(device)
-    print("-"*60)
-    print(f"model: {model}")
-
-    # Perform forward pass
-    final_scores = model(x)
-    print("-"*60)
-    print(f"output scores: {final_scores}")

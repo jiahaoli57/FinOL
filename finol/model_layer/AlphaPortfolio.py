@@ -105,7 +105,40 @@ class AlphaPortfolio(nn.Module):
     :param model_args: Dictionary containing model arguments, such as the number of features.
     :param model_params: Dictionary containing model hyperparameters, such as the number of layers, the hidden size, and the dropout rate.
 
-    \
+    Example:
+        .. code:: python
+        >>> from finol.data_layer.dataset_loader import DatasetLoader
+        >>> from finol.model_layer.model_selector import ModelSelector
+        >>> from finol.utils import load_config, update_config, portfolio_selection
+        >>>
+        >>> # Configuration
+        >>> config = load_config()
+        >>> config["MODEL_NAME"] = "AlphaPortfolio"
+        >>> config["MODEL_PARAMS"]["AlphaPortfolio"]["NUM_LAYERS"] = 1
+        >>> config["MODEL_PARAMS"]["AlphaPortfolio"]["DIM_EMBEDDING"] = 64
+        >>> config["MODEL_PARAMS"]["AlphaPortfolio"]["DIM_FEEDFORWARD"] = 64
+        >>> ...
+        >>> update_config(config)
+        >>>
+        >>> # Data Layer
+        >>> load_dataset_output = DatasetLoader().load_dataset()
+        >>>
+        >>> # Model Layer & Optimization Layer
+        >>> ...
+        >>> model = ModelSelector(load_dataset_output).select_model()
+        >>> print(f"model: {model}")
+        >>> ...
+        >>> train_loader = load_dataset_output["train_loader"]
+        >>> for i, data in enumerate(train_loader, 1):
+        ...     x_data, label = data
+        ...     final_scores = model(x_data.float())
+        ...     portfolio = portfolio_selection(final_scores)
+        ...     print(f"batch {i} input shape: {x_data.shape}")
+        ...     print(f"batch {i} label shape: {label.shape}")
+        ...     print(f"batch {i} output shape: {portfolio.shape}")
+        ...     print("-"*50)
+
+    \\
     """
     def __init__(self, model_args, model_params):
         super().__init__()
@@ -116,7 +149,13 @@ class AlphaPortfolio(nn.Module):
         self.srem = SREM(model_args, model_params)
         self.caan = CAAN(model_params)
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """
+        Forward pass of the model.
+
+        :param x: Input tensor of shape `(batch_size, num_assets, num_features_augmented)`.
+        :return: Output tensor of shape `(batch_size, num_assets)` containing the predicted scores for each asset.
+        """
         batch_size, num_assets, num_features_augmented = x.shape
 
         """Input Transformation"""
@@ -133,31 +172,3 @@ class AlphaPortfolio(nn.Module):
         final_scores = self.caan(x)
 
         return final_scores
-
-
-if __name__ == "__main__":
-    # config = load_config()
-    device = "cuda"
-    torch.manual_seed(0)
-    batch_size = 128
-    num_assets = 6
-    window_size = 30
-    num_features_original = 10
-    num_features_augmented = window_size * num_features_original
-    # x = torch.ones(batch_size, num_assets, num_features_augmented).to(DEVICE)
-    x = torch.rand(batch_size, num_assets, num_features_augmented).to(device)
-    model_args = {
-        "num_features_original": num_features_original,
-        "window_size": window_size,
-    }
-    model_params = {
-        "DIM_EMBEDDING": 256,
-        "DIM_FEEDFORWARD": 1021,
-        "NUM_HEADS": 4,
-        "NUM_LAYERS": 1,
-        "DROPOUT": 0.2,
-    }
-    model = AlphaPortfolio(model_args, model_params).to(device)
-    final_scores = model(x)
-    print(final_scores)
-
