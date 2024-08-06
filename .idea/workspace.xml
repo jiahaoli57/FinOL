@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs; optimize code">
-      <change beforePath="$PROJECT_DIR$/docs/source/quickstart.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/quickstart.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/tutorials/tutorial_quickstart.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/tutorials/tutorial_quickstart.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/background.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/background.rst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -372,21 +371,7 @@
       <workItem from="1722916313344" duration="13629000" />
       <workItem from="1722953982678" duration="98000" />
       <workItem from="1722954097185" duration="299000" />
-      <workItem from="1722954520922" duration="1408000" />
-    </task>
-    <task id="LOCAL-00199" summary="build docs">
-      <created>1722021050478</created>
-      <option name="number" value="00199" />
-      <option name="presentableId" value="LOCAL-00199" />
-      <option name="project" value="LOCAL" />
-      <updated>1722021050478</updated>
-    </task>
-    <task id="LOCAL-00200" summary="build docs">
-      <created>1722021317648</created>
-      <option name="number" value="00200" />
-      <option name="presentableId" value="LOCAL-00200" />
-      <option name="project" value="LOCAL" />
-      <updated>1722021317648</updated>
+      <workItem from="1722954520922" duration="1811000" />
     </task>
     <task id="LOCAL-00201" summary="build docs">
       <created>1722021340497</created>
@@ -717,7 +702,21 @@
       <option name="project" value="LOCAL" />
       <updated>1722955854916</updated>
     </task>
-    <option name="localTasksCounter" value="248" />
+    <task id="LOCAL-00248" summary="build docs; optimize code">
+      <created>1722955959313</created>
+      <option name="number" value="00248" />
+      <option name="presentableId" value="LOCAL-00248" />
+      <option name="project" value="LOCAL" />
+      <updated>1722955959313</updated>
+    </task>
+    <task id="LOCAL-00249" summary="build docs; optimize code">
+      <created>1722956025013</created>
+      <option name="number" value="00249" />
+      <option name="presentableId" value="LOCAL-00249" />
+      <option name="project" value="LOCAL" />
+      <updated>1722956025013</updated>
+    </task>
+    <option name="localTasksCounter" value="250" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

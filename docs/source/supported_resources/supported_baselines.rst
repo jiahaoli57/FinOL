@@ -3,7 +3,8 @@
 FinOL Baselines
 ===================
 
-.. container::
+.. table::
+   :align: center
 
    +-------------------+---------------------+--------------------------------------+----------------------------------+
    | Name              | Category            | Source                               | Journal/Conference               |
@@ -192,6 +193,7 @@ As of July 2024, the top five baselines for profitability (quantified by the siz
 
 .. list-table::
    :header-rows: 1
+   :align: center
 
    * - Ranking
      - NYSE(O)
@@ -261,6 +263,7 @@ As of July 2024, the top five baselines for risk resilience (quantified by the s
 
 .. list-table::
    :header-rows: 1
+   :align: center
 
    * - Ranking
      - NYSE(O)

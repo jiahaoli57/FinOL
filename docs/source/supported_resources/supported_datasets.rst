@@ -3,7 +3,8 @@
 FinOL Datasets
 ========
 
-.. container::
+.. table::
+   :align: center
 
    +--------------------------+----------------+-----------------+-----------+--------+---------------+--------------------+
    | Name                     | Market         | Country/Region  | Data      | # of   | Data Range    | # of               |

@@ -20,6 +20,7 @@ OHLCV Features
 
 .. list-table::
    :header-rows: 1
+   :align: center
 
    * - Feature Name
      - Function Call
@@ -47,6 +48,7 @@ Overlap Features
 
 .. list-table::
    :header-rows: 1
+   :align: center
 
    * - Feature Name
      - Function Call
@@ -119,6 +121,7 @@ Momentum Features
 
 .. list-table::
    :header-rows: 1
+   :align: center
 
    * - Feature Name
      - Function Call
@@ -251,6 +254,7 @@ Volume Features
 
 .. list-table::
    :header-rows: 1
+   :align: center
 
    * - Feature Name
      - Function Call
@@ -272,6 +276,7 @@ Cycle Features
 
 .. list-table::
    :header-rows: 1
+   :align: center
 
    * - Feature Name
      - Function Call
@@ -305,6 +310,7 @@ Price Features
 
 .. list-table::
    :header-rows: 1
+   :align: center
 
    * - Feature Name
      - Function Call
@@ -329,6 +335,7 @@ Volatility Features
 
 .. list-table::
    :header-rows: 1
+   :align: center
 
    * - Feature Name
      - Function Call
@@ -350,6 +357,7 @@ Pattern Features
 
 .. list-table::
    :header-rows: 1
+   :align: center
 
    * - Feature Name
      - Function Call

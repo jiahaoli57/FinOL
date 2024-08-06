@@ -4,6 +4,7 @@ FinOL Metrics
 =======
 
 .. container::
+   :align: center
 
    +-------------------------------------------+------------------+--------------+
    | Name                                      | Abbreviation     | Category     |

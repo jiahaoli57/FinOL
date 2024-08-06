@@ -24,6 +24,7 @@ Notation
 
 .. list-table::
    :header-rows: 1
+   :align: center
 
    * - Notation
      - Description
