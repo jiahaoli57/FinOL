@@ -127,7 +127,7 @@ class FinOLApp:
         # ttk.Label(self.model_config_frame, text=" "*150).grid(row=100, column=0, columnspan=4, padx=10, pady=0)
 
         # MODEL_NAME
-        options = ["--", "AlphaPortfolio", "CNN", "DNN", "LSRE-CAAN", "LSTM", "RNN", "Transformer",]
+        options = ["--", "AlphaPortfolio", "CNN", "DNN", "LSRE-CAAN", "LSTM", "RNN", "Transformer", "UserModel"]
         self.create_dropdown(self.model_config_frame, options, "Select Model:", 0, 2, options.index(self.config["MODEL_NAME"]), "StringVar", ["MODEL_NAME"])
 
         # create_separator

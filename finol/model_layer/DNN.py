@@ -8,7 +8,7 @@ from finol.utils import load_config
 
 class DNN(nn.Module):
     """
-    Deep Neural Network (DNN) model for portfolio selection.
+    Class to generate predicted scores for the input assets based on the Deep Neural Network (DNN) model.
 
     The DNN model takes an input tensor ``x`` of shape `(batch_size, num_assets, num_features_augmented)`,
     where `num_features_augmented` represents the number of features (including any preprocessed or augmented

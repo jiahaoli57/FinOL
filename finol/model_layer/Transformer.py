@@ -11,7 +11,7 @@ class Transformer(nn.Module):
     """
     Transformer model for portfolio selection.
 
-    The DNN model takes an input tensor ``x`` of shape `(batch_size, num_assets, num_features_augmented)`,
+    The Transformer model takes an input tensor ``x`` of shape `(batch_size, num_assets, num_features_augmented)`,
     where `num_features_augmented` represents the number of features (including any preprocessed or augmented
     features) for each asset.
 
