@@ -9,7 +9,7 @@ from finol.utils import load_config
 
 class Transformer(nn.Module):
     """
-    Transformer model for portfolio selection.
+    Class to generate predicted scores for the input assets based on the Transformer model.
 
     The Transformer model takes an input tensor ``x`` of shape `(batch_size, num_assets, num_features_augmented)`,
     where `num_features_augmented` represents the number of features (including any preprocessed or augmented

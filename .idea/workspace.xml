@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs; optimize code">
-      <change beforePath="$PROJECT_DIR$/docs/source/background.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/background.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/result_visualizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/result_visualizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/model_layer/LSTM.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/LSTM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/model_layer/RNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/RNN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/model_layer/Transformer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/Transformer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -371,14 +376,7 @@
       <workItem from="1722916313344" duration="13629000" />
       <workItem from="1722953982678" duration="98000" />
       <workItem from="1722954097185" duration="299000" />
-      <workItem from="1722954520922" duration="1811000" />
-    </task>
-    <task id="LOCAL-00201" summary="build docs">
-      <created>1722021340497</created>
-      <option name="number" value="00201" />
-      <option name="presentableId" value="LOCAL-00201" />
-      <option name="project" value="LOCAL" />
-      <updated>1722021340497</updated>
+      <workItem from="1722954520922" duration="2839000" />
     </task>
     <task id="LOCAL-00202" summary="build docs">
       <created>1722021680578</created>
@@ -716,7 +714,14 @@
       <option name="project" value="LOCAL" />
       <updated>1722956025013</updated>
     </task>
-    <option name="localTasksCounter" value="250" />
+    <task id="LOCAL-00250" summary="build docs; optimize code">
+      <created>1722956610938</created>
+      <option name="number" value="00250" />
+      <option name="presentableId" value="LOCAL-00250" />
+      <option name="project" value="LOCAL" />
+      <updated>1722956610938</updated>
+    </task>
+    <option name="localTasksCounter" value="251" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

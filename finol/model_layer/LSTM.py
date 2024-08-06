@@ -8,7 +8,7 @@ from finol.utils import load_config
 
 class LSTM(nn.Module):
     """
-    Long Short-Term Memory (LSTM) model for portfolio selection.
+    Class to generate predicted scores for the input assets based on the Long Short-Term Memory (LSTM) model.
 
     The LSTM model takes an input tensor ``x`` of shape `(batch_size, num_assets, num_features_augmented)`,
     where `num_features_augmented` represents the number of features (including any preprocessed or augmented

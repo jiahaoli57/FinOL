@@ -101,6 +101,11 @@ def radar_factory(num_vars, frame="circle"):
 
 
 class ResultVisualizer:
+    """
+    Class to visualize the results of proposed data-driven OLPS method.
+
+    :param: load_benchmark_output: Dictionary containing output from function :func:`~finol.evaluation_layer.BenchmarkLoader.load_benchmark`.
+    """
     def __init__(self, load_benchmark_output) -> None:
         self.config = load_config()
         self.load_benchmark_output = load_benchmark_output
