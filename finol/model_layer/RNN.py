@@ -20,10 +20,6 @@ class RNN(nn.Module):
     :param model_args: Dictionary containing model arguments, such as the number of features.
     :param model_params: Dictionary containing model hyperparameters, such as the number of layers, the hidden size, and the dropout rate.
 
-    .. note::
-
-        Users can refer to this implementation and use it as a starting point for developing their own advanced RNN-based models.
-
     Example:
         .. code:: python
         >>> from finol.data_layer.dataset_loader import DatasetLoader
@@ -55,6 +51,10 @@ class RNN(nn.Module):
         ...     print(f"batch {i} label shape: {label.shape}")
         ...     print(f"batch {i} output shape: {portfolio.shape}")
         ...     print("-"*50)
+
+    .. note::
+
+        Users can refer to this implementation and use it as a starting point for developing their own advanced RNN-based models.
 
     \\
     """
