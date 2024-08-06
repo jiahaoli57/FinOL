@@ -8,7 +8,7 @@ from finol.utils import load_config
 
 class DNN(nn.Module):
     """
-    Deep Neural Network (DNN) model for asset scoring.
+    Deep Neural Network (DNN) model for portfolio selection.
 
     The DNN model takes an input tensor `x` of shape `(batch_size, num_assets, num_features_augmented)`,
     where `num_features_augmented` represents the number of features (including any preprocessed or augmented
@@ -49,6 +49,7 @@ class DNN(nn.Module):
         >>>     portfolio = portfolio_selection(final_scores)
         >>>     ...
 
+    \
     """
     def __init__(self, model_args, model_params) -> None:
         super().__init__()

@@ -47,7 +47,7 @@ class UserModel(nn.Module):
         automatic hyper-parameters tuning for their custom model, they also need to specify the range and type of different
         parameters at ``config["MODEL_PARAMS_SPACE"]["UserModel"]``
 
-    1
+    \\
     """
     def __init__(self, model_args, model_params):
         super().__init__()

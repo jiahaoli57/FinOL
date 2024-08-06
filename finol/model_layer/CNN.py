@@ -6,6 +6,13 @@ from finol.utils import load_config
 
 
 class CNN(nn.Module):
+    """
+
+    :param model_args: Dictionary containing model arguments, such as the number of features.
+    :param model_params: Dictionary containing model hyperparameters, such as the kernel size, the hidden size, and the dropout rate.
+
+    \
+    """
     def __init__(self, model_args, model_params):
         super().__init__()
         self.config = load_config()
@@ -21,6 +28,7 @@ class CNN(nn.Module):
             nn.ReLU(),
             nn.Linear(model_params["HIDDEN_SIZE"], 1),
         )
+        self.dropout = nn.Dropout(p=model_params["DROPOUT"])
 
     def forward(self, x):
         batch_size, num_assets, num_features_augmented = x.shape
@@ -36,6 +44,7 @@ class CNN(nn.Module):
         """Temporal Representation Extraction"""
         out = self.net(x)
         out = out.view(batch_size, num_assets, 1).squeeze(-1)
+        out = self.dropout(out)
 
         """Final Scores for Assets"""
         final_scores = out

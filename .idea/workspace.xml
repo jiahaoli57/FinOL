@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs; optimize code">
-      <change afterPath="$PROJECT_DIR$/finol/model_layer/UserModel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/_templates/autosummary/class.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/_templates/autosummary/class.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/model_layer.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/api/model_layer.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/model_layer/AlphaPortfolio.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/AlphaPortfolio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/model_layer/CNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/CNN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finol/model_layer/DNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/DNN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/model_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/model_selector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/parameters_tuner.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/parameters_tuner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/model_layer/UserModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/UserModel.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,6 +272,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.FinOLAPP" />
       <item itemvalue="Python.DNN" />
       <item itemvalue="Python.model_trainer" />
       <item itemvalue="Python.UserModel" />
@@ -405,14 +400,8 @@
       <workItem from="1721823180766" duration="104259000" />
       <workItem from="1722153913354" duration="126812000" />
       <workItem from="1722496545282" duration="25021000" />
-      <workItem from="1722577447295" duration="81227000" />
-    </task>
-    <task id="LOCAL-00194" summary="build docs">
-      <created>1722020231476</created>
-      <option name="number" value="00194" />
-      <option name="presentableId" value="LOCAL-00194" />
-      <option name="project" value="LOCAL" />
-      <updated>1722020231476</updated>
+      <workItem from="1722577447295" duration="82629000" />
+      <workItem from="1722916313344" duration="1735000" />
     </task>
     <task id="LOCAL-00195" summary="build docs">
       <created>1722020475669</created>
@@ -750,7 +739,14 @@
       <option name="project" value="LOCAL" />
       <updated>1722688639196</updated>
     </task>
-    <option name="localTasksCounter" value="243" />
+    <task id="LOCAL-00243" summary="build docs; optimize code">
+      <created>1722869885659</created>
+      <option name="number" value="00243" />
+      <option name="presentableId" value="LOCAL-00243" />
+      <option name="project" value="LOCAL" />
+      <updated>1722869885659</updated>
+    </task>
+    <option name="localTasksCounter" value="244" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
