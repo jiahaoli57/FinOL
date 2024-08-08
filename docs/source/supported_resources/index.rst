@@ -1,4 +1,4 @@
-Supported Resources
+FinOL Supports
 ===================
 
 .. toctree::
