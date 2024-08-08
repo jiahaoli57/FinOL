@@ -17,8 +17,8 @@ from finol import __version__
 ROOT_PATH = os.path.dirname(os.path.realpath(__file__))
 PARENT_PATH = os.path.dirname(ROOT_PATH)
 
-print("ROOT_PATH", ROOT_PATH)
-print("PARENT_PATH", PARENT_PATH)
+print("ROOT_PATH:", ROOT_PATH)
+print("PARENT_PATH:", PARENT_PATH)
 
 
 def check_update():
