@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs; optimize code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/result_visualizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/result_visualizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/LSTM.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/LSTM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/RNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/RNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/Transformer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/Transformer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/FinOLAPP.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/FinOLAPP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/main/test_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/main/test_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/parameters_tuner.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/parameters_tuner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +144,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="UserModel" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="model_trainer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FinOL" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -153,12 +152,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/model_layer" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/optimization_layer" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/model_layer/UserModel.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,75 +166,62 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Doctests (AlphaPortfolio 内)" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
+    <configuration name="parameters_tuner" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FinOL" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/model_layer" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/optimization_layer" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/model_layer/AlphaPortfolio.py" />
-      <option name="CLASS_NAME" value="AlphaPortfolio" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/optimization_layer/parameters_tuner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Doctests (Transformer 内)" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
+    <configuration name="test_script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FinOL" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/model_layer" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/main" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/model_layer/Transformer.py" />
-      <option name="CLASS_NAME" value="Transformer" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/main/test_script.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Doctests (UserModel 内) (1)" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
+    <configuration name="Doctests (ParametersTuner 内)" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <module name="FinOL" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/model_layer" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/optimization_layer" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/model_layer/UserModel.py" />
-      <option name="CLASS_NAME" value="UserModel" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Doctests (UserModel 内)" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
-      <module name="FinOL" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finol/model_layer" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/model_layer/UserModel.py" />
-      <option name="CLASS_NAME" value="UserModel" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/optimization_layer/parameters_tuner.py" />
+      <option name="CLASS_NAME" value="ParametersTuner" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_CLASS" />
@@ -245,19 +231,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.FinOLAPP" />
-      <item itemvalue="Python.UserModel" />
-      <item itemvalue="Python 测试.Doctests (UserModel 内)" />
-      <item itemvalue="Python 测试.Doctests (UserModel 内) (1)" />
-      <item itemvalue="Python 测试.Doctests (Transformer 内)" />
-      <item itemvalue="Python 测试.Doctests (AlphaPortfolio 内)" />
+      <item itemvalue="Python.model_trainer" />
+      <item itemvalue="Python.parameters_tuner" />
+      <item itemvalue="Python.test_script" />
+      <item itemvalue="Python 测试.Doctests (ParametersTuner 内)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.FinOLAPP" />
-        <item itemvalue="Python 测试.Doctests (UserModel 内)" />
-        <item itemvalue="Python 测试.Doctests (AlphaPortfolio 内)" />
-        <item itemvalue="Python 测试.Doctests (Transformer 内)" />
-        <item itemvalue="Python.UserModel" />
+        <item itemvalue="Python.test_script" />
+        <item itemvalue="Python.model_trainer" />
+        <item itemvalue="Python.parameters_tuner" />
+        <item itemvalue="Python 测试.Doctests (ParametersTuner 内)" />
       </list>
     </recent_temporary>
   </component>
@@ -376,14 +361,11 @@
       <workItem from="1722916313344" duration="13629000" />
       <workItem from="1722953982678" duration="98000" />
       <workItem from="1722954097185" duration="299000" />
-      <workItem from="1722954520922" duration="2839000" />
-    </task>
-    <task id="LOCAL-00202" summary="build docs">
-      <created>1722021680578</created>
-      <option name="number" value="00202" />
-      <option name="presentableId" value="LOCAL-00202" />
-      <option name="project" value="LOCAL" />
-      <updated>1722021680578</updated>
+      <workItem from="1722954520922" duration="4966000" />
+      <workItem from="1722960219022" duration="813000" />
+      <workItem from="1722961064742" duration="1668000" />
+      <workItem from="1723002675733" duration="14710000" />
+      <workItem from="1723086909994" duration="1201000" />
     </task>
     <task id="LOCAL-00203" summary="build docs">
       <created>1722021696008</created>
@@ -721,7 +703,14 @@
       <option name="project" value="LOCAL" />
       <updated>1722956610938</updated>
     </task>
-    <option name="localTasksCounter" value="251" />
+    <task id="LOCAL-00251" summary="build docs; optimize code">
+      <created>1722957617931</created>
+      <option name="number" value="00251" />
+      <option name="presentableId" value="LOCAL-00251" />
+      <option name="project" value="LOCAL" />
+      <updated>1722957617931</updated>
+    </task>
+    <option name="localTasksCounter" value="252" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -771,6 +760,7 @@
     <SUITE FILE_PATH="coverage/FinOL$config1.coverage" NAME="config1 覆盖结果" MODIFIED="1720255366931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol" />
     <SUITE FILE_PATH="coverage/FinOL$utils.coverage" NAME="utils 覆盖结果" MODIFIED="1719744861001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol" />
     <SUITE FILE_PATH="coverage/FinOL$AlphaPortfolio.coverage" NAME="AlphaPortfolio 覆盖结果" MODIFIED="1721295620801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/model_layer" />
+    <SUITE FILE_PATH="coverage/FinOL$parameters_tuner.coverage" NAME="parameters_tuner 覆盖结果" MODIFIED="1722961070435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/optimization_layer" />
     <SUITE FILE_PATH="coverage/FinOL$Doctests__UserModel____1_.coverage" NAME="Doctests (UserModel 内) (1) 覆盖结果" MODIFIED="1722868389371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/model_layer" />
     <SUITE FILE_PATH="coverage/FinOL$data_collector.coverage" NAME="data_collector 覆盖结果" MODIFIED="1713776626316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../FinOL-2024.03.16备份/finol/data_layer" />
     <SUITE FILE_PATH="coverage/FinOL$RNN.coverage" NAME="RNN 覆盖结果" MODIFIED="1720192425859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/model_layer" />
@@ -798,12 +788,13 @@
     <SUITE FILE_PATH="coverage/FinOL$install_ta_lib.coverage" NAME="install_ta_lib 覆盖结果" MODIFIED="1721652534256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol" />
     <SUITE FILE_PATH="coverage/FinOL$DatasetLoader.coverage" NAME="DatasetLoader 覆盖结果" MODIFIED="1721981277488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/data_layer" />
     <SUITE FILE_PATH="coverage/FinOL$ModelTrainer.coverage" NAME="ModelTrainer 覆盖结果" MODIFIED="1721825649080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/optimization_layer" />
-    <SUITE FILE_PATH="coverage/FinOL$model_trainer.coverage" NAME="model_trainer 覆盖结果" MODIFIED="1722849279832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/optimization_layer" />
+    <SUITE FILE_PATH="coverage/FinOL$model_trainer.coverage" NAME="model_trainer 覆盖结果" MODIFIED="1722962075940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/optimization_layer" />
+    <SUITE FILE_PATH="coverage/FinOL$Doctests__ParametersTuner__.coverage" NAME="Doctests (ParametersTuner 内) 覆盖结果" MODIFIED="1722960785624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/optimization_layer" />
     <SUITE FILE_PATH="coverage/FinOL$__init__.coverage" NAME="__init__ 覆盖结果" MODIFIED="1722325473393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol" />
     <SUITE FILE_PATH="coverage/FinOL$OptunaOptimizer.coverage" NAME="OptunaOptimizer 覆盖结果" MODIFIED="1721380496564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/optimization_layer" />
     <SUITE FILE_PATH="coverage/FinOL$LSTP.coverage" NAME="LSTP 覆盖结果" MODIFIED="1718526668153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/model_layer" />
     <SUITE FILE_PATH="coverage/FinOL$BenchmarkLoader.coverage" NAME="BenchmarkLoader 覆盖结果" MODIFIED="1721127425906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/evaluation_layer" />
-    <SUITE FILE_PATH="coverage/FinOL$FinOLAPP.coverage" NAME="FinOLAPP 覆盖结果" MODIFIED="1722954370564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol" />
-    <SUITE FILE_PATH="coverage/FinOL$test_script.coverage" NAME="test_script 覆盖结果" MODIFIED="1722447300664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/main" />
+    <SUITE FILE_PATH="coverage/FinOL$FinOLAPP.coverage" NAME="FinOLAPP 覆盖结果" MODIFIED="1723088099255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol" />
+    <SUITE FILE_PATH="coverage/FinOL$test_script.coverage" NAME="test_script 覆盖结果" MODIFIED="1723047949611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/main" />
   </component>
 </project>

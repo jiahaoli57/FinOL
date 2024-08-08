@@ -95,7 +95,7 @@
             "WINDOW_SIZE": 10
         }
     },
-    "SCALER": "StandardScaler",
+    "SCALER": "WindowStandardScaler",
     "BATCH_SIZE": {
         "NYSE(O)": 128,
         "NYSE(N)": 128,
@@ -122,11 +122,11 @@
     "MODEL_NAME": "DNN",
     "MODEL_PARAMS": {
         "AlphaPortfolio": {
-            "NUM_LAYERS": 1,
-            "DIM_EMBEDDING": 64,
-            "DIM_FEEDFORWARD": 64,
-            "NUM_HEADS": 4,
-            "DROPOUT": 0.2
+            "NUM_LAYERS": 3,
+            "DIM_EMBEDDING": 192,
+            "DIM_FEEDFORWARD": 160,
+            "NUM_HEADS": 1,
+            "DROPOUT": 0.25
         },
         "CNN": {
             "OUT_CHANNELS": 128,
@@ -137,8 +137,8 @@
         },
         "DNN": {
             "NUM_LAYERS": 1,
-            "HIDDEN_SIZE": 64,
-            "DROPOUT": 0.1
+            "HIDDEN_SIZE": 224,
+            "DROPOUT": 0.05
         },
         "LSRE-CAAN": {
             "NUM_LAYERS": 1,
@@ -535,14 +535,14 @@
         }
     },
     "_note4": "----------------------------------- Optimization Layer Configuration -----------------------------------",
-    "NUM_EPOCHES": 20,
+    "NUM_EPOCHES": 50,
     "SAVE_EVERY": 1,
     "OPTIMIZER_NAME": "Adam",
     "LEARNING_RATE": 0.001,
     "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
-    "TUNE_PARAMETERS": false,
-    "NUM_TRIALS": 20,
+    "TUNE_PARAMETERS": true,
+    "NUM_TRIALS": 100,
     "SAMPLER_NAME": "RandomSampler",
     "PRUNER_NAME": "NopPruner",
     "WRAPPED_PRUNER_NAME": "MedianPruner",

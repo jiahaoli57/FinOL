@@ -9,7 +9,7 @@ from tabulate import tabulate
 from finol.model_layer.model_selector import ModelSelector
 from finol.optimization_layer.criterion_selector import CriterionSelector
 from finol.optimization_layer.optimizer_selector import OptimizerSelector
-from finol.utils import load_config, update_config, portfolio_selection, set_seed, add_prefix
+from finol.utils import load_config, update_config, portfolio_selection, actual_portfolio_selection, set_seed, add_prefix
 
 
 class ParametersTuner:
@@ -73,6 +73,7 @@ class ParametersTuner:
 
         train_loss_list = []
         val_loss_list = []
+        test_loss_list = []
         best_val_loss = float("inf")
 
         for e in tqdm(range(self.config["NUM_EPOCHES"]), desc="Training"):
@@ -82,7 +83,6 @@ class ParametersTuner:
                 x_data, label = data
                 final_scores = model(x_data.float())
                 portfolio = portfolio_selection(final_scores)
-
                 loss = criterion(portfolio, label.float())
 
                 optimizer.zero_grad()
@@ -170,7 +170,7 @@ class ParametersTuner:
             direction="minimize",
             sampler=self.select_sampler(),
             pruner=self.select_pruner(),
-            storage="sqlite:///" + self.logdir + "/" + self.config["MODEL_NAME"] + "_" + self.config["DATASET_NAME"] + "_" + self.config["MODEL_NAME"] + ".db"
+            storage="sqlite:///" + self.logdir + "/" + add_prefix(".db")
         )
         self.study.optimize(self.objective, n_trials=self.config["NUM_TRIALS"])
 
@@ -194,7 +194,7 @@ class ParametersTuner:
         for plot_func in plots:
             plt.figure()
             plot_func(self.study)
-            plt.savefig(self.logdir + "/" + add_prefix(str(plot_func)), format="pdf", dpi=300, bbox_inches="tight")
+            plt.savefig(self.logdir + "/" + add_prefix(plot_func.__name__) + ".pdf", format="pdf", dpi=300, bbox_inches="tight")
             plt.show()
             # plt.tight_layout()
 

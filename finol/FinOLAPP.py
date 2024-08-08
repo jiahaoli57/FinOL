@@ -506,15 +506,15 @@ class FinOLApp:
         if hasattr(self, 'load_dataset_output'):
             try:
                 self.train_model_output = ModelTrainer(self.load_dataset_output).train_model()
-                messagebox.showinfo("Success", f"Model ``{self.config['MODEL_NAME']}`` trained successfully!")
-
                 # once the model is trained, we update the parms for model in APP
                 self.trace_dropdown(["MODEL_NAME"], self.config['MODEL_NAME'])
+
+                messagebox.showinfo("Success", f"Model ``{self.config['MODEL_NAME']}`` trained successfully!")
+
             except Exception as e:
                 messagebox.showerror("Error", f"Failed to train model ``{self.config['MODEL_NAME']}``: {e}")
         else:
             messagebox.showwarning("Warning", "Please load the dataset first!")
-
 
     def evaluate_model(self):
         if hasattr(self, 'load_dataset_output') and hasattr(self, 'train_model_output'):
