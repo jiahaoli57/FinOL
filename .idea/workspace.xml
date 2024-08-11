@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs; optimize code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/other_modules.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/api/other_modules.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_baselines.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_baselines.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_datasets.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_datasets.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_features.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_features.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-    </list>
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -384,14 +374,7 @@
       <workItem from="1723390676789" duration="401000" />
       <workItem from="1723391112328" duration="121000" />
       <workItem from="1723391263194" duration="1147000" />
-      <workItem from="1723392446744" duration="784000" />
-    </task>
-    <task id="LOCAL-00225" summary="build docs; optimize code">
-      <created>1722530915027</created>
-      <option name="number" value="00225" />
-      <option name="presentableId" value="LOCAL-00225" />
-      <option name="project" value="LOCAL" />
-      <updated>1722530915027</updated>
+      <workItem from="1723392446744" duration="1343000" />
     </task>
     <task id="LOCAL-00226" summary="build docs; optimize code">
       <created>1722534474997</created>
@@ -729,7 +712,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723392265429</updated>
     </task>
-    <option name="localTasksCounter" value="274" />
+    <task id="LOCAL-00274" summary="build docs">
+      <created>1723393311231</created>
+      <option name="number" value="00274" />
+      <option name="presentableId" value="LOCAL-00274" />
+      <option name="project" value="LOCAL" />
+      <updated>1723393311231</updated>
+    </task>
+    <option name="localTasksCounter" value="275" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -758,9 +748,9 @@
     <MESSAGE value="commit" />
     <MESSAGE value="add &quot;Radar Chart&quot; feature" />
     <MESSAGE value="optimize code" />
-    <MESSAGE value="build docs" />
     <MESSAGE value="build docs; optimize code" />
-    <option name="LAST_COMMIT_MESSAGE" value="build docs; optimize code" />
+    <MESSAGE value="build docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="build docs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
