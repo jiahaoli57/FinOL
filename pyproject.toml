@@ -81,15 +81,6 @@ dynamic = ["version"]
 #  "typing_extensions>=3.10.0.0",
 #]
 document = [
-#  "ase",
-#  "cmaes>=0.10.0",  # optuna/samplers/_cmaes.py.
-#  "fvcore",
-#  "lightgbm",
-#  "matplotlib!=3.6.0",
-#  "pandas",
-#  "pillow",
-#  "plotly>=4.9.0",  # optuna/visualization.
-#  "scikit-learn",
   "typed-ast",
   "sphinx",
   "sphinx-gallery",

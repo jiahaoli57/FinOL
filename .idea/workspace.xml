@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs; optimize code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -375,13 +376,7 @@
       <workItem from="1723389640167" duration="908000" />
       <workItem from="1723390676789" duration="401000" />
       <workItem from="1723391112328" duration="121000" />
-    </task>
-    <task id="LOCAL-00223" summary="build docs">
-      <created>1722502520403</created>
-      <option name="number" value="00223" />
-      <option name="presentableId" value="LOCAL-00223" />
-      <option name="project" value="LOCAL" />
-      <updated>1722502520403</updated>
+      <workItem from="1723391263194" duration="797000" />
     </task>
     <task id="LOCAL-00224" summary="build docs">
       <created>1722503091209</created>
@@ -719,7 +714,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723391033854</updated>
     </task>
-    <option name="localTasksCounter" value="272" />
+    <task id="LOCAL-00272" summary="build docs; optimize code">
+      <created>1723391414234</created>
+      <option name="number" value="00272" />
+      <option name="presentableId" value="LOCAL-00272" />
+      <option name="project" value="LOCAL" />
+      <updated>1723391414235</updated>
+    </task>
+    <option name="localTasksCounter" value="273" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
