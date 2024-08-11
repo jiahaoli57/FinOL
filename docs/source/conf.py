@@ -51,6 +51,7 @@ extensions = [
     # "sphinx_markdown_tables",
     # "sphinx_rtd_theme",
     "sphinx_copybutton",
+    "sphinx_design",
     # "sphinx-jsonschema",
     "sphinxemoji.sphinxemoji",
 ]
@@ -113,6 +114,7 @@ html_show_sourcelink = False
 
 language = 'en'
 
+html_context = {}
 
 # -- Extension configuration -------------------------------------------------
 autosummary_generate = True
