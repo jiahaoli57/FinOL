@@ -330,3 +330,69 @@ Average Turnover
 ~~~~~~~~~~~~~~~~
 
 As of July 2024, the top five baselines for practicality (quantified by the size of ATO metric) are:
+
+
+.. list-table::
+   :header-rows: 1
+   :align: center
+
+   * - Ranking
+     - NYSE(O)
+     - NYSE(N)
+     - DJIA
+     - SP500
+     - TSE
+     - SSE
+     - HSI
+     - CMEG
+     - CRYPTO
+   * - |:1st_place_medal:| **1st**
+     - BCRP
+     - EG
+     - BCRP
+     - BCRP
+     - BCRP
+     - BCRP
+     - EG
+     - BCRP
+     - EG
+   * - |:2nd_place_medal:| **2nd**
+     - EG
+     - UP
+     - EG
+     - EG
+     - EG
+     - EG
+     - UCRP
+     - EG
+     - UCRP
+   * - |:3rd_place_medal:| **3rd**
+     - CW-OGD
+     - UCRP
+     - SP
+     - SP
+     - UCRP
+     - UCRP
+     - SP
+     - SP
+     - SP
+   * - |:reminder_ribbon:| **4th**
+     - GRW
+     - SP
+     - UCRP
+     - UCRP
+     - SP
+     - SP
+     - WAAS
+     - UCRP
+     - WAAS
+   * - |:reminder_ribbon:| **5th**
+     - UCRP
+     - WAAS
+     - WAAS
+     - UP
+     - WAAS
+     - WAAS
+     - BCRP
+     - WAAS
+     - BCRP

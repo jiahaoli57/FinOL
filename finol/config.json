@@ -3,8 +3,8 @@
     "DEVICE": "cuda",
     "MANUAL_SEED": 0,
     "_note2": "-------------------------------------- Data Layer Configuration ----------------------------------------",
-    "LOAD_LOCAL_DATALOADER": false,
-    "DATASET_NAME": "CRYPTO",
+    "LOAD_LOCAL_DATALOADER": true,
+    "DATASET_NAME": "NYSE(O)",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
             "TRAIN_START_TIMESTAMP": "1962-07-03",
@@ -91,7 +91,7 @@
     },
     "DATA_AUGMENTATION_CONFIG": {
         "WINDOW_DATA": {
-            "INCLUDE_WINDOW_DATA": true,
+            "INCLUDE_WINDOW_DATA": false,
             "WINDOW_SIZE": 30
         }
     },
@@ -535,13 +535,13 @@
         }
     },
     "_note4": "----------------------------------- Optimization Layer Configuration -----------------------------------",
-    "NUM_EPOCHES": 100,
+    "NUM_EPOCHES": 1,
     "SAVE_EVERY": 1,
     "OPTIMIZER_NAME": "Adam",
     "LEARNING_RATE": 0.001,
     "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
-    "TUNE_PARAMETERS": true,
+    "TUNE_PARAMETERS": false,
     "NUM_TRIALS": 40,
     "SAMPLER_NAME": "RandomSampler",
     "PRUNER_NAME": "NopPruner",
@@ -579,47 +579,5 @@
         "HSI": 4,
         "CMEG": 4,
         "CRYPTO": 13
-    },
-    "BENCHMARK_BASELINE": [
-        "Market",
-        "Best",
-        "UCRP",
-        "BCRP"
-    ],
-    "FOLLOW_THE_WINNER": [
-        "UP",
-        "EG",
-        "SCRP",
-        "PPT",
-        "SSPO"
-    ],
-    "FOLLOW_THE_LOSER": [
-        "ANTI1",
-        "ANTI2",
-        "PAMR",
-        "CWMR-Var",
-        "CWMR-Stdev",
-        "OLMAR-S",
-        "OLMAR-E",
-        "RMR",
-        "RPRT"
-    ],
-    "PATTERN_MATCHING": [
-        "AICTR",
-        "KTPT"
-    ],
-    "META_LEARNING": [
-        "SP",
-        "ONS",
-        "GRW",
-        "WAAS",
-        "CW-OGD"
-    ],
-    "COMPARED_BASELINE": [
-        "Market",
-        "Best",
-        "SSPO",
-        "OLMAR-E",
-        "CW-OGD"
-    ]
+    }
 }
