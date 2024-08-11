@@ -92,7 +92,11 @@ html_theme = "shibuya"
 #
 html_theme_options = {
     "github_url": "https://github.com/jiahaoli57/finol",
+    "nav_links": [
+        {"title": "Ask GPT-4o", "url": "https://docsbot.ai/chat/yXPhXS1d2dkpcN1wITvD/yJzHla8z2KfIinBnqpzV"},
+    ]
 }
+
 html_favicon = "../images/finol_logo_icon.png"
 html_logo = "../images/finol_logo_pure.png"
 
