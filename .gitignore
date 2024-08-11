@@ -1,6 +1,6 @@
 /build
 /dist
 /docs/build/
-/finol/logdir
 /FinOL.egg-info
-/logdir
+/finol/logdir/
+/finol/data/
