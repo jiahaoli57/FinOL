@@ -46,10 +46,10 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
-    "sphinx.ext.githubpages",
+    # "sphinx.ext.githubpages",
     # "recommonmark",
     # "sphinx_markdown_tables",
-    "sphinx_rtd_theme",
+    # "sphinx_rtd_theme",
     "sphinx_copybutton",
     # "sphinx-jsonschema",
     "sphinxemoji.sphinxemoji",
@@ -81,7 +81,7 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 # import sphinx_rtd_theme
-# html_theme = "sphinx_rtd_theme"  # 'alabaster'
+# html_theme = "sphinx_rtd_theme"  # "alabaster"
 html_theme = "shibuya"
 # html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
@@ -125,7 +125,6 @@ autodoc_default_options = {
 }
 # autodoc_mock_imports = ["finol"]
 autosummary_imported_members = True
-
 
 # sphinx_copybutton option to not copy prompt.
 copybutton_prompt_text = "$ "
