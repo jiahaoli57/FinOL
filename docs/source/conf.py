@@ -91,13 +91,6 @@ html_theme = "shibuya"
 # documentation.
 #
 html_theme_options = {
-    "logo_only": True,
-    "includehidden": False,
-    "display_version": False,
-    "navigation_with_keys": True,
-    "collapse_navigation": False,
-    "navigation_depth": -1,
-    "titles_only": False,
     "github_url": "https://github.com/jiahaoli57/finol",
 }
 html_favicon = "../images/finol_logo_icon.png"
