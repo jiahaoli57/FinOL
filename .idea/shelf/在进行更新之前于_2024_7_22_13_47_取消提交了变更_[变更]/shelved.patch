@@ -1,0 +1,812 @@
+Index: docs/build/html/_static/basic.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\r\n * basic.css\r\n * ~~~~~~~~~\r\n *\r\n * Sphinx stylesheet -- basic theme.\r\n *\r\n * :copyright: Copyright 2007-2024 by the Sphinx team, see AUTHORS.\r\n * :license: BSD, see LICENSE for details.\r\n *\r\n */\r\n\r\n/* -- main layout ----------------------------------------------------------- */\r\n\r\ndiv.clearer {\r\n    clear: both;\r\n}\r\n\r\ndiv.section::after {\r\n    display: block;\r\n    content: '';\r\n    clear: left;\r\n}\r\n\r\n/* -- relbar ---------------------------------------------------------------- */\r\n\r\ndiv.related {\r\n    width: 100%;\r\n    font-size: 90%;\r\n}\r\n\r\ndiv.related h3 {\r\n    display: none;\r\n}\r\n\r\ndiv.related ul {\r\n    margin: 0;\r\n    padding: 0 0 0 10px;\r\n    list-style: none;\r\n}\r\n\r\ndiv.related li {\r\n    display: inline;\r\n}\r\n\r\ndiv.related li.right {\r\n    float: right;\r\n    margin-right: 5px;\r\n}\r\n\r\n/* -- sidebar --------------------------------------------------------------- */\r\n\r\ndiv.sphinxsidebarwrapper {\r\n    padding: 10px 5px 0 10px;\r\n}\r\n\r\ndiv.sphinxsidebar {\r\n    float: left;\r\n    width: 230px;\r\n    margin-left: -100%;\r\n    font-size: 90%;\r\n    word-wrap: break-word;\r\n    overflow-wrap : break-word;\r\n}\r\n\r\ndiv.sphinxsidebar ul {\r\n    list-style: none;\r\n}\r\n\r\ndiv.sphinxsidebar ul ul,\r\ndiv.sphinxsidebar ul.want-points {\r\n    margin-left: 20px;\r\n    list-style: square;\r\n}\r\n\r\ndiv.sphinxsidebar ul ul {\r\n    margin-top: 0;\r\n    margin-bottom: 0;\r\n}\r\n\r\ndiv.sphinxsidebar form {\r\n    margin-top: 10px;\r\n}\r\n\r\ndiv.sphinxsidebar input {\r\n    border: 1px solid #98dbcc;\r\n    font-family: sans-serif;\r\n    font-size: 1em;\r\n}\r\n\r\ndiv.sphinxsidebar #searchbox form.search {\r\n    overflow: hidden;\r\n}\r\n\r\ndiv.sphinxsidebar #searchbox input[type=\"text\"] {\r\n    float: left;\r\n    width: 80%;\r\n    padding: 0.25em;\r\n    box-sizing: border-box;\r\n}\r\n\r\ndiv.sphinxsidebar #searchbox input[type=\"submit\"] {\r\n    float: left;\r\n    width: 20%;\r\n    border-left: none;\r\n    padding: 0.25em;\r\n    box-sizing: border-box;\r\n}\r\n\r\n\r\nimg {\r\n    border: 0;\r\n    max-width: 100%;\r\n}\r\n\r\n/* -- search page ----------------------------------------------------------- */\r\n\r\nul.search {\r\n    margin: 10px 0 0 20px;\r\n    padding: 0;\r\n}\r\n\r\nul.search li {\r\n    padding: 5px 0 5px 20px;\r\n    background-image: url(file.png);\r\n    background-repeat: no-repeat;\r\n    background-position: 0 7px;\r\n}\r\n\r\nul.search li a {\r\n    font-weight: bold;\r\n}\r\n\r\nul.search li p.context {\r\n    color: #888;\r\n    margin: 2px 0 0 30px;\r\n    text-align: left;\r\n}\r\n\r\nul.keywordmatches li.goodmatch a {\r\n    font-weight: bold;\r\n}\r\n\r\n/* -- index page ------------------------------------------------------------ */\r\n\r\ntable.contentstable {\r\n    width: 90%;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\ntable.contentstable p.biglink {\r\n    line-height: 150%;\r\n}\r\n\r\na.biglink {\r\n    font-size: 1.3em;\r\n}\r\n\r\nspan.linkdescr {\r\n    font-style: italic;\r\n    padding-top: 5px;\r\n    font-size: 90%;\r\n}\r\n\r\n/* -- general index --------------------------------------------------------- */\r\n\r\ntable.indextable {\r\n    width: 100%;\r\n}\r\n\r\ntable.indextable td {\r\n    text-align: left;\r\n    vertical-align: top;\r\n}\r\n\r\ntable.indextable ul {\r\n    margin-top: 0;\r\n    margin-bottom: 0;\r\n    list-style-type: none;\r\n}\r\n\r\ntable.indextable > tbody > tr > td > ul {\r\n    padding-left: 0em;\r\n}\r\n\r\ntable.indextable tr.pcap {\r\n    height: 10px;\r\n}\r\n\r\ntable.indextable tr.cap {\r\n    margin-top: 10px;\r\n    background-color: #f2f2f2;\r\n}\r\n\r\nimg.toggler {\r\n    margin-right: 3px;\r\n    margin-top: 3px;\r\n    cursor: pointer;\r\n}\r\n\r\ndiv.modindex-jumpbox {\r\n    border-top: 1px solid #ddd;\r\n    border-bottom: 1px solid #ddd;\r\n    margin: 1em 0 1em 0;\r\n    padding: 0.4em;\r\n}\r\n\r\ndiv.genindex-jumpbox {\r\n    border-top: 1px solid #ddd;\r\n    border-bottom: 1px solid #ddd;\r\n    margin: 1em 0 1em 0;\r\n    padding: 0.4em;\r\n}\r\n\r\n/* -- domain module index --------------------------------------------------- */\r\n\r\ntable.modindextable td {\r\n    padding: 2px;\r\n    border-collapse: collapse;\r\n}\r\n\r\n/* -- general body styles --------------------------------------------------- */\r\n\r\ndiv.body {\r\n    min-width: inherit;\r\n    max-width: 800px;\r\n}\r\n\r\ndiv.body p, div.body dd, div.body li, div.body blockquote {\r\n    -moz-hyphens: auto;\r\n    -ms-hyphens: auto;\r\n    -webkit-hyphens: auto;\r\n    hyphens: auto;\r\n}\r\n\r\na.headerlink {\r\n    visibility: hidden;\r\n}\r\n\r\na:visited {\r\n    color: #551A8B;\r\n}\r\n\r\nh1:hover > a.headerlink,\r\nh2:hover > a.headerlink,\r\nh3:hover > a.headerlink,\r\nh4:hover > a.headerlink,\r\nh5:hover > a.headerlink,\r\nh6:hover > a.headerlink,\r\ndt:hover > a.headerlink,\r\ncaption:hover > a.headerlink,\r\np.caption:hover > a.headerlink,\r\ndiv.code-block-caption:hover > a.headerlink {\r\n    visibility: visible;\r\n}\r\n\r\ndiv.body p.caption {\r\n    text-align: inherit;\r\n}\r\n\r\ndiv.body td {\r\n    text-align: left;\r\n}\r\n\r\n.first {\r\n    margin-top: 0 !important;\r\n}\r\n\r\np.rubric {\r\n    margin-top: 30px;\r\n    font-weight: bold;\r\n}\r\n\r\nimg.align-left, figure.align-left, .figure.align-left, object.align-left {\r\n    clear: left;\r\n    float: left;\r\n    margin-right: 1em;\r\n}\r\n\r\nimg.align-right, figure.align-right, .figure.align-right, object.align-right {\r\n    clear: right;\r\n    float: right;\r\n    margin-left: 1em;\r\n}\r\n\r\nimg.align-center, figure.align-center, .figure.align-center, object.align-center {\r\n  display: block;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n}\r\n\r\nimg.align-default, figure.align-default, .figure.align-default {\r\n  display: block;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n}\r\n\r\n.align-left {\r\n    text-align: left;\r\n}\r\n\r\n.align-center {\r\n    text-align: center;\r\n}\r\n\r\n.align-default {\r\n    text-align: center;\r\n}\r\n\r\n.align-right {\r\n    text-align: right;\r\n}\r\n\r\n/* -- sidebars -------------------------------------------------------------- */\r\n\r\ndiv.sidebar,\r\naside.sidebar {\r\n    margin: 0 0 0.5em 1em;\r\n    border: 1px solid #ddb;\r\n    padding: 7px;\r\n    background-color: #ffe;\r\n    width: 40%;\r\n    float: right;\r\n    clear: right;\r\n    overflow-x: auto;\r\n}\r\n\r\np.sidebar-title {\r\n    font-weight: bold;\r\n}\r\n\r\nnav.contents,\r\naside.topic,\r\ndiv.admonition, div.topic, blockquote {\r\n    clear: left;\r\n}\r\n\r\n/* -- topics ---------------------------------------------------------------- */\r\n\r\nnav.contents,\r\naside.topic,\r\ndiv.topic {\r\n    border: 1px solid #ccc;\r\n    padding: 7px;\r\n    margin: 10px 0 10px 0;\r\n}\r\n\r\np.topic-title {\r\n    font-size: 1.1em;\r\n    font-weight: bold;\r\n    margin-top: 10px;\r\n}\r\n\r\n/* -- admonitions ----------------------------------------------------------- */\r\n\r\ndiv.admonition {\r\n    margin-top: 10px;\r\n    margin-bottom: 10px;\r\n    padding: 7px;\r\n}\r\n\r\ndiv.admonition dt {\r\n    font-weight: bold;\r\n}\r\n\r\np.admonition-title {\r\n    margin: 0px 10px 5px 0px;\r\n    font-weight: bold;\r\n}\r\n\r\ndiv.body p.centered {\r\n    text-align: center;\r\n    margin-top: 25px;\r\n}\r\n\r\n/* -- content of sidebars/topics/admonitions -------------------------------- */\r\n\r\ndiv.sidebar > :last-child,\r\naside.sidebar > :last-child,\r\nnav.contents > :last-child,\r\naside.topic > :last-child,\r\ndiv.topic > :last-child,\r\ndiv.admonition > :last-child {\r\n    margin-bottom: 0;\r\n}\r\n\r\ndiv.sidebar::after,\r\naside.sidebar::after,\r\nnav.contents::after,\r\naside.topic::after,\r\ndiv.topic::after,\r\ndiv.admonition::after,\r\nblockquote::after {\r\n    display: block;\r\n    content: '';\r\n    clear: both;\r\n}\r\n\r\n/* -- tables ---------------------------------------------------------------- */\r\n\r\ntable.docutils {\r\n    margin-top: 10px;\r\n    margin-bottom: 10px;\r\n    border: 0;\r\n    border-collapse: collapse;\r\n}\r\n\r\ntable.align-center {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\ntable.align-default {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\ntable caption span.caption-number {\r\n    font-style: italic;\r\n}\r\n\r\ntable caption span.caption-text {\r\n}\r\n\r\ntable.docutils td, table.docutils th {\r\n    padding: 1px 8px 1px 5px;\r\n    border-top: 0;\r\n    border-left: 0;\r\n    border-right: 0;\r\n    border-bottom: 1px solid #aaa;\r\n}\r\n\r\nth {\r\n    text-align: left;\r\n    padding-right: 5px;\r\n}\r\n\r\ntable.citation {\r\n    border-left: solid 1px gray;\r\n    margin-left: 1px;\r\n}\r\n\r\ntable.citation td {\r\n    border-bottom: none;\r\n}\r\n\r\nth > :first-child,\r\ntd > :first-child {\r\n    margin-top: 0px;\r\n}\r\n\r\nth > :last-child,\r\ntd > :last-child {\r\n    margin-bottom: 0px;\r\n}\r\n\r\n/* -- figures --------------------------------------------------------------- */\r\n\r\ndiv.figure, figure {\r\n    margin: 0.5em;\r\n    padding: 0.5em;\r\n}\r\n\r\ndiv.figure p.caption, figcaption {\r\n    padding: 0.3em;\r\n}\r\n\r\ndiv.figure p.caption span.caption-number,\r\nfigcaption span.caption-number {\r\n    font-style: italic;\r\n}\r\n\r\ndiv.figure p.caption span.caption-text,\r\nfigcaption span.caption-text {\r\n}\r\n\r\n/* -- field list styles ----------------------------------------------------- */\r\n\r\ntable.field-list td, table.field-list th {\r\n    border: 0 !important;\r\n}\r\n\r\n.field-list ul {\r\n    margin: 0;\r\n    padding-left: 1em;\r\n}\r\n\r\n.field-list p {\r\n    margin: 0;\r\n}\r\n\r\n.field-name {\r\n    -moz-hyphens: manual;\r\n    -ms-hyphens: manual;\r\n    -webkit-hyphens: manual;\r\n    hyphens: manual;\r\n}\r\n\r\n/* -- hlist styles ---------------------------------------------------------- */\r\n\r\ntable.hlist {\r\n    margin: 1em 0;\r\n}\r\n\r\ntable.hlist td {\r\n    vertical-align: top;\r\n}\r\n\r\n/* -- object description styles --------------------------------------------- */\r\n\r\n.sig {\r\n\tfont-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;\r\n}\r\n\r\n.sig-name, code.descname {\r\n    background-color: transparent;\r\n    font-weight: bold;\r\n}\r\n\r\n.sig-name {\r\n\tfont-size: 1.1em;\r\n}\r\n\r\ncode.descname {\r\n    font-size: 1.2em;\r\n}\r\n\r\n.sig-prename, code.descclassname {\r\n    background-color: transparent;\r\n}\r\n\r\n.optional {\r\n    font-size: 1.3em;\r\n}\r\n\r\n.sig-paren {\r\n    font-size: larger;\r\n}\r\n\r\n.sig-param.n {\r\n\tfont-style: italic;\r\n}\r\n\r\n/* C++ specific styling */\r\n\r\n.sig-inline.c-texpr,\r\n.sig-inline.cpp-texpr {\r\n\tfont-family: unset;\r\n}\r\n\r\n.sig.c   .k, .sig.c   .kt,\r\n.sig.cpp .k, .sig.cpp .kt {\r\n\tcolor: #0033B3;\r\n}\r\n\r\n.sig.c   .m,\r\n.sig.cpp .m {\r\n\tcolor: #1750EB;\r\n}\r\n\r\n.sig.c   .s, .sig.c   .sc,\r\n.sig.cpp .s, .sig.cpp .sc {\r\n\tcolor: #067D17;\r\n}\r\n\r\n\r\n/* -- other body styles ----------------------------------------------------- */\r\n\r\nol.arabic {\r\n    list-style: decimal;\r\n}\r\n\r\nol.loweralpha {\r\n    list-style: lower-alpha;\r\n}\r\n\r\nol.upperalpha {\r\n    list-style: upper-alpha;\r\n}\r\n\r\nol.lowerroman {\r\n    list-style: lower-roman;\r\n}\r\n\r\nol.upperroman {\r\n    list-style: upper-roman;\r\n}\r\n\r\n:not(li) > ol > li:first-child > :first-child,\r\n:not(li) > ul > li:first-child > :first-child {\r\n    margin-top: 0px;\r\n}\r\n\r\n:not(li) > ol > li:last-child > :last-child,\r\n:not(li) > ul > li:last-child > :last-child {\r\n    margin-bottom: 0px;\r\n}\r\n\r\nol.simple ol p,\r\nol.simple ul p,\r\nul.simple ol p,\r\nul.simple ul p {\r\n    margin-top: 0;\r\n}\r\n\r\nol.simple > li:not(:first-child) > p,\r\nul.simple > li:not(:first-child) > p {\r\n    margin-top: 0;\r\n}\r\n\r\nol.simple p,\r\nul.simple p {\r\n    margin-bottom: 0;\r\n}\r\n\r\naside.footnote > span,\r\ndiv.citation > span {\r\n    float: left;\r\n}\r\naside.footnote > span:last-of-type,\r\ndiv.citation > span:last-of-type {\r\n  padding-right: 0.5em;\r\n}\r\naside.footnote > p {\r\n  margin-left: 2em;\r\n}\r\ndiv.citation > p {\r\n  margin-left: 4em;\r\n}\r\naside.footnote > p:last-of-type,\r\ndiv.citation > p:last-of-type {\r\n    margin-bottom: 0em;\r\n}\r\naside.footnote > p:last-of-type:after,\r\ndiv.citation > p:last-of-type:after {\r\n    content: \"\";\r\n    clear: both;\r\n}\r\n\r\ndl.field-list {\r\n    display: grid;\r\n    grid-template-columns: fit-content(30%) auto;\r\n}\r\n\r\ndl.field-list > dt {\r\n    font-weight: bold;\r\n    word-break: break-word;\r\n    padding-left: 0.5em;\r\n    padding-right: 5px;\r\n}\r\n\r\ndl.field-list > dd {\r\n    padding-left: 0.5em;\r\n    margin-top: 0em;\r\n    margin-left: 0em;\r\n    margin-bottom: 0em;\r\n}\r\n\r\ndl {\r\n    margin-bottom: 15px;\r\n}\r\n\r\ndd > :first-child {\r\n    margin-top: 0px;\r\n}\r\n\r\ndd ul, dd table {\r\n    margin-bottom: 10px;\r\n}\r\n\r\ndd {\r\n    margin-top: 3px;\r\n    margin-bottom: 10px;\r\n    margin-left: 30px;\r\n}\r\n\r\n.sig dd {\r\n    margin-top: 0px;\r\n    margin-bottom: 0px;\r\n}\r\n\r\n.sig dl {\r\n    margin-top: 0px;\r\n    margin-bottom: 0px;\r\n}\r\n\r\ndl > dd:last-child,\r\ndl > dd:last-child > :last-child {\r\n    margin-bottom: 0;\r\n}\r\n\r\ndt:target, span.highlighted {\r\n    background-color: #fbe54e;\r\n}\r\n\r\nrect.highlighted {\r\n    fill: #fbe54e;\r\n}\r\n\r\ndl.glossary dt {\r\n    font-weight: bold;\r\n    font-size: 1.1em;\r\n}\r\n\r\n.versionmodified {\r\n    font-style: italic;\r\n}\r\n\r\n.system-message {\r\n    background-color: #fda;\r\n    padding: 5px;\r\n    border: 3px solid red;\r\n}\r\n\r\n.footnote:target  {\r\n    background-color: #ffa;\r\n}\r\n\r\n.line-block {\r\n    display: block;\r\n    margin-top: 1em;\r\n    margin-bottom: 1em;\r\n}\r\n\r\n.line-block .line-block {\r\n    margin-top: 0;\r\n    margin-bottom: 0;\r\n    margin-left: 1.5em;\r\n}\r\n\r\n.guilabel, .menuselection {\r\n    font-family: sans-serif;\r\n}\r\n\r\n.accelerator {\r\n    text-decoration: underline;\r\n}\r\n\r\n.classifier {\r\n    font-style: oblique;\r\n}\r\n\r\n.classifier:before {\r\n    font-style: normal;\r\n    margin: 0 0.5em;\r\n    content: \":\";\r\n    display: inline-block;\r\n}\r\n\r\nabbr, acronym {\r\n    border-bottom: dotted 1px;\r\n    cursor: help;\r\n}\r\n\r\n.translated {\r\n    background-color: rgba(207, 255, 207, 0.2)\r\n}\r\n\r\n.untranslated {\r\n    background-color: rgba(255, 207, 207, 0.2)\r\n}\r\n\r\n/* -- code displays --------------------------------------------------------- */\r\n\r\npre {\r\n    overflow: auto;\r\n    overflow-y: hidden;  /* fixes display issues on Chrome browsers */\r\n}\r\n\r\npre, div[class*=\"highlight-\"] {\r\n    clear: both;\r\n}\r\n\r\nspan.pre {\r\n    -moz-hyphens: none;\r\n    -ms-hyphens: none;\r\n    -webkit-hyphens: none;\r\n    hyphens: none;\r\n    white-space: nowrap;\r\n}\r\n\r\ndiv[class*=\"highlight-\"] {\r\n    margin: 1em 0;\r\n}\r\n\r\ntd.linenos pre {\r\n    border: 0;\r\n    background-color: transparent;\r\n    color: #aaa;\r\n}\r\n\r\ntable.highlighttable {\r\n    display: block;\r\n}\r\n\r\ntable.highlighttable tbody {\r\n    display: block;\r\n}\r\n\r\ntable.highlighttable tr {\r\n    display: flex;\r\n}\r\n\r\ntable.highlighttable td {\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\ntable.highlighttable td.linenos {\r\n    padding-right: 0.5em;\r\n}\r\n\r\ntable.highlighttable td.code {\r\n    flex: 1;\r\n    overflow: hidden;\r\n}\r\n\r\n.highlight .hll {\r\n    display: block;\r\n}\r\n\r\ndiv.highlight pre,\r\ntable.highlighttable pre {\r\n    margin: 0;\r\n}\r\n\r\ndiv.code-block-caption + div {\r\n    margin-top: 0;\r\n}\r\n\r\ndiv.code-block-caption {\r\n    margin-top: 1em;\r\n    padding: 2px 5px;\r\n    font-size: small;\r\n}\r\n\r\ndiv.code-block-caption code {\r\n    background-color: transparent;\r\n}\r\n\r\ntable.highlighttable td.linenos,\r\nspan.linenos,\r\ndiv.highlight span.gp {  /* gp: Generic.Prompt */\r\n  user-select: none;\r\n  -webkit-user-select: text; /* Safari fallback only */\r\n  -webkit-user-select: none; /* Chrome/Safari */\r\n  -moz-user-select: none; /* Firefox */\r\n  -ms-user-select: none; /* IE10+ */\r\n}\r\n\r\ndiv.code-block-caption span.caption-number {\r\n    padding: 0.1em 0.3em;\r\n    font-style: italic;\r\n}\r\n\r\ndiv.code-block-caption span.caption-text {\r\n}\r\n\r\ndiv.literal-block-wrapper {\r\n    margin: 1em 0;\r\n}\r\n\r\ncode.xref, a code {\r\n    background-color: transparent;\r\n    font-weight: bold;\r\n}\r\n\r\nh1 code, h2 code, h3 code, h4 code, h5 code, h6 code {\r\n    background-color: transparent;\r\n}\r\n\r\n.viewcode-link {\r\n    float: right;\r\n}\r\n\r\n.viewcode-back {\r\n    float: right;\r\n    font-family: sans-serif;\r\n}\r\n\r\ndiv.viewcode-block:target {\r\n    margin: -1px -10px;\r\n    padding: 0 10px;\r\n}\r\n\r\n/* -- math display ---------------------------------------------------------- */\r\n\r\nimg.math {\r\n    vertical-align: middle;\r\n}\r\n\r\ndiv.body div.math p {\r\n    text-align: center;\r\n}\r\n\r\nspan.eqno {\r\n    float: right;\r\n}\r\n\r\nspan.eqno a.headerlink {\r\n    position: absolute;\r\n    z-index: 1;\r\n}\r\n\r\ndiv.math:hover a.headerlink {\r\n    visibility: visible;\r\n}\r\n\r\n/* -- printout stylesheet --------------------------------------------------- */\r\n\r\n@media print {\r\n    div.document,\r\n    div.documentwrapper,\r\n    div.bodywrapper {\r\n        margin: 0 !important;\r\n        width: 100%;\r\n    }\r\n\r\n    div.sphinxsidebar,\r\n    div.related,\r\n    div.footer,\r\n    #top-link {\r\n        display: none;\r\n    }\r\n}
+===================================================================
+diff --git a/docs/build/html/_static/basic.css b/docs/build/html/_static/basic.css
+--- a/docs/build/html/_static/basic.css	
++++ b/docs/build/html/_static/basic.css	
+@@ -222,7 +222,7 @@
+ /* -- general body styles --------------------------------------------------- */
+ 
+ div.body {
+-    min-width: inherit;
++    min-width: 360px;
+     max-width: 800px;
+ }
+ 
+Index: docs/build/html/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n\r\n<html lang=\"en\" data-content_root=\"./\">\r\n  <head>\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" /><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\r\n\r\n    <title>FinOL documentation &#8212; FinOL MIT documentation</title>\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"_static/pygments.css?v=d1102ebc\" />\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"_static/alabaster.css?v=12dfc556\" />\r\n    <script src=\"_static/documentation_options.js?v=7ea25c81\"></script>\r\n    <script src=\"_static/doctools.js?v=9a2dae69\"></script>\r\n    <script src=\"_static/sphinx_highlight.js?v=dc90522c\"></script>\r\n    <link rel=\"index\" title=\"Index\" href=\"genindex.html\" />\r\n    <link rel=\"search\" title=\"Search\" href=\"search.html\" />\r\n   \r\n  <link rel=\"stylesheet\" href=\"_static/custom.css\" type=\"text/css\" />\r\n  \r\n\r\n  \r\n  \r\n\r\n  </head><body>\r\n  \r\n\r\n    <div class=\"document\">\r\n      <div class=\"documentwrapper\">\r\n        <div class=\"bodywrapper\">\r\n          \r\n\r\n          <div class=\"body\" role=\"main\">\r\n            \r\n  <section id=\"finol-documentation\">\r\n<h1>FinOL documentation<a class=\"headerlink\" href=\"#finol-documentation\" title=\"Link to this heading\">¶</a></h1>\r\n<p>Add your content using <code class=\"docutils literal notranslate\"><span class=\"pre\">reStructuredText</span></code> syntax. See the\r\n<a class=\"reference external\" href=\"https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html\">reStructuredText</a>\r\ndocumentation for details.</p>\r\n<div class=\"toctree-wrapper compound\">\r\n</div>\r\n</section>\r\n\r\n\r\n          </div>\r\n          \r\n        </div>\r\n      </div>\r\n      <div class=\"sphinxsidebar\" role=\"navigation\" aria-label=\"Main\">\r\n        <div class=\"sphinxsidebarwrapper\">\r\n<h1 class=\"logo\"><a href=\"#\">FinOL</a></h1>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<h3>Navigation</h3>\r\n\r\n<div class=\"relations\">\r\n<h3>Related Topics</h3>\r\n<ul>\r\n  <li><a href=\"#\">Documentation overview</a><ul>\r\n  </ul></li>\r\n</ul>\r\n</div>\r\n<search id=\"searchbox\" style=\"display: none\" role=\"search\">\r\n  <h3 id=\"searchlabel\">Quick search</h3>\r\n    <div class=\"searchformwrapper\">\r\n    <form class=\"search\" action=\"search.html\" method=\"get\">\r\n      <input type=\"text\" name=\"q\" aria-labelledby=\"searchlabel\" autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\" spellcheck=\"false\"/>\r\n      <input type=\"submit\" value=\"Go\" />\r\n    </form>\r\n    </div>\r\n</search>\r\n<script>document.getElementById('searchbox').style.display = \"block\"</script>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n        </div>\r\n      </div>\r\n      <div class=\"clearer\"></div>\r\n    </div>\r\n    <div class=\"footer\">\r\n      &#169;2024, FinOL contributors.\r\n      \r\n      |\r\n      Powered by <a href=\"https://www.sphinx-doc.org/\">Sphinx 7.4.7</a>\r\n      &amp; <a href=\"https://alabaster.readthedocs.io\">Alabaster 0.7.16</a>\r\n      \r\n      |\r\n      <a href=\"_sources/index.rst.txt\"\r\n          rel=\"nofollow\">Page source</a>\r\n    </div>\r\n\r\n    \r\n\r\n    \r\n  </body>\r\n</html>
+===================================================================
+diff --git a/docs/build/html/index.html b/docs/build/html/index.html
+--- a/docs/build/html/index.html	
++++ b/docs/build/html/index.html	
+@@ -1,35 +1,74 @@
+ <!DOCTYPE html>
+-
+-<html lang="en" data-content_root="./">
+-  <head>
+-    <meta charset="utf-8" />
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
++<html class="writer-html5" lang="en" data-content_root="./">
++<head>
++  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
++
++  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++  <title>FinOL documentation &mdash; FinOL MIT documentation</title>
++      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
++      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+ 
+-    <title>FinOL documentation &#8212; FinOL MIT documentation</title>
+-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+-    <script src="_static/documentation_options.js?v=7ea25c81"></script>
+-    <script src="_static/doctools.js?v=9a2dae69"></script>
+-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
++  
++  <!--[if lt IE 9]>
++    <script src="_static/js/html5shiv.min.js"></script>
++  <![endif]-->
++  
++        <script src="_static/documentation_options.js?v=7ea25c81"></script>
++        <script src="_static/doctools.js?v=9a2dae69"></script>
++        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
++    <script src="_static/js/theme.js"></script>
+     <link rel="index" title="Index" href="genindex.html" />
+-    <link rel="search" title="Search" href="search.html" />
+-   
+-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+-  
+-
+-  
+-  
++    <link rel="search" title="Search" href="search.html" /> 
++</head>
++
++<body class="wy-body-for-nav"> 
++  <div class="wy-grid-for-nav">
++    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
++      <div class="wy-side-scroll">
++        <div class="wy-side-nav-search" >
++
++          
++          
++          <a href="#" class="icon icon-home">
++            FinOL
++          </a>
++<div role="search">
++  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
++    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
++    <input type="hidden" name="check_keywords" value="yes" />
++    <input type="hidden" name="area" value="default" />
++  </form>
++</div>
++        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
++              <!-- Local TOC -->
++              <div class="local-toc"><ul>
++<li><a class="reference internal" href="#">FinOL documentation</a></li>
++</ul>
++</div>
++        </div>
++      </div>
++    </nav>
++
++    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
++          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
++          <a href="#">FinOL</a>
++      </nav>
+ 
+-  </head><body>
+-  
+-
+-    <div class="document">
+-      <div class="documentwrapper">
+-        <div class="bodywrapper">
+-          
+-
+-          <div class="body" role="main">
+-            
++      <div class="wy-nav-content">
++        <div class="rst-content">
++          <div role="navigation" aria-label="Page navigation">
++  <ul class="wy-breadcrumbs">
++      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
++      <li class="breadcrumb-item active">FinOL documentation</li>
++      <li class="wy-breadcrumbs-aside">
++            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
++      </li>
++  </ul>
++  <hr/>
++</div>
++          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
++           <div itemprop="articleBody">
++             
+   <section id="finol-documentation">
+ <h1>FinOL documentation<a class="headerlink" href="#finol-documentation" title="Link to this heading">¶</a></h1>
+ <p>Add your content using <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> syntax. See the
+@@ -40,66 +79,31 @@
+ </section>
+ 
+ 
+-          </div>
+-          
+-        </div>
+-      </div>
+-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+-        <div class="sphinxsidebarwrapper">
+-<h1 class="logo"><a href="#">FinOL</a></h1>
+-
+-
+-
+-
++           </div>
++          </div>
++          <footer>
++
++  <hr/>
++
++  <div role="contentinfo">
++    <p>&#169; Copyright 2024, FinOL contributors.</p>
++  </div>
+ 
+-
++  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
++    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
++    provided by <a href="https://readthedocs.org">Read the Docs</a>.
++   
+ 
+-
+-<h3>Navigation</h3>
+-
+-<div class="relations">
+-<h3>Related Topics</h3>
+-<ul>
+-  <li><a href="#">Documentation overview</a><ul>
+-  </ul></li>
+-</ul>
+-</div>
+-<search id="searchbox" style="display: none" role="search">
+-  <h3 id="searchlabel">Quick search</h3>
+-    <div class="searchformwrapper">
+-    <form class="search" action="search.html" method="get">
+-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+-      <input type="submit" value="Go" />
+-    </form>
+-    </div>
+-</search>
+-<script>document.getElementById('searchbox').style.display = "block"</script>
+-
+-
+-
+-
+-
+-
+-
+-
++</footer>
+         </div>
+       </div>
+-      <div class="clearer"></div>
+-    </div>
+-    <div class="footer">
+-      &#169;2024, FinOL contributors.
+-      
+-      |
+-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+-      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+-      
+-      |
+-      <a href="_sources/index.rst.txt"
+-          rel="nofollow">Page source</a>
+-    </div>
++    </section>
++  </div>
++  <script>
++      jQuery(function () {
++          SphinxRtdTheme.Navigation.enable(true);
++      });
++  </script> 
+ 
+-    
+-
+-    
+-  </body>
++</body>
+ </html>
+\ No newline at end of file
+Index: docs/build/html/search.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n\r\n<html lang=\"en\" data-content_root=\"./\">\r\n  <head>\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>Search &#8212; FinOL MIT documentation</title>\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"_static/pygments.css?v=d1102ebc\" />\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"_static/alabaster.css?v=12dfc556\" />\r\n    \r\n    <script src=\"_static/documentation_options.js?v=7ea25c81\"></script>\r\n    <script src=\"_static/doctools.js?v=9a2dae69\"></script>\r\n    <script src=\"_static/sphinx_highlight.js?v=dc90522c\"></script>\r\n    <script src=\"_static/searchtools.js\"></script>\r\n    <script src=\"_static/language_data.js\"></script>\r\n    <link rel=\"index\" title=\"Index\" href=\"genindex.html\" />\r\n    <link rel=\"search\" title=\"Search\" href=\"#\" />\r\n    <script src=\"searchindex.js\" defer=\"defer\"></script>\r\n    <meta name=\"robots\" content=\"noindex\" />\r\n    \r\n   \r\n  <link rel=\"stylesheet\" href=\"_static/custom.css\" type=\"text/css\" />\r\n  \r\n\r\n  \r\n  \r\n\r\n\r\n  </head><body>\r\n  \r\n\r\n    <div class=\"document\">\r\n      <div class=\"documentwrapper\">\r\n        <div class=\"bodywrapper\">\r\n          \r\n\r\n          <div class=\"body\" role=\"main\">\r\n            \r\n  <h1 id=\"search-documentation\">Search</h1>\r\n  \r\n  <noscript>\r\n  <div class=\"admonition warning\">\r\n  <p>\r\n    Please activate JavaScript to enable the search\r\n    functionality.\r\n  </p>\r\n  </div>\r\n  </noscript>\r\n  \r\n  \r\n  <p>\r\n    Searching for multiple words only shows matches that contain\r\n    all words.\r\n  </p>\r\n  \r\n  \r\n  <form action=\"\" method=\"get\">\r\n    <input type=\"text\" name=\"q\" aria-labelledby=\"search-documentation\" value=\"\" autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\" spellcheck=\"false\"/>\r\n    <input type=\"submit\" value=\"search\" />\r\n    <span id=\"search-progress\" style=\"padding-left: 10px\"></span>\r\n  </form>\r\n  \r\n  \r\n  <div id=\"search-results\"></div>\r\n  \r\n\r\n          </div>\r\n          \r\n        </div>\r\n      </div>\r\n      <div class=\"sphinxsidebar\" role=\"navigation\" aria-label=\"Main\">\r\n        <div class=\"sphinxsidebarwrapper\">\r\n<h1 class=\"logo\"><a href=\"index.html\">FinOL</a></h1>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<h3>Navigation</h3>\r\n\r\n<div class=\"relations\">\r\n<h3>Related Topics</h3>\r\n<ul>\r\n  <li><a href=\"index.html\">Documentation overview</a><ul>\r\n  </ul></li>\r\n</ul>\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n        </div>\r\n      </div>\r\n      <div class=\"clearer\"></div>\r\n    </div>\r\n    <div class=\"footer\">\r\n      &#169;2024, FinOL contributors.\r\n      \r\n      |\r\n      Powered by <a href=\"https://www.sphinx-doc.org/\">Sphinx 7.4.7</a>\r\n      &amp; <a href=\"https://alabaster.readthedocs.io\">Alabaster 0.7.16</a>\r\n      \r\n    </div>\r\n\r\n    \r\n\r\n    \r\n  </body>\r\n</html>
+===================================================================
+diff --git a/docs/build/html/search.html b/docs/build/html/search.html
+--- a/docs/build/html/search.html	
++++ b/docs/build/html/search.html	
+@@ -1,116 +1,117 @@
+ <!DOCTYPE html>
+-
+-<html lang="en" data-content_root="./">
+-  <head>
+-    <meta charset="utf-8" />
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-    <title>Search &#8212; FinOL MIT documentation</title>
+-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
++<html class="writer-html5" lang="en" data-content_root="./">
++<head>
++  <meta charset="utf-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++  <title>Search &mdash; FinOL MIT documentation</title>
++      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
++      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
++
++  
+     
+-    <script src="_static/documentation_options.js?v=7ea25c81"></script>
+-    <script src="_static/doctools.js?v=9a2dae69"></script>
+-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
++  <!--[if lt IE 9]>
++    <script src="_static/js/html5shiv.min.js"></script>
++  <![endif]-->
++  
++        <script src="_static/documentation_options.js?v=7ea25c81"></script>
++        <script src="_static/doctools.js?v=9a2dae69"></script>
++        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
++    <script src="_static/js/theme.js"></script>
+     <script src="_static/searchtools.js"></script>
+     <script src="_static/language_data.js"></script>
+     <link rel="index" title="Index" href="genindex.html" />
+-    <link rel="search" title="Search" href="#" />
+-    <script src="searchindex.js" defer="defer"></script>
+-    <meta name="robots" content="noindex" />
+-    
+-   
+-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+-  
++    <link rel="search" title="Search" href="#" /> 
++</head>
+ 
+-  
+-  
++<body class="wy-body-for-nav"> 
++  <div class="wy-grid-for-nav">
++    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
++      <div class="wy-side-scroll">
++        <div class="wy-side-nav-search" >
+ 
+-
+-  </head><body>
+-  
++          
++          
++          <a href="index.html" class="icon icon-home">
++            FinOL
++          </a>
++<div role="search">
++  <form id="rtd-search-form" class="wy-form" action="#" method="get">
++    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
++    <input type="hidden" name="check_keywords" value="yes" />
++    <input type="hidden" name="area" value="default" />
++  </form>
++</div>
++        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
++              <!-- Local TOC -->
++              <div class="local-toc"></div>
++        </div>
++      </div>
++    </nav>
+ 
+-    <div class="document">
+-      <div class="documentwrapper">
+-        <div class="bodywrapper">
+-          
++    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
++          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
++          <a href="index.html">FinOL</a>
++      </nav>
+ 
+-          <div class="body" role="main">
+-            
+-  <h1 id="search-documentation">Search</h1>
+-  
++      <div class="wy-nav-content">
++        <div class="rst-content">
++          <div role="navigation" aria-label="Page navigation">
++  <ul class="wy-breadcrumbs">
++      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
++      <li class="breadcrumb-item active">Search</li>
++      <li class="wy-breadcrumbs-aside">
++      </li>
++  </ul>
++  <hr/>
++</div>
++          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
++           <div itemprop="articleBody">
++             
+   <noscript>
+-  <div class="admonition warning">
+-  <p>
+-    Please activate JavaScript to enable the search
+-    functionality.
+-  </p>
++  <div id="fallback" class="admonition warning">
++    <p class="last">
++      Please activate JavaScript to enable the search functionality.
++    </p>
+   </div>
+   </noscript>
+-  
++
+   
+-  <p>
+-    Searching for multiple words only shows matches that contain
+-    all words.
+-  </p>
++  <div id="search-results">
+   
+-  
+-  <form action="" method="get">
+-    <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+-    <input type="submit" value="search" />
+-    <span id="search-progress" style="padding-left: 10px"></span>
+-  </form>
+-  
+-  
+-  <div id="search-results"></div>
+-  
+-
+-          </div>
+-          
+-        </div>
+-      </div>
+-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+-        <div class="sphinxsidebarwrapper">
+-<h1 class="logo"><a href="index.html">FinOL</a></h1>
+-
+-
+-
++  </div>
++
++           </div>
++          </div>
++          <footer>
+ 
++  <hr/>
+ 
+-
+-
+-
+-<h3>Navigation</h3>
+-
+-<div class="relations">
+-<h3>Related Topics</h3>
+-<ul>
+-  <li><a href="index.html">Documentation overview</a><ul>
+-  </ul></li>
+-</ul>
+-</div>
++  <div role="contentinfo">
++    <p>&#169; Copyright 2024, FinOL contributors.</p>
++  </div>
+ 
+-
++  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
++    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
++    provided by <a href="https://readthedocs.org">Read the Docs</a>.
++   
+ 
+-
+-
+-
+-
+-
++</footer>
+         </div>
+       </div>
+-      <div class="clearer"></div>
+-    </div>
+-    <div class="footer">
+-      &#169;2024, FinOL contributors.
+-      
+-      |
+-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+-      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+-      
+-    </div>
++    </section>
++  </div>
++  <script>
++      jQuery(function () {
++          SphinxRtdTheme.Navigation.enable(true);
++      });
++  </script>
++  <script>
++    jQuery(function() { Search.loadIndex("searchindex.js"); });
++  </script>
++  
++  <script id="searchindexloader"></script>
++   
+ 
+-    
+ 
+-    
+-  </body>
++</body>
+ </html>
+\ No newline at end of file
+Index: docs/build/html/.buildinfo
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Sphinx build info version 1\r\n# This file hashes the configuration used when building these files. When it is not found, a full rebuild will be done.\r\nconfig: 2cf754e751bd0df1a359e4a3d70abd7a\r\ntags: 645f666f9bcd5a90fca523b33c5a78b7\r\n
+===================================================================
+diff --git a/docs/build/html/.buildinfo b/docs/build/html/.buildinfo
+--- a/docs/build/html/.buildinfo	
++++ b/docs/build/html/.buildinfo	
+@@ -1,4 +1,4 @@
+ # Sphinx build info version 1
+ # This file hashes the configuration used when building these files. When it is not found, a full rebuild will be done.
+-config: 2cf754e751bd0df1a359e4a3d70abd7a
++config: 82e8dffeab1e35c9403a8f11c14a2ecd
+ tags: 645f666f9bcd5a90fca523b33c5a78b7
+Index: docs/build/html/genindex.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n\r\n<html lang=\"en\" data-content_root=\"./\">\r\n  <head>\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>Index &#8212; FinOL MIT documentation</title>\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"_static/pygments.css?v=d1102ebc\" />\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"_static/alabaster.css?v=12dfc556\" />\r\n    <script src=\"_static/documentation_options.js?v=7ea25c81\"></script>\r\n    <script src=\"_static/doctools.js?v=9a2dae69\"></script>\r\n    <script src=\"_static/sphinx_highlight.js?v=dc90522c\"></script>\r\n    <link rel=\"index\" title=\"Index\" href=\"#\" />\r\n    <link rel=\"search\" title=\"Search\" href=\"search.html\" />\r\n   \r\n  <link rel=\"stylesheet\" href=\"_static/custom.css\" type=\"text/css\" />\r\n  \r\n\r\n  \r\n  \r\n\r\n  </head><body>\r\n  \r\n\r\n    <div class=\"document\">\r\n      <div class=\"documentwrapper\">\r\n        <div class=\"bodywrapper\">\r\n          \r\n\r\n          <div class=\"body\" role=\"main\">\r\n            \r\n\r\n<h1 id=\"index\">Index</h1>\r\n\r\n<div class=\"genindex-jumpbox\">\r\n \r\n</div>\r\n\r\n\r\n          </div>\r\n          \r\n        </div>\r\n      </div>\r\n      <div class=\"sphinxsidebar\" role=\"navigation\" aria-label=\"Main\">\r\n        <div class=\"sphinxsidebarwrapper\">\r\n<h1 class=\"logo\"><a href=\"index.html\">FinOL</a></h1>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<h3>Navigation</h3>\r\n\r\n<div class=\"relations\">\r\n<h3>Related Topics</h3>\r\n<ul>\r\n  <li><a href=\"index.html\">Documentation overview</a><ul>\r\n  </ul></li>\r\n</ul>\r\n</div>\r\n<search id=\"searchbox\" style=\"display: none\" role=\"search\">\r\n  <h3 id=\"searchlabel\">Quick search</h3>\r\n    <div class=\"searchformwrapper\">\r\n    <form class=\"search\" action=\"search.html\" method=\"get\">\r\n      <input type=\"text\" name=\"q\" aria-labelledby=\"searchlabel\" autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\" spellcheck=\"false\"/>\r\n      <input type=\"submit\" value=\"Go\" />\r\n    </form>\r\n    </div>\r\n</search>\r\n<script>document.getElementById('searchbox').style.display = \"block\"</script>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n        </div>\r\n      </div>\r\n      <div class=\"clearer\"></div>\r\n    </div>\r\n    <div class=\"footer\">\r\n      &#169;2024, FinOL contributors.\r\n      \r\n      |\r\n      Powered by <a href=\"https://www.sphinx-doc.org/\">Sphinx 7.4.7</a>\r\n      &amp; <a href=\"https://alabaster.readthedocs.io\">Alabaster 0.7.16</a>\r\n      \r\n    </div>\r\n\r\n    \r\n\r\n    \r\n  </body>\r\n</html>
+===================================================================
+diff --git a/docs/build/html/genindex.html b/docs/build/html/genindex.html
+--- a/docs/build/html/genindex.html	
++++ b/docs/build/html/genindex.html	
+@@ -1,99 +1,102 @@
+ <!DOCTYPE html>
+-
+-<html lang="en" data-content_root="./">
+-  <head>
+-    <meta charset="utf-8" />
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-    <title>Index &#8212; FinOL MIT documentation</title>
+-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+-    <script src="_static/documentation_options.js?v=7ea25c81"></script>
+-    <script src="_static/doctools.js?v=9a2dae69"></script>
+-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
++<html class="writer-html5" lang="en" data-content_root="./">
++<head>
++  <meta charset="utf-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++  <title>Index &mdash; FinOL MIT documentation</title>
++      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
++      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
++
++  
++  <!--[if lt IE 9]>
++    <script src="_static/js/html5shiv.min.js"></script>
++  <![endif]-->
++  
++        <script src="_static/documentation_options.js?v=7ea25c81"></script>
++        <script src="_static/doctools.js?v=9a2dae69"></script>
++        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
++    <script src="_static/js/theme.js"></script>
+     <link rel="index" title="Index" href="#" />
+-    <link rel="search" title="Search" href="search.html" />
+-   
+-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+-  
+-
+-  
+-  
+-
+-  </head><body>
+-  
+-
+-    <div class="document">
+-      <div class="documentwrapper">
+-        <div class="bodywrapper">
+-          
+-
+-          <div class="body" role="main">
+-            
+-
+-<h1 id="index">Index</h1>
+-
+-<div class="genindex-jumpbox">
+- 
++    <link rel="search" title="Search" href="search.html" /> 
++</head>
++
++<body class="wy-body-for-nav"> 
++  <div class="wy-grid-for-nav">
++    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
++      <div class="wy-side-scroll">
++        <div class="wy-side-nav-search" >
++
++          
++          
++          <a href="index.html" class="icon icon-home">
++            FinOL
++          </a>
++<div role="search">
++  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
++    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
++    <input type="hidden" name="check_keywords" value="yes" />
++    <input type="hidden" name="area" value="default" />
++  </form>
+ </div>
+-
+-
+-          </div>
+-          
+-        </div>
+-      </div>
+-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+-        <div class="sphinxsidebarwrapper">
+-<h1 class="logo"><a href="index.html">FinOL</a></h1>
+-
++        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
++              <!-- Local TOC -->
++              <div class="local-toc"></div>
++        </div>
++      </div>
++    </nav>
++
++    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
++          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
++          <a href="index.html">FinOL</a>
++      </nav>
++
++      <div class="wy-nav-content">
++        <div class="rst-content">
++          <div role="navigation" aria-label="Page navigation">
++  <ul class="wy-breadcrumbs">
++      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
++      <li class="breadcrumb-item active">Index</li>
++      <li class="wy-breadcrumbs-aside">
++      </li>
++  </ul>
++  <hr/>
++</div>
++          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
++           <div itemprop="articleBody">
++             
+ 
++<h1 id="index">Index</h1>
+ 
+-
+-
+-
+-
+-
+-<h3>Navigation</h3>
+-
+-<div class="relations">
+-<h3>Related Topics</h3>
+-<ul>
+-  <li><a href="index.html">Documentation overview</a><ul>
+-  </ul></li>
+-</ul>
++<div class="genindex-jumpbox">
++ 
+ </div>
+-<search id="searchbox" style="display: none" role="search">
+-  <h3 id="searchlabel">Quick search</h3>
+-    <div class="searchformwrapper">
+-    <form class="search" action="search.html" method="get">
+-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+-      <input type="submit" value="Go" />
+-    </form>
+-    </div>
+-</search>
+-<script>document.getElementById('searchbox').style.display = "block"</script>
+-
+-
+-
+-
+-
+-
+-
+-
+-        </div>
+-      </div>
+-      <div class="clearer"></div>
+-    </div>
+-    <div class="footer">
+-      &#169;2024, FinOL contributors.
+-      
+-      |
+-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+-      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+-      
+-    </div>
++
++
++           </div>
++          </div>
++          <footer>
++
++  <hr/>
++
++  <div role="contentinfo">
++    <p>&#169; Copyright 2024, FinOL contributors.</p>
++  </div>
++
++  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
++    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
++    provided by <a href="https://readthedocs.org">Read the Docs</a>.
++   
++
++</footer>
++        </div>
++      </div>
++    </section>
++  </div>
++  <script>
++      jQuery(function () {
++          SphinxRtdTheme.Navigation.enable(true);
++      });
++  </script> 
+ 
+-    
+-
+-    
+-  </body>
++</body>
+ </html>
+\ No newline at end of file
+Index: docs/build/html/_static/pygments.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>pre { line-height: 125%; }\r\ntd.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }\r\nspan.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }\r\ntd.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }\r\nspan.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }\r\n.highlight .hll { background-color: #ffffcc }\r\n.highlight { background: #f8f8f8; }\r\n.highlight .c { color: #8f5902; font-style: italic } /* Comment */\r\n.highlight .err { color: #a40000; border: 1px solid #ef2929 } /* Error */\r\n.highlight .g { color: #000000 } /* Generic */\r\n.highlight .k { color: #004461; font-weight: bold } /* Keyword */\r\n.highlight .l { color: #000000 } /* Literal */\r\n.highlight .n { color: #000000 } /* Name */\r\n.highlight .o { color: #582800 } /* Operator */\r\n.highlight .x { color: #000000 } /* Other */\r\n.highlight .p { color: #000000; font-weight: bold } /* Punctuation */\r\n.highlight .ch { color: #8f5902; font-style: italic } /* Comment.Hashbang */\r\n.highlight .cm { color: #8f5902; font-style: italic } /* Comment.Multiline */\r\n.highlight .cp { color: #8f5902 } /* Comment.Preproc */\r\n.highlight .cpf { color: #8f5902; font-style: italic } /* Comment.PreprocFile */\r\n.highlight .c1 { color: #8f5902; font-style: italic } /* Comment.Single */\r\n.highlight .cs { color: #8f5902; font-style: italic } /* Comment.Special */\r\n.highlight .gd { color: #a40000 } /* Generic.Deleted */\r\n.highlight .ge { color: #000000; font-style: italic } /* Generic.Emph */\r\n.highlight .ges { color: #000000 } /* Generic.EmphStrong */\r\n.highlight .gr { color: #ef2929 } /* Generic.Error */\r\n.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */\r\n.highlight .gi { color: #00A000 } /* Generic.Inserted */\r\n.highlight .go { color: #888888 } /* Generic.Output */\r\n.highlight .gp { color: #745334 } /* Generic.Prompt */\r\n.highlight .gs { color: #000000; font-weight: bold } /* Generic.Strong */\r\n.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */\r\n.highlight .gt { color: #a40000; font-weight: bold } /* Generic.Traceback */\r\n.highlight .kc { color: #004461; font-weight: bold } /* Keyword.Constant */\r\n.highlight .kd { color: #004461; font-weight: bold } /* Keyword.Declaration */\r\n.highlight .kn { color: #004461; font-weight: bold } /* Keyword.Namespace */\r\n.highlight .kp { color: #004461; font-weight: bold } /* Keyword.Pseudo */\r\n.highlight .kr { color: #004461; font-weight: bold } /* Keyword.Reserved */\r\n.highlight .kt { color: #004461; font-weight: bold } /* Keyword.Type */\r\n.highlight .ld { color: #000000 } /* Literal.Date */\r\n.highlight .m { color: #990000 } /* Literal.Number */\r\n.highlight .s { color: #4e9a06 } /* Literal.String */\r\n.highlight .na { color: #c4a000 } /* Name.Attribute */\r\n.highlight .nb { color: #004461 } /* Name.Builtin */\r\n.highlight .nc { color: #000000 } /* Name.Class */\r\n.highlight .no { color: #000000 } /* Name.Constant */\r\n.highlight .nd { color: #888888 } /* Name.Decorator */\r\n.highlight .ni { color: #ce5c00 } /* Name.Entity */\r\n.highlight .ne { color: #cc0000; font-weight: bold } /* Name.Exception */\r\n.highlight .nf { color: #000000 } /* Name.Function */\r\n.highlight .nl { color: #f57900 } /* Name.Label */\r\n.highlight .nn { color: #000000 } /* Name.Namespace */\r\n.highlight .nx { color: #000000 } /* Name.Other */\r\n.highlight .py { color: #000000 } /* Name.Property */\r\n.highlight .nt { color: #004461; font-weight: bold } /* Name.Tag */\r\n.highlight .nv { color: #000000 } /* Name.Variable */\r\n.highlight .ow { color: #004461; font-weight: bold } /* Operator.Word */\r\n.highlight .pm { color: #000000; font-weight: bold } /* Punctuation.Marker */\r\n.highlight .w { color: #f8f8f8 } /* Text.Whitespace */\r\n.highlight .mb { color: #990000 } /* Literal.Number.Bin */\r\n.highlight .mf { color: #990000 } /* Literal.Number.Float */\r\n.highlight .mh { color: #990000 } /* Literal.Number.Hex */\r\n.highlight .mi { color: #990000 } /* Literal.Number.Integer */\r\n.highlight .mo { color: #990000 } /* Literal.Number.Oct */\r\n.highlight .sa { color: #4e9a06 } /* Literal.String.Affix */\r\n.highlight .sb { color: #4e9a06 } /* Literal.String.Backtick */\r\n.highlight .sc { color: #4e9a06 } /* Literal.String.Char */\r\n.highlight .dl { color: #4e9a06 } /* Literal.String.Delimiter */\r\n.highlight .sd { color: #8f5902; font-style: italic } /* Literal.String.Doc */\r\n.highlight .s2 { color: #4e9a06 } /* Literal.String.Double */\r\n.highlight .se { color: #4e9a06 } /* Literal.String.Escape */\r\n.highlight .sh { color: #4e9a06 } /* Literal.String.Heredoc */\r\n.highlight .si { color: #4e9a06 } /* Literal.String.Interpol */\r\n.highlight .sx { color: #4e9a06 } /* Literal.String.Other */\r\n.highlight .sr { color: #4e9a06 } /* Literal.String.Regex */\r\n.highlight .s1 { color: #4e9a06 } /* Literal.String.Single */\r\n.highlight .ss { color: #4e9a06 } /* Literal.String.Symbol */\r\n.highlight .bp { color: #3465a4 } /* Name.Builtin.Pseudo */\r\n.highlight .fm { color: #000000 } /* Name.Function.Magic */\r\n.highlight .vc { color: #000000 } /* Name.Variable.Class */\r\n.highlight .vg { color: #000000 } /* Name.Variable.Global */\r\n.highlight .vi { color: #000000 } /* Name.Variable.Instance */\r\n.highlight .vm { color: #000000 } /* Name.Variable.Magic */\r\n.highlight .il { color: #990000 } /* Literal.Number.Integer.Long */
+===================================================================
+diff --git a/docs/build/html/_static/pygments.css b/docs/build/html/_static/pygments.css
+--- a/docs/build/html/_static/pygments.css	
++++ b/docs/build/html/_static/pygments.css	
+@@ -5,80 +5,71 @@
+ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+ .highlight .hll { background-color: #ffffcc }
+ .highlight { background: #f8f8f8; }
+-.highlight .c { color: #8f5902; font-style: italic } /* Comment */
+-.highlight .err { color: #a40000; border: 1px solid #ef2929 } /* Error */
+-.highlight .g { color: #000000 } /* Generic */
+-.highlight .k { color: #004461; font-weight: bold } /* Keyword */
+-.highlight .l { color: #000000 } /* Literal */
+-.highlight .n { color: #000000 } /* Name */
+-.highlight .o { color: #582800 } /* Operator */
+-.highlight .x { color: #000000 } /* Other */
+-.highlight .p { color: #000000; font-weight: bold } /* Punctuation */
+-.highlight .ch { color: #8f5902; font-style: italic } /* Comment.Hashbang */
+-.highlight .cm { color: #8f5902; font-style: italic } /* Comment.Multiline */
+-.highlight .cp { color: #8f5902 } /* Comment.Preproc */
+-.highlight .cpf { color: #8f5902; font-style: italic } /* Comment.PreprocFile */
+-.highlight .c1 { color: #8f5902; font-style: italic } /* Comment.Single */
+-.highlight .cs { color: #8f5902; font-style: italic } /* Comment.Special */
+-.highlight .gd { color: #a40000 } /* Generic.Deleted */
+-.highlight .ge { color: #000000; font-style: italic } /* Generic.Emph */
+-.highlight .ges { color: #000000 } /* Generic.EmphStrong */
+-.highlight .gr { color: #ef2929 } /* Generic.Error */
++.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
++.highlight .err { border: 1px solid #FF0000 } /* Error */
++.highlight .k { color: #008000; font-weight: bold } /* Keyword */
++.highlight .o { color: #666666 } /* Operator */
++.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
++.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
++.highlight .cp { color: #9C6500 } /* Comment.Preproc */
++.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
++.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
++.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
++.highlight .gd { color: #A00000 } /* Generic.Deleted */
++.highlight .ge { font-style: italic } /* Generic.Emph */
++.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
++.highlight .gr { color: #E40000 } /* Generic.Error */
+ .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+-.highlight .gi { color: #00A000 } /* Generic.Inserted */
+-.highlight .go { color: #888888 } /* Generic.Output */
+-.highlight .gp { color: #745334 } /* Generic.Prompt */
+-.highlight .gs { color: #000000; font-weight: bold } /* Generic.Strong */
++.highlight .gi { color: #008400 } /* Generic.Inserted */
++.highlight .go { color: #717171 } /* Generic.Output */
++.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
++.highlight .gs { font-weight: bold } /* Generic.Strong */
+ .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+-.highlight .gt { color: #a40000; font-weight: bold } /* Generic.Traceback */
+-.highlight .kc { color: #004461; font-weight: bold } /* Keyword.Constant */
+-.highlight .kd { color: #004461; font-weight: bold } /* Keyword.Declaration */
+-.highlight .kn { color: #004461; font-weight: bold } /* Keyword.Namespace */
+-.highlight .kp { color: #004461; font-weight: bold } /* Keyword.Pseudo */
+-.highlight .kr { color: #004461; font-weight: bold } /* Keyword.Reserved */
+-.highlight .kt { color: #004461; font-weight: bold } /* Keyword.Type */
+-.highlight .ld { color: #000000 } /* Literal.Date */
+-.highlight .m { color: #990000 } /* Literal.Number */
+-.highlight .s { color: #4e9a06 } /* Literal.String */
+-.highlight .na { color: #c4a000 } /* Name.Attribute */
+-.highlight .nb { color: #004461 } /* Name.Builtin */
+-.highlight .nc { color: #000000 } /* Name.Class */
+-.highlight .no { color: #000000 } /* Name.Constant */
+-.highlight .nd { color: #888888 } /* Name.Decorator */
+-.highlight .ni { color: #ce5c00 } /* Name.Entity */
+-.highlight .ne { color: #cc0000; font-weight: bold } /* Name.Exception */
+-.highlight .nf { color: #000000 } /* Name.Function */
+-.highlight .nl { color: #f57900 } /* Name.Label */
+-.highlight .nn { color: #000000 } /* Name.Namespace */
+-.highlight .nx { color: #000000 } /* Name.Other */
+-.highlight .py { color: #000000 } /* Name.Property */
+-.highlight .nt { color: #004461; font-weight: bold } /* Name.Tag */
+-.highlight .nv { color: #000000 } /* Name.Variable */
+-.highlight .ow { color: #004461; font-weight: bold } /* Operator.Word */
+-.highlight .pm { color: #000000; font-weight: bold } /* Punctuation.Marker */
+-.highlight .w { color: #f8f8f8 } /* Text.Whitespace */
+-.highlight .mb { color: #990000 } /* Literal.Number.Bin */
+-.highlight .mf { color: #990000 } /* Literal.Number.Float */
+-.highlight .mh { color: #990000 } /* Literal.Number.Hex */
+-.highlight .mi { color: #990000 } /* Literal.Number.Integer */
+-.highlight .mo { color: #990000 } /* Literal.Number.Oct */
+-.highlight .sa { color: #4e9a06 } /* Literal.String.Affix */
+-.highlight .sb { color: #4e9a06 } /* Literal.String.Backtick */
+-.highlight .sc { color: #4e9a06 } /* Literal.String.Char */
+-.highlight .dl { color: #4e9a06 } /* Literal.String.Delimiter */
+-.highlight .sd { color: #8f5902; font-style: italic } /* Literal.String.Doc */
+-.highlight .s2 { color: #4e9a06 } /* Literal.String.Double */
+-.highlight .se { color: #4e9a06 } /* Literal.String.Escape */
+-.highlight .sh { color: #4e9a06 } /* Literal.String.Heredoc */
+-.highlight .si { color: #4e9a06 } /* Literal.String.Interpol */
+-.highlight .sx { color: #4e9a06 } /* Literal.String.Other */
+-.highlight .sr { color: #4e9a06 } /* Literal.String.Regex */
+-.highlight .s1 { color: #4e9a06 } /* Literal.String.Single */
+-.highlight .ss { color: #4e9a06 } /* Literal.String.Symbol */
+-.highlight .bp { color: #3465a4 } /* Name.Builtin.Pseudo */
+-.highlight .fm { color: #000000 } /* Name.Function.Magic */
+-.highlight .vc { color: #000000 } /* Name.Variable.Class */
+-.highlight .vg { color: #000000 } /* Name.Variable.Global */
+-.highlight .vi { color: #000000 } /* Name.Variable.Instance */
+-.highlight .vm { color: #000000 } /* Name.Variable.Magic */
+-.highlight .il { color: #990000 } /* Literal.Number.Integer.Long */
+\ No newline at end of file
++.highlight .gt { color: #0044DD } /* Generic.Traceback */
++.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
++.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
++.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
++.highlight .kp { color: #008000 } /* Keyword.Pseudo */
++.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
++.highlight .kt { color: #B00040 } /* Keyword.Type */
++.highlight .m { color: #666666 } /* Literal.Number */
++.highlight .s { color: #BA2121 } /* Literal.String */
++.highlight .na { color: #687822 } /* Name.Attribute */
++.highlight .nb { color: #008000 } /* Name.Builtin */
++.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
++.highlight .no { color: #880000 } /* Name.Constant */
++.highlight .nd { color: #AA22FF } /* Name.Decorator */
++.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
++.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
++.highlight .nf { color: #0000FF } /* Name.Function */
++.highlight .nl { color: #767600 } /* Name.Label */
++.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
++.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
++.highlight .nv { color: #19177C } /* Name.Variable */
++.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
++.highlight .w { color: #bbbbbb } /* Text.Whitespace */
++.highlight .mb { color: #666666 } /* Literal.Number.Bin */
++.highlight .mf { color: #666666 } /* Literal.Number.Float */
++.highlight .mh { color: #666666 } /* Literal.Number.Hex */
++.highlight .mi { color: #666666 } /* Literal.Number.Integer */
++.highlight .mo { color: #666666 } /* Literal.Number.Oct */
++.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
++.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
++.highlight .sc { color: #BA2121 } /* Literal.String.Char */
++.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
++.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
++.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
++.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
++.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
++.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
++.highlight .sx { color: #008000 } /* Literal.String.Other */
++.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
++.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
++.highlight .ss { color: #19177C } /* Literal.String.Symbol */
++.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
++.highlight .fm { color: #0000FF } /* Name.Function.Magic */
++.highlight .vc { color: #19177C } /* Name.Variable.Class */
++.highlight .vg { color: #19177C } /* Name.Variable.Global */
++.highlight .vi { color: #19177C } /* Name.Variable.Instance */
++.highlight .vm { color: #19177C } /* Name.Variable.Magic */
++.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+\ No newline at end of file
