@@ -97,6 +97,7 @@ document = [
   "sphinx_rtd_theme",
   "sphinx_copybutton",
   "sphinxemoji",
+  "shibuya"
 #  "torch",
 #  "torchvision",
 ]
