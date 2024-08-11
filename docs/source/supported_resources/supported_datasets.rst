@@ -1,7 +1,7 @@
 .. _supported_datasets:
 
 FinOL Datasets
-========
+==============
 
 .. table::
    :align: center

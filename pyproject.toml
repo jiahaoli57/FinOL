@@ -90,8 +90,6 @@ document = [
 #  "sphinx_design",
   "sphinxemoji",
   "shibuya"
-#  "torch",
-#  "torchvision",
 ]
 #optional = [
 #  "boto3",  # optuna/artifacts/_boto3.py.

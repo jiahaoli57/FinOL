@@ -1,7 +1,7 @@
 .. _supported_metrics:
 
 FinOL Metrics
-=======
+=============
 
 .. table::
    :align: center

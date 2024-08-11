@@ -1,5 +1,5 @@
 FinOL Supports
-===================
+==============
 
 .. toctree::
     :maxdepth: 2

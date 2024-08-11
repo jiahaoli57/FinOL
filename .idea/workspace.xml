@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs; optimize code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/other_modules.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/api/other_modules.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_baselines.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_baselines.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_datasets.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_datasets.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_features.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_features.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -376,14 +383,8 @@
       <workItem from="1723389640167" duration="908000" />
       <workItem from="1723390676789" duration="401000" />
       <workItem from="1723391112328" duration="121000" />
-      <workItem from="1723391263194" duration="797000" />
-    </task>
-    <task id="LOCAL-00224" summary="build docs">
-      <created>1722503091209</created>
-      <option name="number" value="00224" />
-      <option name="presentableId" value="LOCAL-00224" />
-      <option name="project" value="LOCAL" />
-      <updated>1722503091209</updated>
+      <workItem from="1723391263194" duration="1147000" />
+      <workItem from="1723392446744" duration="784000" />
     </task>
     <task id="LOCAL-00225" summary="build docs; optimize code">
       <created>1722530915027</created>
@@ -721,7 +722,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723391414235</updated>
     </task>
-    <option name="localTasksCounter" value="273" />
+    <task id="LOCAL-00273" summary="build docs; optimize code">
+      <created>1723392265429</created>
+      <option name="number" value="00273" />
+      <option name="presentableId" value="LOCAL-00273" />
+      <option name="project" value="LOCAL" />
+      <updated>1723392265429</updated>
+    </task>
+    <option name="localTasksCounter" value="274" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

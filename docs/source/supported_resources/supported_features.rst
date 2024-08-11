@@ -1,7 +1,7 @@
 .. _supported_features:
 
 FinOL Features
-========
+==============
 
 This section provides detailed definitions for the key data features in ``FinOL``.
 These features can help describe and analyze financial time series from multiple perspectives.

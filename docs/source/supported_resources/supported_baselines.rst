@@ -1,7 +1,7 @@
 .. _supported_baselines:
 
 FinOL Baselines
-===================
+===============
 
 .. table::
    :align: center
