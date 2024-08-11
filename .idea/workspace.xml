@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.data_layer.DatasetLoader.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.data_layer.ScalerSelector.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.BenchmarkLoader.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.DistillerSelector.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.EconomicDistiller.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.MetricCaculator.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.ModelEvaluator.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.ResultVisualizer.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.AlphaPortfolio.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.CNN.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.DNN.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.LSRE_CAAN.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.LSTM.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.ModelSelector.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.RNN.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.Transformer.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.UserModel.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.optimization_layer.CriterionSelector.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.optimization_layer.ModelTrainer.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.optimization_layer.OptimizerSelector.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.optimization_layer.ParametersTuner.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_6_10_13_22_取消提交了变更_[变更]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_7_22_0_07_取消提交了变更_[变更]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2024_7_22_13_47_取消提交了变更_[变更]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,10 +234,10 @@
     </configuration>
     <list>
       <item itemvalue="Python.FinOLAPP" />
+      <item itemvalue="Python.main" />
       <item itemvalue="Python.model_trainer" />
       <item itemvalue="Python.parameters_tuner" />
       <item itemvalue="Python.test_script" />
-      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
@@ -399,27 +382,7 @@
       <workItem from="1723392446744" duration="1642000" />
       <workItem from="1723394262220" duration="724000" />
       <workItem from="1723395016694" duration="289000" />
-    </task>
-    <task id="LOCAL-00229" summary="build docs; optimize code">
-      <created>1722610903969</created>
-      <option name="number" value="00229" />
-      <option name="presentableId" value="LOCAL-00229" />
-      <option name="project" value="LOCAL" />
-      <updated>1722610903970</updated>
-    </task>
-    <task id="LOCAL-00230" summary="build docs; optimize code">
-      <created>1722610972150</created>
-      <option name="number" value="00230" />
-      <option name="presentableId" value="LOCAL-00230" />
-      <option name="project" value="LOCAL" />
-      <updated>1722610972151</updated>
-    </task>
-    <task id="LOCAL-00231" summary="build docs; optimize code">
-      <created>1722611019921</created>
-      <option name="number" value="00231" />
-      <option name="presentableId" value="LOCAL-00231" />
-      <option name="project" value="LOCAL" />
-      <updated>1722611019921</updated>
+      <workItem from="1723395360841" duration="360000" />
     </task>
     <task id="LOCAL-00232" summary="build docs; optimize code">
       <created>1722611207028</created>
@@ -743,7 +706,28 @@
       <option name="project" value="LOCAL" />
       <updated>1723394955087</updated>
     </task>
-    <option name="localTasksCounter" value="278" />
+    <task id="LOCAL-00278" summary="build docs">
+      <created>1723395412213</created>
+      <option name="number" value="00278" />
+      <option name="presentableId" value="LOCAL-00278" />
+      <option name="project" value="LOCAL" />
+      <updated>1723395412214</updated>
+    </task>
+    <task id="LOCAL-00279" summary="build docs">
+      <created>1723395571920</created>
+      <option name="number" value="00279" />
+      <option name="presentableId" value="LOCAL-00279" />
+      <option name="project" value="LOCAL" />
+      <updated>1723395571920</updated>
+    </task>
+    <task id="LOCAL-00280" summary="build docs">
+      <created>1723395690725</created>
+      <option name="number" value="00280" />
+      <option name="presentableId" value="LOCAL-00280" />
+      <option name="project" value="LOCAL" />
+      <updated>1723395690725</updated>
+    </task>
+    <option name="localTasksCounter" value="281" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
