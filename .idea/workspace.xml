@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.data_layer.DatasetLoader.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.data_layer.ScalerSelector.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.BenchmarkLoader.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.DistillerSelector.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.EconomicDistiller.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.MetricCaculator.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.ModelEvaluator.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.ResultVisualizer.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.AlphaPortfolio.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.CNN.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.DNN.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.LSRE_CAAN.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.LSTM.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.ModelSelector.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.RNN.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.Transformer.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.UserModel.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.optimization_layer.CriterionSelector.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.optimization_layer.ModelTrainer.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.optimization_layer.OptimizerSelector.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.optimization_layer.ParametersTuner.rst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
