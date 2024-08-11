@@ -52,7 +52,7 @@ extensions = [
     # "sphinx_rtd_theme",
     "sphinx_copybutton",
     # "sphinx_design",
-    "shibuya",
+    # "shibuya",
     # "sphinx-jsonschema",
     "sphinxemoji.sphinxemoji",
 ]
