@@ -1,6 +1,7 @@
 Background
 ==========
 
+
 Early online portfolio selection (OLPS) methods relied on a priori assumptions
 about market dynamics and mathematical optimization. With increased computing
 power and data, data-driven OLPS methods that directly learn from data have gained attention.

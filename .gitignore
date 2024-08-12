@@ -1,6 +1,7 @@
 /build
 /dist
 /docs/build/
+/docs/source/api/generated/
 /FinOL.egg-info
 /finol/logdir/
 /finol/data/

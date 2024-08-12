@@ -93,69 +93,6 @@ it provides a long-awaited unified platform to advance data-driven OLPS research
    |                                                       |                |                |
    +-------------------------------------------------------+----------------+----------------+
 
-Outline
--------
-
--  `FinOL: Towards Open Benchmarking for Data-Driven Online Portfolio
-   Selection <#finol>`__
-
-   -  `Outline <#outline>`__
-   -  `About <#about>`__
-   -  `Why should I use FinOL? <#why-should-i-use-finOL?>`__
-   -  `Installation <#installation>`__
-   -  `Examples and Tutorials <#examples-and-tutorials>`__
-   -  `Using FinOL <#using-FinOL>`__
-   -  `File Structure <#file-structure>`__
-   -  `Supported Datasets <#supported-datasets>`__
-   -  `Supported Baselines <#supported-baselines>`__
-   -  `Supported Metrics <#supported-metrics>`__
-   -  `License <#license>`__
-   -  `Contact Us <#contact-us>`__
-
-About
------
-
-Online portfolio selection (OLPS) is an important issue in operations
-research community that studies how to dynamically adjust portfolios
-according to market changes. In the past, OLPS research relied on a
-general database called ``OLPS`` containing price relatives data of
-financial assets across different markets. However, with the widespread
-adoption of data-driven technologies like machine learning in finance,
-``OLPS`` can no longer meet the needs of OLPS research due to the lack
-of support for high-dimensional feature spaces. To solve this problem,
-we propose ``FinOL``, an open financial platform for advancing research
-in data-driven OLPS. ``FinOL`` expands and enriches the previous
-``OLPS`` database, containing 9 benchmark financial datasets from 1962
-to present across global markets. To promote fair comparisons, we
-evaluate a large number of past classic OLPS methods on ``FinOL``,
-providing reusable benchmark results for future ``FinOL`` users and
-effectively supporting OLPS research. More importantly, to lower the
-barriers to research, ``FinOL`` provides a complete
-data-training-testing suite with just three lines of command. We are
-also committed to regularly updating ``FinOL`` with new data and
-benchmark results reflecting the latest developments and trends in the
-field. This ensures ``FinOL`` remains a valuable resource as data-driven
-OLPS methods continue evolving.
-
-
-.. image:: ../images/finol.png
-    :align: center
-.. centered:: *Overall Framework of FinOL*
-
-
-Why should I use FinOL?
------------------------
-
-1. ``FinOL`` contributes comprehensive datasets spanning diverse market
-   conditions and asset classes to enable large-scale empirical
-   validation;
-2. ``FinOL`` contributes the most extensive benchmark results to date
-   for portfolio selection methods, providing the academic community an
-   unbiased performance assessment;
-3. ``FinOL`` contributes a user-friendly Python library for data-driven
-   OLPS research, providing a comprehensive toolkit for academics to
-   develop, test, and validate new OLPS methods.
-
 
 Contents
 ========
