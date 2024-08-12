@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs" />
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -512,13 +514,8 @@
       <workItem from="1723395360841" duration="360000" />
       <workItem from="1723395878676" duration="343000" />
       <workItem from="1723396245123" duration="134000" />
-    </task>
-    <task id="LOCAL-00235" summary="build docs; optimize code">
-      <created>1722611718343</created>
-      <option name="number" value="00235" />
-      <option name="presentableId" value="LOCAL-00235" />
-      <option name="project" value="LOCAL" />
-      <updated>1722611718343</updated>
+      <workItem from="1723396396221" duration="1017000" />
+      <workItem from="1723397442050" duration="1285000" />
     </task>
     <task id="LOCAL-00236" summary="build docs; optimize code">
       <created>1722611781880</created>
@@ -856,7 +853,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723396336071</updated>
     </task>
-    <option name="localTasksCounter" value="284" />
+    <task id="LOCAL-00284" summary="build docs">
+      <created>1723396822647</created>
+      <option name="number" value="00284" />
+      <option name="presentableId" value="LOCAL-00284" />
+      <option name="project" value="LOCAL" />
+      <updated>1723396822647</updated>
+    </task>
+    <option name="localTasksCounter" value="285" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
