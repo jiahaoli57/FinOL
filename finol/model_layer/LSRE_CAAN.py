@@ -209,7 +209,6 @@ class LSRE_CAAN(nn.Module):
     <https://www.sciencedirect.com/science/article/abs/pii/S030645732200348X>`__.
 
     .. table:: Table 7: Hyper-parameters of the LSRE-CAAN framework.
-        :align: center
 
         +---------------------------+---------------+------------------------------------------------------------------+
         | Hyper-parameter           | Choice        | Description                                                      |

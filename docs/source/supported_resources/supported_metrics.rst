@@ -4,7 +4,6 @@ FinOL Metrics
 =============
 
 .. table::
-   :align: center
 
    +-------------------------------------------+------------------+--------------+
    | Name                                      | Abbreviation     | Category     |

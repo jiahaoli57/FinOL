@@ -94,7 +94,6 @@ class AlphaPortfolio(nn.Module):
     and Interpretable AI <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3698800>`__.
 
     .. table:: Table C.1: Hyperparameters of TE-CAAN-Based AP.
-        :align: center
 
         +----------------------+--------+-----------------+--------+
         | Hyper-parameter      | Choice | Hyper-parameter | Choice |

@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/background.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/background.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_baselines.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_baselines.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_datasets.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_datasets.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_features.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_features.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/model_layer/AlphaPortfolio.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/AlphaPortfolio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -516,14 +523,7 @@
       <workItem from="1723396245123" duration="134000" />
       <workItem from="1723396396221" duration="1017000" />
       <workItem from="1723397442050" duration="9970000" />
-      <workItem from="1723452159563" duration="2845000" />
-    </task>
-    <task id="LOCAL-00248" summary="build docs; optimize code">
-      <created>1722955959313</created>
-      <option name="number" value="00248" />
-      <option name="presentableId" value="LOCAL-00248" />
-      <option name="project" value="LOCAL" />
-      <updated>1722955959313</updated>
+      <workItem from="1723452159563" duration="3929000" />
     </task>
     <task id="LOCAL-00249" summary="build docs; optimize code">
       <created>1722956025013</created>
@@ -861,7 +861,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723453605291</updated>
     </task>
-    <option name="localTasksCounter" value="297" />
+    <task id="LOCAL-00297" summary="build docs">
+      <created>1723455563143</created>
+      <option name="number" value="00297" />
+      <option name="presentableId" value="LOCAL-00297" />
+      <option name="project" value="LOCAL" />
+      <updated>1723455563144</updated>
+    </task>
+    <option name="localTasksCounter" value="298" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
