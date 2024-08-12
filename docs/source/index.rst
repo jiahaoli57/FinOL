@@ -157,6 +157,8 @@ Why should I use FinOL?
    develop, test, and validate new OLPS methods.
 
 
+Contents
+========
 
 .. toctree::
    :maxdepth: 2
