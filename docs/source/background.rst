@@ -23,8 +23,10 @@ Notation
 --------
 
 .. list-table::
-   :header-rows: 1
-   :align: center
+    :header-rows: 1
+    :align: center
+    :class: ghost
+    :widths: auto
 
    * - Notation
      - Description
