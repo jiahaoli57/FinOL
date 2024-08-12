@@ -123,7 +123,11 @@ html_css_files = ["css/custom.css"]
 html_copy_source = False
 html_show_sourcelink = False
 
+# multi-language docs
 language = 'en'
+locale_dirs = ["locales/"]
+gettext_compact = False  # optional
+gettext_uuid = True  # optional
 
 html_context = {}
 html_context["current_version"] = "latest"
