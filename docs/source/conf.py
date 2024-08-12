@@ -125,7 +125,7 @@ html_show_sourcelink = False
 
 # multi-language docs
 language = 'en'
-locale_dirs = ["locales/"]
+locale_dirs = ["../locales/"]
 gettext_compact = False  # optional
 gettext_uuid = True  # optional
 

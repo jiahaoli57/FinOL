@@ -56,15 +56,15 @@ msgid ""
 " designed for data-driven OLPS research. ``FinOL`` provides diverse "
 "financial datasets and extensive benchmark results for fair comparison."
 msgstr ""
-"为了解决这个问题,我们推出了``FinOL``——一个专为数据驱动型 OLPS 研究而设计的新型金融基准平台。``FinOL``提供了多样化的金融数据集，并给出了广泛的基准测试结果，以便进行公平比较。"
+"为了解决这个问题，我们推出了 ``FinOL`` —— 一个专为数据驱动型 OLPS 研究而设计的新型金融基准平台。 ``FinOL`` 提供了多样化的金融数据集，并给出了广泛的基准测试结果，以便进行公平比较。"
 
 #: ../../source/background.rst:24 ../../source/background.rst:29
 msgid "Notation"
-msgstr ""
+msgstr "符号"
 
 #: ../../source/background.rst:30
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../source/background.rst:31
 msgid ":math:`b_{t,i}`"
