@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
-      <change beforePath="$PROJECT_DIR$/docs/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh/LC_MESSAGES/api.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh/LC_MESSAGES/background.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh/LC_MESSAGES/contact_us.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh/LC_MESSAGES/file_structure.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh/LC_MESSAGES/index.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh/LC_MESSAGES/installation.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh/LC_MESSAGES/license.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh/LC_MESSAGES/quickstart.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh/LC_MESSAGES/supported_resources.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -516,14 +526,7 @@
       <workItem from="1723396245123" duration="134000" />
       <workItem from="1723396396221" duration="1017000" />
       <workItem from="1723397442050" duration="9970000" />
-      <workItem from="1723452159563" duration="11637000" />
-    </task>
-    <task id="LOCAL-00255" summary="build docs; optimize code">
-      <created>1723103974316</created>
-      <option name="number" value="00255" />
-      <option name="presentableId" value="LOCAL-00255" />
-      <option name="project" value="LOCAL" />
-      <updated>1723103974316</updated>
+      <workItem from="1723452159563" duration="13679000" />
     </task>
     <task id="LOCAL-00256" summary="build docs; optimize code">
       <created>1723112814779</created>
@@ -861,7 +864,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723471011877</updated>
     </task>
-    <option name="localTasksCounter" value="304" />
+    <task id="LOCAL-00304" summary="build docs">
+      <created>1723471883247</created>
+      <option name="number" value="00304" />
+      <option name="presentableId" value="LOCAL-00304" />
+      <option name="project" value="LOCAL" />
+      <updated>1723471883247</updated>
+    </task>
+    <option name="localTasksCounter" value="305" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

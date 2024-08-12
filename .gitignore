@@ -1,5 +1,6 @@
 /build
 /dist
+/docs/_build/
 /docs/build/
 /docs/source/api/generated/
 /FinOL.egg-info
