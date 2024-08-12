@@ -78,6 +78,8 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # pygments_style = "sphinx"
 
 
+html_title = "FinOL Docs"
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
@@ -95,6 +97,8 @@ html_theme_options = {
     "accent_color": "violet",
     "dark_code": False,
     "color_mode": "dark",
+    "globaltoc_expand_depth": 1,
+    "discussion_url": "https://github.com/jiahaoli57/finol/discussions",
     "github_url": "https://github.com/jiahaoli57/finol",
     "nav_links": [
         {
@@ -122,6 +126,11 @@ html_show_sourcelink = False
 language = 'en'
 
 html_context = {}
+html_context["current_version"] = "latest"
+html_context["languages"] = [
+    ("English", "https://finol.readthedocs.io/en/%s/", "en"),
+    ("中文", "https://finol.readthedocs.io/zh/%s/", "zh"),
+]
 
 # -- Extension configuration -------------------------------------------------
 autosummary_generate = True
