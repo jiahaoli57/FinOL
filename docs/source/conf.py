@@ -127,9 +127,13 @@ language = 'en'
 
 html_context = {}
 html_context["current_version"] = "latest"
+html_context["versions"] = [
+    ("latest", "https://finol.readthedocs.io/en/latest/"),
+    # ("stable", "/en/stable/"),
+]
 html_context["languages"] = [
     ("English", "https://finol.readthedocs.io/en/%s/", "en"),
-    ("中文", "https://finol.readthedocs.io/zh/%s/", "zh"),
+    ("中文", "https://finol.readthedocs.io/zh/latest/%s/", "zh"),
 ]
 
 # -- Extension configuration -------------------------------------------------
