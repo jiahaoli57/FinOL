@@ -8,4 +8,4 @@ API Reference
     model_layer
     optimization_layer
     evaluation_layer
-    other_modules
+    config
