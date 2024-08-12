@@ -162,6 +162,14 @@ Why should I use FinOL?
    :maxdepth: 2
    :caption: Contents:
 
+   background
+   installation
+   quickstart
+   api/index
+   supported_resources/index
+   file_structure
+   license
+   contact_us
 
 Indices and tables
 ==================

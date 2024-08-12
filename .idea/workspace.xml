@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
-      <change afterPath="$PROJECT_DIR$/docs/images/finol_gui.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/config.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/data_layer.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/evaluation_layer.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/index.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/model_layer.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/optimization_layer.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/background.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/index.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_baselines.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_datasets.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_features.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization.rst" beforeDir="false" />
-    </list>
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -531,14 +513,7 @@
       <workItem from="1723395878676" duration="343000" />
       <workItem from="1723396245123" duration="134000" />
       <workItem from="1723396396221" duration="1017000" />
-      <workItem from="1723397442050" duration="9196000" />
-    </task>
-    <task id="LOCAL-00242" summary="build docs; optimize code">
-      <created>1722688639196</created>
-      <option name="number" value="00242" />
-      <option name="presentableId" value="LOCAL-00242" />
-      <option name="project" value="LOCAL" />
-      <updated>1722688639196</updated>
+      <workItem from="1723397442050" duration="9758000" />
     </task>
     <task id="LOCAL-00243" summary="build docs; optimize code">
       <created>1722869885659</created>
@@ -876,7 +851,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723444980769</updated>
     </task>
-    <option name="localTasksCounter" value="291" />
+    <task id="LOCAL-00291" summary="build docs">
+      <created>1723451542069</created>
+      <option name="number" value="00291" />
+      <option name="presentableId" value="LOCAL-00291" />
+      <option name="project" value="LOCAL" />
+      <updated>1723451542070</updated>
+    </task>
+    <option name="localTasksCounter" value="292" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
