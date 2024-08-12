@@ -95,7 +95,7 @@ it provides a long-awaited unified platform to advance data-driven OLPS research
 
 
 Contents
-========
+--------
 
 .. toctree::
    :maxdepth: 2
@@ -110,7 +110,7 @@ Contents
    contact_us
 
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`
