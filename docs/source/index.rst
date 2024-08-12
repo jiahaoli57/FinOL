@@ -162,7 +162,6 @@ Why should I use FinOL?
    :maxdepth: 2
    :caption: Contents:
 
-   background
 
 Indices and tables
 ==================

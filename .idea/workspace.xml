@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs" />
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
+      <change afterPath="$PROJECT_DIR$/docs/images/finol_gui.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/config.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/data_layer.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/evaluation_layer.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/index.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/model_layer.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/optimization_layer.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/background.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/index.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_baselines.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_datasets.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_features.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization.rst" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,17 +92,17 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/source/_static/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/images" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\images" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\source\_static\css" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\source\supported_resources" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\source\_templates" />
-      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\source\api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol" />
@@ -513,14 +531,7 @@
       <workItem from="1723395878676" duration="343000" />
       <workItem from="1723396245123" duration="134000" />
       <workItem from="1723396396221" duration="1017000" />
-      <workItem from="1723397442050" duration="6193000" />
-    </task>
-    <task id="LOCAL-00241" summary="build docs; optimize code">
-      <created>1722683529374</created>
-      <option name="number" value="00241" />
-      <option name="presentableId" value="LOCAL-00241" />
-      <option name="project" value="LOCAL" />
-      <updated>1722683529374</updated>
+      <workItem from="1723397442050" duration="9196000" />
     </task>
     <task id="LOCAL-00242" summary="build docs; optimize code">
       <created>1722688639196</created>
@@ -858,7 +869,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723444663887</updated>
     </task>
-    <option name="localTasksCounter" value="290" />
+    <task id="LOCAL-00290" summary="build docs">
+      <created>1723444980769</created>
+      <option name="number" value="00290" />
+      <option name="presentableId" value="LOCAL-00290" />
+      <option name="project" value="LOCAL" />
+      <updated>1723444980769</updated>
+    </task>
+    <option name="localTasksCounter" value="291" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
