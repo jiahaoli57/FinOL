@@ -160,7 +160,6 @@ Why should I use FinOL?
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
    background
    installation
