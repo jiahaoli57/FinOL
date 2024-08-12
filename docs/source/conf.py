@@ -56,7 +56,6 @@ extensions = [
     # "sphinx-jsonschema",
     "sphinxemoji.sphinxemoji",
 ]
-
 templates_path = ["_templates"]
 
 # The suffix(es) of source filenames.
@@ -93,6 +92,7 @@ html_theme = "shibuya"
 # documentation.
 #
 html_theme_options = {
+    "color_mode": "dark",
     "github_url": "https://github.com/jiahaoli57/finol",
     "nav_links": [
         {"title": "Ask GPT-4o", "url": "https://docsbot.ai/chat/yXPhXS1d2dkpcN1wITvD/yJzHla8z2KfIinBnqpzV"},

@@ -81,15 +81,15 @@ dynamic = ["version"]
 #  "typing_extensions>=3.10.0.0",
 #]
 document = [
-  "typed-ast",
+#  "typed-ast",
   "sphinx",
-  "sphinx-gallery",
+#  "sphinx-gallery",
 #  "sphinx-plotly-directive",
 #  "sphinx_rtd_theme",
   "sphinx_copybutton",
 #  "sphinx_design",
   "sphinxemoji",
-  "shibuya"
+  "shibuya",
 ]
 #optional = [
 #  "boto3",  # optuna/artifacts/_boto3.py.
