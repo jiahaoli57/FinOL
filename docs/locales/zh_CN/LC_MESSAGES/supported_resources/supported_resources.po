@@ -11,7 +11,7 @@ msgstr ""
 "POT-Creation-Date: 2024-08-13 01:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: zh\n"
+"Language: zh_CN\n"
 "Language-Team: zh <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
@@ -21,44 +21,44 @@ msgstr ""
 
 #: ../../source/supported_resources/index.rst:2
 msgid "FinOL Supports"
-msgstr ""
+msgstr "FinOL 支持"
 
 #: ../../source/supported_resources/supported_baselines.rst:4
 msgid "FinOL Baselines"
-msgstr ""
+msgstr "FinOL 基线"
 
 #: ../../source/supported_resources/supported_baselines.rst:9
 #: ../../source/supported_resources/supported_datasets.rst:9
 #: ../../source/supported_resources/supported_metrics.rst:9
 msgid "Name"
-msgstr ""
+msgstr "名称"
 
 #: ../../source/supported_resources/supported_baselines.rst:9
 #: ../../source/supported_resources/supported_metrics.rst:9
 msgid "Category"
-msgstr ""
+msgstr "分类"
 
 #: ../../source/supported_resources/supported_baselines.rst:9
 msgid "Source"
-msgstr ""
+msgstr "来源"
 
 #: ../../source/supported_resources/supported_baselines.rst:9
 msgid "Journal/Conference"
-msgstr ""
+msgstr "期刊/会议"
 
 #: ../../source/supported_resources/supported_baselines.rst:12
 #: ../../source/supported_resources/supported_baselines.rst:279
 #: ../../source/supported_resources/supported_baselines.rst:292
 #: ../../source/supported_resources/supported_datasets.rst:9
 msgid "Market"
-msgstr ""
+msgstr "市场"
 
 #: ../../source/supported_resources/supported_baselines.rst:12
 #: ../../source/supported_resources/supported_baselines.rst:16
 #: ../../source/supported_resources/supported_baselines.rst:20
 #: ../../source/supported_resources/supported_baselines.rst:29
 msgid "Classic OLPS: Benchmark baseline"
-msgstr ""
+msgstr "经典 OLPS：基准基线"
 
 #: ../../source/supported_resources/supported_baselines.rst:12
 #: ../../source/supported_resources/supported_baselines.rst:16
@@ -155,7 +155,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_baselines.rst:55
 #: ../../source/supported_resources/supported_baselines.rst:62
 msgid "Classic OLPS: Follow-the-winner"
-msgstr ""
+msgstr "经典 OLPS：追随赢家"
 
 #: ../../source/supported_resources/supported_baselines.rst:44
 #: ../../source/supported_resources/supported_baselines.rst:287
@@ -255,7 +255,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_baselines.rst:115
 #: ../../source/supported_resources/supported_baselines.rst:122
 msgid "Classic OLPS: Follow-the-loser"
-msgstr ""
+msgstr "经典 OLPS：追随输家"
 
 #: ../../source/supported_resources/supported_baselines.rst:69
 #: ../../source/supported_resources/supported_baselines.rst:76
@@ -377,7 +377,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_baselines.rst:131
 #: ../../source/supported_resources/supported_baselines.rst:138
 msgid "Classic OLPS: Pattern-matching"
-msgstr ""
+msgstr "经典 OLPS：模式匹配"
 
 #: ../../source/supported_resources/supported_baselines.rst:131
 msgid ""
@@ -426,7 +426,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_baselines.rst:166
 #: ../../source/supported_resources/supported_baselines.rst:172
 msgid "Classic OLPS: Meta-learning"
-msgstr ""
+msgstr "经典 OLPS：元学习"
 
 #: ../../source/supported_resources/supported_baselines.rst:146
 msgid ""
@@ -670,12 +670,12 @@ msgid "# of Assets"
 msgstr ""
 
 #: ../../source/supported_resources/supported_datasets.rst:9
-msgid "Data Range"
+msgid "Date Range"
 msgstr ""
 
 #: ../../source/supported_resources/supported_datasets.rst:9
 msgid "# of Periods"
-msgstr ""
+msgstr "交易期数"
 
 #: ../../source/supported_resources/supported_datasets.rst:12
 msgid ""
@@ -691,7 +691,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_datasets.rst:43
 #: ../../source/supported_resources/supported_datasets.rst:48
 msgid "Stock"
-msgstr ""
+msgstr "股票"
 
 #: ../../source/supported_resources/supported_datasets.rst:12
 #: ../../source/supported_resources/supported_datasets.rst:18
@@ -699,7 +699,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_datasets.rst:30
 #: ../../source/supported_resources/supported_datasets.rst:53
 msgid "United States"
-msgstr ""
+msgstr "美国"
 
 #: ../../source/supported_resources/supported_datasets.rst:12
 #: ../../source/supported_resources/supported_datasets.rst:18
@@ -708,7 +708,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_datasets.rst:36
 #: ../../source/supported_resources/supported_datasets.rst:59
 msgid "Daily"
-msgstr ""
+msgstr "日频"
 
 #: ../../source/supported_resources/supported_datasets.rst:12
 msgid "26"
@@ -782,7 +782,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_datasets.rst:36
 msgid "Canada"
-msgstr ""
+msgstr "加拿大"
 
 #: ../../source/supported_resources/supported_datasets.rst:36
 msgid "48"
@@ -802,13 +802,13 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_datasets.rst:43
 msgid "China"
-msgstr ""
+msgstr "中国"
 
 #: ../../source/supported_resources/supported_datasets.rst:43
 #: ../../source/supported_resources/supported_datasets.rst:48
 #: ../../source/supported_resources/supported_datasets.rst:53
 msgid "Weekly"
-msgstr ""
+msgstr "周频"
 
 #: ../../source/supported_resources/supported_datasets.rst:43
 msgid "30"
@@ -832,7 +832,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_datasets.rst:48
 msgid "Hong Kong, China"
-msgstr ""
+msgstr "中国香港"
 
 #: ../../source/supported_resources/supported_datasets.rst:48
 msgid "53"
@@ -860,11 +860,11 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_datasets.rst:59
 msgid "Cryptocurrency"
-msgstr ""
+msgstr "加密货币"
 
 #: ../../source/supported_resources/supported_datasets.rst:59
 msgid "World"
-msgstr ""
+msgstr "全球"
 
 #: ../../source/supported_resources/supported_datasets.rst:59
 msgid "43"
@@ -880,7 +880,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_datasets.rst:68
 msgid "Components of Datasets"
-msgstr ""
+msgstr "数据集组成成分"
 
 #: ../../source/supported_resources/supported_datasets.rst:70
 msgid ""
@@ -888,46 +888,47 @@ msgid ""
 "included in ``FinOL``. The assets cover major global equity, futures, and"
 " other financial markets."
 msgstr ""
+"本节列出了 ``FinOL`` 中包含的每个数据集的完整组成成分列表。这些资产涵盖全球主要股票、期货和其他金融市场。"
 
 #: ../../source/supported_resources/supported_datasets.rst:74
 msgid "Components of NYSE(O) Dataset"
-msgstr ""
+msgstr "NYSE(O) 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:81
 msgid "Components of NYSE(N) Dataset"
-msgstr ""
+msgstr "NYSE(N) 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:88
 msgid "Components of DJIA Dataset"
-msgstr ""
+msgstr "DJIA 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:95
 msgid "Components of SP500 Dataset"
-msgstr ""
+msgstr "SP500 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:102
 msgid "Components of TSE Dataset"
-msgstr ""
+msgstr "TSE 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:109
 msgid "Components of SSE Dataset"
-msgstr ""
+msgstr "SSE 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:116
 msgid "Components of HSI Dataset"
-msgstr ""
+msgstr "HSI 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:123
 msgid "Components of CMEG Dataset"
-msgstr ""
+msgstr "CMEG 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:130
 msgid "Components of CRYPTO Dataset"
-msgstr ""
+msgstr "CRYPTO 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_features.rst:4
 msgid "FinOL Features"
-msgstr ""
+msgstr "FinOL 特征"
 
 #: ../../source/supported_resources/supported_features.rst:6
 msgid ""
@@ -939,10 +940,13 @@ msgid ""
 "please refer to "
 ":func:`~finol.data_layer.DatasetLoader.feature_engineering`."
 msgstr ""
+"本节提供 ``FinOL`` 中关键数据特征的详细定义。这些特征有助于从多个角度描述和分析财务时间序列。"
+"下面的表格将这些特征分为 8 大类，并列出了它们的名称、函数调用和描述。"
+"详细的计算过程，请参考 ：func:`~finol.data_layer.DatasetLoader.feature_engineering`。"
 
 #: ../../source/supported_resources/supported_features.rst:19
 msgid "OHLCV Features"
-msgstr ""
+msgstr "OHLCV 特征"
 
 #: ../../source/supported_resources/supported_features.rst:24
 #: ../../source/supported_resources/supported_features.rst:52
@@ -953,7 +957,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_features.rst:338
 #: ../../source/supported_resources/supported_features.rst:360
 msgid "Feature Name"
-msgstr ""
+msgstr "特征名称"
 
 #: ../../source/supported_resources/supported_features.rst:25
 #: ../../source/supported_resources/supported_features.rst:53
@@ -964,7 +968,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_features.rst:339
 #: ../../source/supported_resources/supported_features.rst:361
 msgid "Function Call"
-msgstr ""
+msgstr "函数调用"
 
 #: ../../source/supported_resources/supported_features.rst:26
 #: ../../source/supported_resources/supported_features.rst:54
@@ -975,7 +979,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_features.rst:340
 #: ../../source/supported_resources/supported_features.rst:362
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../source/supported_resources/supported_features.rst:27
 msgid "OPEN"
@@ -2804,10 +2808,11 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_visualization.rst:6
 msgid ""
-"The FinOL project provides a suite of visualization tools to facilitate a"
+"The ``FinOL`` provides a suite of visualization tools to facilitate a"
 " comprehensive evaluation of data-driven OLPS research. Here are some "
 "examples:"
 msgstr ""
+"``FinOL`` 提供了一套可视化工具，以促进对数据驱动的 OLPS 研究进行全面评估。以下是一些例子："
 
 #: ../../source/supported_resources/supported_visualization.rst:10
 msgid "Dynamic Training/Validation Loss Visualization"

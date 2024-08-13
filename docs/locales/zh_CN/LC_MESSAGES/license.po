@@ -11,7 +11,7 @@ msgstr ""
 "POT-Creation-Date: 2024-08-13 01:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: zh\n"
+"Language: zh_CN\n"
 "Language-Team: zh <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../../source/license.rst:2
 msgid "License"
-msgstr ""
+msgstr "许可证"
 
 #: ../../source/license.rst:4
 msgid ""
 "Released under the `MIT License "
 "<https://github.com/jiahaoli57/finol/blob/main/LICENSE>`__."
 msgstr ""
-
+"根据 `MIT 许可证 <https://github.com/jiahaoli57/finol/blob/main/LICENSE>`__ 发布。"

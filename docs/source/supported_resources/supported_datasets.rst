@@ -6,7 +6,7 @@ FinOL Datasets
 .. table::
 
    +--------------------------+----------------+-----------------+-----------+--------+---------------+--------------------+
-   | Name                     | Market         | Country/Region  | Data      | # of   | Data Range    | # of               |
+   | Name                     | Market         | Country/Region  | Data      | # of   | Date Range    | # of               |
    |                          |                |                 | Frequency | Assets |               | Periods            |
    +==========================+================+=================+===========+========+===============+====================+
    | `NYSE(O)                 | Stock          | United States   | Daily     | 26     | 03/July./1962 | 5,651:             |

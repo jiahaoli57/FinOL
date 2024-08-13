@@ -11,7 +11,7 @@ msgstr ""
 "POT-Creation-Date: 2024-08-13 01:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: zh\n"
+"Language: zh_CN\n"
 "Language-Team: zh <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
@@ -75,6 +75,7 @@ msgid ""
 "Proportion of wealth invested in asset :math:`i` at the beginning of the "
 ":math:`t`-th trading period."
 msgstr ""
+"在交易期 :math:`t` 开始时，投资于资产 :math:`i` 的财富比例。"
 
 #: ../../source/background.rst:33
 msgid ":math:`\\mathbf{b}_t`"
@@ -85,6 +86,7 @@ msgid ""
 ":math:`m`-dimensional portfolio vector at the beginning of the "
 ":math:`t`-th trading period."
 msgstr ""
+"在交易期 :math:`t` 开始时，:math:`m` 维的投资组合向量。"
 
 #: ../../source/background.rst:35
 msgid ":math:`{\\mathbf{b}}_{1}`"
@@ -95,6 +97,7 @@ msgid ""
 "Initial portfolio vector, typically a uniform distribution :math:`(1/m, "
 "\\ldots, 1/m)`."
 msgstr ""
+"初始投资组合向量，通常是均匀分布的向量 :math:`(1/m, \\ldots, 1/m)`。"
 
 #: ../../source/background.rst:37
 msgid ":math:`\\mathbf{b}_{t}^{\\top} \\mathbf{x}_t`"
@@ -102,9 +105,9 @@ msgstr ""
 
 #: ../../source/background.rst:38
 msgid ""
-"Daily return of the portfolio at the end of the :math:`t`-th trading "
-"period."
+"Daily return of the portfolio at the end of the :math:`t`-th trading period."
 msgstr ""
+"交易期 :math:`t` 结束时投资组合的日回报。"
 
 #: ../../source/background.rst:39
 msgid ":math:`m`"
@@ -113,6 +116,7 @@ msgstr ""
 #: ../../source/background.rst:40
 msgid "Number of assets in the financial market."
 msgstr ""
+"金融市场上的资产数量。"
 
 #: ../../source/background.rst:41
 msgid ":math:`n`"
@@ -121,6 +125,7 @@ msgstr ""
 #: ../../source/background.rst:42
 msgid "Number of discrete trading periods."
 msgstr ""
+"离散交易期总数。"
 
 #: ../../source/background.rst:43
 msgid ":math:`S_n`"
@@ -129,6 +134,7 @@ msgstr ""
 #: ../../source/background.rst:44
 msgid "Final wealth achieved at the end of the :math:`n`-th trading period."
 msgstr ""
+"在第 :math:`n` 个交易期结束时获得的最终财富。"
 
 #: ../../source/background.rst:45
 msgid ":math:`S_0`"
@@ -137,6 +143,7 @@ msgstr ""
 #: ../../source/background.rst:46
 msgid "Initial value of the portfolio, normally set to 1."
 msgstr ""
+"投资组合的初始价值，通常设置为 1。"
 
 #: ../../source/background.rst:47
 msgid ":math:`x_{t,i}`"
@@ -144,9 +151,9 @@ msgstr ""
 
 #: ../../source/background.rst:48
 msgid ""
-"Price relative of asset :math:`i` at the end of the :math:`t`-th trading "
-"period."
+"Price relative of asset :math:`i` at the end of the :math:`t`-th trading period."
 msgstr ""
+"在交易期 :math:`t` 结束时，资产 :math:`i` 的相对价格。"
 
 #: ../../source/background.rst:49
 msgid ":math:`\\mathbf{x}_t`"
@@ -154,9 +161,9 @@ msgstr ""
 
 #: ../../source/background.rst:50
 msgid ""
-":math:`m`-dimensional non-negative price relatives vector at the end of "
-"the :math:`t`-th trading period."
+":math:`m`-dimensional non-negative price relatives vector at the end of the :math:`t`-th trading period."
 msgstr ""
+"在交易期 :math:`t` 结束时，:math:`m` 维的非负相对价格向量。"
 
 #: ../../source/background.rst:51
 msgid ":math:`\\Delta_m`"
@@ -164,13 +171,13 @@ msgstr ""
 
 #: ../../source/background.rst:52
 msgid ""
-"Simplex constraint indicating the portfolio is fully self-financing "
-"without leverage or shorting."
+"Simplex constraint indicating the portfolio is fully self-financing without leverage or shorting."
 msgstr ""
+"单纯形约束，表明投资组合是完全自融资的，不允许杠杆或做空。"
 
 #: ../../source/background.rst:56
 msgid "Problem Formulation"
-msgstr ""
+msgstr "问题定义"
 
 #: ../../source/background.rst:58
 msgid ""
@@ -186,6 +193,11 @@ msgid ""
 "price of asset :math:`i` on the :math:`(t-1)`-th trading period, i.e., "
 ":math:`x_{t,i}={C_{t,i}}/{C_{t-1,i}}`."
 msgstr ""
+"在在线投资组合选择的背景下，我们分析了一个由 :math:`m` 种资产组成的金融市场，这些资产在由 :math:`n` 个离散交易期 (术语 "
+"\"周期\"的定义是灵活的) 组成的特定时间段内进行观察。在第 :math:`t` 个交易期结束时，"
+"我们使用一个 :math:`m` 维的非负相对价格向量 :math:`\\mathbf{x}_t=(x_{t,1},\\ldots,x_{t,m}) \\in \\mathbb{R}_{+}^{m}` "
+"来表示 :math:`m` 个资产的表现，其中元素 :math:`x_{t,i}` 等于第 :math:`t` 个交易期资产 :math:`i` "
+"的收盘价除以第 :math:`(t-1)` 个交易期资产 :math:`i` 的收盘价，即 :math:`x_{t,i}={C_{t,i}}/{C_{t-1,i}}`。"
 
 #: ../../source/background.rst:67
 msgid ""
@@ -201,6 +213,12 @@ msgid ""
 "indicates the portfolio is fully self-financing without leverage or "
 "shorting."
 msgstr ""
+"在第 :math:`t` 个交易期开始之前，利用过去的历史信息，"
+"我们可以构建一个投资组合向量 :math:`\\mathbf{b}_t=(b_{t,1},\\ldots,b_{t,m}) \\in \\mathbb{R}^m` "
+"以在 :math:`m` 个资产中分配我们的财富。每个元素 :math:`b_{t,i}` "
+"代表在第 :math:`t` 个交易期开始时，投资于资产 :math:`i` 的财富比例。投资组合显然需要"
+"满足简单约束：:math:`\\mathbf{b}_t \\in \\Delta_m`，其中其中：:math:`b_{t,i} \\ge 0` 且 "
+":math:`\\sum\\nolimits_{i=1}^{m}{{{b}_{t,i}}}=1`。 这个约束表明投资组合是完全自融资的，不允许杠杆或做空。"
 
 #: ../../source/background.rst:75
 msgid ""
@@ -210,6 +228,9 @@ msgid ""
 " the final wealth achieved at the end of the :math:`n`-th trading period "
 "is:"
 msgstr ""
+"因此，在第 :math:`t` 个交易期结束时，投资组合的每日回报定义为 :math:`\\mathbf{b}_{t}^{\\top}  "
+"\\mathbf{x}_t = \\sum\\nolimits_{i=1}^{m} b_{t,i}x_{t,i}`。据此，"
+"投资组合在第 :math:`n` 个交易期结束时实现的最终财富为："
 
 #: ../../source/background.rst:79
 msgid ""
@@ -225,6 +246,8 @@ msgid ""
 "portfolio vector is initialized to a uniform distribution, i.e., "
 ":math:`{\\mathbf{b}}_{1} = (1/m, \\ldots, 1/m)`."
 msgstr ""
+"其中，在不失一般性的前提下，投资组合的初始值通常设置为 1，即：:math:`{S}_{0} = 1`；同时，"
+"投资组合向量初始化为均匀分布的向量，即：:math:`{\\mathbf{b}}_{1} = (1/m, \\ldots, 1/m)`。"
 
 #: ../../source/background.rst:88
 msgid ""
@@ -232,4 +255,5 @@ msgid ""
 "wealth, which depends entirely on the portfolio vector generated by the "
 "data-driven method in each period."
 msgstr ""
-
+"显然，这项任务的目标是最大化最终的投资组合财富，"
+"而这完全取决于数据驱动法在每个时期生成的投资组合向量。"
