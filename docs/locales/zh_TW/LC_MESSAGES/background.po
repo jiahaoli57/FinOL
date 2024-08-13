@@ -1,0 +1,231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, FinOL Contributors
+# This file is distributed under the same license as the FinOL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FinOL 0.1.29\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-13 17:52+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_TW\n"
+"Language-Team: zh_TW <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/background.rst:2
+msgid "Background"
+msgstr ""
+
+#: ../../source/background.rst:5
+msgid ""
+"Early online portfolio selection (OLPS) methods relied on a priori "
+"assumptions about market dynamics and mathematical optimization. With "
+"increased computing power and data, data-driven OLPS methods that "
+"directly learn from data have gained attention."
+msgstr ""
+
+#: ../../source/background.rst:9
+msgid ""
+"While various data-driven OLPS methods have shown promise, evaluating and"
+" comparing them remains challenging. Without standardized datasets and "
+"fair comparisons, it's unclear which method truly performs best in real-"
+"world environments, hindering progress in this field."
+msgstr ""
+
+#: ../../source/background.rst:14
+msgid ""
+"Researchers often default to assuming newer methods are superior, but "
+"this is irresponsible without consistent test conditions. Financial time "
+"series are highly non-stationary, so the same method can exhibit "
+"drastically different performance on different datasets."
+msgstr ""
+
+#: ../../source/background.rst:19
+msgid ""
+"To address this, we introduce ``FinOL``, a new finance benchmark platform"
+" designed for data-driven OLPS research. ``FinOL`` provides diverse "
+"financial datasets and extensive benchmark results for fair comparison."
+msgstr ""
+
+#: ../../source/background.rst:24 ../../source/background.rst:29
+msgid "Notation"
+msgstr ""
+
+#: ../../source/background.rst:30
+msgid "Description"
+msgstr ""
+
+#: ../../source/background.rst:31
+msgid ":math:`b_{t,i}`"
+msgstr ""
+
+#: ../../source/background.rst:32
+msgid ""
+"Proportion of wealth invested in asset :math:`i` at the beginning of the "
+":math:`t`-th trading period."
+msgstr ""
+
+#: ../../source/background.rst:33
+msgid ":math:`\\mathbf{b}_t`"
+msgstr ""
+
+#: ../../source/background.rst:34
+msgid ""
+":math:`m`-dimensional portfolio vector at the beginning of the "
+":math:`t`-th trading period."
+msgstr ""
+
+#: ../../source/background.rst:35
+msgid ":math:`{\\mathbf{b}}_{1}`"
+msgstr ""
+
+#: ../../source/background.rst:36
+msgid ""
+"Initial portfolio vector, typically a uniform distribution :math:`(1/m, "
+"\\ldots, 1/m)`."
+msgstr ""
+
+#: ../../source/background.rst:37
+msgid ":math:`\\mathbf{b}_{t}^{\\top} \\mathbf{x}_t`"
+msgstr ""
+
+#: ../../source/background.rst:38
+msgid ""
+"Daily return of the portfolio at the end of the :math:`t`-th trading "
+"period."
+msgstr ""
+
+#: ../../source/background.rst:39
+msgid ":math:`m`"
+msgstr ""
+
+#: ../../source/background.rst:40
+msgid "Number of assets in the financial market."
+msgstr ""
+
+#: ../../source/background.rst:41
+msgid ":math:`n`"
+msgstr ""
+
+#: ../../source/background.rst:42
+msgid "Number of discrete trading periods."
+msgstr ""
+
+#: ../../source/background.rst:43
+msgid ":math:`S_n`"
+msgstr ""
+
+#: ../../source/background.rst:44
+msgid "Final wealth achieved at the end of the :math:`n`-th trading period."
+msgstr ""
+
+#: ../../source/background.rst:45
+msgid ":math:`S_0`"
+msgstr ""
+
+#: ../../source/background.rst:46
+msgid "Initial value of the portfolio, normally set to 1."
+msgstr ""
+
+#: ../../source/background.rst:47
+msgid ":math:`x_{t,i}`"
+msgstr ""
+
+#: ../../source/background.rst:48
+msgid ""
+"Price relative of asset :math:`i` at the end of the :math:`t`-th trading "
+"period."
+msgstr ""
+
+#: ../../source/background.rst:49
+msgid ":math:`\\mathbf{x}_t`"
+msgstr ""
+
+#: ../../source/background.rst:50
+msgid ""
+":math:`m`-dimensional non-negative price relatives vector at the end of "
+"the :math:`t`-th trading period."
+msgstr ""
+
+#: ../../source/background.rst:51
+msgid ":math:`\\Delta_m`"
+msgstr ""
+
+#: ../../source/background.rst:52
+msgid ""
+"Simplex constraint indicating the portfolio is fully self-financing "
+"without leverage or shorting."
+msgstr ""
+
+#: ../../source/background.rst:56
+msgid "Problem Formulation"
+msgstr ""
+
+#: ../../source/background.rst:58
+msgid ""
+"In the context of online portfolio selection, we analyze a financial "
+"market consisting :math:`m` assets observed during a specified time "
+"horizon comprising :math:`n` discrete trading periods (the term "
+"\"periods\" is defined flexibly). At the end of the :math:`t`-th trading "
+"period, we use a :math:`m`-dimensional non-negative price relatives "
+"vector :math:`\\mathbf{x}_t=(x_{t,1},\\ldots,x_{t,m}) \\in "
+"\\mathbb{R}_{+}^{m}` to represent the performance of the :math:`m` "
+"assets, where each element :math:`x_{t,i}` equals the close price of "
+"asset :math:`i` on the :math:`t`-th trading period divided by the close "
+"price of asset :math:`i` on the :math:`(t-1)`-th trading period, i.e., "
+":math:`x_{t,i}={C_{t,i}}/{C_{t-1,i}}`."
+msgstr ""
+
+#: ../../source/background.rst:67
+msgid ""
+"Before the start of the :math:`t`-th trading period, using past "
+"historical information, we can construct a portfolio vector "
+":math:`\\mathbf{b}_t=(b_{t,1},\\ldots,b_{t,m}) \\in \\mathbb{R}^m` to "
+"allocate our wealth among :math:`m` assets. Each element :math:`b_{t,i}` "
+"represents the proportion of wealth invested in asset :math:`i` at the "
+"beginning of the :math:`t`-th trading period. A portfolio clearly needs "
+"to satisfy the simplex constraint :math:`\\mathbf{b}_t \\in \\Delta_m`, "
+"where :math:`b_{t,i} \\ge 0` and "
+":math:`\\sum\\nolimits_{i=1}^{m}{{{b}_{t,i}}}=1`. This constraint "
+"indicates the portfolio is fully self-financing without leverage or "
+"shorting."
+msgstr ""
+
+#: ../../source/background.rst:75
+msgid ""
+"Therefore, at the end of the :math:`t`-th trading period, the daily "
+"return of the portfolio is defined as :math:`\\mathbf{b}_{t}^{\\top} "
+"\\mathbf{x}_t = \\sum\\nolimits_{i=1}^{m} b_{t,i}x_{t,i}`. Based on this,"
+" the final wealth achieved at the end of the :math:`n`-th trading period "
+"is:"
+msgstr ""
+
+#: ../../source/background.rst:79
+msgid ""
+"{{S}_{n}}={{S}_{0}}\\prod\\limits_{t=1}^{n}{\\mathbf{b}_{t}^{\\top}\n"
+"            "
+"{\\mathbf{x}_{t}}}={{S}_{0}}\\prod\\limits_{t=1}^{n}{\\sum\\limits_{i=1}^{m}{{{b}_{t,i}}{{x}_{t,i}}}},"
+msgstr ""
+
+#: ../../source/background.rst:84
+msgid ""
+"where, without loss of generality, the initial value of the portfolio is "
+"normally set to 1, i.e., :math:`{S}_{0} = 1`; at the same time, the "
+"portfolio vector is initialized to a uniform distribution, i.e., "
+":math:`{\\mathbf{b}}_{1} = (1/m, \\ldots, 1/m)`."
+msgstr ""
+
+#: ../../source/background.rst:88
+msgid ""
+"Obviously, the goal of this task is to maximize the final portfolio "
+"wealth, which depends entirely on the portfolio vector generated by the "
+"data-driven method in each period."
+msgstr ""
+

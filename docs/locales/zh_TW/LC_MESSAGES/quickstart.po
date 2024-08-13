@@ -1,0 +1,127 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, FinOL Contributors
+# This file is distributed under the same license as the FinOL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FinOL 0.1.29\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-13 17:52+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_TW\n"
+"Language-Team: zh_TW <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/quickstart.rst:2
+msgid "Quickstart"
+msgstr ""
+
+#: ../../source/quickstart.rst:4
+msgid ""
+"This guide will help you get started with ``FinOL``. To lower the "
+"barriers for the research community, ``FinOL`` provides a complete data-"
+"training-testing suite with just three lines of command."
+msgstr ""
+
+#: ../../source/quickstart.rst:10
+msgid "Command Line Usage"
+msgstr ""
+
+#: ../../source/quickstart.rst:23
+msgid ""
+"Before running the above commands, users can first configure some "
+"parameters through the config file to customize the usage according to "
+"their needs. For example, setting the device, selecting a dataset, "
+"adjusting the data pre-processing parameters, and choosing a model, etc. "
+"The specific configuration method is as follows:"
+msgstr ""
+
+#: ../../source/quickstart.rst:44
+msgid "|Open in Colab|"
+msgstr ""
+
+#: ../../source/quickstart.rst
+msgid "Open in Colab"
+msgstr ""
+
+#: ../../source/quickstart.rst:47
+msgid "GUI Usage"
+msgstr ""
+
+#: ../../source/quickstart.rst:49
+msgid ""
+"In addition to the command line usage, ``FinOL`` also providesp a GUI "
+"interface that allows users to achieve the same functionality as the "
+"command line usage in a more intuitive and visual way. The GUI interace "
+"includes options for dataset selection, model configuration, training, "
+"and evaluation, allowing users to easily customize the parameters and run"
+" the exeriments without the need to write any code."
+msgstr ""
+
+#: ../../source/quickstart.rst:60
+msgid "Overall Framework of FinOL GUI"
+msgstr ""
+
+#: ../../source/quickstart.rst:62
+msgid "Data Layer Panel"
+msgstr ""
+
+#: ../../source/quickstart.rst:64
+msgid ""
+"In the data layer panel, users can choose from a variety of available "
+"datasets, such as DJIA, S&P500, and Nasdaq Composite. .. The GUI also "
+"displays information about each dataset, such as the number of samples "
+"and features, to help users make an informed decision."
+msgstr ""
+
+#: ../../source/quickstart.rst:70
+msgid "Model Layer Panel"
+msgstr ""
+
+#: ../../source/quickstart.rst:72
+msgid ""
+"The model layer panel allows users to select the model architecture and "
+"other settings. Users can choose from a range of pre-defined models or "
+"create their own custom models. .. The xx provides detailed information "
+"about each model and its parameters, making it easier for users to "
+"understand and customize the model."
+msgstr ""
+
+#: ../../source/quickstart.rst:78
+msgid "Optimization Layer Panel"
+msgstr ""
+
+#: ../../source/quickstart.rst:80
+msgid ""
+"The optimization layer panel enables users to monitor the training "
+"process. Users can view real-time metrics, such as loss, and adjust the "
+"training parameters as needed."
+msgstr ""
+
+#: ../../source/quickstart.rst:85
+msgid "Evaluation Layer Panel"
+msgstr ""
+
+#: ../../source/quickstart.rst:87
+msgid ""
+"The evaluation layer panel enables users to evaluate the trained model's "
+"performance. The GUI also provides visualizations of the model's "
+"performance, making it easier to interpret the results."
+msgstr ""
+
+#: ../../source/quickstart.rst:91
+msgid ""
+"By using the ``FinOL`` GUI, users can quickly and easily configure, "
+"train, and evaluate financial models without the need to write complex "
+"code.  The intuitive interface and visual feedback make the process more "
+"accessible and user-friendly, especially for researchers and "
+"practitioners who are new to the field of financial modeling."
+msgstr ""
+

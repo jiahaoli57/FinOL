@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/finol_gui.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api/api.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api/api.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/background.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/background.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/contact_us.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/contact_us.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/file_structure.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/file_structure.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/index.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/index.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/installation.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/installation.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/license.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/license.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/quickstart.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/quickstart.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources/supported_resources.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources/supported_resources.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/config.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/api/config.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/background.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/background.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_baselines.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_baselines.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_datasets.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_datasets.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_features.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_features.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization.rst" afterDir="false" />
-    </list>
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -550,14 +519,7 @@
       <workItem from="1723484215328" duration="288000" />
       <workItem from="1723484613997" duration="2045000" />
       <workItem from="1723520304988" duration="490000" />
-      <workItem from="1723520851634" duration="27302000" />
-    </task>
-    <task id="LOCAL-00263" summary="build docs; optimize code">
-      <created>1723384649280</created>
-      <option name="number" value="00263" />
-      <option name="presentableId" value="LOCAL-00263" />
-      <option name="project" value="LOCAL" />
-      <updated>1723384649280</updated>
+      <workItem from="1723520851634" duration="27649000" />
     </task>
     <task id="LOCAL-00264" summary="build docs; optimize code">
       <created>1723387607216</created>
@@ -895,7 +857,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723536842506</updated>
     </task>
-    <option name="localTasksCounter" value="312" />
+    <task id="LOCAL-00312" summary="build docs">
+      <created>1723563562626</created>
+      <option name="number" value="00312" />
+      <option name="presentableId" value="LOCAL-00312" />
+      <option name="project" value="LOCAL" />
+      <updated>1723563562626</updated>
+    </task>
+    <option name="localTasksCounter" value="313" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

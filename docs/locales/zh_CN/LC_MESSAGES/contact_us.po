@@ -1,0 +1,31 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, FinOL Contributors
+# This file is distributed under the same license as the FinOL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FinOL 0.1.29\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-13 01:01+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/contact_us.rst:4
+msgid "Contact Us"
+msgstr "联系我们"
+
+#: ../../source/contact_us.rst:6
+msgid ""
+"For inquiries, please get in touch with us at finol.official@gmail.com "
+"(Monday to Friday, 9:00 AM to 6:00 PM)"
+msgstr ""
+"如有任何询问，请在周一至周五，上午9点至下午6点之间发送电子邮件至 finol.official@gmail.com。"

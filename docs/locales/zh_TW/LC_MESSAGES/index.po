@@ -1,0 +1,190 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, FinOL Contributors
+# This file is distributed under the same license as the FinOL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FinOL 0.1.29\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-13 17:52+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_TW\n"
+"Language-Team: zh_TW <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/index.rst:8
+msgid "FinOL: Towards open benchmarking for data-driven OLPS"
+msgstr ""
+
+#: ../../source/index.rst:10
+msgid ""
+"``FinOL`` represents a pioneering open database for facilitating data-"
+"driven OLPS research. As an ambitious project, it collects and organizes "
+"extensive assets from global markets over half a century, it provides a "
+"long-awaited unified platform to advance data-driven OLPS research."
+msgstr ""
+
+#: ../../source/index.rst:15
+msgid "|:star:| What's NEW!"
+msgstr ""
+
+#: ../../source/index.rst:20
+msgid "Update"
+msgstr ""
+
+#: ../../source/index.rst:20
+msgid "Status"
+msgstr ""
+
+#: ../../source/index.rst:20
+msgid "Label"
+msgstr ""
+
+#: ../../source/index.rst:23
+msgid "New release! ``FinOL`` is going to release the official website"
+msgstr ""
+
+#: ../../source/index.rst:23 ../../source/index.rst:27
+#: ../../source/index.rst:33
+msgid "Coming soon......"
+msgstr ""
+
+#: ../../source/index.rst:23 ../../source/index.rst:39
+#: ../../source/index.rst:83 ../../source/index.rst:89
+msgid "Release"
+msgstr ""
+
+#: ../../source/index.rst:27
+msgid ""
+"New metric! ``FinOL`` is going to support the `t-test <https://www.scienc"
+" edirect.com/science/article/pii/S0004370215000168>`__ metric"
+msgstr ""
+
+#: ../../source/index.rst:27 ../../source/index.rst:33
+#: ../../source/index.rst:45 ../../source/index.rst:51
+#: ../../source/index.rst:57 ../../source/index.rst:63
+#: ../../source/index.rst:69 ../../source/index.rst:76
+msgid "Enhancement"
+msgstr ""
+
+#: ../../source/index.rst:33
+msgid ""
+"New model! ``FinOL`` is going to support the `AlphaStock <h "
+"ttps://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ model"
+msgstr ""
+
+#: ../../source/index.rst:39
+msgid ""
+"New release! ``FinOL`` now releases the `official docs "
+"<https://finol.readthedocs.io/en/latest/>`__"
+msgstr ""
+
+#: ../../source/index.rst:39
+msgid "Released on 22 July 2024"
+msgstr ""
+
+#: ../../source/index.rst:45
+msgid ""
+"New feature! ``FinOL`` now supports the `Auto Hyperparameter Tuning "
+"<https://dl.acm.org/doi/10.1145/3292500.3330701>`__ feature"
+msgstr ""
+
+#: ../../source/index.rst:45
+msgid "Supported since 22 July 2024"
+msgstr ""
+
+#: ../../source/index.rst:51
+msgid ""
+"New feature! ``FinOL`` now supports the `Radar Chart "
+"<https://en.wikipedia.org/wiki/Radar_chart>`__ evaluation"
+msgstr ""
+
+#: ../../source/index.rst:51
+msgid "Supported since 10 June 2024"
+msgstr ""
+
+#: ../../source/index.rst:57
+msgid ""
+"New model! ``FinOL`` now supports the `AlphaPortfolio <https://pa "
+"pers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ model"
+msgstr ""
+
+#: ../../source/index.rst:57
+msgid "Supported since 06 June 2024"
+msgstr ""
+
+#: ../../source/index.rst:63
+msgid ""
+"New feature! ``FinOL`` now supports the `Economic Distillation "
+"<https://pa pers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ feature"
+msgstr ""
+
+#: ../../source/index.rst:63
+msgid "Supported since 15 May 2024"
+msgstr ""
+
+#: ../../source/index.rst:69
+msgid ""
+"New feature! ``FinOL`` now supports the `Interpretability Analysis <h "
+"ttps://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ feature"
+msgstr ""
+
+#: ../../source/index.rst:69
+msgid "Supported since 16 April 2024"
+msgstr ""
+
+#: ../../source/index.rst:76
+msgid ""
+"New feature! ``FinOL`` now supports the `Winner Assets Selection <h "
+"ttps://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ feature"
+msgstr ""
+
+#: ../../source/index.rst:76
+msgid "Supported since 14 April 2024"
+msgstr ""
+
+#: ../../source/index.rst:83
+msgid "Release ``FinOL`` `tutorials <finol/tutorials>`__"
+msgstr ""
+
+#: ../../source/index.rst:83
+msgid "Released on 22 March 2024"
+msgstr ""
+
+#: ../../source/index.rst:89
+msgid ""
+"Release ``FinOL`` `v0.0.1 <https: "
+"//github.com/jiahaoli57/finol/releases/tag/v0.0.1>`__"
+msgstr ""
+
+#: ../../source/index.rst:89
+msgid "Released on 21 March 2024"
+msgstr ""
+
+#: ../../source/index.rst:98
+msgid "Contents"
+msgstr ""
+
+#: ../../source/index.rst:113
+msgid "Indices and tables"
+msgstr ""
+
+#: ../../source/index.rst:115
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../source/index.rst:116
+msgid ":ref:`modindex`"
+msgstr ""
+
+#: ../../source/index.rst:117
+msgid ":ref:`search`"
+msgstr ""
+

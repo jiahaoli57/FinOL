@@ -1,0 +1,2831 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, FinOL Contributors
+# This file is distributed under the same license as the FinOL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FinOL 0.1.29\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-13 17:52+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_TW\n"
+"Language-Team: zh_TW <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/supported_resources/index.rst:2
+msgid "FinOL Supports"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:4
+msgid "FinOL Baselines"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:9
+#: ../../source/supported_resources/supported_datasets.rst:9
+#: ../../source/supported_resources/supported_metrics.rst:9
+msgid "Name"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:9
+#: ../../source/supported_resources/supported_metrics.rst:9
+msgid "Category"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:9
+msgid "Source"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:9
+msgid "Journal/Conference"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:12
+#: ../../source/supported_resources/supported_baselines.rst:279
+#: ../../source/supported_resources/supported_baselines.rst:292
+#: ../../source/supported_resources/supported_datasets.rst:9
+msgid "Market"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:12
+#: ../../source/supported_resources/supported_baselines.rst:16
+#: ../../source/supported_resources/supported_baselines.rst:20
+#: ../../source/supported_resources/supported_baselines.rst:29
+msgid "Classic OLPS: Benchmark baseline"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:12
+#: ../../source/supported_resources/supported_baselines.rst:16
+msgid "–"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:16
+#: ../../source/supported_resources/supported_baselines.rst:222
+#: ../../source/supported_resources/supported_baselines.rst:223
+#: ../../source/supported_resources/supported_baselines.rst:224
+#: ../../source/supported_resources/supported_baselines.rst:225
+#: ../../source/supported_resources/supported_baselines.rst:286
+#: ../../source/supported_resources/supported_baselines.rst:289
+#: ../../source/supported_resources/supported_baselines.rst:318
+msgid "Best"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:20
+#: ../../source/supported_resources/supported_baselines.rst:291
+#: ../../source/supported_resources/supported_baselines.rst:299
+#: ../../source/supported_resources/supported_baselines.rst:306
+#: ../../source/supported_resources/supported_baselines.rst:312
+#: ../../source/supported_resources/supported_baselines.rst:313
+#: ../../source/supported_resources/supported_baselines.rst:317
+#: ../../source/supported_resources/supported_baselines.rst:362
+#: ../../source/supported_resources/supported_baselines.rst:364
+#: ../../source/supported_resources/supported_baselines.rst:367
+#: ../../source/supported_resources/supported_baselines.rst:370
+#: ../../source/supported_resources/supported_baselines.rst:371
+#: ../../source/supported_resources/supported_baselines.rst:378
+#: ../../source/supported_resources/supported_baselines.rst:379
+#: ../../source/supported_resources/supported_baselines.rst:383
+#: ../../source/supported_resources/supported_baselines.rst:386
+msgid "UCRP"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:20
+msgid ""
+"`Kelly 1956 <https://ieeexplore.ieee .org/abstract/document/6771227/>`__;"
+" `Cover 1991 <https: //onlinelibrary.wiley.com/doi/abs/10 "
+".1111/j.1467-9965.1991.tb00002.x>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:20
+msgid "*The Bell System Technical Journal*; *Mathematical Finance*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:29
+#: ../../source/supported_resources/supported_baselines.rst:212
+#: ../../source/supported_resources/supported_baselines.rst:213
+#: ../../source/supported_resources/supported_baselines.rst:214
+#: ../../source/supported_resources/supported_baselines.rst:215
+#: ../../source/supported_resources/supported_baselines.rst:218
+#: ../../source/supported_resources/supported_baselines.rst:237
+#: ../../source/supported_resources/supported_baselines.rst:276
+#: ../../source/supported_resources/supported_baselines.rst:304
+#: ../../source/supported_resources/supported_baselines.rst:309
+#: ../../source/supported_resources/supported_baselines.rst:346
+#: ../../source/supported_resources/supported_baselines.rst:348
+#: ../../source/supported_resources/supported_baselines.rst:349
+#: ../../source/supported_resources/supported_baselines.rst:350
+#: ../../source/supported_resources/supported_baselines.rst:351
+#: ../../source/supported_resources/supported_baselines.rst:353
+#: ../../source/supported_resources/supported_baselines.rst:392
+#: ../../source/supported_resources/supported_baselines.rst:394
+msgid "BCRP"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:29
+#: ../../source/supported_resources/supported_baselines.rst:38
+msgid ""
+"`Cover 1991 <https: //onlinelibrary.wiley.com/doi/abs/10 "
+".1111/j.1467-9965.1991.tb00002.x>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:29
+#: ../../source/supported_resources/supported_baselines.rst:38
+#: ../../source/supported_resources/supported_baselines.rst:44
+msgid "*Mathematical Finance*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:38
+#: ../../source/supported_resources/supported_baselines.rst:281
+#: ../../source/supported_resources/supported_baselines.rst:319
+#: ../../source/supported_resources/supported_baselines.rst:323
+#: ../../source/supported_resources/supported_baselines.rst:357
+#: ../../source/supported_resources/supported_baselines.rst:389
+msgid "UP"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:38
+#: ../../source/supported_resources/supported_baselines.rst:44
+#: ../../source/supported_resources/supported_baselines.rst:50
+#: ../../source/supported_resources/supported_baselines.rst:55
+#: ../../source/supported_resources/supported_baselines.rst:62
+msgid "Classic OLPS: Follow-the-winner"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:44
+#: ../../source/supported_resources/supported_baselines.rst:287
+#: ../../source/supported_resources/supported_baselines.rst:302
+#: ../../source/supported_resources/supported_baselines.rst:311
+#: ../../source/supported_resources/supported_baselines.rst:347
+#: ../../source/supported_resources/supported_baselines.rst:352
+#: ../../source/supported_resources/supported_baselines.rst:354
+#: ../../source/supported_resources/supported_baselines.rst:356
+#: ../../source/supported_resources/supported_baselines.rst:358
+#: ../../source/supported_resources/supported_baselines.rst:359
+#: ../../source/supported_resources/supported_baselines.rst:360
+#: ../../source/supported_resources/supported_baselines.rst:361
+#: ../../source/supported_resources/supported_baselines.rst:363
+msgid "EG"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:44
+msgid ""
+"`Helmbold et al. 1998 <https://onlinelibrary.wiley.com "
+"/doi/abs/10.1111/1467-9965.00058>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:50
+msgid "SCRP"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:50
+msgid ""
+"`Gaivoronski and Stella 2000 <https://link.springer.com "
+"/article/10.1023/A:1019271201970>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:50
+msgid "*Annals of Operations Research*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:55
+#: ../../source/supported_resources/supported_baselines.rst:219
+#: ../../source/supported_resources/supported_baselines.rst:220
+#: ../../source/supported_resources/supported_baselines.rst:221
+#: ../../source/supported_resources/supported_baselines.rst:238
+#: ../../source/supported_resources/supported_baselines.rst:244
+#: ../../source/supported_resources/supported_baselines.rst:247
+#: ../../source/supported_resources/supported_baselines.rst:288
+#: ../../source/supported_resources/supported_baselines.rst:320
+msgid "PPT"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:55
+msgid ""
+"`Lai et al. 2018 <https://ieeexplore.ie "
+"ee.org/abstract/document/7942104>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:55
+#: ../../source/supported_resources/supported_baselines.rst:131
+msgid "*IEEE Transactions on Neural Networks and Learning Systems*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:62
+#: ../../source/supported_resources/supported_baselines.rst:208
+#: ../../source/supported_resources/supported_baselines.rst:209
+#: ../../source/supported_resources/supported_baselines.rst:210
+#: ../../source/supported_resources/supported_baselines.rst:231
+#: ../../source/supported_resources/supported_baselines.rst:233
+#: ../../source/supported_resources/supported_baselines.rst:234
+#: ../../source/supported_resources/supported_baselines.rst:298
+msgid "SSPO"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:62
+msgid "`Lai et al. 2018 <https://www .jmlr.org/papers/v19/17-558.html>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:62
+msgid "*The Journal of Machine Learning Research*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:69
+#: ../../source/supported_resources/supported_baselines.rst:217
+#: ../../source/supported_resources/supported_baselines.rst:240
+#: ../../source/supported_resources/supported_baselines.rst:252
+#: ../../source/supported_resources/supported_baselines.rst:290
+#: ../../source/supported_resources/supported_baselines.rst:294
+#: ../../source/supported_resources/supported_baselines.rst:296
+msgid "ANTI\\ :sup:`1`\\"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:69
+#: ../../source/supported_resources/supported_baselines.rst:76
+#: ../../source/supported_resources/supported_baselines.rst:83
+#: ../../source/supported_resources/supported_baselines.rst:89
+#: ../../source/supported_resources/supported_baselines.rst:96
+#: ../../source/supported_resources/supported_baselines.rst:103
+#: ../../source/supported_resources/supported_baselines.rst:109
+#: ../../source/supported_resources/supported_baselines.rst:115
+#: ../../source/supported_resources/supported_baselines.rst:122
+msgid "Classic OLPS: Follow-the-loser"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:69
+#: ../../source/supported_resources/supported_baselines.rst:76
+msgid ""
+"`Borodin et al. 2004 <h ttps://proceedings.neurips.cc/paper_ "
+"files/paper/2003/hash/8c9f32e03aeb2e 3000825c8c875c4edd-Abstract.html>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:69
+#: ../../source/supported_resources/supported_baselines.rst:76
+msgid "*Advances in Neural Information Processing Systems*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:76
+#: ../../source/supported_resources/supported_baselines.rst:207
+#: ../../source/supported_resources/supported_baselines.rst:228
+#: ../../source/supported_resources/supported_baselines.rst:242
+#: ../../source/supported_resources/supported_baselines.rst:245
+#: ../../source/supported_resources/supported_baselines.rst:250
+#: ../../source/supported_resources/supported_baselines.rst:254
+#: ../../source/supported_resources/supported_baselines.rst:280
+#: ../../source/supported_resources/supported_baselines.rst:284
+msgid "ANTI\\ :sup:`2`\\"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:83
+#: ../../source/supported_resources/supported_baselines.rst:239
+#: ../../source/supported_resources/supported_baselines.rst:248
+msgid "PAMR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:83
+msgid ""
+"`Li et al. 2012 <https://link.springer.com/a "
+"rticle/10.1007/s10994-012-5281-z>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:83
+msgid "*Machine Learning*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:89
+msgid "CWMR-Var"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:89
+#: ../../source/supported_resources/supported_baselines.rst:96
+msgid "`Li et al. 2013 <https://dl.acm.org /doi/abs/10.1145/2435209.2435213>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:89
+#: ../../source/supported_resources/supported_baselines.rst:96
+msgid "*ACM Transactions on Knowledge Discovery from Data*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:96
+#: ../../source/supported_resources/supported_baselines.rst:249
+#: ../../source/supported_resources/supported_baselines.rst:253
+msgid "CWMR-Stdev"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:103
+#: ../../source/supported_resources/supported_baselines.rst:310
+msgid "OLMAR-S"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:103
+#: ../../source/supported_resources/supported_baselines.rst:109
+msgid ""
+"`Li et al. 2015 <https://www.sciencedirect.com/scien "
+"ce/article/pii/S0004370215000168>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:103
+#: ../../source/supported_resources/supported_baselines.rst:109
+msgid "*Artificial Intelligence*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:109
+msgid "OLMAR-E"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:115
+#: ../../source/supported_resources/supported_baselines.rst:241
+#: ../../source/supported_resources/supported_baselines.rst:300
+msgid "RMR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:115
+msgid ""
+"`Huang et al. 2016 <https://ieeexplore.ie "
+"ee.org/abstract/document/7465840>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:115
+msgid "*IEEE Transactions on Knowledge and Data Engineering*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:122
+#: ../../source/supported_resources/supported_baselines.rst:211
+msgid "RPRT"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:122
+msgid ""
+"`Lai et al. 2020 <https://ieeexplore.iee "
+"e.org/abstract/document/8411138/>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:122
+msgid "*IEEE Transactions on Systems, Man, and Cybernetics: Systems*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:131
+#: ../../source/supported_resources/supported_baselines.rst:251
+msgid "AICTR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:131
+#: ../../source/supported_resources/supported_baselines.rst:138
+msgid "Classic OLPS: Pattern-matching"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:131
+msgid ""
+"`Lai et al. 2018 <https://ieeexplore.ie "
+"ee.org/abstract/document/8356708>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:138
+#: ../../source/supported_resources/supported_baselines.rst:229
+#: ../../source/supported_resources/supported_baselines.rst:230
+#: ../../source/supported_resources/supported_baselines.rst:278
+msgid "KTPT"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:138
+msgid ""
+"`Lai et al. 2018 <https://link.springer.com/a "
+"rticle/10.1007/s10618-018-0579-5>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:138
+msgid "*Data Mining and Knowledge Discovery*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:146
+#: ../../source/supported_resources/supported_baselines.rst:301
+#: ../../source/supported_resources/supported_baselines.rst:303
+#: ../../source/supported_resources/supported_baselines.rst:307
+#: ../../source/supported_resources/supported_baselines.rst:316
+#: ../../source/supported_resources/supported_baselines.rst:322
+#: ../../source/supported_resources/supported_baselines.rst:324
+#: ../../source/supported_resources/supported_baselines.rst:368
+#: ../../source/supported_resources/supported_baselines.rst:369
+#: ../../source/supported_resources/supported_baselines.rst:372
+#: ../../source/supported_resources/supported_baselines.rst:373
+#: ../../source/supported_resources/supported_baselines.rst:374
+#: ../../source/supported_resources/supported_baselines.rst:377
+#: ../../source/supported_resources/supported_baselines.rst:380
+#: ../../source/supported_resources/supported_baselines.rst:381
+msgid "SP"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:146
+#: ../../source/supported_resources/supported_baselines.rst:152
+#: ../../source/supported_resources/supported_baselines.rst:158
+#: ../../source/supported_resources/supported_baselines.rst:166
+#: ../../source/supported_resources/supported_baselines.rst:172
+msgid "Classic OLPS: Meta-learning"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:146
+msgid ""
+"`Singer 1997 <https://www.worldscientific.com/d "
+"oi/abs/10.1142/s0129065797000434>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:146
+msgid "*International Journal of Neural Systems*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:152
+#: ../../source/supported_resources/supported_baselines.rst:227
+#: ../../source/supported_resources/supported_baselines.rst:235
+#: ../../source/supported_resources/supported_baselines.rst:283
+#: ../../source/supported_resources/supported_baselines.rst:314
+msgid "ONS"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:152
+msgid ""
+"`Agarwal et al. 2006 <https://dl.acm.org "
+"/doi/abs/10.1145/1143844.1143846>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:152
+msgid "*International Conference on Machine Learning*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:158
+#: ../../source/supported_resources/supported_baselines.rst:232
+#: ../../source/supported_resources/supported_baselines.rst:243
+#: ../../source/supported_resources/supported_baselines.rst:255
+#: ../../source/supported_resources/supported_baselines.rst:277
+#: ../../source/supported_resources/supported_baselines.rst:293
+#: ../../source/supported_resources/supported_baselines.rst:308
+#: ../../source/supported_resources/supported_baselines.rst:376
+msgid "GRW"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:158
+msgid ""
+"`Levina and Shafer 2008 <https://www.worldscientific.com/d "
+"oi/abs/10.1142/S0218488508005364>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:158
+msgid ""
+"*International Journal of Uncertainty, Fuzziness and Knowledge-Based "
+"Systems*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:166
+#: ../../source/supported_resources/supported_baselines.rst:282
+#: ../../source/supported_resources/supported_baselines.rst:297
+#: ../../source/supported_resources/supported_baselines.rst:321
+#: ../../source/supported_resources/supported_baselines.rst:382
+#: ../../source/supported_resources/supported_baselines.rst:384
+#: ../../source/supported_resources/supported_baselines.rst:387
+#: ../../source/supported_resources/supported_baselines.rst:388
+#: ../../source/supported_resources/supported_baselines.rst:390
+#: ../../source/supported_resources/supported_baselines.rst:391
+#: ../../source/supported_resources/supported_baselines.rst:393
+msgid "WAAS"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:166
+msgid ""
+"`Zhang and Yang 2017 <https://link.springer.com/a "
+"rticle/10.1007/s10614-016-9585-0>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:166
+msgid "*Computational Economics*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:172
+#: ../../source/supported_resources/supported_baselines.rst:366
+msgid "CW-OGD"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:172
+msgid ""
+"`Zhang et al. 2021 <https://www.sciencedirect.com/scien "
+"ce/article/pii/S0950705121007954>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:172
+msgid "*Knowledge-Based Systems*"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:181
+msgid "Benchmark Results"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:184
+msgid ""
+"We will continue to update the following leaderboards. If you have "
+"proposed new (classic or data-driven) OLPS models , you can send us your "
+"paper/code link (:ref:`contact_us`) or raise a pull request. We will add "
+"them to this repository and update the leaderboard as soon as possible."
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:189
+#: ../../source/supported_resources/supported_metrics.rst:12
+msgid "Cumulative Wealth"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:191
+msgid ""
+"As of July 2024, the top five baselines for profitability (quantified by "
+"the size of CW metric) are:"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:196
+#: ../../source/supported_resources/supported_baselines.rst:265
+#: ../../source/supported_resources/supported_baselines.rst:335
+msgid "Ranking"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:197
+#: ../../source/supported_resources/supported_baselines.rst:266
+#: ../../source/supported_resources/supported_baselines.rst:336
+msgid "NYSE(O)"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:198
+#: ../../source/supported_resources/supported_baselines.rst:267
+#: ../../source/supported_resources/supported_baselines.rst:337
+msgid "NYSE(N)"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:199
+#: ../../source/supported_resources/supported_baselines.rst:268
+#: ../../source/supported_resources/supported_baselines.rst:338
+msgid "DJIA"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:200
+#: ../../source/supported_resources/supported_baselines.rst:269
+#: ../../source/supported_resources/supported_baselines.rst:339
+msgid "SP500"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:201
+#: ../../source/supported_resources/supported_baselines.rst:270
+#: ../../source/supported_resources/supported_baselines.rst:340
+msgid "TSE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:202
+#: ../../source/supported_resources/supported_baselines.rst:271
+#: ../../source/supported_resources/supported_baselines.rst:341
+msgid "SSE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:203
+#: ../../source/supported_resources/supported_baselines.rst:272
+#: ../../source/supported_resources/supported_baselines.rst:342
+msgid "HSI"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:204
+#: ../../source/supported_resources/supported_baselines.rst:273
+#: ../../source/supported_resources/supported_baselines.rst:343
+msgid "CMEG"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:205
+#: ../../source/supported_resources/supported_baselines.rst:274
+#: ../../source/supported_resources/supported_baselines.rst:344
+msgid "CRYPTO"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:206
+#: ../../source/supported_resources/supported_baselines.rst:275
+#: ../../source/supported_resources/supported_baselines.rst:345
+msgid "|:1st_place_medal:| **1st**"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:216
+#: ../../source/supported_resources/supported_baselines.rst:285
+#: ../../source/supported_resources/supported_baselines.rst:355
+msgid "|:2nd_place_medal:| **2nd**"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:226
+#: ../../source/supported_resources/supported_baselines.rst:295
+#: ../../source/supported_resources/supported_baselines.rst:365
+msgid "|:3rd_place_medal:| **3rd**"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:236
+#: ../../source/supported_resources/supported_baselines.rst:305
+#: ../../source/supported_resources/supported_baselines.rst:375
+msgid "|:reminder_ribbon:| **4th**"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:246
+#: ../../source/supported_resources/supported_baselines.rst:315
+#: ../../source/supported_resources/supported_baselines.rst:385
+msgid "|:reminder_ribbon:| **5th**"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:258
+#: ../../source/supported_resources/supported_metrics.rst:25
+msgid "Maximum DrawDown"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:260
+msgid ""
+"As of July 2024, the top five baselines for risk resilience (quantified "
+"by the size of MDD metric) are:"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:327
+#: ../../source/supported_resources/supported_metrics.rst:29
+msgid "Average Turnover"
+msgstr ""
+
+#: ../../source/supported_resources/supported_baselines.rst:329
+msgid ""
+"As of July 2024, the top five baselines for practicality (quantified by "
+"the size of ATO metric) are:"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:4
+msgid "FinOL Datasets"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:9
+msgid "Country/Region"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:9
+msgid "Data Frequency"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:9
+msgid "# of Assets"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:9
+msgid "Date Range"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:9
+msgid "# of Periods"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:12
+msgid ""
+"`NYSE(O) <https://github.com/ai 4finol/FinOL_data/tree/m "
+"ain/datasets/NYSE(O)>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:12
+#: ../../source/supported_resources/supported_datasets.rst:18
+#: ../../source/supported_resources/supported_datasets.rst:24
+#: ../../source/supported_resources/supported_datasets.rst:30
+#: ../../source/supported_resources/supported_datasets.rst:36
+#: ../../source/supported_resources/supported_datasets.rst:43
+#: ../../source/supported_resources/supported_datasets.rst:48
+msgid "Stock"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:12
+#: ../../source/supported_resources/supported_datasets.rst:18
+#: ../../source/supported_resources/supported_datasets.rst:24
+#: ../../source/supported_resources/supported_datasets.rst:30
+#: ../../source/supported_resources/supported_datasets.rst:53
+msgid "United States"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:12
+#: ../../source/supported_resources/supported_datasets.rst:18
+#: ../../source/supported_resources/supported_datasets.rst:24
+#: ../../source/supported_resources/supported_datasets.rst:30
+#: ../../source/supported_resources/supported_datasets.rst:36
+#: ../../source/supported_resources/supported_datasets.rst:59
+msgid "Daily"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:12
+msgid "26"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:12
+msgid "03/July./1962 - 31/Dec./1984"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:12
+msgid "5,651: 3,390/1,130/1,131"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:18
+msgid ""
+"`NYSE(N) <https://github.com/ai 4finol/FinOL_data/tree/m "
+"ain/datasets/NYSE(N)>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:18
+msgid "403"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:18
+msgid "02/Jan./1985 - 30/June./2010"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:18
+msgid "6,430: 3,858/1,286/1,286"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:24
+msgid ""
+"`DJIA <https://github.com /ai4finol/FinOL_data/tre "
+"e/main/datasets/DJIA>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:24
+msgid "28"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:24
+msgid "14/Jan./2001 - 14/Jan./2003"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:24
+msgid "500: 300/100/100"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:30
+msgid ""
+"`SP500 <https://github.com/ ai4finol/FinOL_data/tree "
+"/main/datasets/SP500>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:30
+msgid "339"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:30
+msgid "02/Jan./1998 - 31/Jan./2003"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:30
+msgid "1,268: 756/256/256"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:36
+msgid "`TSE <https://github.co m/ai4finol/FinOL_data/tr ee/main/datasets/TSE>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:36
+msgid "Canada"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:36
+msgid "48"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:36
+msgid "12/Jan./1995 - 31/Dec./1998"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:36
+msgid "1,001: 600/200/200"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:43
+msgid "`SSE <https://github.co m/ai4finol/FinOL_data/tr ee/main/datasets/SSE>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:43
+msgid "China"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:43
+#: ../../source/supported_resources/supported_datasets.rst:48
+#: ../../source/supported_resources/supported_datasets.rst:53
+msgid "Weekly"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:43
+msgid "30"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:43
+#: ../../source/supported_resources/supported_datasets.rst:48
+#: ../../source/supported_resources/supported_datasets.rst:53
+msgid "05/July./2010 - 26/June./2023"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:43
+#: ../../source/supported_resources/supported_datasets.rst:48
+#: ../../source/supported_resources/supported_datasets.rst:53
+msgid "678: 406/136/136"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:48
+msgid "`HSI <https://github.co m/ai4finol/FinOL_data/tr ee/main/datasets/HSI>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:48
+msgid "Hong Kong, China"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:48
+msgid "53"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:53
+msgid ""
+"`CMEG <https://github.com /ai4finol/FinOL_data/tre "
+"e/main/datasets/CMEG>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:53
+msgid "Futures"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:53
+msgid "25"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:59
+msgid ""
+"`CRYPTO <https://github.com/a i4finol/FinOL_data/tree/ "
+"main/datasets/CRYPTO>`__"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:59
+msgid "Cryptocurrency"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:59
+msgid "World"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:59
+msgid "43"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:59
+msgid "09/Nov./2017 - 01/Mar./2024"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:59
+msgid "2,305: 1,421/442/442"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:68
+msgid "Components of Datasets"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:70
+msgid ""
+"This section presents the complete list of components for each dataset "
+"included in ``FinOL``. The assets cover major global equity, futures, and"
+" other financial markets."
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:74
+msgid "Components of NYSE(O) Dataset"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:81
+msgid "Components of NYSE(N) Dataset"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:88
+msgid "Components of DJIA Dataset"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:95
+msgid "Components of SP500 Dataset"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:102
+msgid "Components of TSE Dataset"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:109
+msgid "Components of SSE Dataset"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:116
+msgid "Components of HSI Dataset"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:123
+msgid "Components of CMEG Dataset"
+msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:130
+msgid "Components of CRYPTO Dataset"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:4
+msgid "FinOL Features"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:6
+msgid ""
+"This section provides detailed definitions for the key data features in "
+"``FinOL``. These features can help describe and analyze financial time "
+"series from multiple perspectives. The following tables categorize these "
+"features into 8 main groups and list the name, function call and "
+"description for each feature. For the detailed computation process, "
+"please refer to "
+":func:`~finol.data_layer.DatasetLoader.feature_engineering`."
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:19
+msgid "OHLCV Features"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:24
+#: ../../source/supported_resources/supported_features.rst:52
+#: ../../source/supported_resources/supported_features.rst:124
+#: ../../source/supported_resources/supported_features.rst:257
+#: ../../source/supported_resources/supported_features.rst:279
+#: ../../source/supported_resources/supported_features.rst:313
+#: ../../source/supported_resources/supported_features.rst:338
+#: ../../source/supported_resources/supported_features.rst:360
+msgid "Feature Name"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:25
+#: ../../source/supported_resources/supported_features.rst:53
+#: ../../source/supported_resources/supported_features.rst:125
+#: ../../source/supported_resources/supported_features.rst:258
+#: ../../source/supported_resources/supported_features.rst:280
+#: ../../source/supported_resources/supported_features.rst:314
+#: ../../source/supported_resources/supported_features.rst:339
+#: ../../source/supported_resources/supported_features.rst:361
+msgid "Function Call"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:26
+#: ../../source/supported_resources/supported_features.rst:54
+#: ../../source/supported_resources/supported_features.rst:126
+#: ../../source/supported_resources/supported_features.rst:259
+#: ../../source/supported_resources/supported_features.rst:281
+#: ../../source/supported_resources/supported_features.rst:315
+#: ../../source/supported_resources/supported_features.rst:340
+#: ../../source/supported_resources/supported_features.rst:362
+msgid "Description"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:27
+msgid "OPEN"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:28
+msgid "``df.OPEN``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:29
+msgid "Open Price"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:30
+msgid "HIGH"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:31
+msgid "``df.HIGH``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:32
+msgid "High Price"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:33
+msgid "LOW"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:34
+msgid "``df.LOW``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:35
+msgid "Low Price"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:36
+msgid "CLOSE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:37
+msgid "``df.CLOSE``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:38
+msgid "Close Price"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:39
+msgid "VOLUME"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:40
+msgid "``df.VOLUME``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:41
+msgid "Trading Volume"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:46
+msgid "Overlap Features"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:55
+msgid "BBANDS_UPPER"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:56
+msgid "``ta.BBANDS(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:57
+msgid "Bollinger Bands - Upper Band"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:58
+msgid "BBANDS_MIDDLE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:59
+msgid "``ta.BBANDS(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:60
+msgid "Bollinger Bands - Middle Band"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:61
+msgid "BBANDS_LOWER"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:62
+msgid "``ta.BBANDS(df.CLOSE)[2]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:63
+msgid "Bollinger Bands - Lower Band"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:64
+msgid "DEMA"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:65
+msgid "``ta.DEMA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:66
+msgid "Double Exponential Moving Average"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:67
+msgid "EMA"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:68
+msgid "``ta.EMA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:69
+msgid "Exponential Moving Average"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:70
+msgid "HT_TRENDLINE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:71
+msgid "``ta.HT_TRENDLINE(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:72
+msgid "Hilbert Transform - Instantaneous Trendline"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:73
+msgid "KAMA"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:74
+msgid "``ta.KAMA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:75
+msgid "Kaufman Adaptive Moving Average"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:76
+msgid "MA"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:77
+msgid "``ta.MA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:78
+msgid "Moving Average"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:79
+msgid "MAMA"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:80
+msgid "``ta.MAMA(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:81
+msgid "MESA Adaptive Moving Average - MAMA"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:82
+msgid "MAMA_FAMA"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:83
+msgid "``ta.MAMA(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:84
+msgid "MESA Adaptive Moving Average - FAMA"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:85
+msgid "MAVP"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:86
+msgid "``ta.MAVP(df.CLOSE, df.DATE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:87
+msgid "Moving Average with Variable Period"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:88
+msgid "MIDPOINT"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:89
+msgid "``ta.MIDPOINT(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:90
+msgid "MidPoint over Period"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:91
+msgid "MIDPRICE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:92
+msgid "``ta.MIDPRICE(df.HIGH, df.LOW)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:93
+msgid "Midpoint Price over Period"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:94
+msgid "SAR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:95
+msgid "``ta.SAR(df.HIGH, df.LOW)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:96
+msgid "Parabolic SAR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:97
+msgid "SAREXT"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:98
+msgid "``ta.SAREXT(df.HIGH, df.LOW)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:99
+msgid "Parabolic SAR - Extended"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:100
+msgid "SMA"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:101
+msgid "``ta.SMA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:102
+msgid "Simple Moving Average"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:103
+msgid "T3"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:104
+msgid "``ta.T3(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:105
+msgid "Triple Exponential Moving Average (T3)"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:106
+msgid "TEMA"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:107
+msgid "``ta.TEMA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:108
+msgid "Triple Exponential Moving Average"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:109
+msgid "TRIMA"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:110
+msgid "``ta.TRIMA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:111
+msgid "Triangular Moving Average"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:112
+msgid "WMA"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:113
+msgid "``ta.WMA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:114
+msgid "Weighted Moving Average"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:119
+msgid "Momentum Features"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:127
+msgid "ADX"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:128
+msgid "``ta.ADX(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:129
+msgid "Average Directional Movement Index"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:130
+msgid "ADXR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:131
+msgid "``ta.ADXR(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:132
+msgid "Average Directional Movement Index Rating"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:133
+msgid "APO"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:134
+msgid "``ta.APO(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:135
+msgid "Absolute Price Oscillator"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:136
+msgid "AROON_UP"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:137
+msgid "``ta.AROON(df.HIGH, df.LOW)[0]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:138
+msgid "Aroon Up"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:139
+msgid "AROON_DOWN"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:140
+msgid "``ta.AROON(df.HIGH, df.LOW)[1]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:141
+msgid "Aroon Down"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:142
+msgid "AROONOSC"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:143
+msgid "``ta.AROONOSC(df.HIGH, df.LOW)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:144
+msgid "Aroon Oscillator"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:145
+msgid "BOP"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:146
+msgid "``ta.BOP(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:147
+msgid "Balance Of Power"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:148
+msgid "CCI"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:149
+msgid "``ta.CCI(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:150
+msgid "Commodity Channel Index"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:151
+msgid "CMO"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:152
+msgid "``ta.CMO(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:153
+msgid "Chande Momentum Oscillator"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:154
+msgid "DX"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:155
+msgid "``ta.DX(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:156
+msgid "Directional Movement Index"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:157
+msgid "MACD"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:158
+msgid "``ta.MACD(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:159
+msgid "Moving Average Convergence/Divergence"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:160
+msgid "MACD_SIGNAL"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:161
+msgid "``ta.MACD(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:162
+msgid "MACD Signal Line"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:163
+msgid "MACD_HIST"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:164
+msgid "``ta.MACD(df.CLOSE)[2]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:165
+msgid "MACD Histogram"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:166
+msgid "MACDEXT"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:167
+msgid "``ta.MACDEXT(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:168
+msgid "MACD with controllable MA type"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:169
+msgid "MACDEXT_SIGNAL"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:170
+msgid "``ta.MACDEXT(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:171
+msgid "MACDEXT Signal Line"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:172
+msgid "MACDEXT_HIST"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:173
+msgid "``ta.MACDEXT(df.CLOSE)[2]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:174
+msgid "MACDEXT Histogram"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:175
+msgid "MACDFIX"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:176
+msgid "``ta.MACDFIX(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:177
+msgid "Moving Average Convergence/Divergence Fix 12/26"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:178
+msgid "MACDFIX_SIGNAL"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:179
+msgid "``ta.MACDFIX(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:180
+msgid "MACDFIX Signal Line"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:181
+msgid "MACDFIX_HIST"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:182
+msgid "``ta.MACDFIX(df.CLOSE)[2]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:183
+msgid "MACDFIX Histogram"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:184
+msgid "MFI"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:185
+msgid "``ta.MFI(df.HIGH, df.LOW, df.CLOSE, df.VOLUME)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:186
+msgid "Money Flow Index"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:187
+msgid "MINUS_DI"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:188
+msgid "``ta.MINUS_DI(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:189
+msgid "Minus Directional Indicator"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:190
+msgid "MINUS_DM"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:191
+msgid "``ta.MINUS_DM(df.HIGH, df.LOW)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:192
+msgid "Minus Directional Movement"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:193
+msgid "MOM"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:194
+msgid "``ta.MOM(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:195
+msgid "Momentum"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:196
+msgid "PLUS_DI"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:197
+msgid "``ta.PLUS_DI(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:198
+msgid "Plus Directional Indicator"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:199
+msgid "PLUS_DM"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:200
+msgid "``ta.PLUS_DM(df.HIGH, df.LOW)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:201
+msgid "Plus Directional Movement"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:202
+msgid "PPO"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:203
+msgid "``ta.PPO(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:204
+msgid "Percentage Price Oscillator"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:205
+msgid "ROC"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:206
+msgid "``ta.ROC(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:207
+msgid "Rate of change: ((price/prevPrice)-1)*100"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:208
+msgid "ROCP"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:209
+msgid "``ta.ROCP(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:210
+msgid "Rate of change Percentage: (price-prevPrice)/prevPrice"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:211
+msgid "ROCR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:212
+msgid "``ta.ROCR(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:213
+msgid "Rate of change ratio: (price/prevPrice)"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:214
+msgid "ROCR100"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:215
+msgid "``ta.ROCR100(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:216
+msgid "Rate of change ratio 100 scale: (price/prevPrice)*100"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:217
+msgid "RSI"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:218
+msgid "``ta.RSI(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:219
+msgid "Relative Strength Index"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:220
+msgid "STOCH_K"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:221
+msgid "``ta.STOCH(df.HIGH, df.LOW, df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:222
+msgid "Stochastic %K"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:223
+msgid "STOCH_D"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:224
+msgid "``ta.STOCH(df.HIGH, df.LOW, df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:225
+msgid "Stochastic %D"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:226
+msgid "STOCHF_K"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:227
+msgid "``ta.STOCHF(df.HIGH, df.LOW, df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:228
+msgid "Stochastic Fast %K"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:229
+msgid "STOCHF_D"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:230
+msgid "``ta.STOCHF(df.HIGH, df.LOW, df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:231
+msgid "Stochastic Fast %D"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:232
+msgid "STOCHRSI_K"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:233
+msgid "``ta.STOCHRSI(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:234
+msgid "Stochastic RSI %K"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:235
+msgid "STOCHRSI_D"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:236
+msgid "``ta.STOCHRSI(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:237
+msgid "Stochastic RSI %D"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:238
+msgid "TRIX"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:239
+msgid "``ta.TRIX(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:240
+msgid "1-day Rate-Of-Change (ROC) of a Triple Smooth EMA"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:241
+msgid "ULTOSC"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:242
+msgid "``ta.ULTOSC(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:243
+msgid "Ultimate Oscillator"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:244
+msgid "WILLR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:245
+msgid "``ta.WILLR(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:246
+msgid "Williams' %R"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:251
+msgid "Volume Features"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:260
+msgid "AD"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:261
+msgid "``ta.AD(df.HIGH, df.LOW, df.CLOSE, df.VOLUME)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:262
+msgid "Chaikin A/D Line"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:263
+msgid "ADOSC"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:264
+msgid "``ta.ADOSC(df.HIGH, df.LOW, df.CLOSE, df.VOLUME)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:265
+msgid "Chaikin A/D Oscillator"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:266
+msgid "OBV"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:267
+msgid "``ta.OBV(df.CLOSE, df.VOLUME)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:268
+msgid "On Balance Volume"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:273
+msgid "Cycle Features"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:282
+msgid "HT_DCPERIOD"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:283
+msgid "``ta.HT_DCPERIOD(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:284
+msgid "Hilbert Transform - Dominant Cycle Period"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:285
+msgid "HT_DCPHASE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:286
+msgid "``ta.HT_DCPHASE(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:287
+msgid "Hilbert Transform - Dominant Cycle Phase"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:288
+msgid "HT_PHASOR_INPHASE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:289
+msgid "``ta.HT_PHASOR(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:290
+msgid "Hilbert Transform - Phasor Components, In-Phase Component"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:291
+msgid "HT_PHASOR_QUADRATURE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:292
+msgid "``ta.HT_PHASOR(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:293
+msgid "Hilbert Transform - Phasor Components, Quadrature Component"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:294
+msgid "HT_SINE_LEADSINE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:295
+msgid "``ta.HT_SINE(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:296
+msgid "Hilbert Transform - SineWave, Lead SineWave"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:297
+msgid "HT_SINE_SINEWAVE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:298
+msgid "``ta.HT_SINE(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:299
+msgid "Hilbert Transform - SineWave, SineWave"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:300
+msgid "HT_TRENDMODE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:301
+msgid "``ta.HT_TRENDMODE(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:302
+msgid "Hilbert Transform - Trend vs Cycle Mode"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:307
+msgid "Price Features"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:316
+msgid "AVGPRICE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:317
+msgid "``ta.AVGPRICE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:318
+msgid "Average Price"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:319
+msgid "MEDPRICE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:320
+msgid "``ta.MEDPRICE(df.HIGH, df.LOW)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:321
+msgid "Median Price"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:322
+msgid "TYPPRICE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:323
+msgid "``ta.TYPPRICE(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:324
+msgid "Typical Price"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:325
+msgid "WCLPRICE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:326
+msgid "``ta.WCLPRICE(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:327
+msgid "Weighted Close Price"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:332
+msgid "Volatility Features"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:341
+msgid "ATR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:342
+msgid "``ta.ATR(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:343
+msgid "Average True Range"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:344
+msgid "NATR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:345
+msgid "``ta.NATR(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:346
+msgid "Normalized Average True Range"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:347
+msgid "TRANGE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:348
+msgid "``ta.TRANGE(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:349
+msgid "True Range"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:354
+msgid "Pattern Features"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:363
+msgid "CDL2CROWS"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:364
+msgid "``ta.CDL2CROWS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:365
+msgid "Two Crows"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:366
+msgid "CDL3BLACKCROWS"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:367
+msgid "``ta.CDL3BLACKCROWS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:368
+msgid "Three Black Crows"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:369
+msgid "CDL3INSIDE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:370
+msgid "``ta.CDL3INSIDE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:371
+msgid "Three Inside Up/Down"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:372
+msgid "CDL3LINESTRIKE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:373
+msgid "``ta.CDL3LINESTRIKE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:374
+msgid "Three-Line Strike"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:375
+msgid "CDL3OUTSIDE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:376
+msgid "``ta.CDL3OUTSIDE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:377
+msgid "Three Outside Up/Down"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:378
+msgid "CDL3STARSINSOUTH"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:379
+msgid "``ta.CDL3STARSINSOUTH(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:380
+msgid "Three Stars In The South"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:381
+msgid "CDL3WHITESOLDIERS"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:382
+msgid "``ta.CDL3WHITESOLDIERS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:383
+msgid "Three Advancing White Soldiers"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:384
+msgid "CDLABANDONEDBABY"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:385
+msgid "``ta.CDLABANDONEDBABY(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:386
+msgid "Abandoned Baby"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:387
+msgid "CDLADVANCEBLOCK"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:388
+msgid "``ta.CDLADVANCEBLOCK(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:389
+msgid "Advance Block"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:390
+msgid "CDLBELTHOLD"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:391
+msgid "``ta.CDLBELTHOLD(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:392
+msgid "Belt-Hold"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:393
+msgid "CDLBREAKAWAY"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:394
+msgid "``ta.CDLBREAKAWAY(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:395
+msgid "Breakaway"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:396
+msgid "CDLCLOSINGMARUBOZU"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:397
+msgid "``ta.CDLCLOSINGMARUBOZU(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:398
+msgid "Closing Marubozu"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:399
+msgid "CDLCONCEALBABYSWALL"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:400
+msgid "``ta.CDLCONCEALBABYSWALL(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:401
+msgid "Concealing Baby Swallow"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:402
+msgid "CDLCOUNTERATTACK"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:403
+msgid "``ta.CDLCOUNTERATTACK(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:404
+msgid "Counterattack"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:405
+msgid "CDLDARKCLOUDCOVER"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:406
+msgid "``ta.CDLDARKCLOUDCOVER(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:407
+msgid "Dark Cloud Cover"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:408
+msgid "CDLDOJI"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:409
+msgid "``ta.CDLDOJI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:410
+msgid "Doji"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:411
+msgid "CDLDOJISTAR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:412
+msgid "``ta.CDLDOJISTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:413
+msgid "Doji Star"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:414
+msgid "CDLDRAGONFLYDOJI"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:415
+msgid "``ta.CDLDRAGONFLYDOJI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:416
+msgid "Dragonfly Doji"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:417
+msgid "CDLENGULFING"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:418
+msgid "``ta.CDLENGULFING(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:419
+msgid "Engulfing Pattern"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:420
+msgid "CDLEVENINGDOJISTAR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:421
+msgid "``ta.CDLEVENINGDOJISTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:422
+msgid "Evening Doji Star"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:423
+msgid "CDLEVENINGSTAR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:424
+msgid "``ta.CDLEVENINGSTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:425
+msgid "Evening Star"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:426
+msgid "CDLGAPSIDESIDEWHITE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:427
+msgid "``ta.CDLGAPSIDESIDEWHITE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:428
+msgid "Up/Down-Gap Side-By-Side White Lines"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:429
+msgid "CDLGRAVESTONEDOJI"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:430
+msgid "``ta.CDLGRAVESTONEDOJI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:431
+msgid "Gravestone Doji"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:432
+msgid "CDLHAMMER"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:433
+msgid "``ta.CDLHAMMER(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:434
+msgid "Hammer"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:435
+msgid "CDLHANGINGMAN"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:436
+msgid "``ta.CDLHANGINGMAN(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:437
+msgid "Hanging Man"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:438
+msgid "CDLHARAMI"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:439
+msgid "``ta.CDLHARAMI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:440
+msgid "Harami Pattern"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:441
+msgid "CDLHARAMICROSS"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:442
+msgid "``ta.CDLHARAMICROSS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:443
+msgid "Harami Cross Pattern"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:444
+msgid "CDLHIGHWAVE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:445
+msgid "``ta.CDLHIGHWAVE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:446
+msgid "High-Wave Candle"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:447
+msgid "CDLHIKKAKE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:448
+msgid "``ta.CDLHIKKAKE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:449
+msgid "Hikkake Pattern"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:450
+msgid "CDLHIKKAKEMOD"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:451
+msgid "``ta.CDLHIKKAKEMOD(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:452
+msgid "Modified Hikkake Pattern"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:453
+msgid "CDLHOMINGPIGEON"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:454
+msgid "``ta.CDLHOMINGPIGEON(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:455
+msgid "Homing Pigeon"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:456
+msgid "CDLIDENTICAL3CROWS"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:457
+msgid "``ta.CDLIDENTICAL3CROWS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:458
+msgid "Identical Three Crows"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:459
+msgid "CDLINNECK"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:460
+msgid "``ta.CDLINNECK(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:461
+msgid "In-Neck Pattern"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:462
+msgid "CDLINVERTEDHAMMER"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:463
+msgid "``ta.CDLINVERTEDHAMMER(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:464
+msgid "Inverted Hammer"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:465
+msgid "CDLKICKING"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:466
+msgid "``ta.CDLKICKING(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:467
+msgid "Kicking"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:468
+msgid "CDLKICKINGBYLENGTH"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:469
+msgid "``ta.CDLKICKINGBYLENGTH(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:470
+msgid "Kicking - Bull/Bear Determined by the Longer Marubozu"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:471
+msgid "CDLLADDERBOTTOM"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:472
+msgid "``ta.CDLLADDERBOTTOM(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:473
+msgid "Ladder Bottom"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:474
+msgid "CDLLONGLEGGEDDOJI"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:475
+msgid "``ta.CDLLONGLEGGEDDOJI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:476
+msgid "Long Legged Doji"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:477
+msgid "CDLLONGLINE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:478
+msgid "``ta.CDLLONGLINE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:479
+msgid "Long Line Candle"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:480
+msgid "CDLMARUBOZU"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:481
+msgid "``ta.CDLMARUBOZU(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:482
+msgid "Marubozu"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:483
+msgid "CDLMATCHINGLOW"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:484
+msgid "``ta.CDLMATCHINGLOW(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:485
+msgid "Matching Low"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:486
+msgid "CDLMATHOLD"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:487
+msgid "``ta.CDLMATHOLD(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:488
+msgid "Mat Hold"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:489
+msgid "CDLMORNINGDOJISTAR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:490
+msgid "``ta.CDLMORNINGDOJISTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:491
+msgid "Morning Doji Star"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:492
+msgid "CDLMORNINGSTAR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:493
+msgid "``ta.CDLMORNINGSTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:494
+msgid "Morning Star"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:495
+msgid "CDLONNECK"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:496
+msgid "``ta.CDLONNECK(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:497
+msgid "On-Neck Pattern"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:498
+msgid "CDLPIERCING"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:499
+msgid "``ta.CDLPIERCING(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:500
+msgid "Piercing Pattern"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:501
+msgid "CDLRICKSHAWMAN"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:502
+msgid "``ta.CDLRICKSHAWMAN(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:503
+msgid "Rickshaw Man"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:504
+msgid "CDLRISEFALL3METHODS"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:505
+msgid "``ta.CDLRISEFALL3METHODS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:506
+msgid "Rising/Falling Three Methods"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:507
+msgid "CDLSEPARATINGLINES"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:508
+msgid "``ta.CDLSEPARATINGLINES(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:509
+msgid "Separating Lines"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:510
+msgid "CDLSHOOTINGSTAR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:511
+msgid "``ta.CDLSHOOTINGSTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:512
+msgid "Shooting Star"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:513
+msgid "CDLSHORTLINE"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:514
+msgid "``ta.CDLSHORTLINE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:515
+msgid "Short Line Candle"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:516
+msgid "CDLSPINNINGTOP"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:517
+msgid "``ta.CDLSPINNINGTOP(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:518
+msgid "Spinning Top"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:519
+msgid "CDLSTALLEDPATTERN"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:520
+msgid "``ta.CDLSTALLEDPATTERN(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:521
+msgid "Stalled Pattern"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:522
+msgid "CDLSTICKSANDWICH"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:523
+msgid "``ta.CDLSTICKSANDWICH(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:524
+msgid "Stick Sandwich"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:525
+msgid "CDLTAKURI"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:526
+msgid "``ta.CDLTAKURI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:527
+msgid "Takuri (Dragonfly Doji with Very Long Lower Shadow)"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:528
+msgid "CDLTASUKIGAP"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:529
+msgid "``ta.CDLTASUKIGAP(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:530
+msgid "Tasuki Gap"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:531
+msgid "CDLTHRUSTING"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:532
+msgid "``ta.CDLTHRUSTING(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:533
+msgid "Thrusting Pattern"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:534
+msgid "CDLTRISTAR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:535
+msgid "``ta.CDLTRISTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:536
+msgid "Tristar Pattern"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:537
+msgid "CDLUNIQUE3RIVER"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:538
+msgid "``ta.CDLUNIQUE3RIVER(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:539
+msgid "Unique 3 River"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:540
+msgid "CDLUPSIDEGAP2CROWS"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:541
+msgid "``ta.CDLUPSIDEGAP2CROWS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:542
+msgid "Upside Gap Two Crows"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:543
+msgid "CDLXSIDEGAP3METHODS"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:544
+msgid "``ta.CDLXSIDEGAP3METHODS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/supported_resources/supported_features.rst:545
+msgid "Upside/Downside Gap Three Methods"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:4
+msgid "FinOL Metrics"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:9
+msgid "Abbreviation"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:12
+msgid "CW"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:12
+#: ../../source/supported_resources/supported_metrics.rst:15
+#: ../../source/supported_resources/supported_metrics.rst:18
+msgid "Profit Metric"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:15
+msgid "Annualized Percentage Yield"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:15
+msgid "APY"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:18
+msgid "Sharpe Ratio"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:18
+msgid "SR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:23
+msgid "Volatility Risk"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:23
+msgid "VR"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:23
+#: ../../source/supported_resources/supported_metrics.rst:25
+msgid "Risk Metric"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:25
+msgid "MDD"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:29
+msgid "ATO"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:29
+#: ../../source/supported_resources/supported_metrics.rst:32
+#: ../../source/supported_resources/supported_metrics.rst:35
+msgid "Practical Metric"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:32
+msgid "Transaction Costs-Adjusted Cumulative Wealth"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:32
+msgid "TCW"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:35
+msgid "Running Time"
+msgstr ""
+
+#: ../../source/supported_resources/supported_metrics.rst:35
+msgid "RT"
+msgstr ""
+
+#: ../../source/supported_resources/supported_visualization.rst:4
+msgid "FinOL Visualization"
+msgstr ""
+
+#: ../../source/supported_resources/supported_visualization.rst:6
+msgid ""
+"The ``FinOL`` provides a suite of visualization tools to facilitate a "
+"comprehensive evaluation of data-driven OLPS research. Here are some "
+"examples:"
+msgstr ""
+
+#: ../../source/supported_resources/supported_visualization.rst:10
+msgid "Dynamic Training/Validation Loss Visualization"
+msgstr ""
+
+#: ../../source/supported_resources/supported_visualization.rst:20
+msgid "Daily Cumulative Wealth Visualization"
+msgstr ""
+
+#: ../../source/supported_resources/supported_visualization.rst:26
+msgid "Daily DrawDown"
+msgstr ""
+
+#: ../../source/supported_resources/supported_visualization.rst:32
+msgid "Transaction Cost-Adjusted Cumulative Wealth"
+msgstr ""
+
+#: ../../source/supported_resources/supported_visualization.rst:38
+msgid "Comprehensive Radar Chart"
+msgstr ""
+
