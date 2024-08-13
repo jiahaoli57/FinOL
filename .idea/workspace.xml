@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs" />
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -519,14 +521,8 @@
       <workItem from="1723484215328" duration="288000" />
       <workItem from="1723484613997" duration="2045000" />
       <workItem from="1723520304988" duration="490000" />
-      <workItem from="1723520851634" duration="28750000" />
-    </task>
-    <task id="LOCAL-00267" summary="build docs; optimize code">
-      <created>1723388837372</created>
-      <option name="number" value="00267" />
-      <option name="presentableId" value="LOCAL-00267" />
-      <option name="project" value="LOCAL" />
-      <updated>1723388837372</updated>
+      <workItem from="1723520851634" duration="28985000" />
+      <workItem from="1723564970228" duration="511000" />
     </task>
     <task id="LOCAL-00268" summary="build docs; optimize code">
       <created>1723389322113</created>
@@ -864,7 +860,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723564277149</updated>
     </task>
-    <option name="localTasksCounter" value="316" />
+    <task id="LOCAL-00316" summary="build docs">
+      <created>1723564795125</created>
+      <option name="number" value="00316" />
+      <option name="presentableId" value="LOCAL-00316" />
+      <option name="project" value="LOCAL" />
+      <updated>1723564795126</updated>
+    </task>
+    <option name="localTasksCounter" value="317" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
