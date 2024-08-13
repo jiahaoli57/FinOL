@@ -124,10 +124,10 @@ html_copy_source = False
 html_show_sourcelink = False
 
 # multi-language docs
-language = 'en'
+language = "en"
 locale_dirs = ["../locales/"]
-gettext_compact = False  # optional
-gettext_uuid = True  # optional
+gettext_compact = True  # optional
+gettext_uuid = False  # optional
 
 html_context = {}
 html_context["current_version"] = "latest"
@@ -137,7 +137,8 @@ html_context["versions"] = [
 ]
 html_context["languages"] = [
     ("English", "https://finol.readthedocs.io/en/latest/%s.html", "en"),
-    ("中文", "https://finol.readthedocs.io/zh-cn/latest/%s.html", "zh_CN"),
+    ("简体中文", "https://finol.readthedocs.io/zh-cn/latest/%s.html", "zh_CN"),
+    ("繁體中文", "https://finol.readthedocs.io/zh-tw/latest/%s.html", "zh_TW"),
 ]
 
 # -- Extension configuration -------------------------------------------------

@@ -25,6 +25,7 @@ Notation
 
 .. list-table::
    :header-rows: 1
+   :class: ghost
 
    * - Notation
      - Description

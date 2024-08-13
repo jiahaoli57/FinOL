@@ -14,7 +14,8 @@ it provides a long-awaited unified platform to advance data-driven OLPS research
 |:star:| What's NEW!
 --------------------
 
-.. container::
+.. table::
+   :class: ghost
 
    +-------------------------------------------------------+----------------+----------------+
    | Update                                                | Status         | Label          |

@@ -3,16 +3,34 @@
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api/api.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/background.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/background.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/contact_us.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/contact_us.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/file_structure.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/file_structure.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/index.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/index.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/installation.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/installation.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/license.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/license.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/quickstart.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/quickstart.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources/supported_resources.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/images/finol_gui.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api/api.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api/api.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/background.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/background.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/contact_us.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/contact_us.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/file_structure.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/file_structure.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/index.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/index.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/installation.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/installation.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/license.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/license.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/quickstart.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/quickstart.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources/supported_resources.mo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources/supported_resources.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/config.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/api/config.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/background.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/background.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_baselines.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_baselines.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_datasets.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_datasets.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_features.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_features.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization.rst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,24 +105,24 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\locales\zh_CN\LC_MESSAGES" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\images" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\source\_static\css" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\source\supported_resources" />
-      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\source\_templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\locales\zh_CN\LC_MESSAGES" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\locales\zh_CN\LC_MESSAGES\api" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\locales\zh_CN\LC_MESSAGES\supported_resources" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol\gui" />
-      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\source\supported_resources" />
     </key>
   </component>
   <component name="RunManager" selected="Python.FinOLAPP">
@@ -532,21 +550,7 @@
       <workItem from="1723484215328" duration="288000" />
       <workItem from="1723484613997" duration="2045000" />
       <workItem from="1723520304988" duration="490000" />
-      <workItem from="1723520851634" duration="9013000" />
-    </task>
-    <task id="LOCAL-00261" summary="build docs; optimize code">
-      <created>1723369948636</created>
-      <option name="number" value="00261" />
-      <option name="presentableId" value="LOCAL-00261" />
-      <option name="project" value="LOCAL" />
-      <updated>1723369948636</updated>
-    </task>
-    <task id="LOCAL-00262" summary="build docs; optimize code">
-      <created>1723381826059</created>
-      <option name="number" value="00262" />
-      <option name="presentableId" value="LOCAL-00262" />
-      <option name="project" value="LOCAL" />
-      <updated>1723381826059</updated>
+      <workItem from="1723520851634" duration="27302000" />
     </task>
     <task id="LOCAL-00263" summary="build docs; optimize code">
       <created>1723384649280</created>
@@ -877,7 +881,21 @@
       <option name="project" value="LOCAL" />
       <updated>1723521023406</updated>
     </task>
-    <option name="localTasksCounter" value="310" />
+    <task id="LOCAL-00310" summary="build docs">
+      <created>1723536564802</created>
+      <option name="number" value="00310" />
+      <option name="presentableId" value="LOCAL-00310" />
+      <option name="project" value="LOCAL" />
+      <updated>1723536564802</updated>
+    </task>
+    <task id="LOCAL-00311" summary="build docs">
+      <created>1723536842506</created>
+      <option name="number" value="00311" />
+      <option name="presentableId" value="LOCAL-00311" />
+      <option name="project" value="LOCAL" />
+      <updated>1723536842506</updated>
+    </task>
+    <option name="localTasksCounter" value="312" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

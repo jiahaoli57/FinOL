@@ -3,10 +3,6 @@
 finol.config
 ============
 
-.. contents::
-    :local:
-
-
 General Configuration
 ---------------------
 

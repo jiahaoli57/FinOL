@@ -1,7 +1,7 @@
 .. _supported_features:
 
-FinOL Features
-==============
+|:chart_with_upwards_trend:| Rich High-Dimensional Data Feature Input
+=====================================================================
 
 This section provides detailed definitions for the key data features in ``FinOL``.
 These features can help describe and analyze financial time series from multiple perspectives.
@@ -20,6 +20,7 @@ OHLCV Features
 
 .. list-table::
    :header-rows: 1
+   :class: ghost
 
    * - Feature Name
      - Function Call
@@ -47,6 +48,7 @@ Overlap Features
 
 .. list-table::
    :header-rows: 1
+   :class: ghost
 
 
    * - Feature Name
@@ -120,6 +122,7 @@ Momentum Features
 
 .. list-table::
    :header-rows: 1
+   :class: ghost
 
    * - Feature Name
      - Function Call
@@ -252,6 +255,7 @@ Volume Features
 
 .. list-table::
    :header-rows: 1
+   :class: ghost
 
 
    * - Feature Name
@@ -274,6 +278,7 @@ Cycle Features
 
 .. list-table::
    :header-rows: 1
+   :class: ghost
 
 
    * - Feature Name
@@ -308,6 +313,7 @@ Price Features
 
 .. list-table::
    :header-rows: 1
+   :class: ghost
 
 
    * - Feature Name
@@ -333,6 +339,7 @@ Volatility Features
 
 .. list-table::
    :header-rows: 1
+   :class: ghost
 
 
    * - Feature Name
@@ -355,6 +362,7 @@ Pattern Features
 
 .. list-table::
    :header-rows: 1
+   :class: ghost
 
 
    * - Feature Name

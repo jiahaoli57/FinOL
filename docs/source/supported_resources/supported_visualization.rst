@@ -1,7 +1,7 @@
 .. _supported_visualization:
 
-FinOL Visualization
-===================
+|:art:| Multiple Visualization Tools
+====================================
 
 The ``FinOL`` provides a suite of visualization tools to facilitate
 a comprehensive evaluation of data-driven OLPS research. Here are some
