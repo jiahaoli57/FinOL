@@ -1,6 +1,6 @@
 .. _supported_baselines:
 
-|:rocket:| Nearly all OLPS baselines
+|:rocket:| Nearly All OLPS Baselines
 ====================================
 
 .. table::

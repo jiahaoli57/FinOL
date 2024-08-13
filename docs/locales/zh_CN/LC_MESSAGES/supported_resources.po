@@ -24,7 +24,7 @@ msgid "FinOL Supports ..."
 msgstr "FinOL 包含了 ..."
 
 #: ../../source/supported_resources/supported_baselines.rst:4
-msgid "|:rocket:| Nearly all OLPS baselines"
+msgid "|:rocket:| Nearly All OLPS Baselines"
 msgstr "|:rocket:| 几乎所有的 OLPS 基线"
 
 #: ../../source/supported_resources/supported_baselines.rst:9
