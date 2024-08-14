@@ -1,7 +1,7 @@
 .. _supported_baselines:
 
-|:rocket:| Nearly All OLPS Baselines
-====================================
+|:crossed_swords:| Nearly All OLPS Baselines
+============================================
 
 
 .. table::

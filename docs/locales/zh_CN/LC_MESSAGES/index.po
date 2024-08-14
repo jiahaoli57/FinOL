@@ -39,136 +39,137 @@ msgstr "|:star:| 最新动态！"
 
 #: ../../source/index.rst:20
 msgid "Update"
-msgstr ""
+msgstr "最新动态"
 
 #: ../../source/index.rst:20
 msgid "Status"
-msgstr ""
+msgstr "状态"
 
 #: ../../source/index.rst:20
 msgid "Label"
-msgstr ""
+msgstr "标签"
 
 #: ../../source/index.rst:23
 msgid "New release! ``FinOL`` is going to release the official website"
-msgstr ""
+msgstr "全新发布！``FinOL`` 即将推出官方网站"
 
 #: ../../source/index.rst:23 ../../source/index.rst:27
 #: ../../source/index.rst:33
 msgid "Coming soon......"
-msgstr ""
+msgstr "即将推出……"
 
 #: ../../source/index.rst:23 ../../source/index.rst:39
 #: ../../source/index.rst:83 ../../source/index.rst:89
-msgid "Release"
-msgstr ""
+msgid "|:rocket:| Release"
+msgstr "|:rocket:| 发布"
 
 #: ../../source/index.rst:27
 msgid ""
-"New metric! ``FinOL`` is going to support the `t-test <https://www.scienc"
-" edirect.com/science/article/pii/S0004370215000168>`__ metric"
+"New metric! ``FinOL`` is going to support the `t-test <https://www.sciencedirect.com/science/article/pii/S0004370215000168>`__ metric"
 msgstr ""
+"全新指标！``FinOL`` 即将支持 `t-test <https://www.scienc"
+" edirect.com/science/article/pii/S0004370215000168>`__ 指标"
 
 #: ../../source/index.rst:27 ../../source/index.rst:33
 #: ../../source/index.rst:45 ../../source/index.rst:51
 #: ../../source/index.rst:57 ../../source/index.rst:63
 #: ../../source/index.rst:69 ../../source/index.rst:76
-msgid "Enhancement"
-msgstr ""
+msgid "|:hammer_and_wrench:| Enhancement"
+msgstr "|:hammer_and_wrench:| 增强"
 
 #: ../../source/index.rst:33
 msgid ""
-"New model! ``FinOL`` is going to support the `AlphaStock <h "
-"ttps://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ model"
+"New model! ``FinOL`` is going to support the `AlphaStock <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ model"
 msgstr ""
+"全新模型！``FinOL`` 即将支持 `AlphaStock <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ 模型"
 
 #: ../../source/index.rst:39
 msgid ""
-"New release! ``FinOL`` now releases the `official docs "
-"<https://finol.readthedocs.io/en/latest/>`__"
+"New release! ``FinOL`` now releases the `Official Docs <https://finol.readthedocs.io/en/latest/>`__"
 msgstr ""
+"全新发布！``FinOL`` 现已发布 `官方文档 <https://finol.readthedocs.io/en/latest/>`__"
 
 #: ../../source/index.rst:39
 msgid "Released on 22 July 2024"
-msgstr ""
+msgstr "于 2024年7月22日 发布"
 
 #: ../../source/index.rst:45
 msgid ""
-"New feature! ``FinOL`` now supports the `Auto Hyperparameter Tuning "
-"<https://dl.acm.org/doi/10.1145/3292500.3330701>`__ feature"
+"New feature! ``FinOL`` now supports the `Auto Hyperparameter Tuning <https://dl.acm.org/doi/10.1145/3292500.3330701>`__ feature"
 msgstr ""
+"全新功能！``FinOL`` 现已支持 `自动超参数调优 <https://dl.acm.org/doi/10.1145/3292500.3330701>`__ 功能"
 
 #: ../../source/index.rst:45
 msgid "Supported since 22 July 2024"
-msgstr ""
+msgstr "自 2024年7月22日 起支持"
 
 #: ../../source/index.rst:51
 msgid ""
-"New feature! ``FinOL`` now supports the `Radar Chart "
-"<https://en.wikipedia.org/wiki/Radar_chart>`__ evaluation"
+"New feature! ``FinOL`` now supports the `Radar Chart <https://en.wikipedia.org/wiki/Radar_chart>`__ evaluation"
 msgstr ""
+"全新功能！``FinOL`` 现已支持 `雷达图 <https://en.wikipedia.org/wiki/Radar_chart>`__ 评估"
 
 #: ../../source/index.rst:51
 msgid "Supported since 10 June 2024"
-msgstr ""
+msgstr "自 2024年6月10日 起支持"
 
 #: ../../source/index.rst:57
 msgid ""
-"New model! ``FinOL`` now supports the `AlphaPortfolio <https://pa "
-"pers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ model"
+"New model! ``FinOL`` now supports the `AlphaPortfolio <https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ model"
 msgstr ""
+"全新模型！``FinOL`` 现已支持 `AlphaPortfolio <https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ 模型"
 
 #: ../../source/index.rst:57
 msgid "Supported since 06 June 2024"
-msgstr ""
+msgstr "自 2024年6月6日 起支持"
 
 #: ../../source/index.rst:63
 msgid ""
-"New feature! ``FinOL`` now supports the `Economic Distillation "
-"<https://pa pers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ feature"
+"New feature! ``FinOL`` now supports the `Economic Distillation <https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ feature"
 msgstr ""
+"全新功能！``FinOL`` 现已支持 `经济蒸馏 <https://pa pers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ 功能"
 
 #: ../../source/index.rst:63
 msgid "Supported since 15 May 2024"
-msgstr ""
+msgstr "自 2024年5月15日 起支持"
 
 #: ../../source/index.rst:69
 msgid ""
-"New feature! ``FinOL`` now supports the `Interpretability Analysis <h "
-"ttps://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ feature"
+"New feature! ``FinOL`` now supports the `Interpretability Analysis <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ feature"
 msgstr ""
+"全新功能！``FinOL`` 现已支持 `可解释性分析 <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ 功能"
 
 #: ../../source/index.rst:69
 msgid "Supported since 16 April 2024"
-msgstr ""
+msgstr "自 2024年4月16日 起支持"
 
 #: ../../source/index.rst:76
 msgid ""
-"New feature! ``FinOL`` now supports the `Winner Assets Selection <h "
-"ttps://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ feature"
+"New feature! ``FinOL`` now supports the `Winner Assets Selection <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ feature"
 msgstr ""
+"全新功能！``FinOL`` 现已支持 `优胜资产选择 <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ 功能"
 
 #: ../../source/index.rst:76
 msgid "Supported since 14 April 2024"
-msgstr ""
+msgstr "自 2024年4月14日 起支持"
 
 #: ../../source/index.rst:83
-msgid "Release ``FinOL`` `tutorials <finol/tutorials>`__"
-msgstr ""
+msgid "New release! ``FinOL`` now releases the `Tutorials <finol/tutorials>`__"
+msgstr "全新发布！``FinOL`` 现已发布 `教程 <finol/tutorials>`__"
 
 #: ../../source/index.rst:83
 msgid "Released on 22 March 2024"
-msgstr ""
+msgstr "于 2024年3月22日 发布"
 
 #: ../../source/index.rst:89
 msgid ""
-"Release ``FinOL`` `v0.0.1 <https: "
-"//github.com/jiahaoli57/finol/releases/tag/v0.0.1>`__"
+"New release! ``FinOL`` now releases the `v0.0.1 <https://github.com/jiahaoli57/finol/releases/tag/v0.0.1>`__ package"
 msgstr ""
+"全新发布！``FinOL`` 现已发布 `v0.0.1 <https://github.com/jiahaoli57/finol/releases/tag/v0.0.1>`__ 包"
 
 #: ../../source/index.rst:89
 msgid "Released on 21 March 2024"
-msgstr ""
+msgstr "于 2024年3月21日 发布"
 
 #: ../../source/index.rst:98
 msgid "Contents"

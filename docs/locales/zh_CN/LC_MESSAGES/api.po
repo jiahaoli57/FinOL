@@ -578,9 +578,9 @@ msgstr ""
 
 #: ../../source/api/data_layer.rst:6
 msgid ""
-"The :mod:`~finol.data_layer` module contains data layer related classes "
-"and functions."
+"The :mod:`~finol.data_layer` module contains data layer related classes and functions."
 msgstr ""
+":mod:`~finol.data_layer` 模块包含与数据层相关的类"
 
 #: ../../source/api/data_layer.rst:13:<autosummary>:1
 msgid ":py:obj:`finol.data_layer.DatasetLoader <finol.data_layer.DatasetLoader>`"
@@ -610,9 +610,9 @@ msgstr ""
 
 #: ../../source/api/evaluation_layer.rst:6
 msgid ""
-"The :mod:`~finol.evaluation_layer` module contains evaluation layer "
-"related classes and functions."
+"The :mod:`~finol.evaluation_layer` module contains evaluation layer related classes and functions."
 msgstr ""
+":mod:`~finol.evaluation_layer` 模块包含与评估层相关的类和函数。"
 
 #: ../../source/api/evaluation_layer.rst:17:<autosummary>:1
 msgid ""
@@ -6610,9 +6610,9 @@ msgstr ""
 
 #: ../../source/api/model_layer.rst:6
 msgid ""
-"The :mod:`~finol.model_layer` module contains model layer related classes"
-" and functions."
+"The :mod:`~finol.model_layer` module contains model layer related classes and functions."
 msgstr ""
+":mod:`~finol.model_layer` 模块包含与模型层相关的类"
 
 #: ../../source/api/model_layer.rst:20:<autosummary>:1
 msgid ""
@@ -6660,9 +6660,9 @@ msgstr ""
 
 #: ../../source/api/optimization_layer.rst:6
 msgid ""
-"The :mod:`~finol.optimization_layer` module contains optimization layer "
-"related classes and functions."
+"The :mod:`~finol.optimization_layer` module contains optimization layer related classes and functions."
 msgstr ""
+":mod:`~finol.optimization_layer` 模块包含与优化层相关的类和函数。"
 
 #: ../../source/api/optimization_layer.rst:15:<autosummary>:1
 msgid ""

@@ -14,85 +14,51 @@ it provides a long-awaited unified platform to advance data-driven OLPS research
 |:star:| What's NEW!
 --------------------
 
-.. table::
-   :class: ghost
+.. list-table::
+  :widths: 8, 5, 3
+  :header-rows: 1
+  :class: ghost
 
-   +-------------------------------------------------------+----------------+----------------+
-   | Update                                                | Status         | Label          |
-   |                                                       |                |                |
-   +=======================================================+================+================+
-   | New release! ``FinOL`` is going to release the        | Coming         | Release        |
-   | official website                                      | soon......     |                |
-   |                                                       |                |                |
-   +-------------------------------------------------------+----------------+----------------+
-   | New metric! ``FinOL`` is going to support the         | Coming         | Enhancement    |
-   | `t-test <https://www.scienc                           | soon......     |                |
-   | edirect.com/science/article/pii/S0004370215000168>`__ |                |                |
-   | metric                                                |                |                |
-   |                                                       |                |                |
-   +-------------------------------------------------------+----------------+----------------+
-   | New model! ``FinOL`` is going to support the          | Coming         | Enhancement    |
-   | `AlphaStock <h                                        | soon......     |                |
-   | ttps://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ |                |                |
-   | model                                                 |                |                |
-   |                                                       |                |                |
-   +-------------------------------------------------------+----------------+----------------+
-   | New release! ``FinOL`` now releases the `official     | Released       | Release        |
-   | docs <https://finol.readthedocs.io/en/latest/>`__     | on             |                |
-   |                                                       | 22 July        |                |
-   |                                                       | 2024           |                |
-   |                                                       |                |                |
-   +-------------------------------------------------------+----------------+----------------+
-   | New feature! ``FinOL`` now supports the `Auto         | Supported      | Enhancement    |
-   | Hyperparameter Tuning                                 | since          |                |
-   | <https://dl.acm.org/doi/10.1145/3292500.3330701>`__   | 22 July        |                |
-   | feature                                               | 2024           |                |
-   |                                                       |                |                |
-   +-------------------------------------------------------+----------------+----------------+
-   | New feature! ``FinOL`` now supports the `Radar        | Supported      | Enhancement    |
-   | Chart <https://en.wikipedia.org/wiki/Radar_chart>`__  | since          |                |
-   | evaluation                                            | 10 June        |                |
-   |                                                       | 2024           |                |
-   |                                                       |                |                |
-   +-------------------------------------------------------+----------------+----------------+
-   | New model! ``FinOL`` now supports the                 | Supported      | Enhancement    |
-   | `AlphaPortfolio <https://pa                           | since          |                |
-   | pers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ | 06 June        |                |
-   | model                                                 | 2024           |                |
-   |                                                       |                |                |
-   +-------------------------------------------------------+----------------+----------------+
-   | New feature! ``FinOL`` now supports the `Economic     | Supported      | Enhancement    |
-   | Distillation <https://pa                              | since          |                |
-   | pers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ | 15 May         |                |
-   | feature                                               | 2024           |                |
-   |                                                       |                |                |
-   +-------------------------------------------------------+----------------+----------------+
-   | New feature! ``FinOL`` now supports the               | Supported      | Enhancement    |
-   | `Interpretability                                     | since          |                |
-   | Analysis <h                                           | 16 April       |                |
-   | ttps://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ | 2024           |                |
-   | feature                                               |                |                |
-   |                                                       |                |                |
-   +-------------------------------------------------------+----------------+----------------+
-   | New feature! ``FinOL`` now supports the `Winner       | Supported      | Enhancement    |
-   | Assets                                                | since          |                |
-   | Selection <h                                          | 14 April       |                |
-   | ttps://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ | 2024           |                |
-   | feature                                               |                |                |
-   |                                                       |                |                |
-   +-------------------------------------------------------+----------------+----------------+
-   | Release ``FinOL`` `tutorials <finol/tutorials>`__     | Released       | Release        |
-   |                                                       | on             |                |
-   |                                                       | 22 March       |                |
-   |                                                       | 2024           |                |
-   |                                                       |                |                |
-   +-------------------------------------------------------+----------------+----------------+
-   | Release ``FinOL``                                     | Released       | Release        |
-   | `v0.0.1 <https:                                       | on             |                |
-   | //github.com/jiahaoli57/finol/releases/tag/v0.0.1>`__ | 21 March       |                |
-   |                                                       | 2024           |                |
-   |                                                       |                |                |
-   +-------------------------------------------------------+----------------+----------------+
+
+  * - Update
+    - Status
+    - Label
+  * - New release! ``FinOL`` is going to release the official website
+    - Coming soon......
+    - |:rocket:| Release
+  * - New metric! ``FinOL`` is going to support the `t-test <https://www.sciencedirect.com/science/article/pii/S0004370215000168>`__ metric
+    - Coming soon......
+    - |:hammer_and_wrench:| Enhancement
+  * - New model! ``FinOL`` is going to support the `AlphaStock <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ model
+    - Coming soon......
+    - |:hammer_and_wrench:| Enhancement
+  * - New release! ``FinOL`` now releases the `Official Docs <https://finol.readthedocs.io/en/latest/>`__
+    - Released on 22 July 2024
+    - |:rocket:| Release
+  * - New feature! ``FinOL`` now supports the `Auto Hyperparameter Tuning <https://dl.acm.org/doi/10.1145/3292500.3330701>`__ feature
+    - Supported since 22 July 2024
+    - |:hammer_and_wrench:| Enhancement
+  * - New feature! ``FinOL`` now supports the `Radar Chart <https://en.wikipedia.org/wiki/Radar_chart>`__ evaluation
+    - Supported since 10 June 2024
+    - |:hammer_and_wrench:| Enhancement
+  * - New model! ``FinOL`` now supports the `AlphaPortfolio <https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ model
+    - Supported since 06 June 2024
+    - |:hammer_and_wrench:| Enhancement
+  * - New feature! ``FinOL`` now supports the `Economic Distillation <https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ feature
+    - Supported since 15 May 2024
+    - |:hammer_and_wrench:| Enhancement
+  * - New feature! ``FinOL`` now supports the `Interpretability Analysis <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ feature
+    - Supported since 16 April 2024
+    - |:hammer_and_wrench:| Enhancement
+  * - New feature! ``FinOL`` now supports the `Winner Assets Selection <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ feature
+    - Supported since 14 April 2024
+    - |:hammer_and_wrench:| Enhancement
+  * - New release! ``FinOL`` now releases the `Tutorials <finol/tutorials>`__
+    - Released on 22 March 2024
+    - |:rocket:| Release
+  * - New release! ``FinOL`` now releases the `v0.0.1 <https://github.com/jiahaoli57/finol/releases/tag/v0.0.1>`__ package
+    - Released on 21 March 2024
+    - |:rocket:| Release
 
 
 Contents
