@@ -46,6 +46,7 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
+    "sphinx.ext.todo",
     # "sphinx.ext.githubpages",
     # "recommonmark",
     # "sphinx_markdown_tables",
@@ -55,6 +56,7 @@ extensions = [
     # "shibuya",
     # "sphinx-jsonschema",
     "sphinxemoji.sphinxemoji",
+    "sphinx_tabs.tabs",
 ]
 templates_path = ["_templates"]
 
@@ -150,9 +152,10 @@ autodoc_default_options = {
     "inherited-members": True,
     "exclude-members": "with_traceback",
 }
-# autodoc_mock_imports = ["finol"]
 autosummary_imported_members = True
 
 # sphinx_copybutton option to not copy prompt.
-copybutton_prompt_text = "$ "
+copybutton_prompt_text = r'^\$ |^>>> |^\.\.\. '
+copybutton_prompt_is_regexp = True
 
+todo_include_todos = True

@@ -11,14 +11,14 @@ Command Line Usage
 
 .. code:: python3
 
-    from finol.data_layer.dataset_loader import DatasetLoader
-    from finol.optimization_layer.model_trainer import ModelTrainer
-    from finol.evaluation_layer.model_evaluator import ModelEvaluator
+    >>> from finol.data_layer.dataset_loader import DatasetLoader
+    >>> from finol.optimization_layer.model_trainer import ModelTrainer
+    >>> from finol.evaluation_layer.model_evaluator import ModelEvaluator
 
 
-    load_dataset_output = DatasetLoader().load_dataset()
-    train_model_output = ModelTrainer(load_dataset_output).train_model()
-    evaluate_model_output = ModelEvaluator(load_dataset_output, train_model_output).evaluate_model()
+    >>> load_dataset_output = DatasetLoader().load_dataset()
+    >>> train_model_output = ModelTrainer(load_dataset_output).train_model()
+    >>> evaluate_model_output = ModelEvaluator(load_dataset_output, train_model_output).evaluate_model()
 
 Before running the above commands, users can first
 configure some parameters through the config file
@@ -29,17 +29,17 @@ a model, etc. The specific configuration method is as follows:
 
 .. code:: python3
 
-    from finol.utils import load_config, update_config
+    >>> from finol.utils import load_config, update_config
 
-    config = load_config()
-    config["DEVICE"] = "auto"
-    config["DATASET_NAME"] = "DJIA"
-    config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"] = 15
-    config["SCALER"] = "WindowMinMaxScaler"
-    config["MODEL_NAME"] = "DNN"
-    config["TUNE_PARAMETERS"] = True  # False
-    update_config(config)
-    config
+    >>> config = load_config()
+    >>> config["DEVICE"] = "auto"
+    >>> config["DATASET_NAME"] = "DJIA"
+    >>> config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"] = 15
+    >>> config["SCALER"] = "WindowMinMaxScaler"
+    >>> config["MODEL_NAME"] = "DNN"
+    >>> config["TUNE_PARAMETERS"] = True  # False
+    >>> update_config(config)
+    >>> config
 
 |Open in Colab|
 

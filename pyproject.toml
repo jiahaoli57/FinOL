@@ -15,13 +15,10 @@ classifiers = [
   "Intended Audience :: Science/Research",
   "Intended Audience :: Developers",
   "License :: OSI Approved :: MIT License",
-  "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
-  "Programming Language :: Python :: 3.11",
-  "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3 :: Only",
   "Topic :: Scientific/Engineering",
   "Topic :: Scientific/Engineering :: Mathematics",
@@ -30,7 +27,7 @@ classifiers = [
   "Topic :: Software Development :: Libraries",
   "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-requires-python = ">=3.7"
+requires-python = ">=3.7, <4"  # >=3.7
 dependencies = [
   "captum",
   "cmaes>=0.10.0",  # optuna/samplers/_cmaes.py
@@ -90,6 +87,7 @@ document = [
 #  "sphinx_design",
   "sphinxemoji",
   "shibuya",
+  "sphinx_tabs",
 ]
 #optional = [
 #  "boto3",  # optuna/artifacts/_boto3.py.

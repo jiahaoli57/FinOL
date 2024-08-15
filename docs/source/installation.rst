@@ -14,3 +14,102 @@ from master branch of Git repository:
 .. code-block:: bash
 
     $ pip install git+https://github.com/jiahaoli57/finol.git
+
+Install ta-lib dependency
+-------------------------
+
+``FinOL`` requires the ``ta-lib`` library as one of its dependencies. ``ta-lib`` is an open-source technical indicator
+library for financial applications, and unlike other dependencies, ``ta-lib`` cannot be installed automatically via ``pip install finol``.
+Therefore, you will need to manually install ``ta-lib``.
+
+Follow the steps below based on your operating system to install ``ta-lib``:
+
+.. hint::
+
+     For users using Anaconda, it is highly recommended to prioritize installing ``ta-lib`` using conda, as conda installation is very convenient.
+
+.. tabs::
+
+  .. group-tab:: pip
+
+    .. tabs::
+
+      .. group-tab:: Windows
+
+          Try installing ``ta-lib`` via pip first
+
+          .. code-block:: bash
+
+            $ pip install TA-Lib
+
+          If an error occurs, then install package corresponding to your Python manually from the
+          `talib whl collection website <https://sourceforge.net/projects/talib-whl/files/ta_lib_0.4.28/>`__
+
+          Let's consider an example with Python 3.10 and the whl file downloaded to C:\\Users\\xxxx\\Downloads.
+          After downloading the whl file, all you need to do is to run the following command:
+
+          .. code-block:: bash
+
+            $ pip install C:\Users\xxxx\Downloads\TA_Lib-0.4.28-cp310-cp310-win_amd64.whl
+
+          To verify if the installation is successful, run:
+
+          .. code-block:: bash
+
+            $ python -c "import talib; print(talib.__version__)"
+
+          If the installation is successful, it should output the current version of ``ta-lib`` without any errors.
+
+      .. group-tab:: Linux
+
+          Try installing ``ta-lib`` via pip first
+
+          .. code-block:: bash
+
+            $ pip install TA-Lib
+
+          If an error occurs, manually compile and install ``ta-lib`` from source:
+
+          .. code-block:: bash
+
+            $ wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+            $ tar xvzf ta-lib-0.4.0-src.tar.gz
+            $ cd ta-lib/
+            $ ./configure --prefix=/usr
+            $ make
+            $ make install
+            $ cd ..
+            $ pip install TA-Lib
+
+          To verify if the installation is successful, run:
+
+          .. code-block:: bash
+
+            $ python -c "import talib; print(talib.__version__)"
+
+          If the installation is successful, it should output the current version of ``ta-lib`` without any errors.
+
+      .. group-tab:: Mac OSX
+
+        .. todo::
+
+           Will be completed later.
+
+
+  .. group-tab:: conda
+
+      If you are using Anaconda, installation becomes very simple at this point.
+      With just one line of command, you can complete the installation on 64-bit Windows, Linux and Mac OSX systems,
+      including Macs with Apple M1/M2 chips using the Arm architecture:
+
+          .. code-block:: bash
+
+              $ conda install -c conda-forge ta-lib
+
+      To verify if the installation is successful, run:
+
+      .. code-block:: bash
+
+        $ python -c "import talib; print(talib.__version__)"
+
+      If the installation is successful, it should output the current version of ``ta-lib`` without any errors.
