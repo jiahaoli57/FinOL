@@ -98,18 +98,22 @@ Follow the steps below based on your operating system to install ``ta-lib``:
 
   .. group-tab:: conda
 
-      If you are using Anaconda, installation becomes very simple at this point.
-      With just one line of command, you can complete the installation on 64-bit Windows, Linux and Mac OSX systems,
-      including Macs with Apple M1/M2 chips using the Arm architecture:
+    .. tabs::
+
+        .. group-tab:: All systems
+
+          If you are using Anaconda, installation becomes very simple at this point.
+          With just one line of command, you can complete the installation on 64-bit Windows, Linux and Mac OSX systems,
+          including Macs with Apple M1/M2 chips using the Arm architecture:
+
+              .. code-block:: bash
+
+                  $ conda install -c conda-forge ta-lib
+
+          To verify if the installation is successful, run:
 
           .. code-block:: bash
 
-              $ conda install -c conda-forge ta-lib
+            $ python -c "import talib; print(talib.__version__)"
 
-      To verify if the installation is successful, run:
-
-      .. code-block:: bash
-
-        $ python -c "import talib; print(talib.__version__)"
-
-      If the installation is successful, it should output the current version of ``ta-lib`` without any errors.
+          If the installation is successful, it should output the current version of ``ta-lib`` without any errors.
