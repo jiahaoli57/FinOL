@@ -36,3 +36,85 @@ msgid ""
 "branch of Git repository:"
 msgstr ""
 "除了可以通过 PyPI 安装正式发布的 ``FinOL`` 版本，用户也可以从 Git 仓库的 master 分支安装 ``FinOL`` 的开发版本。"
+
+#: ../../source/installation.rst
+msgid ""
+"Install ta-lib dependency"
+msgstr ""
+"安装 ta-lib 依赖项"
+
+#: ../../source/installation.rst
+msgid ""
+"``FinOL`` requires the ``ta-lib`` library as one of its dependencies. ``ta-lib`` is an open-source technical indicator "
+"library for financial applications, and unlike other dependencies, ``ta-lib`` cannot be installed automatically via ``pip install finol``. "
+"Therefore, you will need to manually install ``ta-lib``."
+msgstr ""
+"``FinOL`` 需要 ``ta-lib`` 库作为其依赖项之一。``ta-lib`` 是一个用于金融应用的开源技术指标库，与其他依赖项不同，"
+"``ta-lib`` 无法通过 ``pip install finol`` 自动安装。因此，您需要手动安装 ``ta-lib``。"
+
+#: ../../source/installation.rst
+msgid ""
+"Follow the steps below based on your operating system to install ``ta-lib``:"
+msgstr ""
+"根据您的操作系统，请按照以下步骤安装 ``ta-lib``："
+
+#: ../../source/installation.rst
+msgid ""
+"For users using Anaconda, it is highly recommended to prioritize installing ``ta-lib`` using conda, as conda installation is very convenient."
+msgstr ""
+"对于使用 Anaconda 的用户，强烈建议优先使用 conda 安装 ``ta-lib``，因为 conda 安装非常便捷。"
+
+#: ../../source/installation.rst
+msgid ""
+"Try installing ``ta-lib`` via pip first"
+msgstr ""
+"请首先尝试通过 pip 安装 ``ta-lib``"
+
+#: ../../source/installation.rst
+msgid ""
+"If an error occurs, then install package corresponding to your Python manually from the "
+"`talib whl collection website <https://sourceforge.net/projects/talib-whl/files/ta_lib_0.4.28/>`__"
+msgstr ""
+"如果出现错误，请手动安装与您的 Python 对应的包，您可以从 `talib whl 网站 <https://sourceforge.net/projects/talib-whl/files/ta_lib_0.4.28/>`__ 下载相应的包。"
+
+#: ../../source/installation.rst
+msgid ""
+"For example, with Python 3.10 and the whl file downloaded to the local path C:\\\Users\\\John\\\Downloads. "
+"After downloading the whl file, all you need to do is run the following command:"
+msgstr ""
+"以 Python 3.10，whl 文件下载到本地路径 C:\\\Users\\\John\\\Downloads 为例。"
+"在下载 whl 文件后，您只需运行以下命令："
+
+#: ../../source/installation.rst
+msgid ""
+"To verify if the installation is successful, run:"
+msgstr ""
+"要验证安装是否成功，请运行："
+
+#: ../../source/installation.rst
+msgid ""
+"If the installation is successful, it should output the current version of ``ta-lib`` without any errors."
+msgstr ""
+"如果安装成功，应该可以输出当前版本的 ``ta-lib``，而且没有任何错误。"
+
+
+#: ../../source/installation.rst
+msgid ""
+"Will be completed later."
+msgstr ""
+"即将补充。"
+
+#: ../../source/installation.rst
+msgid ""
+"If an error occurs, manually compile and install ``ta-lib`` from source:"
+msgstr ""
+"如果出现错误，手动编译并安装 ``ta-lib``："
+
+#: ../../source/installation.rst
+msgid ""
+"If you are using Anaconda, installation becomes very simple at this point. "
+"With just one line of command, you can complete the installation on 64-bit Windows, Linux and Mac OSX systems, "
+"including Macs with Apple M1/M2 chips using the Arm architecture:"
+msgstr ""
+"如果您使用的是 Anaconda,那么安装就变得非常简单了。只需一行命令，"
+"您就可以在 64 位 Windows、Linux 和 macOS（包括 Arm 架构的 M1/M2 芯片的 Mac）系统上完成安装："
