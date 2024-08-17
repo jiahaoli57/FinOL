@@ -118,3 +118,15 @@ msgid ""
 msgstr ""
 "如果您使用的是 Anaconda,那么安装就变得非常简单了。只需一行命令，"
 "您就可以在 64 位 Windows、Linux 和 macOS（包括 Arm 架构的 M1/M2 芯片的 Mac）系统上完成安装："
+
+#: ../../source/installation.rst
+msgid ""
+"Python Version"
+msgstr ""
+"Python 版本"
+
+#: ../../source/installation.rst
+msgid ""
+"ta-lib WHL File"
+msgstr ""
+"ta-lib WHL 文件"

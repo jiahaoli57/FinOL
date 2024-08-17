@@ -45,6 +45,27 @@ Follow the steps below based on your operating system to install ``ta-lib``:
           If an error occurs, then install package corresponding to your Python manually from the
           `talib whl collection website <https://sourceforge.net/projects/talib-whl/files/ta_lib_0.4.28/>`__
 
+          .. list-table::
+             :header-rows: 1
+             :class: ghost
+
+             * - Python Version
+               - ta-lib WHL File
+             * - 3.6
+               - TA_Lib-0.4.28-cp36-cp36m-win_amd64.whl
+             * - 3.7
+               - TA_Lib-0.4.28-cp37-cp37m-win_amd64.whl
+             * - 3.8
+               - TA_Lib-0.4.28-cp38-cp38-win_amd64.whl
+             * - 3.9
+               - TA_Lib-0.4.28-cp39-cp39-win_amd64.whl
+             * - 3.10
+               - TA_Lib-0.4.28-cp310-cp310-win_amd64.whl
+             * - 3.11
+               - TA_Lib-0.4.28-cp311-cp311-win_amd64.whl
+             * - 3.12
+               - TA_Lib-0.4.28-cp312-cp312-win_amd64.whl
+
           For example, with Python 3.10 and the whl file downloaded to the local path C:\\Users\\John\\Downloads.
           After downloading the whl file, all you need to do is run the following command:
 
