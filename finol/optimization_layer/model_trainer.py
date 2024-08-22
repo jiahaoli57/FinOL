@@ -8,7 +8,7 @@ import numpy as np
 # from IPython import display
 from tqdm import tqdm
 from typing import List, Tuple, Dict, Union
-from finol.model_layer.model_selector import ModelSelector
+from finol.model_layer.model_instantiator import ModelInstantiator
 from finol.optimization_layer.criterion_selector import CriterionSelector
 from finol.optimization_layer.optimizer_selector import OptimizerSelector
 from finol.optimization_layer.parameters_tuner import ParametersTuner
@@ -79,6 +79,11 @@ class ModelTrainer:
         plt.savefig(self.logdir + "/" + add_prefix("loss.pdf"), format="pdf", dpi=300, bbox_inches="tight")
         plt.show()
 
+        # from io import BytesIO
+        # buffer = BytesIO()
+        # plt.savefig(buffer, format='png')
+        # buffer.seek(0)
+
     def train_model(self) -> Dict:
         """
         Train the machine learning model using the specified dataset.
@@ -94,7 +99,7 @@ class ModelTrainer:
             pass
 
         set_seed(seed=self.config["MANUAL_SEED"])
-        model = ModelSelector(self.load_dataset_output).select_model()
+        model = ModelInstantiator(self.load_dataset_output).instantiate_model()
         optimizer = OptimizerSelector(model).select_optimizer()
         criterion = CriterionSelector()
 

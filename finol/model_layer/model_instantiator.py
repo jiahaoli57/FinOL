@@ -1,17 +1,33 @@
 from finol.utils import load_config, set_seed
 
-model_dict = {}
+from finol.model_layer.AlphaPortfolio import AlphaPortfolio
+from finol.model_layer.CNN import CNN
+from finol.model_layer.DNN import DNN
+from finol.model_layer.LSRE_CAAN import LSRE_CAAN
+from finol.model_layer.LSTM import LSTM
+from finol.model_layer.RNN import RNN
+from finol.model_layer.Transformer import Transformer
+from finol.model_layer.CustomModel import CustomModel
+
+model_dict = {
+    "AlphaPortfolio": AlphaPortfolio,
+    "CNN": CNN,
+    "DNN": DNN,
+    "LSRE-CAAN": LSRE_CAAN,
+    "LSTM": LSTM,
+    "RNN": RNN,
+    "Transformer": Transformer,
+    "CustomModel": CustomModel
+}
 
 
-class ModelSelector:
+class ModelInstantiator:
     def __init__(self, load_dataset_output):
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
         set_seed(seed=self.config["MANUAL_SEED"])
 
         if "AlphaPortfolio" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "AlphaPortfolio":
-            from finol.model_layer.AlphaPortfolio import AlphaPortfolio
-            model_dict["AlphaPortfolio"] = AlphaPortfolio
             self.model_args = {
                 "num_features_original": self.load_dataset_output["num_features_original"],
                 "window_size": self.load_dataset_output["window_size"],
@@ -25,8 +41,6 @@ class ModelSelector:
             }
 
         if "CNN" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "CNN":
-            from finol.model_layer.CNN import CNN
-            model_dict["CNN"] = CNN
             self.model_args = {
                 "num_features_original": self.load_dataset_output["num_features_original"],
                 "window_size": self.load_dataset_output["window_size"],
@@ -40,8 +54,6 @@ class ModelSelector:
             }
 
         if "DNN" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "DNN":
-            from finol.model_layer.DNN import DNN
-            model_dict["DNN"] = DNN
             self.model_args = {
                 "num_features_augmented": self.load_dataset_output["num_features_augmented"],
             }
@@ -52,10 +64,6 @@ class ModelSelector:
             }
 
         if "LSRE-CAAN" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"].startswith("LSRE-CAAN"):
-            from finol.model_layer.LSRE_CAAN import LSRE_CAAN
-            model_dict["LSRE-CAAN"] = LSRE_CAAN
-            model_dict["LSRE-CAAN-d"] = LSRE_CAAN
-            model_dict["LSRE-CAAN-dd"] = LSRE_CAAN
             self.model_args = {
                 "num_features_original": self.load_dataset_output["num_features_original"],
                 "window_size": self.load_dataset_output["window_size"],
@@ -72,8 +80,6 @@ class ModelSelector:
             }
 
         if "LSTM" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "LSTM":
-            from finol.model_layer.LSTM import LSTM
-            model_dict["LSTM"] = LSTM
             self.model_args = {
                 "num_features_original": self.load_dataset_output["num_features_original"],
                 "window_size": self.load_dataset_output["window_size"],
@@ -85,8 +91,6 @@ class ModelSelector:
             }
 
         if "RNN" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "RNN":
-            from finol.model_layer.RNN import RNN
-            model_dict["RNN"] = RNN
             self.model_args = {
                 "num_features_original": self.load_dataset_output["num_features_original"],
                 "window_size": self.load_dataset_output["window_size"],
@@ -98,8 +102,6 @@ class ModelSelector:
             }
 
         if "Transformer" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "Transformer":
-            from finol.model_layer.Transformer import Transformer
-            model_dict["Transformer"] = Transformer
             self.model_args = {
                 "num_features_original": self.load_dataset_output["num_features_original"],
                 "window_size": self.load_dataset_output["window_size"],
@@ -112,14 +114,11 @@ class ModelSelector:
                 "DROPOUT": self.config["MODEL_PARAMS"]["Transformer"]["DROPOUT"],
             }
 
-        if "UserModel" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "UserModel":
-            from finol.model_layer.UserModel import UserModel
-            model_dict["UserModel"] = UserModel
+        if "CustomModel" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "CustomModel":
             self.model_args = {}
             self.model_params = {}
 
-
-    def select_model(self, sampled_params=None):
+    def instantiate_model(self, sampled_params=None):
         model_cls = model_dict.get(self.config["MODEL_NAME"], None)
         if model_cls is None:
             raise ValueError(f"Invalid model: {self.config['MODEL_NAME']}. Supported models are: {model_dict}")

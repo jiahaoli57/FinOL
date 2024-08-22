@@ -113,7 +113,7 @@ class AlphaPortfolio(nn.Module):
     Example:
         .. code:: python
         >>> from finol.data_layer.dataset_loader import DatasetLoader
-        >>> from finol.model_layer.model_selector import ModelSelector
+        >>> from finol.model_layer.model_instantiator import ModelInstantiator
         >>> from finol.utils import load_config, update_config, portfolio_selection
         >>>
         >>> # Configuration
@@ -130,7 +130,7 @@ class AlphaPortfolio(nn.Module):
         >>>
         >>> # Model Layer & Optimization Layer
         >>> ...
-        >>> model = ModelSelector(load_dataset_output).select_model()
+        >>> model = ModelInstantiator(load_dataset_output).instantiate_model()
         >>> print(f"model: {model}")
         >>> ...
         >>> train_loader = load_dataset_output["train_loader"]

@@ -3,8 +3,8 @@
     "DEVICE": "cuda",
     "MANUAL_SEED": 0,
     "_note2": "-------------------------------------- Data Layer Configuration ----------------------------------------",
-    "LOAD_LOCAL_DATALOADER": true,
-    "DATASET_NAME": "NYSE(O)",
+    "LOAD_LOCAL_DATALOADER": false,
+    "DATASET_NAME": "SP500",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
             "TRAIN_START_TIMESTAMP": "1962-07-03",
@@ -86,16 +86,16 @@
         "INCLUDE_VOLUME_FEATURES": true,
         "INCLUDE_CYCLE_FEATURES": true,
         "INCLUDE_PRICE_FEATURES": true,
-        "INCLUDE_VOLATILITY_FEATURES": true,
-        "INCLUDE_PATTERN_FEATURES": true
+        "INCLUDE_VOLATILITY_FEATURES": false,
+        "INCLUDE_PATTERN_FEATURES": false
     },
     "DATA_AUGMENTATION_CONFIG": {
         "WINDOW_DATA": {
-            "INCLUDE_WINDOW_DATA": false,
+            "INCLUDE_WINDOW_DATA": true,
             "WINDOW_SIZE": 30
         }
     },
-    "SCALER": "StandardScaler",
+    "SCALER": "WindowStandardScaler",
     "BATCH_SIZE": {
         "NYSE(O)": 128,
         "NYSE(N)": 128,
@@ -122,38 +122,38 @@
     "MODEL_NAME": "LSRE-CAAN",
     "MODEL_PARAMS": {
         "AlphaPortfolio": {
-            "NUM_LAYERS": 3,
-            "DIM_EMBEDDING": 192,
-            "DIM_FEEDFORWARD": 160,
-            "NUM_HEADS": 1,
-            "DROPOUT": 0.25
+            "NUM_LAYERS": 4,
+            "DIM_EMBEDDING": 128,
+            "DIM_FEEDFORWARD": 128,
+            "NUM_HEADS": 4,
+            "DROPOUT": 0.5
         },
         "CNN": {
-            "OUT_CHANNELS": 128,
+            "OUT_CHANNELS": 64,
             "KERNEL_SIZE": 3,
             "STRIDE": 1,
             "HIDDEN_SIZE": 32,
             "DROPOUT": 0.2
         },
         "DNN": {
-            "NUM_LAYERS": 4,
-            "HIDDEN_SIZE": 64,
-            "DROPOUT": 0.35000000000000003
+            "NUM_LAYERS": 2,
+            "HIDDEN_SIZE": 256,
+            "DROPOUT": 0.5
         },
         "LSRE-CAAN": {
-            "NUM_LAYERS": 1,
+            "NUM_LAYERS": 6,
             "NUM_LATENTS": 12,
-            "LATENT_DIM": 64,
-            "CROSS_HEADS": 1,
-            "LATENT_HEADS": 1,
+            "LATENT_DIM": 128,
+            "CROSS_HEADS": 4,
+            "LATENT_HEADS": 4,
             "CROSS_DIM_HEAD": 64,
             "LATENT_DIM_HEAD": 64,
             "DROPOUT": 0.1
         },
         "LSTM": {
-            "NUM_LAYERS": 3,
+            "NUM_LAYERS": 2,
             "HIDDEN_SIZE": 256,
-            "DROPOUT": 0
+            "DROPOUT": 0.0
         },
         "RNN": {
             "NUM_LAYERS": 3,
@@ -161,13 +161,13 @@
             "DROPOUT": 0.0
         },
         "Transformer": {
-            "NUM_LAYERS": 2,
+            "NUM_LAYERS": 6,
             "DIM_EMBEDDING": 256,
-            "DIM_FEEDFORWARD": 32,
+            "DIM_FEEDFORWARD": 128,
             "NUM_HEADS": 1,
             "DROPOUT": 0.05
         },
-        "UserModel": {
+        "CustomModel": {
             "PARAMETER1": 128,
             "PARAMETER2": 128
         }
@@ -535,16 +535,16 @@
         }
     },
     "_note4": "----------------------------------- Optimization Layer Configuration -----------------------------------",
-    "NUM_EPOCHES": 1,
-    "SAVE_EVERY": 1,
-    "OPTIMIZER_NAME": "Adam",
+    "NUM_EPOCHES": 100,
+    "SAVE_EVERY": 2,
+    "OPTIMIZER_NAME": "RAdam",
     "LEARNING_RATE": 0.001,
-    "CRITERION_NAME": "LogWealth",
+    "CRITERION_NAME": "CustomCriterion",
     "LAMBDA_L2": 0.005,
-    "TUNE_PARAMETERS": false,
-    "NUM_TRIALS": 40,
-    "SAMPLER_NAME": "RandomSampler",
-    "PRUNER_NAME": "NopPruner",
+    "TUNE_PARAMETERS": true,
+    "NUM_TRIALS": 20,
+    "SAMPLER_NAME": "QMCSampler",
+    "PRUNER_NAME": "PatientPruner",
     "WRAPPED_PRUNER_NAME": "MedianPruner",
     "PLOT_DYNAMIC_LOSS": true,
     "_note5": "------------------------------------ Evaluation Layer Configuration ------------------------------------",

@@ -474,9 +474,7 @@ msgid "``PLOT_LANGUAGE``"
 msgstr ""
 
 #: ../../source/api/config.rst:241
-msgid ""
-"``en`` (English), ``zh-CHS`` (Chinese-Simple), ``zh-CHT`` (Chinese-"
-"Traditional)."
+msgid "``en`` (English), ``zh_CN`` (Chinese Simple), ``zh_TW`` (Chinese Traditional)."
 msgstr ""
 
 #: ../../source/api/config.rst:242
@@ -684,10 +682,10 @@ msgstr ""
 #: ../../source/api/generated/finol.model_layer.DNN.rst
 #: ../../source/api/generated/finol.model_layer.LSRE_CAAN.rst
 #: ../../source/api/generated/finol.model_layer.LSTM.rst
-#: ../../source/api/generated/finol.model_layer.ModelSelector.rst:13
+#: ../../source/api/generated/finol.model_layer.ModelInstantiator.rst:13
 #: ../../source/api/generated/finol.model_layer.RNN.rst
 #: ../../source/api/generated/finol.model_layer.Transformer.rst
-#: ../../source/api/generated/finol.model_layer.UserModel.rst
+#: ../../source/api/generated/finol.model_layer.CustomModel.rst
 #: ../../source/api/generated/finol.optimization_layer.CriterionSelector.rst:13
 #: ../../source/api/generated/finol.optimization_layer.ModelTrainer.rst:13
 #: ../../source/api/generated/finol.optimization_layer.OptimizerSelector.rst:13
@@ -843,8 +841,8 @@ msgstr ""
 #: finol.model_layer.LSTM.LSTM.forward finol.model_layer.RNN.RNN
 #: finol.model_layer.RNN.RNN.forward finol.model_layer.Transformer.Transformer
 #: finol.model_layer.Transformer.Transformer.forward
-#: finol.model_layer.UserModel.UserModel
-#: finol.model_layer.UserModel.UserModel.forward
+#: finol.model_layer.CustomModel.CustomModel
+#: finol.model_layer.CustomModel.CustomModel.forward
 #: finol.optimization_layer.criterion_selector.CriterionSelector.compute_l2_concentration_loss
 #: finol.optimization_layer.criterion_selector.CriterionSelector.compute_l2_diversification_loss
 #: finol.optimization_layer.criterion_selector.CriterionSelector.compute_log_wealth_l2_concentration_loss
@@ -928,7 +926,7 @@ msgstr ""
 #: finol.model_layer.LSRE_CAAN.LSRE_CAAN.forward
 #: finol.model_layer.LSTM.LSTM.forward finol.model_layer.RNN.RNN.forward
 #: finol.model_layer.Transformer.Transformer.forward
-#: finol.model_layer.UserModel.UserModel.forward
+#: finol.model_layer.CustomModel.CustomModel.forward
 #: finol.optimization_layer.criterion_selector.CriterionSelector.compute_l2_concentration_loss
 #: finol.optimization_layer.criterion_selector.CriterionSelector.compute_l2_diversification_loss
 #: finol.optimization_layer.criterion_selector.CriterionSelector.compute_log_wealth_l2_concentration_loss
@@ -1010,7 +1008,7 @@ msgstr ""
 #: finol.model_layer.LSRE_CAAN.LSRE_CAAN.forward
 #: finol.model_layer.LSTM.LSTM.forward finol.model_layer.RNN.RNN.forward
 #: finol.model_layer.Transformer.Transformer.forward
-#: finol.model_layer.UserModel.UserModel.forward
+#: finol.model_layer.CustomModel.CustomModel.forward
 #: finol.optimization_layer.criterion_selector.CriterionSelector.compute_l2_concentration_loss
 #: finol.optimization_layer.criterion_selector.CriterionSelector.compute_l2_diversification_loss
 #: finol.optimization_layer.criterion_selector.CriterionSelector.compute_log_wealth_l2_concentration_loss
@@ -5196,13 +5194,13 @@ msgstr ""
 msgid ":py:obj:`training <finol.model_layer.LSTM.LSTM.training>`\\"
 msgstr ""
 
-#: ../../source/api/generated/finol.model_layer.ModelSelector.rst:2
-msgid "finol.model\\_layer.ModelSelector"
+#: ../../source/api/generated/finol.model_layer.ModelInstantiator.rst:2
+msgid "finol.model\\_layer.ModelInstantiator"
 msgstr ""
 
-#: ../../source/api/generated/finol.model_layer.ModelSelector.rst:16:<autosummary>:1
+#: ../../source/api/generated/finol.model_layer.ModelInstantiator.rst:16:<autosummary>:1
 msgid ""
-":py:obj:`select_model <finol.model_layer.ModelSelector.select_model>`\\ "
+":py:obj:`instantiate_model <finol.model_layer.ModelInstantiator.instantiate_model>`\\ "
 "\\(\\[sampled\\_params\\]\\)"
 msgstr ""
 
@@ -6650,8 +6648,8 @@ msgstr ""
 
 #: ../../source/api/model_layer.rst:20:<autosummary>:1
 msgid ""
-":py:obj:`finol.model_layer.ModelSelector "
-"<finol.model_layer.ModelSelector>`"
+":py:obj:`finol.model_layer.ModelInstantiator "
+"<finol.model_layer.ModelInstantiator>`"
 msgstr ""
 
 #: ../../source/api/optimization_layer.rst:4

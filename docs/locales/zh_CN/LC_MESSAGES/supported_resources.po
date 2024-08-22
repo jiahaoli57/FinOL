@@ -2750,8 +2750,8 @@ msgstr ""
 #: ../../source/supported_resources/supported_metrics.rst:12
 #: ../../source/supported_resources/supported_metrics.rst:15
 #: ../../source/supported_resources/supported_metrics.rst:18
-msgid "Profit Metric"
-msgstr "收益指标"
+msgid "*Profit Metric*"
+msgstr "*收益指标*"
 
 #: ../../source/supported_resources/supported_metrics.rst:15
 msgid "Annualized Percentage Yield"
@@ -2779,8 +2779,8 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_metrics.rst:23
 #: ../../source/supported_resources/supported_metrics.rst:25
-msgid "Risk Metric"
-msgstr "风险指标"
+msgid "*Risk Metric*"
+msgstr "*风险指标*"
 
 #: ../../source/supported_resources/supported_metrics.rst:25
 msgid "MDD"
@@ -2793,12 +2793,12 @@ msgstr ""
 #: ../../source/supported_resources/supported_metrics.rst:29
 #: ../../source/supported_resources/supported_metrics.rst:32
 #: ../../source/supported_resources/supported_metrics.rst:35
-msgid "Practical Metric"
-msgstr "实用性指标"
+msgid "*Practical Metric*"
+msgstr "*实用性指标*"
 
 #: ../../source/supported_resources/supported_metrics.rst:32
 msgid "Transaction Costs-Adjusted Cumulative Wealth"
-msgstr "交易费用调整"
+msgstr "交易费用调整累积财富"
 
 #: ../../source/supported_resources/supported_metrics.rst:32
 msgid "TCW"

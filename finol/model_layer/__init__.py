@@ -6,8 +6,8 @@ from finol.model_layer.LSRE_CAAN import LSRE_CAAN
 from finol.model_layer.LSTM import LSTM
 from finol.model_layer.RNN import RNN
 from finol.model_layer.Transformer import Transformer
-from finol.model_layer.UserModel import UserModel
-from finol.model_layer.model_selector import ModelSelector
+from finol.model_layer.CustomModel import CustomModel
+from finol.model_layer.model_instantiator import ModelInstantiator
 
 
 __all__ = [
@@ -18,6 +18,6 @@ __all__ = [
     "LSTM",
     "RNN",
     "Transformer",
-    "UserModel",
-    "ModelSelector",
+    "CustomModel",
+    "ModelInstantiator",
 ]

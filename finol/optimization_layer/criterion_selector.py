@@ -158,8 +158,23 @@ class CriterionSelector:
         loss = volatility
         return loss
 
+    def compute_custom_criterion_loss(self, portfolios: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
+        """
+        Compute the ``CustomCriterion`` loss,  which is left for the user to define.
+
+        This loss function is a placeholder for the user to implement their own custom loss criterion.
+
+        :param portfolios: Portfolio weights tensor of shape (batch_size, num_assets).
+        :param labels: Label tensor representing asset returns of shape (batch_size, num_assets).
+        :return: ``CustomCriteria`` loss tensor, representing the user-defined loss criterion.
+        """
+        # This is a placeholder for the user to implement their own custom loss function.
+        # The implementation of the custom loss function is left to the user.
+        loss = torch.tensor(0.0, requires_grad=True)
+        return loss
+
     def __call__(self, portfolios: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
         criterion_cls = self.criterion_dict.get(self.config["CRITERION_NAME"], None)
         if criterion_cls is None:
-            raise ValueError(f"Invalid criterion name: {self.config['CRITERION_NAME']}. Supported criterions are: {self.criterion_dict.keys()}")
+            raise ValueError(f"Invalid criterion name: {self.config['CRITERION_NAME']}. Supported criteria are: {self.criterion_dict.keys()}")
         return criterion_cls(portfolios, labels)

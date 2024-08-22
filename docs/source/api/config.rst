@@ -3,8 +3,9 @@
 finol.config
 ============
 
-General Configuration
----------------------
+
+Data Layer Configuration
+------------------------
 
 ``DEVICE``
 ~~~~~~~~~~
@@ -19,10 +20,6 @@ General Configuration
 :Type: int
 :Options: Any non-negative integer.
 :Description: Sets the seed for random number generation to ensure reproducibility of results.
-
-Data Layer Configuration
-------------------------
-
 
 ``LOAD_LOCAL_DATALOADER``
 ~~~~~~~~~~~~~~~~~~~~~~~~~

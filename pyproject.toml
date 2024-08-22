@@ -41,6 +41,7 @@ dependencies = [
   "requests",
   "rich",
   "scikit-learn",
+  "sv_ttk",
   "tabulate",
   "torch",
   "torch_optimizer",

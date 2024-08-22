@@ -33,7 +33,7 @@ msgstr ""
 
 #: ../../source/quickstart.rst:10
 msgid "Command Line Usage"
-msgstr ""
+msgstr "命令行使用方法"
 
 #: ../../source/quickstart.rst:23
 msgid ""
@@ -65,65 +65,104 @@ msgid ""
 "includes options for dataset selection, model configuration, training, "
 "and evaluation, allowing users to easily customize the parameters and run"
 " the exeriments without the need to write any code."
-msgstr ""
+msgstr "除了命令行使用方式外，``FinOL`` 还提供了一个图形用户界面（GUI），使用户可以以更直观和可视化的方式实现与命令行使用相同的功能。"
+"这个 GUI 界面包括数据集选择、模型配置、训练和评估等选项，可以让用户可以轻松自定义参数并运行实验，无需编写任何代码。"
 
 #: ../../source/quickstart.rst:60
 msgid "Overall Framework of FinOL GUI"
-msgstr ""
+msgstr "FinOL 图形界面的总体框架"
 
-#: ../../source/quickstart.rst:62
-msgid "Data Layer Panel"
-msgstr ""
+#: ../../source/quickstart.rst:
+msgid "The GUI is divided into three main sections:"
+msgstr "图形界面分为三个主要部分："
 
-#: ../../source/quickstart.rst:64
-msgid ""
-"In the data layer panel, users can choose from a variety of available "
-"datasets, such as DJIA, S&P500, and Nasdaq Composite. .. The GUI also "
-"displays information about each dataset, such as the number of samples "
-"and features, to help users make an informed decision."
-msgstr ""
+msgid "Sidebar"
+msgstr "侧边栏"
 
-#: ../../source/quickstart.rst:70
-msgid "Model Layer Panel"
-msgstr ""
+msgid "Located on the left, it contains various buttons for actions such as customizing datasets, models, "
+"and criteria. It also includes options to load datasets, train models, evaluate models, quit the application, "
+"and restart it."
+msgstr "该区域位于左侧，包含用于自定义数据集、模型和评判标准等操作的各种按钮。它还包括加载数据集、训练模型、评估模型、退出图形界面和重新图形界面的选项。"
 
-#: ../../source/quickstart.rst:72
-msgid ""
-"The model layer panel allows users to select the model architecture and "
-"other settings. Users can choose from a range of pre-defined models or "
-"create their own custom models. .. The xx provides detailed information "
-"about each model and its parameters, making it easier for users to "
-"understand and customize the model."
-msgstr ""
+msgid "*The Sidebar of FinOL GUI*"
+msgstr "*FinOL 图形界面的的侧边栏"
 
-#: ../../source/quickstart.rst:78
-msgid "Optimization Layer Panel"
-msgstr ""
+msgid "Tab View"
+msgstr "选项卡视图"
 
-#: ../../source/quickstart.rst:80
-msgid ""
-"The optimization layer panel enables users to monitor the training "
-"process. Users can view real-time metrics, such as loss, and adjust the "
-"training parameters as needed."
-msgstr ""
+msgid "Positioned at the top right, this section allows users to switch between different configuration layers, "
+"such as Data Layer, Model Layer, Optimization Layer, and Evaluation Layer. "
+"Each tab provides specific settings and options for configuring the respective layer, "
+"including device and dataset selection, feature inclusion, and data augmentation parameters."
+msgstr "该区域位于右上方，允许用户在不同的配置层之间切换，例如数据层、模型层、优化层和评估层。每个选项卡都提供了用于配置各自层的特定设置和选项，"
+"包括设备和数据集选择、特征包含和数据增强参数。"
 
-#: ../../source/quickstart.rst:85
-msgid "Evaluation Layer Panel"
-msgstr ""
+msgid "*The Tab View of FinOL GUI*"
+msgstr "*FinOL 图形界面的选项卡视图*"
 
-#: ../../source/quickstart.rst:87
-msgid ""
-"The evaluation layer panel enables users to evaluate the trained model's "
-"performance. The GUI also provides visualizations of the model's "
-"performance, making it easier to interpret the results."
-msgstr ""
+msgid "Output Display"
+msgstr "输出显示"
 
-#: ../../source/quickstart.rst:91
-msgid ""
-"By using the ``FinOL`` GUI, users can quickly and easily configure, "
-"train, and evaluate financial models without the need to write complex "
-"code.  The intuitive interface and visual feedback make the process more "
-"accessible and user-friendly, especially for researchers and "
-"practitioners who are new to the field of financial modeling."
-msgstr ""
+msgid "Found at the bottom right, this area is dedicated to displaying internal outputs, "
+"such as benchmark results."
+msgstr "该区域位于右下方，专门用于显示内部输出，如基准测试结果。"
+
+msgid "*The Output Display of FinOL GUI*"
+msgstr "*FinOL 图形界面的输出显示*"
+
+msgid "By using the ``FinOL`` GUI, users can quickly and easily configure, train, and "
+"evaluate financial models without the need to write complex code. "
+"The intuitive interface make the process more accessible and user-friendly for researchers."
+msgstr "通过使用 ``FinOL`` 图形界面，用户可以快速轻松地配置，训练和评估金融模型，而无需编写复杂的代码。直观的界面使研究人员更容易使用和操作。"
+
+msgid "Unique Features of the FinOL GUI"
+msgstr "FinOL 图形界面的独特之处"
+
+msgid "In addition to the above functionalities, "
+"the ``FinOL`` GUI interface also features some unique interactive capabilities that enhance the user experience."
+msgstr "除了上述功能外，"
+"``FinOL`` 图形界面还具有一些独特的交互功能，可以增强用户体验。"
+
+msgid "Dynamic Window Layout"
+msgstr "动态窗口布局"
+
+msgid "*The Dynamic Window Layout of FinOL GUI*"
+msgstr "*FinOL 图形界面的动态窗口布局*"
+
+msgid "The ``FinOL`` GUI employs a dynamic layout design, where the corresponding configuration panels automatically change "
+"based on the user's selections and settings."
+msgstr "FinOL 的图形界面采用了动态布局设计，根据用户的选择和设置，相应的配置窗口会动态变化。"
+
+msgid "For example, when the user selects different model architectures in the \"Model Layer\" panel, "
+"the configuration options will dynamically update to display the specific parameters for that model. "
+"This dynamic layout allows users to focus on configuring the model without the need to switch between "
+"different tabs or windows."
+msgstr "例如，当用户在\"模型层\"中选择不同的模型架构时，相应的配置选项框就会自动变化，展示出该模型特有的参数设置项。"
+"这种动态变化的布局，可以让用户更专注地配置模型，而不需要在不同的选项卡或窗口之间来回切换。"
+
+msgid "Real-time Configuration File Update"
+msgstr "实时配置文件更新"
+
+msgid "The ``FinOL`` GUI not only provides a visual interface for configuration settings, "
+"but also automatically updates the config. json file in the root directory with the user's changes."
+msgstr "FinOL 的图形界面不仅提供直观的配置设置，而且可以实时将用户的设置更新到根目录下的 config.json 文件中。"
+
+msgid "Whenever the user modifies any parameter in the GUI, "
+"the configuration file is instantly updated to reflect the latest settings. "
+"This real-time read-write functionality of the configuration file provides a seamless workflow, "
+"allowing users to switch between the GUI and the command-line interface without any inconsistencies."
+msgstr "每当用户在图形界面中修改任何参数，配置文件都会被自动更新，以反映最新的设置。这种实时读写配置文件的功能，为用户提供了一种无缝的工作流，"
+"允许用户在图形用户界面和命令行界面之间切换，而不会出现任何不一致。"
+
+msgid "*Real-time Configuration File Update of FinOL GUI*"
+msgstr "*FinOL 图形界面的实时配置文件更新*"
+
+msgid "Regardless of the approach, users can always maintain a consistent running environment and parameter settings, "
+"significantly enhancing the flexibility and maintainability of the system."
+msgstr "无论是通过图形界面还是命令行，用户都可以获得完全一致的运行环境和参数设置，这大大提高了灵活性和可维护性。"
+
+
+
+
+
 

@@ -54,44 +54,91 @@ model configuration, training, and evaluation,
 allowing users to easily customize the parameters and run the
 exeriments without the need to write any code.
 
-.. image:: ../../images/finol_gui.png
-    :align: center
-.. centered:: *Overall Framework of FinOL GUI*
+.. figure:: ../images/finol_gui.png
+   :align: center
 
-Data Layer Panel
-~~~~~~~~~~~~~~~~
+   *Overall Framework of FinOL GUI*
 
-In the data layer panel, users can choose from a variety of available datasets,
-such as DJIA, S&P500, and Nasdaq Composite.
-.. The GUI also displays information about each dataset,
-such as the number of samples and features, to help users make an informed decision.
+The GUI is divided into three main sections:
 
-Model Layer Panel
-~~~~~~~~~~~~~~~~~
+1. Sidebar
 
-The model layer panel allows users to select the model architecture and other settings.
-Users can choose from a range of pre-defined models or create their own custom models.
-.. The xx provides detailed information about each model and its parameters,
-making it easier for users to understand and customize the model.
+Located on the left, it contains various buttons for actions such as customizing datasets, models,
+and criteria. It also includes options to load datasets, train models, evaluate models, quit the application,
+and restart it.
 
-Optimization Layer Panel
-~~~~~~~~~~~~~~~~~~~~~~~~
+.. figure:: ../images/finol_sidebar.png
+   :align: center
 
-The optimization layer panel enables users to monitor the training process.
-Users can view real-time metrics, such as loss,
-and adjust the training parameters as needed.
+   *The Sidebar of FinOL GUI*
 
-Evaluation Layer Panel
-~~~~~~~~~~~~~~~~~~~~~~
+2. Tab View
 
-The evaluation layer panel enables users to evaluate the trained model's performance.
-The GUI also provides visualizations of the model's performance,
-making it easier to interpret the results.
+Positioned at the top right, this section allows users to switch between different configuration layers,
+such as Data Layer, Model Layer, Optimization Layer, and Evaluation Layer.
+Each tab provides specific settings and options for configuring the respective layer,
+including device and dataset selection, feature inclusion, and data augmentation parameters.
+
+.. figure:: ../images/finol_tab.png
+   :align: center
+
+   *The Tab View of FinOL GUI*
+
+3. Output Display
+
+Found at the bottom right, this area is dedicated to displaying internal outputs,
+such as benchmark results.
+
+.. figure:: ../images/finol_output.png
+   :align: center
+
+   *The Output Display of FinOL GUI*
 
 By using the ``FinOL`` GUI, users can quickly and easily configure, train, and
-evaluate financial models without the need to write complex code.  The intuitive interface and visual feedback make the
-process more accessible and user-friendly, especially for researchers and
-practitioners who are new to the field of financial modeling.
+evaluate financial models without the need to write complex code.
+The intuitive interface make the process more accessible and user-friendly for researchers.
+
+
+Unique Features of the FinOL GUI
+---------------------------------
+
+In addition to the above functionalities,
+the ``FinOL`` GUI interface also features some unique interactive capabilities that enhance the user experience.
+
+1. Dynamic Window Layout
+
+The ``FinOL`` GUI employs a dynamic layout design, where the corresponding configuration panels automatically change
+based on the user's selections and settings.
+
+.. figure:: ../images/gui_operation.gif
+   :align: center
+   :width: 800px
+
+   *The Dynamic Window Layout of FinOL GUI*
+
+For example, when the user selects different model architectures in the "Model Layer" panel,
+the configuration options will dynamically update to display the specific parameters for that model.
+This dynamic layout allows users to focus on configuring the model without the need to switch between
+different tabs or windows.
+
+2. Real-time Configuration File Update
+
+The ``FinOL`` GUI not only provides a visual interface for configuration settings,
+but also automatically updates the config. json file in the root directory with the user's changes.
+
+Whenever the user modifies any parameter in the GUI,
+the configuration file is instantly updated to reflect the latest settings.
+This real-time read-write functionality of the configuration file provides a seamless workflow,
+allowing users to switch between the GUI and the command-line interface without any inconsistencies.
+
+.. figure:: ../images/real-time_update.gif
+   :align: center
+   :width: 800px
+
+   *Real-time Configuration File Update of FinOL GUI*
+
+Regardless of the approach, users can always maintain a consistent running environment and parameter settings,
+significantly enhancing the flexibility and maintainability of the system.
 
 
 .. |Open in Colab| image:: https://colab.research.google.com/assets/colab-badge.svg

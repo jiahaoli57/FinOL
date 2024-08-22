@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 from tqdm import tqdm
 from tabulate import tabulate
-from finol.model_layer.model_selector import ModelSelector
+from finol.model_layer.model_instantiator import ModelInstantiator
 from finol.optimization_layer.criterion_selector import CriterionSelector
 from finol.optimization_layer.optimizer_selector import OptimizerSelector
 from finol.utils import load_config, update_config, portfolio_selection, actual_portfolio_selection, set_seed, add_prefix
@@ -67,7 +67,7 @@ class ParametersTuner:
         self.sample_params(trial)
         set_seed(seed=self.config["MANUAL_SEED"])
 
-        model = ModelSelector(self.load_dataset_output).select_model(self.sampled_params)
+        model = ModelInstantiator(self.load_dataset_output).instantiate_model(self.sampled_params)
         optimizer = OptimizerSelector(model).select_optimizer()
         criterion = CriterionSelector()
 

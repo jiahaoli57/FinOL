@@ -142,8 +142,8 @@ class ResultVisualizer:
 
         plot_labels = {
             "en": ("Trading Periods", "Daily Cumulative Wealth"),
-            "zh-CHS": ("交易期", "逐期累积财富"),
-            "zh-CHT": ("交易期", "逐期累積財富")
+            "zh_CN": ("交易期", "逐期累积财富"),
+            "zh_TW": ("交易期", "逐期累積財富")
         }
         xlabel, ylabel = plot_labels[self.config["PLOT_LANGUAGE"]]
 
@@ -184,8 +184,8 @@ class ResultVisualizer:
 
         plot_labels = {
             "en": ("Trading Periods", "Daily DrawDown"),
-            "zh-CHS": ("交易期", "逐期下行风险"),
-            "zh-CHT": ("交易期", "逐期下行風險"),
+            "zh_CN": ("交易期", "逐期下行风险"),
+            "zh_TW": ("交易期", "逐期下行風險"),
         }
         xlabel, ylabel = plot_labels[self.config["PLOT_LANGUAGE"]]
 
@@ -230,8 +230,8 @@ class ResultVisualizer:
 
         plot_labels = {
             "en": ("Trading Periods", "Daily Maximum DrawDown"),
-            "zh-CHS": ("交易期", "逐期最大下行风险"),
-            "zh-CHT": ("交易期", "逐期最大下行風險"),
+            "zh_CN": ("交易期", "逐期最大下行风险"),
+            "zh_TW": ("交易期", "逐期最大下行風險"),
         }
         xlabel, ylabel = plot_labels[self.config["PLOT_LANGUAGE"]]
 
@@ -276,8 +276,8 @@ class ResultVisualizer:
 
         plot_labels = {
             "en": ("Transaction Costs Rates (%)", "Costs-Adjusted Cumulative Wealth"),
-            "zh-CHS": ("交易费用率( %)", "考虑交易费用的累积财富"),
-            "zh-CHT": ("交易費用率( %)", "考慮交易費用的累積財富"),
+            "zh_CN": ("交易费用率( %)", "考虑交易费用的累积财富"),
+            "zh_TW": ("交易費用率( %)", "考慮交易費用的累積財富"),
         }
         xlabel, ylabel = plot_labels[self.config["PLOT_LANGUAGE"]]
 
