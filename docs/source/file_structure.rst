@@ -5,8 +5,12 @@ File Structure
 
   finol
   ├─ __init__.py
-  ├─ FinOLAPP.py
   ├─ config.json
+  ├─ APP
+  │    ├─ display_info.py
+  │    ├─ finol_logo_icon.png
+  │    └─ FinOLAPP.py
+  │
   ├─ data
   │    ├─ benchmark_results
   │    │    ├─ __init__.py
