@@ -1,64 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
-      <change afterPath="$PROJECT_DIR$/finol/APP/display_info.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finol/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api.mo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/quickstart.mo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/quickstart.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/quickstart.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/quickstart.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources.mo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/api.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/api.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/config.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/api/config.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.data_layer.DatasetLoader.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.data_layer.ScalerSelector.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.BenchmarkLoader.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.DistillerSelector.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.EconomicDistiller.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.MetricCaculator.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.ModelEvaluator.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.evaluation_layer.ResultVisualizer.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.AlphaPortfolio.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.CNN.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.DNN.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.LSRE_CAAN.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.LSTM.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.ModelSelector.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.RNN.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.Transformer.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.model_layer.UserModel.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.optimization_layer.CriterionSelector.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.optimization_layer.ModelTrainer.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.optimization_layer.OptimizerSelector.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/generated/finol.optimization_layer.ParametersTuner.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/api/model_layer.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/api/model_layer.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/file_structure.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/file_structure.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/quickstart.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/quickstart.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/FinOLAPP.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/APP/FinOLAPP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/result_visualizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/result_visualizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/finol_logo_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/finol/APP/finol_logo_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/AlphaPortfolio.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/AlphaPortfolio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/CNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/CNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/DNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/DNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/LSTM.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/LSTM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/RNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/RNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/Transformer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/Transformer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/UserModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/CustomModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/model_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/model_instantiator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/criterion_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/criterion_selector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/parameters_tuner.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/parameters_tuner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-    </list>
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -646,14 +589,7 @@
       <workItem from="1723623657798" duration="45452000" />
       <workItem from="1723882384320" duration="12442000" />
       <workItem from="1724037830508" duration="13294000" />
-      <workItem from="1724062601146" duration="60208000" />
-    </task>
-    <task id="LOCAL-00274" summary="build docs">
-      <created>1723393311231</created>
-      <option name="number" value="00274" />
-      <option name="presentableId" value="LOCAL-00274" />
-      <option name="project" value="LOCAL" />
-      <updated>1723393311231</updated>
+      <workItem from="1724062601146" duration="60509000" />
     </task>
     <task id="LOCAL-00275" summary="build docs">
       <created>1723394009577</created>
@@ -991,7 +927,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723873364627</updated>
     </task>
-    <option name="localTasksCounter" value="323" />
+    <task id="LOCAL-00323" summary="build docs">
+      <created>1724330726892</created>
+      <option name="number" value="00323" />
+      <option name="presentableId" value="LOCAL-00323" />
+      <option name="project" value="LOCAL" />
+      <updated>1724330726892</updated>
+    </task>
+    <option name="localTasksCounter" value="324" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
