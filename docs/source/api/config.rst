@@ -128,7 +128,7 @@ Model Layer Configuration
 
 :Type: str
 :Options: ``CNN``, ``DNN``, ``RNN``, ``LSTM``, ``CNN``, ``Transformer``, ``LSRE-CAAN``, ``AlphaPortfolio``.
-:Description: Specifies the type of model to be used. Each model type corresponds to a different neural network architecture.
+:Description: Specifies the type of model to be used. Each model corresponds to a different neural network architecture.
 
 ``MODEL_PARAMS``
 ~~~~~~~~~~~~~~~~
@@ -142,7 +142,7 @@ Model Layer Configuration
 
 :Type: dict
 :Options: The keys in the dictionary correspond to the names of the model parameters, and the values correspond to the range of the parameter values.
-:Description: Specifies a set of model hyper-parameters to be explored during hyper-parameters tuning.
+:Description: Specifies the set of model hyper-parameters to be explored during hyper-parameters tuning.
 
 Optimization Layer Configuration
 --------------------------------
@@ -231,7 +231,7 @@ Evaluation Layer Configuration
 ~~~~~~~~~~~~~~~~~
 
 :Type: str
-:Options: ``en`` (English), ``zh-CHS`` (Chinese-Simple), ``zh-CHT`` (Chinese-Traditional).
+:Options: ``en`` (English), ``zh_CN`` (Chinese Simple), ``zh_TW`` (Chinese Traditional).
 :Description: Specifies the language to use for plot labels and legends.
 
 ``PROP_WINNERS``
@@ -274,4 +274,4 @@ Evaluation Layer Configuration
 
 :Type: str
 :Options: ``Scores``, ``Portfolios``.
-:Description: Specifies the target variable that the economic distillation model is trying to output.
+:Description: Specifies the target variable for the economic distillation model.

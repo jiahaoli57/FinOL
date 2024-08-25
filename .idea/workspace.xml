@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs" />
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api.mo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/api/config.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/api/config.rst" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -590,6 +595,8 @@
       <workItem from="1723882384320" duration="12442000" />
       <workItem from="1724037830508" duration="13294000" />
       <workItem from="1724062601146" duration="61146000" />
+      <workItem from="1724383174095" duration="2216000" />
+      <workItem from="1724572494426" duration="4222000" />
     </task>
     <task id="LOCAL-00276" summary="build docs">
       <created>1723394773109</created>
