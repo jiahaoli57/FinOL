@@ -2,12 +2,13 @@ Quickstart
 ==========
 
 This guide will help you get started with ``FinOL``.
-To lower the barriers for the research community,
-``FinOL`` provides a complete data-training-testing suite
-with just three lines of command.
 
 Command Line Usage
 ------------------
+
+To lower the barriers for the research community,
+``FinOL`` provides a complete data-training-testing suite
+with just three lines of command.
 
 .. code:: python3
 
@@ -57,7 +58,7 @@ exeriments without the need to write any code.
 .. figure:: ../images/finol_gui.png
    :align: center
 
-   *Overall Framework of FinOL GUI*
+   Overall Framework of FinOL GUI
 
 The GUI is divided into three main sections:
 
@@ -70,7 +71,7 @@ and restart it.
 .. figure:: ../images/finol_sidebar.png
    :align: center
 
-   *The Sidebar of FinOL GUI*
+   The Sidebar of FinOL GUI
 
 2. Tab View
 
@@ -82,7 +83,7 @@ including device and dataset selection, feature inclusion, and data augmentation
 .. figure:: ../images/finol_tab.png
    :align: center
 
-   *The Tab View of FinOL GUI*
+   The Tab View of FinOL GUI
 
 3. Output Display
 
@@ -92,7 +93,7 @@ such as benchmark results.
 .. figure:: ../images/finol_output.png
    :align: center
 
-   *The Output Display of FinOL GUI*
+   The Output Display of FinOL GUI
 
 By using the ``FinOL`` GUI, users can quickly and easily configure, train, and
 evaluate financial models without the need to write complex code.
@@ -114,7 +115,7 @@ based on the user's selections and settings.
    :align: center
    :width: 800px
 
-   *The Dynamic Window Layout of FinOL GUI*
+   The Dynamic Window Layout of FinOL GUI
 
 For example, when the user selects different model architectures in the "Model Layer" panel,
 the configuration options will dynamically update to display the specific parameters for that model.
@@ -135,7 +136,7 @@ allowing users to switch between the GUI and the command-line interface without 
    :align: center
    :width: 800px
 
-   *Real-time Configuration File Update of FinOL GUI*
+   Real-time Configuration File Update of FinOL GUI
 
 Regardless of the approach, users can always maintain a consistent running environment and parameter settings,
 significantly enhancing the flexibility and maintainability of the system.
