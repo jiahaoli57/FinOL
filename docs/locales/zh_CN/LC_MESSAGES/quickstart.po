@@ -166,7 +166,6 @@ msgid "Regardless of the approach, users can always maintain a consistent runnin
 "significantly enhancing the flexibility and maintainability of the system."
 msgstr "无论是通过图形界面还是命令行，用户都可以获得完全一致的运行环境和参数设置，这大大提高了灵活性和可维护性。"
 
-
 msgid "To access the ``FinOL`` GUI, you can run the following command in your terminal:"
 msgstr "要访问 ``FinOL`` 图形界面，可以在终端运行以下命令："
 
