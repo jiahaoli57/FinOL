@@ -34,7 +34,7 @@ class RedirectOutput:
         pass
 
 
-class FinOLApp:
+class FinOLAPP:
     def __init__(self):
         self.config = load_config()
         # configure grid layout (4x4)
@@ -400,7 +400,7 @@ class FinOLApp:
         original_stdout = sys.stdout
         # 在这里将 sys.stdout 设置为 RedirectOutput 类的实例 self.text
         sys.stdout = RedirectOutput(self.text_widget)
-        import display_info
+        from finol.APP import display_info
         # 在需要取消重定向时，将 sys.stdout 重定向回原始的 sys.stdout
         sys.stdout = original_stdout
 
@@ -801,5 +801,5 @@ class FinOLApp:
 
 
 if __name__ == "__main__":
-    app = FinOLApp()
+    app = FinOLAPP()
     app.run()

@@ -55,6 +55,13 @@ model configuration, training, and evaluation,
 allowing users to easily customize the parameters and run the
 exeriments without the need to write any code.
 
+To access the ``FinOL`` GUI, you can run the following command in your terminal:
+
+.. code-block:: bash
+
+   $ python -m finol.APP.FinOLAPP
+
+
 .. figure:: ../images/finol_gui.png
    :align: center
 
