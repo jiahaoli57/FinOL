@@ -17,7 +17,6 @@ from finol.utils import ROOT_PATH, load_config, update_config, detect_device
 #     formatted_string = " ".join(formatted_words)
 #
 #     return formatted_string
-import pywinstyles, sys
 import sv_ttk
 import sys
 
@@ -63,22 +62,39 @@ class FinOLAPP:
         self.experiment_details = {}
 
     def apply_theme_to_titlebar(self, root):
-        version = sys.getwindowsversion()
-
-        if version.major == 10 and version.build >= 22000:
-            # Set the title bar color to the background color on Windows 11 for better appearance
-            pywinstyles.change_header_color(root, "#1c1c1c" if sv_ttk.get_theme() == "dark" else "#fafafa")
-        elif version.major == 10:
-            pywinstyles.apply_style(root, "dark" if sv_ttk.get_theme() == "dark" else "normal")
-
-            # A hacky way to update the title bar's color on Windows 10 (it doesn't update instantly like on Windows 11)
-            root.wm_attributes("-alpha", 0.99)
-            root.wm_attributes("-alpha", 1)
+        # version = sys.getwindowsversion()
+        # import pywinstyles
+        #
+        # if version.major == 10 and version.build >= 22000:
+        #     # Set the title bar color to the background color on Windows 11 for better appearance
+        #     pywinstyles.change_header_color(root, "#1c1c1c" if sv_ttk.get_theme() == "dark" else "#fafafa")
+        # elif version.major == 10:
+        #     pywinstyles.apply_style(root, "dark" if sv_ttk.get_theme() == "dark" else "normal")
+        #
+        #     # A hacky way to update the title bar's color on Windows 10 (it doesn't update instantly like on Windows 11)
+        #     root.wm_attributes("-alpha", 0.99)
+        #     root.wm_attributes("-alpha", 1)
+        pass
 
     # Example usage (replace `root` with the reference to your main/Toplevel window)
 
     def run(self):
-        self.apply_theme_to_titlebar(self.root)
+        import platform
+
+        def get_os():
+            os_name = platform.system()
+            if os_name == "Windows":
+                self.apply_theme_to_titlebar(self.root)
+                return "Windows"
+            elif os_name == "Linux":
+                return "Linux"
+            elif os_name == "Darwin":
+                return "macOS"
+            else:
+                return "Unknown"
+
+        current_os = get_os()
+        print(f"The current operating system is: {current_os}")
         self.root.mainloop()
 
     def restart_app(self):
@@ -91,7 +107,7 @@ class FinOLAPP:
         main_frame.pack(fill='both', expand=True)
 
         left_frame = ttk.Frame(main_frame)
-        left_frame.pack(side="left", fill="both", expand=True)
+        left_frame.pack(side="left", fill="both", pady=10, expand=True)
 
         right_frame = ttk.Frame(main_frame)
         right_frame.pack(side="left", fill="both", expand=True)
