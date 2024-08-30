@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/APP/FinOLAPP.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/APP/FinOLAPP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -625,14 +623,7 @@
       <workItem from="1724583510146" duration="12870000" />
       <workItem from="1724763603224" duration="3382000" />
       <workItem from="1724832229998" duration="1267000" />
-      <workItem from="1724854336396" duration="6693000" />
-    </task>
-    <task id="LOCAL-00280" summary="build docs">
-      <created>1723395690725</created>
-      <option name="number" value="00280" />
-      <option name="presentableId" value="LOCAL-00280" />
-      <option name="project" value="LOCAL" />
-      <updated>1723395690725</updated>
+      <workItem from="1724854336396" duration="7917000" />
     </task>
     <task id="LOCAL-00281" summary="build docs">
       <created>1723395906056</created>
@@ -970,7 +961,14 @@
       <option name="project" value="LOCAL" />
       <updated>1724687467514</updated>
     </task>
-    <option name="localTasksCounter" value="329" />
+    <task id="LOCAL-00329" summary="build docs">
+      <created>1725004355142</created>
+      <option name="number" value="00329" />
+      <option name="presentableId" value="LOCAL-00329" />
+      <option name="project" value="LOCAL" />
+      <updated>1725004355142</updated>
+    </task>
+    <option name="localTasksCounter" value="330" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
