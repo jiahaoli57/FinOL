@@ -75,6 +75,7 @@ class ParametersTuner:
         val_loss_list = []
         test_loss_list = []
         best_val_loss = float("inf")
+        value = float("inf")
 
         for e in tqdm(range(self.config["NUM_EPOCHES"]), desc="Training"):
             model.train()

@@ -19,6 +19,7 @@ class CriterionSelector:
             "L2Concentration": self.compute_l2_concentration_loss,
             "SharpeRatio": self.compute_sharpe_ratio_loss,
             "Volatility": self.compute_volatility_loss,
+            "CustomCriterion": self.compute_custom_criterion_loss,
         }
 
     def compute_log_wealth_loss(self, portfolios: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:

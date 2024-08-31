@@ -3,8 +3,8 @@
     "DEVICE": "cuda",
     "MANUAL_SEED": 0,
     "_note2": "-------------------------------------- Data Layer Configuration ----------------------------------------",
-    "LOAD_LOCAL_DATALOADER": false,
-    "DATASET_NAME": "SP500",
+    "LOAD_LOCAL_DATALOADER": true,
+    "DATASET_NAME": "DJIA",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
             "TRAIN_START_TIMESTAMP": "1962-07-03",
@@ -119,7 +119,7 @@
         "CRYPTO": 252
     },
     "_note3": "-------------------------------------- Model Layer Configuration ---------------------------------------",
-    "MODEL_NAME": "LSRE-CAAN",
+    "MODEL_NAME": "DNN",
     "MODEL_PARAMS": {
         "AlphaPortfolio": {
             "NUM_LAYERS": 4,
@@ -136,9 +136,9 @@
             "DROPOUT": 0.2
         },
         "DNN": {
-            "NUM_LAYERS": 2,
-            "HIDDEN_SIZE": 256,
-            "DROPOUT": 0.5
+            "NUM_LAYERS": 3,
+            "HIDDEN_SIZE": 96,
+            "DROPOUT": 0.1
         },
         "LSRE-CAAN": {
             "NUM_LAYERS": 6,
@@ -539,7 +539,7 @@
     "SAVE_EVERY": 2,
     "OPTIMIZER_NAME": "RAdam",
     "LEARNING_RATE": 0.001,
-    "CRITERION_NAME": "CustomCriterion",
+    "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
     "TUNE_PARAMETERS": true,
     "NUM_TRIALS": 20,

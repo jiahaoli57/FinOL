@@ -17,7 +17,7 @@ model_dict = {
     "LSTM": LSTM,
     "RNN": RNN,
     "Transformer": Transformer,
-    "CustomModel": CustomModel
+    "CustomModel": CustomModel,
 }
 
 

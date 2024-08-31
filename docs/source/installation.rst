@@ -97,8 +97,42 @@ Follow the steps below based on your operating system to install ``ta-lib``:
             $ tar xvzf ta-lib-0.4.0-src.tar.gz
             $ cd ta-lib/
             $ ./configure --prefix=/usr
+
+          If you encounter an error like `configure: error: no acceptable C compiler found in $PATH`, install a C
+          compiler using the appropriate command for your Linux distribution:
+
+          - **Ubuntu / Debian**:
+             .. code-block:: bash
+
+                $ sudo apt update
+                $ sudo apt install build-essential
+
+          - **Fedora**:
+              .. code-block:: bash
+
+                $ sudo dnf groupinstall 'Development Tools'
+
+          - **CentOS / RHEL**:
+              .. code-block:: bash
+
+                $ sudo yum groupinstall 'Development Tools'
+
+          - **Arch Linux**:
+              .. code-block:: bash
+
+                $ sudo pacman -S base-devel
+
+          - **openSUSE**:
+              .. code-block:: bash
+
+                $ sudo zypper install -t pattern devel_C_C++
+
+          Then continue with:
+
+          .. code-block:: bash
+
             $ make
-            $ make install
+            $ sudo make install
             $ cd ..
             $ pip install TA-Lib
 
