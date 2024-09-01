@@ -95,7 +95,7 @@ msgstr "于 2024年7月22日 发布"
 
 #: ../../source/index.rst:45
 msgid ""
-"New feature! ``FinOL`` now supports the `Auto Hyperparameter Tuning <https://dl.acm.org/doi/10.1145/3292500.3330701>`__ feature"
+"New feature! ``FinOL`` now supports the `Auto Hyper-parameters Tuning <https://dl.acm.org/doi/10.1145/3292500.3330701>`__ feature"
 msgstr ""
 "全新功能！``FinOL`` 现已支持 `自动超参数调优 <https://dl.acm.org/doi/10.1145/3292500.3330701>`__ 功能"
 

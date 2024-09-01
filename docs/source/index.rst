@@ -35,7 +35,7 @@ it provides a long-awaited unified platform to advance data-driven OLPS research
   * - New release! ``FinOL`` now releases the `Official Docs <https://finol.readthedocs.io/en/latest/>`__
     - Released on 22 July 2024
     - |:rocket:| Release
-  * - New feature! ``FinOL`` now supports the `Auto Hyperparameter Tuning <https://dl.acm.org/doi/10.1145/3292500.3330701>`__ feature
+  * - New feature! ``FinOL`` now supports the `Auto Hyper-parameters Tuning <https://dl.acm.org/doi/10.1145/3292500.3330701>`__ feature
     - Supported since 22 July 2024
     - |:hammer_and_wrench:| Enhancement
   * - New feature! ``FinOL`` now supports the `Radar Chart <https://en.wikipedia.org/wiki/Radar_chart>`__ evaluation

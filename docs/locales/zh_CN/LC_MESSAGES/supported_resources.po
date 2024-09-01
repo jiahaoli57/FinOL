@@ -24,8 +24,8 @@ msgid "FinOL Supports ..."
 msgstr "FinOL 包含了 ..."
 
 #: ../../source/supported_resources/supported_baselines.rst:4
-msgid "|:crossed_swords:| Nearly All OLPS Baselines"
-msgstr "|:crossed_swords:| 几乎所有的 OLPS 基线"
+msgid "|:crossed_swords:| Extensive OLPS Baselines"
+msgstr "|:crossed_swords:| 广泛的 OLPS 基线"
 
 #: ../../source/supported_resources/supported_baselines.rst:9
 #: ../../source/supported_resources/supported_datasets.rst:9
