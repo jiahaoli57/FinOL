@@ -536,7 +536,6 @@
     },
     "_note4": "----------------------------------- Optimization Layer Configuration -----------------------------------",
     "NUM_EPOCHES": 100,
-    "SAVE_EVERY": 2,
     "OPTIMIZER_NAME": "RAdam",
     "LEARNING_RATE": 0.001,
     "CRITERION_NAME": "LogWealth",

@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="optimize code">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/parameters_tuner.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/parameters_tuner.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finol/tutorials/tutorial_quickstart.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/tutorials/tutorial_quickstart.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -626,21 +629,7 @@
       <workItem from="1724854336396" duration="17716000" />
       <workItem from="1725175251142" duration="1489000" />
       <workItem from="1725258857544" duration="2936000" />
-      <workItem from="1725340181417" duration="20019000" />
-    </task>
-    <task id="LOCAL-00293" summary="build docs">
-      <created>1723452351645</created>
-      <option name="number" value="00293" />
-      <option name="presentableId" value="LOCAL-00293" />
-      <option name="project" value="LOCAL" />
-      <updated>1723452351645</updated>
-    </task>
-    <task id="LOCAL-00294" summary="build docs">
-      <created>1723452704384</created>
-      <option name="number" value="00294" />
-      <option name="presentableId" value="LOCAL-00294" />
-      <option name="project" value="LOCAL" />
-      <updated>1723452704384</updated>
+      <workItem from="1725340181417" duration="21298000" />
     </task>
     <task id="LOCAL-00295" summary="build docs">
       <created>1723453039459</created>
@@ -971,7 +960,21 @@
       <option name="project" value="LOCAL" />
       <updated>1725372701610</updated>
     </task>
-    <option name="localTasksCounter" value="342" />
+    <task id="LOCAL-00342" summary="optimize code">
+      <created>1725373002173</created>
+      <option name="number" value="00342" />
+      <option name="presentableId" value="LOCAL-00342" />
+      <option name="project" value="LOCAL" />
+      <updated>1725373002173</updated>
+    </task>
+    <task id="LOCAL-00343" summary="optimize code">
+      <created>1725373033077</created>
+      <option name="number" value="00343" />
+      <option name="presentableId" value="LOCAL-00343" />
+      <option name="project" value="LOCAL" />
+      <updated>1725373033077</updated>
+    </task>
+    <option name="localTasksCounter" value="344" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
