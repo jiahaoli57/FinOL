@@ -33,7 +33,6 @@ class DatasetLoader:
         """
         raw_files = []
         for file_name in tqdm(sorted(os.listdir(folder_path)), desc="Data Loading"):
-            print(file_name)
             if file_name.endswith(".xlsx") or file_name.endswith(".xls"):
                 file_path = os.path.join(folder_path, file_name)
                 try:
@@ -432,8 +431,6 @@ class DatasetLoader:
                     label_train.append(torch.from_numpy(train_label["LABEL"].values))
                     label_val.append(torch.from_numpy(val_label["LABEL"].values))
                     label_test.append(torch.from_numpy(test_label["LABEL"].values))
-                    print(ds_train)
-                    time.sleep(1111)
 
                 ds_train = torch.stack(ds_train).permute(1, 0, 2).to(self.config["DEVICE"])  # [num_assets, num_train_periods, num_feats] -> [num_train_periods, num_assets, num_feats]
                 ds_val = torch.stack(ds_val).permute(1, 0, 2).to(self.config["DEVICE"])
