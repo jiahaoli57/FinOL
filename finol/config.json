@@ -1,9 +1,9 @@
 {
     "_note1": "--------------------------------------- General Configuration ------------------------------------------",
-    "DEVICE": "cuda",
+    "DEVICE": "cpu",
     "MANUAL_SEED": 0,
     "_note2": "-------------------------------------- Data Layer Configuration ----------------------------------------",
-    "LOAD_LOCAL_DATALOADER": true,
+    "LOAD_LOCAL_DATALOADER": false,
     "DATASET_NAME": "DJIA",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
@@ -92,10 +92,10 @@
     "DATA_AUGMENTATION_CONFIG": {
         "WINDOW_DATA": {
             "INCLUDE_WINDOW_DATA": true,
-            "WINDOW_SIZE": 30
+            "WINDOW_SIZE": 10
         }
     },
-    "SCALER": "WindowMinMaxScaler",
+    "SCALER": "MinMaxScaler",
     "BATCH_SIZE": {
         "NYSE(O)": 128,
         "NYSE(N)": 128,
@@ -531,6 +531,24 @@
                     0.5
                 ],
                 "step": 0.05
+            }
+        },
+        "CustomModel": {
+            "PARAMETER1": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "PARAMETER2": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
             }
         }
     },
