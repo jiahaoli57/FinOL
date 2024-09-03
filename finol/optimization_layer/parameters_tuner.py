@@ -77,7 +77,8 @@ class ParametersTuner:
         best_val_loss = float("inf")
         value = float("inf")
 
-        for e in tqdm(range(self.config["NUM_EPOCHES"]), desc="Training"):
+        # for e in tqdm(range(self.config["NUM_EPOCHES"]), desc="Training"):
+        while True:
             model.train()
             train_loss = 0
             for i, data in enumerate(self.train_loader, 1):

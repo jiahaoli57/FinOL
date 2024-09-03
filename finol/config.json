@@ -92,10 +92,10 @@
     "DATA_AUGMENTATION_CONFIG": {
         "WINDOW_DATA": {
             "INCLUDE_WINDOW_DATA": true,
-            "WINDOW_SIZE": 30
+            "WINDOW_SIZE": 15
         }
     },
-    "SCALER": "WindowStandardScaler",
+    "SCALER": "WindowMinMaxScaler",
     "BATCH_SIZE": {
         "NYSE(O)": 128,
         "NYSE(N)": 128,
@@ -136,9 +136,9 @@
             "DROPOUT": 0.2
         },
         "DNN": {
-            "NUM_LAYERS": 3,
-            "HIDDEN_SIZE": 96,
-            "DROPOUT": 0.1
+            "NUM_LAYERS": 4,
+            "HIDDEN_SIZE": 224,
+            "DROPOUT": 0.05
         },
         "LSRE-CAAN": {
             "NUM_LAYERS": 6,
@@ -168,7 +168,7 @@
             "DROPOUT": 0.05
         },
         "CustomModel": {
-            "PARAMETER1": 128,
+            "PARAMETER1": 4,
             "PARAMETER2": 128
         }
     },

@@ -42,7 +42,7 @@ a model, etc. The specific configuration method is as follows:
     >>> update_config(config)
     >>> config
 
-|Open in Colab|
+|Open in Colab|    |Open in kaggle|    |Open in Azure|
 
 GUI Usage
 ---------
@@ -149,5 +149,12 @@ Regardless of the approach, users can always maintain a consistent running envir
 significantly enhancing the flexibility and maintainability of the system.
 
 
-.. |Open in Colab| image:: https://colab.research.google.com/assets/colab-badge.svg
+.. |Open in Colab| image:: https://img.shields.io/badge/Open%20in-Colab-FF9000?style=flat&logo=googlecolab
   :target: https://colab.research.google.com/github/jiahaoli57/FinOL/blob/main/finol/tutorials/tutorial_quickstart.ipynb
+
+.. |Open in kaggle| image:: https://img.shields.io/badge/Open%20in-Kaggle-blue?style=flat&logo=kaggle
+  :target: https://www.kaggle.com/code/jiahaoli57/tutorial-quickstart
+
+.. |Open in Azure| image:: https://img.shields.io/badge/Open%20in-Azure-0053BF?style=flat&logo=Azure
+  :target: https://ml.azure.com/fileexplorerAzNB?wsid=/subscriptions/5b63a2a7-7408-4bbc-9cae-5bc206fbbdf6/resourceGroups/jili6251-rg/providers/Microsoft.MachineLearningServices/workspaces/FinOL&tid=7be93ba7-4482-49d0-a512-7c6818096e33&activeFilePath=Users/jili6251/tutorial_quickstart.ipynb
+

@@ -163,7 +163,7 @@ Follow the steps below based on your operating system to install ``ta-lib``:
 
               .. code-block:: bash
 
-                  $ conda install -c conda-forge ta-lib
+                  $ conda install -c conda-forge ta-lib -y
 
           To verify if the installation is successful, run:
 

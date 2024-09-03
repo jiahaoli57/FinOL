@@ -72,6 +72,7 @@ Contents
    quickstart
    api/index
    supported_resources/index
+   extending
    file_structure
    license
    contact_us

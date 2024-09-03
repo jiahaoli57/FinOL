@@ -98,6 +98,9 @@ class FinOLAPP:
         self.root.mainloop()
 
     def restart_app(self):
+        self.root.quit()
+
+    def quit_app(self):
         import subprocess
         self.root.destroy()
         subprocess.call(["python", ROOT_PATH + "/APP/FinOLAPP.py"])
@@ -160,7 +163,7 @@ class FinOLAPP:
         self.restart_button = ttk.Button(left_frame, text="Restart FinOL", width=15, command=self.restart_app)
         self.restart_button.pack(side='bottom', padx=20, pady=3)
 
-        self.quit_button = ttk.Button(left_frame, text="Quit FinOL", width=15, command=self.root.quit())  # , style='custom.TButton'
+        self.quit_button = ttk.Button(left_frame, text="Quit FinOL", width=15, command=self.quit_app)  # , style='custom.TButton'
         self.quit_button.pack(side='bottom', padx=20, pady=3)
 
         self.evaluate_button = ttk.Button(left_frame, text="Evaluate Model", width=15, command=self.evaluate_model)
@@ -478,10 +481,11 @@ class FinOLAPP:
             "\n------------------------------\n"
             " To customize your own model: \n"
             "------------------------------\n\n"
-            f"1. Navigate to \"{ROOT_PATH}\\model_layer\\CustomModel.py\".\n"
-            f"2. Customize your own model by extending \"CustomModel\" class.\n"
-            f"3. Define needed hyper-parameters in \"{ROOT_PATH}\\config.json\" at config[\"MODEL_PARAMS\"][\"CustomModel\"].\n"
-            f"4. Specify the range of different parameters at \"config[\"MODEL_PARAMS_SPACE\"][\"CustomModel\"]\" if you want to implement automatic hyper-parameters tuning.\n")
+            f"1. Navigate to the \"{ROOT_PATH}\\model_layer\\CustomModel.py\" file in the FinOL codebase.\n"
+            f"2. Customize your own model by extending \"CustomModel\" class. This is where you will implement the logic for your custom data-driven OLPS model.\n"
+            f"3. Define the necessary hyper-parameters in the \"{ROOT_PATH}\\config.json\" file, under the \"[\"MODEL_PARAMS\"][\"CustomModel\"]\" section.\n"
+            f"4. (Optional) If you want FinOL to automatically tune the hyper-parameters of your custom model, "
+            f"specify the range of different parameters in the \"MODEL_PARAMS_SPACE[\"CustomModel\"]\" section of the \"{ROOT_PATH}\\config.json\" file.\n")
 
         self.text_widget.yview_moveto(1.0)  # Scroll to the bottom
 
