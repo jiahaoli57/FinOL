@@ -75,10 +75,9 @@ class ParametersTuner:
         val_loss_list = []
         test_loss_list = []
         best_val_loss = float("inf")
-        value = float("inf")
+        # value = float("inf")
 
-        # for e in tqdm(range(self.config["NUM_EPOCHES"]), desc="Training"):
-        while True:
+        for e in tqdm(range(self.config["NUM_EPOCHES"]), desc="Training"):
             model.train()
             train_loss = 0
             for i, data in enumerate(self.train_loader, 1):
@@ -95,7 +94,8 @@ class ParametersTuner:
             train_loss /= len(self.train_loader)
             train_loss_list.append(train_loss)
 
-            if (e + 1) % self.config["SAVE_EVERY"] == 0:
+            # if (e + 1) % self.config["SAVE_EVERY"] == 0:
+            if True:
                 with torch.no_grad():
                     model.eval()
                     val_loss = 0
