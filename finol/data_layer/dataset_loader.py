@@ -431,6 +431,8 @@ class DatasetLoader:
                     label_train.append(torch.from_numpy(train_label["LABEL"].values))
                     label_val.append(torch.from_numpy(val_label["LABEL"].values))
                     label_test.append(torch.from_numpy(test_label["LABEL"].values))
+                    print(ds_train)
+                    time.sleep(1111)
 
                 ds_train = torch.stack(ds_train).permute(1, 0, 2).to(self.config["DEVICE"])  # [num_assets, num_train_periods, num_feats] -> [num_train_periods, num_assets, num_feats]
                 ds_val = torch.stack(ds_val).permute(1, 0, 2).to(self.config["DEVICE"])
