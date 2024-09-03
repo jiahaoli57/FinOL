@@ -304,7 +304,7 @@ class FinOLAPP:
         self.create_entry(self.optimization_config_frame, "Number of Epoches:", 1, 0, self.config["NUM_EPOCHES"], "IntVar", ["NUM_EPOCHES"])
 
         # SAVE_EVERY
-        self.create_entry(self.optimization_config_frame, "Save Every:", 1, 2, self.config["SAVE_EVERY"], "IntVar", ["SAVE_EVERY"])
+        # self.create_entry(self.optimization_config_frame, "Save Every:", 1, 2, self.config["SAVE_EVERY"], "IntVar", ["SAVE_EVERY"])
 
         # create_separator
         self.create_separator(frame=self.optimization_config_frame, row=2, text="Optimizer Settings")

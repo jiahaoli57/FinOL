@@ -86,13 +86,13 @@
         "INCLUDE_VOLUME_FEATURES": true,
         "INCLUDE_CYCLE_FEATURES": true,
         "INCLUDE_PRICE_FEATURES": true,
-        "INCLUDE_VOLATILITY_FEATURES": false,
-        "INCLUDE_PATTERN_FEATURES": false
+        "INCLUDE_VOLATILITY_FEATURES": true,
+        "INCLUDE_PATTERN_FEATURES": true
     },
     "DATA_AUGMENTATION_CONFIG": {
         "WINDOW_DATA": {
             "INCLUDE_WINDOW_DATA": true,
-            "WINDOW_SIZE": 15
+            "WINDOW_SIZE": 30
         }
     },
     "SCALER": "WindowMinMaxScaler",
@@ -136,7 +136,7 @@
             "DROPOUT": 0.2
         },
         "DNN": {
-            "NUM_LAYERS": 4,
+            "NUM_LAYERS": 1,
             "HIDDEN_SIZE": 224,
             "DROPOUT": 0.05
         },
@@ -536,16 +536,15 @@
     },
     "_note4": "----------------------------------- Optimization Layer Configuration -----------------------------------",
     "NUM_EPOCHES": 100,
-    "OPTIMIZER_NAME": "RAdam",
+    "OPTIMIZER_NAME": "RMSprop",
     "LEARNING_RATE": 0.001,
     "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
-    "TUNE_PARAMETERS": true,
+    "TUNE_PARAMETERS": false,
     "NUM_TRIALS": 20,
     "SAMPLER_NAME": "QMCSampler",
     "PRUNER_NAME": "PatientPruner",
     "WRAPPED_PRUNER_NAME": "MedianPruner",
-    "PLOT_DYNAMIC_LOSS": true,
     "_note5": "------------------------------------ Evaluation Layer Configuration ------------------------------------",
     "PLOT_LANGUAGE": "en",
     "PROP_WINNERS": 0.5,
