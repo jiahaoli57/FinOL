@@ -32,7 +32,7 @@ class DatasetLoader:
         :return: List of DataFrames containing the loaded raw data.
         """
         raw_files = []
-        for file_name in tqdm(os.listdir(folder_path), desc="Data Loading"):
+        for file_name in tqdm(sorted(os.listdir(folder_path)), desc="Data Loading"):
             print(file_name)
             if file_name.endswith(".xlsx") or file_name.endswith(".xls"):
                 file_path = os.path.join(folder_path, file_name)
