@@ -116,8 +116,9 @@ setup(
     # },
     install_requires=REQUIRED,
     extras_require=EXTRAS,
-    include_package_data={
-        'your_package': ['config.json']
+    include_package_data=True,
+    package_data={
+        'finol': ['config.json'],
     },
     license='MIT',
     classifiers=[
