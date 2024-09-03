@@ -113,7 +113,7 @@ class MetricCaculator:
         :return: *Average Turnover*
         """
         num_trading_periods = len(daily_turnovers)
-        average_turnover = sum(daily_turnovers) / (2 * (num_trading_periods))
+        average_turnover = sum(daily_turnovers) / (2 * num_trading_periods)
         return average_turnover
 
     def caculate_transaction_costs_wealth(self, portfolios, labels) -> Tuple[np.ndarray, pd.Series]:
