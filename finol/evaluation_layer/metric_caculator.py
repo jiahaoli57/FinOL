@@ -112,7 +112,7 @@ class MetricCaculator:
         :param daily_turnovers: Daily turnover sequence.
         :return: *Average Turnover*
         """
-        num_trading_periods = sum(daily_turnovers)
+        num_trading_periods = len(daily_turnovers)
         average_turnover = sum(daily_turnovers) / (2 * (num_trading_periods))
         return average_turnover
 
