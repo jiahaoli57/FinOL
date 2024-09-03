@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="optimize code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/tutorials/tutorial_quickstart.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/finol/tutorials/tutorial_quickstart.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -626,14 +626,7 @@
       <workItem from="1724854336396" duration="17716000" />
       <workItem from="1725175251142" duration="1489000" />
       <workItem from="1725258857544" duration="2936000" />
-      <workItem from="1725340181417" duration="19706000" />
-    </task>
-    <task id="LOCAL-00292" summary="build docs">
-      <created>1723451912596</created>
-      <option name="number" value="00292" />
-      <option name="presentableId" value="LOCAL-00292" />
-      <option name="project" value="LOCAL" />
-      <updated>1723451912596</updated>
+      <workItem from="1725340181417" duration="20019000" />
     </task>
     <task id="LOCAL-00293" summary="build docs">
       <created>1723452351645</created>
@@ -971,7 +964,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725371656343</updated>
     </task>
-    <option name="localTasksCounter" value="341" />
+    <task id="LOCAL-00341" summary="optimize code">
+      <created>1725372701609</created>
+      <option name="number" value="00341" />
+      <option name="presentableId" value="LOCAL-00341" />
+      <option name="project" value="LOCAL" />
+      <updated>1725372701610</updated>
+    </task>
+    <option name="localTasksCounter" value="342" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
