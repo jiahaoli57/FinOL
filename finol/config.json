@@ -1,6 +1,6 @@
 {
     "_note1": "--------------------------------------- General Configuration ------------------------------------------",
-    "DEVICE": "cpu",
+    "DEVICE": "cuda",
     "MANUAL_SEED": 0,
     "_note2": "-------------------------------------- Data Layer Configuration ----------------------------------------",
     "LOAD_LOCAL_DATALOADER": false,
@@ -141,7 +141,7 @@
             "DROPOUT": 0.05
         },
         "LSRE-CAAN": {
-            "NUM_LAYERS": 6,
+            "NUM_LAYERS": 1,
             "NUM_LATENTS": 12,
             "LATENT_DIM": 128,
             "CROSS_HEADS": 4,
