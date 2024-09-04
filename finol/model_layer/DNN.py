@@ -88,7 +88,7 @@ class DNN(nn.Module):
         if self.config["SCALER"].startswith("Window"):
             x = ScalerSelector().window_normalize(x)
 
-        out = x
+        out = x  # torch.Size([36, 28, 715])
         for layer in self.layers:
             out = layer(out)
             out = self.relu(out)

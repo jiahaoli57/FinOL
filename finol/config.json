@@ -95,7 +95,7 @@
             "WINDOW_SIZE": 5
         }
     },
-    "SCALER": "None",
+    "SCALER": "WindowStandardScaler",
     "BATCH_SIZE": {
         "NYSE(O)": 128,
         "NYSE(N)": 128,
