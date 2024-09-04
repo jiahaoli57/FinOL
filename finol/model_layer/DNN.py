@@ -83,7 +83,6 @@ class DNN(nn.Module):
                 # 使用 Xavier 初始化方法
                 init.xavier_uniform_(m.weight)
                 init.constant_(m.bias, 0)  # 假设偏置初始化为0
-            print(m)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """
@@ -100,6 +99,8 @@ class DNN(nn.Module):
             x = ScalerSelector().window_normalize(x)
 
         out = x
+        print(out)
+        time.sleep(1111)
         for layer in self.layers:
             out = layer(out)
             out = self.relu(out)
