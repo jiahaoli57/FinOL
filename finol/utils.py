@@ -9,6 +9,7 @@ import random
 import numpy as np
 import torch.nn.functional as F
 
+from packaging import version
 from shutil import copy2
 from finol.update import get_latest_version
 from finol import __version__
@@ -23,12 +24,14 @@ print("PARENT_PATH:", PARENT_PATH)
 
 def check_update():
     latest = get_latest_version()
-    if __version__ == latest:
-        print(f"The current FinOL (version: {__version__}) is latest")
-    else:
+    # if __version__ == latest:
+    #
+    if version.parse(__version__) < version.parse(latest):
         print(f"The current FinOL (version: {__version__}) is not latest, "
               f"The latest version on https://pypi.org/project/finol is {latest}, "
               f"please consider updating by ``pip install --upgrade finol``")
+    else:
+        print(f"The current FinOL (version: {__version__}) is latest")
         # print("Before updating, remember to back up any modifications you made to the FinOL project, such as added model code.")
         # print("Note that `pip install --upgrade finol` will overwrite all files except the `logdir` folder, so you don't need to back up the `logdir`.")
         # sys.exit()
