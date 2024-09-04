@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 
+from einops import rearrange
 from finol.data_layer.scaler_selector import ScalerSelector
 from finol.utils import load_config
 
@@ -69,9 +70,10 @@ class CustomModel(nn.Module):
         :return: Output tensor of shape `(batch_size, num_assets)` containing the predicted scores for each asset.
         """
         batch_size, num_assets, num_features_augmented = x.shape
-        # x = x.view(batch_size, num_assets, window_size, num_features_original)
 
         """Input Transformation"""
+        x = x.view(batch_size, num_assets, self.model_args["window_size"], self.model_args["num_features_original"])
+        x = rearrange(x, "b m n d -> (b m) n d")
         if self.config["SCALER"].startswith("Window"):
             x = ScalerSelector().window_normalize(x)
 

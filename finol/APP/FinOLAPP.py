@@ -452,7 +452,7 @@ class FinOLAPP:
             "\n--------------------------------\n"
             " To customize your own dataset: \n"
             "--------------------------------\n\n"
-            f"1. Navigate to \"{ROOT_PATH}\\data\\datasets\CustomDataset\".\n"
+            f"1. Navigate to the \"{ROOT_PATH}\\data\\datasets\CustomDataset\" directory.\n"
             f"2. Create .xlsx files for different assets in the following format:\n"
             f" +------------+----------+----------+----------+----------+---------+\n"
             " | DATE       | OPEN     |  HIGH    | LOW      | CLOSE    | VOLUME  |\n"
@@ -468,7 +468,8 @@ class FinOLAPP:
             " | 2024-02-29 | 0.630859 |	0.705280 | 0.625720	| 0.655646 | 1639531 |\n"
             " | 2024-03-01 | 0.655440 |	0.719080 | 0.654592	| 0.719080 | 9353798 |\n"
             f" +-----------+-----------+----------+----------+----------+---------+\n"
-            f"3. For each asset, ensure that the data is correctly formatted with the respective values.\n\n"
+            f"3. For each asset, ensure that the data are correctly formatted and there are no missing values.\n"
+            f"4. Define the configuration for your custom dataset in the \"{ROOT_PATH}\\config.json\" file, under the \"[\"DATASET_SPLIT_CONFIG\"][\"CustomModel\"]\", \"[\"BATCH_SIZE\"][\"CustomModel\"]\", and \"[\"NUM_DAYS_PER_YEAR\"][\"CustomModel\"]\" sections.\n\n"
             f"NOTE: Instead of customizing the dataset yourself, we recommend that you raise an issue or contact us by "
             f"email so we can evaluate and potentially include your dataset in the FinOL project. This ensures the "
             f"baseline results are supported.\n")

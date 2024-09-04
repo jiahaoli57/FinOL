@@ -1,5 +1,4 @@
 import time
-
 import torch
 
 from finol.utils import load_config

@@ -77,6 +77,14 @@
             "VAL_END_TIMESTAMP": "2022-11-26",
             "TEST_START_TIMESTAMP": "2022-11-27",
             "TEST_END_TIMESTAMP": "2024-03-01"
+        },
+        "CustomDataset": {
+            "TRAIN_START_TIMESTAMP": "",
+            "TRAIN_END_TIMESTAMP": "",
+            "VAL_START_TIMESTAMP": "",
+            "VAL_END_TIMESTAMP": "",
+            "TEST_START_TIMESTAMP": "",
+            "TEST_END_TIMESTAMP": ""
         }
     },
     "FEATURE_ENGINEERING_CONFIG": {
@@ -105,7 +113,8 @@
         "SSE": 64,
         "HSI": 64,
         "CMEG": 64,
-        "CRYPTO": 128
+        "CRYPTO": 128,
+        "CustomDataset": 0
     },
     "NUM_DAYS_PER_YEAR": {
         "NYSE(O)": 252,
@@ -116,7 +125,8 @@
         "SSE": 52,
         "HSI": 52,
         "CMEG": 52,
-        "CRYPTO": 252
+        "CRYPTO": 365,
+        "CustomDataset": 0
     },
     "_note3": "-------------------------------------- Model Layer Configuration ---------------------------------------",
     "MODEL_NAME": "DNN",
