@@ -81,13 +81,13 @@
     },
     "FEATURE_ENGINEERING_CONFIG": {
         "INCLUDE_OHLCV_FEATURES": true,
-        "INCLUDE_OVERLAP_FEATURES": false,
-        "INCLUDE_MOMENTUM_FEATURES": false,
-        "INCLUDE_VOLUME_FEATURES": false,
-        "INCLUDE_CYCLE_FEATURES": false,
-        "INCLUDE_PRICE_FEATURES": false,
-        "INCLUDE_VOLATILITY_FEATURES": false,
-        "INCLUDE_PATTERN_FEATURES": false
+        "INCLUDE_OVERLAP_FEATURES": true,
+        "INCLUDE_MOMENTUM_FEATURES": true,
+        "INCLUDE_VOLUME_FEATURES": true,
+        "INCLUDE_CYCLE_FEATURES": true,
+        "INCLUDE_PRICE_FEATURES": true,
+        "INCLUDE_VOLATILITY_FEATURES": true,
+        "INCLUDE_PATTERN_FEATURES": true
     },
     "DATA_AUGMENTATION_CONFIG": {
         "WINDOW_DATA": {
@@ -95,7 +95,7 @@
             "WINDOW_SIZE": 10
         }
     },
-    "SCALER": "None",
+    "SCALER": "StandardScaler",
     "BATCH_SIZE": {
         "NYSE(O)": 128,
         "NYSE(N)": 128,

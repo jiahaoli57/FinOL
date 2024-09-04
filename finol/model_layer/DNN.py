@@ -73,17 +73,6 @@ class DNN(nn.Module):
         self.relu = nn.ReLU()
         self.dropout = nn.Dropout(p=model_params["DROPOUT"])
 
-        # 手动初始化模型参数
-        self.init_weights()
-
-    def init_weights(self):
-        import torch.nn.init as init
-        for m in self.modules():
-            if isinstance(m, nn.Linear):
-                # 使用 Xavier 初始化方法
-                init.xavier_uniform_(m.weight)
-                init.constant_(m.bias, 0)  # 假设偏置初始化为0
-
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """
         Forward pass of the model.
@@ -101,14 +90,10 @@ class DNN(nn.Module):
         out = x
         for layer in self.layers:
             out = layer(out)
-            print("out1", out)
             out = self.relu(out)
-            print("out2", out)
             out = self.dropout(out)
-            print("out3", out)
 
         """Final Scores for Assets"""
         final_scores = out.squeeze(-1)
-        print("final_scores", final_scores)
-        time.sleep(1111)
+
         return final_scores
