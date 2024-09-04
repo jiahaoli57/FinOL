@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="optimize code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/data_layer/dataset_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/dataset_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/model_layer/DNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/DNN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +103,7 @@
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\locales\zh_CN\LC_MESSAGES\supported_resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.FinOLAPP">
+  <component name="RunManager" selected="Python.main">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -480,8 +484,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.FinOLAPP" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.FinOLAPP" />
         <item itemvalue="Python 测试.Doctests (DNN 内)" />
         <item itemvalue="Python.FinOLAPP" />
         <item itemvalue="Python.FinOLAPP" />
@@ -646,14 +650,7 @@
       <workItem from="1724854336396" duration="17716000" />
       <workItem from="1725175251142" duration="1489000" />
       <workItem from="1725258857544" duration="2936000" />
-      <workItem from="1725340181417" duration="37636000" />
-    </task>
-    <task id="LOCAL-00311" summary="build docs">
-      <created>1723536842506</created>
-      <option name="number" value="00311" />
-      <option name="presentableId" value="LOCAL-00311" />
-      <option name="project" value="LOCAL" />
-      <updated>1723536842506</updated>
+      <workItem from="1725340181417" duration="41904000" />
     </task>
     <task id="LOCAL-00312" summary="build docs">
       <created>1723563562626</created>
@@ -991,7 +988,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725432555995</updated>
     </task>
-    <option name="localTasksCounter" value="360" />
+    <task id="LOCAL-00360" summary="optimize code">
+      <created>1725433396576</created>
+      <option name="number" value="00360" />
+      <option name="presentableId" value="LOCAL-00360" />
+      <option name="project" value="LOCAL" />
+      <updated>1725433396576</updated>
+    </task>
+    <option name="localTasksCounter" value="361" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1062,7 +1066,7 @@
     <SUITE FILE_PATH="coverage/FinOL$model_evaluator.coverage" NAME="model_evaluator 覆盖结果" MODIFIED="1722321553286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/evaluation_layer" />
     <SUITE FILE_PATH="coverage/FinOL$optuna_optimizer.coverage" NAME="optuna_optimizer 覆盖结果" MODIFIED="1722364629533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/optimization_layer" />
     <SUITE FILE_PATH="coverage/FinOL$Doctests__Transformer__.coverage" NAME="Doctests (Transformer 内) 覆盖结果" MODIFIED="1722932785797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/model_layer" />
-    <SUITE FILE_PATH="coverage/FinOL$main.coverage" NAME="main 覆盖结果" MODIFIED="1725432557774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/main" />
+    <SUITE FILE_PATH="coverage/FinOL$main.coverage" NAME="main 覆盖结果" MODIFIED="1725437351562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/main" />
     <SUITE FILE_PATH="coverage/FinOL$model_auto_tuning.coverage" NAME="model_auto_tuning 覆盖结果" MODIFIED="1720341071413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/model_layer" />
     <SUITE FILE_PATH="coverage/FinOL$LSRE_CAAN.coverage" NAME="LSRE_CAAN 覆盖结果" MODIFIED="1722843059356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/model_layer" />
     <SUITE FILE_PATH="coverage/FinOL$test.coverage" NAME="test 覆盖结果" MODIFIED="1724054494347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/update" />
@@ -1077,7 +1081,7 @@
     <SUITE FILE_PATH="coverage/FinOL$OptunaOptimizer.coverage" NAME="OptunaOptimizer 覆盖结果" MODIFIED="1721380496564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/optimization_layer" />
     <SUITE FILE_PATH="coverage/FinOL$LSTP.coverage" NAME="LSTP 覆盖结果" MODIFIED="1718526668153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/model_layer" />
     <SUITE FILE_PATH="coverage/FinOL$BenchmarkLoader.coverage" NAME="BenchmarkLoader 覆盖结果" MODIFIED="1721127425906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/evaluation_layer" />
-    <SUITE FILE_PATH="coverage/FinOL$FinOLAPP.coverage" NAME="FinOLAPP 覆盖结果" MODIFIED="1725430280776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/APP" />
+    <SUITE FILE_PATH="coverage/FinOL$FinOLAPP.coverage" NAME="FinOLAPP 覆盖结果" MODIFIED="1725434534417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/APP" />
     <SUITE FILE_PATH="coverage/FinOL$test_script.coverage" NAME="test_script 覆盖结果" MODIFIED="1723047949611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/main" />
   </component>
 </project>
