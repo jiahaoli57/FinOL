@@ -86,8 +86,8 @@ def download_data():
     # subprocess.run(["git", "clone", github_url, local_path])
     print("Data downloading......")
     github_urls = [
-        "git://github.com/ai4finol/finol_data.git",
         "http://github.com/ai4finol/finol_data.git",
+        "git://github.com/ai4finol/finol_data.git",
         "https://github.com/ai4finol/finol_data.git",
     ]
     for github_url in github_urls:

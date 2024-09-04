@@ -99,13 +99,16 @@ class DNN(nn.Module):
             x = ScalerSelector().window_normalize(x)
 
         out = x
-        print(out)
-        time.sleep(1111)
         for layer in self.layers:
             out = layer(out)
+            print("out1", out)
             out = self.relu(out)
+            print("out2", out)
             out = self.dropout(out)
+            print("out3", out)
 
         """Final Scores for Assets"""
         final_scores = out.squeeze(-1)
+        print("final_scores", final_scores)
+        time.sleep(1111)
         return final_scores
