@@ -272,7 +272,6 @@ research. Here are some examples:
   │    ├─ display_info.py
   │    ├─ finol_logo_icon.png
   │    └─ FinOLAPP.py
-  │
   ├─ data
   │    ├─ benchmark_results
   │    │    ├─ __init__.py
@@ -281,7 +280,6 @@ research. Here are some examples:
   │    │    │           ├─ price_relative_CMEG.mat
   │    │    │           ├─ ...
   │    │    │           └─ price_relative_TSE.mat
-  │    │    │
   │    │    ├─ practical_metrics
   │    │    │    ├─ CMEG
   │    │    │    │    ├─ final_practical_result.xlsx
@@ -292,7 +290,6 @@ research. Here are some examples:
   │    │    │    └─ TSE
   │    │    │           ├─ final_practical_result.xlsx
   │    │    │           └─ transaction_costs_adjusted_cumulative_wealth.xlsx
-  │    │    │
   │    │    ├─ profit_metrics
   │    │    │    ├─ CMEG
   │    │    │    │    ├─ daily_cumulative_wealth.xlsx
@@ -306,7 +303,6 @@ research. Here are some examples:
   │    │    │           ├─ daily_cumulative_wealth.xlsx
   │    │    │           ├─ daily_return.xlsx
   │    │    │           └─ final_profit_result.xlsx
-  │    │    │
   │    │    └─ risk_metrics
   │    │           ├─ CMEG
   │    │           │    ├─ daily_drawdown.xlsx
@@ -330,12 +326,10 @@ research. Here are some examples:
   │                  ├─ ABX.TO.xlsx
   │                  ├─ ...
   │                  └─ WN.TO.xlsx
-  │
   ├─ data_layer
   │    ├─ __init__.py
   │    ├─ dataset_loader.py
   │    └─ scaler_selector.py
-  │
   ├─ evaluation_layer
   │    ├─ __init__.py
   │    ├─ benchmark_loader.py
@@ -344,16 +338,13 @@ research. Here are some examples:
   │    ├─ metric_caculator.py
   │    ├─ model_evaluator.py
   │    └─ result_visualizer.py
-  │
   ├─ logdir
   │    ├─ 2024-08-20_15-25-17
   │    ├─ ...
   │    └─ 2024-08-20_15-28-32
-  │
   ├─ main
   │    ├─ main.ipynb
   │    └─ main.py
-  │
   ├─ model_layer
   │    ├─ __init__.py
   │    ├─ AlphaPortfolio.py
@@ -365,21 +356,17 @@ research. Here are some examples:
   │    ├─ Transformer.py
   │    ├─ CustomModel.py
   │    └─ model_instantiator.py
-  │
   ├─ optimization_layer
   │    ├─ __init__.py
   │    ├─ criterion_selector.py
   │    ├─ model_trainer.py
   │    ├─ optimizer_selector.py
   │    └─ parameters_tuner.py
-  │
   ├─ tutorials
   │    ├─ README.md
   │    └─ tutorial_quickstart.ipynb
-  │
   ├─ update
   │    └─ __init__.py
-  │
   └─ utils.py
 ```
 

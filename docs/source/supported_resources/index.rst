@@ -1,5 +1,5 @@
-FinOL Supports ...
-==================
+Key Features of FinOL
+=====================
 
 .. toctree::
     :maxdepth: 2
