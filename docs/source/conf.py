@@ -99,7 +99,8 @@ html_theme_options = {
     "accent_color": "violet",
     "dark_code": False,
     "color_mode": "dark",
-    "globaltoc_expand_depth": 1,
+    # "globaltoc_expand_depth": 1,
+    # "toctree_collapse": False,
     "discussion_url": "https://github.com/jiahaoli57/finol/discussions",
     "github_url": "https://github.com/jiahaoli57/finol",
     "nav_links": [
