@@ -73,6 +73,18 @@ class DNN(nn.Module):
         self.relu = nn.ReLU()
         self.dropout = nn.Dropout(p=model_params["DROPOUT"])
 
+        # 手动初始化模型参数
+        self.init_weights()
+
+    def init_weights(self):
+        import torch.nn.init as init
+        for m in self.modules():
+            if isinstance(m, nn.Linear):
+                # 使用 Xavier 初始化方法
+                init.xavier_uniform_(m.weight)
+                init.constant_(m.bias, 0)  # 假设偏置初始化为0
+            print(m)
+
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """
         Forward pass of the model.
