@@ -124,6 +124,12 @@ class ModelTrainer:
                 train_loss += loss.item()
 
             train_loss /= len(self.train_loader)
+            print("label: ", label)
+            print("x_data: ", x_data)
+            print("final_scores: ", final_scores)
+            print("portfolio: ", portfolio)
+            print("train_loss: ", train_loss)
+            time.sleep(1111)
             self.train_loss_list.append(train_loss)
             self.avg_train_loss_list.append(sum(self.train_loss_list) / len(self.train_loss_list))
 
