@@ -1,8 +1,7 @@
 .. _supported_baselines:
 
-|:crossed_swords:| Extensive OLPS Baselines
+Extensive baselines
 ===========================================
-
 
 .. table::
    :class: ghost

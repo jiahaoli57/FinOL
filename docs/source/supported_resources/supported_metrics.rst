@@ -1,6 +1,6 @@
 .. _supported_metrics:
 
-|:straight_ruler:| Comprehensive Comparison Metrics
+Comprehensive metrics
 ===================================================
 
 .. table::

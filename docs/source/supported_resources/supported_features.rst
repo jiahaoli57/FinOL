@@ -1,6 +1,6 @@
 .. _supported_features:
 
-|:chart_with_upwards_trend:| Rich High-Dimensional Data Feature Input
+Rich data input
 =====================================================================
 
 This section provides detailed definitions for the key data features in ``FinOL``.

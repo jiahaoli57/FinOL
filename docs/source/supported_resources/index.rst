@@ -1,5 +1,5 @@
-Key Features of FinOL
-=====================
+Key Features
+============
 
 .. toctree::
     :maxdepth: 2

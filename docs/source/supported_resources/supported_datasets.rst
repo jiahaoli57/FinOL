@@ -1,6 +1,6 @@
 .. _supported_datasets:
 
-|:earth_africa:| Global Financial Asset Datasets
+Global datasets
 ================================================
 
 .. table::

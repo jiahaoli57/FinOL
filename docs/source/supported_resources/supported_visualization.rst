@@ -1,6 +1,6 @@
 .. _supported_visualization:
 
-|:art:| Multiple Visualization Tools
+Multiple visual tools
 ====================================
 
 The ``FinOL`` provides a suite of visualization tools to facilitate
