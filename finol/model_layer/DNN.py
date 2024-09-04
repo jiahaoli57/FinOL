@@ -73,6 +73,7 @@ class DNN(nn.Module):
         self.relu = nn.ReLU()
         self.dropout = nn.Dropout(p=model_params["DROPOUT"])
 
+
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """
         Forward pass of the model.
@@ -95,5 +96,4 @@ class DNN(nn.Module):
 
         """Final Scores for Assets"""
         final_scores = out.squeeze(-1)
-
         return final_scores

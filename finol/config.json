@@ -92,10 +92,10 @@
     "DATA_AUGMENTATION_CONFIG": {
         "WINDOW_DATA": {
             "INCLUDE_WINDOW_DATA": true,
-            "WINDOW_SIZE": 10
+            "WINDOW_SIZE": 5
         }
     },
-    "SCALER": "StandardScaler",
+    "SCALER": "None",
     "BATCH_SIZE": {
         "NYSE(O)": 128,
         "NYSE(N)": 128,
@@ -136,7 +136,7 @@
             "DROPOUT": 0.2
         },
         "DNN": {
-            "NUM_LAYERS": 1,
+            "NUM_LAYERS": 0,
             "HIDDEN_SIZE": 224,
             "DROPOUT": 0.05
         },

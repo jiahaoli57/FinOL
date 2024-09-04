@@ -33,6 +33,10 @@ class DatasetLoader:
         """
         raw_files = []
         for file_name in tqdm(sorted(os.listdir(folder_path)), desc="Data Loading"):
+        # import random
+        # file_names = sorted(os.listdir(folder_path))
+        # random.shuffle(file_names)
+        # for file_name in tqdm(file_names, desc="Data Loading"):
             if file_name.endswith(".xlsx") or file_name.endswith(".xls"):
                 file_path = os.path.join(folder_path, file_name)
                 try:
