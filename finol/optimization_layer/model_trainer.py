@@ -127,8 +127,8 @@ class ModelTrainer:
             self.train_loss_list.append(train_loss)
             self.avg_train_loss_list.append(sum(self.train_loss_list) / len(self.train_loss_list))
 
-            # if (e + 1) % self.config["SAVE_EVERY"] == 0:
-            if True:
+            if (e + 1) % self.config["SAVE_EVERY"] == 0:
+            # if True:
                 with torch.no_grad():
                     model.eval()
                     val_loss = 0

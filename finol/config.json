@@ -92,10 +92,10 @@
     "DATA_AUGMENTATION_CONFIG": {
         "WINDOW_DATA": {
             "INCLUDE_WINDOW_DATA": true,
-            "WINDOW_SIZE": 5
+            "WINDOW_SIZE": 10
         }
     },
-    "SCALER": "WindowStandardScaler",
+    "SCALER": "WindowMinMaxScaler",
     "BATCH_SIZE": {
         "NYSE(O)": 128,
         "NYSE(N)": 128,
@@ -136,8 +136,8 @@
             "DROPOUT": 0.2
         },
         "DNN": {
-            "NUM_LAYERS": 0,
-            "HIDDEN_SIZE": 224,
+            "NUM_LAYERS": 2,
+            "HIDDEN_SIZE": 256,
             "DROPOUT": 0.05
         },
         "LSRE-CAAN": {
@@ -553,15 +553,16 @@
         }
     },
     "_note4": "----------------------------------- Optimization Layer Configuration -----------------------------------",
-    "NUM_EPOCHES": 100,
-    "OPTIMIZER_NAME": "RMSprop",
+    "NUM_EPOCHES": 200,
+    "SAVE_EVERY": 5,
+    "OPTIMIZER_NAME": "Adam",
     "LEARNING_RATE": 0.001,
     "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
-    "TUNE_PARAMETERS": false,
+    "TUNE_PARAMETERS": true,
     "NUM_TRIALS": 20,
-    "SAMPLER_NAME": "QMCSampler",
-    "PRUNER_NAME": "PatientPruner",
+    "SAMPLER_NAME": "RandomSampler",
+    "PRUNER_NAME": "MedianPruner",
     "WRAPPED_PRUNER_NAME": "MedianPruner",
     "_note5": "------------------------------------ Evaluation Layer Configuration ------------------------------------",
     "PLOT_LANGUAGE": "en",
