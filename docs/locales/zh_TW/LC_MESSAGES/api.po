@@ -646,7 +646,7 @@ msgstr ""
 #: ../../source/api/evaluation_layer.rst:17:<autosummary>:1
 #: finol.evaluation_layer.metric_caculator.MetricCaculator:1 of
 msgid ""
-"Class to calculate various performance metrics based on the loaded "
+"Class to calculate various evaluation metrics based on the loaded "
 "dataset output and trained model output."
 msgstr ""
 
@@ -1396,7 +1396,7 @@ msgstr ""
 #: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
 #: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_metric:1 of
 msgid ""
-"Calculate various performance metrics based on the provided portfolios, "
+"Calculate various evaluation metrics based on the provided portfolios, "
 "labels."
 msgstr ""
 
@@ -1609,7 +1609,7 @@ msgid ""
 msgstr ""
 
 #: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_metric:6 of
-msgid "Dictionary containing calculated performance metrics."
+msgid "Dictionary containing calculated evaluation metrics."
 msgstr ""
 
 #: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_portfolios:3

@@ -6,7 +6,7 @@ from finol.utils import load_config
 
 class CriterionSelector:
     """
-    Class to select and compute different loss criteria for portfolio selection.
+    Class to select and compute loss criterion for portfolio selection.
     """
     def __init__(self) -> None:
         self.config = load_config()

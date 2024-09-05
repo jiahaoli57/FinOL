@@ -9,9 +9,12 @@ from finol.utils import load_config, actual_portfolio_selection, add_prefix
 
 class MetricCaculator:
     """
-    Class to calculate various performance metrics based on the loaded dataset output and trained model output.
+    Class to calculate various evaluation metrics based on the loaded dataset and trained model.
+
+    :param load_dataset_output: Dictionary containing output from function :func:`~finol.data_layer.DatasetLoader.load_dataset`.
+    :param train_model_output: Dictionary containing output from function :func:`~finol.optimization_layer.ModelTrainer.train_model`.
     """
-    def __init__(self, load_dataset_output=None, train_model_output=None, mode="normal") -> None:
+    def __init__(self, load_dataset_output: Dict, train_model_output: Dict, mode="normal") -> None:
         self.daily_returns = None
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
@@ -227,12 +230,12 @@ class MetricCaculator:
 
     def caculate_metric(self, portfolios=None, labels=None, runtime=None) -> Dict:
         """
-        Calculate various performance metrics based on the provided portfolios, labels.
+        Calculate various evaluation metrics based on the provided portfolios, labels.
 
         :param portfolios: Portfolio sequence :math:`\mathbf{b}_{1:n}`.
         :param labels: Price relative sequence :math:`\mathbf{x}_{1:n}`.
         :param runtime: The runtime information. Required only when ``self.mode`` is ``ed`` (economic distillation).
-        :return: Dictionary containing calculated performance metrics.
+        :return: Dictionary containing calculated evaluation metrics.
         """
         if self.mode == "normal":
             portfolios, labels, runtime, num_trading_periods = self.caculate_portfolios()

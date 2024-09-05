@@ -655,7 +655,7 @@ msgstr ""
 #: ../../source/api/evaluation_layer.rst:17:<autosummary>:1
 #: finol.evaluation_layer.metric_caculator.MetricCaculator:1 of
 msgid ""
-"Class to calculate various performance metrics based on the loaded "
+"Class to calculate various evaluation metrics based on the loaded "
 "dataset output and trained model output."
 msgstr ""
 

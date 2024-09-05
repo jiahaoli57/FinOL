@@ -54,12 +54,17 @@ distiller_dict = {
 
 
 class DistillerSelector:
-    def __init__(self):
+    """
+    Class to select distiller for model economic distillation.
+    """
+    def __init__(self) -> None:
         self.config = load_config()
 
     def select_distiller(self):
+        """
+        Select a distiller based on the configuration provided in the class.
+        """
         distiller_cls = distiller_dict.get(self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["DISTILLER_NAME"], None)
         if distiller_cls is None:
             raise ValueError(f"Invalid distiller: {self.config['INTERPRETABLE_ANALYSIS_CONFIG']['DISTILLER_NAME']}. Supported distillers are: {distiller_dict}")
         return distiller_cls()
-

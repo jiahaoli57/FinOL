@@ -7,6 +7,7 @@ import torch.nn as nn
 import matplotlib.pyplot as plt
 
 from captum.attr import Saliency
+from typing import List, Tuple, Dict, Union
 from finol.evaluation_layer.metric_caculator import MetricCaculator
 from finol.evaluation_layer.distiller_selector import DistillerSelector
 from finol.utils import load_config, portfolio_selection, actual_portfolio_selection
@@ -29,7 +30,13 @@ class ModifiedModel(nn.Module):
 
 
 class EconomicDistiller:
-    def __init__(self, load_dataset_output, train_model_output):
+    """
+    Class to implement economic distillation methods.
+
+    :param load_dataset_output: Dictionary containing output from function :func:`~finol.data_layer.DatasetLoader.load_dataset`.
+    :param train_model_output: Dictionary containing output from function :func:`~finol.optimization_layer.ModelTrainer.train_model`.
+    """
+    def __init__(self, load_dataset_output: Dict, train_model_output: Dict) -> None:
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
         self.train_model_output = train_model_output
@@ -44,7 +51,14 @@ class EconomicDistiller:
         self.overall_feature_list = load_dataset_output["overall_feature_list"]
         self.detailed_feature_list = load_dataset_output["detailed_feature_list"]
 
-    def economic_distillation(self):
+    def economic_distillation(self) -> Union[Dict, None]:
+        """
+        Distill the trained model to a simple form using economic distillation techniques,
+        and calculate various evaluation metrics based on the loaded dataset and
+        the resulting economic distillation model.
+
+        :return: None or dictionary containing calculated evaluation metrics for the economic distillation model.
+        """
         model = torch.load(self.logdir + "/best_model_" + self.config["DATASET_NAME"] + ".pt").to(self.config["DEVICE"])
         model.eval()
 

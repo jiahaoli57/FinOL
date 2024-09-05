@@ -16,6 +16,7 @@ class ParametersTuner:
     """
     Class to tune model hyper-parameters using auto ML library.
 
+    :param load_dataset_output:
     Example:
         .. code:: python
         >>> # Load dataset

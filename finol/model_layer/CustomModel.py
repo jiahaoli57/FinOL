@@ -9,9 +9,9 @@ from finol.utils import load_config
 # User-defined model class
 class CustomModel(nn.Module):
     """
-    CustomModel as a base neural network model for portfolio selection.
-
-    Users can extend this class and implement their desired model architecture and functionality.
+    Class to serve as a base neural network model for portfolio selection. This class provides users with a framework
+    to extend and implement their own model architectures and functionality,
+    allowing for customization to meet specific requirements and objectives in financial modeling.
 
     :param model_args: Dictionary containing model arguments, such as the number of features.
     :param model_params: Dictionary containing model hyper-parameters, such as the parameter1, parameter2, etc.

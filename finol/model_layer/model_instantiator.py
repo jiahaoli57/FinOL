@@ -25,7 +25,7 @@ model_dict = {
 
 class ModelInstantiator:
     """
-    Class to instantiate various model classes based on the provided configuration.
+    Class to instantiate model class based on the provided configuration.
 
     :param load_dataset_output: Dictionary containing output from function :func:`~finol.data_layer.DatasetLoader.load_dataset`.
     """

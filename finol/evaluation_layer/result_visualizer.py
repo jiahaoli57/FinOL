@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+from typing import List, Tuple, Dict, Union
 from matplotlib.patches import Circle, RegularPolygon
 from matplotlib.path import Path
 from matplotlib.projections import register_projection
@@ -106,7 +107,7 @@ class ResultVisualizer:
 
     :param: load_benchmark_output: Dictionary containing output from function :func:`~finol.evaluation_layer.BenchmarkLoader.load_benchmark`.
     """
-    def __init__(self, load_benchmark_output) -> None:
+    def __init__(self, load_benchmark_output: Dict) -> None:
         self.config = load_config()
         self.load_benchmark_output = load_benchmark_output
         self.top_5_baselines = load_benchmark_output["top_5_baselines"]
