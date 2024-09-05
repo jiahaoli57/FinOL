@@ -1,5 +1,7 @@
-from finol.utils import load_config, set_seed
+import torch.nn as nn
 
+from typing import List, Tuple, Dict, Union
+from finol.utils import load_config, set_seed
 from finol.model_layer.AlphaPortfolio import AlphaPortfolio
 from finol.model_layer.CNN import CNN
 from finol.model_layer.DNN import DNN
@@ -22,7 +24,12 @@ model_dict = {
 
 
 class ModelInstantiator:
-    def __init__(self, load_dataset_output):
+    """
+    Class to instantiate various model classes based on the provided configuration.
+
+    :param load_dataset_output: Dictionary containing output from function :func:`~finol.data_layer.DatasetLoader.load_dataset`.
+    """
+    def __init__(self, load_dataset_output: Dict):
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
         set_seed(seed=self.config["MANUAL_SEED"])
@@ -118,7 +125,15 @@ class ModelInstantiator:
             self.model_args = {}
             self.model_params = {}
 
-    def instantiate_model(self, sampled_params=None):
+    def instantiate_model(self, sampled_params=None) -> nn.Module:
+        """
+        Instantiate a model based on the configuration provided in the class.
+
+        This method retrieves the model class defined in the configuration, and creates an
+        instance of the model that is moved to the designated device.
+
+        :return: An instance of the specified model class.
+        """
         model_cls = model_dict.get(self.config["MODEL_NAME"], None)
         if model_cls is None:
             raise ValueError(f"Invalid model: {self.config['MODEL_NAME']}. Supported models are: {model_dict}")

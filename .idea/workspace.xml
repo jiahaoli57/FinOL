@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
-      <change beforePath="$PROJECT_DIR$/docs/source/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/data_layer/dataset_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/dataset_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/model_layer/model_instantiator.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/model_instantiator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/model_trainer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -472,6 +475,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.test" />
       <item itemvalue="Python.FinOLAPP" />
       <item itemvalue="Python.FinOLAPP2" />
       <item itemvalue="Python.model_trainer" />
@@ -646,14 +650,8 @@
       <workItem from="1724854336396" duration="17716000" />
       <workItem from="1725175251142" duration="1489000" />
       <workItem from="1725258857544" duration="2936000" />
-      <workItem from="1725340181417" duration="58568000" />
-    </task>
-    <task id="LOCAL-00321" summary="build docs">
-      <created>1723800142915</created>
-      <option name="number" value="00321" />
-      <option name="presentableId" value="LOCAL-00321" />
-      <option name="project" value="LOCAL" />
-      <updated>1723800142915</updated>
+      <workItem from="1725340181417" duration="59022000" />
+      <workItem from="1725501146634" duration="614000" />
     </task>
     <task id="LOCAL-00322" summary="build docs">
       <created>1723873364626</created>
@@ -991,7 +989,14 @@
       <option name="project" value="LOCAL" />
       <updated>1725458928887</updated>
     </task>
-    <option name="localTasksCounter" value="370" />
+    <task id="LOCAL-00370" summary="build docs">
+      <created>1725459422394</created>
+      <option name="number" value="00370" />
+      <option name="presentableId" value="LOCAL-00370" />
+      <option name="project" value="LOCAL" />
+      <updated>1725459422394</updated>
+    </task>
+    <option name="localTasksCounter" value="371" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

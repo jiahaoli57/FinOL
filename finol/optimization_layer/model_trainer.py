@@ -18,8 +18,10 @@ from finol.utils import load_config, portfolio_selection, set_seed, add_prefix
 class ModelTrainer:
     """
     Class to train a machine learning model for portfolio selection.
+
+    :param load_dataset_output: Dictionary containing output from function :func:`~finol.data_layer.DatasetLoader.load_dataset`.
     """
-    def __init__(self, load_dataset_output, customized_model=None) -> None:
+    def __init__(self, load_dataset_output: Dict) -> None:
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
         self.logdir = load_dataset_output["logdir"]
