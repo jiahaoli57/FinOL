@@ -156,5 +156,4 @@ significantly enhancing the flexibility and maintainability of the system.
   :target: https://www.kaggle.com/code/jiahaoli57/tutorial-quickstart
 
 .. |Open in Azure| image:: https://img.shields.io/badge/Open%20in-Azure-0053BF?style=flat&logo=Azure
-  :target: https://ml.azure.com/fileexplorerAzNB?wsid=/subscriptions/5b63a2a7-7408-4bbc-9cae-5bc206fbbdf6/resourceGroups/jili6251-rg/providers/Microsoft.MachineLearningServices/workspaces/FinOL&tid=7be93ba7-4482-49d0-a512-7c6818096e33&activeFilePath=Users/jili6251/tutorial_quickstart.ipynb
-
+  :target: https://ml.azure.com/fileexplorerAzNB?wsid=/subscriptions/ab6c0911-44dd-4b20-a137-e120cee05b9b/resourceGroups/jli857-c-rg/providers/Microsoft.MachineLearningServices/workspaces/FinOL&tid=2109ce83-7de4-4471-91ff-2053f90a1fd9&activeFilePath=Users/jli857-c/tutorial_quickstart.ipynb
