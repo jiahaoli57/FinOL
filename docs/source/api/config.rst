@@ -28,19 +28,19 @@ Data Layer Configuration
 :Options: ``True``, ``False``.
 :Description: Determine whether to check for updates for ``FinOL``.
 
-``LOAD_LOCAL_DATALOADER``
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-:Type: bool
-:Options: ``True``, ``False``.
-:Description: Determines whether to load the dataloader from the local data source.
-
 ``DOWNLOAD_DATA``
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Type: bool
 :Options: ``True``, ``False``.
 :Description: Determine whether to download the ``FinOL`` datasets and benchmark results from the source.
+
+``LOAD_LOCAL_DATALOADER``
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:Type: bool
+:Options: ``True``, ``False``.
+:Description: Determines whether to load the dataloader from the local data source.
 
 ``DATASET_NAME``
 ~~~~~~~~~~~~~~~~
