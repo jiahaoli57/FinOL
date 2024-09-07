@@ -275,6 +275,11 @@ class FinOLAPP:
         # trace_checkbox with default value
         self.trace_checkbox(["LOAD_LOCAL_DATALOADER"], self.config["LOAD_LOCAL_DATALOADER"])
 
+        # DOWNLOAD_DATA
+        self.create_checkbox(self.data_config_frame, "Download FinOL Data", 8, 1, self.config["DOWNLOAD_DATA"], ["DOWNLOAD_DATA"])
+
+        # CHECK_UPDATE
+        self.create_checkbox(self.data_config_frame, "Check for Updates", 8, 2, self.config["CHECK_UPDATE"], ["CHECK_UPDATE"])
 
         #############################
         # Model Layer Configuration #
@@ -791,7 +796,7 @@ class FinOLAPP:
     def load_dataset(self):
         try:
             self.load_dataset_output = DatasetLoader().load_dataset()
-            messagebox.showinfo("Success", f"Dataset ``{self.config['DATASET_NAME']}`` loaded successfully!")
+            messagebox.showinfo("Success", f"Dataset [{self.config['DATASET_NAME']}] loaded successfully!")
         except Exception as e:
             messagebox.showerror("Error", f"Failed to load dataset ``{self.config['DATASET_NAME']}``: {e}")
 
@@ -802,7 +807,7 @@ class FinOLAPP:
                 # once the model is trained, we update the parms for model in APP
                 self.trace_dropdown(["MODEL_NAME"], self.config['MODEL_NAME'])
 
-                messagebox.showinfo("Success", f"Model ``{self.config['MODEL_NAME']}`` trained successfully!")
+                messagebox.showinfo("Success", f"Model [{self.config['MODEL_NAME']}] trained successfully!")
 
             except Exception as e:
                 messagebox.showerror("Error", f"Failed to train model ``{self.config['MODEL_NAME']}``: {e}")
@@ -814,7 +819,7 @@ class FinOLAPP:
         if hasattr(self, 'load_dataset_output') and hasattr(self, 'train_model_output'):
             try:
                 self.evaluate_model_output = ModelEvaluator(self.load_dataset_output, self.train_model_output).evaluate_model()
-                messagebox.showinfo("Success", f"Model ``{self.config['MODEL_NAME']}`` evaluated successfully!")
+                messagebox.showinfo("Success", f"Model [{self.config['MODEL_NAME']}] evaluated successfully!")
             except Exception as e:
                 messagebox.showerror("Error", f"Failed to evaluate model: ``{self.config['MODEL_NAME']}``: {e}")
         else:

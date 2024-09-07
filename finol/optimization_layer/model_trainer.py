@@ -25,9 +25,9 @@ class ModelTrainer:
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
         self.logdir = load_dataset_output["logdir"]
-        self.train_loader = load_dataset_output["train_loader"]  # train_loader \ test_loader_for_train
-        self.val_loader = load_dataset_output["val_loader"]  # val_loader \ test_loader_for_train
-        self.test_loader = load_dataset_output["test_loader"]  # test_loader \ test_loader_for_train
+        self.train_loader = load_dataset_output["train_loader"]
+        self.val_loader = load_dataset_output["val_loader"]
+        self.test_loader = load_dataset_output["test_loader_"]
 
         # self.is_ipython = "inline" in matplotlib.get_backend()
         # print(self.is_ipython)

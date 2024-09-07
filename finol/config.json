@@ -2,8 +2,10 @@
     "_note1": "--------------------------------------- General Configuration ------------------------------------------",
     "DEVICE": "cuda",
     "MANUAL_SEED": 0,
+    "CHECK_UPDATE": false,
     "_note2": "-------------------------------------- Data Layer Configuration ----------------------------------------",
     "LOAD_LOCAL_DATALOADER": false,
+    "DOWNLOAD_DATA": false,
     "DATASET_NAME": "DJIA",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
@@ -100,14 +102,14 @@
     "DATA_AUGMENTATION_CONFIG": {
         "WINDOW_DATA": {
             "INCLUDE_WINDOW_DATA": true,
-            "WINDOW_SIZE": 10
+            "WINDOW_SIZE": 30
         }
     },
-    "SCALER": "WindowMinMaxScaler",
+    "SCALER": "WindowMaxAbsScaler",
     "BATCH_SIZE": {
         "NYSE(O)": 128,
         "NYSE(N)": 128,
-        "DJIA": 64,
+        "DJIA": 512,
         "SP500": 64,
         "TSE": 64,
         "SSE": 64,
@@ -132,11 +134,11 @@
     "MODEL_NAME": "DNN",
     "MODEL_PARAMS": {
         "AlphaPortfolio": {
-            "NUM_LAYERS": 4,
+            "NUM_LAYERS": 2,
             "DIM_EMBEDDING": 128,
-            "DIM_FEEDFORWARD": 128,
-            "NUM_HEADS": 4,
-            "DROPOUT": 0.5
+            "DIM_FEEDFORWARD": 192,
+            "NUM_HEADS": 1,
+            "DROPOUT": 0.0
         },
         "CNN": {
             "OUT_CHANNELS": 64,
@@ -146,9 +148,9 @@
             "DROPOUT": 0.2
         },
         "DNN": {
-            "NUM_LAYERS": 2,
-            "HIDDEN_SIZE": 256,
-            "DROPOUT": 0.05
+            "NUM_LAYERS": 4,
+            "HIDDEN_SIZE": 192,
+            "DROPOUT": 0.15000000000000002
         },
         "LSRE-CAAN": {
             "NUM_LAYERS": 1,
@@ -171,7 +173,7 @@
             "DROPOUT": 0.0
         },
         "Transformer": {
-            "NUM_LAYERS": 6,
+            "NUM_LAYERS": 1,
             "DIM_EMBEDDING": 256,
             "DIM_FEEDFORWARD": 128,
             "NUM_HEADS": 1,
@@ -563,16 +565,16 @@
         }
     },
     "_note4": "----------------------------------- Optimization Layer Configuration -----------------------------------",
-    "NUM_EPOCHES": 200,
-    "SAVE_EVERY": 5,
-    "OPTIMIZER_NAME": "Adam",
+    "NUM_EPOCHES": 500,
+    "SAVE_EVERY": 1,
+    "OPTIMIZER_NAME": "Lamb",
     "LEARNING_RATE": 0.001,
     "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
     "TUNE_PARAMETERS": true,
-    "NUM_TRIALS": 20,
+    "NUM_TRIALS": 500,
     "SAMPLER_NAME": "RandomSampler",
-    "PRUNER_NAME": "MedianPruner",
+    "PRUNER_NAME": "NopPruner",
     "WRAPPED_PRUNER_NAME": "MedianPruner",
     "_note5": "------------------------------------ Evaluation Layer Configuration ------------------------------------",
     "PLOT_LANGUAGE": "en",

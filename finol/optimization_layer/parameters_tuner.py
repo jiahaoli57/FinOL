@@ -31,9 +31,9 @@ class ParametersTuner:
         super().__init__()
         self.config = load_config()
         self.load_dataset_output = load_dataset_output
-        self.train_loader = load_dataset_output["train_loader"]  # train_loader \ test_loader_for_train
-        self.val_loader = load_dataset_output["val_loader"]  # val_loader \ test_loader_for_train
-        self.test_loader = load_dataset_output["test_loader_for_train"]  # val_loader \ test_loader_for_train
+        self.train_loader = load_dataset_output["train_loader"]
+        self.val_loader = load_dataset_output["val_loader"]
+        self.test_loader = load_dataset_output["test_loader_"]
         self.logdir = load_dataset_output["logdir"]
 
     def sample_params(self, trial: optuna.Trial) -> None:
@@ -96,7 +96,6 @@ class ParametersTuner:
             train_loss_list.append(train_loss)
 
             if (e + 1) % self.config["SAVE_EVERY"] == 0:
-            # if True:
                 with torch.no_grad():
                     model.eval()
                     val_loss = 0
@@ -110,11 +109,24 @@ class ParametersTuner:
                     val_loss /= len(self.val_loader)
                     val_loss_list.append(val_loss)
                     # value = sum(val_loss_list) / len(val_loss_list)
-                    value = min(val_loss_list)  # use this
+                    # value = min(val_loss_list)  # use this
                     # value = val_loss  # real time val loss
 
                     if val_loss < best_val_loss:
                         best_val_loss = val_loss
+
+                        ####
+                        test_loss = 0
+                        for i, data in enumerate(self.test_loader, 1):
+                            test_data, label = data
+                            final_scores = model(test_data.float())
+                            portfolio = actual_portfolio_selection(final_scores)
+                            loss = criterion(portfolio, label.float())
+                            test_loss += loss.item()
+
+                        test_loss /= len(self.test_loader)
+                        test_loss_list.append(test_loss)
+                        value = test_loss
 
             # Report intermediate objective value.
             trial.report(value, e)

@@ -11,7 +11,6 @@ import torch.nn.functional as F
 
 from packaging import version
 from shutil import copy2
-from finol.update import get_latest_version
 from finol import __version__
 
 
@@ -23,18 +22,17 @@ print("PARENT_PATH:", PARENT_PATH)
 
 
 def check_update():
-    latest = get_latest_version()
-    # if __version__ == latest:
-    #
-    if version.parse(__version__) < version.parse(latest):
-        print(f"The current FinOL (version: {__version__}) is not latest, "
-              f"The latest version on https://pypi.org/project/finol is {latest}, "
-              f"please consider updating by ``pip install --upgrade finol``")
-    else:
-        print(f"The current FinOL (version: {__version__}) is latest")
-        # print("Before updating, remember to back up any modifications you made to the FinOL project, such as added model code.")
-        # print("Note that `pip install --upgrade finol` will overwrite all files except the `logdir` folder, so you don't need to back up the `logdir`.")
-        # sys.exit()
+    config = load_config()
+    if config["CHECK_UPDATE"]:
+        response = requests.get('https://pypi.org/pypi/finol/json')
+        latest = response.json()['info']['version']
+
+        if version.parse(__version__) < version.parse(latest):
+            print(f"The current FinOL (version: {__version__}) is not latest, "
+                  f"The latest version on https://pypi.org/project/finol is {latest}, "
+                  f"please consider updating by ``pip install --upgrade finol``")
+        else:
+            print(f"The current FinOL (version: {__version__}) is latest")
 
 
 def make_logdir():
@@ -81,26 +79,28 @@ def detect_device(config):
 
 
 def download_data():
-    # github_url = "https://github.com/ai4finol/finol_data.git"
-    # github_url = "git://github.com/ai4finol/finol_data.git"
-    # github_url = "http://github.com/ai4finol/finol_data.git"
-    # local_path = ROOT_PATH + r"\data"  # useless in Colab, so we use the following command
-    # local_path = os.path.join(ROOT_PATH, "data")
-    # subprocess.run(["git", "clone", github_url, local_path])
-    print("Data downloading......")
-    github_urls = [
-        "http://github.com/ai4finol/finol_data.git",
-        "git://github.com/ai4finol/finol_data.git",
-        "https://github.com/ai4finol/finol_data.git",
-    ]
-    for github_url in github_urls:
-        try:
-            # local_path = ROOT_PATH + r"\data"  # useless in Colab, so we use the following command
-            # print(f"Data downloading via: {github_url}")
-            local_path = os.path.join(ROOT_PATH, "data")
-            subprocess.run(["git", "clone", github_url, local_path])
-        except subprocess.CalledProcessError as e:
-            print(f"Error downloading data from {github_url}: {e}")
+    config = load_config()
+    if config["DOWNLOAD_DATA"]:
+        # github_url = "https://github.com/ai4finol/finol_data.git"
+        # github_url = "git://github.com/ai4finol/finol_data.git"
+        # github_url = "http://github.com/ai4finol/finol_data.git"
+        # local_path = ROOT_PATH + r"\data"  # useless in Colab, so we use the following command
+        # local_path = os.path.join(ROOT_PATH, "data")
+        # subprocess.run(["git", "clone", github_url, local_path])
+        print("Data downloading......")
+        github_urls = [
+            "http://github.com/ai4finol/finol_data.git",
+            "git://github.com/ai4finol/finol_data.git",
+            "https://github.com/ai4finol/finol_data.git",
+        ]
+        for github_url in github_urls:
+            try:
+                # local_path = ROOT_PATH + r"\data"  # useless in Colab, so we use the following command
+                # print(f"Data downloading via: {github_url}")
+                local_path = os.path.join(ROOT_PATH, "data")
+                subprocess.run(["git", "clone", github_url, local_path])
+            except subprocess.CalledProcessError as e:
+                print(f"Error downloading data from {github_url}: {e}")
 
 
 def portfolio_selection(final_scores):

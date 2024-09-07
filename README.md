@@ -365,8 +365,6 @@ research. Here are some examples:
   ├─ tutorials
   │    ├─ README.md
   │    └─ tutorial_quickstart.ipynb
-  ├─ update
-  │    └─ __init__.py
   └─ utils.py
 ```
 

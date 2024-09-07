@@ -459,7 +459,7 @@ class DatasetLoader:
                 "train_loader": DataLoader(train_ids, batch_size=self.config["BATCH_SIZE"][self.config["DATASET_NAME"]], shuffle=False, drop_last=False),
                 "val_loader": DataLoader(val_ids, batch_size=self.config["BATCH_SIZE"][self.config["DATASET_NAME"]], shuffle=False, drop_last=False),
                 "test_loader": DataLoader(test_ids, batch_size=1, shuffle=False, drop_last=False),
-                "test_loader_for_train": DataLoader(test_ids, batch_size=self.config["BATCH_SIZE"][self.config["DATASET_NAME"]], shuffle=False, drop_last=False),
+                "test_loader_": DataLoader(test_ids, batch_size=self.config["BATCH_SIZE"][self.config["DATASET_NAME"]], shuffle=False, drop_last=False),
                 "num_train_periods": ds_train.shape[0],
                 "num_val_periods": ds_val.shape[0],
                 "num_test_periods": ds_test.shape[0],
