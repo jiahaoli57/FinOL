@@ -21,12 +21,26 @@ Data Layer Configuration
 :Options: Any non-negative integer.
 :Description: Sets the seed for random number generation to ensure reproducibility of results.
 
+``CHECK_UPDATE``
+~~~~~~~~~~~~~~~~
+
+:Type: bool
+:Options: ``True``, ``False``.
+:Description: Determine whether to check for updates for ``FinOL``.
+
 ``LOAD_LOCAL_DATALOADER``
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Type: bool
 :Options: ``True``, ``False``.
 :Description: Determines whether to load the dataloader from the local data source.
+
+``DOWNLOAD_DATA``
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:Type: bool
+:Options: ``True``, ``False``.
+:Description: Determine whether to download the ``FinOL`` datasets and benchmark results from the source.
 
 ``DATASET_NAME``
 ~~~~~~~~~~~~~~~~
