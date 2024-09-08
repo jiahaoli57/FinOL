@@ -30,8 +30,8 @@ classifiers = [
 requires-python = ">=3.7, <4"  # >=3.7
 dependencies = [
   "captum",
-  "cmaes>=0.10.0",  # optuna/samplers/_cmaes.py
-  "einops",  # model_layer
+  "cmaes>=0.10.0",
+  "einops",
 #  "IPython",  #
   "matplotlib",  # ==3.5.0
   "numpy",
@@ -55,120 +55,16 @@ dynamic = ["version"]
 #ta-lib = { version = "*", source = "conda-forge" }
 
 [project.optional-dependencies]
-#cuda = [
-#  "torch==1.10.0+cu113",
-#  "torchvision==0.10.0+cu113",
-#]
-#benchmark = [
-#  "asv>=0.5.0",
-#  "botorch",
-#  "cma",
-#  "virtualenv"
-#]
-#checking = [
-#  "black",
-#  "blackdoc",
-#  "flake8",
-#  "isort",
-#  "mypy",
-#  "mypy_boto3_s3",
-#  "types-PyYAML",
-#  "types-redis",
-#  "types-setuptools",
-#  "types-tqdm",
-#  "typing_extensions>=3.10.0.0",
-#]
 document = [
-#  "typed-ast",
   "sphinx",
-#  "sphinx-gallery",
-#  "sphinx-plotly-directive",
-#  "sphinx_rtd_theme",
   "sphinx_copybutton",
-#  "sphinx_design",
   "sphinxemoji",
   "shibuya",
   "sphinx_tabs",
 ]
-#optional = [
-#  "boto3",  # optuna/artifacts/_boto3.py.
-#  "cmaes>=0.10.0",  # optuna/samplers/_cmaes.py.
-#  "google-cloud-storage",  # optuna/artifacts/_gcs.py.
-#  "matplotlib!=3.6.0",  # optuna/visualization/matplotlib.
-#  "pandas",  # optuna/study.py.
-#  "plotly>=4.9.0",  # optuna/visualization.
-#  "redis",  # optuna/storages/redis.py.
-#  "scikit-learn>=0.24.2",
-#  # optuna/visualization/param_importances.py.
-#  "scipy",  # optuna/samplers/_gp
-#  "torch",  # optuna/samplers/_gp
-#]
-#test = [
-#  "coverage",
-#  "fakeredis[lua]",
-#  "kaleido",
-#  "moto",
-#  "pytest",
-#  "scipy>=1.9.2; python_version>='3.8'",
-#  "torch",
-#]
 
 [project.urls]
 #homepage = "https://finol.org/"
 repository = "https://github.com/jiahaoli57/finol"
 documentation = "https://finol.readthedocs.io"
 bugtracker = "https://github.com/finol/finol/issues"
-
-#[project.scripts]
-#optuna = "optuna.cli:main"
-#
-#[tool.setuptools.packages.find]
-#include = ["finol*"]
-#
-#[tool.setuptools.dynamic]
-#version = {attr = "optuna.version.__version__"}
-#
-#[tool.setuptools.package-data]
-#"optuna" = [
-#  "storages/_rdb/alembic.ini",
-#  "storages/_rdb/alembic/*.*",
-#  "storages/_rdb/alembic/versions/*.*",
-#  "py.typed",
-#]
-#
-#[tool.black]
-#line-length = 99
-#target-version = ['py38']
-#exclude = '''
-#/(
-#  \.eggs
-#  | \.git
-#  | \.hg
-#  | \.mypy_cache
-#  | \.venv
-#  | venv
-#  | _build
-#  | buck-out
-#  | build
-#  | dist
-#  | docs
-#)/
-#'''
-#
-#[tool.isort]
-#profile = 'black'
-#src_paths = ['finol']
-#skip_glob = ['docs/source/conf.py', '**/alembic/versions/*.py', 'tutorial/**/*.py']
-#line_length = 99
-#lines_after_imports = 2
-#force_single_line = 'True'
-#force_sort_within_sections = 'True'
-#order_by_type = 'False'
-#
-#[tool.pytest.ini_options]
-#addopts = "--color=yes"
-#filterwarnings = 'ignore::optuna.exceptions.ExperimentalWarning'
-#markers = [
-#  "skip_coverage: marks tests are skipped when calculating the coverage",
-#  "slow: marks tests as slow (deselect with '-m \"not slow\"')",
-#]

@@ -3,9 +3,9 @@
     "DEVICE": "cuda",
     "MANUAL_SEED": 0,
     "CHECK_UPDATE": false,
+    "DOWNLOAD_DATA": false,
     "_note2": "-------------------------------------- Data Layer Configuration ----------------------------------------",
     "LOAD_LOCAL_DATALOADER": false,
-    "DOWNLOAD_DATA": false,
     "DATASET_NAME": "DJIA",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
@@ -102,16 +102,16 @@
     "DATA_AUGMENTATION_CONFIG": {
         "WINDOW_DATA": {
             "INCLUDE_WINDOW_DATA": true,
-            "WINDOW_SIZE": 30
+            "WINDOW_SIZE": 5
         }
     },
-    "SCALER": "WindowMaxAbsScaler",
+    "SCALER": "WindowStandardScaler",
     "BATCH_SIZE": {
         "NYSE(O)": 128,
         "NYSE(N)": 128,
         "DJIA": 512,
         "SP500": 64,
-        "TSE": 64,
+        "TSE": 256,
         "SSE": 64,
         "HSI": 64,
         "CMEG": 64,
@@ -134,11 +134,11 @@
     "MODEL_NAME": "DNN",
     "MODEL_PARAMS": {
         "AlphaPortfolio": {
-            "NUM_LAYERS": 2,
-            "DIM_EMBEDDING": 128,
-            "DIM_FEEDFORWARD": 192,
+            "NUM_LAYERS": 4,
+            "DIM_EMBEDDING": 224,
+            "DIM_FEEDFORWARD": 128,
             "NUM_HEADS": 1,
-            "DROPOUT": 0.0
+            "DROPOUT": 0.4
         },
         "CNN": {
             "OUT_CHANNELS": 64,
@@ -148,9 +148,9 @@
             "DROPOUT": 0.2
         },
         "DNN": {
-            "NUM_LAYERS": 4,
-            "HIDDEN_SIZE": 192,
-            "DROPOUT": 0.15000000000000002
+            "NUM_LAYERS": 2,
+            "HIDDEN_SIZE": 304,
+            "DROPOUT": 0.1
         },
         "LSRE-CAAN": {
             "NUM_LAYERS": 1,
@@ -232,7 +232,7 @@
                 "type": "int",
                 "range": [
                     1,
-                    4
+                    12
                 ],
                 "step": 1
             },
@@ -240,9 +240,9 @@
                 "type": "int",
                 "range": [
                     32,
-                    256
+                    512
                 ],
-                "step": 32
+                "step": 16
             },
             "DROPOUT": {
                 "type": "float",
@@ -464,9 +464,9 @@
                 "type": "int",
                 "range": [
                     32,
-                    256
+                    512
                 ],
-                "step": 32
+                "step": 16
             },
             "DROPOUT": {
                 "type": "float",
@@ -490,9 +490,9 @@
                 "type": "int",
                 "range": [
                     32,
-                    256
+                    512
                 ],
-                "step": 32
+                "step": 16
             },
             "DROPOUT": {
                 "type": "float",
@@ -516,17 +516,17 @@
                 "type": "int",
                 "range": [
                     32,
-                    256
+                    512
                 ],
-                "step": 32
+                "step": 16
             },
             "DIM_FEEDFORWARD": {
                 "type": "int",
                 "range": [
                     32,
-                    256
+                    512
                 ],
-                "step": 32
+                "step": 16
             },
             "NUM_HEADS": {
                 "type": "int",
@@ -558,21 +558,21 @@
                 "type": "int",
                 "range": [
                     32,
-                    256
+                    512
                 ],
-                "step": 32
+                "step": 16
             }
         }
     },
     "_note4": "----------------------------------- Optimization Layer Configuration -----------------------------------",
-    "NUM_EPOCHES": 500,
+    "NUM_EPOCHES": 50,
     "SAVE_EVERY": 1,
-    "OPTIMIZER_NAME": "Lamb",
-    "LEARNING_RATE": 0.001,
+    "OPTIMIZER_NAME": "Adam",
+    "LEARNING_RATE": 0.004,
     "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
     "TUNE_PARAMETERS": true,
-    "NUM_TRIALS": 500,
+    "NUM_TRIALS": 1000,
     "SAMPLER_NAME": "RandomSampler",
     "PRUNER_NAME": "NopPruner",
     "WRAPPED_PRUNER_NAME": "MedianPruner",
