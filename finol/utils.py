@@ -105,9 +105,9 @@ def download_data():
 
 def portfolio_selection(final_scores):
     portfolio = F.softmax(final_scores, dim=-1)
-    # print(final_scores)
-    # print(portfolio)
-    assert torch.all(portfolio >= 0), "Portfolio contains non-negative values."
+
+    assert not torch.isnan(portfolio).any(), f"Portfolio contains NaN values: {portfolio}"
+    assert torch.all(portfolio >= 0), f"Portfolio contains non-negative values: {portfolio}"
     return portfolio
 
 
@@ -128,7 +128,9 @@ def actual_portfolio_selection(final_scores):
         winners_mask = torch.ones_like(final_scores, device=DEVICE)
         winners_mask.scatter_(1, indices, 0).detach()
         portfolio = F.softmax(final_scores - 1e9 * winners_mask, dim=-1)
-    assert torch.all(portfolio >= 0), "Portfolio contains non-negative values."
+
+    assert not torch.isnan(portfolio).any(), f"Portfolio contains NaN values: {portfolio}"
+    assert torch.all(portfolio >= 0), f"Portfolio contains non-negative values: {portfolio}"
     return portfolio
 
 
