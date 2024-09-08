@@ -571,7 +571,7 @@
     "LEARNING_RATE": 0.004,
     "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
-    "TUNE_PARAMETERS": true,
+    "TUNE_PARAMETERS": false,
     "NUM_TRIALS": 1000,
     "SAMPLER_NAME": "RandomSampler",
     "PRUNER_NAME": "NopPruner",
