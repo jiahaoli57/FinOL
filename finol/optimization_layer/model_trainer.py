@@ -98,7 +98,6 @@ class ModelTrainer:
         """
         if self.config["TUNE_PARAMETERS"]:
             ParametersTuner(load_dataset_output=self.load_dataset_output).tune_parameters()
-            pass
 
         set_seed(seed=self.config["MANUAL_SEED"])
         model = ModelInstantiator(self.load_dataset_output).instantiate_model()
@@ -130,7 +129,6 @@ class ModelTrainer:
             self.avg_train_loss_list.append(sum(self.train_loss_list) / len(self.train_loss_list))
 
             if (e + 1) % self.config["SAVE_EVERY"] == 0:
-            # if True:
                 with torch.no_grad():
                     model.eval()
                     val_loss = 0

@@ -109,24 +109,11 @@ class ParametersTuner:
                     val_loss /= len(self.val_loader)
                     val_loss_list.append(val_loss)
                     # value = sum(val_loss_list) / len(val_loss_list)
-                    # value = min(val_loss_list)  # use this
+                    value = min(val_loss_list)  # use this
                     # value = val_loss  # real time val loss
 
                     if val_loss < best_val_loss:
                         best_val_loss = val_loss
-
-                        ####
-                        test_loss = 0
-                        for i, data in enumerate(self.test_loader, 1):
-                            test_data, label = data
-                            final_scores = model(test_data.float())
-                            portfolio = actual_portfolio_selection(final_scores)
-                            loss = criterion(portfolio, label.float())
-                            test_loss += loss.item()
-
-                        test_loss /= len(self.test_loader)
-                        test_loss_list.append(test_loss)
-                        value = test_loss
 
             # Report intermediate objective value.
             trial.report(value, e)
@@ -203,7 +190,7 @@ class ParametersTuner:
             # mpl.plot_pareto_front,
             mpl.plot_rank,
             mpl.plot_slice,
-            mpl.plot_terminator_improvement,
+            # mpl.plot_terminator_improvement,  # time consuming
             mpl.plot_timeline,
         ]
         for plot_func in plots:
