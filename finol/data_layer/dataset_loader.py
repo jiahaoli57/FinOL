@@ -74,7 +74,12 @@ class DatasetLoader:
             ohlcv_features_df = pd.DataFrame(ohlcv_features)
 
         if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OVERLAP_FEATURES"]:
-            import talib as ta
+            try:
+                import talib as ta
+            except ImportError:
+                raise ImportError(
+                    "The 'talib' library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
+                )
             overlap_features = {
                 "BBANDS_UPPER": ta.BBANDS(df.CLOSE)[0],  # Bollinger Bands - Upper Band
                 "BBANDS_MIDDLE": ta.BBANDS(df.CLOSE)[1],  # Bollinger Bands - Middle Band
@@ -100,7 +105,12 @@ class DatasetLoader:
             overlap_features_df = pd.DataFrame(overlap_features)
 
         if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_MOMENTUM_FEATURES"]:
-            import talib as ta
+            try:
+                import talib as ta
+            except ImportError:
+                raise ImportError(
+                    "The 'talib' library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
+                )
             momentum_features = {
                 "ADX": ta.ADX(df.HIGH, df.LOW, df.CLOSE),  # Average Directional Movement Index
                 "ADXR": ta.ADXR(df.HIGH, df.LOW, df.CLOSE),  # Average Directional Movement Index Rating
@@ -146,7 +156,12 @@ class DatasetLoader:
             momentum_features_df = pd.DataFrame(momentum_features)
 
         if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLUME_FEATURES"]:
-            import talib as ta
+            try:
+                import talib as ta
+            except ImportError:
+                raise ImportError(
+                    "The 'talib' library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
+                )
             volume_features = {
                 "AD": ta.AD(df.HIGH, df.LOW, df.CLOSE, df.VOLUME),  # Chaikin A/D Line
                 "ADOSC": ta.ADOSC(df.HIGH, df.LOW, df.CLOSE, df.VOLUME),  # Chaikin A/D Oscillator
@@ -155,7 +170,12 @@ class DatasetLoader:
             volume_features_df = pd.DataFrame(volume_features)
 
         if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_CYCLE_FEATURES"]:
-            import talib as ta
+            try:
+                import talib as ta
+            except ImportError:
+                raise ImportError(
+                    "The 'talib' library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
+                )
             cycle_features = {
                 "HT_DCPERIOD": ta.HT_DCPERIOD(df.CLOSE),  # Hilbert Transform - Dominant Cycle Period
                 "HT_DCPHASE": ta.HT_DCPHASE(df.CLOSE),  # Hilbert Transform - Dominant Cycle Phase
@@ -168,7 +188,12 @@ class DatasetLoader:
             cycle_features_df = pd.DataFrame(cycle_features)
 
         if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PRICE_FEATURES"]:
-            import talib as ta
+            try:
+                import talib as ta
+            except ImportError:
+                raise ImportError(
+                    "The 'talib' library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
+                )
             price_features = {
                 "AVGPRICE": ta.AVGPRICE(df.OPEN, df.HIGH, df.LOW, df.CLOSE),  # Average Price
                 "MEDPRICE": ta.MEDPRICE(df.HIGH, df.LOW),  # Median Price
@@ -178,7 +203,12 @@ class DatasetLoader:
             price_features_df = pd.DataFrame(price_features)
 
         if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLATILITY_FEATURES"]:
-            import talib as ta
+            try:
+                import talib as ta
+            except ImportError:
+                raise ImportError(
+                    "The 'talib' library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
+                )
             volatility_features = {
                 "ATR": ta.ATR(df.HIGH, df.LOW, df.CLOSE),  # Average True Range
                 "NATR": ta.NATR(df.HIGH, df.LOW, df.CLOSE),  # Normalized Average True Range
@@ -187,7 +217,12 @@ class DatasetLoader:
             volatility_features_df = pd.DataFrame(volatility_features)
 
         if self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PATTERN_FEATURES"]:
-            import talib as ta
+            try:
+                import talib as ta
+            except ImportError:
+                raise ImportError(
+                    "The 'talib' library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
+                )
             pattern_features = {
                 "CDL2CROWS": ta.CDL2CROWS(df.OPEN, df.HIGH, df.LOW, df.CLOSE),  # Two Crows
                 "CDL3BLACKCROWS": ta.CDL3BLACKCROWS(df.OPEN, df.HIGH, df.LOW, df.CLOSE),  # Three Black Crows
