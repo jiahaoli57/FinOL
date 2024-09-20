@@ -4,17 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="add new model">
-      <change afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/extending.po" afterDir="false" />
+    <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/api.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/background.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/contact_us.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/extending.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/extending.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/file_structure.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/index.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/installation.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/license.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/quickstart.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/supported_resources.mo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/index.mo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/index.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api.mo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/background.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/background.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/extending.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/extending.po" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/index.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/index.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources.mo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/quickstart.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/quickstart.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/api.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/api.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/background.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/background.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/contact_us.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/contact_us.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/file_structure.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/file_structure.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/index.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/index.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/installation.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/installation.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/license.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/license.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/quickstart.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/quickstart.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/supported_resources.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/supported_resources.po" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/extending.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/extending.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,17 +112,17 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\locales\zh_TW\LC_MESSAGES" />
+      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\locales\zh_TW" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\locales\zh_CN\LC_MESSAGES" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol\model_layer" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\source" />
-      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol\APP" />
-      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol\APP" />
@@ -649,14 +667,8 @@
       <workItem from="1726393369019" duration="1679000" />
       <workItem from="1726554749595" duration="2147000" />
       <workItem from="1726639080618" duration="3157000" />
-      <workItem from="1726805536312" duration="11261000" />
-    </task>
-    <task id="LOCAL-00335" summary="build docs">
-      <created>1725367403216</created>
-      <option name="number" value="00335" />
-      <option name="presentableId" value="LOCAL-00335" />
-      <option name="project" value="LOCAL" />
-      <updated>1725367403216</updated>
+      <workItem from="1726805536312" duration="12111000" />
+      <workItem from="1726820726941" duration="13142000" />
     </task>
     <task id="LOCAL-00336" summary="build docs">
       <created>1725367439900</created>
@@ -994,7 +1006,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726809411494</updated>
     </task>
-    <option name="localTasksCounter" value="384" />
+    <task id="LOCAL-00384" summary="build docs">
+      <created>1726820128212</created>
+      <option name="number" value="00384" />
+      <option name="presentableId" value="LOCAL-00384" />
+      <option name="project" value="LOCAL" />
+      <updated>1726820128212</updated>
+    </task>
+    <option name="localTasksCounter" value="385" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1024,9 +1043,9 @@
     <MESSAGE value="add &quot;Radar Chart&quot; feature" />
     <MESSAGE value="build docs; optimize code" />
     <MESSAGE value="optimize code" />
-    <MESSAGE value="build docs" />
     <MESSAGE value="add new model" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new model" />
+    <MESSAGE value="build docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="build docs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

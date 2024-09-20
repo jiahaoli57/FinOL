@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FinOL 0.1.29\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 17:52+0800\n"
+"POT-Creation-Date: 2024-08-13 01:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_TW\n"
@@ -20,161 +20,154 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 
 #: ../../source/index.rst:8
-msgid "FinOL: Towards open benchmarking for data-driven OLPS"
-msgstr ""
-
-#: ../../source/index.rst:10
-msgid ""
-"``FinOL`` represents a pioneering open database for facilitating data-"
-"driven OLPS research. As an ambitious project, it collects and organizes "
-"extensive assets from global markets over half a century, it provides a "
-"long-awaited unified platform to advance data-driven OLPS research."
-msgstr ""
+msgid "``FinOL``: Towards open benchmarking for data-driven OLPS"
+msgstr "``FinOL``：面向數據驅動的 OLPS 的開放基準測試"
 
 #: ../../source/index.rst:15
 msgid "|:star:| What's NEW!"
-msgstr ""
+msgstr "|:star:| 最新動態！"
 
 #: ../../source/index.rst:20
 msgid "Update"
-msgstr ""
+msgstr "最新動態"
 
 #: ../../source/index.rst:20
 msgid "Status"
-msgstr ""
+msgstr "狀態"
 
 #: ../../source/index.rst:20
 msgid "Label"
-msgstr ""
+msgstr "標籤"
 
 #: ../../source/index.rst:23
 msgid "New release! ``FinOL`` is going to release the official website"
-msgstr ""
+msgstr "全新發布！``FinOL`` 即將推出官方網站！"
 
 #: ../../source/index.rst:23 ../../source/index.rst:27
 #: ../../source/index.rst:33
 msgid "Coming soon......"
-msgstr ""
+msgstr "即將推出……"
 
 #: ../../source/index.rst:23 ../../source/index.rst:39
 #: ../../source/index.rst:83 ../../source/index.rst:89
-msgid "Release"
-msgstr ""
+msgid "|:rocket:| Release"
+msgstr "|:rocket:| 發布"
 
 #: ../../source/index.rst:27
 msgid ""
-"New metric! ``FinOL`` is going to support the `t-test <https://www.scienc"
-" edirect.com/science/article/pii/S0004370215000168>`__ metric"
+"New metric! ``FinOL`` is going to support the `t-test <https://www.sciencedirect.com/science/article/pii/S0004370215000168>`__ metric"
 msgstr ""
+"全新指標！``FinOL`` 即將支援 `t-test <https://www.scienc"
+" edirect.com/science/article/pii/S0004370215000168>`__ 指標"
 
 #: ../../source/index.rst:27 ../../source/index.rst:33
 #: ../../source/index.rst:45 ../../source/index.rst:51
 #: ../../source/index.rst:57 ../../source/index.rst:63
 #: ../../source/index.rst:69 ../../source/index.rst:76
-msgid "Enhancement"
-msgstr ""
+msgid "|:hammer_and_wrench:| Enhancement"
+msgstr "|:hammer_and_wrench:| 增强"
 
 #: ../../source/index.rst:33
 msgid ""
-"New model! ``FinOL`` is going to support the `AlphaStock <h "
-"ttps://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ model"
+"New model! ``FinOL`` is going to support the `AlphaStock <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ model"
 msgstr ""
+"全新模型！``FinOL`` 即將支援 `AlphaStock <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ 模型"
 
 #: ../../source/index.rst:39
 msgid ""
-"New release! ``FinOL`` now releases the `official docs "
-"<https://finol.readthedocs.io/en/latest/>`__"
+"New release! ``FinOL`` now releases the `Official Docs <https://finol.readthedocs.io/en/latest/>`__"
 msgstr ""
+"全新發布！``FinOL`` 現已發布 `官方文檔 <https://finol.readthedocs.io/en/latest/>`__"
 
 #: ../../source/index.rst:39
 msgid "Released on 22 July 2024"
-msgstr ""
+msgstr "於 2024年7月22日 發布"
 
 #: ../../source/index.rst:45
 msgid ""
-"New feature! ``FinOL`` now supports the `Auto Hyperparameter Tuning "
-"<https://dl.acm.org/doi/10.1145/3292500.3330701>`__ feature"
+"New feature! ``FinOL`` now supports the `Auto Hyper-parameters Tuning <https://dl.acm.org/doi/10.1145/3292500.3330701>`__ feature"
 msgstr ""
+"全新功能！``FinOL`` 現已支援 `自動超參數調優 <https://dl.acm.org/doi/10.1145/3292500.3330701>`__ 功能"
 
 #: ../../source/index.rst:45
 msgid "Supported since 22 July 2024"
-msgstr ""
+msgstr "自 2024年7月22日 起支援"
 
 #: ../../source/index.rst:51
 msgid ""
-"New feature! ``FinOL`` now supports the `Radar Chart "
-"<https://en.wikipedia.org/wiki/Radar_chart>`__ evaluation"
+"New feature! ``FinOL`` now supports the `Radar Chart <https://en.wikipedia.org/wiki/Radar_chart>`__ evaluation"
 msgstr ""
+"全新功能！``FinOL`` 現已支援 `雷達圖 <https://en.wikipedia.org/wiki/Radar_chart>`__ 評估"
 
 #: ../../source/index.rst:51
 msgid "Supported since 10 June 2024"
-msgstr ""
+msgstr "自 2024年6月10日 起支援"
 
 #: ../../source/index.rst:57
 msgid ""
-"New model! ``FinOL`` now supports the `AlphaPortfolio <https://pa "
-"pers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ model"
+"New model! ``FinOL`` now supports the `AlphaPortfolio <https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ model"
 msgstr ""
+"全新模型！``FinOL`` 現已支援 `AlphaPortfolio <https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ 模型"
 
 #: ../../source/index.rst:57
 msgid "Supported since 06 June 2024"
-msgstr ""
+msgstr "自 2024年6月6日 起支援"
 
 #: ../../source/index.rst:63
 msgid ""
-"New feature! ``FinOL`` now supports the `Economic Distillation "
-"<https://pa pers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ feature"
+"New feature! ``FinOL`` now supports the `Economic Distillation <https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ feature"
 msgstr ""
+"全新功能！``FinOL`` 現已支援 `經濟蒸餾 <https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ 功能"
 
 #: ../../source/index.rst:63
 msgid "Supported since 15 May 2024"
-msgstr ""
+msgstr "自 2024年5月15日 起支援"
 
 #: ../../source/index.rst:69
 msgid ""
-"New feature! ``FinOL`` now supports the `Interpretability Analysis <h "
-"ttps://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ feature"
+"New feature! ``FinOL`` now supports the `Interpretability Analysis <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ feature"
 msgstr ""
+"全新功能！``FinOL`` 現已支援 `可解釋性分析 <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ 功能"
 
 #: ../../source/index.rst:69
 msgid "Supported since 16 April 2024"
-msgstr ""
+msgstr "自 2024年4月16日 起支援"
 
 #: ../../source/index.rst:76
 msgid ""
-"New feature! ``FinOL`` now supports the `Winner Assets Selection <h "
-"ttps://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ feature"
+"New feature! ``FinOL`` now supports the `Winner Assets Selection <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ feature"
 msgstr ""
+"全新功能！``FinOL`` 現已支援 `優勝資產選擇 <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ 功能"
 
 #: ../../source/index.rst:76
 msgid "Supported since 14 April 2024"
-msgstr ""
+msgstr "自 2024年4月14日 起支援"
 
 #: ../../source/index.rst:83
-msgid "Release ``FinOL`` `tutorials <finol/tutorials>`__"
-msgstr ""
+msgid "New release! ``FinOL`` now releases the `Tutorials <finol/tutorials>`__"
+msgstr "全新發布！``FinOL`` 現已發布 `教程 <finol/tutorials>`__"
 
 #: ../../source/index.rst:83
 msgid "Released on 22 March 2024"
-msgstr ""
+msgstr "於 2024年3月22日 發布"
 
 #: ../../source/index.rst:89
 msgid ""
-"Release ``FinOL`` `v0.0.1 <https: "
-"//github.com/jiahaoli57/finol/releases/tag/v0.0.1>`__"
+"New release! ``FinOL`` now releases the `v0.0.1 <https://github.com/jiahaoli57/finol/releases/tag/v0.0.1>`__ package"
 msgstr ""
+"全新發布！``FinOL`` 現已發布 `v0.0.1 <https://github.com/jiahaoli57/finol/releases/tag/v0.0.1>`__ 包"
 
 #: ../../source/index.rst:89
 msgid "Released on 21 March 2024"
-msgstr ""
+msgstr "於 2024年3月21日 發布"
 
 #: ../../source/index.rst:98
 msgid "Contents"
-msgstr ""
+msgstr "目錄"
 
 #: ../../source/index.rst:113
 msgid "Indices and tables"
-msgstr ""
+msgstr "索引"
 
 #: ../../source/index.rst:115
 msgid ":ref:`genindex`"
@@ -187,4 +180,29 @@ msgstr ""
 #: ../../source/index.rst:117
 msgid ":ref:`search`"
 msgstr ""
+
+msgid ""
+"New model! ``FinOL`` now supports the `GRU <https://arxiv.org/abs/1412.3555>`__ model"
+msgstr ""
+"全新模型！``FinOL`` 現已支援 `GRU <https://arxiv.org/abs/1412.3555>`__ 模型"
+
+msgid "Supported since 20 September 2024"
+msgstr "於 2024年9月20日 發布"
+
+msgid ""
+"New model! ``FinOL`` now supports the `AlphaStock <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ model"
+msgstr ""
+"全新模型！``FinOL`` 現已支援 `AlphaStock <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ 模型"
+
+msgid "Supported since 20 September 2024"
+msgstr "於 2024年9月20日 發布"
+
+msgid ""
+"``FinOL`` a comprehensive software package and benchmarking platform designed to advance data-driven OLPS research. "
+"``FinOL`` not only provides a well-structured library, offering extensively encapsulated functions, "
+"but also develops extensive benchmark results for fair comparisons."
+msgstr ""
+"``FinOL`` 是一個全面的軟體包和基準測試平台，旨在推進數據駆動的 OLPS 研究。"
+"``FinOL`` 不僅提供了一個結構良好的庫，提供了廣泛封裝的函數，"
+"而且還為公平比較提供了廣泛的基準結果。"
 

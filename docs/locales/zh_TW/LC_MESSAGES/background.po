@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FinOL 0.1.29\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 17:52+0800\n"
+"POT-Creation-Date: 2024-08-13 01:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_TW\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../source/background.rst:2
 msgid "Background"
-msgstr ""
+msgstr "問題背景"
 
 #: ../../source/background.rst:5
 msgid ""
@@ -30,6 +30,7 @@ msgid ""
 "increased computing power and data, data-driven OLPS methods that "
 "directly learn from data have gained attention."
 msgstr ""
+"早期的在線投資組合選擇（OLPS）方法依賴於對市場動態和數學優化的先驗假設。隨著計算能力和數據的增加，直接從數據中學習的數據驅動型 OLPS 方法引起了人們的關注。"
 
 #: ../../source/background.rst:9
 msgid ""
@@ -38,6 +39,7 @@ msgid ""
 "fair comparisons, it's unclear which method truly performs best in real-"
 "world environments, hindering progress in this field."
 msgstr ""
+"雖然各種數據驅動型的 OLPS 方法都顯示出了一定的前景，但評估和比較它們仍然是一個挑戰。由於缺乏標準化的數據集和公平的比較，目前還不清楚哪種方法在真實環境中的表現最佳，這阻礙了該領域的進步。"
 
 #: ../../source/background.rst:14
 msgid ""
@@ -46,6 +48,7 @@ msgid ""
 "series are highly non-stationary, so the same method can exhibit "
 "drastically different performance on different datasets."
 msgstr ""
+"研究人員往往會默認認為新的方法更優秀，但如果没有統一的測試條件，這種做法是不负责任的。金融時間序列高度非穩定，因此同一個方法在不同的數據集上可能會表現出截然不同的性能。"
 
 #: ../../source/background.rst:19
 msgid ""
@@ -53,14 +56,15 @@ msgid ""
 " designed for data-driven OLPS research. ``FinOL`` provides diverse "
 "financial datasets and extensive benchmark results for fair comparison."
 msgstr ""
+"為了解決這個問題，我們推出了 ``FinOL`` —— 一個專為數據驅動型 OLPS 研究而設計的新型金融基準平台。 ``FinOL`` 提供了多樣化的金融數據集，並給出了廣泛的基準測試結果，以便進行公平比較。"
 
 #: ../../source/background.rst:24 ../../source/background.rst:29
 msgid "Notation"
-msgstr ""
+msgstr "符號"
 
 #: ../../source/background.rst:30
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../source/background.rst:31
 msgid ":math:`b_{t,i}`"
@@ -71,6 +75,7 @@ msgid ""
 "Proportion of wealth invested in asset :math:`i` at the beginning of the "
 ":math:`t`-th trading period."
 msgstr ""
+"在交易期 :math:`t` 開始時，投資於資產 :math:`i` 的財富比例。"
 
 #: ../../source/background.rst:33
 msgid ":math:`\\mathbf{b}_t`"
@@ -81,6 +86,7 @@ msgid ""
 ":math:`m`-dimensional portfolio vector at the beginning of the "
 ":math:`t`-th trading period."
 msgstr ""
+"在交易期 :math:`t` 開始時，:math:`m` 維的投資組合向量。"
 
 #: ../../source/background.rst:35
 msgid ":math:`{\\mathbf{b}}_{1}`"
@@ -91,6 +97,7 @@ msgid ""
 "Initial portfolio vector, typically a uniform distribution :math:`(1/m, "
 "\\ldots, 1/m)`."
 msgstr ""
+"初始投資組合向量，通常是均勻分布的向量 :math:`(1/m, \\ldots, 1/m)`。"
 
 #: ../../source/background.rst:37
 msgid ":math:`\\mathbf{b}_{t}^{\\top} \\mathbf{x}_t`"
@@ -98,9 +105,9 @@ msgstr ""
 
 #: ../../source/background.rst:38
 msgid ""
-"Daily return of the portfolio at the end of the :math:`t`-th trading "
-"period."
+"Daily return of the portfolio at the end of the :math:`t`-th trading period."
 msgstr ""
+"交易期 :math:`t` 結束時投資組合的日回報。"
 
 #: ../../source/background.rst:39
 msgid ":math:`m`"
@@ -109,6 +116,7 @@ msgstr ""
 #: ../../source/background.rst:40
 msgid "Number of assets in the financial market."
 msgstr ""
+"金融市場上的資產數量。"
 
 #: ../../source/background.rst:41
 msgid ":math:`n`"
@@ -117,6 +125,7 @@ msgstr ""
 #: ../../source/background.rst:42
 msgid "Number of discrete trading periods."
 msgstr ""
+"離散交易期總數。"
 
 #: ../../source/background.rst:43
 msgid ":math:`S_n`"
@@ -125,6 +134,7 @@ msgstr ""
 #: ../../source/background.rst:44
 msgid "Final wealth achieved at the end of the :math:`n`-th trading period."
 msgstr ""
+"在第 :math:`n` 個交易期結束時獲得的最終財富。"
 
 #: ../../source/background.rst:45
 msgid ":math:`S_0`"
@@ -133,6 +143,7 @@ msgstr ""
 #: ../../source/background.rst:46
 msgid "Initial value of the portfolio, normally set to 1."
 msgstr ""
+"投資組合的初始價值，通常設定為 1。"
 
 #: ../../source/background.rst:47
 msgid ":math:`x_{t,i}`"
@@ -140,9 +151,9 @@ msgstr ""
 
 #: ../../source/background.rst:48
 msgid ""
-"Price relative of asset :math:`i` at the end of the :math:`t`-th trading "
-"period."
+"Price relative of asset :math:`i` at the end of the :math:`t`-th trading period."
 msgstr ""
+"在交易期 :math:`t` 結束時，資產 :math:`i` 的相對價格。"
 
 #: ../../source/background.rst:49
 msgid ":math:`\\mathbf{x}_t`"
@@ -150,9 +161,9 @@ msgstr ""
 
 #: ../../source/background.rst:50
 msgid ""
-":math:`m`-dimensional non-negative price relatives vector at the end of "
-"the :math:`t`-th trading period."
+":math:`m`-dimensional non-negative price relatives vector at the end of the :math:`t`-th trading period."
 msgstr ""
+"在交易期 :math:`t` 結束時，:math:`m` 維的非負相對價格向量。"
 
 #: ../../source/background.rst:51
 msgid ":math:`\\Delta_m`"
@@ -160,13 +171,13 @@ msgstr ""
 
 #: ../../source/background.rst:52
 msgid ""
-"Simplex constraint indicating the portfolio is fully self-financing "
-"without leverage or shorting."
+"Simplex constraint indicating the portfolio is fully self-financing without leverage or shorting."
 msgstr ""
+"單純形約束，表明投資組合是完全自融資的，不允許槓桿或做空。"
 
 #: ../../source/background.rst:56
 msgid "Problem Formulation"
-msgstr ""
+msgstr "問題定義"
 
 #: ../../source/background.rst:58
 msgid ""
@@ -182,6 +193,11 @@ msgid ""
 "price of asset :math:`i` on the :math:`(t-1)`-th trading period, i.e., "
 ":math:`x_{t,i}={C_{t,i}}/{C_{t-1,i}}`."
 msgstr ""
+"在線上投資組合選擇的背景下，我們分析了一個由 :math:`m` 種資產組成的金融市場，這些資產在由 :math:`n` 個離散交易期 (術語 "
+"\"周期\"的定義是靈活的) 組成的特定時間段內進行觀察。在第 :math:`t` 個交易期結束時，"
+"我們使用一個 :math:`m` 維的非負相對價格向量 :math:`\\mathbf{x}_t=(x_{t,1},\\ldots,x_{t,m}) \\in \\mathbb{R}_{+}^{m}` "
+"來表示 :math:`m` 個資產的表現，其中元素 :math:`x_{t,i}` 等於第 :math:`t` 個交易期資產 :math:`i` "
+"的收市價除以第 :math:`(t-1)` 個交易期資產 :math:`i` 的收市價，即 :math:`x_{t,i}={C_{t,i}}/{C_{t-1,i}}`。"
 
 #: ../../source/background.rst:67
 msgid ""
@@ -197,6 +213,12 @@ msgid ""
 "indicates the portfolio is fully self-financing without leverage or "
 "shorting."
 msgstr ""
+"在第 :math:`t` 個交易期開始之前，利用過去的歷史資訊，"
+"我們可以構建一個投資組合向量 :math:`\\mathbf{b}_t=(b_{t,1},\\ldots,b_{t,m}) \\in \\mathbb{R}^m` "
+"以在 :math:`m` 個資產中分配我們的財富。每個元素 :math:`b_{t,i}` "
+"代表在第 :math:`t` 個交易期開始時，投資於資產 :math:`i` 的財富比例。投資組合顯然需要"
+"滿足簡單約束：:math:`\\mathbf{b}_t \\in \\Delta_m`，其中其中：:math:`b_{t,i} \\ge 0` 且 "
+":math:`\\sum\\nolimits_{i=1}^{m}{{{b}_{t,i}}}=1`。 這個約束表明投資組合是完全自融資的，不允許槓桿或做空。"
 
 #: ../../source/background.rst:75
 msgid ""
@@ -206,6 +228,9 @@ msgid ""
 " the final wealth achieved at the end of the :math:`n`-th trading period "
 "is:"
 msgstr ""
+"因此，在第 :math:`t` 個交易期結束時，投資組合的每日回報定義為 :math:`\\mathbf{b}_{t}^{\\top}  "
+"\\mathbf{x}_t = \\sum\\nolimits_{i=1}^{m} b_{t,i}x_{t,i}`。据此，"
+"投資組合在第 :math:`n` 個交易期結束時實現的最終財富為："
 
 #: ../../source/background.rst:79
 msgid ""
@@ -221,6 +246,8 @@ msgid ""
 "portfolio vector is initialized to a uniform distribution, i.e., "
 ":math:`{\\mathbf{b}}_{1} = (1/m, \\ldots, 1/m)`."
 msgstr ""
+"其中，在不喪失一般性的前提下，投資組合的初始值通常設定為 1，即：:math:`{S}_{0} = 1`；同時，"
+"投資組合向量初始化為均勻分布的向量，即：:math:`{\\mathbf{b}}_{1} = (1/m, \\ldots, 1/m)`。"
 
 #: ../../source/background.rst:88
 msgid ""
@@ -228,4 +255,5 @@ msgid ""
 "wealth, which depends entirely on the portfolio vector generated by the "
 "data-driven method in each period."
 msgstr ""
-
+"顯然，這項任務的目標是最大化最終的投資組合財富，"
+"而這完全取決於數據驅動法在每個時期生成的投資組合向量。"

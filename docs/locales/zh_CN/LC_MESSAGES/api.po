@@ -305,7 +305,7 @@ msgstr "字典中的键对应于模型参数的名称，值对应于参数值的
 
 #: ../../source/api/config.rst:152
 msgid ""
-"Specifies a set of model hyper-parameters to be explored during hyper-"
+"Specifies the set of model hyper-parameters to be explored during hyper-"
 "parameters tuning."
 msgstr "指定在超参数调优期间要探索的模型超参数集。"
 
@@ -589,7 +589,7 @@ msgstr ""
 msgid ""
 "The :mod:`~finol.data_layer` module contains data layer related classes and functions."
 msgstr ""
-":mod:`~finol.data_layer` 模块包含与数据层相关的类"
+":mod:`~finol.data_layer` 模块包含与数据层相关的类和函数。"
 
 #: ../../source/api/data_layer.rst:13:<autosummary>:1
 msgid ":py:obj:`finol.data_layer.DatasetLoader <finol.data_layer.DatasetLoader>`"
@@ -6621,7 +6621,7 @@ msgstr ""
 msgid ""
 "The :mod:`~finol.model_layer` module contains model layer related classes and functions."
 msgstr ""
-":mod:`~finol.model_layer` 模块包含与模型层相关的类"
+":mod:`~finol.model_layer` 模块包含与模型层相关的类和函数。"
 
 #: ../../source/api/model_layer.rst:20:<autosummary>:1
 msgid ""
@@ -6697,3 +6697,8 @@ msgid ""
 "<finol.optimization_layer.ParametersTuner>`"
 msgstr ""
 
+msgid "Determine whether to check for updates for ``FinOL``."
+msgstr "确定是否检查 ``FinOL`` 的更新。"
+
+msgid "Determine whether to download the ``FinOL`` datasets and benchmark results from the source."
+msgstr "确定是否从源代码下载 ``FinOL`` 数据集和基准测试结果。"

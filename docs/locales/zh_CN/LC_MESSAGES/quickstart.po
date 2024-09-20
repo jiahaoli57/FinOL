@@ -34,7 +34,7 @@ msgid ""
 "barriers for the research community, ``FinOL`` provides a complete data-"
 "training-testing suite with just three lines of command."
 msgstr ""
-"为了降低研究人员的使用门槛，``FinOL`` 提供了仅需 3 行命令就能完成数据加载、模型训练和测试的一站式解决方案。"
+"为了降低研究人员的使用门槛，``FinOL`` 提供了一站式解决方案，仅需 3 行命令就能完成数据加载、模型训练和测试。"
 
 #: ../../source/quickstart.rst:10
 msgid "Command Line Usage"
@@ -87,10 +87,10 @@ msgstr "侧边栏"
 msgid "Located on the left, it contains various buttons for actions such as customizing datasets, models, "
 "and criteria. It also includes options to load datasets, train models, evaluate models, quit the application, "
 "and restart it."
-msgstr "该区域位于左侧，包含用于自定义数据集、模型和评判标准等操作的各种按钮。它还包括加载数据集、训练模型、评估模型、退出图形界面和重新图形界面的选项。"
+msgstr "该区域位于左侧，包含用于自定义数据集、模型和评判标准等操作的各种按钮。它还包括加载数据集、训练模型、评估模型、退出图形界面和重启图形界面的选项。"
 
 msgid "The Sidebar of FinOL GUI"
-msgstr "FinOL 图形界面的的侧边栏"
+msgstr "FinOL 图形界面的侧边栏"
 
 msgid "Tab View"
 msgstr "选项卡视图"

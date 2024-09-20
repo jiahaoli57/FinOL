@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FinOL 0.1.29\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 17:52+0800\n"
+"POT-Creation-Date: 2024-08-13 01:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_TW\n"
@@ -21,11 +21,10 @@ msgstr ""
 
 #: ../../source/license.rst:2
 msgid "License"
-msgstr ""
+msgstr "許可證"
 
 #: ../../source/license.rst:4
 msgid ""
 "Released under the `MIT License "
 "<https://github.com/jiahaoli57/finol/blob/main/LICENSE>`__."
-msgstr ""
-
+msgstr "根據 `MIT 許可證 <https://github.com/jiahaoli57/finol/blob/main/LICENSE>`__ 發佈。"

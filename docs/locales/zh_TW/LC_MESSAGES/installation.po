@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FinOL 0.1.29\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 17:52+0800\n"
+"POT-Creation-Date: 2024-08-13 01:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_TW\n"
@@ -21,17 +21,111 @@ msgstr ""
 
 #: ../../source/installation.rst:2
 msgid "Installation"
-msgstr ""
+msgstr "安裝"
 
 #: ../../source/installation.rst:4
 msgid ""
 "``FinOL`` is available on `PyPI <https://pypi.org/project/finol>`__, we "
 "recommend to install ``FinOL`` via pip:"
 msgstr ""
+"``FinOL`` 可在在 `PyPI <https://pypi.org/project/finol>`__ 上獲取，我們建議用戶透過 pip 安裝 ``FinOL``"
 
 #: ../../source/installation.rst:11
 msgid ""
 "You can also install the development version of ``FinOL`` from master "
 "branch of Git repository:"
 msgstr ""
+"除了可以透過 PyPI 安裝正式發佈的 ``FinOL`` 版本，用戶也可以從 Git 倉庫的 master 分支安裝 ``FinOL`` 的開發版本。"
 
+#: ../../source/installation.rst
+msgid ""
+"Install ta-lib dependency"
+msgstr ""
+"安裝 ta-lib 依賴項"
+
+#: ../../source/installation.rst
+msgid ""
+"``FinOL`` requires the ``ta-lib`` library as one of its dependencies. ``ta-lib`` is an open-source technical indicator "
+"library for financial applications, and unlike other dependencies, ``ta-lib`` cannot be installed automatically via ``pip install finol``. "
+"Therefore, you will need to manually install ``ta-lib``."
+msgstr ""
+"``FinOL`` 需要 ``ta-lib`` 庫作為其依賴項之一。``ta-lib`` 是一個用於金融應用的開源技術指標庫，與其他依賴項不同，"
+"``ta-lib`` 無法透過 ``pip install finol`` 自動安裝。因此，您需要手動安裝 ``ta-lib``。"
+
+#: ../../source/installation.rst
+msgid ""
+"Follow the steps below based on your operating system to install ``ta-lib``:"
+msgstr ""
+"根據您的操作系統，請按照以下步驟安裝 ``ta-lib``："
+
+#: ../../source/installation.rst
+msgid ""
+"For users using Anaconda, it is highly recommended to prioritize installing ``ta-lib`` using conda, as conda installation is very convenient."
+msgstr ""
+"對於使用 Anaconda 的用戶，強烈建議優先使用 conda 安裝 ``ta-lib``，因為 conda 安裝非常便捷。"
+
+#: ../../source/installation.rst
+msgid ""
+"Try installing ``ta-lib`` via pip first"
+msgstr ""
+"請首先嘗試透過 pip 安裝 ``ta-lib``"
+
+#: ../../source/installation.rst
+msgid ""
+"If an error occurs, then install package corresponding to your Python manually from the "
+"`talib whl collection website <https://sourceforge.net/projects/talib-whl/files/ta_lib_0.4.28/>`__"
+msgstr ""
+"如果出現錯誤，請手動安裝與您的 Python 相對應的包，您可以从 `talib whl 網站 <https://sourceforge.net/projects/talib-whl/files/ta_lib_0.4.28/>`__ 下載相對應的包。"
+
+#: ../../source/installation.rst
+msgid ""
+"For example, with Python 3.10 and the whl file downloaded to the local path C:\\\Users\\\John\\\Downloads. "
+"After downloading the whl file, all you need to do is run the following command:"
+msgstr ""
+"以 Python 3.10，whl 文件下載到本地路徑 C:\\\Users\\\John\\\Downloads 為例。"
+"在下載 whl 文件後，您只需運行以下命令："
+
+#: ../../source/installation.rst
+msgid ""
+"To verify if the installation is successful, run:"
+msgstr ""
+"要驗證安裝是否成功，請運行："
+
+#: ../../source/installation.rst
+msgid ""
+"If the installation is successful, it should output the current version of ``ta-lib`` without any errors."
+msgstr ""
+"如果安裝成功，應該能夠輸出當前版本的 ``ta-lib``，而且沒有任何錯誤。"
+
+#: ../../source/installation.rst
+msgid ""
+"Will be completed later."
+msgstr ""
+"即將補充。"
+
+#: ../../source/installation.rst
+msgid ""
+"If an error occurs, manually compile and install ``ta-lib`` from source:"
+msgstr ""
+"如果出現錯誤，手動編譯並安裝 ``ta-lib``："
+
+#: ../../source/installation.rst
+msgid ""
+"If you are using Anaconda, installation becomes very simple at this point. "
+"With just one line of command, you can complete the installation on 64-bit Windows, Linux and Mac OSX systems, "
+"including Macs with Apple M1/M2 chips using the Arm architecture:"
+msgstr ""
+"如果您使用的是 Anaconda, 那麼安裝就變得非常簡單了。只需一行命令，"
+"您就可以在 64 位 Windows、Linux 和 macOS（包括 Arm 架構的 M1/M2 芯片的 Mac）系統上完成安裝："
+
+#: ../../source/installation.rst
+msgid ""
+"Python Version"
+msgstr ""
+"Python 版本"
+
+#: ../../source/installation.rst
+msgid ""
+"ta-lib WHL File"
+msgstr ""
+"ta-lib WHL 文件"

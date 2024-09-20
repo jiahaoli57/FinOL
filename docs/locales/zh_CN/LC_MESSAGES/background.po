@@ -30,7 +30,7 @@ msgid ""
 "increased computing power and data, data-driven OLPS methods that "
 "directly learn from data have gained attention."
 msgstr ""
-"早期的在线投资组合选择 (OLPS) 方法依赖于对市场动态和数学优化的先验假设。随着计算能力和数据的增加，直接从数据中学习的数据驱动型 OLPS 方法引起了人们的关注。"
+"早期的在线投资组合选择（OLPS）方法依赖于对市场动态和数学优化的先验假设。随着计算能力和数据的增加，直接从数据中学习的数据驱动型 OLPS 方法引起了人们的关注。"
 
 #: ../../source/background.rst:9
 msgid ""

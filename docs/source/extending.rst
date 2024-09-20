@@ -2,7 +2,7 @@ Extending FinOL
 ===============
 
 ``FinOL`` is designed with extensibility in mind, allowing users to integrate their own models and datasets for benchmarking
-purposes. This section provides a step-by-step guide on how to add new methods and datasets to the ``FinOL`` framework.
+purposes. This section provides a step-by-step guide on how to extend the ``FinOL`` framework.
 
 .. contents::
     :local:

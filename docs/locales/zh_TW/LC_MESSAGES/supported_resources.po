@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FinOL 0.1.29\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 17:52+0800\n"
+"POT-Creation-Date: 2024-08-13 01:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_TW\n"
@@ -20,38 +20,43 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 
 #: ../../source/supported_resources/index.rst:2
-msgid "FinOL Supports"
-msgstr ""
+msgid "FinOL Supports ..."
+msgstr "FinOL 包含了 ..."
 
 #: ../../source/supported_resources/supported_baselines.rst:4
-msgid "FinOL Baselines"
-msgstr ""
+msgid "|:crossed_swords:| Extensive OLPS Baselines"
+msgstr "|:crossed_swords:| 广泛的 OLPS 基线"
 
 #: ../../source/supported_resources/supported_baselines.rst:9
 #: ../../source/supported_resources/supported_datasets.rst:9
 #: ../../source/supported_resources/supported_metrics.rst:9
 msgid "Name"
-msgstr ""
+msgstr "名称"
 
 #: ../../source/supported_resources/supported_baselines.rst:9
 #: ../../source/supported_resources/supported_metrics.rst:9
 msgid "Category"
-msgstr ""
+msgstr "分类"
 
 #: ../../source/supported_resources/supported_baselines.rst:9
 msgid "Source"
-msgstr ""
+msgstr "来源"
 
 #: ../../source/supported_resources/supported_baselines.rst:9
 msgid "Journal/Conference"
-msgstr ""
+msgstr "期刊/会议"
 
 #: ../../source/supported_resources/supported_baselines.rst:12
 #: ../../source/supported_resources/supported_baselines.rst:279
 #: ../../source/supported_resources/supported_baselines.rst:292
-#: ../../source/supported_resources/supported_datasets.rst:9
+msgctxt "supported_baselines"
 msgid "Market"
 msgstr ""
+
+#: ../../source/supported_resources/supported_datasets.rst:9
+msgctxt "supported_datasets"
+msgid "Market"
+msgstr "市场"
 
 #: ../../source/supported_resources/supported_baselines.rst:12
 #: ../../source/supported_resources/supported_baselines.rst:16
@@ -520,32 +525,35 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_baselines.rst:181
 msgid "Benchmark Results"
-msgstr ""
+msgstr "基准测试结果"
 
 #: ../../source/supported_resources/supported_baselines.rst:184
 msgid ""
 "We will continue to update the following leaderboards. If you have "
 "proposed new (classic or data-driven) OLPS models , you can send us your "
-"paper/code link (:ref:`contact_us`) or raise a pull request. We will add "
+"paper/code link via :ref:`contact_us` or raise a pull request. We will add "
 "them to this repository and update the leaderboard as soon as possible."
 msgstr ""
+"我们将持续更新以下排行榜。如果您提出了新的（经典或数据驱动）OLPS 模型，"
+"可以通过 :ref:`contact_us` 向我们发送论文/代码链接或提出拉取请求。我们将尽快将它们添加到这个仓库并更新排行榜。"
 
 #: ../../source/supported_resources/supported_baselines.rst:189
 #: ../../source/supported_resources/supported_metrics.rst:12
 msgid "Cumulative Wealth"
-msgstr ""
+msgstr "累积财富"
 
 #: ../../source/supported_resources/supported_baselines.rst:191
 msgid ""
 "As of July 2024, the top five baselines for profitability (quantified by "
 "the size of CW metric) are:"
 msgstr ""
+"截至2024年7月，在盈利能力（通过 CW 指标衡量）方面，排名前五的基线为："
 
 #: ../../source/supported_resources/supported_baselines.rst:196
 #: ../../source/supported_resources/supported_baselines.rst:265
 #: ../../source/supported_resources/supported_baselines.rst:335
 msgid "Ranking"
-msgstr ""
+msgstr "排名"
 
 #: ../../source/supported_resources/supported_baselines.rst:197
 #: ../../source/supported_resources/supported_baselines.rst:266
@@ -634,48 +642,50 @@ msgstr ""
 #: ../../source/supported_resources/supported_baselines.rst:258
 #: ../../source/supported_resources/supported_metrics.rst:25
 msgid "Maximum DrawDown"
-msgstr ""
+msgstr "最大回撤"
 
 #: ../../source/supported_resources/supported_baselines.rst:260
 msgid ""
 "As of July 2024, the top five baselines for risk resilience (quantified "
 "by the size of MDD metric) are:"
 msgstr ""
+"截至2024年7月，在风险抵御能力（通过 MDD 指标衡量）方面，排名前五的基线为："
 
 #: ../../source/supported_resources/supported_baselines.rst:327
 #: ../../source/supported_resources/supported_metrics.rst:29
 msgid "Average Turnover"
-msgstr ""
+msgstr "平均换手率"
 
 #: ../../source/supported_resources/supported_baselines.rst:329
 msgid ""
 "As of July 2024, the top five baselines for practicality (quantified by "
 "the size of ATO metric) are:"
 msgstr ""
+"截至2024年7月，在实用性（通过 ATO 指标衡量）方面，排名前五的基线为："
 
 #: ../../source/supported_resources/supported_datasets.rst:4
-msgid "FinOL Datasets"
-msgstr ""
+msgid "|:earth_africa:| Global Financial Asset Datasets"
+msgstr "|:earth_africa:| 来自全球的金融资产数据集"
 
 #: ../../source/supported_resources/supported_datasets.rst:9
 msgid "Country/Region"
-msgstr ""
+msgstr "国家/地区"
 
 #: ../../source/supported_resources/supported_datasets.rst:9
 msgid "Data Frequency"
-msgstr ""
+msgstr "数据频率"
 
 #: ../../source/supported_resources/supported_datasets.rst:9
 msgid "# of Assets"
-msgstr ""
+msgstr "资产数量"
 
 #: ../../source/supported_resources/supported_datasets.rst:9
 msgid "Date Range"
-msgstr ""
+msgstr "时间跨度"
 
 #: ../../source/supported_resources/supported_datasets.rst:9
 msgid "# of Periods"
-msgstr ""
+msgstr "交易期数"
 
 #: ../../source/supported_resources/supported_datasets.rst:12
 msgid ""
@@ -691,7 +701,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_datasets.rst:43
 #: ../../source/supported_resources/supported_datasets.rst:48
 msgid "Stock"
-msgstr ""
+msgstr "股票"
 
 #: ../../source/supported_resources/supported_datasets.rst:12
 #: ../../source/supported_resources/supported_datasets.rst:18
@@ -699,7 +709,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_datasets.rst:30
 #: ../../source/supported_resources/supported_datasets.rst:53
 msgid "United States"
-msgstr ""
+msgstr "美国"
 
 #: ../../source/supported_resources/supported_datasets.rst:12
 #: ../../source/supported_resources/supported_datasets.rst:18
@@ -708,7 +718,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_datasets.rst:36
 #: ../../source/supported_resources/supported_datasets.rst:59
 msgid "Daily"
-msgstr ""
+msgstr "日频"
 
 #: ../../source/supported_resources/supported_datasets.rst:12
 msgid "26"
@@ -782,7 +792,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_datasets.rst:36
 msgid "Canada"
-msgstr ""
+msgstr "加拿大"
 
 #: ../../source/supported_resources/supported_datasets.rst:36
 msgid "48"
@@ -802,13 +812,13 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_datasets.rst:43
 msgid "China"
-msgstr ""
+msgstr "中国"
 
 #: ../../source/supported_resources/supported_datasets.rst:43
 #: ../../source/supported_resources/supported_datasets.rst:48
 #: ../../source/supported_resources/supported_datasets.rst:53
 msgid "Weekly"
-msgstr ""
+msgstr "周频"
 
 #: ../../source/supported_resources/supported_datasets.rst:43
 msgid "30"
@@ -832,7 +842,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_datasets.rst:48
 msgid "Hong Kong, China"
-msgstr ""
+msgstr "中国香港"
 
 #: ../../source/supported_resources/supported_datasets.rst:48
 msgid "53"
@@ -846,7 +856,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_datasets.rst:53
 msgid "Futures"
-msgstr ""
+msgstr "期货"
 
 #: ../../source/supported_resources/supported_datasets.rst:53
 msgid "25"
@@ -860,11 +870,11 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_datasets.rst:59
 msgid "Cryptocurrency"
-msgstr ""
+msgstr "加密货币"
 
 #: ../../source/supported_resources/supported_datasets.rst:59
 msgid "World"
-msgstr ""
+msgstr "全球"
 
 #: ../../source/supported_resources/supported_datasets.rst:59
 msgid "43"
@@ -880,7 +890,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_datasets.rst:68
 msgid "Components of Datasets"
-msgstr ""
+msgstr "数据集组成成分"
 
 #: ../../source/supported_resources/supported_datasets.rst:70
 msgid ""
@@ -888,46 +898,47 @@ msgid ""
 "included in ``FinOL``. The assets cover major global equity, futures, and"
 " other financial markets."
 msgstr ""
+"本节列出了 ``FinOL`` 中包含的每个数据集的完整组成成分列表。这些资产涵盖全球主要股票、期货和其他金融市场。"
 
 #: ../../source/supported_resources/supported_datasets.rst:74
 msgid "Components of NYSE(O) Dataset"
-msgstr ""
+msgstr "NYSE(O) 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:81
 msgid "Components of NYSE(N) Dataset"
-msgstr ""
+msgstr "NYSE(N) 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:88
 msgid "Components of DJIA Dataset"
-msgstr ""
+msgstr "DJIA 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:95
 msgid "Components of SP500 Dataset"
-msgstr ""
+msgstr "SP500 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:102
 msgid "Components of TSE Dataset"
-msgstr ""
+msgstr "TSE 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:109
 msgid "Components of SSE Dataset"
-msgstr ""
+msgstr "SSE 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:116
 msgid "Components of HSI Dataset"
-msgstr ""
+msgstr "HSI 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:123
 msgid "Components of CMEG Dataset"
-msgstr ""
+msgstr "CMEG 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_datasets.rst:130
 msgid "Components of CRYPTO Dataset"
-msgstr ""
+msgstr "CRYPTO 数据集的组成部分"
 
 #: ../../source/supported_resources/supported_features.rst:4
-msgid "FinOL Features"
-msgstr ""
+msgid "|:chart_with_upwards_trend:| Rich High-Dimensional Data Feature Input"
+msgstr "|:chart_with_upwards_trend:| 丰富的高维数据特征输入"
 
 #: ../../source/supported_resources/supported_features.rst:6
 msgid ""
@@ -939,10 +950,13 @@ msgid ""
 "please refer to "
 ":func:`~finol.data_layer.DatasetLoader.feature_engineering`."
 msgstr ""
+"本节提供 ``FinOL`` 中关键数据特征的详细定义。这些特征有助于从多个角度描述和分析财务时间序列。"
+"下面的表格将这些特征分为 8 大类，并列出了它们的名称、函数调用和描述。"
+"详细的计算过程，请参考 :func:`~finol.data_layer.DatasetLoader.feature_engineering`。"
 
 #: ../../source/supported_resources/supported_features.rst:19
 msgid "OHLCV Features"
-msgstr ""
+msgstr "基础特征"
 
 #: ../../source/supported_resources/supported_features.rst:24
 #: ../../source/supported_resources/supported_features.rst:52
@@ -953,7 +967,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_features.rst:338
 #: ../../source/supported_resources/supported_features.rst:360
 msgid "Feature Name"
-msgstr ""
+msgstr "特征名称"
 
 #: ../../source/supported_resources/supported_features.rst:25
 #: ../../source/supported_resources/supported_features.rst:53
@@ -964,7 +978,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_features.rst:339
 #: ../../source/supported_resources/supported_features.rst:361
 msgid "Function Call"
-msgstr ""
+msgstr "函数调用"
 
 #: ../../source/supported_resources/supported_features.rst:26
 #: ../../source/supported_resources/supported_features.rst:54
@@ -975,7 +989,7 @@ msgstr ""
 #: ../../source/supported_resources/supported_features.rst:340
 #: ../../source/supported_resources/supported_features.rst:362
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../source/supported_resources/supported_features.rst:27
 msgid "OPEN"
@@ -1039,7 +1053,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_features.rst:46
 msgid "Overlap Features"
-msgstr ""
+msgstr "重叠特征"
 
 #: ../../source/supported_resources/supported_features.rst:55
 msgid "BBANDS_UPPER"
@@ -1283,7 +1297,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_features.rst:119
 msgid "Momentum Features"
-msgstr ""
+msgstr "动量特征"
 
 #: ../../source/supported_resources/supported_features.rst:127
 msgid "ADX"
@@ -1767,7 +1781,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_features.rst:251
 msgid "Volume Features"
-msgstr ""
+msgstr "量价特征"
 
 #: ../../source/supported_resources/supported_features.rst:260
 msgid "AD"
@@ -1807,7 +1821,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_features.rst:273
 msgid "Cycle Features"
-msgstr ""
+msgstr "周期特征"
 
 #: ../../source/supported_resources/supported_features.rst:282
 msgid "HT_DCPERIOD"
@@ -1895,7 +1909,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_features.rst:307
 msgid "Price Features"
-msgstr ""
+msgstr "价格特征"
 
 #: ../../source/supported_resources/supported_features.rst:316
 msgid "AVGPRICE"
@@ -1947,7 +1961,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_features.rst:332
 msgid "Volatility Features"
-msgstr ""
+msgstr "波动特征"
 
 #: ../../source/supported_resources/supported_features.rst:341
 msgid "ATR"
@@ -1987,7 +2001,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_features.rst:354
 msgid "Pattern Features"
-msgstr ""
+msgstr "模式特征"
 
 #: ../../source/supported_resources/supported_features.rst:363
 msgid "CDL2CROWS"
@@ -2722,12 +2736,12 @@ msgid "Upside/Downside Gap Three Methods"
 msgstr ""
 
 #: ../../source/supported_resources/supported_metrics.rst:4
-msgid "FinOL Metrics"
-msgstr ""
+msgid "|:straight_ruler:| Comprehensive Comparison Metrics"
+msgstr "|:straight_ruler:| 全面的对比指标"
 
 #: ../../source/supported_resources/supported_metrics.rst:9
 msgid "Abbreviation"
-msgstr ""
+msgstr "缩写"
 
 #: ../../source/supported_resources/supported_metrics.rst:12
 msgid "CW"
@@ -2736,12 +2750,12 @@ msgstr ""
 #: ../../source/supported_resources/supported_metrics.rst:12
 #: ../../source/supported_resources/supported_metrics.rst:15
 #: ../../source/supported_resources/supported_metrics.rst:18
-msgid "Profit Metric"
-msgstr ""
+msgid "*Profit Metric*"
+msgstr "*收益指标*"
 
 #: ../../source/supported_resources/supported_metrics.rst:15
 msgid "Annualized Percentage Yield"
-msgstr ""
+msgstr "年化收益率"
 
 #: ../../source/supported_resources/supported_metrics.rst:15
 msgid "APY"
@@ -2749,7 +2763,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_metrics.rst:18
 msgid "Sharpe Ratio"
-msgstr ""
+msgstr "夏普比率"
 
 #: ../../source/supported_resources/supported_metrics.rst:18
 msgid "SR"
@@ -2757,7 +2771,7 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_metrics.rst:23
 msgid "Volatility Risk"
-msgstr ""
+msgstr "波动率风险"
 
 #: ../../source/supported_resources/supported_metrics.rst:23
 msgid "VR"
@@ -2765,8 +2779,8 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_metrics.rst:23
 #: ../../source/supported_resources/supported_metrics.rst:25
-msgid "Risk Metric"
-msgstr ""
+msgid "*Risk Metric*"
+msgstr "*风险指标*"
 
 #: ../../source/supported_resources/supported_metrics.rst:25
 msgid "MDD"
@@ -2779,12 +2793,12 @@ msgstr ""
 #: ../../source/supported_resources/supported_metrics.rst:29
 #: ../../source/supported_resources/supported_metrics.rst:32
 #: ../../source/supported_resources/supported_metrics.rst:35
-msgid "Practical Metric"
-msgstr ""
+msgid "*Practical Metric*"
+msgstr "*实用性指标*"
 
 #: ../../source/supported_resources/supported_metrics.rst:32
 msgid "Transaction Costs-Adjusted Cumulative Wealth"
-msgstr ""
+msgstr "交易费用调整累积财富"
 
 #: ../../source/supported_resources/supported_metrics.rst:32
 msgid "TCW"
@@ -2792,22 +2806,23 @@ msgstr ""
 
 #: ../../source/supported_resources/supported_metrics.rst:35
 msgid "Running Time"
-msgstr ""
+msgstr "运行时间"
 
 #: ../../source/supported_resources/supported_metrics.rst:35
 msgid "RT"
 msgstr ""
 
 #: ../../source/supported_resources/supported_visualization.rst:4
-msgid "FinOL Visualization"
-msgstr ""
+msgid "|:art:| Multiple Visualization Tools"
+msgstr "|:art:| 多个可视化工具"
 
 #: ../../source/supported_resources/supported_visualization.rst:6
 msgid ""
-"The ``FinOL`` provides a suite of visualization tools to facilitate a "
-"comprehensive evaluation of data-driven OLPS research. Here are some "
+"The ``FinOL`` provides a suite of visualization tools to facilitate a"
+" comprehensive evaluation of data-driven OLPS research. Here are some "
 "examples:"
 msgstr ""
+"``FinOL`` 提供了一套可视化工具，以促进对数据驱动的 OLPS 研究进行全面评估。以下是一些例子："
 
 #: ../../source/supported_resources/supported_visualization.rst:10
 msgid "Dynamic Training/Validation Loss Visualization"
@@ -2829,3 +2844,33 @@ msgstr ""
 msgid "Comprehensive Radar Chart"
 msgstr ""
 
+################################################################
+#: ../../source/supported_resources/supported_metrics.rst:12
+msgid "Profitability"
+msgstr "盈利能力"
+
+#: ../../source/supported_resources/supported_metrics.rst:12
+msgid "Risk Resilience"
+msgstr "风险抵御能力"
+
+#: ../../source/supported_resources/supported_metrics.rst:12
+msgid "Practicality"
+msgstr "实用性"
+
+msgid "Key Features"
+msgstr "关键特征"
+
+msgid "Global datasets"
+msgstr "全球数据集"
+
+msgid "Rich data input"
+msgstr "丰富的数据输入"
+
+msgid "Extensive baselines"
+msgstr "广泛的基线"
+
+msgid "Comprehensive metrics"
+msgstr "综合的指标"
+
+msgid "Multiple visual tools"
+msgstr "多种可视化工具"

@@ -127,7 +127,7 @@ msgstr "自 2024年6月6日 起支持"
 msgid ""
 "New feature! ``FinOL`` now supports the `Economic Distillation <https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ feature"
 msgstr ""
-"全新功能！``FinOL`` 现已支持 `经济蒸馏 <https://pa pers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ 功能"
+"全新功能！``FinOL`` 现已支持 `经济蒸馏 <https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486>`__ 功能"
 
 #: ../../source/index.rst:63
 msgid "Supported since 15 May 2024"
@@ -212,7 +212,7 @@ msgid ""
 "``FinOL`` not only provides a well-structured library, offering extensively encapsulated functions, "
 "but also develops extensive benchmark results for fair comparisons."
 msgstr ""
-"``FinOL`` 是一个全面的软件包和基准测试平台，旨在推进数据驱动的OLPS研究。"
+"``FinOL`` 是一个全面的软件包和基准测试平台，旨在推进数据驱动的 OLPS 研究。"
 "``FinOL`` 不仅提供了一个结构良好的库，提供了广泛封装的函数，"
 "而且还为公平比较提供了广泛的基准结果。"
 

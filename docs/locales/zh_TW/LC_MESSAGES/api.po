@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FinOL 0.1.29\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 17:52+0800\n"
+"POT-Creation-Date: 2024-08-13 01:01+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_TW\n"
@@ -31,58 +31,68 @@ msgstr ""
 msgid "``DEVICE``"
 msgstr ""
 
-#: ../../source/api/config.rst
+#: ../../source/api/config.rst:0
 msgid "Type"
-msgstr ""
+msgstr "類型"
 
-#: ../../source/api/config.rst:16 ../../source/api/config.rst:41
-#: ../../source/api/config.rst:118 ../../source/api/config.rst:136
-#: ../../source/api/config.rst:174 ../../source/api/config.rst:188
-#: ../../source/api/config.rst:216 ../../source/api/config.rst:223
-#: ../../source/api/config.rst:230 ../../source/api/config.rst:240
-#: ../../source/api/config.rst:275 ../../source/api/config.rst:282
+#: ../../source/api/config.rst:16
+#: ../../source/api/config.rst:41
+#: ../../source/api/config.rst:118
+#: ../../source/api/config.rst:136
+#: ../../source/api/config.rst:174
+#: ../../source/api/config.rst:188
+#: ../../source/api/config.rst:216
+#: ../../source/api/config.rst:223
+#: ../../source/api/config.rst:230
+#: ../../source/api/config.rst:240
+#: ../../source/api/config.rst:275
+#: ../../source/api/config.rst:282
 msgid "str"
-msgstr ""
+msgstr "字符串類型"
 
-#: ../../source/api/config.rst
+#: ../../source/api/config.rst:0
 msgid "Options"
-msgstr ""
+msgstr "選項"
 
 #: ../../source/api/config.rst:17
 msgid "``auto``, ``cuda``, ``cpu``."
 msgstr ""
 
-#: ../../source/api/config.rst finol.model_layer.LSRE_CAAN.LSRE_CAAN:25 of
+#: ../../source/api/config.rst:0
+#: ../../../finol/model_layer/LSRE_CAAN.py:docstring of finol.model_layer.LSRE_CAAN.LSRE_CAAN:25
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../source/api/config.rst:18
 msgid "Specifies the device to be used for computation."
-msgstr ""
+msgstr "指定用於計算的裝置。"
 
 #: ../../source/api/config.rst:21
 msgid "``MANUAL_SEED``"
 msgstr ""
 
-#: ../../source/api/config.rst:23 ../../source/api/config.rst:111
-#: ../../source/api/config.rst:125 ../../source/api/config.rst:160
-#: ../../source/api/config.rst:167 ../../source/api/config.rst:209
+#: ../../source/api/config.rst:23
+#: ../../source/api/config.rst:111
+#: ../../source/api/config.rst:125
+#: ../../source/api/config.rst:160
+#: ../../source/api/config.rst:167
+#: ../../source/api/config.rst:209
 msgid "int"
-msgstr ""
+msgstr "整數類型"
 
 #: ../../source/api/config.rst:24
 msgid "Any non-negative integer."
-msgstr ""
+msgstr "任何非負整數。"
 
 #: ../../source/api/config.rst:25
 msgid ""
 "Sets the seed for random number generation to ensure reproducibility of "
 "results."
-msgstr ""
+msgstr "設定隨機數生成的種子，確保結果可重現。"
 
 #: ../../source/api/config.rst:28
 msgid "Data Layer Configuration"
-msgstr ""
+msgstr "數據層配置"
 
 #: ../../source/api/config.rst:32
 msgid "``LOAD_LOCAL_DATALOADER``"
@@ -96,7 +106,7 @@ msgstr ""
 #: ../../source/api/config.rst:202 ../../source/api/config.rst:254
 #: ../../source/api/config.rst:261
 msgid "bool"
-msgstr ""
+msgstr "布爾類型"
 
 #: ../../source/api/config.rst:35 ../../source/api/config.rst:49
 #: ../../source/api/config.rst:56 ../../source/api/config.rst:63
@@ -109,7 +119,7 @@ msgstr ""
 
 #: ../../source/api/config.rst:36
 msgid "Determines whether to load the dataloader from the local data source."
-msgstr ""
+msgstr "確定是否從本地數據源加載數據加載器。"
 
 #: ../../source/api/config.rst:39
 msgid "``DATASET_NAME``"
@@ -123,7 +133,7 @@ msgstr ""
 
 #: ../../source/api/config.rst:43
 msgid "Specifies the dataset to use (:ref:`supported_datasets`)."
-msgstr ""
+msgstr "指定要使用的數據集（參考：:ref:`supported_datasets`）。"
 
 #: ../../source/api/config.rst:46
 msgid "``INCLUDE_OHLCV_FEATURES``"
@@ -131,7 +141,7 @@ msgstr ""
 
 #: ../../source/api/config.rst:50
 msgid "Determines whether to include the :ref:`OHLCV_features` in the input data."
-msgstr ""
+msgstr "確定是否在輸入數據中包含 :ref:`OHLCV_features`。"
 
 #: ../../source/api/config.rst:53
 msgid "``INCLUDE_OVERLAP_FEATURES``"
@@ -141,7 +151,7 @@ msgstr ""
 msgid ""
 "Determines whether to include the :ref:`overlap_features` in the input "
 "data."
-msgstr ""
+msgstr "確定是否在輸入數據中包含 :ref:`overlap_features`。"
 
 #: ../../source/api/config.rst:60
 msgid "``INCLUDE_MOMENTUM_FEATURES``"
@@ -151,7 +161,7 @@ msgstr ""
 msgid ""
 "Determines whether to include the :ref:`momentum_features` in the input "
 "data."
-msgstr ""
+msgstr "確定是否在輸入數據中包含 :ref:`momentum_features`。"
 
 #: ../../source/api/config.rst:67
 msgid "``INCLUDE_VOLUME_FEATURES``"
@@ -161,7 +171,7 @@ msgstr ""
 msgid ""
 "Determines whether to include the :ref:`volume_features` in the input "
 "data."
-msgstr ""
+msgstr "確定是否在輸入數據中包含 :ref:`volume_features`。"
 
 #: ../../source/api/config.rst:74
 msgid "``INCLUDE_CYCLE_FEATURES``"
@@ -169,7 +179,7 @@ msgstr ""
 
 #: ../../source/api/config.rst:78
 msgid "Determines whether to include the :ref:`cycle_features` in the input data."
-msgstr ""
+msgstr "確定是否在輸入數據中包含 :ref:`cycle_features`。"
 
 #: ../../source/api/config.rst:81
 msgid "``INCLUDE_PRICE_FEATURES``"
@@ -177,7 +187,7 @@ msgstr ""
 
 #: ../../source/api/config.rst:85
 msgid "Determines whether to include the :ref:`price_features` in the input data."
-msgstr ""
+msgstr "確定是否在輸入數據中包含 :ref:`price_features`。"
 
 #: ../../source/api/config.rst:88
 msgid "``INCLUDE_VOLATILITY_FEATURES``"
@@ -187,7 +197,7 @@ msgstr ""
 msgid ""
 "Determines whether to include the :ref:`volatility_features` in the input"
 " data."
-msgstr ""
+msgstr "確定是否在輸入數據中包含 :ref:`volatility_features`。"
 
 #: ../../source/api/config.rst:95
 msgid "``INCLUDE_PATTERN_FEATURES``"
@@ -197,7 +207,7 @@ msgstr ""
 msgid ""
 "Determines whether to include the :ref:`pattern_features` in the input "
 "data."
-msgstr ""
+msgstr "確定是否在輸入數據中包含 :ref:`pattern_features`。"
 
 #: ../../source/api/config.rst:102
 msgid "``INCLUDE_WINDOW_DATA``"
@@ -205,7 +215,7 @@ msgstr ""
 
 #: ../../source/api/config.rst:106
 msgid "Determines whether to include the look-back window data in the input data."
-msgstr ""
+msgstr "確定是否在輸入數據中包含回溯窗口數據。"
 
 #: ../../source/api/config.rst:109
 msgid "``WINDOW_SIZE``"
@@ -215,11 +225,11 @@ msgstr ""
 #: ../../source/api/config.rst:161 ../../source/api/config.rst:168
 #: ../../source/api/config.rst:210
 msgid "Any positive integer."
-msgstr ""
+msgstr "任何正整數。"
 
 #: ../../source/api/config.rst:113
 msgid "Specifies the window size use for containing look-back window data."
-msgstr ""
+msgstr "指定用於包含回溯窗口數據的窗口大小。"
 
 #: ../../source/api/config.rst:116
 msgid "``SCALER``"
@@ -231,10 +241,11 @@ msgid ""
 "``RobustScaler``, ``WindowStandardScaler``, ``WindowMinMaxScaler``, "
 "``WindowMaxAbsScaler``, ``WindowRobustScaler``."
 msgstr ""
+""
 
 #: ../../source/api/config.rst:120
 msgid "Specifies the type of data scaling method to apply to the input data."
-msgstr ""
+msgstr "指定要應用於輸入數據的數據縮放方法類型。"
 
 #: ../../source/api/config.rst:123
 msgid "``BATCH_SIZE``"
@@ -242,11 +253,11 @@ msgstr ""
 
 #: ../../source/api/config.rst:127
 msgid "Specifies the batch size to use during model training and validation."
-msgstr ""
+msgstr "指定在模型訓練和驗證期間使用的批次大小。"
 
 #: ../../source/api/config.rst:131
 msgid "Model Layer Configuration"
-msgstr ""
+msgstr "模型層配置"
 
 #: ../../source/api/config.rst:134
 msgid "``MODEL_NAME``"
@@ -257,12 +268,14 @@ msgid ""
 "``CNN``, ``DNN``, ``RNN``, ``LSTM``, ``CNN``, ``Transformer``, ``LSRE-"
 "CAAN``, ``AlphaPortfolio``."
 msgstr ""
+"``CNN``, ``DNN``, ``RNN``, ``LSTM``, ``CNN``, ``變換器``, ``LSRE-"
+"CAAN``, ``AlphaPortfolio``."
 
 #: ../../source/api/config.rst:138
 msgid ""
-"Specifies the type of model to be used. Each model type corresponds to a "
+"Specifies the type of model to be used. Each model corresponds to a "
 "different neural network architecture."
-msgstr ""
+msgstr "指定要使用的模型類型。每種模型都對應於不同的神經網絡架構。"
 
 #: ../../source/api/config.rst:141
 msgid "``MODEL_PARAMS``"
@@ -270,17 +283,17 @@ msgstr ""
 
 #: ../../source/api/config.rst:143 ../../source/api/config.rst:150
 msgid "dict"
-msgstr ""
+msgstr "字典類型"
 
 #: ../../source/api/config.rst:144
 msgid ""
 "The keys in the dictionary correspond to the names of the model "
 "parameters, and the values correspond to the desired parameter values."
-msgstr ""
+msgstr "字典中的鍵對應於模型參數的名稱，值對應於所需的參數值。"
 
 #: ../../source/api/config.rst:145
 msgid "Specifies the model parameters and their values."
-msgstr ""
+msgstr "指定模型參數及其值。"
 
 #: ../../source/api/config.rst:148
 msgid "``MODEL_PARAMS_SPACE``"
@@ -291,17 +304,17 @@ msgid ""
 "The keys in the dictionary correspond to the names of the model "
 "parameters, and the values correspond to the range of the parameter "
 "values."
-msgstr ""
+msgstr "字典中的鍵對應於模型參數的名稱，值對應於參數值的範圍。"
 
 #: ../../source/api/config.rst:152
 msgid ""
-"Specifies a set of model hyper-parameters to be explored during hyper-"
+"Specifies the set of model hyper-parameters to be explored during hyper-"
 "parameters tuning."
-msgstr ""
+msgstr "指定在超參數調優期間要探索的模型超參數集。"
 
 #: ../../source/api/config.rst:155
 msgid "Optimization Layer Configuration"
-msgstr ""
+msgstr "優化層配置"
 
 #: ../../source/api/config.rst:158
 msgid "``NUM_EPOCHES``"
@@ -309,7 +322,7 @@ msgstr ""
 
 #: ../../source/api/config.rst:162
 msgid "Specifies the number of training epochs to run."
-msgstr ""
+msgstr "指定要執行的訓練周期數。"
 
 #: ../../source/api/config.rst:165
 msgid "``SAVE_EVERY``"
@@ -317,7 +330,7 @@ msgstr ""
 
 #: ../../source/api/config.rst:169
 msgid "Specifies the number of epochs after which to save the model checkpoint."
-msgstr ""
+msgstr "指定在多少周期後保存模型檢查點。"
 
 #: ../../source/api/config.rst:172
 msgid "``OPTIMIZER_NAME``"
@@ -336,7 +349,7 @@ msgstr ""
 
 #: ../../source/api/config.rst:176
 msgid "Specifies the optimizer to use during training."
-msgstr ""
+msgstr "指定訓練期間使用的優化器。"
 
 #: ../../source/api/config.rst:179
 msgid "``LEARNING_RATE``"
@@ -345,17 +358,17 @@ msgstr ""
 #: ../../source/api/config.rst:181 ../../source/api/config.rst:195
 #: ../../source/api/config.rst:247 ../../source/api/config.rst:268
 msgid "float"
-msgstr ""
+msgstr "浮點數類型"
 
 #: ../../source/api/config.rst:182
 msgid "Any positive float."
-msgstr ""
+msgstr "任何正浮點數。"
 
 #: ../../source/api/config.rst:183
 msgid ""
 "Specifies the step size at each iteration while moving toward a "
 "minimum/maximum of a criterion."
-msgstr ""
+msgstr "指定在向評估標準的最小值/最大值移動時的每次迭代的步長。"
 
 #: ../../source/api/config.rst:186
 msgid "``CRITERION_NAME``"
@@ -370,7 +383,7 @@ msgstr ""
 
 #: ../../source/api/config.rst:190
 msgid "Specifies the name of the criterion to be used during training."
-msgstr ""
+msgstr "指定在訓練期間要使用的評估標準的名稱。"
 
 #: ../../source/api/config.rst:193
 msgid "``LAMBDA_L2``"
@@ -378,26 +391,26 @@ msgstr ""
 
 #: ../../source/api/config.rst:196
 msgid "Any non-negative float."
-msgstr ""
+msgstr "任何非負浮點數。"
 
 #: ../../source/api/config.rst:197
 msgid ""
 "Specifies the strength of the L2 regularization. Required only when the "
 "``CRITERION_NAME`` is set to ``LogWealthL2Diversification`` or "
 "``LogWealthL2Concentration``."
-msgstr ""
+msgstr "指定 L2 正則化的強度。該參數僅當 ``CRITERION_NAME`` 設置為 ``LogWealthL2Diversification`` 或 ``LogWealthL2Concentration`` 時才需要。"
 
 #: ../../source/api/config.rst:200
 msgid "``TUNE_PARAMETERS``"
 msgstr ""
 
 #: ../../source/api/config.rst:203
-msgid "``Ture``, ``False``."
+msgid "``True``, ``False``."
 msgstr ""
 
 #: ../../source/api/config.rst:204
 msgid "Determines whether to perform hyper-parameters tuning."
-msgstr ""
+msgstr "確定是否執行超參數調優。"
 
 #: ../../source/api/config.rst:207
 msgid "``NUM_TRIALS``"
@@ -408,7 +421,7 @@ msgid ""
 "Specifies the number of trials to perform during hyper-parameters tuning."
 " This determines how many different sets of hyper-parameters will be "
 "tested."
-msgstr ""
+msgstr "指定在超參數調優期間執行的試驗次數。這確定了要測試的不同超參數集的數量。"
 
 #: ../../source/api/config.rst:214
 msgid "``SAMPLER_NAME``"
@@ -429,7 +442,7 @@ msgid ""
 " and `Which sampler should be used? "
 "<https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/003_efficient_optimization_algorithms.html"
 "#which-sampler-and-pruner-should-be-used>`__ for more details."
-msgstr ""
+msgstr "指定用於超參數調優的算法。有關更多詳細信息，請參見 `optuna.samplers <https://optuna.readthedocs.io/en/stable/reference/samplers/index.html>`__  和 `我應該使用哪種取樣器？ <https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/003_efficient_optimization_algorithms.html#which-sampler-and-pruner-should-be-used>`__。"
 
 #: ../../source/api/config.rst:221
 msgid "``PRUNER_NAME``"
@@ -447,7 +460,7 @@ msgid ""
 "`optuna.pruners "
 "<https://optuna.readthedocs.io/en/stable/reference/pruners.html>`__ for "
 "more details."
-msgstr ""
+msgstr "指定用於超參數調優的剪枝器。有關更多詳細資訊，請參見 `optuna.pruners <https://optuna.readthedocs.io/en/stable/reference/pruners.html>`__。"
 
 #: ../../source/api/config.rst:228
 msgid "``WRAPPED_PRUNER_NAME``"
@@ -463,25 +476,23 @@ msgstr ""
 msgid ""
 "Specifies the wrapped pruner to be used for hyper-parameters tuning. "
 "Required only when the ``PRUNER_NAME`` is set to ``PatientPruner``."
-msgstr ""
+msgstr "指定用於超參數調優的包裹剪枝器。該參數僅當 ``PRUNER_NAME`` 設定為 ``PatientPruner`` 時才需要。"
 
 #: ../../source/api/config.rst:235
 msgid "Evaluation Layer Configuration"
-msgstr ""
+msgstr "評估層配置"
 
 #: ../../source/api/config.rst:238
 msgid "``PLOT_LANGUAGE``"
 msgstr ""
 
 #: ../../source/api/config.rst:241
-msgid ""
-"``en`` (English), ``zh-CHS`` (Chinese-Simple), ``zh-CHT`` (Chinese-"
-"Traditional)."
-msgstr ""
+msgid "``en`` (English), ``zh_CN`` (Chinese Simple), ``zh_TW`` (Chinese Traditional)."
+msgstr "``en`` （英文）, ``zh_CN`` （簡體中文）, ``zh_TW`` （繁體中文）."
 
 #: ../../source/api/config.rst:242
 msgid "Specifies the language to use for plot labels and legends."
-msgstr ""
+msgstr "指定繪圖標籤和圖例所使用的語言。"
 
 #: ../../source/api/config.rst:245
 msgid "``PROP_WINNERS``"
@@ -489,14 +500,14 @@ msgstr ""
 
 #: ../../source/api/config.rst:248 ../../source/api/config.rst:269
 msgid "A value between 0 and 1."
-msgstr ""
+msgstr "介於 0 至 1 之間的值"
 
 #: ../../source/api/config.rst:249
 msgid ""
 "Specifies the proportion of winner assets to be invested during the "
 "actual investment process. This parameter determines how many of the "
 "best-performing assets will be invested."
-msgstr ""
+msgstr "指定實際投資過程中要投資的優勝資產比例。此參數決定了多少表現最佳資產將被投資。"
 
 #: ../../source/api/config.rst:252
 msgid "``INCLUDE_INTERPRETABILITY_ANALYSIS``"
@@ -507,7 +518,8 @@ msgid ""
 "Determines whether to include an interpretability analysis as part of the"
 " overall analysis. The interpretability analysis aims to provide insights"
 " into the features that drive the generation of the portfolios."
-msgstr ""
+msgstr "確定是否將可解釋性分析納入整體分析的一部分。可解釋性分析旨在提供對驅動投資組合生成的特徵的深入了解。"
+
 
 #: ../../source/api/config.rst:259
 msgid "``INCLUDE_ECONOMIC_DISTILLATION``"
@@ -519,7 +531,7 @@ msgid ""
 "of the overall analysis. The economic distillation analysis aims to "
 "identify the most important economic features that influence portfolio "
 "performance, allowing for a more focused and interpretable model."
-msgstr ""
+msgstr "確定是否將經濟蒸餾分析納入整體分析的一部分。經濟蒸餾分析旨在識別影響投資組合表現的最重要經濟特徵，從而使模型更具有針對性和可解釋性。"
 
 #: ../../source/api/config.rst:266
 msgid "``PROP_DISTILLED_FEATURES``"
@@ -532,7 +544,7 @@ msgid ""
 "many of the original features will be used in the economic distillation "
 "model, with the goal of creating a more interpretable and efficient "
 "model."
-msgstr ""
+msgstr "指定經濟蒸餾過程後要保留的最重要特徵比例。此參數決定了經濟蒸餾模型中將使用多少原始特徵，目的是創建一個更易於解釋且更有效的模型。"
 
 #: ../../source/api/config.rst:273
 msgid "``DISTILLER_NAME``"
@@ -556,7 +568,7 @@ msgid ""
 "analysis. This parameter determines the specific method that will be used"
 " to identify the most important features from the original set of input "
 "variables."
-msgstr ""
+msgstr "指定經濟蒸餾分析中使用的特征蒸餾器。該參數決定了用於從原始輸入變量集中識別最重要特徵的具體方法。"
 
 #: ../../source/api/config.rst:280
 msgid "``Y_NAME``"
@@ -568,9 +580,8 @@ msgstr ""
 
 #: ../../source/api/config.rst:284
 msgid ""
-"Specifies the target variable that the economic distillation model is "
-"trying to output."
-msgstr ""
+"Specifies the target variable for the economic distillation model."
+msgstr "指定經濟蒸餾模型的目標變數。"
 
 #: ../../source/api/data_layer.rst:4
 msgid "finol.data_layer"
@@ -578,9 +589,9 @@ msgstr ""
 
 #: ../../source/api/data_layer.rst:6
 msgid ""
-"The :mod:`~finol.data_layer` module contains data layer related classes "
-"and functions."
+"The :mod:`~finol.data_layer` module contains data layer related classes and functions."
 msgstr ""
+":mod:`~finol.data_layer` 模組包含與數據層相關的類和函數。"
 
 #: ../../source/api/data_layer.rst:13:<autosummary>:1
 msgid ":py:obj:`finol.data_layer.DatasetLoader <finol.data_layer.DatasetLoader>`"
@@ -610,9 +621,9 @@ msgstr ""
 
 #: ../../source/api/evaluation_layer.rst:6
 msgid ""
-"The :mod:`~finol.evaluation_layer` module contains evaluation layer "
-"related classes and functions."
+"The :mod:`~finol.evaluation_layer` module contains evaluation layer related classes and functions."
 msgstr ""
+":mod:`~finol.evaluation_layer` 模組包含與評估層相關的類和函數。"
 
 #: ../../source/api/evaluation_layer.rst:17:<autosummary>:1
 msgid ""
@@ -1396,7 +1407,7 @@ msgstr ""
 #: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
 #: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_metric:1 of
 msgid ""
-"Calculate various evaluation metrics based on the provided portfolios, "
+"Calculate various performance metrics based on the provided portfolios, "
 "labels."
 msgstr ""
 
@@ -1609,7 +1620,7 @@ msgid ""
 msgstr ""
 
 #: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_metric:6 of
-msgid "Dictionary containing calculated evaluation metrics."
+msgid "Dictionary containing calculated performance metrics."
 msgstr ""
 
 #: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_portfolios:3
@@ -6602,7 +6613,7 @@ msgstr ""
 
 #: ../../source/api/index.rst:2
 msgid "API Reference"
-msgstr ""
+msgstr "API 文檔"
 
 #: ../../source/api/model_layer.rst:4
 msgid "finol.model_layer"
@@ -6610,9 +6621,9 @@ msgstr ""
 
 #: ../../source/api/model_layer.rst:6
 msgid ""
-"The :mod:`~finol.model_layer` module contains model layer related classes"
-" and functions."
+"The :mod:`~finol.model_layer` module contains model layer related classes and functions."
 msgstr ""
+":mod:`~finol.model_layer` 模組包含與模型層相關的類和函數。"
 
 #: ../../source/api/model_layer.rst:20:<autosummary>:1
 msgid ""
@@ -6660,9 +6671,9 @@ msgstr ""
 
 #: ../../source/api/optimization_layer.rst:6
 msgid ""
-"The :mod:`~finol.optimization_layer` module contains optimization layer "
-"related classes and functions."
+"The :mod:`~finol.optimization_layer` module contains optimization layer related classes and functions."
 msgstr ""
+":mod:`~finol.optimization_layer` 模組包含與優化層相關的類和函數。"
 
 #: ../../source/api/optimization_layer.rst:15:<autosummary>:1
 msgid ""
@@ -6687,4 +6698,10 @@ msgid ""
 ":py:obj:`finol.optimization_layer.ParametersTuner "
 "<finol.optimization_layer.ParametersTuner>`"
 msgstr ""
+
+msgid "Determine whether to check for updates for ``FinOL``."
+msgstr "確定是否檢查 ``FinOL`` 的更新。"
+
+msgid "Determine whether to download the ``FinOL`` datasets and benchmark results from the source."
+msgstr "確定是否從源代碼下載 ``FinOL`` 數據集和基準測試結果。"
 
