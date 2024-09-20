@@ -5,7 +5,7 @@
     "CHECK_UPDATE": false,
     "DOWNLOAD_DATA": false,
     "_note2": "-------------------------------------- Data Layer Configuration ----------------------------------------",
-    "LOAD_LOCAL_DATALOADER": true,
+    "LOAD_LOCAL_DATALOADER": false,
     "DATASET_NAME": "DJIA",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
@@ -102,7 +102,7 @@
     "DATA_AUGMENTATION_CONFIG": {
         "WINDOW_DATA": {
             "INCLUDE_WINDOW_DATA": true,
-            "WINDOW_SIZE": 5
+            "WINDOW_SIZE": 20
         }
     },
     "SCALER": "WindowStandardScaler",
@@ -141,9 +141,9 @@
             "DROPOUT": 0.4
         },
         "AlphaStock": {
-            "NUM_LAYERS": 8,
+            "NUM_LAYERS": 2,
             "HIDDEN_SIZE": 336,
-            "DROPOUT": 0.5
+            "DROPOUT": 0.05
         },
         "CNN": {
             "OUT_CHANNELS": 64,

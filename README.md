@@ -20,9 +20,9 @@
 </div>
 
 ***
-``FinOL`` represents a pioneering open database for facilitating data-driven OLPS research. As an
-ambitious project, it collects and organizes extensive assets from global markets over half a century,
-it provides a long-awaited unified platform to advance data-driven OLPS research.
+``FinOL`` a comprehensive software package and benchmarking platform designed to advance data-driven OLPS research. 
+``FinOL`` not only provides a well-structured library, offering extensively encapsulated functions, 
+but also develops extensive benchmark results for fair comparisons.
 
 ## :star: **What's NEW!** 
 

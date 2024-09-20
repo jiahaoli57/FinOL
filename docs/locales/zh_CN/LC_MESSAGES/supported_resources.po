@@ -2856,3 +2856,21 @@ msgstr "风险抵御能力"
 #: ../../source/supported_resources/supported_metrics.rst:12
 msgid "Practicality"
 msgstr "实用性"
+
+msgid "Key Features"
+msgstr "关键特征"
+
+msgid "Global datasets"
+msgstr "全球数据集"
+
+msgid "Rich data input"
+msgstr "丰富的数据输入"
+
+msgid "Extensive baselines"
+msgstr "广泛的基线"
+
+msgid "Comprehensive metrics"
+msgstr "综合的指标"
+
+msgid "Multiple visual tools"
+msgstr "多种可视化工具"

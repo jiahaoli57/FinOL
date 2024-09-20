@@ -191,3 +191,28 @@ msgstr ""
 msgid ":ref:`search`"
 msgstr ""
 
+msgid ""
+"New model! ``FinOL`` now supports the `GRU <https://arxiv.org/abs/1412.3555>`__ model"
+msgstr ""
+"全新模型！``FinOL`` 现已支持 `GRU <https://arxiv.org/abs/1412.3555>`__ 模型"
+
+msgid "Supported since 20 September 2024"
+msgstr "于 2024年9月20日 发布"
+
+msgid ""
+"New model! ``FinOL`` now supports the `AlphaStock <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ model"
+msgstr ""
+"全新模型！``FinOL`` 现已支持 `AlphaStock <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ 模型"
+
+msgid "Supported since 20 September 2024"
+msgstr "于 2024年9月20日 发布"
+
+msgid ""
+"``FinOL`` a comprehensive software package and benchmarking platform designed to advance data-driven OLPS research. "
+"``FinOL`` not only provides a well-structured library, offering extensively encapsulated functions, "
+"but also develops extensive benchmark results for fair comparisons."
+msgstr ""
+"``FinOL`` 是一个全面的软件包和基准测试平台，旨在推进数据驱动的OLPS研究。"
+"``FinOL`` 不仅提供了一个结构良好的库，提供了广泛封装的函数，"
+"而且还为公平比较提供了广泛的基准结果。"
+

@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, FinOL Contributors
+# This file is distributed under the same license as the FinOL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FinOL 0.1.29\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-13 01:01+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+msgid "Extending FinOL"
+msgstr "拓展 FinOL"
+
+msgid "Adding New Dataset"
+msgstr "添加新的数据集"
+
+msgid "Adding New Method"
+msgstr "添加新的方法"
+
+msgid "Adding New Criterion"
+msgstr "添加新的投资准则"
+
+msgid "``FinOL`` is designed with extensibility in mind, allowing users to integrate their own models and datasets for "
+"benchmarking purposes. This section provides a step-by-step guide on how to add new methods and datasets to the ``FinOL`` framework."
+msgstr "``FinOL`` 在设计时考虑了可扩展性，允许用户集成自己的模型和数据集以进行基准测试。本节提供了如何在 ``FinOL`` 框架中添加新方法和数据集的逐步指南。"
+
+msgid "To integrate your own datasets into ``FinOL``, follow these steps:"
+msgstr "要将自己的数据集集成到 ``FinOL`` 中，请遵循以下步骤："
+
+msgid "Navigate to the ``{ROOT_PATH}\data\datasets\CustomDataset`` directory."
+msgstr "导航到 ``{ROOT_PATH}\data\datasets\CustomDataset`` 目录。"
+
+msgid "Create .xlsx files for different assets in the following format:"
+msgstr "为不同的资产创建 .xlsx 文件，格式如下："
+
+msgid "For each asset, ensure that the data are correctly formatted and there are no missing values."
+msgstr "对于每个资产，确保数据格式正确，没有缺失值。"
+
+msgid 'Define the configuration for your custom dataset in the ``{ROOT_PATH}\config.json`` file, under the ``config["DATASET_SPLIT_CONFIG"]["CustomModel"]``, ``config["BATCH_SIZE"]["CustomModel"]``, and ``config["NUM_DAYS_PER_YEAR"]["CustomModel"]`` sections. For splitting your dataset, it is recommended to use a ratio of 0.6:0.2:0.2 for training, validation, and testing datasets, respectively.'
+msgstr '在 ``{ROOT_PATH}\config.json`` 文件中，定义您的自定义数据集配置，在 ``config["DATASET_SPLIT_CONFIG"]["CustomModel"]``、``config["BATCH_SIZE"]["CustomModel"]`` 和 ``config["NUM_DAYS_PER_YEAR"]["CustomModel"]`` 下面。对于训练、验证和测试数据集的划分，建议分别使用 0.6:0.2:0.2 的比例。'
+
+msgid "Instead of customizing the dataset yourself, we recommend that you raise an issue or contact us by email so we can evaluate and potentially include your dataset in the ``FinOL`` project. This ensures the benchmark results are supported."
+msgstr "与其自己定制数据集，我们建议您提出问题或通过电子邮件联系我们，以便我们进行评估，并可能将您的数据集纳入 ``FinOL`` 项目。 这将确保基准结果得到支持。"
+
+msgid "Navigate to the ``{ROOT_PATH}\model_layer\CustomModel.py`` file in the ``FinOL`` codebase."
+msgstr "导航到 ``FinOL`` 代码库中的 ``{ROOT_PATH}\model_layer\CustomModel.py`` 文件。"
+
+msgid "Customize your model by extending the :mod:`~finol.model_layer.CustomModel` class. This is where you will implement the logic for your custom data-driven OLPS model. Ensure it adheres to the interface defined by ``FinOL`` for consistency and compatibility."
+msgstr "通过扩展 :mod:`~finol.model_layer.CustomModel` 类来定制你的模型。你将在这里实现自定义数据驱动 OLPS 模型的逻辑。请确保它与 ``FinOL`` 所定义的接口保持一致和兼容。"
+
+msgid 'Define the necessary hyper-parameters in ``{ROOT_PATH}\config.json`` at ``config["MODEL_PARAMS"]["CustomModel"]``.'
+msgstr '在配置 ``{ROOT_PATH}\config.json`` 处的 ``config["MODEL_PARAMS"]["CustomModel"]`` 中定义必要的超参数。'
+
+msgid '(Optional) If you want ``FinOL`` to automatically tune the hyper-parameters of your custom model, specify the range of different parameters in the ``MODEL_PARAMS_SPACE["CustomModel"]`` section of the ``config.json`` file.'
+msgstr '（可选）如果希望 ``FinOL`` 自动调优自定义模型的超参数，请在 ``config.json`` 文件的 ``MODEL_PARAMS_SPACE["CustomModel"]`` 部分指定不同参数的范围。'
+
+msgid "Please refer to the example implementation in :mod:`~finol.model_layer.CustomModel` for guidance on the expected structure and "
+"interface of your custom model class. Additionally, the ``FinOL`` documentation provides detailed tutorials and "
+"API references to help you get started."
+msgstr "请参考 :mod:`~finol.model_layer.CustomModel` 中的示例实现，以获得有关自定义模型类的预期结构和接口的指导。此外，``FinOL`` 文档提供了详细的教程和API参考，以帮助您开始。"
+
+msgid "Navigate to the ``{ROOT_PATH}\optimization_layer\criterion_selector.py`` file in the ``FinOL`` codebase."
+msgstr "导航到 ``FinOL`` 代码库中的 ``{ROOT_PATH}\mptimization_layer\Criterion_selector.py`` 文件。"
+
+msgid "Locate the :mod:`~finol.optimization_layer.CriterionSelector` class and define your own custom investment criterion by rewriting the :func:`~finol.optimization_layer.CriterionSelector.compute_custom_criterion_loss` method. Ensure it adheres to the interface defined by ``FinOL`` for consistency and compatibility."
+msgstr "找到 :mod:`~finol.optimization_layer.CriterionSelector` 类，并通过改写 :func:`~finol.optimization_layer.CriterionSelector.compute_custom_criterion_loss` 方法来定义自己的自定义投资准则。确保它符合 ``FinOL`` 定义的接口，以保持一致性和兼容性。"
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+

@@ -32,9 +32,9 @@ To integrate your own datasets into ``FinOL``, follow these steps:
      | 2024-03-01 | 0.655440 | 0.719080 | 0.654592 | 0.719080 | 9353798 |
      +-----------+-----------+----------+----------+----------+---------+
 
-3. For each asset, ensure that the data are correctly formatted and there are no missing values
+3. For each asset, ensure that the data are correctly formatted and there are no missing values.
 
-4. Define the configuration for your custom dataset in the ``{ROOT_PATH}\config.json`` file,under the ``config["DATASET_SPLIT_CONFIG"]["CustomModel"]``, ``config["BATCH_SIZE"]["CustomModel"]``, and ``config["NUM_DAYS_PER_YEAR"]["CustomModel"]`` sections. For splitting your dataset, it is recommended to use a ratio of 0.6:0.2:0.2 for training, validation, and testing datasets, respectively.
+4. Define the configuration for your custom dataset in the ``{ROOT_PATH}\config.json`` file, under the ``config["DATASET_SPLIT_CONFIG"]["CustomModel"]``, ``config["BATCH_SIZE"]["CustomModel"]``, and ``config["NUM_DAYS_PER_YEAR"]["CustomModel"]`` sections. For splitting your dataset, it is recommended to use a ratio of 0.6:0.2:0.2 for training, validation, and testing datasets, respectively.
 
 
 .. code-block:: json
@@ -214,7 +214,7 @@ Adding New Criterion
 --------------------
 
 1. Navigate to the ``{ROOT_PATH}\optimization_layer\criterion_selector.py`` file in the ``FinOL`` codebase.
-2. Locate the :mod:`~finol.optimization_layer.CriterionSelector` class and define your own custom loss function by overriding the :func:`~finol.optimization_layer.CriterionSelector.compute_custom_criterion_loss` method. Ensure it adheres to the interface defined by ``FinOL`` for consistency and compatibility.
+2. Locate the :mod:`~finol.optimization_layer.CriterionSelector` class and define your own custom investment criterion by rewriting the :func:`~finol.optimization_layer.CriterionSelector.compute_custom_criterion_loss` method. Ensure it adheres to the interface defined by ``FinOL`` for consistency and compatibility.
 
 .. code-block:: python3
     :caption: criterion_selector.py
