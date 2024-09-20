@@ -29,8 +29,11 @@ it provides a long-awaited unified platform to advance data-driven OLPS research
   * - New metric! ``FinOL`` is going to support the `t-test <https://www.sciencedirect.com/science/article/pii/S0004370215000168>`__ metric
     - Coming soon......
     - |:hammer_and_wrench:| Enhancement
-  * - New model! ``FinOL`` is going to support the `AlphaStock <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ model
-    - Coming soon......
+  * - New model! ``FinOL`` now supports the `AlphaStock <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ model
+    - Supported since 20 September 2024
+    - |:hammer_and_wrench:| Enhancement
+  * - New model! ``FinOL`` now supports the `GRU <https://arxiv.org/abs/1412.3555>`__ model
+    - Supported since 20 September 2024
     - |:hammer_and_wrench:| Enhancement
   * - New release! ``FinOL`` now releases the `Official Docs <https://finol.readthedocs.io/en/latest/>`__
     - Released on 22 July 2024

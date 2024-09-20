@@ -291,7 +291,7 @@ class FinOLAPP:
         # ttk.Label(self.model_config_frame, text=" "*150).grid(row=100, column=0, columnspan=4, padx=10, pady=0)
 
         # MODEL_NAME
-        options = ["AlphaPortfolio", "CNN", "DNN", "LSRE-CAAN", "LSTM", "RNN", "Transformer", "CustomModel"]
+        options = ["AlphaPortfolio", "AlphaStock", "CNN", "DNN", "GRU", "LSRE-CAAN", "LSTM", "RNN", "Transformer", "CustomModel"]
         self.create_dropdown(self.model_config_frame, options, "Select Model:", 0, 1, options.index(self.config["MODEL_NAME"]), "StringVar", ["MODEL_NAME"])
         # create_separator
         self.create_separator(frame=self.model_config_frame, row=1, text="Model Parameters")
@@ -658,6 +658,14 @@ class FinOLAPP:
                 self.create_entry(self.model_config_frame, "Dropout Rate:", row=5, column=0, default_value=default_model_parms["DROPOUT"],
                                   value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
 
+            elif MODEL_NAME == "AlphaStock":
+                self.create_entry(self.model_config_frame, "Number of Layers:", row=3, column=0, default_value=default_model_parms["NUM_LAYERS"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "NUM_LAYERS"])
+                self.create_entry(self.model_config_frame, "Hidden Size:", row=3, column=2, default_value=default_model_parms["HIDDEN_SIZE"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "HIDDEN_SIZE"])
+                self.create_entry(self.model_config_frame, "Dropout Rate:", row=4, column=0, default_value=default_model_parms["DROPOUT"],
+                                  value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
+
             elif MODEL_NAME == "CNN":
                 self.create_entry(self.model_config_frame, "Out Channels:", row=3, column=0, default_value=default_model_parms["OUT_CHANNELS"],
                                   value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "OUT_CHANNELS"])
@@ -671,6 +679,14 @@ class FinOLAPP:
                                   value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
 
             elif MODEL_NAME == "DNN":
+                self.create_entry(self.model_config_frame, "Number of Layers:", row=3, column=0, default_value=default_model_parms["NUM_LAYERS"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "NUM_LAYERS"])
+                self.create_entry(self.model_config_frame, "Hidden Size:", row=3, column=2, default_value=default_model_parms["HIDDEN_SIZE"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "HIDDEN_SIZE"])
+                self.create_entry(self.model_config_frame, "Dropout Rate:", row=4, column=0, default_value=default_model_parms["DROPOUT"],
+                                  value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
+
+            elif MODEL_NAME == "GRU":
                 self.create_entry(self.model_config_frame, "Number of Layers:", row=3, column=0, default_value=default_model_parms["NUM_LAYERS"],
                                   value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "NUM_LAYERS"])
                 self.create_entry(self.model_config_frame, "Hidden Size:", row=3, column=2, default_value=default_model_parms["HIDDEN_SIZE"],

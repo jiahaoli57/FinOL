@@ -5,7 +5,7 @@
     "CHECK_UPDATE": false,
     "DOWNLOAD_DATA": false,
     "_note2": "-------------------------------------- Data Layer Configuration ----------------------------------------",
-    "LOAD_LOCAL_DATALOADER": false,
+    "LOAD_LOCAL_DATALOADER": true,
     "DATASET_NAME": "DJIA",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
@@ -131,7 +131,7 @@
         "CustomDataset": 0
     },
     "_note3": "-------------------------------------- Model Layer Configuration ---------------------------------------",
-    "MODEL_NAME": "DNN",
+    "MODEL_NAME": "AlphaStock",
     "MODEL_PARAMS": {
         "AlphaPortfolio": {
             "NUM_LAYERS": 4,
@@ -139,6 +139,11 @@
             "DIM_FEEDFORWARD": 128,
             "NUM_HEADS": 1,
             "DROPOUT": 0.4
+        },
+        "AlphaStock": {
+            "NUM_LAYERS": 8,
+            "HIDDEN_SIZE": 336,
+            "DROPOUT": 0.5
         },
         "CNN": {
             "OUT_CHANNELS": 64,
@@ -151,6 +156,11 @@
             "NUM_LAYERS": 3,
             "HIDDEN_SIZE": 240,
             "DROPOUT": 0.15000000000000002
+        },
+        "GRU": {
+            "NUM_LAYERS": 2,
+            "HIDDEN_SIZE": 256,
+            "DROPOUT": 0.0
         },
         "LSRE-CAAN": {
             "NUM_LAYERS": 1,
@@ -227,7 +237,59 @@
                 "step": 0.05
             }
         },
+        "AlphaStock": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    12
+                ],
+                "step": 1
+            },
+            "HIDDEN_SIZE": {
+                "type": "int",
+                "range": [
+                    32,
+                    512
+                ],
+                "step": 16
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
         "DNN": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    12
+                ],
+                "step": 1
+            },
+            "HIDDEN_SIZE": {
+                "type": "int",
+                "range": [
+                    32,
+                    512
+                ],
+                "step": 16
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "GRU": {
             "NUM_LAYERS": {
                 "type": "int",
                 "range": [
@@ -571,8 +633,8 @@
     "LEARNING_RATE": 0.004,
     "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
-    "TUNE_PARAMETERS": false,
-    "NUM_TRIALS": 1000,
+    "TUNE_PARAMETERS": true,
+    "NUM_TRIALS": 20,
     "SAMPLER_NAME": "RandomSampler",
     "PRUNER_NAME": "NopPruner",
     "WRAPPED_PRUNER_NAME": "MedianPruner",

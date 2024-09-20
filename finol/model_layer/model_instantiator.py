@@ -3,8 +3,10 @@ import torch.nn as nn
 from typing import List, Tuple, Dict, Union
 from finol.utils import load_config, set_seed
 from finol.model_layer.AlphaPortfolio import AlphaPortfolio
+from finol.model_layer.AlphaStock import AlphaStock
 from finol.model_layer.CNN import CNN
 from finol.model_layer.DNN import DNN
+from finol.model_layer.GRU import GRU
 from finol.model_layer.LSRE_CAAN import LSRE_CAAN
 from finol.model_layer.LSTM import LSTM
 from finol.model_layer.RNN import RNN
@@ -13,8 +15,10 @@ from finol.model_layer.CustomModel import CustomModel
 
 model_dict = {
     "AlphaPortfolio": AlphaPortfolio,
+    "AlphaStock": AlphaStock,
     "CNN": CNN,
     "DNN": DNN,
+    "GRU": GRU,
     "LSRE-CAAN": LSRE_CAAN,
     "LSTM": LSTM,
     "RNN": RNN,
@@ -47,6 +51,17 @@ class ModelInstantiator:
                 "DROPOUT": self.config["MODEL_PARAMS"]["AlphaPortfolio"]["DROPOUT"],
             }
 
+        if "AlphaStock" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "AlphaStock":
+            self.model_args = {
+                "num_features_original": self.load_dataset_output["num_features_original"],
+                "window_size": self.load_dataset_output["window_size"],
+            }
+            self.model_params = {
+                "NUM_LAYERS": self.config["MODEL_PARAMS"]["AlphaStock"]["NUM_LAYERS"],
+                "HIDDEN_SIZE": self.config["MODEL_PARAMS"]["AlphaStock"]["HIDDEN_SIZE"],
+                "DROPOUT": self.config["MODEL_PARAMS"]["AlphaStock"]["DROPOUT"],
+            }
+
         if "CNN" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "CNN":
             self.model_args = {
                 "num_features_original": self.load_dataset_output["num_features_original"],
@@ -68,6 +83,17 @@ class ModelInstantiator:
                 "NUM_LAYERS": self.config["MODEL_PARAMS"]["DNN"]["NUM_LAYERS"],
                 "HIDDEN_SIZE": self.config["MODEL_PARAMS"]["DNN"]["HIDDEN_SIZE"],
                 "DROPOUT": self.config["MODEL_PARAMS"]["DNN"]["DROPOUT"],
+            }
+
+        if "GRU" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "GRU":
+            self.model_args = {
+                "num_features_original": self.load_dataset_output["num_features_original"],
+                "window_size": self.load_dataset_output["window_size"],
+            }
+            self.model_params = {
+                "NUM_LAYERS": self.config["MODEL_PARAMS"]["GRU"]["NUM_LAYERS"],
+                "HIDDEN_SIZE": self.config["MODEL_PARAMS"]["GRU"]["HIDDEN_SIZE"],
+                "DROPOUT": self.config["MODEL_PARAMS"]["GRU"]["DROPOUT"],
             }
 
         if "LSRE-CAAN" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"].startswith("LSRE-CAAN"):

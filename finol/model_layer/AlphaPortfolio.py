@@ -87,7 +87,7 @@ class AlphaPortfolio(nn.Module):
 
     The AlphaPortfolio model takes an input tensor ``x`` of shape `(batch_size, num_assets, num_features_augmented)`,
     where `num_features_augmented` represents the number of features (including any preprocessed or augmented
-    features) for each asset. The final output of the AlphaPortfolio model is a tensor of shape `(batch_size, num_assets)`, where each element
+    features) for each asset. The final output of the AlphaPortfolio model is a tensor of shape `(batch_size, num_assets)`,
     represents the predicted score for the corresponding asset.
 
     For more details, please refer to the paper `AlphaPortfolio: Direct Construction through Reinforcement Learning
