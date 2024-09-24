@@ -9,4 +9,5 @@ Key Features
    supported_metrics
    supported_baselines
    supported_results
+   supported_elo
    supported_visualization

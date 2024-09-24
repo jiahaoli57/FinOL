@@ -19,14 +19,14 @@ class BenchmarkLoader:
     """
     Class to load the benchmarks and perform comparisons.
 
-    :param caculate_metric_output: Dictionary containing output from function :func:`~finol.evaluation_layer.MetricCaculator.caculate_metric`.
+    :param calculate_metric_output: Dictionary containing output from function :func:`~finol.evaluation_layer.MetricCalculator.calculate_metric`.
     :param economic_distillation_output: Dictionary containing output from function :func:`~finol.evaluation_layer.EconomicDistiller.economic_distillation`.
     """
-    def __init__(self, caculate_metric_output: Dict, economic_distillation_output: Dict) -> None:
+    def __init__(self, calculate_metric_output: Dict, economic_distillation_output: Dict) -> None:
         self.config = load_config()
-        self.caculate_metric_output = caculate_metric_output
+        self.calculate_metric_output = calculate_metric_output
         self.economic_distillation_output = economic_distillation_output
-        self.logdir = self.caculate_metric_output["logdir"]
+        self.logdir = self.calculate_metric_output["logdir"]
 
     def find_top_5_baselines(self, df: pd.DataFrame) -> None:
         """
@@ -49,7 +49,7 @@ class BenchmarkLoader:
 
         :return: Dictionary containing benchmark results and model's results.
         """
-        logdir = self.caculate_metric_output["logdir"]
+        logdir = self.calculate_metric_output["logdir"]
 
         # ------------------------------------------------------------------------------------------------------------ #
         daily_return = pd.read_excel(ROOT_PATH + "/data/benchmark_results/profit_metrics/" + self.config["DATASET_NAME"] + "/daily_return.xlsx")
@@ -59,12 +59,12 @@ class BenchmarkLoader:
         daily_return = daily_return.dropna(axis=1, how="any")
         daily_cumulative_wealth = daily_cumulative_wealth.dropna(axis=1, how="any")
         final_profit_result = final_profit_result.dropna(axis=1, how="any")
-        if self.caculate_metric_output is not None:
-            daily_cumulative_wealth[self.config["MODEL_NAME"]] = self.caculate_metric_output["DCW"]
+        if self.calculate_metric_output is not None:
+            daily_cumulative_wealth[self.config["MODEL_NAME"]] = self.calculate_metric_output["DCW"]
             final_profit_result = final_profit_result.assign(**{self.config["MODEL_NAME"]: np.nan})
-            final_profit_result.loc[0, self.config["MODEL_NAME"]] = self.caculate_metric_output["CW"]
-            final_profit_result.loc[1, self.config["MODEL_NAME"]] = self.caculate_metric_output["APY"]
-            final_profit_result.loc[2, self.config["MODEL_NAME"]] = self.caculate_metric_output["SR"]
+            final_profit_result.loc[0, self.config["MODEL_NAME"]] = self.calculate_metric_output["CW"]
+            final_profit_result.loc[1, self.config["MODEL_NAME"]] = self.calculate_metric_output["APY"]
+            final_profit_result.loc[2, self.config["MODEL_NAME"]] = self.calculate_metric_output["SR"]
         if self.economic_distillation_output is not None:
             daily_cumulative_wealth[self.config["MODEL_NAME"] + " (ED)"] = self.economic_distillation_output["DCW"]
             final_profit_result = final_profit_result.assign(**{self.config["MODEL_NAME"] + " (ED)": np.nan})
@@ -97,12 +97,12 @@ class BenchmarkLoader:
         for col in daily_drawdown.columns:
             daily_maximum_drawdown[f"{col}"] = daily_drawdown[col].cummax()
 
-        if self.caculate_metric_output != None:
-            daily_drawdown[self.config["MODEL_NAME"]] = self.caculate_metric_output["DDD"]
-            daily_maximum_drawdown[self.config["MODEL_NAME"]] = self.caculate_metric_output["DMDD"]
+        if self.calculate_metric_output != None:
+            daily_drawdown[self.config["MODEL_NAME"]] = self.calculate_metric_output["DDD"]
+            daily_maximum_drawdown[self.config["MODEL_NAME"]] = self.calculate_metric_output["DMDD"]
             final_risk_result = final_risk_result.assign(**{self.config["MODEL_NAME"]: np.nan})
-            final_risk_result.loc[0, self.config["MODEL_NAME"]] = self.caculate_metric_output["VR"]
-            final_risk_result.loc[1, self.config["MODEL_NAME"]] = self.caculate_metric_output["MDD"]
+            final_risk_result.loc[0, self.config["MODEL_NAME"]] = self.calculate_metric_output["VR"]
+            final_risk_result.loc[1, self.config["MODEL_NAME"]] = self.calculate_metric_output["MDD"]
         if self.economic_distillation_output != None:
             daily_drawdown[self.config["MODEL_NAME"] + " (ED)"] = self.economic_distillation_output["DDD"]
             daily_maximum_drawdown[self.config["MODEL_NAME"] + " (ED)"] = self.economic_distillation_output["DMDD"]
@@ -127,11 +127,11 @@ class BenchmarkLoader:
 
         transaction_costs_adjusted_cumulative_wealth = transaction_costs_adjusted_cumulative_wealth.dropna(axis=1, how="any")
         final_practical_result = final_practical_result.dropna(axis=1, how="any")
-        if self.caculate_metric_output != None:
-            transaction_costs_adjusted_cumulative_wealth[self.config["MODEL_NAME"]] = self.caculate_metric_output["TCW"]
+        if self.calculate_metric_output != None:
+            transaction_costs_adjusted_cumulative_wealth[self.config["MODEL_NAME"]] = self.calculate_metric_output["TCW"]
             final_practical_result = final_practical_result.assign(**{self.config["MODEL_NAME"]: np.nan})
-            final_practical_result.loc[0, self.config["MODEL_NAME"]] = self.caculate_metric_output["ATO"]
-            final_practical_result.loc[1, self.config["MODEL_NAME"]] = self.caculate_metric_output["RT"]
+            final_practical_result.loc[0, self.config["MODEL_NAME"]] = self.calculate_metric_output["ATO"]
+            final_practical_result.loc[1, self.config["MODEL_NAME"]] = self.calculate_metric_output["RT"]
         if self.economic_distillation_output != None:
             transaction_costs_adjusted_cumulative_wealth[self.config["MODEL_NAME"] + " (ED)"] = self.economic_distillation_output["TCW"]
             final_practical_result = final_practical_result.assign(**{self.config["MODEL_NAME"] + " (ED)": np.nan})
@@ -152,7 +152,7 @@ class BenchmarkLoader:
         # plot_radar_chart(final_profit_result, final_risk_result, self.COMPARED_BASELINE, logdir)
 
         load_benchmark_output = {}
-        load_benchmark_output["logdir"] = self.caculate_metric_output["logdir"]
+        load_benchmark_output["logdir"] = self.calculate_metric_output["logdir"]
         load_benchmark_output["top_5_baselines"] = self.top_5_baselines
         load_benchmark_output["daily_cumulative_wealth"] = daily_cumulative_wealth
         load_benchmark_output["final_profit_result"] = final_profit_result
@@ -161,8 +161,8 @@ class BenchmarkLoader:
         load_benchmark_output["final_risk_result"] = final_risk_result
         load_benchmark_output["transaction_costs_adjusted_cumulative_wealth"] = transaction_costs_adjusted_cumulative_wealth
         load_benchmark_output["final_practical_result"] = final_practical_result
-        # load_benchmark_output["CW"] = self.caculate_metric_output["CW"]
-        # load_benchmark_output["TCW"] = self.caculate_metric_output["TCW"]
+        # load_benchmark_output["CW"] = self.calculate_metric_output["CW"]
+        # load_benchmark_output["TCW"] = self.calculate_metric_output["TCW"]
         # print(load_benchmark_output["TCW"])
         return load_benchmark_output
 

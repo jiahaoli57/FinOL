@@ -336,7 +336,7 @@ research. Here are some examples:
   │    ├─ benchmark_loader.py
   │    ├─ distiller_selector.py
   │    ├─ economic_distiller.py
-  │    ├─ metric_caculator.py
+  │    ├─ metric_calculator.py
   │    ├─ model_evaluator.py
   │    └─ result_visualizer.py
   ├─ logdir

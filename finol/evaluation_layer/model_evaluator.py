@@ -1,6 +1,6 @@
 from typing import List, Tuple, Dict, Union, Any
 from finol.evaluation_layer.economic_distiller import EconomicDistiller
-from finol.evaluation_layer.metric_caculator import MetricCaculator
+from finol.evaluation_layer.metric_calculator import MetricCalculator
 from finol.evaluation_layer.benchmark_loader import BenchmarkLoader
 from finol.evaluation_layer.result_visualizer import ResultVisualizer
 from finol.utils import load_config, send_message_dingding
@@ -32,10 +32,10 @@ class ModelEvaluator:
             economic_distillation_output = EconomicDistiller(self.load_dataset_output, self.train_model_output).economic_distillation()
 
         # Step 1: Calculate the results of the model
-        caculate_metric_output = MetricCaculator(self.load_dataset_output, self.train_model_output).caculate_metric()
+        calculate_metric_output = MetricCalculator(self.load_dataset_output, self.train_model_output).calculate_metric()
 
         # Step 2: Calculate the results of the model
-        load_benchmark_output = BenchmarkLoader(caculate_metric_output, economic_distillation_output).load_benchmark()
+        load_benchmark_output = BenchmarkLoader(calculate_metric_output, economic_distillation_output).load_benchmark()
 
         # Step 3: Visualize the results
         visualize_result_output = ResultVisualizer(load_benchmark_output).visualize_result()

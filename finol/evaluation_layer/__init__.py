@@ -4,7 +4,7 @@ from rich import print
 from finol.evaluation_layer.benchmark_loader import BenchmarkLoader
 from finol.evaluation_layer.distiller_selector import DistillerSelector
 from finol.evaluation_layer.economic_distiller import EconomicDistiller
-from finol.evaluation_layer.metric_caculator import MetricCaculator
+from finol.evaluation_layer.metric_calculator import MetricCalculator
 from finol.evaluation_layer.model_evaluator import ModelEvaluator
 from finol.evaluation_layer.result_visualizer import ResultVisualizer
 from finol.utils import load_config
@@ -17,7 +17,7 @@ __all__ = [
     "BenchmarkLoader",
     "DistillerSelector",
     "EconomicDistiller",
-    "MetricCaculator",
+    "MetricCalculator",
     "ModelEvaluator",
     "ResultVisualizer",
 ]

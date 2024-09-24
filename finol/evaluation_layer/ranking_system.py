@@ -7,7 +7,7 @@ from tqdm import tqdm
 from collections import defaultdict
 from finol.utils import ROOT_PATH, load_config
 
-config = load_config()
+
 
 def compute_elo(battles, K=4, SCALE=400, BASE=10, INIT_RATING=1000):
     rating = defaultdict(lambda: INIT_RATING)
@@ -102,6 +102,20 @@ def compute_elo_mle(df, SCALE=400, BASE=10, INIT_RATING=1000):
 
 
 
+config = load_config()
+model = [
+        "Market", "Best", "UCRP", "BCRP",
+        "UP", "EG", "SCRP", "PPT", "SSPO",
+        "ANTI1", "ANTI2", "PAMR", "CWMR-Var", "CWMR-Stdev", "OLMAR-S", "OLMAR-E", "RMR", "RPRT",
+        "AICTR", "KTPT",
+        "SP", "ONS", "GRW", "WAAS", "CW-OGD"
+    ]
+datasets = ["NYSEO", "NYSEN", "DJIA", "SP500", "TSE", "SSE", "HSI", "CMEG", "CRYPTO"]
+profit_metrics = ["CW", "APY", "SR"]
+risk_metrics = ["VR", "MDD"]
+practical_metrics = ["ATO", "RT"]
+
+# Profitability
 r = ROOT_PATH + r"\data\benchmark_results\profit_metrics"
 NYSEO_df = pd.read_excel(r + r"\NYSE(O)\final_profit_result.xlsx", sheet_name="Sheet1")
 NYSEN_df = pd.read_excel(r + r"\NYSE(N)\final_profit_result.xlsx", sheet_name="Sheet1")
@@ -113,15 +127,8 @@ HSI_df = pd.read_excel(r + r"\HSI\final_profit_result.xlsx", sheet_name="Sheet1"
 CMEG_df = pd.read_excel(r + r"\CMEG\final_profit_result.xlsx", sheet_name="Sheet1")
 CRYPTO_df = pd.read_excel(r + r"\CRYPTO\final_profit_result.xlsx", sheet_name="Sheet1")
 
-
 data = {
-    "Model": [
-        "Market", "Best", "UCRP", "BCRP",
-        "UP", "EG", "SCRP", "PPT", "SSPO",
-        "ANTI1", "ANTI2", "PAMR", "CWMR-Var", "CWMR-Stdev", "OLMAR-S", "OLMAR-E", "RMR", "RPRT",
-        "AICTR", "KTPT",
-        "SP", "ONS", "GRW", "WAAS", "CW-OGD"
-    ],
+    "Model": model,
     "NYSEO_CW": list(NYSEO_df.loc[NYSEO_df["Metric"] == "CW"].iloc[0, 1:].values),
     "NYSEO_APY": list(NYSEO_df.loc[NYSEO_df["Metric"] == "APY"].iloc[0, 1:].values),
     "NYSEO_SR": list(NYSEO_df.loc[NYSEO_df["Metric"] == "SR"].iloc[0, 1:].values),
@@ -166,15 +173,13 @@ print(models_df)
 #
 battles = []
 
-for dataset in ["NYSEO", "NYSEN", "DJIA", "SP500", "TSE", "SSE", "HSI", "CMEG", "CRYPTO"]:
-# for dataset in ['CRYPTO', 'CMEG', 'HSI', 'SSE', 'TSE', 'SP500', 'DJIA', 'NYSEN', 'NYSEO']:
+for dataset in datasets:
     for index, row in models_df.iterrows():
         model_a = row["Model"]
         for inner_index, inner_row in models_df.iterrows():
             if index != inner_index:
                 model_b = inner_row["Model"]
-                for metric in ["CW", "APY", "SR"]:
-                # for metric in ['SR', 'APY', 'CW']:
+                for metric in profit_metrics:
                     a_value = row[f"{dataset}_{metric}"]
                     b_value = inner_row[f"{dataset}_{metric}"]
 
@@ -214,7 +219,7 @@ print(
     "elo bootstrap version:\n",
     bootstrap_lu_median
 )
-visualize_bootstrap_scores(bootstrap_elo_lu, "Bootstrap of Elo Estimates")
+visualize_bootstrap_scores(bootstrap_elo_lu, "Bootstrap of Elo Ratings on Profitability")
 
 
 ### Maximum Likelihood Estimation
@@ -230,110 +235,212 @@ visualize_bootstrap_scores(bootstrap_elo_lu, "Bootstrap of Elo Estimates")
 # elo_mle_bootstrap = get_bootstrap_result(battles, compute_elo_mle, BOOTSTRAP_ROUNDS)
 # visualize_bootstrap_scores(elo_mle_bootstrap, "Bootstrap of MLE Elo Estimates")
 
-####################################
-# r = ROOT_PATH + r"\data\benchmark_results\risk_metrics"
-# NYSEO_df = pd.read_excel(r + r"\NYSE(O)\final_risk_result.xlsx", sheet_name="Sheet1")
-# NYSEN_df = pd.read_excel(r + r"\NYSE(N)\final_risk_result.xlsx", sheet_name="Sheet1")
-# DJIA_df = pd.read_excel(r + r"\DJIA\final_risk_result.xlsx", sheet_name="Sheet1")
-# SP500_df = pd.read_excel(r + r"\SP500\final_risk_result.xlsx", sheet_name="Sheet1")
-# TSE_df = pd.read_excel(r + r"\TSE\final_risk_result.xlsx", sheet_name="Sheet1")
-# SSE_df = pd.read_excel(r + r"\SSE\final_risk_result.xlsx", sheet_name="Sheet1")
-# HSI_df = pd.read_excel(r + r"\HSI\final_risk_result.xlsx", sheet_name="Sheet1")
-# CMEG_df = pd.read_excel(r + r"\CMEG\final_risk_result.xlsx", sheet_name="Sheet1")
-# CRYPTO_df = pd.read_excel(r + r"\CRYPTO\final_risk_result.xlsx", sheet_name="Sheet1")
+
+# Risk Resilience
+r = ROOT_PATH + r"\data\benchmark_results\risk_metrics"
+NYSEO_df = pd.read_excel(r + r"\NYSE(O)\final_risk_result.xlsx", sheet_name="Sheet1")
+NYSEN_df = pd.read_excel(r + r"\NYSE(N)\final_risk_result.xlsx", sheet_name="Sheet1")
+DJIA_df = pd.read_excel(r + r"\DJIA\final_risk_result.xlsx", sheet_name="Sheet1")
+SP500_df = pd.read_excel(r + r"\SP500\final_risk_result.xlsx", sheet_name="Sheet1")
+TSE_df = pd.read_excel(r + r"\TSE\final_risk_result.xlsx", sheet_name="Sheet1")
+SSE_df = pd.read_excel(r + r"\SSE\final_risk_result.xlsx", sheet_name="Sheet1")
+HSI_df = pd.read_excel(r + r"\HSI\final_risk_result.xlsx", sheet_name="Sheet1")
+CMEG_df = pd.read_excel(r + r"\CMEG\final_risk_result.xlsx", sheet_name="Sheet1")
+CRYPTO_df = pd.read_excel(r + r"\CRYPTO\final_risk_result.xlsx", sheet_name="Sheet1")
+
+data = {
+    "Model": model,
+    "NYSEO_VR": list(NYSEO_df.loc[NYSEO_df["Metric"] == "VR"].iloc[0, 1:].values),
+    "NYSEO_MDD": list(NYSEO_df.loc[NYSEO_df["Metric"] == "MDD"].iloc[0, 1:].values),
+
+    "NYSEN_VR": list(NYSEN_df.loc[NYSEN_df["Metric"] == "VR"].iloc[0, 1:].values),
+    "NYSEN_MDD": list(NYSEN_df.loc[NYSEN_df["Metric"] == "MDD"].iloc[0, 1:].values),
+
+    "DJIA_VR": list(DJIA_df.loc[DJIA_df["Metric"] == "VR"].iloc[0, 1:].values),
+    "DJIA_MDD": list(DJIA_df.loc[DJIA_df["Metric"] == "MDD"].iloc[0, 1:].values),
+
+    "SP500_VR": list(SP500_df.loc[SP500_df["Metric"] == "VR"].iloc[0, 1:].values),
+    "SP500_MDD": list(SP500_df.loc[SP500_df["Metric"] == "MDD"].iloc[0, 1:].values),
+
+    "TSE_VR": list(TSE_df.loc[TSE_df["Metric"] == "VR"].iloc[0, 1:].values),
+    "TSE_MDD": list(TSE_df.loc[TSE_df["Metric"] == "MDD"].iloc[0, 1:].values),
+
+    "SSE_VR": list(SSE_df.loc[SSE_df["Metric"] == "VR"].iloc[0, 1:].values),
+    "SSE_MDD": list(SSE_df.loc[SSE_df["Metric"] == "MDD"].iloc[0, 1:].values),
+
+    "HSI_VR": list(HSI_df.loc[HSI_df["Metric"] == "VR"].iloc[0, 1:].values),
+    "HSI_MDD": list(HSI_df.loc[HSI_df["Metric"] == "MDD"].iloc[0, 1:].values),
+
+    "CMEG_VR": list(CMEG_df.loc[CMEG_df["Metric"] == "VR"].iloc[0, 1:].values),
+    "CMEG_MDD": list(CMEG_df.loc[CMEG_df["Metric"] == "MDD"].iloc[0, 1:].values),
+
+    "CRYPTO_VR": list(CRYPTO_df.loc[CRYPTO_df["Metric"] == "VR"].iloc[0, 1:].values),
+    "CRYPTO_MDD": list(CRYPTO_df.loc[CRYPTO_df["Metric"] == "MDD"].iloc[0, 1:].values),
+}
+
+models_df = pd.DataFrame(data)
+models_df = models_df[~models_df['Model'].isin(['Best', 'BCRP'])]
+print(models_df)
+
+battles = []
+
+for dataset in datasets:
+    for index, row in models_df.iterrows():
+        model_a = row["Model"]
+        for inner_index, inner_row in models_df.iterrows():
+            if index != inner_index:
+                model_b = inner_row["Model"]
+                for metric in risk_metrics:
+                    a_value = row[f"{dataset}_{metric}"]
+                    b_value = inner_row[f"{dataset}_{metric}"]
+
+                    if a_value < b_value:
+                        winner = "model_a"
+                    elif a_value > b_value:
+                        winner = "model_b"
+                    else:
+                        winner = "tie"
+
+                    battles.append({
+                        "model_a": model_a,
+                        "model_b": model_b,
+                        "winner": winner,
+                    })
+
+
+battles = pd.DataFrame(battles)
+print(battles)
+
+elo_ratings = compute_elo(battles)
+elo = preety_print_elo_ratings(elo_ratings)
+print(
+    "elo:\n",
+    elo
+)
+
+### Compute Bootstrap Confidence Interavals for Elo Scores
+# The previous linear update method may be sensitive to battle orders.
+# Here, we use bootstrap to get a more stable versoion and estimate the confidence intervals as well.
+BOOTSTRAP_ROUNDS = 1000
+np.random.seed(config["MANUAL_SEED"])
+bootstrap_elo_lu = get_bootstrap_result(battles, compute_elo, BOOTSTRAP_ROUNDS)
+bootstrap_lu_median = bootstrap_elo_lu.median().reset_index().set_axis(["model", "Elo rating"], axis=1)
+bootstrap_lu_median["Elo rating"] = (bootstrap_lu_median["Elo rating"] + 0.5).astype(int)
+print(
+    "elo bootstrap version:\n",
+    bootstrap_lu_median
+)
+visualize_bootstrap_scores(bootstrap_elo_lu, "Bootstrap of Elo Ratings on Risk Resilience")
 #
-# data = {
-#     "Model": [
-#         "Market", "Best", "UCRP", "BCRP",
-#         "UP", "EG", "SCRP", "PPT", "SSPO",
-#         "ANTI1", "ANTI2", "PAMR", "CWMR-Var", "CWMR-Stdev", "OLMAR-S", "OLMAR-E", "RMR", "RPRT",
-#         "AICTR", "KTPT",
-#         "SP", "ONS", "GRW", "WAAS", "CW-OGD"
-#     ],
-#     "NYSEO_VR": list(NYSEO_df.loc[NYSEO_df["Metric"] == "VR"].iloc[0, 1:].values),
-#     "NYSEO_MDD": list(NYSEO_df.loc[NYSEO_df["Metric"] == "MDD"].iloc[0, 1:].values),
-#
-#     "NYSEN_VR": list(NYSEN_df.loc[NYSEN_df["Metric"] == "VR"].iloc[0, 1:].values),
-#     "NYSEN_MDD": list(NYSEN_df.loc[NYSEN_df["Metric"] == "MDD"].iloc[0, 1:].values),
-#
-#     "DJIA_VR": list(DJIA_df.loc[DJIA_df["Metric"] == "VR"].iloc[0, 1:].values),
-#     "DJIA_MDD": list(DJIA_df.loc[DJIA_df["Metric"] == "MDD"].iloc[0, 1:].values),
-#
-#     "SP500_VR": list(SP500_df.loc[SP500_df["Metric"] == "VR"].iloc[0, 1:].values),
-#     "SP500_MDD": list(SP500_df.loc[SP500_df["Metric"] == "MDD"].iloc[0, 1:].values),
-#
-#     "TSE_VR": list(TSE_df.loc[TSE_df["Metric"] == "VR"].iloc[0, 1:].values),
-#     "TSE_MDD": list(TSE_df.loc[TSE_df["Metric"] == "MDD"].iloc[0, 1:].values),
-#
-#     "SSE_VR": list(SSE_df.loc[SSE_df["Metric"] == "VR"].iloc[0, 1:].values),
-#     "SSE_MDD": list(SSE_df.loc[SSE_df["Metric"] == "MDD"].iloc[0, 1:].values),
-#
-#     "HSI_VR": list(HSI_df.loc[HSI_df["Metric"] == "VR"].iloc[0, 1:].values),
-#     "HSI_MDD": list(HSI_df.loc[HSI_df["Metric"] == "MDD"].iloc[0, 1:].values),
-#
-#     "CMEG_VR": list(CMEG_df.loc[CMEG_df["Metric"] == "VR"].iloc[0, 1:].values),
-#     "CMEG_MDD": list(CMEG_df.loc[CMEG_df["Metric"] == "MDD"].iloc[0, 1:].values),
-#
-#     "CRYPTO_VR": list(CRYPTO_df.loc[CRYPTO_df["Metric"] == "VR"].iloc[0, 1:].values),
-#     "CRYPTO_MDD": list(CRYPTO_df.loc[CRYPTO_df["Metric"] == "MDD"].iloc[0, 1:].values),
-# }
-#
-# models_df = pd.DataFrame(data)
-# models_df = models_df[~models_df['Model'].isin(['Best', 'BCRP'])]
-# print(models_df)
-#
-# battles = []
-#
-# for dataset in ["NYSEO", "NYSEN", "DJIA", "SP500", "TSE", "SSE", "HSI", "CMEG", "CRYPTO"]:
-# # for dataset in ['CRYPTO', 'CMEG', 'HSI', 'SSE', 'TSE', 'SP500', 'DJIA', 'NYSEN', 'NYSEO']:
-#     for index, row in models_df.iterrows():
-#         model_a = row["Model"]
-#         for inner_index, inner_row in models_df.iterrows():
-#             if index != inner_index:
-#                 model_b = inner_row["Model"]
-#                 for metric in ["VR", "MDD"]:
-#                 # for metric in ["MDD", "VR"]:
-#                     a_value = row[f"{dataset}_{metric}"]
-#                     b_value = inner_row[f"{dataset}_{metric}"]
-#
-#                     if a_value < b_value:
-#                         winner = "model_a"
-#                     elif a_value > b_value:
-#                         winner = "model_b"
-#                     else:
-#                         winner = "tie"
-#
-#                     battles.append({
-#                         "model_a": model_a,
-#                         "model_b": model_b,
-#                         "winner": winner,
-#                     })
-#
-#
-# battles = pd.DataFrame(battles)
-# print(battles)
-#
-# elo_ratings = compute_elo(battles)
-# elo = preety_print_elo_ratings(elo_ratings)
+# ### Maximum Likelihood Estimation
+# # Another way to fit Elo ratings is using maximum likelihood estimation.
+# # Here, we provide an impelmentation with logistic regression.
+# elo_mle_ratings = compute_elo_mle(battles)
+# elo = preety_print_elo_ratings(elo_mle_ratings)
 # print(
-#     "elo:\n",
+#     "elo bootstrap mle version:\n",
 #     elo
 # )
 #
-# ### Compute Bootstrap Confidence Interavals for Elo Scores
-# # The previous linear update method may be sensitive to battle orders.
-# # Here, we use bootstrap to get a more stable versoion and estimate the confidence intervals as well.
-# BOOTSTRAP_ROUNDS = 1000
-# np.random.seed(config["MANUAL_SEED"])
-# bootstrap_elo_lu = get_bootstrap_result(battles, compute_elo, BOOTSTRAP_ROUNDS)
-# bootstrap_lu_median = bootstrap_elo_lu.median().reset_index().set_axis(["model", "Elo rating"], axis=1)
-# bootstrap_lu_median["Elo rating"] = (bootstrap_lu_median["Elo rating"] + 0.5).astype(int)
-# print(
-#     "elo bootstrap version:\n",
-#     bootstrap_lu_median
-# )
-# visualize_bootstrap_scores(bootstrap_elo_lu, "Bootstrap of Elo Estimates")
-#
+# elo_mle_bootstrap = get_bootstrap_result(battles, compute_elo_mle, BOOTSTRAP_ROUNDS)
+# visualize_bootstrap_scores(elo_mle_bootstrap, "Bootstrap of MLE Elo Estimates")
+
+
+# Practicality
+r = ROOT_PATH + r"\data\benchmark_results\practical_metrics"
+NYSEO_df = pd.read_excel(r + r"\NYSE(O)\final_practical_result.xlsx", sheet_name="Sheet1")
+NYSEN_df = pd.read_excel(r + r"\NYSE(N)\final_practical_result.xlsx", sheet_name="Sheet1")
+DJIA_df = pd.read_excel(r + r"\DJIA\final_practical_result.xlsx", sheet_name="Sheet1")
+SP500_df = pd.read_excel(r + r"\SP500\final_practical_result.xlsx", sheet_name="Sheet1")
+TSE_df = pd.read_excel(r + r"\TSE\final_practical_result.xlsx", sheet_name="Sheet1")
+SSE_df = pd.read_excel(r + r"\SSE\final_practical_result.xlsx", sheet_name="Sheet1")
+HSI_df = pd.read_excel(r + r"\HSI\final_practical_result.xlsx", sheet_name="Sheet1")
+CMEG_df = pd.read_excel(r + r"\CMEG\final_practical_result.xlsx", sheet_name="Sheet1")
+CRYPTO_df = pd.read_excel(r + r"\CRYPTO\final_practical_result.xlsx", sheet_name="Sheet1")
+
+data = {
+    "Model": model,
+    "NYSEO_ATO": list(NYSEO_df.loc[NYSEO_df["Metric"] == "ATO"].iloc[0, 1:].values),
+    "NYSEO_RT": list(NYSEO_df.loc[NYSEO_df["Metric"] == "RT"].iloc[0, 1:].values),
+
+    "NYSEN_ATO": list(NYSEN_df.loc[NYSEN_df["Metric"] == "ATO"].iloc[0, 1:].values),
+    "NYSEN_RT": list(NYSEN_df.loc[NYSEN_df["Metric"] == "RT"].iloc[0, 1:].values),
+
+    "DJIA_ATO": list(DJIA_df.loc[DJIA_df["Metric"] == "ATO"].iloc[0, 1:].values),
+    "DJIA_RT": list(DJIA_df.loc[DJIA_df["Metric"] == "RT"].iloc[0, 1:].values),
+
+    "SP500_ATO": list(SP500_df.loc[SP500_df["Metric"] == "ATO"].iloc[0, 1:].values),
+    "SP500_RT": list(SP500_df.loc[SP500_df["Metric"] == "RT"].iloc[0, 1:].values),
+
+    "TSE_ATO": list(TSE_df.loc[TSE_df["Metric"] == "ATO"].iloc[0, 1:].values),
+    "TSE_RT": list(TSE_df.loc[TSE_df["Metric"] == "RT"].iloc[0, 1:].values),
+
+    "SSE_ATO": list(SSE_df.loc[SSE_df["Metric"] == "ATO"].iloc[0, 1:].values),
+    "SSE_RT": list(SSE_df.loc[SSE_df["Metric"] == "RT"].iloc[0, 1:].values),
+
+    "HSI_ATO": list(HSI_df.loc[HSI_df["Metric"] == "ATO"].iloc[0, 1:].values),
+    "HSI_RT": list(HSI_df.loc[HSI_df["Metric"] == "RT"].iloc[0, 1:].values),
+
+    "CMEG_ATO": list(CMEG_df.loc[CMEG_df["Metric"] == "ATO"].iloc[0, 1:].values),
+    "CMEG_RT": list(CMEG_df.loc[CMEG_df["Metric"] == "RT"].iloc[0, 1:].values),
+
+    "CRYPTO_ATO": list(CRYPTO_df.loc[CRYPTO_df["Metric"] == "ATO"].iloc[0, 1:].values),
+    "CRYPTO_RT": list(CRYPTO_df.loc[CRYPTO_df["Metric"] == "RT"].iloc[0, 1:].values),
+}
+
+models_df = pd.DataFrame(data)
+models_df = models_df[~models_df['Model'].isin(['Best', 'BCRP'])]
+print(models_df)
+
+battles = []
+
+for dataset in datasets:
+    for index, row in models_df.iterrows():
+        model_a = row["Model"]
+        for inner_index, inner_row in models_df.iterrows():
+            if index != inner_index:
+                model_b = inner_row["Model"]
+                for metric in practical_metrics:
+                    a_value = row[f"{dataset}_{metric}"]
+                    b_value = inner_row[f"{dataset}_{metric}"]
+
+                    if a_value < b_value:
+                        winner = "model_a"
+                    elif a_value > b_value:
+                        winner = "model_b"
+                    else:
+                        winner = "tie"
+
+                    battles.append({
+                        "model_a": model_a,
+                        "model_b": model_b,
+                        "winner": winner,
+                    })
+
+
+battles = pd.DataFrame(battles)
+print(battles)
+
+elo_ratings = compute_elo(battles)
+elo = preety_print_elo_ratings(elo_ratings)
+print(
+    "elo:\n",
+    elo
+)
+
+### Compute Bootstrap Confidence Interavals for Elo Scores
+# The previous linear update method may be sensitive to battle orders.
+# Here, we use bootstrap to get a more stable versoion and estimate the confidence intervals as well.
+BOOTSTRAP_ROUNDS = 1000
+np.random.seed(config["MANUAL_SEED"])
+bootstrap_elo_lu = get_bootstrap_result(battles, compute_elo, BOOTSTRAP_ROUNDS)
+bootstrap_lu_median = bootstrap_elo_lu.median().reset_index().set_axis(["model", "Elo rating"], axis=1)
+bootstrap_lu_median["Elo rating"] = (bootstrap_lu_median["Elo rating"] + 0.5).astype(int)
+print(
+    "elo bootstrap version:\n",
+    bootstrap_lu_median
+)
+visualize_bootstrap_scores(bootstrap_elo_lu, "Bootstrap of Elo Ratings on Practicality")
 #
 # ### Maximum Likelihood Estimation
 # # Another way to fit Elo ratings is using maximum likelihood estimation.

@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 from captum.attr import Saliency
 from typing import List, Tuple, Dict, Union
-from finol.evaluation_layer.metric_caculator import MetricCaculator
+from finol.evaluation_layer.metric_calculator import MetricCalculator
 from finol.evaluation_layer.distiller_selector import DistillerSelector
 from finol.utils import load_config, portfolio_selection, actual_portfolio_selection
 
@@ -173,8 +173,8 @@ class EconomicDistiller:
                 portfolios[day, :] = portfolio
 
             runtime = time.time() - start_time
-            economic_distiller_caculate_metric_output = MetricCaculator(mode="ed").caculate_metric(portfolios, labels, runtime)
-            # print(economic_distiller_caculate_metric_output)
+            economic_distiller_calculate_metric_output = MetricCalculator(mode="ed").calculate_metric(portfolios, labels, runtime)
+            # print(economic_distiller_calculate_metric_output)
 
             # Convert coefficients to ndarray
             coef_array = np.array(coef_list)
@@ -260,5 +260,5 @@ class EconomicDistiller:
                         dpi=300,
                         bbox_inches="tight")
             plt.show()
-            return economic_distiller_caculate_metric_output
+            return economic_distiller_calculate_metric_output
         return None

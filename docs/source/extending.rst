@@ -61,12 +61,10 @@ To integrate your own datasets into ``FinOL``, follow these steps:
     }
 
 
-
 .. note::
     Instead of customizing the dataset yourself, we recommend that you raise an issue or contact us by email so we can
     evaluate and potentially include your dataset in the ``FinOL`` project.
     This ensures the baseline results are supported.
-
 
 Adding New Method
 -----------------

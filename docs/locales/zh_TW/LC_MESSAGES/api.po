@@ -650,12 +650,12 @@ msgstr ""
 
 #: ../../source/api/evaluation_layer.rst:17:<autosummary>:1
 msgid ""
-":py:obj:`finol.evaluation_layer.MetricCaculator "
-"<finol.evaluation_layer.MetricCaculator>`"
+":py:obj:`finol.evaluation_layer.MetricCalculator "
+"<finol.evaluation_layer.MetricCalculator>`"
 msgstr ""
 
 #: ../../source/api/evaluation_layer.rst:17:<autosummary>:1
-#: finol.evaluation_layer.metric_caculator.MetricCaculator:1 of
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator:1 of
 msgid ""
 "Class to calculate various evaluation metrics based on the loaded "
 "dataset output and trained model output."
@@ -687,7 +687,7 @@ msgstr ""
 #: ../../source/api/generated/finol.evaluation_layer.BenchmarkLoader.rst:13
 #: ../../source/api/generated/finol.evaluation_layer.DistillerSelector.rst:13
 #: ../../source/api/generated/finol.evaluation_layer.EconomicDistiller.rst:13
-#: ../../source/api/generated/finol.evaluation_layer.MetricCaculator.rst:13
+#: ../../source/api/generated/finol.evaluation_layer.MetricCalculator.rst:13
 #: ../../source/api/generated/finol.evaluation_layer.ModelEvaluator.rst:13
 #: ../../source/api/generated/finol.evaluation_layer.ResultVisualizer.rst:13
 #: ../../source/api/generated/finol.model_layer.AlphaPortfolio.rst
@@ -836,15 +836,15 @@ msgstr ""
 #: finol.data_layer.scaler_selector.ScalerSelector.window_normalize_via_StandardScaler
 #: finol.evaluation_layer.benchmark_loader.BenchmarkLoader
 #: finol.evaluation_layer.benchmark_loader.BenchmarkLoader.find_top_5_baselines
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_average_turnover
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_final_cumulative_wealth
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_maximum_drawdown
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_metric
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_runtime
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_sharpe_ratio
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_transaction_costs_wealth
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_volatility_risk
+#: finol.evaluation_layer.metric_calculator.MetricCalculator.calculate_annual_percentage_yield
+#: finol.evaluation_layer.metric_calculator.MetricCalculator.calculate_average_turnover
+#: finol.evaluation_layer.metric_calculator.MetricCalculator.calculate_final_cumulative_wealth
+#: finol.evaluation_layer.metric_calculator.MetricCalculator.calculate_maximum_drawdown
+#: finol.evaluation_layer.metric_calculator.MetricCalculator.calculate_metric
+#: finol.evaluation_layer.metric_calculator.MetricCalculator.calculate_runtime
+#: finol.evaluation_layer.metric_calculator.MetricCalculator.calculate_sharpe_ratio
+#: finol.evaluation_layer.metric_calculator.MetricCalculator.calculate_transaction_costs_wealth
+#: finol.evaluation_layer.metric_calculator.MetricCalculator.calculate_volatility_risk
 #: finol.model_layer.AlphaPortfolio.AlphaPortfolio
 #: finol.model_layer.AlphaPortfolio.AlphaPortfolio.forward
 #: finol.model_layer.CNN.CNN finol.model_layer.CNN.CNN.forward
@@ -917,16 +917,16 @@ msgstr ""
 #: finol.data_layer.scaler_selector.ScalerSelector.window_normalize_via_MinMaxScaler
 #: finol.data_layer.scaler_selector.ScalerSelector.window_normalize_via_RobustScaler
 #: finol.data_layer.scaler_selector.ScalerSelector.window_normalize_via_StandardScaler
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_average_turnover
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_final_cumulative_wealth
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_maximum_drawdown
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_metric
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_portfolios
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_runtime
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_sharpe_ratio
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_transaction_costs_wealth
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_volatility_risk
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_average_turnover
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_final_cumulative_wealth
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_maximum_drawdown
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_metric
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_portfolios
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_runtime
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_sharpe_ratio
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_transaction_costs_wealth
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_volatility_risk
 #: finol.evaluation_layer.model_evaluator.ModelEvaluator.evaluate_model
 #: finol.evaluation_layer.result_visualizer.ResultVisualizer.plot_daily_cumulative_wealth
 #: finol.evaluation_layer.result_visualizer.ResultVisualizer.plot_daily_drawdown
@@ -999,16 +999,16 @@ msgstr ""
 #: finol.data_layer.scaler_selector.ScalerSelector.window_normalize_via_StandardScaler
 #: finol.evaluation_layer.benchmark_loader.BenchmarkLoader.find_top_5_baselines
 #: finol.evaluation_layer.benchmark_loader.BenchmarkLoader.load_benchmark
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_average_turnover
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_final_cumulative_wealth
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_maximum_drawdown
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_metric
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_portfolios
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_runtime
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_sharpe_ratio
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_transaction_costs_wealth
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_volatility_risk
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_average_turnover
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_final_cumulative_wealth
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_maximum_drawdown
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_metric
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_portfolios
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_runtime
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_sharpe_ratio
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_transaction_costs_wealth
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_volatility_risk
 #: finol.evaluation_layer.model_evaluator.ModelEvaluator.evaluate_model
 #: finol.evaluation_layer.result_visualizer.ResultVisualizer.plot_daily_cumulative_wealth
 #: finol.evaluation_layer.result_visualizer.ResultVisualizer.plot_daily_drawdown
@@ -1326,20 +1326,20 @@ msgid ""
 "\\(\\)"
 msgstr ""
 
-#: ../../source/api/generated/finol.evaluation_layer.MetricCaculator.rst:2
-msgid "finol.evaluation\\_layer.MetricCaculator"
+#: ../../source/api/generated/finol.evaluation_layer.MetricCalculator.rst:2
+msgid "finol.evaluation\\_layer.MetricCalculator"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
 #: of
 msgid ""
-":py:obj:`caculate_annual_percentage_yield "
-"<finol.evaluation_layer.MetricCaculator.caculate_annual_percentage_yield>`\\"
+":py:obj:`calculate_annual_percentage_yield "
+"<finol.evaluation_layer.MetricCalculator.calculate_annual_percentage_yield>`\\"
 " \\(...\\)"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
 #: of
 msgid ""
 "*Annualized Percentage Yield* (APY): Annualize the *Final Cumulative "
@@ -1347,32 +1347,32 @@ msgid ""
 "comparison across different datasets."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
 #: of
 msgid ""
-":py:obj:`caculate_average_turnover "
-"<finol.evaluation_layer.MetricCaculator.caculate_average_turnover>`\\ "
+":py:obj:`calculate_average_turnover "
+"<finol.evaluation_layer.MetricCalculator.calculate_average_turnover>`\\ "
 "\\(daily\\_turnovers\\)"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_average_turnover:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_average_turnover:1
 #: of
 msgid ""
 "*Average Turnover* (ATO): Calculate the average proportion of portfolio "
 "vectors changed between periods, indicating rebalancing frequency."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
 #: of
 msgid ""
-":py:obj:`caculate_final_cumulative_wealth "
-"<finol.evaluation_layer.MetricCaculator.caculate_final_cumulative_wealth>`\\"
+":py:obj:`calculate_final_cumulative_wealth "
+"<finol.evaluation_layer.MetricCalculator.calculate_final_cumulative_wealth>`\\"
 " \\(portfolios\\, ...\\)"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_final_cumulative_wealth:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_final_cumulative_wealth:1
 #: of
 msgid ""
 "*Final Cumulative Wealth* (FCW): Calculate the final cumulative wealth "
@@ -1380,91 +1380,91 @@ msgid ""
 "of the :math:`n`-th trading periods."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
 #: of
 msgid ""
-":py:obj:`caculate_maximum_drawdown "
-"<finol.evaluation_layer.MetricCaculator.caculate_maximum_drawdown>`\\ "
+":py:obj:`calculate_maximum_drawdown "
+"<finol.evaluation_layer.MetricCalculator.calculate_maximum_drawdown>`\\ "
 "\\(...\\)"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_maximum_drawdown:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_maximum_drawdown:1
 #: of
 msgid ""
 "*Maximum DrawDown* (MDD): Measure the maximum peak-to-trough decline of a"
 " portfolio over the investment horizon :math:`n`."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
 #: of
 msgid ""
-":py:obj:`caculate_metric "
-"<finol.evaluation_layer.MetricCaculator.caculate_metric>`\\ "
+":py:obj:`calculate_metric "
+"<finol.evaluation_layer.MetricCalculator.calculate_metric>`\\ "
 "\\(\\[portfolios\\, labels\\, runtime\\]\\)"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_metric:1 of
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_metric:1 of
 msgid ""
 "Calculate various performance metrics based on the provided portfolios, "
 "labels."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
 #: of
 msgid ""
-":py:obj:`caculate_portfolios "
-"<finol.evaluation_layer.MetricCaculator.caculate_portfolios>`\\ \\(\\)"
+":py:obj:`calculate_portfolios "
+"<finol.evaluation_layer.MetricCalculator.calculate_portfolios>`\\ \\(\\)"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_portfolios:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_portfolios:1
 #: of
 msgid "Calculate the portfolio sequence :math:`\\mathbf{b}_{1:n}`."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
 #: of
 msgid ""
-":py:obj:`caculate_runtime "
-"<finol.evaluation_layer.MetricCaculator.caculate_runtime>`\\ "
+":py:obj:`calculate_runtime "
+"<finol.evaluation_layer.MetricCalculator.calculate_runtime>`\\ "
 "\\(runtime\\)"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
 #: of
 msgid ""
 "*Running Time* (RT): Measure the amount of time required to execute "
 "trades for an OLPS method."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
 #: of
 msgid ""
-":py:obj:`caculate_sharpe_ratio "
-"<finol.evaluation_layer.MetricCaculator.caculate_sharpe_ratio>`\\ "
+":py:obj:`calculate_sharpe_ratio "
+"<finol.evaluation_layer.MetricCalculator.calculate_sharpe_ratio>`\\ "
 "\\(daily\\_returns\\, ...\\)"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_sharpe_ratio:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_sharpe_ratio:1
 #: of
 msgid ""
 "*Sharpe Ratio* (SR): Measure risk-adjusted return using the portfolio's "
 "excess return over risk-free rate per unit of volatility risk."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
 #: of
 msgid ""
-":py:obj:`caculate_transaction_costs_wealth "
-"<finol.evaluation_layer.MetricCaculator.caculate_transaction_costs_wealth>`\\"
+":py:obj:`calculate_transaction_costs_wealth "
+"<finol.evaluation_layer.MetricCalculator.calculate_transaction_costs_wealth>`\\"
 " \\(...\\)"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_transaction_costs_wealth:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_transaction_costs_wealth:1
 #: of
 msgid ""
 "*Transaction Costs-Adjusted Cumulative Wealth* (TCW):  Apply proportional"
@@ -1472,16 +1472,16 @@ msgid ""
 "rebalancing."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
 #: of
 msgid ""
-":py:obj:`caculate_volatility_risk "
-"<finol.evaluation_layer.MetricCaculator.caculate_volatility_risk>`\\ "
+":py:obj:`calculate_volatility_risk "
+"<finol.evaluation_layer.MetricCalculator.calculate_volatility_risk>`\\ "
 "\\(daily\\_returns\\)"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:1:<autosummary>:1
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_volatility_risk:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:1:<autosummary>:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_volatility_risk:1
 #: of
 msgid ""
 "*Volatility Risk* (VR): Calculate the annualized standard deviation "
@@ -1489,40 +1489,40 @@ msgid ""
 "fluctuation risk."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:3
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:3
 #: of
 msgid "\\mathrm{APY}=\\sqrt[y]{\\mathrm{FCW}}-1,"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:7
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:7
 #: of
 msgid "where :math:`y` is the number of years in the investment period."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:9
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:9
 #: of
 msgid "Number of trading periods :math:`n`."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:10
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:10
 #: of
 msgid "*Final Cumulative Wealth*."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_annual_percentage_yield:11
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_sharpe_ratio:10
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_annual_percentage_yield:11
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_sharpe_ratio:10
 #: of
 msgid "*Annual Percentage Yield*."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_average_turnover:3
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_average_turnover:3
 #: of
 msgid ""
 "\\mathrm{ATO}=\\frac{1}{2(n)} "
 "\\sum_{t=1}^n\\left\\|\\mathbf{b}_t-\\hat{\\mathbf{b}}_{t-1}\\right\\|_1,"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_average_turnover:7
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_average_turnover:7
 #: of
 msgid ""
 "where portfolio :math:`\\hat{\\mathbf{b}}_{t-1} = (\\frac{b_{t-1, 1}  "
@@ -1533,24 +1533,24 @@ msgid ""
 "set all elements of :math:`\\hat{\\mathbf{b}}_{0}` to 0."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_average_turnover:9
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_average_turnover:9
 #: of
 msgid "Daily turnover sequence."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_average_turnover:10
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_average_turnover:10
 #: of
 msgid "*Average Turnover*"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_final_cumulative_wealth:3
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_final_cumulative_wealth:3
 #: of
 msgid ""
 "\\mathrm{FCW}=S_0 \\prod_{t=1}^n \\mathbf{b}_t^{\\top} \\mathbf{x}_t=S_0 "
 "\\prod_{t=1}^n \\sum_{i=1}^m b_{t, i} x_{t, i},"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_final_cumulative_wealth:7
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_final_cumulative_wealth:7
 #: of
 msgid ""
 "where :math:`S_0` is the initial cumulative wealth, :math:`\\mathbf{b}_t`"
@@ -1558,79 +1558,79 @@ msgid ""
 "vector in period :math:`t`."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_final_cumulative_wealth:9
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_final_cumulative_wealth:9
 #: of
 msgid ""
 "Portfolio sequence :math:`\\mathbf{b}_{1:n} \\in \\mathbb{R}^{n {\\times}"
 " m}`."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_final_cumulative_wealth:10
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_final_cumulative_wealth:10
 #: of
 msgid ""
 "Price relative sequence :math:`\\mathbf{x}_{1:n} \\in \\mathbb{R}_{+}^{n "
 "{\\times} m}`."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_final_cumulative_wealth:11
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_final_cumulative_wealth:11
 #: of
 msgid ""
 "Tuple containing the daily return, daily cumulative wealth, and final "
 "cumulative wealth."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_maximum_drawdown:3
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_maximum_drawdown:3
 #: of
 msgid ""
 "\\mathrm{MDD}=\\max_{0\\leq t\\leq n}\\left(\\frac{\\max_{0\\leq k\\leq "
 "t} S_k - S_t}{\\max_{0\\leq k\\leq t} S_k}\\right),"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_maximum_drawdown:7
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_maximum_drawdown:7
 #: of
 msgid ""
 "where :math:`S_t` is the cumulative wealth at the end of the :math:`t`-th"
 " trading period."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_maximum_drawdown:9
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_maximum_drawdown:9
 #: of
 msgid "*Daily Cumulative Wealth*."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_maximum_drawdown:10
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_maximum_drawdown:10
 #: of
 msgid ""
 "Tuple containing the daily drawdown, daily maximum drawdown, and maximum "
 "drawdown."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_metric:3 of
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_metric:3 of
 msgid "Portfolio sequence :math:`\\mathbf{b}_{1:n}`."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_metric:4 of
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_metric:4 of
 msgid "Price relative sequence :math:`\\mathbf{x}_{1:n}`."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_metric:5 of
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_metric:5 of
 msgid ""
 "The runtime information. Required only when ``self.mode`` is ``ed`` "
 "(economic distillation)."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_metric:6 of
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_metric:6 of
 msgid "Dictionary containing calculated performance metrics."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_portfolios:3
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_portfolios:3
 #: of
 msgid ""
 "Tuple containing the portfolio sequence :math:`\\mathbf{b}_{1:n}`, price "
 "relative sequence :math:`\\mathbf{x}_{1:n}`, and other information."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_runtime:1
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_runtime:1
 #: of
 msgid ""
 "*Running Time* (RT): Measure the amount of time required to execute "
@@ -1639,25 +1639,25 @@ msgid ""
 "at less favorable prices."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_runtime:5
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_runtime:5
 #: of
 msgid ""
 "While it is typically assumed in OLPS problems that execution at the "
 "desired price is always possible."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_runtime:7
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_runtime:8
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_runtime:7
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_runtime:8
 #: of
 msgid "*Running Time*."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_sharpe_ratio:3
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_sharpe_ratio:3
 #: of
 msgid "\\mathrm{SR}=\\frac{\\mathrm{APY}-R^f}{\\sigma_n},"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_sharpe_ratio:7
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_sharpe_ratio:7
 #: of
 msgid ""
 "where :math:`R^f = 0.04` is the annualized risk-free rate and "
@@ -1665,18 +1665,18 @@ msgid ""
 "daily returns."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_sharpe_ratio:9
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_volatility_risk:3
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_sharpe_ratio:9
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_volatility_risk:3
 #: of
 msgid "Daily return sequence."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_sharpe_ratio:11
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_sharpe_ratio:11
 #: of
 msgid "*Sharpe Ratio*."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_transaction_costs_wealth:3
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_transaction_costs_wealth:3
 #: of
 msgid ""
 "\\mathrm{TCW} = S_0 \\prod_{t=1}^n\\left[\\left(\\mathbf{b}_t^{\\top}  "
@@ -1684,7 +1684,7 @@ msgid ""
 "\\left\\|\\mathbf{b}_t-\\hat{\\mathbf{b}}_{t-1}\\right\\|_1\\right)\\right],"
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_transaction_costs_wealth:7
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_transaction_costs_wealth:7
 #: of
 msgid ""
 "where :math:`S_0` is the initial cumulative wealth, :math:`\\mathbf{b}_t`"
@@ -1693,24 +1693,24 @@ msgid ""
 " rate."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_transaction_costs_wealth:9
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_transaction_costs_wealth:9
 #: of
 msgid "Portfolio sequence."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_transaction_costs_wealth:10
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_transaction_costs_wealth:10
 #: of
 msgid "Price relative sequence."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_transaction_costs_wealth:11
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_transaction_costs_wealth:11
 #: of
 msgid ""
 "Tuple containing daily turnover and *transaction costs-adjusted "
 "cumulative wealth*."
 msgstr ""
 
-#: finol.evaluation_layer.metric_caculator.MetricCaculator.caculate_volatility_risk:4
+#: finol.evaluation_layer.metric_Calculator.MetricCalculator.calculate_volatility_risk:4
 #: of
 msgid "*Volatility Risk*."
 msgstr ""

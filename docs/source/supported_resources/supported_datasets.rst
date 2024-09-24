@@ -1,6 +1,6 @@
 .. _supported_datasets:
 
-Global Datasets
+Benchmark Datasets
 ================================================
 
 .. table::
