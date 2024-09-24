@@ -108,7 +108,7 @@ class AlphaStock(nn.Module):
         >>> config["MODEL_NAME"] = "AlphaStock"
         >>> config["MODEL_PARAMS"]["AlphaStock"]["NUM_LAYERS"] = 1
         >>> config["MODEL_PARAMS"]["AlphaStock"]["HIDDEN_SIZE"] = 64
-        >>> config["MODEL_PARAMS"]["AlphaStock"]["DIM_FEEDFORWARD"] = 64
+        >>> config["MODEL_PARAMS"]["AlphaStock"]["DROPOUT"] = 0.1
         >>> ...
         >>> update_config(config)
         >>>
