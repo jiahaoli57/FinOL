@@ -5,7 +5,7 @@
     "CHECK_UPDATE": false,
     "DOWNLOAD_DATA": false,
     "_note2": "-------------------------------------- Data Layer Configuration ----------------------------------------",
-    "LOAD_LOCAL_DATALOADER": false,
+    "LOAD_LOCAL_DATALOADER": true,
     "DATASET_NAME": "DJIA",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
@@ -102,22 +102,11 @@
     "DATA_AUGMENTATION_CONFIG": {
         "WINDOW_DATA": {
             "INCLUDE_WINDOW_DATA": true,
-            "WINDOW_SIZE": 20
+            "WINDOW_SIZE": 10
         }
     },
-    "SCALER": "WindowStandardScaler",
-    "BATCH_SIZE": {
-        "NYSE(O)": 128,
-        "NYSE(N)": 128,
-        "DJIA": 512,
-        "SP500": 64,
-        "TSE": 256,
-        "SSE": 64,
-        "HSI": 64,
-        "CMEG": 64,
-        "CRYPTO": 128,
-        "CustomDataset": 0
-    },
+    "SCALER": "WindowMaxAbsScaler",
+    "BATCH_SIZE": 256,
     "NUM_DAYS_PER_YEAR": {
         "NYSE(O)": 252,
         "NYSE(N)": 252,
@@ -131,14 +120,14 @@
         "CustomDataset": 0
     },
     "_note3": "-------------------------------------- Model Layer Configuration ---------------------------------------",
-    "MODEL_NAME": "AlphaStock",
+    "MODEL_NAME": "DNN",
     "MODEL_PARAMS": {
         "AlphaPortfolio": {
-            "NUM_LAYERS": 4,
-            "DIM_EMBEDDING": 224,
-            "DIM_FEEDFORWARD": 128,
+            "NUM_LAYERS": 3,
+            "DIM_EMBEDDING": 192,
+            "DIM_FEEDFORWARD": 160,
             "NUM_HEADS": 1,
-            "DROPOUT": 0.4
+            "DROPOUT": 0.25
         },
         "AlphaStock": {
             "NUM_LAYERS": 2,
@@ -153,9 +142,9 @@
             "DROPOUT": 0.2
         },
         "DNN": {
-            "NUM_LAYERS": 3,
-            "HIDDEN_SIZE": 240,
-            "DROPOUT": 0.15000000000000002
+            "NUM_LAYERS": 2,
+            "HIDDEN_SIZE": 512,
+            "DROPOUT": 0.25
         },
         "GRU": {
             "NUM_LAYERS": 2,
@@ -627,16 +616,16 @@
         }
     },
     "_note4": "----------------------------------- Optimization Layer Configuration -----------------------------------",
-    "NUM_EPOCHES": 50,
+    "NUM_EPOCHES": 20,
     "SAVE_EVERY": 1,
-    "OPTIMIZER_NAME": "Adam",
+    "OPTIMIZER_NAME": "AdamW",
     "LEARNING_RATE": 0.004,
     "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
     "TUNE_PARAMETERS": true,
-    "NUM_TRIALS": 20,
+    "NUM_TRIALS": 30,
     "SAMPLER_NAME": "RandomSampler",
-    "PRUNER_NAME": "NopPruner",
+    "PRUNER_NAME": "MedianPruner",
     "WRAPPED_PRUNER_NAME": "MedianPruner",
     "_note5": "------------------------------------ Evaluation Layer Configuration ------------------------------------",
     "PLOT_LANGUAGE": "en",

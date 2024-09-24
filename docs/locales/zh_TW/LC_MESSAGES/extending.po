@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-msgid "Extending FinOL"
+msgid "Extend FinOL"
 msgstr "擴展 FinOL"
 
 msgid "Adding New Dataset"

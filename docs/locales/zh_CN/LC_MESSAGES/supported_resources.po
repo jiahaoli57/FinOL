@@ -53,11 +53,6 @@ msgctxt "supported_baselines"
 msgid "Market"
 msgstr ""
 
-#: ../../source/supported_resources/supported_datasets.rst:9
-msgctxt "supported_datasets"
-msgid "Market"
-msgstr "市场"
-
 #: ../../source/supported_resources/supported_baselines.rst:12
 #: ../../source/supported_resources/supported_baselines.rst:16
 #: ../../source/supported_resources/supported_baselines.rst:20
@@ -2824,26 +2819,6 @@ msgid ""
 msgstr ""
 "``FinOL`` 提供了一套可视化工具，以促进对数据驱动的 OLPS 研究进行全面评估。以下是一些例子："
 
-#: ../../source/supported_resources/supported_visualization.rst:10
-msgid "Dynamic Training/Validation Loss Visualization"
-msgstr ""
-
-#: ../../source/supported_resources/supported_visualization.rst:20
-msgid "Daily Cumulative Wealth Visualization"
-msgstr ""
-
-#: ../../source/supported_resources/supported_visualization.rst:26
-msgid "Daily DrawDown"
-msgstr ""
-
-#: ../../source/supported_resources/supported_visualization.rst:32
-msgid "Transaction Cost-Adjusted Cumulative Wealth"
-msgstr ""
-
-#: ../../source/supported_resources/supported_visualization.rst:38
-msgid "Comprehensive Radar Chart"
-msgstr ""
-
 ################################################################
 #: ../../source/supported_resources/supported_metrics.rst:12
 msgid "Profitability"
@@ -2874,3 +2849,82 @@ msgstr "综合的指标"
 
 msgid "Multiple visual tools"
 msgstr "多种可视化工具"
+
+msgid "Loss Visualization"
+msgstr "损失可视化"
+
+msgid "Loss visualization is crucial for understanding model performance during training and validation. It helps identify overfitting and underfitting issues, allowing for better hyper-parameters tuning."
+msgstr "损失可视化对于理解模型在训练和验证过程中的表现至关重要。它帮助识别过拟合和欠拟合问题，从而更好地调整超参数。"
+
+msgid "Training and Validation Loss Trends"
+msgstr "训练集和验证集损失趋势"
+
+msgid "Hyper-parameters Tuning Process Visualization"
+msgstr "超参数优化过程可视化"
+
+msgid "Visualizing the hyper-parameters tuning process can provide insights into how different parameters affect model performance. This helps in selecting the most effective parameters for improved results."
+msgstr "可视化超参数优化过程可以提供不同参数如何影响模型性能的见解。这有助于选择最有效的参数以改善结果。"
+
+msgid "Hyper-parameters Tuning Contour Plot"
+msgstr "超参数优化轮廓图"
+
+msgid "Empirical Distribution Function of Hyper-parameters"
+msgstr "超参数的经验分布函数"
+
+msgid "Optimization History of Hyper-parameters Search"
+msgstr "超参数搜索的优化历史"
+
+msgid "Parallel Coordinate Plot of Hyper-parameters Importance"
+msgstr "超参数重要性的平行坐标图"
+
+msgid "Hyper-parameters Importance Analysis"
+msgstr "超参数重要性分析"
+
+msgid "Ranking of Hyper-parameters Based on Performance"
+msgstr "基于性能的超参数排名"
+
+msgid "Slicing Through Hyper-parameters Space"
+msgstr "切片超参数空间"
+
+msgid "Daily Cumulative Wealth (DCW) Visualization"
+msgstr "每日累计财富（DCW）可视化"
+
+msgid "As profitability is the ultimate goal of trading, the DCW trajectories directly showcase the cumulative returns of methods over time. Higher and more stable DCW curves indicate stronger capability to steadily accumulate profits in the long run."
+msgstr "利润是交易的最终目标，因此 DCW 轨迹直接展示了方法随时间变化的累计收益。更高且更稳定的 DCW 曲线表明在长期内稳步积累利润的能力更强。"
+
+msgid "Example Results of Daily Cumulative Wealth on DJIA"
+msgstr "DJIA 上每日累计财富的示例结果"
+
+msgid "Daily Maximum DrawDown (DMDD) Visualization"
+msgstr "每日最大回撤（DMDD）可视化"
+
+msgid "The DMDD visualization illustrates the largest peak-to-trough decline in portfolio value over a specified period. This metric is essential for assessing the risk associated with OLPS methods, as it highlights the potential for significant losses. By analyzing DMDD trajectories, researchers can better understand the downside risks of different OLPS methods, enabling them to make more informed decisions regarding risk management and capital allocation."
+msgstr "DMDD 可视化展示了一段时间内投资组合价值的最大回撤。这一指标对于评估与 OLPS 方法相关的风险至关重要，因为它突显了潜在的重大损失。通过分析 DMDD 轨迹，研究人员可以更好地理解不同 OLPS 方法的下行风险，从而做出更明智的风险管理和资本配置决策。"
+
+msgid "Example Results of Daily Maximum DrawDown on DJIA"
+msgstr "DJIA 上每日最大回撤的示例结果"
+
+msgid "Transaction Cost-Adjusted Cumulative Wealth (TCW) Visualization"
+msgstr "交易成本调整后的累计财富（TCW）可视化"
+
+msgid "The TCW metric evaluates profitability under realistic transaction costs. It penalizes portfolio rebalancing by deducting proportional costs based on the turnover amount each period. Lower TCW indicates greater performance deterioration from increased rebalancing amounts. By accounting for real-world frictions, TCW provides a practical assessment complementing the raw profitability metrics of data-driven OLPS methods."
+msgstr "TCW 指标在现实交易成本下评估盈利能力。它通过根据每个周期的换手额扣除相应的成本来惩罚投资组合再平衡。较低的 TCW 表示由于增加的再平衡量而导致的性能恶化更大。通过考虑现实世界的摩擦，TCW 提供了一种实际评估，补充了数据驱动 OLPS 方法的原始盈利指标。"
+
+msgid "Example Results of Transaction Cost-Adjusted Cumulative Wealth on DJIA"
+msgstr "DJIA 上交易成本调整后的累计财富的示例结果"
+
+msgid "Comprehensive Radar Chart"
+msgstr "综合雷达图"
+
+msgid "The comprehensive radar chart provides a visual representation of multiple performance metrics for OLPS methods. By displaying these metrics in a single view, it allows for easy comparison of strengths and weaknesses across different methods. This visualization helps researchers quickly assess which methods excel in specific dimensions."
+msgstr "综合雷达图为 OLPS 方法的多个性能指标提供了可视化表示。通过在一个视图中展示这些指标，它允许对不同方法的优缺点进行轻松比较。这个可视化帮助研究人员快速评估哪些方法在特定维度上表现优异。"
+
+msgid "Example Results of Radar Chart on DJIA"
+msgstr "DJIA 上雷达图的示例结果"
+
+
+
+
+
+
+

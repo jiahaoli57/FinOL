@@ -18,7 +18,7 @@ class OptimizerSelector:
             "Adagrad": torch.optim.Adagrad,
             "Adam": torch.optim.Adam,
             "AdamW": torch.optim.AdamW,
-            # "SparseAdam": torch.optim.SparseAdam,
+            "SparseAdam": torch.optim.SparseAdam,
             "Adamax": torch.optim.Adamax,
             "ASGD": torch.optim.ASGD,
             "SGD": torch.optim.SGD,
@@ -26,7 +26,7 @@ class OptimizerSelector:
             "Rprop": torch.optim.Rprop,
             "RMSprop": torch.optim.RMSprop,
             "NAdam": torch.optim.NAdam,
-            # "LBFGS": torch.optim.LBFGS,
+            "LBFGS": torch.optim.LBFGS,
             "A2GradExp": optim.A2GradExp,
             "A2GradInc": optim.A2GradInc,
             "A2GradUni": optim.A2GradUni,
@@ -35,7 +35,7 @@ class OptimizerSelector:
             "AdaBound": optim.AdaBound,
             "AdaMod": optim.AdaMod,
             "Adafactor": optim.Adafactor,
-            # "Adahessian": optim.Adahessian,
+            "Adahessian": optim.Adahessian,
             "AdamP": optim.AdamP,
             "AggMo": optim.AggMo,
             "Apollo": optim.Apollo,
@@ -53,7 +53,7 @@ class OptimizerSelector:
             "SGDP": optim.SGDP,
             "SGDW": optim.SGDW,
             "SWATS": optim.SWATS,
-            # "Shampoo": optim.Shampoo,
+            "Shampoo": optim.Shampoo,
             "Yogi": optim.Yogi
         }
 

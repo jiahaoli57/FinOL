@@ -229,57 +229,60 @@ class FinOLAPP:
                    "WindowMinMaxScaler", "WindowMaxAbsScaler", "WindowRobustScaler"]
         self.create_dropdown(self.data_config_frame, options, "Select Scaler:", 1, 2, options.index(self.config["SCALER"]), "StringVar", ["SCALER"])
 
+        # WINDOW_SIZE
+        self.create_entry(self.data_config_frame, "Set Batch Size:", 2, 0, self.config["BATCH_SIZE"], "IntVar", ["BATCH_SIZE"])
+
         # create_separator
-        self.create_separator(frame=self.data_config_frame, row=2, text="Auto Feature Engineering")
+        self.create_separator(frame=self.data_config_frame, row=3, text="Auto Feature Engineering")
 
         # INCLUDE_OHLCV_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include OHLCV Features", 3, 0, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OHLCV_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_OHLCV_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include OHLCV Features", 4, 0, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OHLCV_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_OHLCV_FEATURES"])
 
         # INCLUDE_OVERLAP_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Overlap Features", 3, 1, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OVERLAP_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_OVERLAP_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Overlap Features", 4, 1, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OVERLAP_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_OVERLAP_FEATURES"])
 
         # INCLUDE_MOMENTUM_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Momentum Features", 3, 2, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_MOMENTUM_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_MOMENTUM_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Momentum Features", 4, 2, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_MOMENTUM_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_MOMENTUM_FEATURES"])
 
         # INCLUDE_VOLUME_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Volume Features", 3, 3, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLUME_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_VOLUME_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Volume Features", 4, 3, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLUME_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_VOLUME_FEATURES"])
 
         # INCLUDE_CYCLE_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Cycle Features", 4, 0, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_CYCLE_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_CYCLE_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Cycle Features", 5, 0, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_CYCLE_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_CYCLE_FEATURES"])
 
         #  INCLUDE_PRICE_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Price Features", 4, 1, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PRICE_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_PRICE_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Price Features", 5, 1, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PRICE_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_PRICE_FEATURES"])
 
         # INCLUDE_VOLATILITY_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Volatility Features", 4, 2, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLATILITY_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_VOLATILITY_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Volatility Features", 5, 2, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLATILITY_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_VOLATILITY_FEATURES"])
 
         #  INCLUDE_PATTERN_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Pattern Features", 4, 3, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PATTERN_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_PATTERN_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Pattern Features", 5, 3, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PATTERN_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_PATTERN_FEATURES"])
 
         # create_separator
-        self.create_separator(frame=self.data_config_frame, row=5, text="Data Augmentation")
+        self.create_separator(frame=self.data_config_frame, row=6, text="Data Augmentation")
 
         # INCLUDE_WINDOW_DATA
-        self.create_checkbox(self.data_config_frame, "Include Window Data", 6, 0, self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["INCLUDE_WINDOW_DATA"], ["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "INCLUDE_WINDOW_DATA"])
+        self.create_checkbox(self.data_config_frame, "Include Window Data", 7, 0, self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["INCLUDE_WINDOW_DATA"], ["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "INCLUDE_WINDOW_DATA"])
 
         # WINDOW_SIZE
-        self.create_entry(self.data_config_frame, "Set Window Size:", 6, 1, self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"], "IntVar", ["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "WINDOW_SIZE"])
+        self.create_entry(self.data_config_frame, "Set Window Size:", 7, 1, self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"], "IntVar", ["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "WINDOW_SIZE"])
         # trace_checkbox with default value
         self.trace_checkbox(["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "INCLUDE_WINDOW_DATA"], self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["INCLUDE_WINDOW_DATA"])
 
         # create_separator
-        self.create_separator(frame=self.data_config_frame, row=7)
+        self.create_separator(frame=self.data_config_frame, row=8)
 
         # LOAD_LOCAL_DATALOADER
-        self.create_checkbox(self.data_config_frame, "Load Local Dataloader", 8, 0, self.config["LOAD_LOCAL_DATALOADER"], ["LOAD_LOCAL_DATALOADER"])
+        self.create_checkbox(self.data_config_frame, "Load Local Dataloader", 9, 0, self.config["LOAD_LOCAL_DATALOADER"], ["LOAD_LOCAL_DATALOADER"])
         # trace_checkbox with default value
         self.trace_checkbox(["LOAD_LOCAL_DATALOADER"], self.config["LOAD_LOCAL_DATALOADER"])
 
         # DOWNLOAD_DATA
-        self.create_checkbox(self.data_config_frame, "Download FinOL Data", 8, 1, self.config["DOWNLOAD_DATA"], ["DOWNLOAD_DATA"])
+        self.create_checkbox(self.data_config_frame, "Download FinOL Data", 9, 1, self.config["DOWNLOAD_DATA"], ["DOWNLOAD_DATA"])
 
         # CHECK_UPDATE
-        self.create_checkbox(self.data_config_frame, "Check for Updates", 8, 2, self.config["CHECK_UPDATE"], ["CHECK_UPDATE"])
+        self.create_checkbox(self.data_config_frame, "Check for Updates", 9, 2, self.config["CHECK_UPDATE"], ["CHECK_UPDATE"])
 
         #############################
         # Model Layer Configuration #
@@ -315,10 +318,10 @@ class FinOLAPP:
         self.create_separator(frame=self.optimization_config_frame, row=2, text="Optimizer Settings")
 
         # OPTIMIZER_NAME
-        options = ["Adadelta", "Adagrad", "Adam", "AdamW", "Adamax", "ASGD", "SGD", "RAdam", "Rprop", "RMSprop",
-                   "NAdam", "A2GradExp", "A2GradInc", "A2GradUni", "AccSGD", "AdaBelief", "AdaBound", "AdaMod",
-                   "Adafactor", "AdamP", "AggMo", "Apollo", "DiffGrad", "LARS", "Lamb", "MADGRAD", "NovoGrad", "PID",
-                   "QHAdam", "QHM", "Ranger", "RangerQH", "RangerVA", "SGDP", "SGDW", "SWATS", "Yogi"]
+        options = ["Adadelta", "Adagrad", "Adam", "AdamW", "SparseAdam", "Adamax", "ASGD", "SGD", "RAdam", "Rprop", "RMSprop",
+                   "NAdam", "LBFGS", "A2GradExp", "A2GradInc", "A2GradUni", "AccSGD", "AdaBelief", "AdaBound", "AdaMod",
+                   "Adafactor", "Adahessian", "AdamP", "AggMo", "Apollo", "DiffGrad", "LARS", "Lamb", "MADGRAD", "NovoGrad", "PID",
+                   "QHAdam", "QHM", "Ranger", "RangerQH", "RangerVA", "SGDP", "SGDW", "SWATS", "Shampoo", "Yogi"]
         self.create_dropdown(self.optimization_config_frame, options, "Select Optimizer:", 3, 0, options.index(self.config["OPTIMIZER_NAME"]), "StringVar", ["OPTIMIZER_NAME"])
 
         # LEARNING_RATE
@@ -553,6 +556,7 @@ class FinOLAPP:
                 self.INCLUDE_VOLATILITY_FEATURES_checkbox,
                 self.INCLUDE_PATTERN_FEATURES_checkbox,
                 self.WINDOW_SIZE_entry,
+                self.BATCH_SIZE_entry
             ]
             state = "disabled" if var_value else "normal"
             for widget in widgets:
@@ -776,6 +780,7 @@ class FinOLAPP:
             "WINDOW_SIZE": "WINDOW_SIZE_entry",
             "LAMBDA_L2": "LAMBDA_L2_entry",
             "NUM_TRIALS": "NUM_TRIALS_entry",
+            "BATCH_SIZE": "BATCH_SIZE_entry"
         }
         for key, attr in entry_mapping.items():
             if key in arg_name:
