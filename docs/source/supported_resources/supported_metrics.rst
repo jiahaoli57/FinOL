@@ -1,6 +1,6 @@
 .. _supported_metrics:
 
-Comprehensive metrics
+Comprehensive Metrics
 ===================================================
 
 .. table::

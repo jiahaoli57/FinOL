@@ -1,7 +1,10 @@
-.. _supported_baselines:
+.. _supported_results:
 
-Extensive Baselines
-===========================================
+Benchmark Results
+=================
+
+Benchmark Results of Risk Metrics
+=================================
 
 .. table::
    :class: ghost

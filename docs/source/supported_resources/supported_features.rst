@@ -1,6 +1,6 @@
 .. _supported_features:
 
-Rich data input
+Rich Data Input
 =====================================================================
 
 This section provides detailed definitions for the key data features in ``FinOL``.

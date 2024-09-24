@@ -5,92 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/CMEG_PLOT_ALL_1_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/CMEG_PLOT_ALL_1_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/CMEG_PLOT_ALL_1_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/CMEG_PLOT_ALL_2_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/CMEG_PLOT_ALL_2_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/CMEG_PLOT_ALL_2_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/CRYPTO_PLOT_ALL_1_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/CRYPTO_PLOT_ALL_1_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/CRYPTO_PLOT_ALL_1_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/CRYPTO_PLOT_ALL_2_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/CRYPTO_PLOT_ALL_2_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/CRYPTO_PLOT_ALL_2_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/DJIA_PLOT_ALL_1_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/DJIA_PLOT_ALL_1_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/DJIA_PLOT_ALL_1_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/DJIA_PLOT_ALL_2_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/DJIA_PLOT_ALL_2_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/DJIA_PLOT_ALL_2_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/HSI_PLOT_ALL_1_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/HSI_PLOT_ALL_1_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/HSI_PLOT_ALL_1_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/HSI_PLOT_ALL_2_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/HSI_PLOT_ALL_2_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/HSI_PLOT_ALL_2_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/NYSE(N)_PLOT_ALL_1_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/NYSE(N)_PLOT_ALL_1_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/NYSE(N)_PLOT_ALL_1_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/NYSE(N)_PLOT_ALL_2_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/NYSE(N)_PLOT_ALL_2_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/NYSE(N)_PLOT_ALL_2_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/NYSE(O)_PLOT_ALL_1_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/NYSE(O)_PLOT_ALL_1_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/NYSE(O)_PLOT_ALL_1_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/NYSE(O)_PLOT_ALL_2_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/NYSE(O)_PLOT_ALL_2_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/NYSE(O)_PLOT_ALL_2_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/SP500_PLOT_ALL_1_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/SP500_PLOT_ALL_1_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/SP500_PLOT_ALL_1_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/SP500_PLOT_ALL_2_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/SP500_PLOT_ALL_2_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/SP500_PLOT_ALL_2_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/SSE_PLOT_ALL_1_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/SSE_PLOT_ALL_1_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/SSE_PLOT_ALL_1_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/SSE_PLOT_ALL_2_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/SSE_PLOT_ALL_2_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/SSE_PLOT_ALL_2_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/TSE_PLOT_ALL_1_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/TSE_PLOT_ALL_1_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/TSE_PLOT_ALL_1_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/TSE_PLOT_ALL_2_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/TSE_PLOT_ALL_2_DDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/experiments/TSE_PLOT_ALL_2_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/exps/DJIA_DNN_DCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/exps/DJIA_DNN_DMDD.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/exps/DJIA_DNN_RADAR.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/exps/DJIA_DNN_TCW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/exps/DJIA_DNN_loss.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/exps/DJIA_DNN_plot_contour.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/exps/DJIA_DNN_plot_edf.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/exps/DJIA_DNN_plot_optimization_history.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/exps/DJIA_DNN_plot_parallel_coordinate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/exps/DJIA_DNN_plot_param_importances.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/exps/DJIA_DNN_plot_rank.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/exps/DJIA_DNN_plot_slice.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/exps/optuna_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/exps/optuna_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/exps/optuna_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization_copy.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_results.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/background.mo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/background.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/extending.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/extending.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/index.mo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/index.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/quickstart.mo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/quickstart.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources.mo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/supported_resources.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/extending.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/extending.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/supported_resources.mo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/supported_resources.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/supported_resources.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/supported_resources.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/extending.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/extending.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_baselines.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_baselines.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_datasets.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_datasets.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_features.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_features.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/APP/FinOLAPP.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/APP/FinOLAPP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/data_layer/dataset_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/dataset_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/optimization_layer/optimizer_selector.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/optimization_layer/optimizer_selector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization_copy.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization_copy.rst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,14 +93,14 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/images/exps" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/source/supported_resources" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\images\exps" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\source\supported_resources" />
+      <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\images\exps" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\images\experiments" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\images" />
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\locales\zh_TW\LC_MESSAGES" />
@@ -727,14 +650,7 @@
       <workItem from="1726639080618" duration="3157000" />
       <workItem from="1726805536312" duration="12111000" />
       <workItem from="1726820726941" duration="35966000" />
-      <workItem from="1727079795005" duration="6221000" />
-    </task>
-    <task id="LOCAL-00337" summary="build docs">
-      <created>1725367717230</created>
-      <option name="number" value="00337" />
-      <option name="presentableId" value="LOCAL-00337" />
-      <option name="project" value="LOCAL" />
-      <updated>1725367717230</updated>
+      <workItem from="1727079795005" duration="7545000" />
     </task>
     <task id="LOCAL-00338" summary="optimize code">
       <created>1725371348542</created>
@@ -1072,7 +988,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726837339050</updated>
     </task>
-    <option name="localTasksCounter" value="386" />
+    <task id="LOCAL-00386" summary="build docs">
+      <created>1727162030536</created>
+      <option name="number" value="00386" />
+      <option name="presentableId" value="LOCAL-00386" />
+      <option name="project" value="LOCAL" />
+      <updated>1727162030537</updated>
+    </task>
+    <option name="localTasksCounter" value="387" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
