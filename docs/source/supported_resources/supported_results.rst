@@ -280,7 +280,6 @@ Several key observations can be summarized:
      All time are reported in seconds.
 
 
-
 RT is an important consideration that is often overlooked in backtesting but critical for real-world OLPS task.
 To address this challenge, ``FinOL`` offers researchers access to two large datasets: NYSE(N) and SP500.
 These datasets provide researchers with opportunities to develop OLPS methods that are not only profitable but also practical.

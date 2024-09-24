@@ -6,6 +6,12 @@ Elo Ranking System
 Elo Ranking Results on Profitability
 ------------------------------------
 
+.. figure:: ../../images/exps/Bootstrap_of_Elo_Ratings_on_Profitability.jpg
+   :align: center
+   :width: 700px
+
+   Bootstrap Estimates of Elo Ratings on Profitability
+
 .. table:: Elo Ranking Results on Profitability
    :class: ghost
    :widths: auto
@@ -62,6 +68,12 @@ Elo Ranking Results on Profitability
 
 Elo Ranking Results on Risk Resilience
 --------------------------------------
+
+.. figure:: ../../images/exps/Bootstrap_of_Elo_Ratings_on_Risk_Resilience.jpg
+   :align: center
+   :width: 700px
+
+   Bootstrap Estimates of Elo Ratings on Risk Resilience
 
 .. table:: Elo Ranking Results on Risk Resilience
    :class: ghost
@@ -120,6 +132,11 @@ Elo Ranking Results on Risk Resilience
 Elo Ranking Results on Practicality
 -----------------------------------
 
+.. figure:: ../../images/exps/Bootstrap_of_Elo_Ratings_on_Practicality.jpg
+   :align: center
+   :width: 700px
+
+   Bootstrap Estimates of Elo Ratings on Profitability
 
 .. table:: Elo Ranking Results on Practicality
    :class: ghost
