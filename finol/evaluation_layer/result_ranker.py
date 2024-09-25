@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 
 from tqdm import tqdm
 from collections import defaultdict
+from sklearn.linear_model import LogisticRegression
 from finol.utils import ROOT_PATH, load_config
-
 
 
 def compute_elo(battles, K=4, SCALE=400, BASE=10, INIT_RATING=1000):
@@ -80,7 +80,6 @@ def visualize_bootstrap_scores(df, title):
 
 
 def compute_elo_mle(df, SCALE=400, BASE=10, INIT_RATING=1000):
-    from sklearn.linear_model import LogisticRegression
     models = pd.concat([df["model_a"], df["model_b"]]).unique()
     models = pd.Series(np.arange(len(models)), index=models)
     p = len(models.index)

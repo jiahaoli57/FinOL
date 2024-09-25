@@ -74,7 +74,7 @@ Contents
    installation
    quickstart
    api/index
-   supported_resources/index
+   key_features/index
    extending
    file_structure
    license

@@ -1,4 +1,4 @@
-.. _supported_features:
+.. _supported_input:
 
 Rich Data Input
 =====================================================================

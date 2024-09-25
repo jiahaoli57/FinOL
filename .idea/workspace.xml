@@ -6,11 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/exps/Bootstrap of Elo Ratings on Practicality.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/images/exps/Bootstrap_of_Elo_Ratings_on_Practicality.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/exps/Bootstrap of Elo Ratings on Profitability.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/images/exps/Bootstrap_of_Elo_Ratings_on_Profitability.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/exps/Bootstrap of Elo Ratings on Risk Resilience.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/images/exps/Bootstrap_of_Elo_Ratings_on_Risk_Resilience.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_elo.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_elo.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_results.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/supported_resources/supported_results.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_baselines.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/baselines.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_datasets.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/datasets.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_elo.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/elo.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_features.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/input.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_metrics.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/metrics.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_results.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/results.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/visualization.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/supported_resources/supported_visualization_copy.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/visualization_copy.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finol/evaluation_layer/ranking_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/evaluation_layer/result_ranker.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +116,7 @@
       <recent name="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\docs\locales\zh_CN\LC_MESSAGES\api" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ranking_system">
+  <component name="RunManager" selected="Python.result_ranker">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -298,7 +304,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ranking_system" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="result_ranker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FinOL" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -311,7 +317,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finol/evaluation_layer/ranking_system.py" />
+      <option name="SCRIPT_NAME" value="D:\360安全云盘同步版\01-广工\07-研一\00-论文\00-本人论文\13-FinOL\FinOL\finol\evaluation_layer\result_ranker.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -465,12 +471,12 @@
       <item itemvalue="Python.FinOLAPP" />
       <item itemvalue="Python.model_trainer" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.ranking_system" />
       <item itemvalue="Python 测试.Doctests (DNN 内)" />
+      <item itemvalue="Python.result_ranker" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ranking_system" />
+        <item itemvalue="Python.result_ranker" />
         <item itemvalue="Python.FinOLAPP" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python 测试.Doctests (DNN 内)" />
@@ -647,14 +653,7 @@
       <workItem from="1726639080618" duration="3157000" />
       <workItem from="1726805536312" duration="12111000" />
       <workItem from="1726820726941" duration="35966000" />
-      <workItem from="1727079795005" duration="27731000" />
-    </task>
-    <task id="LOCAL-00341" summary="optimize code">
-      <created>1725372701609</created>
-      <option name="number" value="00341" />
-      <option name="presentableId" value="LOCAL-00341" />
-      <option name="project" value="LOCAL" />
-      <updated>1725372701610</updated>
+      <workItem from="1727079795005" duration="39901000" />
     </task>
     <task id="LOCAL-00342" summary="optimize code">
       <created>1725373002173</created>
@@ -992,7 +991,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727186182365</updated>
     </task>
-    <option name="localTasksCounter" value="390" />
+    <task id="LOCAL-00390" summary="build docs">
+      <created>1727187372224</created>
+      <option name="number" value="00390" />
+      <option name="presentableId" value="LOCAL-00390" />
+      <option name="project" value="LOCAL" />
+      <updated>1727187372224</updated>
+    </task>
+    <option name="localTasksCounter" value="391" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

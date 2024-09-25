@@ -1,4 +1,4 @@
-.. _supported_visualization:
+.. _supported_visualization_copy:
 
 Multiple Visual Tools
 ====================================
