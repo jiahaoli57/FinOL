@@ -6,6 +6,8 @@ Key Features
 
    datasets
    input
+   images
+   models
    metrics
    baselines
    results

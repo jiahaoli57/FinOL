@@ -3,6 +3,10 @@
 Rich Data Input
 =====================================================================
 
+.. versionadded:: 0.3.1
+
+   ``FinOL`` now supports image data input. See :ref:`supported_images` for more details.
+
 This section provides detailed definitions for the key data features in ``FinOL``.
 These features can help describe and analyze financial time series from multiple perspectives.
 The following tables categorize these features into 8 main groups and list the name, function call and description

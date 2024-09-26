@@ -29,21 +29,23 @@ but also develops extensive benchmark results for fair comparisons.
 
 <div align="center">
 
-| Update                                                                                                                               | Status                             | Label        |
-|--------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------|:-------------|
-| New release! ``FinOL`` is going to release the official website                                                                      | Coming soon......                  | Release      |
-| New metric! ``FinOL`` is going to support the [_t_-test](https://www.sciencedirect.com/science/article/pii/S0004370215000168) metric | Coming soon......                  | Enhancement  |
-| New model! ``FinOL`` now supports the [AlphaStock](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) model                         | Supported since 20 September 2024  | Enhancement  |
-| New model! ``FinOL`` now supports the [GRU](https://arxiv.org/abs/1412.3555) model                                                   | Supported since 20 September 2024  | Enhancement  |
-| New release! ``FinOL`` now releases the [official docs](https://finol.readthedocs.io/en/latest/)                                     | Released on 22 July 2024           | Release      |
-| New feature! ``FinOL`` now supports the [Auto Hyper-parameters Tuning](https://dl.acm.org/doi/10.1145/3292500.3330701) feature       | Supported since 22 July 2024       | Enhancement  |
-| New feature! ``FinOL`` now supports the [Radar Chart](https://en.wikipedia.org/wiki/Radar_chart) evaluation                          | Supported since 10 June 2024       | Enhancement  |
-| New model! ``FinOL`` now supports the [AlphaPortfolio](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486) model            | Supported since 06 June 2024       | Enhancement  |
-| New feature! ``FinOL`` now supports the [Economic Distillation](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486) feature | Supported since 15 May 2024        | Enhancement  |
-| New feature! ``FinOL`` now supports the [Interpretability Analysis](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) feature      | Supported since 16 April 2024      | Enhancement  |
-| New feature! ``FinOL`` now supports the [Winner Assets Selection](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) feature        | Supported since 14 April 2024      | Enhancement  |
-| Release  ``FinOL`` [tutorials](finol/tutorials)                                                                                      | Released on 22 March 2024          | Release      |
-| Release  ``FinOL`` [v0.0.1](https://github.com/jiahaoli57/finol/releases/tag/v0.0.1)                                                 | Released on 21 March 2024          | Release      |
+| Update                                                                                                                               | Status                            | Label        |
+|--------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------|:-------------|
+| New release! ``FinOL`` is going to release the official website                                                                      | Coming soon......                 | Release      |
+| New metric! ``FinOL`` is going to support the [_t_-test](https://www.sciencedirect.com/science/article/pii/S0004370215000168) metric | Coming soon......                 | Enhancement  |
+| New feature! ``FinOL`` now supports the [Image Input](https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268) feature           | Supported since 26 September 2024 | Enhancement  |
+| New model! ``FinOL`` now supports the [CNN-JF](https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268) model                    | Supported since 26 September 2024 | Enhancement  |
+| New model! ``FinOL`` now supports the [AlphaStock](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) model                         | Supported since 20 September 2024 | Enhancement  |
+| New model! ``FinOL`` now supports the [GRU](https://arxiv.org/abs/1412.3555) model                                                   | Supported since 20 September 2024 | Enhancement  |
+| New release! ``FinOL`` now releases the [official docs](https://finol.readthedocs.io/en/latest/)                                     | Released on 22 July 2024          | Release      |
+| New feature! ``FinOL`` now supports the [Auto Hyper-parameters Tuning](https://dl.acm.org/doi/10.1145/3292500.3330701) feature       | Supported since 22 July 2024      | Enhancement  |
+| New feature! ``FinOL`` now supports the [Radar Chart](https://en.wikipedia.org/wiki/Radar_chart) evaluation                          | Supported since 10 June 2024      | Enhancement  |
+| New model! ``FinOL`` now supports the [AlphaPortfolio](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486) model            | Supported since 06 June 2024      | Enhancement  |
+| New feature! ``FinOL`` now supports the [Economic Distillation](https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3554486) feature | Supported since 15 May 2024       | Enhancement  |
+| New feature! ``FinOL`` now supports the [Interpretability Analysis](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) feature      | Supported since 16 April 2024     | Enhancement  |
+| New feature! ``FinOL`` now supports the [Winner Assets Selection](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) feature        | Supported since 14 April 2024     | Enhancement  |
+| Release  ``FinOL`` [tutorials](finol/tutorials)                                                                                      | Released on 22 March 2024         | Release      |
+| Release  ``FinOL`` [v0.0.1](https://github.com/jiahaoli57/finol/releases/tag/v0.0.1)                                                 | Released on 21 March 2024         | Release      |
 </div>
 
 
@@ -236,141 +238,6 @@ evaluate_model_output = ModelEvaluator(load_dataset_output, train_model_output).
 | Transaction Costs-Adjusted Cumulative Wealth        |     TCW      | Practical Metric |
 | Running Time                                        |      RT      | Practical Metric |
 </div>
-
-## Supported Visualization
-The FInOL project provides a suite of visualization tools to facilitate a comprehensive evaluation of data-driven OLPS 
-research. Here are some examples:
-
-1. Dynamic Training/Validation Loss Visualization
-<p align="center">
-<img src="figure/loss.png" width="100%" alt>
-
-[//]: # (<em>Visualization of Train Normalization Data for Asset "AA"</em>)
-</p>
-
-2. Daily Cumulative Wealth Visualization
-<p align="center">
-<img src="figure/dcw.png" width="70%" alt>
-
-3. Daily DrawDown
-<p align="center">
-<img src="figure/dcw.png" width="70%" alt>
-
-4. Transaction Cost-Adjusted Cumulative Wealth
-<p align="center">
-<img src="figure/tcw.png" width="71%" alt>
-
-5. Comprehensive Radar Chart
-<p align="center">
-<img src="figure/radar.png" width="40%" alt>
-
-## File Structure
-```
-  finol
-  ├─ __init__.py
-  ├─ config.json
-  ├─ APP
-  │    ├─ display_info.py
-  │    ├─ finol_logo_icon.png
-  │    └─ FinOLAPP.py
-  ├─ data
-  │    ├─ benchmark_results
-  │    │    ├─ __init__.py
-  │    │    ├─ other
-  │    │    │    └─ price_relative
-  │    │    │           ├─ price_relative_CMEG.mat
-  │    │    │           ├─ ...
-  │    │    │           └─ price_relative_TSE.mat
-  │    │    ├─ practical_metrics
-  │    │    │    ├─ CMEG
-  │    │    │    │    ├─ final_practical_result.xlsx
-  │    │    │    │    └─ transaction_costs_adjusted_cumulative_wealth.xlsx
-  │    │    │    ├─ ...
-  │    │    │    │    ├─ final_practical_result.xlsx
-  │    │    │    │    └─ transaction_costs_adjusted_cumulative_wealth.xlsx
-  │    │    │    └─ TSE
-  │    │    │           ├─ final_practical_result.xlsx
-  │    │    │           └─ transaction_costs_adjusted_cumulative_wealth.xlsx
-  │    │    ├─ profit_metrics
-  │    │    │    ├─ CMEG
-  │    │    │    │    ├─ daily_cumulative_wealth.xlsx
-  │    │    │    │    ├─ daily_return.xlsx
-  │    │    │    │    └─ final_profit_result.xlsx
-  │    │    │    ├─ ...
-  │    │    │    │    ├─ daily_cumulative_wealth.xlsx
-  │    │    │    │    ├─ daily_return.xlsx
-  │    │    │    │    └─ final_profit_result.xlsx
-  │    │    │    └─ TSE
-  │    │    │           ├─ daily_cumulative_wealth.xlsx
-  │    │    │           ├─ daily_return.xlsx
-  │    │    │           └─ final_profit_result.xlsx
-  │    │    └─ risk_metrics
-  │    │           ├─ CMEG
-  │    │           │    ├─ daily_drawdown.xlsx
-  │    │           │    └─ final_risk_result.xlsx
-  │    │           ├─ ...
-  │    │           │    ├─ daily_drawdown.xlsx
-  │    │           │    └─ final_risk_result.xlsx
-  │    │           └─ TSE
-  │    │                  ├─ daily_drawdown.xlsx
-  │    │                  └─ final_risk_result.xlsx
-  │    └─ datasets
-  │           ├─ CMEG
-  │           │    ├─ 6A=F.xlsx
-  │           │    ├─ ...
-  │           │    └─ ZW=F.xlsx
-  │           ├─ ...
-  │           │    ├─ ...
-  │           │    ├─ ...
-  │           │    └─ ...
-  │           └─ TSE
-  │                  ├─ ABX.TO.xlsx
-  │                  ├─ ...
-  │                  └─ WN.TO.xlsx
-  ├─ data_layer
-  │    ├─ __init__.py
-  │    ├─ dataset_loader.py
-  │    └─ scaler_selector.py
-  ├─ evaluation_layer
-  │    ├─ __init__.py
-  │    ├─ benchmark_loader.py
-  │    ├─ distiller_selector.py
-  │    ├─ economic_distiller.py
-  │    ├─ metric_calculator.py
-  │    ├─ model_evaluator.py
-  │    └─ result_visualizer.py
-  ├─ logdir
-  │    ├─ 2024-08-20_15-25-17
-  │    ├─ ...
-  │    └─ 2024-08-20_15-28-32
-  ├─ main
-  │    ├─ main.ipynb
-  │    └─ main.py
-  ├─ model_layer
-  │    ├─ __init__.py
-  │    ├─ AlphaPortfolio.py
-  │    ├─ CNN.py
-  │    ├─ DNN.py
-  │    ├─ LSRE_CAAN.py
-  │    ├─ LSTM.py
-  │    ├─ RNN.py
-  │    ├─ Transformer.py
-  │    ├─ CustomModel.py
-  │    └─ model_instantiator.py
-  ├─ optimization_layer
-  │    ├─ __init__.py
-  │    ├─ criterion_selector.py
-  │    ├─ model_trainer.py
-  │    ├─ optimizer_selector.py
-  │    └─ parameters_tuner.py
-  ├─ tutorials
-  │    ├─ README.md
-  │    └─ tutorial_quickstart.ipynb
-  └─ utils.py
-```
-
-[//]: # (## Related Publications)
-
 
 ## License
 

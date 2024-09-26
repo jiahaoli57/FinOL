@@ -17,7 +17,7 @@ class CNN(nn.Module):
     layers to each asset's image, with each layer followed by a ReLU activation and a pooling layer to reduce
     the spatial dimensions.
 
-    The final output of the model is a tensor of shape `(batch_size, num_assets)`, where each element
+    The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element
     represents the predicted score for the corresponding asset.
 
     :param model_args: Dictionary containing model arguments, such as the number of features.
@@ -107,7 +107,7 @@ class CNN(nn.Module):
         Forward pass of the model.
 
         :param x: Input tensor of shape `(batch_size, num_assets, height, width)`.
-        :return: Output tensor of shape `(batch_size, num_assets)` containing the predicted scores for each asset.
+        :return: Output tensor of shape ``(batch_size, num_assets)`` containing the predicted scores for each asset.
         """
         batch_size, num_assets, height, width = x.size()
 

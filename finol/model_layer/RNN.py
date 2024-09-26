@@ -10,11 +10,11 @@ class RNN(nn.Module):
     """
     Class to generate predicted scores for the input assets based on the Recurrent Neural Network (RNN) model.
 
-    The RNN model takes an input tensor ``x`` of shape `(batch_size, num_assets, num_features_augmented)`,
-    where `num_features_augmented` represents the number of features (including any preprocessed or augmented
+    The RNN model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``,
+    where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented
     features) for each asset.
 
-    The final output of the model is a tensor of shape `(batch_size, num_assets)`, where each element
+    The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element
     represents the predicted score for the corresponding asset.
 
     :param model_args: Dictionary containing model arguments, such as the number of features.
@@ -78,8 +78,8 @@ class RNN(nn.Module):
         """
         Forward pass of the model.
 
-        :param x: Input tensor of shape `(batch_size, num_assets, num_features_augmented)`.
-        :return: Output tensor of shape `(batch_size, num_assets)` containing the predicted scores for each asset.
+        :param x: Input tensor of shape ``(batch_size, num_assets, num_features_augmented)``.
+        :return: Output tensor of shape ``(batch_size, num_assets)`` containing the predicted scores for each asset.
         """
         batch_size, num_assets, num_features_augmented = x.shape
 

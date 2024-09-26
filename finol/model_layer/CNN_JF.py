@@ -8,22 +8,23 @@ from finol.utils import load_config
 
 class CNN_JF(nn.Module):
     """
-    Class to generate predicted scores for the input assets based on the CNN_JF model.
+    Class to generate predicted scores for the input assets based on the CNN-JF model.
 
-    The CNN_JF model is a CNN-based model for asset scoring and portfolio selection. It leverages CNN to analyze
+    The CNN-JF model is a CNN-based model for asset scoring and portfolio selection. It leverages CNN to analyze
     historical stock price data represented as images.
 
-    The CNN_JF model takes an input tensor ``x`` of shape `(batch_size, num_assets, height, width)`, where
+    The CNN-JF model takes an input tensor ``x`` of shape `(batch_size, num_assets, height, width)`, where
     `height` and `width` are the dimensions of the image for each asset. The model applies a series of convolutional
     layers to each asset's image, with each layer followed by a leaky ReLU activation and a pooling layer to reduce
     the spatial dimensions.
 
-    The final output of the model is a tensor of shape `(batch_size, num_assets)`, where each element
+    The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element
     represents the predicted score for the corresponding asset.
 
     For more details, please refer to the paper `(Re-)Imag(in)ing Price Trends <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__.
 
     .. table:: Hyper-parameters of (Re-)Imag(in)ing Price Trends.
+        :class: ghost
 
         +----------------------+--------+-------------------+--------+
         | Hyper-parameter      | Choice | Hyper-parameter   | Choice |
@@ -40,7 +41,7 @@ class CNN_JF(nn.Module):
         +----------------------+--------+-------------------+--------+
 
     :param model_args: Dictionary containing model arguments, such as the number of features.
-    :param model_params: Dictionary containing model hyperparameters, such as the kernel size, the hidden size, and the dropout rate.
+    :param model_params: Dictionary containing model hyperparameters, such as the kernel size height, the kernel size width, and the stride height.
 
     Example:
         .. code:: python
@@ -139,7 +140,7 @@ class CNN_JF(nn.Module):
         Forward pass of the model.
 
         :param x: Input tensor of shape `(batch_size, num_assets, height, width)`.
-        :return: Output tensor of shape `(batch_size, num_assets)` containing the predicted scores for each asset.
+        :return: Output tensor of shape ``(batch_size, num_assets)`` containing the predicted scores for each asset.
         """
         batch_size, num_assets, height, width = x.size()
 

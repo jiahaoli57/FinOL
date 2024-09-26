@@ -29,6 +29,12 @@ but also develops extensive benchmark results for fair comparisons.
   * - New metric! ``FinOL`` is going to support the `t-test <https://www.sciencedirect.com/science/article/pii/S0004370215000168>`__ metric
     - Coming soon......
     - |:hammer_and_wrench:| Enhancement
+  * - New feature! ``FinOL`` now supports the `Image Input <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__ feature
+    - Supported since 26 September 2024
+    - |:hammer_and_wrench:| Enhancement
+  * - New model! ``FinOL`` now supports the `CNN-JF <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__ model
+    - Supported since 26 September 2024
+    - |:hammer_and_wrench:| Enhancement
   * - New model! ``FinOL`` now supports the `AlphaStock <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__ model
     - Supported since 20 September 2024
     - |:hammer_and_wrench:| Enhancement

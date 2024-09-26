@@ -10,12 +10,12 @@ class DNN(nn.Module):
     """
     Class to generate predicted scores for the input assets based on the Deep Neural Network (DNN) model.
 
-    The DNN model takes an input tensor ``x`` of shape `(batch_size, num_assets, num_features_augmented)`,
-    where `num_features_augmented` represents the number of features (including any preprocessed or augmented
+    The DNN model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``,
+    where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented
     features) for each asset. The model applies a series of fully connected layers to the input,
     with each layer followed by a ReLU activation and a dropout layer.
 
-    The final output of the model is a tensor of shape `(batch_size, num_assets)`, where each element
+    The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element
     represents the predicted score for the corresponding asset.
 
     :param model_args: Dictionary containing model arguments, such as the number of features.
@@ -78,8 +78,8 @@ class DNN(nn.Module):
         """
         Forward pass of the model.
 
-        :param x: Input tensor of shape `(batch_size, num_assets, num_features_augmented)`.
-        :return: Output tensor of shape `(batch_size, num_assets)` containing the predicted scores for each asset.
+        :param x: Input tensor of shape ``(batch_size, num_assets, num_features_augmented)``.
+        :return: Output tensor of shape ``(batch_size, num_assets)`` containing the predicted scores for each asset.
         """
         batch_size, num_assets, num_features_augmented = x.shape
         # x = x.view(batch_size, num_assets, window_size, num_features_original)

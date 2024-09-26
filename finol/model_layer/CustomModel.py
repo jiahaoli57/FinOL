@@ -66,8 +66,8 @@ class CustomModel(nn.Module):
         """
         Forward pass of the model.
 
-        :param x: Input tensor of shape `(batch_size, num_assets, num_features_augmented)`.
-        :return: Output tensor of shape `(batch_size, num_assets)` containing the predicted scores for each asset.
+        :param x: Input tensor of shape ``(batch_size, num_assets, num_features_augmented)``.
+        :return: Output tensor of shape ``(batch_size, num_assets)`` containing the predicted scores for each asset.
         """
         batch_size, num_assets, num_features_augmented = x.shape
 

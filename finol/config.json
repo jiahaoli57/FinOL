@@ -102,10 +102,10 @@
     "DATA_AUGMENTATION_CONFIG": {
         "WINDOW_DATA": {
             "INCLUDE_WINDOW_DATA": true,
-            "WINDOW_SIZE": 10
+            "WINDOW_SIZE": 60
         },
         "IMAGE_DATA": {
-            "INCLUDE_IMAGE_DATA": false,
+            "INCLUDE_IMAGE_DATA": true,
             "SIDE_LENGTH": 24
         }
     },
