@@ -105,7 +105,7 @@
             "WINDOW_SIZE": 10
         },
         "IMAGE_DATA": {
-            "INCLUDE_IMAGE_DATA": true,
+            "INCLUDE_IMAGE_DATA": false,
             "SIDE_LENGTH": 24
         }
     },
