@@ -33,11 +33,12 @@ dependencies = [
   "cmaes>=0.10.0",
   "einops",
 #  "IPython",  #
-  "matplotlib",  # ==3.5.0
+  "matplotlib",  # ==3.5.0 ==3.7.2
   "numpy",
   "openpyxl",
   "optuna",
   "pandas",
+  "PIL",
   "requests",
   "rich",
   "scikit-learn",

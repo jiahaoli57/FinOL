@@ -185,13 +185,13 @@ class FinOLAPP:
         self.notebook = ttk.Notebook(top_right_frame)
         self.notebook.pack(side='left', fill='both', expand=True)
         #
-        # self.general_config_frame = ttk.Frame(self.notebook)
+        self.general_config_notebook = ttk.Frame(self.notebook)
         self.data_config_notebook = ttk.Frame(self.notebook)
         self.model_config_notebook = ttk.Frame(self.notebook)
         self.optimization_config_notebook = ttk.Frame(self.notebook)
         self.evaluation_config_notebook = ttk.Frame(self.notebook)
         #
-        # self.notebook.add(self.general_config_frame, text="General Layer Configuration")
+        self.notebook.add(self.general_config_notebook, text="General Layer Configuration")
         self.notebook.add(self.data_config_notebook, text="Data Layer Configuration")
         self.notebook.add(self.model_config_notebook, text="Model Layer Configuration")
         self.notebook.add(self.optimization_config_notebook, text="Optimization Layer Configuration")
@@ -200,8 +200,18 @@ class FinOLAPP:
         ###############################
         # General Layer Configuration #
         ###############################
-        # self.general_config_frame = tk.LabelFrame(general_tab, text="General Configuration", font=("Helvetica", 10, "bold"))
-        # self.general_config_frame.pack(padx=100, pady=1, fill="none")
+        self.general_config_frame = tk.LabelFrame(self.general_config_notebook, bd=0, padx=10, pady=10,)  # 透明外框
+        self.general_config_frame.pack(padx=10, pady=1, fill="none")
+        # DEVICE
+        options = ["auto", "cpu", "cuda"]
+        self.create_dropdown(self.general_config_frame, options, "Select Device:", 0, 0, options.index(self.config["DEVICE"]),
+                             "StringVar", ["DEVICE"])
+        # trace_dropdown with default value
+        self.config = detect_device(self.config)
+        update_config(self.config)
+
+        # MANUAL_SEED
+        self.create_entry(self.general_config_frame, "Set Seed:", 0, 2, self.config["MANUAL_SEED"], "IntVar", ["MANUAL_SEED"])
 
         ############################
         # Data Layer Configuration #
@@ -209,66 +219,63 @@ class FinOLAPP:
         self.data_config_frame = tk.LabelFrame(self.data_config_notebook, bd=0, padx=10, pady=10,)  # 透明外框
         self.data_config_frame.pack(padx=10, pady=1, fill="none")
 
-        # DEVICE
-        options = ["auto", "cpu", "cuda"]
-        self.create_dropdown(self.data_config_frame, options, "Select Device:", 0, 0, options.index(self.config["DEVICE"]),
-                             "StringVar", ["DEVICE"])
-        # trace_dropdown with default value
-        self.config = detect_device(self.config)
-        update_config(self.config)
-
-        # MANUAL_SEED
-        self.create_entry(self.data_config_frame, "Set Seed:", 0, 2, self.config["MANUAL_SEED"], "IntVar", ["MANUAL_SEED"])
-
         # DATASET_NAME
         options = ["NYSE(O)", "NYSE(N)", "DJIA", "SP500", "TSE", "SSE", "HSI", "CMEG", "CRYPTO", "CustomDataset"]
-        self.create_dropdown(self.data_config_frame, options, "Select Dataset:", 1, 0, options.index(self.config["DATASET_NAME"]), "StringVar", ["DATASET_NAME"])
+        self.create_dropdown(self.data_config_frame, options, "Select Dataset:", 0, 0, options.index(self.config["DATASET_NAME"]), "StringVar", ["DATASET_NAME"])
 
         # SCALER
         options = ["None", "StandardScaler", "MinMaxScaler", "MaxAbsScaler", "RobustScaler", "WindowStandardScaler",
                    "WindowMinMaxScaler", "WindowMaxAbsScaler", "WindowRobustScaler"]
-        self.create_dropdown(self.data_config_frame, options, "Select Scaler:", 1, 2, options.index(self.config["SCALER"]), "StringVar", ["SCALER"])
+        self.create_dropdown(self.data_config_frame, options, "Select Scaler:", 0, 2, options.index(self.config["SCALER"]), "StringVar", ["SCALER"])
 
-        # WINDOW_SIZE
-        self.create_entry(self.data_config_frame, "Set Batch Size:", 2, 0, self.config["BATCH_SIZE"], "IntVar", ["BATCH_SIZE"])
+        # BATCH_SIZE
+        self.create_entry(self.data_config_frame, "Set Batch Size:", 1, 0, self.config["BATCH_SIZE"], "IntVar", ["BATCH_SIZE"])
 
         # create_separator
-        self.create_separator(frame=self.data_config_frame, row=3, text="Auto Feature Engineering")
+        self.create_separator(frame=self.data_config_frame, row=2, text="Auto Feature Engineering")
 
         # INCLUDE_OHLCV_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include OHLCV Features", 4, 0, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OHLCV_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_OHLCV_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include OHLCV Features", 3, 0, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OHLCV_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_OHLCV_FEATURES"])
 
         # INCLUDE_OVERLAP_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Overlap Features", 4, 1, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OVERLAP_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_OVERLAP_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Overlap Features", 3, 1, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OVERLAP_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_OVERLAP_FEATURES"])
 
         # INCLUDE_MOMENTUM_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Momentum Features", 4, 2, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_MOMENTUM_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_MOMENTUM_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Momentum Features", 3, 2, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_MOMENTUM_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_MOMENTUM_FEATURES"])
 
         # INCLUDE_VOLUME_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Volume Features", 4, 3, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLUME_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_VOLUME_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Volume Features", 3, 3, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLUME_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_VOLUME_FEATURES"])
 
         # INCLUDE_CYCLE_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Cycle Features", 5, 0, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_CYCLE_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_CYCLE_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Cycle Features", 4, 0, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_CYCLE_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_CYCLE_FEATURES"])
 
         #  INCLUDE_PRICE_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Price Features", 5, 1, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PRICE_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_PRICE_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Price Features", 4, 1, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PRICE_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_PRICE_FEATURES"])
 
         # INCLUDE_VOLATILITY_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Volatility Features", 5, 2, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLATILITY_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_VOLATILITY_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Volatility Features", 4, 2, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLATILITY_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_VOLATILITY_FEATURES"])
 
         #  INCLUDE_PATTERN_FEATURES
-        self.create_checkbox(self.data_config_frame, "Include Pattern Features", 5, 3, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PATTERN_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_PATTERN_FEATURES"])
+        self.create_checkbox(self.data_config_frame, "Include Pattern Features", 4, 3, self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PATTERN_FEATURES"], ["FEATURE_ENGINEERING_CONFIG", "INCLUDE_PATTERN_FEATURES"])
 
         # create_separator
-        self.create_separator(frame=self.data_config_frame, row=6, text="Data Augmentation")
+        self.create_separator(frame=self.data_config_frame, row=5, text="Data Augmentation")
 
         # INCLUDE_WINDOW_DATA
-        self.create_checkbox(self.data_config_frame, "Include Window Data", 7, 0, self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["INCLUDE_WINDOW_DATA"], ["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "INCLUDE_WINDOW_DATA"])
+        self.create_checkbox(self.data_config_frame, "Include Window Data", 6, 0, self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["INCLUDE_WINDOW_DATA"], ["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "INCLUDE_WINDOW_DATA"])
 
         # WINDOW_SIZE
-        self.create_entry(self.data_config_frame, "Set Window Size:", 7, 1, self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"], "IntVar", ["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "WINDOW_SIZE"])
+        self.create_entry(self.data_config_frame, "Set Window Size:", 6, 1, self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"], "IntVar", ["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "WINDOW_SIZE"])
         # trace_checkbox with default value
         self.trace_checkbox(["DATA_AUGMENTATION_CONFIG", "WINDOW_DATA", "INCLUDE_WINDOW_DATA"], self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["INCLUDE_WINDOW_DATA"])
+
+        # INCLUDE_IMAGE_DATA
+        self.create_checkbox(self.data_config_frame, "Include Image Data", 7, 0, self.config["DATA_AUGMENTATION_CONFIG"]["IMAGE_DATA"]["INCLUDE_IMAGE_DATA"], ["DATA_AUGMENTATION_CONFIG", "IMAGE_DATA", "INCLUDE_IMAGE_DATA"])
+
+        # SIDE_LENGTH
+        self.create_entry(self.data_config_frame, "Set Side Length:", 7, 1, self.config["DATA_AUGMENTATION_CONFIG"]["IMAGE_DATA"]["SIDE_LENGTH"], "IntVar", ["DATA_AUGMENTATION_CONFIG", "IMAGE_DATA", "SIDE_LENGTH"])
+        # trace_checkbox with default value
+        self.trace_checkbox(["DATA_AUGMENTATION_CONFIG", "IMAGE_DATA", "INCLUDE_IMAGE_DATA"], self.config["DATA_AUGMENTATION_CONFIG"]["IMAGE_DATA"]["INCLUDE_IMAGE_DATA"])
 
         # create_separator
         self.create_separator(frame=self.data_config_frame, row=8)
@@ -294,7 +301,7 @@ class FinOLAPP:
         # ttk.Label(self.model_config_frame, text=" "*150).grid(row=100, column=0, columnspan=4, padx=10, pady=0)
 
         # MODEL_NAME
-        options = ["AlphaPortfolio", "AlphaStock", "CNN", "DNN", "GRU", "LSRE-CAAN", "LSTM", "RNN", "Transformer", "CustomModel"]
+        options = ["AlphaPortfolio", "AlphaStock", "CNN", "CNN_JF", "DNN", "GRU", "LSRE-CAAN", "LSTM", "RNN", "TCN", "Transformer", "CustomModel"]
         self.create_dropdown(self.model_config_frame, options, "Select Model:", 0, 1, options.index(self.config["MODEL_NAME"]), "StringVar", ["MODEL_NAME"])
         # create_separator
         self.create_separator(frame=self.model_config_frame, row=1, text="Model Parameters")
@@ -526,6 +533,7 @@ class FinOLAPP:
             "INCLUDE_VOLATILITY_FEATURES": "INCLUDE_VOLATILITY_FEATURES_checkbox",
             "INCLUDE_PATTERN_FEATURES": "INCLUDE_PATTERN_FEATURES_checkbox",
             "INCLUDE_WINDOW_DATA": "INCLUDE_WINDOW_DATA_checkbox",
+            "INCLUDE_IMAGE_DATA": "INCLUDE_IMAGE_DATA_checkbox",
             "TUNE_PARAMETERS": "TUNE_PARAMETERS_checkbox",
         }
         for key, attr in checkbox_mapping.items():
@@ -547,6 +555,7 @@ class FinOLAPP:
             widgets = [
                 self.SCALER_dropdown,
                 self.INCLUDE_WINDOW_DATA_checkbox,
+                self.INCLUDE_IMAGE_DATA_checkbox,
                 self.INCLUDE_OHLCV_FEATURES_checkbox,
                 self.INCLUDE_OVERLAP_FEATURES_checkbox,
                 self.INCLUDE_MOMENTUM_FEATURES_checkbox,
@@ -556,7 +565,8 @@ class FinOLAPP:
                 self.INCLUDE_VOLATILITY_FEATURES_checkbox,
                 self.INCLUDE_PATTERN_FEATURES_checkbox,
                 self.WINDOW_SIZE_entry,
-                self.BATCH_SIZE_entry
+                self.BATCH_SIZE_entry,
+                self.SIDE_LENGTH_entry
             ]
             state = "disabled" if var_value else "normal"
             for widget in widgets:
@@ -565,6 +575,23 @@ class FinOLAPP:
             # double check
             if self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["INCLUDE_WINDOW_DATA"] is False:
                 self.WINDOW_SIZE_entry.config(state="disabled")
+
+            # double check
+            if self.config["DATA_AUGMENTATION_CONFIG"]["IMAGE_DATA"]["INCLUDE_IMAGE_DATA"] is True:
+                widgets = [
+                    self.SCALER_dropdown,
+                    self.INCLUDE_OHLCV_FEATURES_checkbox,
+                    self.INCLUDE_OVERLAP_FEATURES_checkbox,
+                    self.INCLUDE_MOMENTUM_FEATURES_checkbox,
+                    self.INCLUDE_VOLUME_FEATURES_checkbox,
+                    self.INCLUDE_CYCLE_FEATURES_checkbox,
+                    self.INCLUDE_PRICE_FEATURES_checkbox,
+                    self.INCLUDE_VOLATILITY_FEATURES_checkbox,
+                    self.INCLUDE_PATTERN_FEATURES_checkbox,
+                ]
+                for widget in widgets:
+                    widget.config(state="disabled")
+
 
         if "TUNE_PARAMETERS" in arg_name:
             widgets = [
@@ -586,6 +613,28 @@ class FinOLAPP:
             state = "normal" if var_value else "disabled"
             for widget in widgets:
                 widget.config(state=state)
+
+        if "INCLUDE_IMAGE_DATA" in arg_name:
+            widgets = [self.SIDE_LENGTH_entry,]
+            state = "normal" if var_value else "disabled"
+            for widget in widgets:
+                widget.config(state=state)
+
+            widgets = [
+                self.SCALER_dropdown,
+                self.INCLUDE_OHLCV_FEATURES_checkbox,
+                self.INCLUDE_OVERLAP_FEATURES_checkbox,
+                self.INCLUDE_MOMENTUM_FEATURES_checkbox,
+                self.INCLUDE_VOLUME_FEATURES_checkbox,
+                self.INCLUDE_CYCLE_FEATURES_checkbox,
+                self.INCLUDE_PRICE_FEATURES_checkbox,
+                self.INCLUDE_VOLATILITY_FEATURES_checkbox,
+                self.INCLUDE_PATTERN_FEATURES_checkbox,
+            ]
+            state = "disabled" if var_value else "normal"
+            for widget in widgets:
+                widget.config(state=state)
+
 
     def create_dropdown(self, frame, options, text, row, column, default_value, value_type, arg_name):
         pady = 3
@@ -634,10 +683,10 @@ class FinOLAPP:
             MODEL_NAME = var_value
             for widget in self.model_config_frame.winfo_children():
                 # print(str(widget))
-                if str(widget) in [".!frame.!frame2.!frame.!notebook.!frame2.!labelframe.!label",
-                                   ".!frame.!frame2.!frame.!notebook.!frame2.!labelframe.!combobox",
-                                   ".!frame.!frame2.!frame.!notebook.!frame2.!labelframe.!separator",
-                                   ".!frame.!frame2.!frame.!notebook.!frame2.!labelframe.!label2"]:
+                if str(widget) in [".!frame.!frame2.!frame.!notebook.!frame3.!labelframe.!label",
+                                   ".!frame.!frame2.!frame.!notebook.!frame3.!labelframe.!combobox",
+                                   ".!frame.!frame2.!frame.!notebook.!frame3.!labelframe.!separator",
+                                   ".!frame.!frame2.!frame.!notebook.!frame3.!labelframe.!label2"]:
                     pass
                 else:
                     widget.destroy()
@@ -671,15 +720,33 @@ class FinOLAPP:
                                   value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
 
             elif MODEL_NAME == "CNN":
-                self.create_entry(self.model_config_frame, "Out Channels:", row=3, column=0, default_value=default_model_parms["OUT_CHANNELS"],
-                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "OUT_CHANNELS"])
-                self.create_entry(self.model_config_frame, "Kernel Size:", row=3, column=2, default_value=default_model_parms["KERNEL_SIZE"],
+                self.create_entry(self.model_config_frame, "Kernel Size:", row=3, column=0, default_value=default_model_parms["KERNEL_SIZE"],
                                   value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "KERNEL_SIZE"])
-                self.create_entry(self.model_config_frame, "Stride:", row=4, column=0, default_value=default_model_parms["STRIDE"],
+                self.create_entry(self.model_config_frame, "Stride:", row=3, column=2, default_value=default_model_parms["STRIDE"],
                                   value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "STRIDE"])
-                self.create_entry(self.model_config_frame, "Hidden Size:", row=4, column=2, default_value=default_model_parms["HIDDEN_SIZE"],
+                self.create_entry(self.model_config_frame, "Hidden Size:", row=4, column=0, default_value=default_model_parms["HIDDEN_SIZE"],
                                   value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "HIDDEN_SIZE"])
-                self.create_entry(self.model_config_frame, "Dropout Rate:", row=5, column=0, default_value=default_model_parms["DROPOUT"],
+                self.create_entry(self.model_config_frame, "Dropout Rate:", row=4, column=2, default_value=default_model_parms["DROPOUT"],
+                                  value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
+
+            elif MODEL_NAME == "CNN_JF":
+                self.create_entry(self.model_config_frame, "Kernel Size Height:", row=3, column=0, default_value=default_model_parms["KERNEL_SIZE_HEIGHT"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "KERNEL_SIZE_HEIGHT"])
+                self.create_entry(self.model_config_frame, "Kernel Size Width:", row=3, column=2, default_value=default_model_parms["KERNEL_SIZE_WIDTH"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "KERNEL_SIZE_WIDTH"])
+                self.create_entry(self.model_config_frame, "Stride Height:", row=4, column=0, default_value=default_model_parms["STRIDE_HEIGHT"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "STRIDE_HEIGHT"])
+                self.create_entry(self.model_config_frame, "Stride Width:", row=4, column=2, default_value=default_model_parms["STRIDE_WIDTH"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "STRIDE_WIDTH"])
+                self.create_entry(self.model_config_frame, "Dilation Height:", row=5, column=0, default_value=default_model_parms["DILATION_HEIGHT"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DILATION_HEIGHT"])
+                self.create_entry(self.model_config_frame, "Dilation Width:", row=5, column=2, default_value=default_model_parms["DILATION_WIDTH"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DILATION_WIDTH"])
+                self.create_entry(self.model_config_frame, "Padding Height:", row=6, column=0, default_value=default_model_parms["PADDING_HEIGHT"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "PADDING_HEIGHT"])
+                self.create_entry(self.model_config_frame, "Padding Width:", row=6, column=2, default_value=default_model_parms["PADDING_WIDTH"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "PADDING_WIDTH"])
+                self.create_entry(self.model_config_frame, "Dropout Rate:", row=7, column=0, default_value=default_model_parms["DROPOUT"],
                                   value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
 
             elif MODEL_NAME == "DNN":
@@ -732,6 +799,18 @@ class FinOLAPP:
                 self.create_entry(self.model_config_frame, "Dropout Rate:", row=4, column=0, default_value=default_model_parms["DROPOUT"],
                                   value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
 
+            elif MODEL_NAME == "TCN":
+                self.create_entry(self.model_config_frame, "Out Channels:", row=3, column=0, default_value=default_model_parms["OUT_CHANNELS"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "OUT_CHANNELS"])
+                self.create_entry(self.model_config_frame, "Kernel Size:", row=3, column=2, default_value=default_model_parms["KERNEL_SIZE"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "KERNEL_SIZE"])
+                self.create_entry(self.model_config_frame, "Stride:", row=4, column=0, default_value=default_model_parms["STRIDE"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "STRIDE"])
+                self.create_entry(self.model_config_frame, "Hidden Size:", row=4, column=2, default_value=default_model_parms["HIDDEN_SIZE"],
+                                  value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "HIDDEN_SIZE"])
+                self.create_entry(self.model_config_frame, "Dropout Rate:", row=5, column=0, default_value=default_model_parms["DROPOUT"],
+                                  value_type="DoubleVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "DROPOUT"])
+
             elif MODEL_NAME == "Transformer":
                 self.create_entry(self.model_config_frame, "Number of Layers:", row=3, column=0, default_value=default_model_parms["NUM_LAYERS"],
                                   value_type="IntVar", arg_name=["MODEL_PARAMS", MODEL_NAME, "NUM_LAYERS"])
@@ -778,6 +857,7 @@ class FinOLAPP:
 
         entry_mapping = {
             "WINDOW_SIZE": "WINDOW_SIZE_entry",
+            "SIDE_LENGTH": "SIDE_LENGTH_entry",
             "LAMBDA_L2": "LAMBDA_L2_entry",
             "NUM_TRIALS": "NUM_TRIALS_entry",
             "BATCH_SIZE": "BATCH_SIZE_entry"

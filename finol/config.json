@@ -91,18 +91,22 @@
     },
     "FEATURE_ENGINEERING_CONFIG": {
         "INCLUDE_OHLCV_FEATURES": true,
-        "INCLUDE_OVERLAP_FEATURES": true,
-        "INCLUDE_MOMENTUM_FEATURES": true,
-        "INCLUDE_VOLUME_FEATURES": true,
-        "INCLUDE_CYCLE_FEATURES": true,
-        "INCLUDE_PRICE_FEATURES": true,
-        "INCLUDE_VOLATILITY_FEATURES": true,
-        "INCLUDE_PATTERN_FEATURES": true
+        "INCLUDE_OVERLAP_FEATURES": false,
+        "INCLUDE_MOMENTUM_FEATURES": false,
+        "INCLUDE_VOLUME_FEATURES": false,
+        "INCLUDE_CYCLE_FEATURES": false,
+        "INCLUDE_PRICE_FEATURES": false,
+        "INCLUDE_VOLATILITY_FEATURES": false,
+        "INCLUDE_PATTERN_FEATURES": false
     },
     "DATA_AUGMENTATION_CONFIG": {
         "WINDOW_DATA": {
             "INCLUDE_WINDOW_DATA": true,
             "WINDOW_SIZE": 10
+        },
+        "IMAGE_DATA": {
+            "INCLUDE_IMAGE_DATA": true,
+            "SIDE_LENGTH": 24
         }
     },
     "SCALER": "WindowMaxAbsScaler",
@@ -120,7 +124,7 @@
         "CustomDataset": 0
     },
     "_note3": "-------------------------------------- Model Layer Configuration ---------------------------------------",
-    "MODEL_NAME": "DNN",
+    "MODEL_NAME": "AlphaPortfolio",
     "MODEL_PARAMS": {
         "AlphaPortfolio": {
             "NUM_LAYERS": 3,
@@ -135,11 +139,21 @@
             "DROPOUT": 0.05
         },
         "CNN": {
-            "OUT_CHANNELS": 64,
             "KERNEL_SIZE": 3,
             "STRIDE": 1,
             "HIDDEN_SIZE": 32,
             "DROPOUT": 0.2
+        },
+        "CNN_JF": {
+            "KERNEL_SIZE_HEIGHT": 5,
+            "KERNEL_SIZE_WIDTH": 3,
+            "STRIDE_HEIGHT": 3,
+            "STRIDE_WIDTH": 1,
+            "DILATION_HEIGHT": 2,
+            "DILATION_WIDTH": 1,
+            "PADDING_HEIGHT": 12,
+            "PADDING_WIDTH": 1,
+            "DROPOUT": 0.1
         },
         "DNN": {
             "NUM_LAYERS": 2,
@@ -170,6 +184,13 @@
             "NUM_LAYERS": 3,
             "HIDDEN_SIZE": 224,
             "DROPOUT": 0.0
+        },
+        "TCN": {
+            "OUT_CHANNELS": 128,
+            "KERNEL_SIZE": 3,
+            "STRIDE": 1,
+            "HIDDEN_SIZE": 32,
+            "DROPOUT": 0.2
         },
         "Transformer": {
             "NUM_LAYERS": 1,
@@ -370,138 +391,6 @@
                 "step": 0.05
             }
         },
-        "LSRE-CAAN-d": {
-            "NUM_LAYERS": {
-                "type": "int",
-                "range": [
-                    1,
-                    4
-                ],
-                "step": 1
-            },
-            "NUM_LATENTS": {
-                "type": "int",
-                "range": [
-                    1,
-                    12
-                ],
-                "step": 1
-            },
-            "LATENT_DIM": {
-                "type": "int",
-                "range": [
-                    32,
-                    256
-                ],
-                "step": 32
-            },
-            "CROSS_HEADS": {
-                "type": "int",
-                "range": [
-                    1,
-                    4
-                ],
-                "step": 1
-            },
-            "LATENT_HEADS": {
-                "type": "int",
-                "range": [
-                    1,
-                    4
-                ],
-                "step": 1
-            },
-            "CROSS_DIM_HEAD": {
-                "type": "int",
-                "range": [
-                    32,
-                    256
-                ],
-                "step": 32
-            },
-            "LATENT_DIM_HEAD": {
-                "type": "int",
-                "range": [
-                    32,
-                    256
-                ],
-                "step": 32
-            },
-            "DROPOUT": {
-                "type": "float",
-                "range": [
-                    0,
-                    0.5
-                ],
-                "step": 0.05
-            }
-        },
-        "LSRE-CAAN-dd": {
-            "NUM_LAYERS": {
-                "type": "int",
-                "range": [
-                    1,
-                    4
-                ],
-                "step": 1
-            },
-            "NUM_LATENTS": {
-                "type": "int",
-                "range": [
-                    1,
-                    12
-                ],
-                "step": 1
-            },
-            "LATENT_DIM": {
-                "type": "int",
-                "range": [
-                    32,
-                    256
-                ],
-                "step": 32
-            },
-            "CROSS_HEADS": {
-                "type": "int",
-                "range": [
-                    1,
-                    4
-                ],
-                "step": 1
-            },
-            "LATENT_HEADS": {
-                "type": "int",
-                "range": [
-                    1,
-                    4
-                ],
-                "step": 1
-            },
-            "CROSS_DIM_HEAD": {
-                "type": "int",
-                "range": [
-                    32,
-                    256
-                ],
-                "step": 32
-            },
-            "LATENT_DIM_HEAD": {
-                "type": "int",
-                "range": [
-                    32,
-                    256
-                ],
-                "step": 32
-            },
-            "DROPOUT": {
-                "type": "float",
-                "range": [
-                    0,
-                    0.5
-                ],
-                "step": 0.05
-            }
-        },
         "LSTM": {
             "NUM_LAYERS": {
                 "type": "int",
@@ -616,13 +505,13 @@
         }
     },
     "_note4": "----------------------------------- Optimization Layer Configuration -----------------------------------",
-    "NUM_EPOCHES": 20,
+    "NUM_EPOCHES": 200,
     "SAVE_EVERY": 1,
     "OPTIMIZER_NAME": "AdamW",
     "LEARNING_RATE": 0.004,
     "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
-    "TUNE_PARAMETERS": true,
+    "TUNE_PARAMETERS": false,
     "NUM_TRIALS": 30,
     "SAMPLER_NAME": "RandomSampler",
     "PRUNER_NAME": "MedianPruner",

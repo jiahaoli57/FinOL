@@ -5,11 +5,13 @@ from finol.utils import load_config, set_seed
 from finol.model_layer.AlphaPortfolio import AlphaPortfolio
 from finol.model_layer.AlphaStock import AlphaStock
 from finol.model_layer.CNN import CNN
+from finol.model_layer.CNN_JF import CNN_JF
 from finol.model_layer.DNN import DNN
 from finol.model_layer.GRU import GRU
 from finol.model_layer.LSRE_CAAN import LSRE_CAAN
 from finol.model_layer.LSTM import LSTM
 from finol.model_layer.RNN import RNN
+from finol.model_layer.TCN import TCN
 from finol.model_layer.Transformer import Transformer
 from finol.model_layer.CustomModel import CustomModel
 
@@ -17,11 +19,13 @@ model_dict = {
     "AlphaPortfolio": AlphaPortfolio,
     "AlphaStock": AlphaStock,
     "CNN": CNN,
+    "CNN_JF": CNN_JF,
     "DNN": DNN,
     "GRU": GRU,
     "LSRE-CAAN": LSRE_CAAN,
     "LSTM": LSTM,
     "RNN": RNN,
+    "TCN": TCN,
     "Transformer": Transformer,
     "CustomModel": CustomModel,
 }
@@ -64,15 +68,27 @@ class ModelInstantiator:
 
         if "CNN" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "CNN":
             self.model_args = {
-                "num_features_original": self.load_dataset_output["num_features_original"],
-                "window_size": self.load_dataset_output["window_size"],
             }
             self.model_params = {
-                "OUT_CHANNELS": self.config["MODEL_PARAMS"]["CNN"]["OUT_CHANNELS"],
                 "KERNEL_SIZE": self.config["MODEL_PARAMS"]["CNN"]["KERNEL_SIZE"],
                 "STRIDE": self.config["MODEL_PARAMS"]["CNN"]["STRIDE"],
                 "HIDDEN_SIZE": self.config["MODEL_PARAMS"]["CNN"]["HIDDEN_SIZE"],
                 "DROPOUT": self.config["MODEL_PARAMS"]["CNN"]["DROPOUT"],
+            }
+
+        if "CNN_JF" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "CNN_JF":
+            self.model_args = {
+            }
+            self.model_params = {
+                "KERNEL_SIZE_HEIGHT": self.config["MODEL_PARAMS"]["CNN_JF"]["KERNEL_SIZE_HEIGHT"],
+                "KERNEL_SIZE_WIDTH": self.config["MODEL_PARAMS"]["CNN_JF"]["KERNEL_SIZE_WIDTH"],
+                "STRIDE_HEIGHT": self.config["MODEL_PARAMS"]["CNN_JF"]["STRIDE_HEIGHT"],
+                "STRIDE_WIDTH": self.config["MODEL_PARAMS"]["CNN_JF"]["STRIDE_WIDTH"],
+                "DILATION_HEIGHT": self.config["MODEL_PARAMS"]["CNN_JF"]["DILATION_HEIGHT"],
+                "DILATION_WIDTH": self.config["MODEL_PARAMS"]["CNN_JF"]["DILATION_WIDTH"],
+                "PADDING_HEIGHT": self.config["MODEL_PARAMS"]["CNN_JF"]["PADDING_HEIGHT"],
+                "PADDING_WIDTH": self.config["MODEL_PARAMS"]["CNN_JF"]["PADDING_WIDTH"],
+                "DROPOUT": self.config["MODEL_PARAMS"]["CNN_JF"]["DROPOUT"],
             }
 
         if "DNN" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "DNN":
@@ -132,6 +148,19 @@ class ModelInstantiator:
                 "NUM_LAYERS": self.config["MODEL_PARAMS"]["RNN"]["NUM_LAYERS"],
                 "HIDDEN_SIZE": self.config["MODEL_PARAMS"]["RNN"]["HIDDEN_SIZE"],
                 "DROPOUT": self.config["MODEL_PARAMS"]["RNN"]["DROPOUT"],
+            }
+
+        if "TCN" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "TCN":
+            self.model_args = {
+                "num_features_original": self.load_dataset_output["num_features_original"],
+                "window_size": self.load_dataset_output["window_size"],
+            }
+            self.model_params = {
+                "OUT_CHANNELS": self.config["MODEL_PARAMS"]["TCN"]["OUT_CHANNELS"],
+                "KERNEL_SIZE": self.config["MODEL_PARAMS"]["TCN"]["KERNEL_SIZE"],
+                "STRIDE": self.config["MODEL_PARAMS"]["TCN"]["STRIDE"],
+                "HIDDEN_SIZE": self.config["MODEL_PARAMS"]["TCN"]["HIDDEN_SIZE"],
+                "DROPOUT": self.config["MODEL_PARAMS"]["TCN"]["DROPOUT"],
             }
 
         if "Transformer" in self.config["MODEL_PARAMS"] and self.config["MODEL_NAME"] == "Transformer":

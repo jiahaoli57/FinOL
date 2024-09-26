@@ -7,9 +7,6 @@ from einops import rearrange, repeat
 from finol.data_layer.scaler_selector import ScalerSelector
 from finol.utils import load_config
 
-"""
-"""
-
 
 def exists(val):
     return val is not None

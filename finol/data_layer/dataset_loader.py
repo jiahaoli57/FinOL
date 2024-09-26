@@ -1,8 +1,13 @@
 import os
 import time
 import torch
+import warnings
+import matplotlib
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
+from PIL import Image
 from tqdm import tqdm
 from typing import List, Tuple, Dict, Union
 from torch.utils.data import TensorDataset
@@ -10,6 +15,8 @@ from torch.utils.data import DataLoader
 from finol.data_layer.scaler_selector import ScalerSelector
 from finol.utils import ROOT_PATH, load_config, update_config, make_logdir, check_update, download_data, detect_device
 
+# matplotlib.use("pdf")
+# matplotlib.use("TkAgg")
 
 class DatasetLoader:
     """
@@ -31,8 +38,9 @@ class DatasetLoader:
         :return: List of DataFrames containing the loaded raw data.
         """
         raw_files = []
+        i = 0
         for file_name in tqdm(sorted(os.listdir(folder_path)), desc="Data Loading"):
-
+            i += 1
         # import random
         # file_names = sorted(os.listdir(folder_path))
         # random.shuffle(file_names)
@@ -45,6 +53,9 @@ class DatasetLoader:
                     raw_files.append(dataframe)
                 except Exception as e:
                     print(f"An error occurred while loading file {file_path}: {str(e)}")
+
+            if i == 7:
+                break
         return raw_files
 
     def feature_engineering(self, df: pd.DataFrame) -> Tuple[pd.DataFrame, List[str], Dict[str, int]]:
@@ -78,7 +89,7 @@ class DatasetLoader:
                 import talib as ta
             except ImportError:
                 raise ImportError(
-                    "The 'talib' library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
+                    "The \"talib\" library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
                 )
             overlap_features = {
                 "BBANDS_UPPER": ta.BBANDS(df.CLOSE)[0],  # Bollinger Bands - Upper Band
@@ -109,7 +120,7 @@ class DatasetLoader:
                 import talib as ta
             except ImportError:
                 raise ImportError(
-                    "The 'talib' library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
+                    "The \"talib\" library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
                 )
             momentum_features = {
                 "ADX": ta.ADX(df.HIGH, df.LOW, df.CLOSE),  # Average Directional Movement Index
@@ -160,7 +171,7 @@ class DatasetLoader:
                 import talib as ta
             except ImportError:
                 raise ImportError(
-                    "The 'talib' library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
+                    "The \"talib\" library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
                 )
             volume_features = {
                 "AD": ta.AD(df.HIGH, df.LOW, df.CLOSE, df.VOLUME),  # Chaikin A/D Line
@@ -174,7 +185,7 @@ class DatasetLoader:
                 import talib as ta
             except ImportError:
                 raise ImportError(
-                    "The 'talib' library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
+                    "The \"talib\" library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
                 )
             cycle_features = {
                 "HT_DCPERIOD": ta.HT_DCPERIOD(df.CLOSE),  # Hilbert Transform - Dominant Cycle Period
@@ -192,7 +203,7 @@ class DatasetLoader:
                 import talib as ta
             except ImportError:
                 raise ImportError(
-                    "The 'talib' library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
+                    "The \"talib\" library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
                 )
             price_features = {
                 "AVGPRICE": ta.AVGPRICE(df.OPEN, df.HIGH, df.LOW, df.CLOSE),  # Average Price
@@ -207,7 +218,7 @@ class DatasetLoader:
                 import talib as ta
             except ImportError:
                 raise ImportError(
-                    "The 'talib' library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
+                    "The \"talib\" library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
                 )
             volatility_features = {
                 "ATR": ta.ATR(df.HIGH, df.LOW, df.CLOSE),  # Average True Range
@@ -221,7 +232,7 @@ class DatasetLoader:
                 import talib as ta
             except ImportError:
                 raise ImportError(
-                    "The 'talib' library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
+                    "The \"talib\" library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-ta-lib-dependency for installation instructions."
                 )
             pattern_features = {
                 "CDL2CROWS": ta.CDL2CROWS(df.OPEN, df.HIGH, df.LOW, df.CLOSE),  # Two Crows
@@ -309,14 +320,15 @@ class DatasetLoader:
         Augment the provided DataFrame based on the configuration.
 
         :param df: Input DataFrame to be augmented.
-        :return: Augmented DataFrame with window data and the window size used for augmentation.
+        :return: Augmented DataFrame with window data.
         """
         if self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["INCLUDE_WINDOW_DATA"]:
             WINDOW_SIZE = self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"]
             df = pd.concat([df] + [df.shift(i).add_prefix(f"prev_{i}_") for i in range(1, WINDOW_SIZE)], axis=1)
         else:
-            WINDOW_SIZE = 1
-        return df, WINDOW_SIZE
+            self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"] = 1
+            update_config(self.config)
+        return df
 
     def clean_data(self, df: pd.DataFrame) -> pd.DataFrame:
         """
@@ -399,6 +411,48 @@ class DatasetLoader:
         df_label = df_label["LABEL"].to_frame()
         return df_label
 
+    # 'OPEN', 'HIGH', 'LOW', 'CLOSE', 'VOLUME', 'prev_1_CLOSE', 'prev_1_HIGH', ..., 'prev_9_CLOSE', 'prev_9_HIGH', ...
+    def plot_single_candlestick(self, index, row):
+        try:
+            import mplfinance as mpf
+        except ImportError:
+            raise ImportError(
+                "The \"mplfinance\" library is not installed. Please visit https://finol.readthedocs.io/en/latest/installation.html#install-mplfinance-dependency for installation instructions."
+            )
+
+        WINDOW_SIZE = self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"]
+        candlestick_data = pd.DataFrame({
+            "Open": [row[f"prev_{i}_OPEN"] for i in reversed(range(1, WINDOW_SIZE))] + [row["OPEN"]],
+            "High": [row[f"prev_{i}_HIGH"] for i in reversed(range(1, WINDOW_SIZE))] + [row["HIGH"]],
+            "Low": [row[f"prev_{i}_LOW"] for i in reversed(range(1, WINDOW_SIZE))] + [row["LOW"]],
+            "Close": [row[f"prev_{i}_CLOSE"] for i in reversed(range(1, WINDOW_SIZE))] + [row["CLOSE"]],
+            "Volume": [row[f"prev_{i}_VOLUME"] for i in reversed(range(1, WINDOW_SIZE))] + [row["VOLUME"]]
+        }, index=pd.date_range(end=index, periods=WINDOW_SIZE, freq="D"))
+        # There may be a slight error in the time index here, but it doesn't matter.
+
+        mpf.plot(candlestick_data, type="candle", title=f"Candlestick for {index}", volume=True, savefig="stock_plot.png")
+        image = Image.open("stock_plot.png")
+
+        # Resize the image
+        image = image.resize((self.config["DATA_AUGMENTATION_CONFIG"]["IMAGE_DATA"]["SIDE_LENGTH"], self.config["DATA_AUGMENTATION_CONFIG"]["IMAGE_DATA"]["SIDE_LENGTH"]), Image.LANCZOS)
+
+        # Convert to grayscale
+        image = image.convert("L")
+        image_array = np.array(image)
+
+        # Normalize pixel values
+        image_array = image_array / 255.0
+        mean = np.mean(image_array)
+        std = np.std(image_array)
+        image_array = (image_array - mean) / std
+        image_tensor = torch.tensor(image_array, dtype=torch.float32)  # [hight, weight]
+
+        # Visualize
+        # plt.imshow(preprocessed_image)
+        # plt.axis("off")
+        # plt.show()
+        return image_tensor
+
     def load_dataset(self) -> Dict:
         """
         Load the raw data, perform data pre-processing operations, and prepare DataLoader for training, validation, and testing.
@@ -407,6 +461,17 @@ class DatasetLoader:
         """
         # print(self.config["MANUAL_SEED"])
         logdir = make_logdir()
+
+        if self.config["DATA_AUGMENTATION_CONFIG"]["IMAGE_DATA"]["INCLUDE_IMAGE_DATA"]:
+            self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OHLCV_FEATURES"] = True
+            self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_OVERLAP_FEATURES"] = False
+            self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_MOMENTUM_FEATURES"] = False
+            self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLUME_FEATURES"] = False
+            self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_CYCLE_FEATURES"] = False
+            self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PRICE_FEATURES"] = False
+            self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_VOLATILITY_FEATURES"] = False
+            self.config["FEATURE_ENGINEERING_CONFIG"]["INCLUDE_PATTERN_FEATURES"] = False
+            update_config(self.config)
 
         if self.config["LOAD_LOCAL_DATALOADER"]:
             try:
@@ -442,7 +507,7 @@ class DatasetLoader:
                     df, DETAILED_FEATURE_LIST, DETAILED_NUM_FEATURES = self.feature_engineering(df)
                     df = self.clean_data(df)
 
-                    df, WINDOW_SIZE = self.augment_data(df)
+                    df = self.augment_data(df)
                     df = self.clean_data(df)
 
                     df_label = self.make_label(raw_df, df)
@@ -456,25 +521,58 @@ class DatasetLoader:
                     train, val, test = self.split_data(df)
                     train_label, val_label, test_label = self.split_data(df_label)
 
-                    zscore_train = self.calculate_zscore(train)
-                    train_normalization = self.normalize_data(train, zscore_train)
-                    val_normalization = self.normalize_data(val, zscore_train)
-                    test_normalization = self.normalize_data(test, zscore_train)
+                    if not self.config["DATA_AUGMENTATION_CONFIG"]["IMAGE_DATA"]["INCLUDE_IMAGE_DATA"]:
+                        zscore_train = self.calculate_zscore(train)
+                        train_normalization = self.normalize_data(train, zscore_train)
+                        val_normalization = self.normalize_data(val, zscore_train)
+                        test_normalization = self.normalize_data(test, zscore_train)
 
-                    train_normalization = self.clean_data(train_normalization)
-                    val_normalization = self.clean_data(val_normalization)
-                    test_normalization = self.clean_data(test_normalization)
+                        train_normalization = self.clean_data(train_normalization)  # train_normalization.values.shape: (num_train_periods, num_features_augmented)
+                        val_normalization = self.clean_data(val_normalization)
+                        test_normalization = self.clean_data(test_normalization)
 
-                    ds_train.append(torch.from_numpy(train_normalization.values))
-                    ds_val.append(torch.from_numpy(val_normalization.values))
-                    ds_test.append(torch.from_numpy(test_normalization.values))
+                        ds_train.append(torch.from_numpy(train_normalization.values))
+                        ds_val.append(torch.from_numpy(val_normalization.values))
+                        ds_test.append(torch.from_numpy(test_normalization.values))
+
+
+                    elif self.config["DATA_AUGMENTATION_CONFIG"]["IMAGE_DATA"]["INCLUDE_IMAGE_DATA"]:
+                        train_image_tensors = []
+                        val_image_tensors = []
+                        test_image_tensors = []
+
+                        for index, row in train.iterrows():
+                            train_image_tensor = self.plot_single_candlestick(index, row)
+                            train_image_tensors.append(train_image_tensor)
+                        for index, row in val.iterrows():
+                            val_image_tensor = self.plot_single_candlestick(index, row)
+                            val_image_tensors.append(val_image_tensor)
+                        for index, row in test.iterrows():
+                            test_image_tensor = self.plot_single_candlestick(index, row)
+                            test_image_tensors.append(test_image_tensor)
+
+                        train_normalization = torch.stack(train_image_tensors)  # [num_train_periods, height, width]
+                        val_normalization = torch.stack(val_image_tensors)
+                        test_normalization = torch.stack(test_image_tensors)
+
+                        ds_train.append(train_normalization)
+                        ds_val.append(val_normalization)
+                        ds_test.append(test_normalization)
+
                     label_train.append(torch.from_numpy(train_label["LABEL"].values))
                     label_val.append(torch.from_numpy(val_label["LABEL"].values))
                     label_test.append(torch.from_numpy(test_label["LABEL"].values))
 
-                ds_train = torch.stack(ds_train).permute(1, 0, 2).to(self.config["DEVICE"])  # [num_assets, num_train_periods, num_feats] -> [num_train_periods, num_assets, num_feats]
-                ds_val = torch.stack(ds_val).permute(1, 0, 2).to(self.config["DEVICE"])
-                ds_test = torch.stack(ds_test).permute(1, 0, 2).to(self.config["DEVICE"])
+                if not self.config["DATA_AUGMENTATION_CONFIG"]["IMAGE_DATA"]["INCLUDE_IMAGE_DATA"]:
+                    ds_train = torch.stack(ds_train).permute(1, 0, 2).to(self.config["DEVICE"])  # [num_assets, num_train_periods, num_features_augmented] -> [num_train_periods, num_assets, num_features_augmented]
+                    ds_val = torch.stack(ds_val).permute(1, 0, 2).to(self.config["DEVICE"])
+                    ds_test = torch.stack(ds_test).permute(1, 0, 2).to(self.config["DEVICE"])
+
+                elif self.config["DATA_AUGMENTATION_CONFIG"]["IMAGE_DATA"]["INCLUDE_IMAGE_DATA"]:
+                    ds_train = torch.stack(ds_train).permute(1, 0, 2, 3).to(self.config["DEVICE"])  # [num_assets, num_train_periods, height, width] -> [num_train_periods, num_assets, height, width]
+                    ds_val = torch.stack(ds_val).permute(1, 0, 2, 3).to(self.config["DEVICE"])
+                    ds_test = torch.stack(ds_test).permute(1, 0, 2, 3).to(self.config["DEVICE"])
+
                 label_train = torch.stack(label_train).transpose(0, 1).to(self.config["DEVICE"])  # [num_assets, num_train_periods] -> [num_train_periods, num_assets]
                 label_val = torch.stack(label_val).transpose(0, 1).to(self.config["DEVICE"])
                 label_test = torch.stack(label_test).transpose(0, 1).to(self.config["DEVICE"])
@@ -500,12 +598,11 @@ class DatasetLoader:
                 "num_test_periods": ds_test.shape[0],
                 "num_assets": ds_train.shape[1],
                 "num_features_augmented": ds_train.shape[2],
-                "num_features_original": int(ds_train.shape[2] / (WINDOW_SIZE)),
+                "num_features_original": int(ds_train.shape[2] / (self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"])),
                 "detailed_num_features": DETAILED_NUM_FEATURES,
-                "window_size": WINDOW_SIZE,
+                "window_size": self.config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"],
                 "overall_feature_list": [feature[8:] for feature, include in self.config["FEATURE_ENGINEERING_CONFIG"].items() if include],
                 "detailed_feature_list": DETAILED_FEATURE_LIST,
-
             }
             torch.save(load_dataset_output, ROOT_PATH + "/data/datasets/" + self.config["DATASET_NAME"] + "_load_dataset_output.pt")
         # print(load_dataset_output)
@@ -514,4 +611,4 @@ class DatasetLoader:
 
 if __name__ == "__main__":
     load_dataset_output = DatasetLoader().load_dataset()
-    # print(load_dataset_output)
+    print(load_dataset_output)
