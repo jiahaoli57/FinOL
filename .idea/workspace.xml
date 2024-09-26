@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
-      <change afterPath="$PROJECT_DIR$/finol/main/test_script1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finol/main/test_script3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/main/test_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/main/test_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/installation.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/installation.rst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -624,21 +623,7 @@
       <workItem from="1726820726941" duration="35966000" />
       <workItem from="1727079795005" duration="53427000" />
       <workItem from="1727266238509" duration="8398000" />
-      <workItem from="1727275239768" duration="15145000" />
-    </task>
-    <task id="LOCAL-00345" summary="optimize code">
-      <created>1725375936416</created>
-      <option name="number" value="00345" />
-      <option name="presentableId" value="LOCAL-00345" />
-      <option name="project" value="LOCAL" />
-      <updated>1725375936416</updated>
-    </task>
-    <task id="LOCAL-00346" summary="optimize code">
-      <created>1725379652154</created>
-      <option name="number" value="00346" />
-      <option name="presentableId" value="LOCAL-00346" />
-      <option name="project" value="LOCAL" />
-      <updated>1725379652154</updated>
+      <workItem from="1727275239768" duration="16811000" />
     </task>
     <task id="LOCAL-00347" summary="optimize code">
       <created>1725380098667</created>
@@ -969,7 +954,21 @@
       <option name="project" value="LOCAL" />
       <updated>1727336940755</updated>
     </task>
-    <option name="localTasksCounter" value="394" />
+    <task id="LOCAL-00394" summary="build docs">
+      <created>1727337258654</created>
+      <option name="number" value="00394" />
+      <option name="presentableId" value="LOCAL-00394" />
+      <option name="project" value="LOCAL" />
+      <updated>1727337258654</updated>
+    </task>
+    <task id="LOCAL-00395" summary="build docs">
+      <created>1727337278660</created>
+      <option name="number" value="00395" />
+      <option name="presentableId" value="LOCAL-00395" />
+      <option name="project" value="LOCAL" />
+      <updated>1727337278660</updated>
+    </task>
+    <option name="localTasksCounter" value="396" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1068,7 +1067,7 @@
     <SUITE FILE_PATH="coverage/FinOL$OptunaOptimizer.coverage" NAME="OptunaOptimizer 覆盖结果" MODIFIED="1721380496564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/optimization_layer" />
     <SUITE FILE_PATH="coverage/FinOL$LSTP.coverage" NAME="LSTP 覆盖结果" MODIFIED="1718526668153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/model_layer" />
     <SUITE FILE_PATH="coverage/FinOL$BenchmarkLoader.coverage" NAME="BenchmarkLoader 覆盖结果" MODIFIED="1721127425906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/evaluation_layer" />
-    <SUITE FILE_PATH="coverage/FinOL$FinOLAPP.coverage" NAME="FinOLAPP 覆盖结果" MODIFIED="1727336360702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/APP" />
+    <SUITE FILE_PATH="coverage/FinOL$FinOLAPP.coverage" NAME="FinOLAPP 覆盖结果" MODIFIED="1727337182321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/APP" />
     <SUITE FILE_PATH="coverage/FinOL$test_script3.coverage" NAME="test_script3 覆盖结果" MODIFIED="1727265639835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finol/main" />
   </component>
 </project>

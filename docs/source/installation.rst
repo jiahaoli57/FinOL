@@ -18,9 +18,9 @@ from master branch of Git repository:
 Install ta-lib dependency
 -------------------------
 
-``FinOL`` requires the ``ta-lib`` library as one of its dependencies. ``ta-lib`` is an open-source technical indicator
-library for financial applications, and unlike other dependencies, ``ta-lib`` cannot be installed automatically via ``pip install finol``.
-Therefore, you will need to manually install ``ta-lib``.
+``ta-lib`` is an open-source technical indicator library for financial applications, and unlike other dependencies,
+this library is not a mandatory requirement for the basic operation of ``FinOL``.
+It is specifically utilized when advanced data processing and analysis are required to enhance the model's capabilities.
 
 Follow the steps below based on your operating system to install ``ta-lib``:
 
@@ -172,3 +172,29 @@ Follow the steps below based on your operating system to install ``ta-lib``:
             $ python -c "import talib; print(talib.__version__)"
 
           If the installation is successful, it should output the current version of ``ta-lib`` without any errors.
+
+
+Install mplfinance dependency
+-------------------------
+
+``FinOL`` relies on the ``mplfinance`` library for converting data into images suitable for model input.
+Please note that the ``mplfinance`` is not an essential dependency for the basic functionality of ``FinOL``.
+It is specifically required for the optional task of extracting image representations of the data.
+
+If image-based OLPS tasks are desired, ``mplfinance`` can be employed to enhance the model's ability to
+identify complex patterns and trends within the financial data.
+However, this step is not mandatory for most models of the ``FinOL``.
+
+Follow the steps to install ``mplfinance``:
+
+.. code-block:: bash
+
+    $ pip install mplfinance
+
+To verify if the installation is successful, run:
+
+.. code-block:: bash
+
+    $ python -c "import mplfinance as mpf; print(mpf.__version__)"
+
+If the installation is successful, it should output the current version of ``mpf`` without any errors.
