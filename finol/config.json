@@ -5,7 +5,7 @@
     "CHECK_UPDATE": false,
     "DOWNLOAD_DATA": false,
     "_note2": "-------------------------------------- Data Layer Configuration ----------------------------------------",
-    "LOAD_LOCAL_DATALOADER": true,
+    "LOAD_LOCAL_DATALOADER": false,
     "DATASET_NAME": "DJIA",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {

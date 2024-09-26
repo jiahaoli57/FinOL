@@ -38,9 +38,7 @@ class DatasetLoader:
         :return: List of DataFrames containing the loaded raw data.
         """
         raw_files = []
-        i = 0
         for file_name in tqdm(sorted(os.listdir(folder_path)), desc="Data Loading"):
-            i += 1
         # import random
         # file_names = sorted(os.listdir(folder_path))
         # random.shuffle(file_names)
@@ -53,9 +51,6 @@ class DatasetLoader:
                     raw_files.append(dataframe)
                 except Exception as e:
                     print(f"An error occurred while loading file {file_path}: {str(e)}")
-
-            if i == 7:
-                break
         return raw_files
 
     def feature_engineering(self, df: pd.DataFrame) -> Tuple[pd.DataFrame, List[str], Dict[str, int]]:

@@ -7,18 +7,7 @@
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
       <change afterPath="$PROJECT_DIR$/finol/main/test_script1.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/finol/main/test_script3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finol/model_layer/CNN_JF.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finol/model_layer/TCN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/APP/FinOLAPP.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/APP/FinOLAPP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/data_layer/dataset_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/data_layer/dataset_loader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finol/main/test_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/main/test_script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/CNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/CNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/model_instantiator.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/model_instantiator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -635,14 +624,7 @@
       <workItem from="1726820726941" duration="35966000" />
       <workItem from="1727079795005" duration="53427000" />
       <workItem from="1727266238509" duration="8398000" />
-      <workItem from="1727275239768" duration="14710000" />
-    </task>
-    <task id="LOCAL-00344" summary="optimize code">
-      <created>1725374269318</created>
-      <option name="number" value="00344" />
-      <option name="presentableId" value="LOCAL-00344" />
-      <option name="project" value="LOCAL" />
-      <updated>1725374269318</updated>
+      <workItem from="1727275239768" duration="15145000" />
     </task>
     <task id="LOCAL-00345" summary="optimize code">
       <created>1725375936416</created>
@@ -980,7 +962,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727249187394</updated>
     </task>
-    <option name="localTasksCounter" value="393" />
+    <task id="LOCAL-00393" summary="build docs">
+      <created>1727336940754</created>
+      <option name="number" value="00393" />
+      <option name="presentableId" value="LOCAL-00393" />
+      <option name="project" value="LOCAL" />
+      <updated>1727336940755</updated>
+    </task>
+    <option name="localTasksCounter" value="394" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1016,6 +1005,12 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finol/model_layer/CNN_JF.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
