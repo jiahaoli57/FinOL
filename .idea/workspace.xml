@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/key_features/images.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/images.rst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -623,14 +622,7 @@
       <workItem from="1726820726941" duration="35966000" />
       <workItem from="1727079795005" duration="53427000" />
       <workItem from="1727266238509" duration="8398000" />
-      <workItem from="1727275239768" duration="31494000" />
-    </task>
-    <task id="LOCAL-00350" summary="optimize code">
-      <created>1725383327961</created>
-      <option name="number" value="00350" />
-      <option name="presentableId" value="LOCAL-00350" />
-      <option name="project" value="LOCAL" />
-      <updated>1725383327961</updated>
+      <workItem from="1727275239768" duration="32417000" />
     </task>
     <task id="LOCAL-00351" summary="optimize code">
       <created>1725386090090</created>
@@ -968,7 +960,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727354057089</updated>
     </task>
-    <option name="localTasksCounter" value="399" />
+    <task id="LOCAL-00399" summary="build docs">
+      <created>1727408838056</created>
+      <option name="number" value="00399" />
+      <option name="presentableId" value="LOCAL-00399" />
+      <option name="project" value="LOCAL" />
+      <updated>1727408838056</updated>
+    </task>
+    <option name="localTasksCounter" value="400" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

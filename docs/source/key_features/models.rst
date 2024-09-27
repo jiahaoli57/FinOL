@@ -3,16 +3,20 @@
 Pre-built Models
 ================
 
+.. seealso::
+   See :mod:`~finol.model_layer` for more details.
+
 As a software package, part of the innovation of ``FinOL`` is the pre-implemented models in its model layer.
 These pre-built models serves as a significant advantage for researchers in the data-driven OLPS domain,
 offering them a solid foundation to build upon.
 By leveraging these models, researchers can streamline the initial phases of their projects,
 circumventing the need to build complex models from scratch and thereby conserving valuable time and resources.
 
-Time-Series Representation Models
+
+Time Series Representation Models
 ---------------------------------
 
-The time-series representation models within ``FinOL`` are implemented to address the unique challenges of
+The time series representation models within ``FinOL`` are implemented to address the unique challenges of
 sequential data in finance. These models are specifically designed to handle sequential inputs,
 ensuring that the temporal dependencies inherent in financial time series data are accurately captured and analyzed.
 By leveraging these models, researchers can gain deeper insights into market trends, price movements,
@@ -252,7 +256,7 @@ represents the predicted score for the corresponding asset.
 
 Image Representation Models
 -------------------------------
-In addition to time-series data, ``FinOL`` also provides image representation models.
+In addition to time series data, ``FinOL`` also provides image representation models.
 These models are designed to extract meaningful representations from financial images,
 such as charts, graphs, and other visual data.  By doing so, it enables researchers to harness the wealth of
 information contained in visual formats, which can be crucial for tasks like pattern recognition,
@@ -312,3 +316,5 @@ For more details, please refer to the paper `(Re-)Imag(in)ing Price Trends <http
     +----------------------+--------+-------------------+--------+
     | Dropout Rate         | 0.5    |                   |        |
     +----------------------+--------+-------------------+--------+
+
+

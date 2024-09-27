@@ -53,7 +53,7 @@ class CNN_JF(nn.Module):
         >>> config = load_config()
         >>> config["MODEL_NAME"] = "CNN_JF"
         >>> config["MODEL_PARAMS"]["CNN_JF"]["KERNEL_SIZE_HEIGHT"] = 5
-        >>> config["MODEL_PARAMS"]["CNN_JF"]["KERNEL_SIZE_WIDTH"] = 5
+        >>> config["MODEL_PARAMS"]["CNN_JF"]["KERNEL_SIZE_WIDTH"] = 3
         >>> config["MODEL_PARAMS"]["CNN_JF"]["STRIDE_HEIGHT"] = 3
         >>> ...
         >>> update_config(config)
