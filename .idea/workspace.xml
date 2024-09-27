@@ -5,35 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
-      <change afterPath="$PROJECT_DIR$/docs/images/data/stock_plot_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/models/AlphaPortfolio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/models/AlphaStock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/models/CNN-JF.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/models/LSRE-CAAN.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/source/key_features/images.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/source/key_features/models.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/api.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/api.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_TW/LC_MESSAGES/api.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/extending.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/extending.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/installation.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/installation.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/key_features/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/key_features/input.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/input.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/finol/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/AlphaPortfolio.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/AlphaPortfolio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/AlphaStock.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/AlphaStock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/CNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/CNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/CNN_JF.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/CNN_JF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/CustomModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/CustomModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/DNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/DNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/GRU.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/GRU.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/LSRE_CAAN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/LSTM.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/LSTM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/RNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/RNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/TCN.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/TCN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/Transformer.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/Transformer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/key_features/images.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/images.rst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -650,14 +623,7 @@
       <workItem from="1726820726941" duration="35966000" />
       <workItem from="1727079795005" duration="53427000" />
       <workItem from="1727266238509" duration="8398000" />
-      <workItem from="1727275239768" duration="28782000" />
-    </task>
-    <task id="LOCAL-00349" summary="optimize code">
-      <created>1725383256409</created>
-      <option name="number" value="00349" />
-      <option name="presentableId" value="LOCAL-00349" />
-      <option name="project" value="LOCAL" />
-      <updated>1725383256410</updated>
+      <workItem from="1727275239768" duration="31494000" />
     </task>
     <task id="LOCAL-00350" summary="optimize code">
       <created>1725383327961</created>
@@ -995,7 +961,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727338810188</updated>
     </task>
-    <option name="localTasksCounter" value="398" />
+    <task id="LOCAL-00398" summary="build docs">
+      <created>1727354057089</created>
+      <option name="number" value="00398" />
+      <option name="presentableId" value="LOCAL-00398" />
+      <option name="project" value="LOCAL" />
+      <updated>1727354057089</updated>
+    </task>
+    <option name="localTasksCounter" value="399" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -38,7 +38,7 @@ dependencies = [
   "openpyxl",
   "optuna",
   "pandas",
-  "PIL",
+  "Pillow",
   "requests",
   "rich",
   "scikit-learn",

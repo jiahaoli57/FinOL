@@ -95,6 +95,5 @@ with future plans to explore and develop features including but not limited to:
 - Integration of more advanced deep learning models to improve the accuracy and efficiency of image processing.
 - Development of a user-friendly interface to make the configuration and execution process more intuitive.
 
-
 .. seealso::
-   - :ref:`image_representation`
+   :ref:`image_representation`
