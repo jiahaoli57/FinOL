@@ -8,6 +8,7 @@ Key Features
    input
    images
    models
+   optimizers
    metrics
    baselines
    results
