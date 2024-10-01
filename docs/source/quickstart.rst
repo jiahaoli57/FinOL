@@ -34,8 +34,10 @@ a model, etc. The specific configuration method is as follows:
 
     >>> config = load_config()
     >>> config["DEVICE"] = "auto"
+    >>> config["DOWNLOAD_DATA"] = True
     >>> config["DATASET_NAME"] = "DJIA"
-    >>> config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"] = 15
+    >>> config["DATA_AUGMENTATION_CONFIG"]["WINDOW_DATA"]["WINDOW_SIZE"] = 5
+    >>> config["DATA_AUGMENTATION_CONFIG"]["IMAGE_DATA"]["INCLUDE_IMAGE_DATA"] = False
     >>> config["SCALER"] = "WindowMinMaxScaler"
     >>> config["MODEL_NAME"] = "DNN"
     >>> config["TUNE_PARAMETERS"] = True  # False
