@@ -166,7 +166,7 @@ class CriterionSelector:
 
         :param portfolios: Portfolio weights tensor of shape (batch_size, num_assets).
         :param labels: Label tensor representing asset returns of shape (batch_size, num_assets).
-        :return: ``CustomCriteria`` loss tensor, representing the user-defined loss criterion.
+        :return: ``CustomCriterion`` loss tensor, representing the user-defined loss criterion.
         """
         # This is a placeholder for the user to implement their own custom loss function.
         # The implementation of the custom loss function is left to the user.
