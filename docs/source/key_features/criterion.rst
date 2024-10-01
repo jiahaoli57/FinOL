@@ -141,7 +141,6 @@ Criterion Collection
 
 :Description: The ``SharpeRatio`` criterion evaluates the risk-adjusted return of the portfolios using the Sharpe Ratio. This criterion aims to maximize the Sharpe Ratio, which is the ratio of the mean excess return to the standard deviation of the excess return.
 :Function Call: :func:`~finol.optimization_layer.CriterionSelector.compute_sharpe_ratio_loss`
-
 :Code:
 .. code-block::
 
@@ -173,7 +172,6 @@ Criterion Collection
 
 :Description: The ``Volatility`` criterion measures the volatility of the portfolios based on the standard deviation of daily returns. This criterion aims to minimize the volatility of the model, reducing the risk of large losses.
 :Function Call: :func:`~finol.optimization_layer.CriterionSelector.compute_volatility_loss`
-
 :Code:
 .. code-block::
 
@@ -197,7 +195,6 @@ Criterion Collection
 
 :Description: The ``CustomCriterion`` criterion is a placeholder for the user to define their own custom loss criterion. This criterion allows the user to implement any custom loss function they desire, tailored to their specific needs.
 :Function Call: :func:`~finol.optimization_layer.CriterionSelector.compute_custom_criterion_loss`
-
 :Code:
 .. code-block::
 
