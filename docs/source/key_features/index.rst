@@ -9,6 +9,7 @@ Key Features
    images
    models
    optimizers
+   criterion
    metrics
    baselines
    results
