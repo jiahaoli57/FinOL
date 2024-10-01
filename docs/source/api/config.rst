@@ -4,7 +4,7 @@ finol.config
 ============
 
 
-Data Layer Configuration
+General Configuration
 ------------------------
 
 ``DEVICE``
@@ -28,12 +28,16 @@ Data Layer Configuration
 :Options: ``True``, ``False``.
 :Description: Determine whether to check for updates for ``FinOL``.
 
+
 ``DOWNLOAD_DATA``
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Type: bool
 :Options: ``True``, ``False``.
 :Description: Determine whether to download the ``FinOL`` datasets and benchmark results from the source.
+
+Data Layer Configuration
+------------------------
 
 ``LOAD_LOCAL_DATALOADER``
 ~~~~~~~~~~~~~~~~~~~~~~~~~
