@@ -2833,21 +2833,36 @@ msgid "Practicality"
 msgstr "实用性"
 
 msgid "Key Features"
-msgstr "关键特征"
+msgstr "FinOL 关键特征"
 
-msgid "Global datasets"
+msgid "Global Datasets"
 msgstr "全球数据集"
 
-msgid "Rich data input"
+msgid "Rich Data Input"
 msgstr "丰富的数据输入"
 
-msgid "Extensive baselines"
+msgid "Image Data Input"
+msgstr "图像数据输入"
+
+msgid "Pre-built Models"
+msgstr "预构建模型"
+
+msgid "Optimizer Collection"
+msgstr "优化器集合"
+
+msgid "Criterion Collection"
+msgstr "准则集合"
+
+msgid "Extensive Baselines"
 msgstr "广泛的基线"
 
-msgid "Comprehensive metrics"
+msgid "Comprehensive Metrics"
 msgstr "综合的指标"
 
-msgid "Multiple visual tools"
+msgid "Elo Ranking System"
+msgstr "Elo 排名系统"
+
+msgid "Multiple Visual Tools"
 msgstr "多种可视化工具"
 
 msgid "Loss Visualization"
