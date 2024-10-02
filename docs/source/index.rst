@@ -81,7 +81,7 @@ Contents
    quickstart
    api/index
    key_features/index
-   extending
+   extend
    file_structure
    license
    contact_us
