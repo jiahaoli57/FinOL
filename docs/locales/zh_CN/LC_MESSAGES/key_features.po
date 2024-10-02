@@ -2835,8 +2835,8 @@ msgstr "实用性"
 msgid "Key Features"
 msgstr "FinOL 关键特征"
 
-msgid "Global Datasets"
-msgstr "全球数据集"
+msgid "Benchmark Datasets"
+msgstr "基准数据集"
 
 msgid "Rich Data Input"
 msgstr "丰富的数据输入"
