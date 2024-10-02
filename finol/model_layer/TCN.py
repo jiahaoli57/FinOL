@@ -12,12 +12,9 @@ class TCN(nn.Module):
 
     The TCN model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``,
     where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented
-    features) for each asset. The model applies a series of fully connected layers to the input,
-    with each layer followed by a ReLU activation and a dropout layer.
+    features) for each asset.
 
-    The TCN model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``,
-    where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented
-    features) for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element
+    The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element
     represents the predicted score for the corresponding asset.
 
     :param model_args: Dictionary containing model arguments, such as the number of features.
