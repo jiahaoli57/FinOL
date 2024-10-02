@@ -74,7 +74,6 @@ Official PyTorch Optimizers
 :Pseudo-Code:
 .. figure:: ../../images/optimizers/SGD.png
    :align: center
-   :width: 450px
 
 ``RAdam``
 ~~~~~~~~~~~~
