@@ -240,6 +240,7 @@ CNN-JF
 :Details: The CNN-JF model takes an input tensor ``x`` of shape ``(batch_size, num_assets, height, width)``, where ``height`` and ``width`` are the dimensions of the image for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset.
 
 
+
 For more details, please refer to the paper `(Re-)Imag(in)ing Price Trends <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__.
 
 .. table:: Hyper-parameters of (Re-)Imag(in)ing Price Trends.
