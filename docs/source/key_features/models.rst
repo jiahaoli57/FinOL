@@ -7,7 +7,7 @@ Pre-built Models
    See :mod:`~finol.model_layer` for more details.
 
 As a software package, part of the innovation of ``FinOL`` is the pre-implemented models in its model layer.
-These pre-built models serves as a significant advantage for researchers in the data-driven OLPS domain,
+These pre-built models serve as a significant advantage for researchers in the data-driven OLPS domain,
 offering them a solid foundation to build upon.
 By leveraging these models, researchers can streamline the initial phases of their projects,
 circumventing the need to build complex models from scratch and thereby conserving valuable time and resources.
@@ -35,9 +35,9 @@ AlphaPortfolio
 :Description: The AlphaPortfolio model is a Transformer-based model for asset scoring and portfolio selection.
 :Basic Idea: Leverages attention mechanisms to score assets based on their historical performance.
 :Construction: `Source code for AlphaPortfolio <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/AlphaPortfolio.html#AlphaPortfolio>`_
-:Pros: High accuracy in scoring assets; interpretable results through attention weights.
+:Pros: High accuracy in scoring assets; interpretable results through economic distillation.
 :Cons: Computationally intensive; requires careful tuning of hyperparameters.
-:Details: The AlphaPortfolio model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``, where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented features) for each asset. The final output of the AlphaPortfolio model is a tensor of shape ``(batch_size, num_assets)``, represents the predicted score for the corresponding asset.
+:Details: The AlphaPortfolio model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``, where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented features) for each asset. The final output of the AlphaPortfolio model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset.
 
 For more details, please refer to the paper `AlphaPortfolio: Direct Construction through Reinforcement Learning
 and Interpretable AI <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3698800>`__.
@@ -56,7 +56,6 @@ and Interpretable AI <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=369880
     +----------------------+--------+-----------------+--------+
     | Number of TE layer   | 1      | Training epochs | 30     |
     +----------------------+--------+-----------------+--------+
-
 
 
 AlphaStock
@@ -86,7 +85,7 @@ DNN
 :Construction: `Source code for DNN <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/DNN.html#DNN>`_
 :Pros: Flexible architecture.
 :Cons: Risk of overfitting without regularization.
-:Details: The DNN model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``, where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented features) for each asset.  The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset.
+:Details: The DNN model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``, where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented features) for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset.
 
 GRU
 ~~~
@@ -109,7 +108,7 @@ LSRE-CAAN
    Overall Framework of LSRE-CAAN
 
 :Description: The LSRE-CAAN model is a Transformer-based model for asset scoring and portfolio selection.
-:Basic Idea: Combines long sequence representations with attention mechanisms to address efficiency issue in AlphaPortfolio.
+:Basic Idea: Combines long sequence representations with attention mechanisms to address efficiency issues in AlphaPortfolio.
 :Construction: `Source code for LSRE_CAAN <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/LSRE_CAAN.html#LSRE_CAAN>`_
 :Pros: Efficient in processing long sequences; powerful attention mechanisms.
 :Cons: Lacks theoretical guarantees.
@@ -166,12 +165,12 @@ LSTM
 :Construction: `Source code for LSTM <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/LSTM.html#LSTM>`_
 :Pros: Excellent for capturing temporal dependencies; widely used in time series field.
 :Cons: More complex than traditional RNNs; can be computationally expensive.
-:Details: The LSTM model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``,where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented features) for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset.
+:Details: The LSTM model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``, where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented features) for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset.
 
 RNN
 ~~~
 
-:Description:  Recurrent Neural Network model for asset scoring and portfolio selection.
+:Description: Recurrent Neural Network model for asset scoring and portfolio selection.
 :Basic Idea: Processes sequences of data by maintaining a hidden state that captures information from previous inputs.
 :Construction: `Source code for RNN <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/RNN.html#RNN>`_
 :Pros: Simple architecture; effective for short-term dependencies.
@@ -194,7 +193,7 @@ Transformer
 ~~~~~~~~~~~
 
 :Description: Transformer model for asset scoring and portfolio selection.
-:Basic Idea:  Employs self-attention mechanisms to process sequences in parallel.
+:Basic Idea: Employs self-attention mechanisms to process sequences in parallel.
 :Construction: `Source code for Transformer <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/Transformer.html#Transformer>`_
 :Pros: Highly effective for a wide range of tasks; captures complex relationships.
 :Cons: Requires significant computational resources.
@@ -207,7 +206,7 @@ Image Representation Models
 -------------------------------
 In addition to time series data, ``FinOL`` also provides image representation models.
 These models are designed to extract meaningful representations from financial images,
-such as charts, graphs, and other visual data.  By doing so, it enables researchers to harness the wealth of
+such as charts, graphs, and other visual data. By doing so, it enables researchers to harness the wealth of
 information contained in visual formats, which can be crucial for tasks like pattern recognition,
 trend analysis, etc. The inclusion of this model in ``FinOL`` further solidifies its position as a versatile tool for
 data-driven OLPS research.
@@ -220,7 +219,7 @@ CNN
 :Construction: `Source code for CNN <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/CNN.html#CNN>`_
 :Pros: Effective for image classification and feature extraction.
 :Cons: Requires significant computational resources.
-:Details: The CNN model takes an input tensor ``x`` of shape ``(batch_size, num_assets, height, width)``, where ``height`` and ``width`` are the dimensions of the image for each asset.  The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset.
+:Details: The CNN model takes an input tensor ``x`` of shape ``(batch_size, num_assets, height, width)``, where ``height`` and ``width`` are the dimensions of the image for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset.
 
 
 CNN-JF
@@ -238,7 +237,6 @@ CNN-JF
 :Pros: Combines advantages of visual data analysis with financial modeling.
 :Cons: Requires significant computational resources.
 :Details: The CNN-JF model takes an input tensor ``x`` of shape ``(batch_size, num_assets, height, width)``, where ``height`` and ``width`` are the dimensions of the image for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset.
-
 
 
 For more details, please refer to the paper `(Re-)Imag(in)ing Price Trends <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__.
