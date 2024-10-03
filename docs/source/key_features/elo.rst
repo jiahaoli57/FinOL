@@ -136,7 +136,7 @@ Elo Ranking Results on Profitability
    :widths: auto
 
    +-------------------+-------------+-------------+
-   | Model/Paper       | Elo Rating  | Rank        |
+   | Model             | Elo Rating  | Rank        |
    +===================+=============+=============+
    | SSPO              | 1275        | 1           |
    +-------------------+-------------+-------------+
@@ -199,7 +199,7 @@ Elo Ranking Results on Risk Resilience
    :widths: auto
 
    +-------------------+-------------+-------------+
-   | Model/Paper       | Elo Rating  | Rank        |
+   | Model             | Elo Rating  | Rank        |
    +===================+=============+=============+
    | UP                | 1294        | 1           |
    +-------------------+-------------+-------------+
@@ -262,7 +262,7 @@ Elo Ranking Results on Practicality
    :widths: auto
 
    +-------------------+-------------+-------------+
-   | Model/Paper       | Elo Rating  | Rank        |
+   | Model             | Elo Rating  | Rank        |
    +===================+=============+=============+
    | Market            | 1502        | 1           |
    +-------------------+-------------+-------------+

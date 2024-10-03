@@ -6,12 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="0d1b82fd-c2bb-4556-8a98-5f4847418a40" name="变更" comment="build docs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/index.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/index.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/installation.mo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/installation.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/installation.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/installation.po" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/key_features.mo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/key_features.mo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/key_features.po" beforeDir="false" afterPath="$PROJECT_DIR$/docs/locales/zh_CN/LC_MESSAGES/key_features.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/key_features/images.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/images.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/extend.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/extend.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/key_features/elo.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/elo.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/source/key_features/models.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/models.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/key_features/optimizers.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/optimizers.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/key_features/results.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/key_features/results.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finol/APP/FinOLAPP.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/APP/FinOLAPP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finol/model_layer/AlphaPortfolio.py" beforeDir="false" afterPath="$PROJECT_DIR$/finol/model_layer/AlphaPortfolio.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -635,14 +640,7 @@
       <workItem from="1727604928557" duration="1012000" />
       <workItem from="1727614031108" duration="35963000" />
       <workItem from="1727784821837" duration="5047000" />
-      <workItem from="1727845055103" duration="21407000" />
-    </task>
-    <task id="LOCAL-00370" summary="build docs">
-      <created>1725459422394</created>
-      <option name="number" value="00370" />
-      <option name="presentableId" value="LOCAL-00370" />
-      <option name="project" value="LOCAL" />
-      <updated>1725459422394</updated>
+      <workItem from="1727845055103" duration="32836000" />
     </task>
     <task id="LOCAL-00371" summary="build docs">
       <created>1725501962769</created>
@@ -980,7 +978,14 @@
       <option name="project" value="LOCAL" />
       <updated>1727863533557</updated>
     </task>
-    <option name="localTasksCounter" value="419" />
+    <task id="LOCAL-00419" summary="build docs">
+      <created>1727932395678</created>
+      <option name="number" value="00419" />
+      <option name="presentableId" value="LOCAL-00419" />
+      <option name="project" value="LOCAL" />
+      <updated>1727932395678</updated>
+    </task>
+    <option name="localTasksCounter" value="420" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

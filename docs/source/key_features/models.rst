@@ -233,7 +233,7 @@ CNN-JF
 
 :Description: The CNN-JF model is a CNN-based model for asset scoring and portfolio selection. It leverages CNN to analyze historical stock price data represented as images.
 :Basic Idea: Leverages CNN architecture to capture patterns in financial time series represented visually.
-:Construction: `Source code for finol.model_layer.CNN_JF <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/CNN_JF.html#CNN_JF>`_
+:Construction: `Source code for CNN_JF <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/CNN_JF.html#CNN_JF>`_
 :Pros: Combines advantages of visual data analysis with financial modeling.
 :Cons: Requires significant computational resources.
 :Details: The CNN-JF model takes an input tensor ``x`` of shape ``(batch_size, num_assets, height, width)``, where ``height`` and ``width`` are the dimensions of the image for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset.

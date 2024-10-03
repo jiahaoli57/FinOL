@@ -7,7 +7,7 @@ Official PyTorch Optimizers
 ``Adadelta``
 ~~~~~~~~~~~~
 
-:Description: Adadelta is a robust learning rate method that can be applied in a variety of situations. This method has trivial computational overhead compared to SGD while providing a per-dimension learning rate, and shows promising result on MNIST and a large scale Speech recognition dataset.
+:Description: Adadelta is a robust learning rate method that can be applied in a variety of situations. This method has trivial computational overhead compared to SGD while providing a per-dimension learning rate, and shows promising results on MNIST and a large scale Speech recognition dataset.
 :Source: `An Adaptive Learning Rate Method <https://arxiv.org/abs/1212.5701>`__.
 :Pseudo-Code:
 .. figure:: ../../images/optimizers/Adadelta.png
@@ -17,13 +17,12 @@ Official PyTorch Optimizers
 ``Adagrad``
 ~~~~~~~~~~~~
 
-:Description: AdaGrad is a family of sub-gradient algorithms for stochastic optimization. The algorithms belonging to that family are similar to second-order stochastic gradient descend with an approximation for the Hessian of the optimized function. AdaGrad's name comes from Adaptative Gradient. Intuitively, it adapts the learning rate for each feature depending on the estimated geometry of the problem; particularly, it tends to assign higher learning rates to infrequent features, which ensures that the parameter updates rely less on frequency and more on relevance.
+:Description: AdaGrad is a family of sub-gradient algorithms for stochastic optimization. The algorithms belonging to that family are similar to second-order stochastic gradient descent with an approximation for the Hessian of the optimized function. AdaGrad's name comes from Adaptative Gradient. Intuitively, it adapts the learning rate for each feature depending on the estimated geometry of the problem; particularly, it tends to assign higher learning rates to infrequent features, which ensures that the parameter updates rely less on frequency and more on relevance.
 :Source: `Adaptive Subgradient Methods for Online Learning and Stochastic Optimization <http://jmlr.org/papers/v12/duchi11a.html>`__.
 :Pseudo-Code:
 .. figure:: ../../images/optimizers/Adagrad.png
    :align: center
    :width: 450px
-
 
 ``Adam``
 ~~~~~~~~~~~~
@@ -78,7 +77,7 @@ Official PyTorch Optimizers
 ``RAdam``
 ~~~~~~~~~~~~
 
-:Description: RAdam is a rectified version of Adam, which which not only explicitly rectifies the variance and is theoretically sound, but also compares favorably with the heuristic warmup.
+:Description: RAdam is a rectified version of Adam, which not only explicitly rectifies the variance and is theoretically sound, but also compares favorably with the heuristic warmup.
 :Source: `On the Variance of the Adaptive Learning Rate and Beyond <https://arxiv.org/abs/1908.03265>`__.
 :Pseudo-Code:
 .. figure:: ../../images/optimizers/RAdam.png
@@ -154,7 +153,7 @@ Custom Optimizers
 ``AccSGD``
 ~~~~~~~~~~~~
 
-:Description: An an accelerated stochastic gradient method, which presents the first improvement in achieving minimax rates faster than veraged SGD for the stochastic approximation problem of least squares regression.
+:Description: An accelerated stochastic gradient method, which presents the first improvement in achieving minimax rates faster than averaged SGD for the stochastic approximation problem of least squares regression.
 :Source: `On the insufficiency of existing momentum schemes for Stochastic Optimization <https://arxiv.org/abs/1704.08227>`__.
 :Pseudo-Code:
 .. figure:: ../../images/optimizers/AccSGD.png
@@ -191,7 +190,7 @@ Custom Optimizers
 ``Adafactor``
 ~~~~~~~~~~~~~~~~~
 
-:Description: Adafactor is a highly efficient optimization algorithm designed to address the memory constraints often encountered in training large neural networks.  It achieves comparable performance to Adam on popular tasks such as machine translation while requiring a sublinear amount of extra space for accumulators. This makes it possible to train significantly larger models on hardware with memory limitations.
+:Description: Adafactor is a highly efficient optimization algorithm designed to address the memory constraints often encountered in training large neural networks. It achieves comparable performance to Adam on popular tasks such as machine translation while requiring a sublinear amount of extra space for accumulators. This makes it possible to train significantly larger models on hardware with memory limitations.
 :Source: `Adafactor: Adaptive Learning Rates with Sublinear Memory Cost <https://arxiv.org/abs/1804.04235>`__.
 :Pseudo-Code:
 .. figure:: ../../images/optimizers/Adafactor.png
@@ -201,7 +200,7 @@ Custom Optimizers
 ``Adahessian``
 ~~~~~~~~~~~~~~~~~
 
-:Description: AdaHessian incorporates an approximate Hessian diagonal, with spatial averaging and momentum to precondition the gradient vector.  This automatically rescales the gradient vector resulting in better descent directions.  One of the key novelties in AdaHessian is the incorporation spatial averaging for Hessian diagonal along with an exponential moving average in time.    These enable us to smooth noisy local Hessian information which could be highly misleading.
+:Description: AdaHessian incorporates an approximate Hessian diagonal, with spatial averaging and momentum to precondition the gradient vector. This automatically rescales the gradient vector resulting in better descent directions. One of the key novelties in AdaHessian is the incorporation of spatial averaging for Hessian diagonal along with an exponential moving average in time. These enable us to smooth noisy local Hessian information which could be highly misleading.
 :Source: `ADAHESSIAN: An Adaptive Second Order Optimizer for Machine Learning <https://arxiv.org/abs/2006.00719>`__.
 :Pseudo-Code:
 .. figure:: ../../images/optimizers/Adahessian.png
@@ -211,7 +210,7 @@ Custom Optimizers
 ``AdamP``
 ~~~~~~~~~~~~
 
-:Description: AdamP addresses the issue of excessive growth in scale-invariant weight norms, a phenomenon that can lead to sub-optimal performance.  This issue is particularly prevalent when using momentum-based optimizers like SGD and Adam, which are widely employed for training a majority of deep learning models.  Networks that incorporate normalization layers, such as ResNet, often exhibit a large proportion of scale-invariant weights.
+:Description: AdamP addresses the issue of excessive growth in scale-invariant weight norms, a phenomenon that can lead to sub-optimal performance. This issue is particularly prevalent when using momentum-based optimizers like SGD and Adam, which are widely employed for training a majority of deep learning models. Networks that incorporate normalization layers, such as ResNet, often exhibit a large proportion of scale-invariant weights.
 :Source: `Slowing Down the Weight Norm Increase in Momentum-based Optimizers <https://arxiv.org/abs/2006.08217>`__.
 :Pseudo-Code:
 .. figure:: ../../images/optimizers/AdamP.png
@@ -249,7 +248,7 @@ Custom Optimizers
 ``LARS``
 ~~~~~~~~~~~~
 
-:Description: LARS, an optimizer that tailors the learning rate for each layer, is instrumental in scaling up the training of convolutional networks with large batch sizes.  It overcomes the divergence issues associated with traditional large learning rate approaches, especially during the initial training phase.  LARS has been effectively utilized to scale the training of AlexNet and ResNet-50 to batch sizes of 32K without loss of accuracy.
+:Description: LARS, an optimizer that tailors the learning rate for each layer, is instrumental in scaling up the training of convolutional networks with large batch sizes. It overcomes the divergence issues associated with traditional large learning rate approaches, especially during the initial training phase. LARS has been effectively utilized to scale the training of AlexNet and ResNet-50 to batch sizes of 32K without loss of accuracy.
 :Source: `Large batch training of Convolutional Networks <https://arxiv.org/pdf/1708.03888.pdf>`__.
 :Pseudo-Code:
 .. figure:: ../../images/optimizers/LARS.png
@@ -336,7 +335,7 @@ Custom Optimizers
 ``SGDP``
 ~~~~~~~~~~~~
 
-:Description: SGDP addresses the issue of excessive growth in scale-invariant weight norms, a phenomenon that can lead to sub-optimal performance.  This issue is particularly prevalent when using momentum-based optimizers like SGD and Adam, which are widely employed for training a majority of deep learning models.  Networks that incorporate normalization layers, such as ResNet, often exhibit a large proportion of scale-invariant weights.
+:Description: SGDP addresses the issue of excessive growth in scale-invariant weight norms, a phenomenon that can lead to sub-optimal performance. This issue is particularly prevalent when using momentum-based optimizers like SGD and Adam, which are widely employed for training a majority of deep learning models. Networks that incorporate normalization layers, such as ResNet, often exhibit a large proportion of scale-invariant weights.
 :Source: `AdamP: Slowing Down the Slowdown for Momentum Optimizers on Scale-invariant Weights <https://arxiv.org/abs/2006.08217>`__.
 :Pseudo-Code:
 .. figure:: ../../images/optimizers/SGDP.png

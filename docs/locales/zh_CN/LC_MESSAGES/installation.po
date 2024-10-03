@@ -41,16 +41,11 @@ msgstr ""
 msgid ""
 "Install ta-lib dependency"
 msgstr ""
-"安装 ta-lib 依赖项"
+"安装 ta-lib 依赖"
 
 #: ../../source/installation.rst
-msgid ""
-"``FinOL`` requires the ``ta-lib`` library as one of its dependencies. ``ta-lib`` is an open-source technical indicator "
-"library for financial applications, and unlike other dependencies, ``ta-lib`` cannot be installed automatically via ``pip install finol``. "
-"Therefore, you will need to manually install ``ta-lib``."
-msgstr ""
-"``FinOL`` 需要 ``ta-lib`` 库作为其依赖项之一。``ta-lib`` 是一个用于金融应用的开源技术指标库，与其他依赖项不同，"
-"``ta-lib`` 无法通过 ``pip install finol`` 自动安装。因此，您需要手动安装 ``ta-lib``。"
+msgid "``ta-lib`` is an open-source technical indicator library for financial applications, and unlike other dependencies, this library is not a mandatory requirement for the basic operation of ``FinOL``. It is specifically utilized when advanced data processing and analysis are required to enhance the model's capabilities."
+msgstr "``ta-lib`` 是一个用于金融应用的开源技术指标库，与其他依赖项不同，该库不是 ``FinOL`` 基本操作的强制性要求。它专门用于需要高级数据处理和分析以增强模型能力的情况。"
 
 #: ../../source/installation.rst
 msgid ""
@@ -130,3 +125,45 @@ msgid ""
 "ta-lib WHL File"
 msgstr ""
 "ta-lib WHL 文件"
+
+msgid "Install mplfinance dependency"
+msgstr "安装 mplfinance 依赖"
+
+msgid "``FinOL`` relies on the ``mplfinance`` library for converting data into images suitable for model input. Please note that the ``mplfinance`` is not an essential dependency for the basic functionality of ``FinOL``. It is specifically required for the optional task of extracting image representations of the data."
+msgstr "``FinOL`` 依赖于 ``mplfinance`` 库将数据转换为适合模型输入的图像。请注意，``mplfinance`` 不是 ``FinOL`` 基本功能的必要依赖。它专门用于提取数据的图像表示的可选任务。"
+
+msgid "If image-based OLPS tasks are desired, ``mplfinance`` can be employed to enhance the model's ability to identify complex patterns and trends within the financial data. However, this step is not mandatory for most models of the ``FinOL``."
+msgstr "如果需要基于图像的 OLPS 任务，可以使用 ``mplfinance`` 来增强模型识别金融数据中复杂模式和趋势的能力。然而，对于大多数 ``FinOL`` 模型而言，这一步并不是强制性的。"
+
+msgid "Follow the steps to install ``mplfinance``:"
+msgstr "请按照以下步骤安装 ``mplfinance``："
+
+msgid "If the installation is successful, it should output the current version of ``mpf`` without any errors."
+msgstr "如果安装成功，它应该输出当前版本的 ``mpf``，且没有任何错误。"
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
