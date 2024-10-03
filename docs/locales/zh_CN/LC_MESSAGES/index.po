@@ -217,4 +217,17 @@ msgstr ""
 "而且还为公平比较提供了广泛的基准结果。"
 
 
+msgid "New model! ``FinOL`` now supports the `CNN-JF <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__ model"
+msgstr "全新模型！``FinOL`` 现已支持 `CNN-JF <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__ 模型"
+
+msgid "Supported since 26 September 2024"
+msgstr "于 2024年9月26日 发布"
+
+msgid "New feature! ``FinOL`` now supports the `Image Input <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__ feature"
+msgstr "全新功能！``FinOL`` 现已支持 `CNN-JF <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__ 功能"
+
+msgid "Supported since 26 September 2024"
+msgstr "于 2024年9月26日 发布"
+
+
 

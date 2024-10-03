@@ -206,3 +206,14 @@ msgstr ""
 "``FinOL`` 不僅提供了一個結構良好的庫，提供了廣泛封裝的函數，"
 "而且還為公平比較提供了廣泛的基準結果。"
 
+msgid "New model! ``FinOL`` now supports the `CNN-JF <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__ model"
+msgstr "全新模型！``FinOL`` 現已支持 `CNN-JF <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__ 模型"
+
+msgid "Supported since 26 September 2024"
+msgstr "於 2024年9月26日 發布"
+
+msgid "New feature! ``FinOL`` now supports the `Image Input <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__ feature"
+msgstr "全新功能！``FinOL`` 現已支持 `CNN-JF <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__ 功能"
+
+msgid "Supported since 26 September 2024"
+msgstr "於 2024年9月26日 發布"
