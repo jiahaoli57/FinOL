@@ -1,0 +1,3255 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, FinOL Contributors
+# This file is distributed under the same license as the FinOL package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FinOL 0.1.29\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-13 01:01+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_TW\n"
+"Language-Team: zh_TW <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: ../../source/key_features/index.rst:2
+msgid "FinOL Supports ..."
+msgstr "FinOL 支援 ..."
+
+#: ../../source/key_features/supported_baselines.rst:4
+msgid "|:crossed_swords:| Extensive OLPS Baselines"
+msgstr "|:crossed_swords:| 廣泛的 OLPS 基線"
+
+#: ../../source/key_features/supported_baselines.rst:9
+#: ../../source/key_features/supported_datasets.rst:9
+#: ../../source/key_features/supported_metrics.rst:9
+msgid "Name"
+msgstr "名稱"
+
+#: ../../source/key_features/supported_baselines.rst:9
+#: ../../source/key_features/supported_metrics.rst:9
+msgid "Category"
+msgstr "分類"
+
+#: ../../source/key_features/supported_baselines.rst:9
+msgid "Source"
+msgstr "來源"
+
+#: ../../source/key_features/supported_baselines.rst:9
+msgid "Journal/Conference"
+msgstr "期刊/會議"
+
+#: ../../source/key_features/supported_baselines.rst:12
+#: ../../source/key_features/supported_baselines.rst:279
+#: ../../source/key_features/supported_baselines.rst:292
+msgctxt "supported_baselines"
+msgid "Market"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:12
+#: ../../source/key_features/supported_baselines.rst:16
+#: ../../source/key_features/supported_baselines.rst:20
+#: ../../source/key_features/supported_baselines.rst:29
+msgid "Classic OLPS: Benchmark baseline"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:12
+#: ../../source/key_features/supported_baselines.rst:16
+msgid "–"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:16
+#: ../../source/key_features/supported_baselines.rst:222
+#: ../../source/key_features/supported_baselines.rst:223
+#: ../../source/key_features/supported_baselines.rst:224
+#: ../../source/key_features/supported_baselines.rst:225
+#: ../../source/key_features/supported_baselines.rst:286
+#: ../../source/key_features/supported_baselines.rst:289
+#: ../../source/key_features/supported_baselines.rst:318
+msgid "Best"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:20
+#: ../../source/key_features/supported_baselines.rst:291
+#: ../../source/key_features/supported_baselines.rst:299
+#: ../../source/key_features/supported_baselines.rst:306
+#: ../../source/key_features/supported_baselines.rst:312
+#: ../../source/key_features/supported_baselines.rst:313
+#: ../../source/key_features/supported_baselines.rst:317
+#: ../../source/key_features/supported_baselines.rst:362
+#: ../../source/key_features/supported_baselines.rst:364
+#: ../../source/key_features/supported_baselines.rst:367
+#: ../../source/key_features/supported_baselines.rst:370
+#: ../../source/key_features/supported_baselines.rst:371
+#: ../../source/key_features/supported_baselines.rst:378
+#: ../../source/key_features/supported_baselines.rst:379
+#: ../../source/key_features/supported_baselines.rst:383
+#: ../../source/key_features/supported_baselines.rst:386
+msgid "UCRP"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:20
+msgid ""
+"`Kelly 1956 <https://ieeexplore.ieee .org/abstract/document/6771227/>`__;"
+" `Cover 1991 <https: //onlinelibrary.wiley.com/doi/abs/10 "
+".1111/j.1467-9965.1991.tb00002.x>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:20
+msgid "*The Bell System Technical Journal*; *Mathematical Finance*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:29
+#: ../../source/key_features/supported_baselines.rst:212
+#: ../../source/key_features/supported_baselines.rst:213
+#: ../../source/key_features/supported_baselines.rst:214
+#: ../../source/key_features/supported_baselines.rst:215
+#: ../../source/key_features/supported_baselines.rst:218
+#: ../../source/key_features/supported_baselines.rst:237
+#: ../../source/key_features/supported_baselines.rst:276
+#: ../../source/key_features/supported_baselines.rst:304
+#: ../../source/key_features/supported_baselines.rst:309
+#: ../../source/key_features/supported_baselines.rst:346
+#: ../../source/key_features/supported_baselines.rst:348
+#: ../../source/key_features/supported_baselines.rst:349
+#: ../../source/key_features/supported_baselines.rst:350
+#: ../../source/key_features/supported_baselines.rst:351
+#: ../../source/key_features/supported_baselines.rst:353
+#: ../../source/key_features/supported_baselines.rst:392
+#: ../../source/key_features/supported_baselines.rst:394
+msgid "BCRP"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:29
+#: ../../source/key_features/supported_baselines.rst:38
+msgid ""
+"`Cover 1991 <https: //onlinelibrary.wiley.com/doi/abs/10 "
+".1111/j.1467-9965.1991.tb00002.x>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:29
+#: ../../source/key_features/supported_baselines.rst:38
+#: ../../source/key_features/supported_baselines.rst:44
+msgid "*Mathematical Finance*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:38
+#: ../../source/key_features/supported_baselines.rst:281
+#: ../../source/key_features/supported_baselines.rst:319
+#: ../../source/key_features/supported_baselines.rst:323
+#: ../../source/key_features/supported_baselines.rst:357
+#: ../../source/key_features/supported_baselines.rst:389
+msgid "UP"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:38
+#: ../../source/key_features/supported_baselines.rst:44
+#: ../../source/key_features/supported_baselines.rst:50
+#: ../../source/key_features/supported_baselines.rst:55
+#: ../../source/key_features/supported_baselines.rst:62
+msgid "Classic OLPS: Follow-the-winner"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:44
+#: ../../source/key_features/supported_baselines.rst:287
+#: ../../source/key_features/supported_baselines.rst:302
+#: ../../source/key_features/supported_baselines.rst:311
+#: ../../source/key_features/supported_baselines.rst:347
+#: ../../source/key_features/supported_baselines.rst:352
+#: ../../source/key_features/supported_baselines.rst:354
+#: ../../source/key_features/supported_baselines.rst:356
+#: ../../source/key_features/supported_baselines.rst:358
+#: ../../source/key_features/supported_baselines.rst:359
+#: ../../source/key_features/supported_baselines.rst:360
+#: ../../source/key_features/supported_baselines.rst:361
+#: ../../source/key_features/supported_baselines.rst:363
+msgid "EG"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:44
+msgid ""
+"`Helmbold et al. 1998 <https://onlinelibrary.wiley.com "
+"/doi/abs/10.1111/1467-9965.00058>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:50
+msgid "SCRP"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:50
+msgid ""
+"`Gaivoronski and Stella 2000 <https://link.springer.com "
+"/article/10.1023/A:1019271201970>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:50
+msgid "*Annals of Operations Research*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:55
+#: ../../source/key_features/supported_baselines.rst:219
+#: ../../source/key_features/supported_baselines.rst:220
+#: ../../source/key_features/supported_baselines.rst:221
+#: ../../source/key_features/supported_baselines.rst:238
+#: ../../source/key_features/supported_baselines.rst:244
+#: ../../source/key_features/supported_baselines.rst:247
+#: ../../source/key_features/supported_baselines.rst:288
+#: ../../source/key_features/supported_baselines.rst:320
+msgid "PPT"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:55
+msgid ""
+"`Lai et al. 2018 <https://ieeexplore.ie "
+"ee.org/abstract/document/7942104>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:55
+#: ../../source/key_features/supported_baselines.rst:131
+msgid "*IEEE Transactions on Neural Networks and Learning Systems*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:62
+#: ../../source/key_features/supported_baselines.rst:208
+#: ../../source/key_features/supported_baselines.rst:209
+#: ../../source/key_features/supported_baselines.rst:210
+#: ../../source/key_features/supported_baselines.rst:231
+#: ../../source/key_features/supported_baselines.rst:233
+#: ../../source/key_features/supported_baselines.rst:234
+#: ../../source/key_features/supported_baselines.rst:298
+msgid "SSPO"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:62
+msgid "`Lai et al. 2018 <https://www .jmlr.org/papers/v19/17-558.html>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:62
+msgid "*The Journal of Machine Learning Research*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:69
+#: ../../source/key_features/supported_baselines.rst:217
+#: ../../source/key_features/supported_baselines.rst:240
+#: ../../source/key_features/supported_baselines.rst:252
+#: ../../source/key_features/supported_baselines.rst:290
+#: ../../source/key_features/supported_baselines.rst:294
+#: ../../source/key_features/supported_baselines.rst:296
+msgid "ANTI\\ :sup:`1`\\"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:69
+#: ../../source/key_features/supported_baselines.rst:76
+#: ../../source/key_features/supported_baselines.rst:83
+#: ../../source/key_features/supported_baselines.rst:89
+#: ../../source/key_features/supported_baselines.rst:96
+#: ../../source/key_features/supported_baselines.rst:103
+#: ../../source/key_features/supported_baselines.rst:109
+#: ../../source/key_features/supported_baselines.rst:115
+#: ../../source/key_features/supported_baselines.rst:122
+msgid "Classic OLPS: Follow-the-loser"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:69
+#: ../../source/key_features/supported_baselines.rst:76
+msgid ""
+"`Borodin et al. 2004 <h ttps://proceedings.neurips.cc/paper_ "
+"files/paper/2003/hash/8c9f32e03aeb2e 3000825c8c875c4edd-Abstract.html>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:69
+#: ../../source/key_features/supported_baselines.rst:76
+msgid "*Advances in Neural Information Processing Systems*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:76
+#: ../../source/key_features/supported_baselines.rst:207
+#: ../../source/key_features/supported_baselines.rst:228
+#: ../../source/key_features/supported_baselines.rst:242
+#: ../../source/key_features/supported_baselines.rst:245
+#: ../../source/key_features/supported_baselines.rst:250
+#: ../../source/key_features/supported_baselines.rst:254
+#: ../../source/key_features/supported_baselines.rst:280
+#: ../../source/key_features/supported_baselines.rst:284
+msgid "ANTI\\ :sup:`2`\\"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:83
+#: ../../source/key_features/supported_baselines.rst:239
+#: ../../source/key_features/supported_baselines.rst:248
+msgid "PAMR"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:83
+msgid ""
+"`Li et al. 2012 <https://link.springer.com/a "
+"rticle/10.1007/s10994-012-5281-z>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:83
+msgid "*Machine Learning*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:89
+msgid "CWMR-Var"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:89
+#: ../../source/key_features/supported_baselines.rst:96
+msgid "`Li et al. 2013 <https://dl.acm.org /doi/abs/10.1145/2435209.2435213>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:89
+#: ../../source/key_features/supported_baselines.rst:96
+msgid "*ACM Transactions on Knowledge Discovery from Data*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:96
+#: ../../source/key_features/supported_baselines.rst:249
+#: ../../source/key_features/supported_baselines.rst:253
+msgid "CWMR-Stdev"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:103
+#: ../../source/key_features/supported_baselines.rst:310
+msgid "OLMAR-S"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:103
+#: ../../source/key_features/supported_baselines.rst:109
+msgid ""
+"`Li et al. 2015 <https://www.sciencedirect.com/scien "
+"ce/article/pii/S0004370215000168>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:103
+#: ../../source/key_features/supported_baselines.rst:109
+msgid "*Artificial Intelligence*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:109
+msgid "OLMAR-E"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:115
+#: ../../source/key_features/supported_baselines.rst:241
+#: ../../source/key_features/supported_baselines.rst:300
+msgid "RMR"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:115
+msgid ""
+"`Huang et al. 2016 <https://ieeexplore.ie "
+"ee.org/abstract/document/7465840>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:115
+msgid "*IEEE Transactions on Knowledge and Data Engineering*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:122
+#: ../../source/key_features/supported_baselines.rst:211
+msgid "RPRT"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:122
+msgid ""
+"`Lai et al. 2020 <https://ieeexplore.iee "
+"e.org/abstract/document/8411138/>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:122
+msgid "*IEEE Transactions on Systems, Man, and Cybernetics: Systems*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:131
+#: ../../source/key_features/supported_baselines.rst:251
+msgid "AICTR"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:131
+#: ../../source/key_features/supported_baselines.rst:138
+msgid "Classic OLPS: Pattern-matching"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:131
+msgid ""
+"`Lai et al. 2018 <https://ieeexplore.ie "
+"ee.org/abstract/document/8356708>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:138
+#: ../../source/key_features/supported_baselines.rst:229
+#: ../../source/key_features/supported_baselines.rst:230
+#: ../../source/key_features/supported_baselines.rst:278
+msgid "KTPT"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:138
+msgid ""
+"`Lai et al. 2018 <https://link.springer.com/a "
+"rticle/10.1007/s10618-018-0579-5>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:138
+msgid "*Data Mining and Knowledge Discovery*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:146
+#: ../../source/key_features/supported_baselines.rst:301
+#: ../../source/key_features/supported_baselines.rst:303
+#: ../../source/key_features/supported_baselines.rst:307
+#: ../../source/key_features/supported_baselines.rst:316
+#: ../../source/key_features/supported_baselines.rst:322
+#: ../../source/key_features/supported_baselines.rst:324
+#: ../../source/key_features/supported_baselines.rst:368
+#: ../../source/key_features/supported_baselines.rst:369
+#: ../../source/key_features/supported_baselines.rst:372
+#: ../../source/key_features/supported_baselines.rst:373
+#: ../../source/key_features/supported_baselines.rst:374
+#: ../../source/key_features/supported_baselines.rst:377
+#: ../../source/key_features/supported_baselines.rst:380
+#: ../../source/key_features/supported_baselines.rst:381
+msgid "SP"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:146
+#: ../../source/key_features/supported_baselines.rst:152
+#: ../../source/key_features/supported_baselines.rst:158
+#: ../../source/key_features/supported_baselines.rst:166
+#: ../../source/key_features/supported_baselines.rst:172
+msgid "Classic OLPS: Meta-learning"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:146
+msgid ""
+"`Singer 1997 <https://www.worldscientific.com/d "
+"oi/abs/10.1142/s0129065797000434>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:146
+msgid "*International Journal of Neural Systems*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:152
+#: ../../source/key_features/supported_baselines.rst:227
+#: ../../source/key_features/supported_baselines.rst:235
+#: ../../source/key_features/supported_baselines.rst:283
+#: ../../source/key_features/supported_baselines.rst:314
+msgid "ONS"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:152
+msgid ""
+"`Agarwal et al. 2006 <https://dl.acm.org "
+"/doi/abs/10.1145/1143844.1143846>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:152
+msgid "*International Conference on Machine Learning*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:158
+#: ../../source/key_features/supported_baselines.rst:232
+#: ../../source/key_features/supported_baselines.rst:243
+#: ../../source/key_features/supported_baselines.rst:255
+#: ../../source/key_features/supported_baselines.rst:277
+#: ../../source/key_features/supported_baselines.rst:293
+#: ../../source/key_features/supported_baselines.rst:308
+#: ../../source/key_features/supported_baselines.rst:376
+msgid "GRW"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:158
+msgid ""
+"`Levina and Shafer 2008 <https://www.worldscientific.com/d "
+"oi/abs/10.1142/S0218488508005364>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:158
+msgid ""
+"*International Journal of Uncertainty, Fuzziness and Knowledge-Based "
+"Systems*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:166
+#: ../../source/key_features/supported_baselines.rst:282
+#: ../../source/key_features/supported_baselines.rst:297
+#: ../../source/key_features/supported_baselines.rst:321
+#: ../../source/key_features/supported_baselines.rst:382
+#: ../../source/key_features/supported_baselines.rst:384
+#: ../../source/key_features/supported_baselines.rst:387
+#: ../../source/key_features/supported_baselines.rst:388
+#: ../../source/key_features/supported_baselines.rst:390
+#: ../../source/key_features/supported_baselines.rst:391
+#: ../../source/key_features/supported_baselines.rst:393
+msgid "WAAS"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:166
+msgid ""
+"`Zhang and Yang 2017 <https://link.springer.com/a "
+"rticle/10.1007/s10614-016-9585-0>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:166
+msgid "*Computational Economics*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:172
+#: ../../source/key_features/supported_baselines.rst:366
+msgid "CW-OGD"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:172
+msgid ""
+"`Zhang et al. 2021 <https://www.sciencedirect.com/scien "
+"ce/article/pii/S0950705121007954>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:172
+msgid "*Knowledge-Based Systems*"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:181
+#: ../../source/key_features/supported_baselines.rst:181
+msgid "Benchmark Results"
+msgstr "基準測試結果"
+
+#: ../../source/key_features/supported_baselines.rst:184
+msgid ""
+"We will continue to update the following leaderboards. If you have "
+"proposed new (classic or data-driven) OLPS models, you can send us your "
+"paper/code link via :ref:`contact_us` or raise a pull request. We will add "
+"them to this repository and update the leaderboard as soon as possible."
+msgstr ""
+"我們將持續更新以下排行榜。如果您提出了新的（經典或數據驅動）OLPS 模型，"
+"可以通過 :ref:`contact_us` 向我們發送論文/代碼鏈接或提出拉取請求。我們將盡快將它們添加到這個倉庫並更新排行榜。"
+
+#: ../../source/key_features/supported_baselines.rst:189
+#: ../../source/key_features/supported_metrics.rst:12
+msgid "Cumulative Wealth"
+msgstr "累積財富"
+
+#: ../../source/key_features/supported_baselines.rst:191
+msgid ""
+"As of July 2024, the top five baselines for profitability (quantified by "
+"the size of CW metric) are:"
+msgstr ""
+"截至2024年7月，在盈利能力（通過 CW 指標衡量）方面，排名前五的基線為："
+
+#: ../../source/key_features/supported_baselines.rst:196
+#: ../../source/key_features/supported_baselines.rst:265
+#: ../../source/key_features/supported_baselines.rst:335
+msgid "Ranking"
+msgstr "排名"
+
+#: ../../source/key_features/supported_baselines.rst:197
+#: ../../source/key_features/supported_baselines.rst:266
+#: ../../source/key_features/supported_baselines.rst:336
+msgid "NYSE(O)"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:198
+#: ../../source/key_features/supported_baselines.rst:267
+#: ../../source/key_features/supported_baselines.rst:337
+msgid "NYSE(N)"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:199
+#: ../../source/key_features/supported_baselines.rst:268
+#: ../../source/key_features/supported_baselines.rst:338
+msgid "DJIA"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:200
+#: ../../source/key_features/supported_baselines.rst:269
+#: ../../source/key_features/supported_baselines.rst:339
+msgid "SP500"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:201
+#: ../../source/key_features/supported_baselines.rst:270
+#: ../../source/key_features/supported_baselines.rst:340
+msgid "TSE"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:202
+#: ../../source/key_features/supported_baselines.rst:271
+#: ../../source/key_features/supported_baselines.rst:341
+msgid "SSE"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:203
+#: ../../source/key_features/supported_baselines.rst:272
+#: ../../source/key_features/supported_baselines.rst:342
+msgid "HSI"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:204
+#: ../../source/key_features/supported_baselines.rst:273
+#: ../../source/key_features/supported_baselines.rst:343
+msgid "CMEG"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:205
+#: ../../source/key_features/supported_baselines.rst:274
+#: ../../source/key_features/supported_baselines.rst:344
+msgid "CRYPTO"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:206
+#: ../../source/key_features/supported_baselines.rst:275
+#: ../../source/key_features/supported_baselines.rst:345
+msgid "|:1st_place_medal:| **1st**"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:216
+#: ../../source/key_features/supported_baselines.rst:285
+#: ../../source/key_features/supported_baselines.rst:355
+msgid "|:2nd_place_medal:| **2nd**"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:226
+#: ../../source/key_features/supported_baselines.rst:295
+#: ../../source/key_features/supported_baselines.rst:365
+msgid "|:3rd_place_medal:| **3rd**"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:236
+#: ../../source/key_features/supported_baselines.rst:305
+#: ../../source/key_features/supported_baselines.rst:375
+msgid "|:reminder_ribbon:| **4th**"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:246
+#: ../../source/key_features/supported_baselines.rst:315
+#: ../../source/key_features/supported_baselines.rst:385
+msgid "|:reminder_ribbon:| **5th**"
+msgstr ""
+
+#: ../../source/key_features/supported_baselines.rst:258
+#: ../../source/key_features/supported_metrics.rst:25
+msgid "Maximum DrawDown"
+msgstr "最大回撤"
+
+#: ../../source/key_features/supported_baselines.rst:260
+msgid ""
+"As of July 2024, the top five baselines for risk resilience (quantified "
+"by the size of MDD metric) are:"
+msgstr ""
+"截至2024年7月，在風險抵禦能力（通過 MDD 指標衡量）方面，排名前五的基線為："
+
+#: ../../source/key_features/supported_baselines.rst:327
+#: ../../source/key_features/supported_metrics.rst:29
+msgid "Average Turnover"
+msgstr "平均換手率"
+
+#: ../../source/key_features/supported_baselines.rst:329
+msgid ""
+"As of July 2024, the top five baselines for practicality (quantified by "
+"the size of ATO metric) are:"
+msgstr ""
+"截至2024年7月，在實用性（通過 ATO 指標衡量）方面，排名前五的基線為："
+
+#: ../../source/key_features/supported_datasets.rst:4
+msgid "|:earth_africa:| Global Financial Asset Datasets"
+msgstr "|:earth_africa:| 來自全球的金融資產數據集"
+
+#: ../../source/key_features/supported_datasets.rst:9
+msgid "Country/Region"
+msgstr "國家/地區"
+
+#: ../../source/key_features/supported_datasets.rst:9
+msgid "Data Frequency"
+msgstr "數據頻率"
+
+#: ../../source/key_features/supported_datasets.rst:9
+msgid "# of Assets"
+msgstr "資產數量"
+
+#: ../../source/key_features/supported_datasets.rst:9
+msgid "Date Range"
+msgstr "時間跨度"
+
+#: ../../source/key_features/supported_datasets.rst:9
+msgid "# of Periods"
+msgstr "交易期數"
+
+#: ../../source/key_features/supported_datasets.rst:12
+msgid ""
+"`NYSE(O) <https://github.com/ai 4finol/FinOL_data/tree/m "
+"ain/datasets/NYSE(O)>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:12
+#: ../../source/key_features/supported_datasets.rst:18
+#: ../../source/key_features/supported_datasets.rst:24
+#: ../../source/key_features/supported_datasets.rst:30
+#: ../../source/key_features/supported_datasets.rst:36
+#: ../../source/key_features/supported_datasets.rst:43
+#: ../../source/key_features/supported_datasets.rst:48
+msgid "Stock"
+msgstr "股票"
+
+#: ../../source/key_features/supported_datasets.rst:12
+#: ../../source/key_features/supported_datasets.rst:18
+#: ../../source/key_features/supported_datasets.rst:24
+#: ../../source/key_features/supported_datasets.rst:30
+#: ../../source/key_features/supported_datasets.rst:53
+msgid "United States"
+msgstr "美國"
+
+#: ../../source/key_features/supported_datasets.rst:12
+#: ../../source/key_features/supported_datasets.rst:18
+#: ../../source/key_features/supported_datasets.rst:24
+#: ../../source/key_features/supported_datasets.rst:30
+#: ../../source/key_features/supported_datasets.rst:36
+#: ../../source/key_features/supported_datasets.rst:59
+msgid "Daily"
+msgstr "日頻"
+
+#: ../../source/key_features/supported_datasets.rst:12
+msgid "26"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:12
+msgid "03/July./1962 - 31/Dec./1984"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:12
+msgid "5,651: 3,390/1,130/1,131"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:18
+msgid ""
+"`NYSE(N) <https://github.com/ai 4finol/FinOL_data/tree/m "
+"ain/datasets/NYSE(N)>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:18
+msgid "403"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:18
+msgid "02/Jan./1985 - 30/June./2010"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:18
+msgid "6,430: 3,858/1,286/1,286"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:24
+msgid ""
+"`DJIA <https://github.com /ai4finol/FinOL_data/tre "
+"e/main/datasets/DJIA>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:24
+msgid "28"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:24
+msgid "14/Jan./2001 - 14/Jan./2003"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:24
+msgid "500: 300/100/100"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:30
+msgid ""
+"`SP500 <https://github.com/ ai4finol/FinOL_data/tree "
+"/main/datasets/SP500>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:30
+msgid "339"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:30
+msgid "02/Jan./1998 - 31/Jan./2003"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:30
+msgid "1,268: 756/256/256"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:36
+msgid "`TSE <https://github.co m/ai4finol/FinOL_data/tr ee/main/datasets/TSE>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:36
+msgid "Canada"
+msgstr "加拿大"
+
+#: ../../source/key_features/supported_datasets.rst:36
+msgid "48"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:36
+msgid "12/Jan./1995 - 31/Dec./1998"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:36
+msgid "1,001: 600/200/200"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:43
+msgid "`SSE <https://github.co m/ai4finol/FinOL_data/tr ee/main/datasets/SSE>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:43
+msgid "China"
+msgstr "中國"
+
+#: ../../source/key_features/supported_datasets.rst:43
+#: ../../source/key_features/supported_datasets.rst:48
+#: ../../source/key_features/supported_datasets.rst:53
+msgid "Weekly"
+msgstr "周頻"
+
+#: ../../source/key_features/supported_datasets.rst:43
+msgid "30"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:43
+#: ../../source/key_features/supported_datasets.rst:48
+#: ../../source/key_features/supported_datasets.rst:53
+msgid "05/July./2010 - 26/June./2023"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:43
+#: ../../source/key_features/supported_datasets.rst:48
+#: ../../source/key_features/supported_datasets.rst:53
+msgid "678: 406/136/136"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:48
+msgid "`HSI <https://github.co m/ai4finol/FinOL_data/tr ee/main/datasets/HSI>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:48
+msgid "Hong Kong, China"
+msgstr "中國香港"
+
+#: ../../source/key_features/supported_datasets.rst:48
+msgid "53"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:53
+msgid ""
+"`CMEG <https://github.com /ai4finol/FinOL_data/tre "
+"e/main/datasets/CMEG>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:53
+msgid "Futures"
+msgstr "期貨"
+
+#: ../../source/key_features/supported_datasets.rst:53
+msgid "25"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:59
+msgid ""
+"`CRYPTO <https://github.com/a i4finol/FinOL_data/tree/ "
+"main/datasets/CRYPTO>`__"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:59
+msgid "Cryptocurrency"
+msgstr "加密貨幣"
+
+#: ../../source/key_features/supported_datasets.rst:59
+msgid "World"
+msgstr "全球"
+
+#: ../../source/key_features/supported_datasets.rst:59
+msgid "43"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:59
+msgid "09/Nov./2017 - 01/Mar./2024"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:59
+msgid "2,305: 1,421/442/442"
+msgstr ""
+
+#: ../../source/key_features/supported_datasets.rst:68
+msgid "Components of Datasets"
+msgstr "數據集組成成分"
+
+#: ../../source/key_features/supported_datasets.rst:70
+msgid ""
+"This section presents the complete list of components for each dataset "
+"included in ``FinOL``. The assets cover major global equity, futures, and"
+" other financial markets."
+msgstr ""
+"本節列出了 ``FinOL`` 中包含的每個數據集的完整組成成分列表。這些資產涵蓋全球主要股票、期貨和其他金融市場。"
+#: ../../source/key_features/supported_datasets.rst:74
+msgid "Components of NYSE(O) Dataset"
+msgstr "NYSE(O) 數據集的組成部分"
+
+#: ../../source/key_features/supported_datasets.rst:81
+msgid "Components of NYSE(N) Dataset"
+msgstr "NYSE(N) 數據集的組成部分"
+
+#: ../../source/key_features/supported_datasets.rst:88
+msgid "Components of DJIA Dataset"
+msgstr "DJIA 數據集的組成部分"
+
+#: ../../source/key_features/supported_datasets.rst:95
+msgid "Components of SP500 Dataset"
+msgstr "SP500 數據集的組成部分"
+
+#: ../../source/key_features/supported_datasets.rst:102
+msgid "Components of TSE Dataset"
+msgstr "TSE 數據集的組成部分"
+
+#: ../../source/key_features/supported_datasets.rst:109
+msgid "Components of SSE Dataset"
+msgstr "SSE 數據集的組成部分"
+
+#: ../../source/key_features/supported_datasets.rst:116
+msgid "Components of HSI Dataset"
+msgstr "HSI 數據集的組成部分"
+
+#: ../../source/key_features/supported_datasets.rst:123
+msgid "Components of CMEG Dataset"
+msgstr "CMEG 數據集的組成部分"
+
+#: ../../source/key_features/supported_datasets.rst:130
+msgid "Components of CRYPTO Dataset"
+msgstr "CRYPTO 數據集的組成部分"
+
+#: ../../source/key_features/supported_features.rst:4
+msgid "|:chart_with_upwards_trend:| Rich High-Dimensional Data Feature Input"
+msgstr "|:chart_with_upwards_trend:| 豐富的高維數據特徵輸入"
+
+#: ../../source/key_features/supported_features.rst:6
+msgid ""
+"This section provides detailed definitions for the key data features in "
+"``FinOL``. These features can help describe and analyze financial time "
+"series from multiple perspectives. The following tables categorize these "
+"features into 8 main groups and list the name, function call and "
+"description for each feature. For the detailed computation process, "
+"please refer to "
+":func:`~finol.data_layer.DatasetLoader.feature_engineering`."
+msgstr ""
+"本節提供 ``FinOL`` 中關鍵數據特徵的詳細定義。這些特徵有助於從多個角度描述和分析財務時間序列。"
+"下面的表格將這些特徵分為 8 大類，並列出了它們的名稱、函數調用和描述。"
+"詳細的計算過程，請參考 :func:`~finol.data_layer.DatasetLoader.feature_engineering`。"
+
+#: ../../source/key_features/supported_features.rst:19
+msgid "OHLCV Features"
+msgstr "基礎特徵"
+
+#: ../../source/key_features/supported_features.rst:24
+#: ../../source/key_features/supported_features.rst:52
+#: ../../source/key_features/supported_features.rst:124
+#: ../../source/key_features/supported_features.rst:257
+#: ../../source/key_features/supported_features.rst:279
+#: ../../source/key_features/supported_features.rst:313
+#: ../../source/key_features/supported_features.rst:338
+#: ../../source/key_features/supported_features.rst:360
+msgid "Feature Name"
+msgstr "特徵名稱"
+
+#: ../../source/key_features/supported_features.rst:25
+#: ../../source/key_features/supported_features.rst:53
+#: ../../source/key_features/supported_features.rst:125
+#: ../../source/key_features/supported_features.rst:258
+#: ../../source/key_features/supported_features.rst:280
+#: ../../source/key_features/supported_features.rst:314
+#: ../../source/key_features/supported_features.rst:339
+#: ../../source/key_features/supported_features.rst:361
+msgid "Function Call"
+msgstr "函數調用"
+
+#: ../../source/key_features/supported_features.rst:26
+#: ../../source/key_features/supported_features.rst:54
+#: ../../source/key_features/supported_features.rst:126
+#: ../../source/key_features/supported_features.rst:259
+#: ../../source/key_features/supported_features.rst:281
+#: ../../source/key_features/supported_features.rst:315
+#: ../../source/key_features/supported_features.rst:340
+#: ../../source/key_features/supported_features.rst:362
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/key_features/supported_features.rst:27
+msgid "OPEN"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:28
+msgid "``df.OPEN``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:29
+msgid "Open Price"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:30
+msgid "HIGH"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:31
+msgid "``df.HIGH``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:32
+msgid "High Price"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:33
+msgid "LOW"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:34
+msgid "``df.LOW``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:35
+msgid "Low Price"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:36
+msgid "CLOSE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:37
+msgid "``df.CLOSE``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:38
+msgid "Close Price"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:39
+msgid "VOLUME"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:40
+msgid "``df.VOLUME``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:41
+msgid "Trading Volume"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:46
+msgid "Overlap Features"
+msgstr "重疊特徵"
+
+#: ../../source/key_features/supported_features.rst:55
+msgid "BBANDS_UPPER"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:56
+msgid "``ta.BBANDS(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:57
+msgid "Bollinger Bands - Upper Band"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:58
+msgid "BBANDS_MIDDLE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:59
+msgid "``ta.BBANDS(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:60
+msgid "Bollinger Bands - Middle Band"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:61
+msgid "BBANDS_LOWER"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:62
+msgid "``ta.BBANDS(df.CLOSE)[2]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:63
+msgid "Bollinger Bands - Lower Band"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:64
+msgid "DEMA"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:65
+msgid "``ta.DEMA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:66
+msgid "Double Exponential Moving Average"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:67
+msgid "EMA"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:68
+msgid "``ta.EMA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:69
+msgid "Exponential Moving Average"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:70
+msgid "HT_TRENDLINE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:71
+msgid "``ta.HT_TRENDLINE(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:72
+msgid "Hilbert Transform - Instantaneous Trendline"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:73
+msgid "KAMA"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:74
+msgid "``ta.KAMA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:75
+msgid "Kaufman Adaptive Moving Average"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:76
+msgid "MA"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:77
+msgid "``ta.MA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:78
+msgid "Moving Average"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:79
+msgid "MAMA"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:80
+msgid "``ta.MAMA(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:81
+msgid "MESA Adaptive Moving Average - MAMA"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:82
+msgid "MAMA_FAMA"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:83
+msgid "``ta.MAMA(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:84
+msgid "MESA Adaptive Moving Average - FAMA"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:85
+msgid "MAVP"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:86
+msgid "``ta.MAVP(df.CLOSE, df.DATE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:87
+msgid "Moving Average with Variable Period"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:88
+msgid "MIDPOINT"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:89
+msgid "``ta.MIDPOINT(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:90
+msgid "MidPoint over Period"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:91
+msgid "MIDPRICE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:92
+msgid "``ta.MIDPRICE(df.HIGH, df.LOW)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:93
+msgid "Midpoint Price over Period"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:94
+msgid "SAR"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:95
+msgid "``ta.SAR(df.HIGH, df.LOW)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:96
+msgid "Parabolic SAR"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:97
+msgid "SAREXT"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:98
+msgid "``ta.SAREXT(df.HIGH, df.LOW)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:99
+msgid "Parabolic SAR - Extended"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:100
+msgid "SMA"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:101
+msgid "``ta.SMA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:102
+msgid "Simple Moving Average"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:103
+msgid "T3"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:104
+msgid "``ta.T3(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:105
+msgid "Triple Exponential Moving Average (T3)"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:106
+msgid "TEMA"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:107
+msgid "``ta.TEMA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:108
+msgid "Triple Exponential Moving Average"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:109
+msgid "TRIMA"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:110
+msgid "``ta.TRIMA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:111
+msgid "Triangular Moving Average"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:112
+msgid "WMA"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:113
+msgid "``ta.WMA(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:114
+msgid "Weighted Moving Average"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:119
+msgid "Momentum Features"
+msgstr "動量特徵"
+
+#: ../../source/key_features/supported_features.rst:127
+msgid "ADX"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:128
+msgid "``ta.ADX(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:129
+msgid "Average Directional Movement Index"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:130
+msgid "ADXR"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:131
+msgid "``ta.ADXR(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:132
+msgid "Average Directional Movement Index Rating"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:133
+msgid "APO"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:134
+msgid "``ta.APO(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:135
+msgid "Absolute Price Oscillator"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:136
+msgid "AROON_UP"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:137
+msgid "``ta.AROON(df.HIGH, df.LOW)[0]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:138
+msgid "Aroon Up"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:139
+msgid "AROON_DOWN"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:140
+msgid "``ta.AROON(df.HIGH, df.LOW)[1]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:141
+msgid "Aroon Down"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:142
+msgid "AROONOSC"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:143
+msgid "``ta.AROONOSC(df.HIGH, df.LOW)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:144
+msgid "Aroon Oscillator"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:145
+msgid "BOP"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:146
+msgid "``ta.BOP(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:147
+msgid "Balance Of Power"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:148
+msgid "CCI"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:149
+msgid "``ta.CCI(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:150
+msgid "Commodity Channel Index"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:151
+msgid "CMO"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:152
+msgid "``ta.CMO(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:153
+msgid "Chande Momentum Oscillator"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:154
+msgid "DX"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:155
+msgid "``ta.DX(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:156
+msgid "Directional Movement Index"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:157
+msgid "MACD"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:158
+msgid "``ta.MACD(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:159
+msgid "Moving Average Convergence/Divergence"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:160
+msgid "MACD_SIGNAL"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:161
+msgid "``ta.MACD(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:162
+msgid "MACD Signal Line"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:163
+msgid "MACD_HIST"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:164
+msgid "``ta.MACD(df.CLOSE)[2]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:165
+msgid "MACD Histogram"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:166
+msgid "MACDEXT"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:167
+msgid "``ta.MACDEXT(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:168
+msgid "MACD with controllable MA type"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:169
+msgid "MACDEXT_SIGNAL"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:170
+msgid "``ta.MACDEXT(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:171
+msgid "MACDEXT Signal Line"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:172
+msgid "MACDEXT_HIST"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:173
+msgid "``ta.MACDEXT(df.CLOSE)[2]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:174
+msgid "MACDEXT Histogram"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:175
+msgid "MACDFIX"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:176
+msgid "``ta.MACDFIX(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:177
+msgid "Moving Average Convergence/Divergence Fix 12/26"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:178
+msgid "MACDFIX_SIGNAL"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:179
+msgid "``ta.MACDFIX(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:180
+msgid "MACDFIX Signal Line"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:181
+msgid "MACDFIX_HIST"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:182
+msgid "``ta.MACDFIX(df.CLOSE)[2]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:183
+msgid "MACDFIX Histogram"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:184
+msgid "MFI"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:185
+msgid "``ta.MFI(df.HIGH, df.LOW, df.CLOSE, df.VOLUME)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:186
+msgid "Money Flow Index"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:187
+msgid "MINUS_DI"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:188
+msgid "``ta.MINUS_DI(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:189
+msgid "Minus Directional Indicator"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:190
+msgid "MINUS_DM"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:191
+msgid "``ta.MINUS_DM(df.HIGH, df.LOW)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:192
+msgid "Minus Directional Movement"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:193
+msgid "MOM"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:194
+msgid "``ta.MOM(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:195
+msgid "Momentum"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:196
+msgid "PLUS_DI"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:197
+msgid "``ta.PLUS_DI(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:198
+msgid "Plus Directional Indicator"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:199
+msgid "PLUS_DM"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:200
+msgid "``ta.PLUS_DM(df.HIGH, df.LOW)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:201
+msgid "Plus Directional Movement"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:202
+msgid "PPO"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:203
+msgid "``ta.PPO(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:204
+msgid "Percentage Price Oscillator"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:205
+msgid "ROC"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:206
+msgid "``ta.ROC(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:207
+msgid "Rate of change: ((price/prevPrice)-1)*100"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:208
+msgid "ROCP"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:209
+msgid "``ta.ROCP(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:210
+msgid "Rate of change Percentage: (price-prevPrice)/prevPrice"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:211
+msgid "ROCR"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:212
+msgid "``ta.ROCR(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:213
+msgid "Rate of change ratio: (price/prevPrice)"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:214
+msgid "ROCR100"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:215
+msgid "``ta.ROCR100(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:216
+msgid "Rate of change ratio 100 scale: (price/prevPrice)*100"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:217
+msgid "RSI"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:218
+msgid "``ta.RSI(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:219
+msgid "Relative Strength Index"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:220
+msgid "STOCH_K"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:221
+msgid "``ta.STOCH(df.HIGH, df.LOW, df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:222
+msgid "Stochastic %K"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:223
+msgid "STOCH_D"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:224
+msgid "``ta.STOCH(df.HIGH, df.LOW, df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:225
+msgid "Stochastic %D"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:226
+msgid "STOCHF_K"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:227
+msgid "``ta.STOCHF(df.HIGH, df.LOW, df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:228
+msgid "Stochastic Fast %K"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:229
+msgid "STOCHF_D"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:230
+msgid "``ta.STOCHF(df.HIGH, df.LOW, df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:231
+msgid "Stochastic Fast %D"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:232
+msgid "STOCHRSI_K"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:233
+msgid "``ta.STOCHRSI(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:234
+msgid "Stochastic RSI %K"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:235
+msgid "STOCHRSI_D"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:236
+msgid "``ta.STOCHRSI(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:237
+msgid "Stochastic RSI %D"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:238
+msgid "TRIX"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:239
+msgid "``ta.TRIX(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:240
+msgid "1-day Rate-Of-Change (ROC) of a Triple Smooth EMA"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:241
+msgid "ULTOSC"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:242
+msgid "``ta.ULTOSC(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:243
+msgid "Ultimate Oscillator"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:244
+msgid "WILLR"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:245
+msgid "``ta.WILLR(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:246
+msgid "Williams' %R"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:251
+msgid "Volume Features"
+msgstr "量價特徵"
+
+#: ../../source/key_features/supported_features.rst:260
+msgid "AD"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:261
+msgid "``ta.AD(df.HIGH, df.LOW, df.CLOSE, df.VOLUME)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:262
+msgid "Chaikin A/D Line"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:263
+msgid "ADOSC"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:264
+msgid "``ta.ADOSC(df.HIGH, df.LOW, df.CLOSE, df.VOLUME)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:265
+msgid "Chaikin A/D Oscillator"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:266
+msgid "OBV"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:267
+msgid "``ta.OBV(df.CLOSE, df.VOLUME)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:268
+msgid "On Balance Volume"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:273
+msgid "Cycle Features"
+msgstr "周期特徵"
+
+#: ../../source/key_features/supported_features.rst:282
+msgid "HT_DCPERIOD"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:283
+msgid "``ta.HT_DCPERIOD(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:284
+msgid "Hilbert Transform - Dominant Cycle Period"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:285
+msgid "HT_DCPHASE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:286
+msgid "``ta.HT_DCPHASE(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:287
+msgid "Hilbert Transform - Dominant Cycle Phase"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:288
+msgid "HT_PHASOR_INPHASE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:289
+msgid "``ta.HT_PHASOR(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:290
+msgid "Hilbert Transform - Phasor Components, In-Phase Component"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:291
+msgid "HT_PHASOR_QUADRATURE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:292
+msgid "``ta.HT_PHASOR(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:293
+msgid "Hilbert Transform - Phasor Components, Quadrature Component"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:294
+msgid "HT_SINE_LEADSINE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:295
+msgid "``ta.HT_SINE(df.CLOSE)[0]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:296
+msgid "Hilbert Transform - SineWave, Lead SineWave"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:297
+msgid "HT_SINE_SINEWAVE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:298
+msgid "``ta.HT_SINE(df.CLOSE)[1]``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:299
+msgid "Hilbert Transform - SineWave, SineWave"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:300
+msgid "HT_TRENDMODE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:301
+msgid "``ta.HT_TRENDMODE(df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:302
+msgid "Hilbert Transform - Trend vs Cycle Mode"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:307
+msgid "Price Features"
+msgstr "價格特徵"
+
+#: ../../source/key_features/supported_features.rst:316
+msgid "AVGPRICE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:317
+msgid "``ta.AVGPRICE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:318
+msgid "Average Price"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:319
+msgid "MEDPRICE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:320
+msgid "``ta.MEDPRICE(df.HIGH, df.LOW)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:321
+msgid "Median Price"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:322
+msgid "TYPPRICE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:323
+msgid "``ta.TYPPRICE(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:324
+msgid "Typical Price"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:325
+msgid "WCLPRICE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:326
+msgid "``ta.WCLPRICE(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:327
+msgid "Weighted Close Price"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:332
+msgid "Volatility Features"
+msgstr "波動特徵"
+
+#: ../../source/key_features/supported_features.rst:341
+msgid "ATR"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:342
+msgid "``ta.ATR(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:343
+msgid "Average True Range"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:344
+msgid "NATR"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:345
+msgid "``ta.NATR(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:346
+msgid "Normalized Average True Range"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:347
+msgid "TRANGE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:348
+msgid "``ta.TRANGE(df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:349
+msgid "True Range"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:354
+msgid "Pattern Features"
+msgstr "模式特徵"
+
+#: ../../source/key_features/supported_features.rst:363
+msgid "CDL2CROWS"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:364
+msgid "``ta.CDL2CROWS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:365
+msgid "Two Crows"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:366
+msgid "CDL3BLACKCROWS"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:367
+msgid "``ta.CDL3BLACKCROWS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:368
+msgid "Three Black Crows"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:369
+msgid "CDL3INSIDE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:370
+msgid "``ta.CDL3INSIDE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:371
+msgid "Three Inside Up/Down"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:372
+msgid "CDL3LINESTRIKE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:373
+msgid "``ta.CDL3LINESTRIKE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:374
+msgid "Three-Line Strike"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:375
+msgid "CDL3OUTSIDE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:376
+msgid "``ta.CDL3OUTSIDE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:377
+msgid "Three Outside Up/Down"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:378
+msgid "CDL3STARSINSOUTH"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:379
+msgid "``ta.CDL3STARSINSOUTH(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:380
+msgid "Three Stars In The South"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:381
+msgid "CDL3WHITESOLDIERS"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:382
+msgid "``ta.CDL3WHITESOLDIERS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:383
+msgid "Three Advancing White Soldiers"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:384
+msgid "CDLABANDONEDBABY"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:385
+msgid "``ta.CDLABANDONEDBABY(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:386
+msgid "Abandoned Baby"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:387
+msgid "CDLADVANCEBLOCK"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:388
+msgid "``ta.CDLADVANCEBLOCK(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:389
+msgid "Advance Block"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:390
+msgid "CDLBELTHOLD"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:391
+msgid "``ta.CDLBELTHOLD(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:392
+msgid "Belt-Hold"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:393
+msgid "CDLBREAKAWAY"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:394
+msgid "``ta.CDLBREAKAWAY(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:395
+msgid "Breakaway"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:396
+msgid "CDLCLOSINGMARUBOZU"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:397
+msgid "``ta.CDLCLOSINGMARUBOZU(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:398
+msgid "Closing Marubozu"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:399
+msgid "CDLCONCEALBABYSWALL"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:400
+msgid "``ta.CDLCONCEALBABYSWALL(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:401
+msgid "Concealing Baby Swallow"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:402
+msgid "CDLCOUNTERATTACK"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:403
+msgid "``ta.CDLCOUNTERATTACK(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:404
+msgid "Counterattack"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:405
+msgid "CDLDARKCLOUDCOVER"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:406
+msgid "``ta.CDLDARKCLOUDCOVER(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:407
+msgid "Dark Cloud Cover"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:408
+msgid "CDLDOJI"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:409
+msgid "``ta.CDLDOJI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:410
+msgid "Doji"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:411
+msgid "CDLDOJISTAR"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:412
+msgid "``ta.CDLDOJISTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:413
+msgid "Doji Star"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:414
+msgid "CDLDRAGONFLYDOJI"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:415
+msgid "``ta.CDLDRAGONFLYDOJI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:416
+msgid "Dragonfly Doji"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:417
+msgid "CDLENGULFING"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:418
+msgid "``ta.CDLENGULFING(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:419
+msgid "Engulfing Pattern"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:420
+msgid "CDLEVENINGDOJISTAR"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:421
+msgid "``ta.CDLEVENINGDOJISTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:422
+msgid "Evening Doji Star"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:423
+msgid "CDLEVENINGSTAR"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:424
+msgid "``ta.CDLEVENINGSTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:425
+msgid "Evening Star"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:426
+msgid "CDLGAPSIDESIDEWHITE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:427
+msgid "``ta.CDLGAPSIDESIDEWHITE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:428
+msgid "Up/Down-Gap Side-By-Side White Lines"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:429
+msgid "CDLGRAVESTONEDOJI"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:430
+msgid "``ta.CDLGRAVESTONEDOJI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:431
+msgid "Gravestone Doji"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:432
+msgid "CDLHAMMER"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:433
+msgid "``ta.CDLHAMMER(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:434
+msgid "Hammer"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:435
+msgid "CDLHANGINGMAN"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:436
+msgid "``ta.CDLHANGINGMAN(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:437
+msgid "Hanging Man"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:438
+msgid "CDLHARAMI"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:439
+msgid "``ta.CDLHARAMI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:440
+msgid "Harami Pattern"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:441
+msgid "CDLHARAMICROSS"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:442
+msgid "``ta.CDLHARAMICROSS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:443
+msgid "Harami Cross Pattern"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:444
+msgid "CDLHIGHWAVE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:445
+msgid "``ta.CDLHIGHWAVE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:446
+msgid "High-Wave Candle"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:447
+msgid "CDLHIKKAKE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:448
+msgid "``ta.CDLHIKKAKE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:449
+msgid "Hikkake Pattern"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:450
+msgid "CDLHIKKAKEMOD"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:451
+msgid "``ta.CDLHIKKAKEMOD(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:452
+msgid "Modified Hikkake Pattern"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:453
+msgid "CDLHOMINGPIGEON"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:454
+msgid "``ta.CDLHOMINGPIGEON(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:455
+msgid "Homing Pigeon"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:456
+msgid "CDLIDENTICAL3CROWS"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:457
+msgid "``ta.CDLIDENTICAL3CROWS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:458
+msgid "Identical Three Crows"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:459
+msgid "CDLINNECK"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:460
+msgid "``ta.CDLINNECK(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:461
+msgid "In-Neck Pattern"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:462
+msgid "CDLINVERTEDHAMMER"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:463
+msgid "``ta.CDLINVERTEDHAMMER(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:464
+msgid "Inverted Hammer"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:465
+msgid "CDLKICKING"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:466
+msgid "``ta.CDLKICKING(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:467
+msgid "Kicking"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:468
+msgid "CDLKICKINGBYLENGTH"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:469
+msgid "``ta.CDLKICKINGBYLENGTH(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:470
+msgid "Kicking - Bull/Bear Determined by the Longer Marubozu"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:471
+msgid "CDLLADDERBOTTOM"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:472
+msgid "``ta.CDLLADDERBOTTOM(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:473
+msgid "Ladder Bottom"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:474
+msgid "CDLLONGLEGGEDDOJI"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:475
+msgid "``ta.CDLLONGLEGGEDDOJI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:476
+msgid "Long Legged Doji"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:477
+msgid "CDLLONGLINE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:478
+msgid "``ta.CDLLONGLINE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:479
+msgid "Long Line Candle"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:480
+msgid "CDLMARUBOZU"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:481
+msgid "``ta.CDLMARUBOZU(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:482
+msgid "Marubozu"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:483
+msgid "CDLMATCHINGLOW"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:484
+msgid "``ta.CDLMATCHINGLOW(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:485
+msgid "Matching Low"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:486
+msgid "CDLMATHOLD"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:487
+msgid "``ta.CDLMATHOLD(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:488
+msgid "Mat Hold"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:489
+msgid "CDLMORNINGDOJISTAR"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:490
+msgid "``ta.CDLMORNINGDOJISTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:491
+msgid "Morning Doji Star"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:492
+msgid "CDLMORNINGSTAR"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:493
+msgid "``ta.CDLMORNINGSTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:494
+msgid "Morning Star"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:495
+msgid "CDLONNECK"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:496
+msgid "``ta.CDLONNECK(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:497
+msgid "On-Neck Pattern"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:498
+msgid "CDLPIERCING"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:499
+msgid "``ta.CDLPIERCING(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:500
+msgid "Piercing Pattern"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:501
+msgid "CDLRICKSHAWMAN"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:502
+msgid "``ta.CDLRICKSHAWMAN(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:503
+msgid "Rickshaw Man"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:504
+msgid "CDLRISEFALL3METHODS"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:505
+msgid "``ta.CDLRISEFALL3METHODS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:506
+msgid "Rising/Falling Three Methods"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:507
+msgid "CDLSEPARATINGLINES"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:508
+msgid "``ta.CDLSEPARATINGLINES(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:509
+msgid "Separating Lines"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:510
+msgid "CDLSHOOTINGSTAR"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:511
+msgid "``ta.CDLSHOOTINGSTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:512
+msgid "Shooting Star"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:513
+msgid "CDLSHORTLINE"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:514
+msgid "``ta.CDLSHORTLINE(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:515
+msgid "Short Line Candle"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:516
+msgid "CDLSPINNINGTOP"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:517
+msgid "``ta.CDLSPINNINGTOP(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:518
+msgid "Spinning Top"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:519
+msgid "CDLSTALLEDPATTERN"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:520
+msgid "``ta.CDLSTALLEDPATTERN(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:521
+msgid "Stalled Pattern"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:522
+msgid "CDLSTICKSANDWICH"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:523
+msgid "``ta.CDLSTICKSANDWICH(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:524
+msgid "Stick Sandwich"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:525
+msgid "CDLTAKURI"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:526
+msgid "``ta.CDLTAKURI(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:527
+msgid "Takuri (Dragonfly Doji with Very Long Lower Shadow)"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:528
+msgid "CDLTASUKIGAP"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:529
+msgid "``ta.CDLTASUKIGAP(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:530
+msgid "Tasuki Gap"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:531
+msgid "CDLTHRUSTING"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:532
+msgid "``ta.CDLTHRUSTING(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:533
+msgid "Thrusting Pattern"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:534
+msgid "CDLTRISTAR"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:535
+msgid "``ta.CDLTRISTAR(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:536
+msgid "Tristar Pattern"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:537
+msgid "CDLUNIQUE3RIVER"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:538
+msgid "``ta.CDLUNIQUE3RIVER(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:539
+msgid "Unique 3 River"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:540
+msgid "CDLUPSIDEGAP2CROWS"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:541
+msgid "``ta.CDLUPSIDEGAP2CROWS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:542
+msgid "Upside Gap Two Crows"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:543
+msgid "CDLXSIDEGAP3METHODS"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:544
+msgid "``ta.CDLXSIDEGAP3METHODS(df.OPEN, df.HIGH, df.LOW, df.CLOSE)``"
+msgstr ""
+
+#: ../../source/key_features/supported_features.rst:545
+msgid "Upside/Downside Gap Three Methods"
+msgstr ""
+
+#: ../../source/key_features/supported_metrics.rst:4
+msgid "|:straight_ruler:| Comprehensive Comparison Metrics"
+msgstr "|:straight_ruler:| 全面的對比指標"
+
+#: ../../source/key_features/supported_metrics.rst:9
+msgid "Abbreviation"
+msgstr "縮寫"
+
+#: ../../source/key_features/supported_metrics.rst:12
+msgid "CW"
+msgstr ""
+
+#: ../../source/key_features/supported_metrics.rst:12
+#: ../../source/key_features/supported_metrics.rst:15
+#: ../../source/key_features/supported_metrics.rst:18
+msgid "*Profit Metric*"
+msgstr "*收益指標*"
+
+#: ../../source/key_features/supported_metrics.rst:15
+msgid "Annualized Percentage Yield"
+msgstr "年化收益率"
+
+#: ../../source/key_features/supported_metrics.rst:15
+msgid "APY"
+msgstr ""
+
+#: ../../source/key_features/supported_metrics.rst:18
+msgid "Sharpe Ratio"
+msgstr "夏普比率"
+
+#: ../../source/key_features/supported_metrics.rst:18
+msgid "SR"
+msgstr ""
+
+#: ../../source/key_features/supported_metrics.rst:23
+msgid "Volatility Risk"
+msgstr "波動率風險"
+
+#: ../../source/key_features/supported_metrics.rst:23
+msgid "VR"
+msgstr ""
+
+#: ../../source/key_features/supported_metrics.rst:23
+#: ../../source/key_features/supported_metrics.rst:25
+msgid "*Risk Metric*"
+msgstr "*風險指標*"
+
+#: ../../source/key_features/supported_metrics.rst:25
+msgid "MDD"
+msgstr ""
+
+#: ../../source/key_features/supported_metrics.rst:29
+msgid "ATO"
+msgstr ""
+
+#: ../../source/key_features/supported_metrics.rst:29
+#: ../../source/key_features/supported_metrics.rst:32
+#: ../../source/key_features/supported_metrics.rst:35
+msgid "*Practical Metric*"
+msgstr "*實用性指標*"
+
+#: ../../source/key_features/supported_metrics.rst:32
+msgid "Transaction Costs-Adjusted Cumulative Wealth"
+msgstr "交易費用調整累積財富"
+
+#: ../../source/key_features/supported_metrics.rst:32
+msgid "TCW"
+msgstr ""
+
+#: ../../source/key_features/supported_metrics.rst:35
+msgid "Running Time"
+msgstr "運行時間"
+
+#: ../../source/key_features/supported_metrics.rst:35
+msgid "RT"
+msgstr ""
+
+#: ../../source/key_features/supported_visualization.rst:4
+msgid "|:art:| Multiple Visualization Tools"
+msgstr "|:art:| 多個可視化工具"
+
+#: ../../source/key_features/supported_visualization.rst:6
+msgid ""
+"The ``FinOL`` provides a suite of visualization tools to facilitate a"
+" comprehensive evaluation of data-driven OLPS research. Here are some "
+"examples:"
+msgstr ""
+"``FinOL`` 提供了一套可視化工具，以促進對數據驅動的 OLPS 研究進行全面評估。以下是一些例子："
+
+
+################################################################
+#: ../../source/key_features/supported_metrics.rst:12
+msgid "Profitability"
+msgstr "盈利能力"
+
+#: ../../source/key_features/supported_metrics.rst:12
+msgid "Risk Resilience"
+msgstr "風險抵禦能力"
+
+#: ../../source/key_features/supported_metrics.rst:12
+msgid "Practicality"
+msgstr "實用性"
+
+msgid "Key Features"
+msgstr "FinOL 關鍵特徵"
+
+msgid "Benchmark Datasets"
+msgstr "基準數據集"
+
+msgid "Rich data input"
+msgstr "豐富的數據輸入"
+
+msgid "Image Data Input"
+msgstr "圖像數據輸入"
+
+msgid "Pre-built Models"
+msgstr "預構建模型"
+
+msgid "Optimizer Collection"
+msgstr "優化器集合"
+
+msgid "Extensive baselines"
+msgstr "廣泛的基線"
+
+msgid "Comprehensive metrics"
+msgstr "綜合的指標"
+
+## Multiple visual tools
+msgid "Multiple visual tools"
+msgstr "多種可視化工具"
+
+msgid "Loss Visualization"
+msgstr "損失可視化"
+
+msgid "Loss visualization is crucial for understanding model performance during training and validation. It helps identify overfitting and underfitting issues, allowing for better hyper-parameters tuning."
+msgstr "損失可視化對於理解模型在訓練和驗證過程中的表現至關重要。它幫助識別過擬合和欠擬合問題，從而更好地調整超參數。"
+
+msgid "Training and Validation Loss Trends"
+msgstr "訓練集和驗證集損失趨勢"
+
+msgid "Hyper-parameters Tuning Process Visualization"
+msgstr "超參數優化過程可視化"
+
+msgid "Visualizing the hyper-parameters tuning process can provide insights into how different parameters affect model performance. This helps in selecting the most effective parameters for improved results."
+msgstr "可視化超參數優化過程可以提供不同參數如何影響模型性能的見解。這有助於選擇最有效的參數以改善結果。"
+
+msgid "Hyper-parameters Tuning Contour Plot"
+msgstr "超參數優化輪廓圖"
+
+msgid "Empirical Distribution Function of Hyper-parameters"
+msgstr "超參數的經驗分佈函數"
+
+msgid "Optimization History of Hyper-parameters Search"
+msgstr "超參數搜索的優化歷史"
+
+msgid "Parallel Coordinate Plot of Hyper-parameters Importance"
+msgstr "超參數重要性的平行坐標圖"
+
+msgid "Hyper-parameters Importance Analysis"
+msgstr "超參數重要性分析"
+
+msgid "Ranking of Hyper-parameters Based on Performance"
+msgstr "基於性能的超參數排名"
+
+msgid "Slicing Through Hyper-parameters Space"
+msgstr "切片超參數空間"
+
+msgid "Daily Cumulative Wealth (DCW) Visualization"
+msgstr "每日累積財富（DCW）可視化"
+
+msgid "As profitability is the ultimate goal of trading, the DCW trajectories directly showcase the cumulative returns of methods over time. Higher and more stable DCW curves indicate stronger capability to steadily accumulate profits in the long run."
+msgstr "利潤是交易的最終目標，因此 DCW 軌跡直接展示了方法隨時間變化的累積收益。更高且更穩定的 DCW 曲線表明在長期內穩步積累利潤的能力更強。"
+
+msgid "Example Results of Daily Cumulative Wealth on DJIA"
+msgstr "DJIA 上每日累積財富的示例結果"
+
+msgid "Daily Maximum DrawDown (DMDD) Visualization"
+msgstr "每日最大回撤（DMDD）可視化"
+
+msgid "The DMDD visualization illustrates the largest peak-to-trough decline in portfolio value over a specified period. This metric is essential for assessing the risk associated with OLPS methods, as it highlights the potential for significant losses. By analyzing DMDD trajectories, researchers can better understand the downside risks of different OLPS methods, enabling them to make more informed decisions regarding risk management and capital allocation."
+msgstr "DMDD 可視化展示了一段時間內投資組合價值的最大回撤。這一指標對於評估與 OLPS 方法相關的風險至關重要，因為它突顯了潛在的重大損失。通過分析 DMDD 軌跡，研究人員可以更好地理解不同 OLPS 方法的下行風險，從而做出更明智的風險管理和資本配置決策。"
+
+msgid "Example Results of Daily Maximum DrawDown on DJIA"
+msgstr "DJIA 上每日最大回撤的示例結果"
+
+msgid "Transaction Cost-Adjusted Cumulative Wealth (TCW) Visualization"
+msgstr "交易成本調整後的累積財富（TCW）可視化"
+
+msgid "The TCW metric evaluates profitability under realistic transaction costs. It penalizes portfolio rebalancing by deducting proportional costs based on the turnover amount each period. Lower TCW indicates greater performance deterioration from increased rebalancing amounts. By accounting for real-world frictions, TCW provides a practical assessment complementing the raw profitability metrics of data-driven OLPS methods."
+msgstr "TCW 指標在現實交易成本下評估盈利能力。它通過根據每個周期的換手額扣除相應的成本來懲罰投資組合再平衡。較低的 TCW 表示由於增加的再平衡量而導致的性能惡化更大。通過考慮現實世界的摩擦，TCW 提供了一種實際評估，補充了數據驅動 OLPS 方法的原始盈利指標。"
+
+msgid "Example Results of Transaction Cost-Adjusted Cumulative Wealth on DJIA"
+msgstr "DJIA 上交易成本調整後的累積財富的示例結果"
+
+msgid "Comprehensive Radar Chart"
+msgstr "綜合雷達圖"
+
+msgid "The comprehensive radar chart provides a visual representation of multiple performance metrics for OLPS methods. By displaying these metrics in a single view, it allows for easy comparison of strengths and weaknesses across different methods. This visualization helps researchers quickly assess which methods excel in specific dimensions."
+msgstr "綜合雷達圖為 OLPS 方法的多個性能指標提供了可視化表示。通過在一個視圖中展示這些指標，它允許對不同方法的優缺點進行輕鬆比較。這個可視化幫助研究人員快速評估哪些方法在特定維度上表現優異。"
+
+msgid "Example Results of Radar Chart on DJIA"
+msgstr "DJIA 上雷達圖的示例結果"
+
+
+## Image Data Input
+msgid "Basic Idea"
+msgstr "基本思想"
+
+msgid "Construction"
+msgstr "模型構造"
+
+msgid "Pros"
+msgstr "優點"
+
+msgid "Cons"
+msgstr "缺點"
+
+msgid "Details"
+msgstr "細節"
+
+msgid "Why is it beneficial to encode market data as an image rather than in the more standard time-series numerical format? The first reason is that the leading CNN architectures are custom crafted for image analysis. Therefore, to enjoy the CNN's benefits of automated signal generation, it is useful to represent price data in the format naturally ingested by the CNN, that is, as an image. Second, representing time-series as an image allows the model to focus on relational attributes of the data that would be difficult to tease out with time-series methods. This is the same basic rationale for why humans illustrate patterns graphically rather than with lists of numbers. If a human can more readily detect patterns in images by consuming an entire data matrix through a single visualization, a statistical pattern recognition algorithm may benefit from doing so as well. Third, the process of imaging price and volume data converts all assets' data histories into a comparable scale. We show that this particular rescaling choice has large benefits for prediction in the panel of stocks. Fourth, technical trading hinges on the presence of geometric shapes visually defined and observed by human cognition. Technical traders have long used price charts as an information source to predict returns and make investment decisions."
+msgstr "為什麼將市場數據編碼為圖像而不是更常見的時間序列數值格式是有益的呢？第一個原因是領先的CNN（卷積神經網絡）架構是專門為圖像分析設計的。因此，為了充分利用CNN自動生成信號的優勢，將價格數據以自然被CNN攝入的形式表示為圖像是有用的。第二個原因是將時間序列表示為圖像可以讓模型專注於數據的相關屬性，而這些屬性很難從時間序列方法中提取出來。這與人類用圖形而不是數字列表來表示模式的基本理念是相同的。如果人類可以通過單一的可視化來瀏覽整個數據矩陣來更輕鬆地從圖像中檢測出模式，那麼一個統計模式識別算法也可能從中受益。第三個原因是將價格和成交量數據圖像化將所有資產的數據歷史轉換為可比的尺度。我們證明，對於股票組合中的股票而言，這種特定的縮放選擇在預測方面具有很大的好處。第四，技術交易依賴於幾何圖形的存在，這些圖形是通過人類認知視覺定義和觀察的。技術交易者長期以來一直使用價格圖表作為信息來源，以預測回報並做出投資決策。"
+
+msgid "Getting Started with Image Data"
+msgstr "開始使用圖像數據"
+
+msgid "To begin using image data, we employ the ``mplfinance`` library. For installation instructions, refer to :ref:`installation`. We've made minor modifications to ``FinOL``, enabling the transformation of raw data into images and allowing users to resize these images based on configurations specified in a configuration file."
+msgstr "要開始使用圖像數據，我們使用了 ``mplfinance`` 庫。有關安裝說明，請參閱 :ref:`installation`。我們對 ``FinOL`` 進行了小幅修改，使其能夠將原始數據轉換為圖像，並允許用戶根據配置文件中指定的配置調整這些圖像的大小。"
+
+msgid "The following figures provide examples of stock charts generated by ``FinOL`` at different window sizes (10, 30, 60):"
+msgstr "接下來的圖表展示了 ``FinOL`` 在不同窗口大小（10、30、60）下生成的股票圖表示例："
+
+msgid "10-day Candlestick Chart"
+msgstr "10日K線圖"
+
+msgid "30-day Candlestick Chart"
+msgstr "30日K線圖"
+
+msgid "60-day Candlestick Chart"
+msgstr "60日K線圖"
+
+msgid "Again, we are committed to ensuring that the process of using ``FinOL`` is as easy as possible. To get started, users simply need to configure their ``config.json`` file as follows:"
+msgstr "再次強調，我們致力於確保使用 ``FinOL`` 的過程儘可能簡便。要開始使用，用戶只需按照以下方式配置自己的 ``config.json`` 文件即可："
+
+msgid "By selecting a model such as CNN, CNN-JF, or a custom image-processing model in the ``config.json``:"
+msgstr "通過在 ``config.json`` 中選擇模型，如 CNN、CNN-JF 或自定義圖像處理模型："
+
+msgid "Users can then execute the complete ``FinOL`` pipeline with ease."
+msgstr "用戶可以輕鬆執行完整的 ``FinOL`` 流程。"
+
+msgid "This approach not only streamlines the process of incorporating image data into data-driven OLPS but also opens up new avenues for predictive modeling and pattern recognition in this field. By leveraging the power of CNNs and the intuitive nature of image data, ``FinOL`` empowers users to uncover insights that may not be apparent through conventional numerical analysis."
+msgstr "這種方法不僅簡化了將圖像數據納入數據驅動的 OLPS 的過程，還為該領域的預測建模和模式識別開辟了新的途徑。通過利用 CNN 的強大功能和圖像數據的直觀特性，``FinOL`` 使用戶能夠發現通過傳統數值分析可能不明顯的見解。"
+
+msgid "The Development is Ongoing"
+msgstr "開發仍在進行中"
+
+
+msgid "We want to note that development of ``FinOL``'s image processing capabilities is ongoing, with future plans to explore and develop features including but not limited to:"
+msgstr "我們想指出，``FinOL`` 的圖像處理功能仍在開發中，未來計劃探索和開發的功能包括但不限於："
+
+msgid "Data augmentation techniques for time series images such as cropping, flipping, resizing to enhance model generalizability;"
+msgstr "用於時間序列圖像的數據增強技術，如裁剪、翻轉、調整大小，以提高模型的泛化能力；"
+
+msgid "Explainability tools based on image recognition to help users understand the rationale behind model decisions."
+msgstr "基於圖像識別的可解釋性工具，幫助用戶理解模型決策背後的理由。"
+
+msgid "Integration of more advanced deep learning models to improve the accuracy and efficiency of image processing."
+msgstr "集成更先進的深度學習模型，以提高圖像處理的準確性和效率。"
+
+msgid "Development of a user-friendly interface to make the configuration and execution process more intuitive."
+msgstr "開發用戶友好的界面，使配置和執行過程更加直觀。"
+
+msgid "See :ref:`image_representation` for more details."
+msgstr "有關更多詳細信息，請參見 :ref:`image_representation`。"
+
+
+## Pre-built Models
+msgid "See :mod:`~finol.model_layer` for more details."
+msgstr "有關更多詳細信息，請參見 :mod:`~finol.model_layer`。"
+
+msgid "As a software package, part of the innovation of ``FinOL`` is the pre-implemented models in its model layer. These pre-built models serve as a significant advantage for researchers in the data-driven OLPS domain, offering them a solid foundation to build upon. By leveraging these models, researchers can streamline the initial phases of their projects, circumventing the need to build complex models from scratch and thereby conserving valuable time and resources."
+msgstr "作為一個軟件包，``FinOL`` 的一部分創新是在其模型層中預先實現的模型。這些預構建的模型為數據驅動的 OLPS 領域的研究人員提供了顯著的優勢，為他們提供了堅實的基礎。通過利用這些模型，研究人員可以簡化項目的初始階段，避免從頭構建複雜模型，從而節省寶貴的時間和資源。"
+
+msgid "Time Series Representation Models"
+msgstr "時間序列表示模型"
+
+msgid "The time series representation models within ``FinOL`` are implemented to address the unique challenges of sequential data in data-driven OLPS. These models are specifically designed to handle sequential inputs, ensuring that the temporal dependencies inherent in financial time series data are accurately captured and analyzed. By leveraging these models, researchers can gain deeper insights into market trends, price movements, and other critical factors that influence data-driven OLPS task."
+msgstr "``FinOL`` 中的時間序列表示模型旨在解決數據驅動的 OLPS 中順序數據的獨特挑戰。這些模型專門設計用於處理順序輸入，確保準確捕捉和分析金融時間序列數據中固有的時間依賴性。通過利用這些模型，研究人員可以深入洞察市場趨勢、價格波動及其他影響數據驅動 OLPS 任務的關鍵因素。"
+
+msgid "Overall Framework of AlphaPortfolio"
+msgstr "AlphaPortfolio 的整體框架"
+
+msgid "The AlphaPortfolio model is a Transformer-based model for asset scoring and portfolio selection."
+msgstr "AlphaPortfolio 模型是一個基於 Transformer 的資產評分和投資組合選擇模型。"
+
+msgid "Leverages attention mechanisms to score assets based on their historical performance."
+msgstr "利用注意力機制根據資產的歷史表現進行評分。"
+
+msgid "`Source code for AlphaPortfolio <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/AlphaPortfolio.html#AlphaPortfolio>`_"
+msgstr "`AlphaPortfolio 源代碼 <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/AlphaPortfolio.html#AlphaPortfolio>`_"
+
+msgid "High accuracy in scoring assets; interpretable results through economic distillation."
+msgstr "資產評分的高準確性；通過經濟蒸餾提供的可解釋結果。"
+
+msgid "Computationally intensive; requires careful tuning of hyperparameters."
+msgstr "計算密集型；需要仔細調整超參數。"
+
+msgid "The AlphaPortfolio model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``, where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented features) for each asset. The final output of the AlphaPortfolio model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset."
+msgstr "AlphaPortfolio 模型接受形狀為 ``(batch_size, num_assets, num_features_augmented)`` 的輸入張量 ``x``，其中 ``num_features_augmented`` 表示每個資產的特徵數量（包括任何預處理或增強的特徵）。AlphaPortfolio 模型的最終輸出是形狀為 ``(batch_size, num_assets)`` 的張量，表示對應資產的預測評分。"
+
+msgid "For more details, please refer to the paper `AlphaPortfolio: Direct Construction through Reinforcement Learning and Interpretable AI <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3698800>`__."
+msgstr "有關更多詳細信息，請參閱論文 `AlphaPortfolio: Direct Construction through Reinforcement Learning and Interpretable AI <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3698800>`__。"
+
+msgid "Table C.1: Hyperparameters of TE-CAAN-Based AP."
+msgstr "表 C.1：基於 TE-CAAN 的 AP 的超參數。"
+
+msgid "Key Component of AlphaStock"
+msgstr "AlphaStock 的關鍵組件"
+
+msgid "The AlphaStock model is a LSTM-based model for asset scoring and portfolio selection."
+msgstr "AlphaStock 模型是一個基於 LSTM 的資產評分和投資組合選擇模型。"
+
+msgid "Utilizes LSTM to capture both sequential and global dependencies in asset data."
+msgstr "利用 LSTM 捕捉資產數據中的順序依賴和全局依賴。"
+
+msgid "`Source code for AlphaStock <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/AlphaStock.html#AlphaStock>`_"
+msgstr "`AlphaStock 源代碼 <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/AlphaStock.html#AlphaStock>`_"
+
+msgid "Effective for time series data; can learn complex patterns over time."
+msgstr "對時間序列數據有效；能夠隨時間學習複雜模式。"
+
+msgid "May suffer from overfitting."
+msgstr "可能會出現過擬合。"
+
+msgid "The AlphaStock model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``, where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented features) for each asset. The final output of the AlphaStock model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset."
+msgstr "AlphaStock 模型接受形狀為 ``(batch_size, num_assets, num_features_augmented)`` 的輸入張量 ``x``，其中 ``num_features_augmented`` 表示每個資產的特徵數量（包括任何預處理或增強的特徵）。AlphaStock 模型的最終輸出是形狀為 ``(batch_size, num_assets)`` 的張量，每個元素表示對應資產的預測評分。"
+
+msgid "For more details, please refer to the paper `AlphaStock: A Buying-Winners-and-Selling-Losers Investment Strategy using Interpretable Deep Reinforcement Attention Networks <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__."
+msgstr "有關更多詳細信息，請參閱論文 `AlphaStock: A Buying-Winners-and-Selling-Losers Investment Strategy using Interpretable Deep Reinforcement Attention Networks <https://dl.acm.org/doi/abs/10.1145/3292500.3330647>`__。"
+
+msgid "A Deep Neural Network model for asset scoring and portfolio selection."
+msgstr "用於資產評分和投資組合選擇的深度神經網絡模型。"
+
+msgid "Implements multiple fully connected layers to learn representations from input features."
+msgstr "實現多個全連接層以從輸入特徵中學習表示。"
+
+msgid "`Source code for DNN <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/DNN.html#DNN>`_"
+msgstr "`DNN 源代碼 <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/DNN.html#DNN>`_"
+
+msgid "Flexible architecture."
+msgstr "靈活的架構。"
+
+msgid "Risk of overfitting without regularization."
+msgstr "沒有正則化的過擬合風險。"
+
+msgid "The DNN model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``, where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented features) for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset."
+msgstr "DNN 模型接受形狀為 ``(batch_size, num_assets, num_features_augmented)`` 的輸入張量 ``x``，其中 ``num_features_augmented`` 表示每個資產的特徵數量（包括任何預處理或增強的特徵）。該模型的最終輸出是形狀為 ``(batch_size, num_assets)`` 的張量，每個元素表示對應資產的預測評分。"
+
+msgid "A Gated Recurrent Unit model for asset scoring and portfolio selection."
+msgstr "用於資產評分和投資組合選擇的門控循環單元模型。"
+
+msgid "Similar to LSTM but with a simpler architecture, focusing on capturing sequential dependencies."
+msgstr "類似於 LSTM，但具有更簡單的架構，專注於捕捉順序依賴性。"
+
+msgid "`Source code for GRU <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/GRU.html#GRU>`_"
+msgstr "`GRU 源代碼 <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/GRU.html#GRU>`_"
+
+msgid "Less computationally intensive than LSTM; faster training times."
+msgstr "比 LSTM 計算需求低；訓練時間更快。"
+
+msgid "May not capture long-term dependencies as effectively as LSTM."
+msgstr "可能無法像 LSTM 一樣有效捕捉長期依賴性。"
+
+msgid "The GRU model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``, where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented features) for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset."
+msgstr "GRU 模型接受形状为 ``(batch_size, num_assets, num_features_augmented)`` 的输入张量 ``x``，其中 ``num_features_augmented`` 表示每个资产的特征数量（包括任何预处理或增强的特征）。该模型的最终输出是形状为 ``(batch_size, num_assets)`` 的张量，每个元素表示对应资产的预测评分。"
+
+msgid "Overall Framework of LSRE-CAAN"
+msgstr "LSRE-CAAN 的整体框架"
+
+msgid "The LSRE-CAAN model is a Transformer-based model for asset scoring and portfolio selection."
+msgstr "LSRE-CAAN 模型是一个基于 Transformer 的资产评分和投资组合选择模型。"
+
+msgid "Combines long sequence representations with attention mechanisms to address efficiency issues in AlphaPortfolio."
+msgstr "结合长序列表示和注意力机制，以解决 AlphaPortfolio 中的效率问题。"
+
+msgid "`Source code for LSRE_CAAN <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/LSRE_CAAN.html#LSRE_CAAN>`_"
+msgstr "`LSRE_CAAN 源代码 <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/LSRE_CAAN.html#LSRE_CAAN>`_"
+
+msgid "Efficient in processing long sequences; powerful attention mechanisms."
+msgstr "在处理长序列方面高效；强大的注意力机制。"
+
+msgid "Lacks theoretical guarantees."
+msgstr "缺乏理论保证。"
+
+msgid "The LSRE-CAAN model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``, where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented features) for each asset. The final output of the LSRE-CAAN model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset."
+msgstr "LSRE-CAAN 模型接受形状为 ``(batch_size, num_assets, num_features_augmented)`` 的输入张量 ``x``，其中 ``num_features_augmented`` 表示每个资产的特征数量（包括任何预处理或增强的特征）。该模型的最终输出是形状为 ``(batch_size, num_assets)`` 的张量，每个元素表示对应资产的预测评分。"
+
+msgid "For more details, please refer to the paper `Online portfolio management via deep reinforcement learning with high-frequency data <https://www.sciencedirect.com/science/article/abs/pii/S030645732200348X>`__."
+msgstr "有關更多詳細信息，請參閱論文 `Online portfolio management via deep reinforcement learning with high-frequency data <https://www.sciencedirect.com/science/article/abs/pii/S030645732200348X>`__。"
+
+msgid "Table 7: Hyper-parameters of the LSRE-CAAN framework."
+msgstr "表 7：LSRE-CAAN 框架的超參數。"
+
+msgid "Long Short-Term Memory model for asset scoring and portfolio selection."
+msgstr "用於資產評分和投資組合選擇的長短期記憶模型。"
+
+msgid "Recurrent Neural Network model for asset scoring and portfolio selection."
+msgstr "用于资产评分和投资组合选择的递归神经网络模型。"
+
+msgid "Processes sequences of data by maintaining a hidden state that captures information from previous inputs."
+msgstr "通过保持一个隐状态来处理数据序列，该隐状态捕捉来自先前输入的信息。"
+
+msgid "`Source code for RNN <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/RNN.html#RNN>`_"
+msgstr "`RNN 源代码 <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/RNN.html#RNN>`_"
+
+msgid "Simple architecture; effective for short-term dependencies."
+msgstr "架构简单；对短期依赖有效。"
+
+msgid "Struggles with long-term dependencies; can suffer from vanishing gradients."
+msgstr "在长期依赖方面表现较差；可能会遭遇梯度消失问题。"
+
+msgid "The RNN model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``, where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented features) for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset."
+msgstr "RNN 模型接受形状为 ``(batch_size, num_assets, num_features_augmented)`` 的输入张量 ``x``，其中 ``num_features_augmented`` 表示每个资产的特征数量（包括任何预处理或增强的特征）。该模型的最终输出是形状为 ``(batch_size, num_assets)`` 的张量，每个元素表示对应资产的预测评分。"
+
+msgid "Temporal Convolutional Network model for asset scoring and portfolio selection."
+msgstr "用于资产评分和投资组合选择的时序卷积网络模型。"
+
+msgid "Utilizes convolutional layers to capture temporal dependencies across sequences."
+msgstr "利用卷积层捕捉序列中的时间依赖性。"
+
+msgid "Designed to remember information for long periods, ideal for time series data."
+msgstr "旨在長時間記憶信息，適合時間序列數據。"
+
+msgid "`Source code for LSTM <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/LSTM.html#LSTM>`_"
+msgstr "`LSTM 源代碼 <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/LSTM.html#LSTM>`_"
+
+msgid "Excellent for capturing temporal dependencies; widely used in time series field."
+msgstr "非常適合捕捉時間依賴性；在時間序列領域廣泛使用。"
+
+msgid "More complex than traditional RNNs; can be computationally expensive."
+msgstr "比傳統 RNN 更複雜；計算開銷可能較大。"
+
+msgid "The LSTM model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``, where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented features) for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset."
+msgstr "LSTM 模型接受形狀為 ``(batch_size, num_assets, num_features_augmented)`` 的輸入張量 ``x``，其中 ``num_features_augmented`` 表示每個資產的特徵數量（包括任何預處理或增強的特徵）。該模型的最終輸出是形狀為 ``(batch_size, num_assets)`` 的張量，每個元素表示對應資產的預測評分。"
+msgid "`Source code for TCN <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/TCN.html#TCN>`_"
+msgstr "`TCN 源代碼 <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/TCN.html#TCN>`_"
+
+msgid "Can handle long-range dependencies; parallelizable training."
+msgstr "能夠處理長距離依賴；支持並行訓練。"
+
+msgid "May require careful design of the network architecture; less interpretable than RNNs."
+msgstr "可能需要仔細設計網絡架構；比 RNN 的可解釋性差。"
+
+msgid "The TCN model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``, where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented features) for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset."
+msgstr "TCN 模型接受形狀為 ``(batch_size, num_assets, num_features_augmented)`` 的輸入張量 ``x``，其中 ``num_features_augmented`` 表示每個資產的特徵數量（包括任何預處理或增強的特徵）。該模型的最終輸出是形狀為 ``(batch_size, num_assets)`` 的張量，每個元素表示對應資產的預測評分。"
+
+msgid "Transformer model for asset scoring and portfolio selection."
+msgstr "用於資產評分和投資組合選擇的 Transformer 模型。"
+
+msgid "Employs self-attention mechanisms to process sequences in parallel."
+msgstr "採用自注意力機制並行處理序列。"
+
+msgid "`Source code for Transformer <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/Transformer.html#Transformer>`_"
+msgstr "`Transformer 源代碼 <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/Transformer.html#Transformer>`_"
+
+msgid "Highly effective for a wide range of tasks; captures complex relationships."
+msgstr "對於廣泛的任務非常有效；能夠捕捉複雜關係。"
+
+msgid "Requires significant computational resources."
+msgstr "需要大量計算資源。"
+
+msgid "The Transformer model takes an input tensor ``x`` of shape ``(batch_size, num_assets, num_features_augmented)``, where ``num_features_augmented`` represents the number of features (including any preprocessed or augmented features) for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset."
+msgstr "Transformer 模型接受形狀為 ``(batch_size, num_assets, num_features_augmented)`` 的輸入張量 ``x``，其中 ``num_features_augmented`` 表示每個資產的特徵數量（包括任何預處理或增強的特徵）。該模型的最終輸出是形狀為 ``(batch_size, num_assets)`` 的張量，每個元素表示對應資產的預測評分。"
+msgid "Image Representation Models"
+msgstr "圖像表示模型"
+
+msgid "In addition to time series data, ``FinOL`` also provides image representation models. These models are designed to extract meaningful representations from financial images, such as charts, graphs, and other visual data. By doing so, it enables researchers to harness the wealth of information contained in visual formats, which can be crucial for tasks like pattern recognition, trend analysis, etc. The inclusion of this model in ``FinOL`` further solidifies its position as a versatile tool for data-driven OLPS research."
+msgstr "除了時間序列數據，``FinOL`` 還提供圖像表示模型。這些模型旨在從金融圖像中提取有意義的表示，例如圖表、圖形和其他視覺數據。通過這樣做，它使研究人員能夠利用視覺格式中包含的大量信息，這對模式識別、趨勢分析等任務至關重要。將此模型納入 ``FinOL`` 進一步鞏固了其作為數據驅動 OLPS 研究的多功能工具的地位。"
+
+msgid "Convolutional Neural Network model for asset scoring and portfolio selection."
+msgstr "用於資產評分和投資組合選擇的卷積神經網絡模型。"
+
+msgid "Applies convolutional layers to extract features from images of assets."
+msgstr "應用卷積層從資產的圖像中提取特徵。"
+
+msgid "`Source code for CNN <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/CNN.html#CNN>`_"
+msgstr "`CNN 源代碼 <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/CNN.html#CNN>`_"
+
+msgid "Effective for image classification and feature extraction."
+msgstr "對圖像分類和特徵提取有效。"
+
+msgid "Requires significant computational resources."
+msgstr "需要大量計算資源。"
+
+msgid "The CNN model takes an input tensor ``x`` of shape ``(batch_size, num_assets, height, width)``, where ``height`` and ``width`` are the dimensions of the image for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset."
+msgstr "CNN 模型接受形狀為 ``(batch_size, num_assets, height, width)`` 的輸入張量 ``x``，其中 ``height`` 和 ``width`` 是每個資產的圖像尺寸。該模型的最終輸出是形狀為 ``(batch_size, num_assets)`` 的張量，每個元素表示對應資產的預測評分。"
+
+msgid "Overall Framework of CNN-JF"
+msgstr "CNN-JF 的整體框架"
+
+msgid "The CNN-JF model is a CNN-based model for asset scoring and portfolio selection. It leverages CNN to analyze historical stock price data represented as images."
+msgstr "CNN-JF 模型是一個基於 CNN 的資產評分和投資組合選擇模型。它利用 CNN 來分析以圖像形式表示的歷史股票價格數據。"
+
+msgid "Leverages CNN architecture to capture patterns in financial time series represented visually."
+msgstr "利用 CNN 架構捕捉以視覺方式表示的金融時間序列中的模式。"
+
+msgid "`Source code for CNN_JF <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/CNN_JF.html#CNN_JF>`_"
+msgstr "`CNN_JF 源代碼 <https://finol.readthedocs.io/en/latest/_modules/finol/model_layer/CNN_JF.html#CNN_JF>`_"
+
+msgid "Combines advantages of visual data analysis with financial modeling."
+msgstr "結合視覺數據分析和金融建模的優勢。"
+
+msgid "Requires significant computational resources."
+msgstr "需要大量計算資源。"
+
+msgid "The CNN-JF model takes an input tensor ``x`` of shape ``(batch_size, num_assets, height, width)``, where ``height`` and ``width`` are the dimensions of the image for each asset. The final output of the model is a tensor of shape ``(batch_size, num_assets)``, where each element represents the predicted score for the corresponding asset."
+msgstr "CNN-JF 模型接受形狀為 ``(batch_size, num_assets, height, width)`` 的輸入張量 ``x``，其中 ``height`` 和 ``width`` 是每個資產的圖像尺寸。該模型的最終輸出是形狀為 ``(batch_size, num_assets)`` 的張量，每個元素表示對應資產的預測評分。"
+
+msgid "For more details, please refer to the paper `(Re-)Imag(in)ing Price Trends <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__."
+msgstr "有關更多詳細信息，請參閱論文 `(Re-)Imag(in)ing Price Trends <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__。"
+
+msgid "Hyper-parameters of (Re-)Imag(in)ing Price Trends."
+msgstr "(Re-)Imag(in)ing Price Trends 的超參數。"
