@@ -2839,26 +2839,17 @@ msgstr "FinOL 關鍵特徵"
 msgid "Benchmark Datasets"
 msgstr "基準數據集"
 
-msgid "Rich data input"
+msgid "Rich Data Input"
 msgstr "豐富的數據輸入"
 
-msgid "Image Data Input"
-msgstr "圖像數據輸入"
-
-msgid "Pre-built Models"
-msgstr "預構建模型"
-
-msgid "Optimizer Collection"
-msgstr "優化器集合"
-
-msgid "Extensive baselines"
+msgid "Extensive Baselines"
 msgstr "廣泛的基線"
 
-msgid "Comprehensive metrics"
+msgid "Comprehensive Metrics"
 msgstr "綜合的指標"
 
 ## Multiple visual tools
-msgid "Multiple visual tools"
+msgid "Multiple Visual Tools"
 msgstr "多種可視化工具"
 
 msgid "Loss Visualization"
@@ -2935,6 +2926,9 @@ msgstr "DJIA 上雷達圖的示例結果"
 
 
 ## Image Data Input
+msgid "Image Data Input"
+msgstr "圖像數據輸入"
+
 msgid "Basic Idea"
 msgstr "基本思想"
 
@@ -3007,6 +3001,9 @@ msgstr "有關更多詳細信息，請參見 :ref:`image_representation`。"
 
 
 ## Pre-built Models
+msgid "Pre-built Models"
+msgstr "預構建模型"
+
 msgid "See :mod:`~finol.model_layer` for more details."
 msgstr "有關更多詳細信息，請參見 :mod:`~finol.model_layer`。"
 
@@ -3253,3 +3250,341 @@ msgstr "有關更多詳細信息，請參閱論文 `(Re-)Imag(in)ing Price Trend
 
 msgid "Hyper-parameters of (Re-)Imag(in)ing Price Trends."
 msgstr "(Re-)Imag(in)ing Price Trends 的超參數。"
+
+## Optimizer Collection
+msgid "Optimizer Collection"
+msgstr "優化器集合"
+
+msgid "Official PyTorch Optimizers"
+msgstr "PyTorch 官方優化器"
+
+msgid "Pseudo-Code"
+msgstr "偽代碼"
+
+msgid "Adadelta is a robust learning rate method that can be applied in a variety of situations. This method has trivial computational overhead compared to SGD while providing a per-dimension learning rate, and shows promising results on MNIST and a large scale Speech recognition dataset."
+msgstr "Adadelta 是一種強健的學習率方法，可以應用於多種情況。與 SGD 相比，該方法的計算開銷微乎其微，同時提供每個維度的學習率，在 MNIST 和大規模語音識別數據集上顯示出良好的結果。"
+
+msgid "AdaGrad is a family of sub-gradient algorithms for stochastic optimization. The algorithms belonging to that family are similar to second-order stochastic gradient descent with an approximation for the Hessian of the optimized function. AdaGrad's name comes from Adaptative Gradient. Intuitively, it adapts the learning rate for each feature depending on the estimated geometry of the problem; particularly, it tends to assign higher learning rates to infrequent features, which ensures that the parameter updates rely less on frequency and more on relevance."
+msgstr "AdaGrad 是一類用於隨機優化的子梯度算法。屬於該家族的算法類似於二階隨機梯度下降，並對優化函數的 Hessian 進行近似。AdaGrad 的名稱來源於自適應梯度。直觀上，它根據問題的估計幾何形狀為每個特徵調整學習率；特別是，它傾向於為不頻繁的特徵分配更高的學習率，確保參數更新更少依賴頻率而更多依賴相關性。"
+
+msgid "Adam is a method for efficient stochastic optimization that only requires first-order gradients with little memory requirement. The method computes individual adaptive learning rates for different parameters from estimates of first and second moments of the gradients."
+msgstr "Adam 是一種高效的隨機優化方法，只需要一階梯度且內存需求較小。該方法根據梯度的一階和二階矩的估計為不同參數計算個體自適應學習率。"
+
+msgid "Adam with decoupled weight decay. This simple modification substantially improves Adam’s generalization performance, allowing it to compete with SGD with momentum on image classification datasets (on which it was previously typically outperformed by the latter)."
+msgstr "帶有解耦權重衰減的 Adam。這一簡單修改顯著提高了 Adam 的泛化性能，使其在圖像分類數據集上能夠與帶動量的 SGD 競爭（在這些數據集上，之前通常是後者表現更好）。"
+
+msgid "SparseAdam implements a masked version of the Adam algorithm suitable for sparse gradients. SparseAdam approximates the Adam algorithm by masking out the parameter and moment updates corresponding to the zero values in the gradients."
+msgstr "SparseAdam 實現了適合稀疏梯度的 Adam 算法的掩碼版本。SparseAdam 通過掩蓋與梯度中零值對應的參數和動量更新來近似 Adam 算法。"
+
+msgid "AdamW is a variant of Adam based on the infinity norm."
+msgstr "AdamW 是基於無窮範數的 Adam 變體。"
+
+msgid "Averaged Stochastic Gradient Descent, suitable for large datasets."
+msgstr "平均隨機梯度下降，適用於大規模數據集。"
+
+msgid "Stochastic gradient descent (abbreviated as SGD) is an iterative method often used for machine learning, optimizing the gradient descent during each search once a random weight vector is picked."
+msgstr "隨機梯度下降（簡稱 SGD）是一種常用於機器學習的迭代方法，在每次選擇隨機權重向量後優化梯度下降。"
+
+msgid "RAdam is a rectified version of Adam, which not only explicitly rectifies the variance and is theoretically sound, but also compares favorably with the heuristic warmup."
+msgstr "RAdam 是 Adam 的一種修正版本，不僅明確修正了方差且理論上是合理的，而且與啟發式的預熱方法相比也表現良好。"
+
+msgid "RProp, or we call Resilient Back Propagation, is the widely used algorithm for supervised learning with multi-layered feed-forward networks. The basic concept of the backpropagation learning algorithm is the repeated application of the chain rule to compute the influence of each weight in the network with respect to an arbitrary error."
+msgstr "RProp，或稱為彈性反向傳播，是多層前饋網絡監督學習中廣泛使用的算法。反向傳播學習算法的基本概念是重複應用鏈式法則，以計算網絡中每個權重對任意誤差的影響。"
+
+msgid "RProp algorithm is not function well when we have very large datasets and need to perform mini-batch weights updates. Therefore, scientist proposal a novel algorithm, RMSProp, which can cover more scenarios than RProp."
+msgstr "當我們處理非常大的數據集並需要進行小批量權重更新時，RProp 算法表現不佳。因此，科學家提出了一種新算法 RMSProp，它可以覆蓋比 RProp 更多的場景。"
+
+msgid "Much like Adam is essentially RMSprop with momentum, Nadam is Adam with Nesterov momentum. Empirically, Nadam clearly outperforms the other algorithms–including its parent algorithm Adam–in reducing training and validation loss."
+msgstr "就像 Adam 本質上是帶動量的 RMSprop，Nadam 是帶有 Nesterov 動量的 Adam。經驗上，Nadam 在減少訓練和驗證損失方面明顯優於其他算法，包括其母算法 Adam。"
+
+msgid "LBFGS is an optimizer that implements the Limited-memory Broyden-Fletcher-Goldfarb-Shanno (LBFGS) algorithm, which is particularly useful for dealing with problems where the number of parameters is relatively low compared to the number of data points."
+msgstr "LBFGS 是一種優化器，實施了有限記憶 Broyden-Fletcher-Goldfarb-Shanno (LBFGS) 算法，特別適用於參數數量相對於數據點數量較少的問題。"
+
+msgid "Custom Optimizers"
+msgstr "自定義優化器"
+
+msgid "Adaptive ASGD with exponential moving average."
+msgstr "帶指數移動平均的自適應 ASGD。"
+
+msgid "Adaptive ASGD with incremental moving average (quadratic weight)."
+msgstr "帶增量移動平均（平方權重）的自適應 ASGD。"
+
+msgid "Adaptive ASGD with uniform moving average."
+msgstr "帶均勻移動平均的自適應 ASGD。"
+
+msgid "An accelerated stochastic gradient method, which presents the first improvement in achieving minimax rates faster than averaged SGD for the stochastic approximation problem of least squares regression."
+msgstr "一種加速的隨機梯度方法，在解決最小二乘回歸的隨機近似問題中，首次實現了比平均 SGD 更快的最小最大速率。"
+
+msgid "AdaBelief is the first optimizer to achieve three goals simultaneously: fast convergence as in adaptive methods, good generalization as in SGD, and training stability in complex settings such as GANs."
+msgstr "AdaBelief 是首個同時實現三個目標的優化器：像自適應方法一樣快速收斂、像 SGD 一樣良好的泛化，以及在複雜設置（如 GANs）中的訓練穩定性。"
+
+msgid "Motivated by the strong generalization ability of SGD, AdaBound is an optimizer that combines the advantages of Adam and SGD with dynamically bounded learning rates. It shows great efficacy on several standard benchmarks while maintaining advantageous properties of adaptive methods such as rapid initial progress and hyper-parameter insensitivity."
+msgstr "受 SGD 強泛化能力的激勵，AdaBound 是一種優化器，結合了 Adam 和 SGD 的優點，並具有動態限制的學習率。它在多個標準基準上顯示出良好的效果，同時保持了自適應方法的有利特性，如快速的初始進展和對超參數的不敏感性。"
+
+msgid "AdaMod is designed to address the non-convergence issue often associated with the Adam optimizer. By imposing adaptive upper bounds on individual learning rates, AdaMod ensures that they do not exceed levels that are historically supported by the data, which contributes to enhanced performance. This approach has been validated through robust empirical testing across a variety of deep learning applications, particularly showing significant effectiveness on intricate network architectures such as DenseNet and Transformer."
+msgstr "AdaMod 旨在解決通常與 Adam 優化器相關的非收斂問題。通過對個體學習率施加自適應上限，AdaMod 確保它們不會超過歷史數據支持的水平，從而提高性能。這種方法已通過廣泛的實證測試在多種深度學習應用中得到了驗證，特別是在複雜網絡架構（如 DenseNet 和 Transformer）上顯示出顯著的有效性。"
+
+msgid "Adafactor is a highly efficient optimization algorithm designed to address the memory constraints often encountered in training large neural networks. It achieves comparable performance to Adam on popular tasks such as machine translation while requiring a sublinear amount of extra space for accumulators. This makes it possible to train significantly larger models on hardware with memory limitations."
+msgstr "Adafactor 是一種高效的優化算法，旨在解決訓練大型神經網絡時經常遇到的內存限制。它在機器翻譯等熱門任務上實現了與 Adam 相當的性能，同時對累加器的額外空間需求呈亞線性。這使得在內存有限的硬件上能夠訓練顯著更大的模型。"
+
+msgid "AdaHessian incorporates an approximate Hessian diagonal, with spatial averaging and momentum to precondition the gradient vector. This automatically rescales the gradient vector resulting in better descent directions. One of the key novelties in AdaHessian is the incorporation of spatial averaging for Hessian diagonal along with an exponential moving average in time. These enable us to smooth noisy local Hessian information which could be highly misleading."
+msgstr "AdaHessian 納入了近似的 Hessian 對角線，結合空間平均和動量來對梯度向量進行預處理。這會自動重新縮放梯度向量，從而產生更好的下降方向。AdaHessian 的一個關鍵創新是將 Hessian 對角線的空間平均與時間上的指數移動平均結合。這使我們能夠平滑噪聲較大的局部 Hessian 信息，避免誤導。"
+
+msgid "AdamP addresses the issue of excessive growth in scale-invariant weight norms, a phenomenon that can lead to sub-optimal performance. This issue is particularly prevalent when using momentum-based optimizers like SGD and Adam, which are widely employed for training a majority of deep learning models. Networks that incorporate normalization layers, such as ResNet, often exhibit a large proportion of scale-invariant weights."
+msgstr "AdamP 解決了尺度不變權重范數過度增長的問題，這一現象可能導致次優性能。使用基於動量的優化器（如 SGD 和 Adam）時，這一問題尤為普遍，它們廣泛用於訓練大多數深度學習模型。包含歸一化層的網絡（如 ResNet）往往表現出大量的尺度不變權重。"
+
+msgid "AggMo is a simple extension to classical momentum which is easy to implement and has negligible computational overhead on modern deep learning tasks. Empirically, AggMo is able to remain stable even with large damping coefficients and enjoys faster convergence rates as a consequence of this."
+msgstr "AggMo 是對經典動量的簡單擴展，易於實現，並且在現代深度學習任務中幾乎沒有計算開銷。經驗上，AggMo 即使在使用大阻尼系數時也能保持穩定，並因此享有更快的收斂速度。"
+
+msgid "Apollo is a simple and computationally efficient quasi-Newton algorithm for nonconvex stochastic optimization. This method is aimed towards large-scale optimization problems in the sense of large datasets and/or high-dimensional parameter spaces such as machine learning with deep neural networks."
+msgstr "Apollo 是一種簡單且計算效率高的準牛頓算法，用於非凸隨機優化。該方法旨在解決大規模優化問題，尤其是涉及大數據集和/或高維參數空間的機器學習與深度神經網絡。"
+
+msgid "DiffGrad incorporates the difference of gradients of current and immediate past iteration (i.e., short term gradient change information) with Adam optimization techniques to control the learning rate based on the optimization stage."
+msgstr "DiffGrad 將當前和前一個迭代的梯度差異（即短期梯度變化信息）與 Adam 優化技術結合，以根據優化階段控制學習率。"
+
+msgid "LARS, an optimizer that tailors the learning rate for each layer, is instrumental in scaling up the training of convolutional networks with large batch sizes. It overcomes the divergence issues associated with traditional large learning rate approaches, especially during the initial training phase. LARS has been effectively utilized to scale the training of AlexNet and ResNet-50 to batch sizes of 32K without loss of accuracy."
+msgstr "LARS 是一種為每一層量身定制學習率的優化器，在大批量訓練卷積網絡中至關重要。它克服了傳統大學習率方法相關的發散問題，尤其是在初始訓練階段。LARS 已有效用於將 AlexNet 和 ResNet-50 的訓練規模提升至 32K 的批量大小而不損失準確度。"
+
+msgid "LAMB supports adaptive elementwise updating and layerwise learning rates. LAMB is a general purpose optimizer that works for both small and large batches. LAMB is also the first large batch adaptive solver that can achieve state-of-the-art accuracy on ImageNet training with RESNET-50."
+msgstr "LAMB 支持自適應元素級更新和逐層學習率。LAMB 是一種通用優化器，適用於小批量和大批量訓練。LAMB 還是第一個能夠在使用 RESNET-50 進行 ImageNet 訓練時實現最先進準確度的大批量自適應求解器。"
+
+msgid "MADGRAD is a novel optimization method in the family of AdaGrad adaptive gradient methods. MADGRAD shows excellent performance on deep learning optimization problems from multiple fields, including classification and image-to-image tasks in vision, and recurrent and bidirectionally-masked models in natural language processing."
+msgstr "MADGRAD 是 AdaGrad 自適應梯度方法家族中的一種新型優化方法。MADGRAD 在多個領域的深度學習優化問題上表現出色，包括視覺中的分類和圖像到圖像任務，以及自然語言處理中的遞歸和雙向掩碼模型。"
+
+msgid "NovoGrad is an adaptive SGD method with gradients normalized by the layer-wise second moment and with decoupled weight decay. Empirically, NovoGrad performs exceptionally well for large batch training, and requires only half the memory compared to Adam."
+msgstr "NovoGrad 是一種自適應 SGD 方法，其梯度通過逐層的二階矩進行歸一化，並具有解耦的權重衰減。經驗上，NovoGrad 在大批量訓練中表現出色，所需內存僅為 Adam 的一半。"
+
+msgid "PID optimizer exploits the present, past and change information of gradients to update the network parameters, reducing greatly the overshoot problem of SGD-momentum and accelerating the learning process of DNNs."
+msgstr "PID 優化器利用梯度的當前、過去和變化信息來更新網絡參數，極大地減少了 SGD 動量的過衝問題，加快了深度神經網絡的學習過程。"
+
+msgid "QHM and QHAdam are computationally cheap, intuitive to interpret, and simple to implement. They can serve as excellent replacements for momentum/NAG and Adam in a variety of settings. QHM recovers numerous other algorithms in an efficient and accessible manner. Parameter sweep experiments and case studies demonstrate that the QH algorithms can handily outpace their vanilla counterparts."
+msgstr "QHM 和 QHAdam 計算成本低，易於理解，且易於實現。它們可以作為多種情況下動量/NAG 和 Adam 的優秀替代品。QHM 以高效和易於訪問的方式恢復了許多其他算法。參數掃描實驗和案例研究表明，QH 算法能夠輕鬆超越其基礎版本。"
+
+msgid "Ranger is able to train models that other optimizers simply fail to train, like a Normalizer-Free Resnet50. For a given model, Ranger is usually able to both accelerate the learning and achieve a net higher validation accuracy without compromising generalization."
+msgstr "Ranger 能夠訓練其他優化器無法訓練的模型，比如無歸一化的 Resnet50。對於給定的模型，Ranger 通常能夠加速學習並實現更高的驗證準確率，而不損害泛化能力。"
+
+msgid "Combines Quasi Hyperbolic momentum with Hinton Lookahead."
+msgstr "結合了準雙曲動量和 Hinton 預見。"
+
+msgid "Ranger deep learning optimizer - RAdam + Lookahead + calibrated adaptive LR combined."
+msgstr "Ranger 深度學習優化器 - 結合了 RAdam + Lookahead + 校準的自適應學習率。"
+
+msgid "SGDP addresses the issue of excessive growth in scale-invariant weight norms, a phenomenon that can lead to sub-optimal performance. This issue is particularly prevalent when using momentum-based optimizers like SGD and Adam, which are widely employed for training a majority of deep learning models. Networks that incorporate normalization layers, such as ResNet, often exhibit a large proportion of scale-invariant weights."
+msgstr "SGDP 解決了尺度不變權重范數過度增長的問題，這一現象可能導致次優性能。使用基於動量的優化器（如 SGD 和 Adam）時，這一問題尤為普遍，它們廣泛用於訓練大多數深度學習模型。包含歸一化層的網絡（如 ResNet）往往表現出大量的尺度不變權重。"
+
+msgid "SGD with momentum using decoupled weight decay. This simple modification explicitly decouples the optimal choice of weight decay factor from the setting of the learning rate for standard SGD."
+msgstr "使用解耦權重衰減的動量 SGD。這一簡單修改明確地將權重衰減因子的最佳選擇與標準 SGD 的學習率設置解耦。"
+
+msgid "SWATS is a simple strategy which Switches from Adam to SGD when a triggering condition is satisfied. The switch is designed to be automatic and one that does not introduce any more hyper-parameters."
+msgstr "SWATS 是一種簡單的策略，當滿足觸發條件時，從 Adam 切換到 SGD。該切換設計為自動進行，不引入更多超參數。"
+
+msgid "Shampoo is a new structure-aware preconditioning algorithm for stochastic optimization over tensor spaces. Shampoo maintains a set of preconditioning matrices, each of which operates on a single dimension, contracting over the remaining dimensions."
+msgstr "Shampoo 是一種新的結構感知預處理算法，用於在張量空間上進行隨機優化。Shampoo 維護一組預處理矩陣，每個矩陣在一個維度上操作，同時在剩餘維度上收縮。"
+
+msgid "Yogi is developed for achieving adaptivity in SGD. Yogi controls the increase in effective learning rate, leading to even better performance with similar theoretical guarantees on convergence."
+msgstr "Yogi 是為了實現 SGD 的自適應性而開發的。Yogi 控制有效學習率的增加，從而在收斂的理論保證上實現更好的性能。"
+
+
+## Criterion Collection
+msgid "Criterion Collection"
+msgstr "準則集合"
+
+msgid "The ``LogWealth`` criterion calculates the negative mean logarithm of the portfolio's daily returns. This criterion aims to maximize the expected value of the portfolio's wealth."
+msgstr "``LogWealth`` 準則計算投資組合每日收益的負均值對數。該準則旨在最大化投資組合財富的期望值。"
+
+msgid "Code"
+msgstr "代碼"
+
+msgid "The ``LogWealthL2Diversification`` criterion extends the ``LogWealth`` criterion by incorporating a diversification penalty based on the L2 norm of the difference between consecutive portfolio weight vectors. This penalty encourages the portfolio to be diversified, reducing the concentration risk."
+msgstr "``LogWealthL2Diversification`` 準則通過引入基於連續投資組合權重向量之間差異的 L2 範數的多樣化懲罰，擴展了 ``LogWealth`` 準則。該懲罰鼓勵投資組合實現多樣化，降低集中風險。"
+
+msgid "The ``LogWealthL2Concentration`` criterion extends the ``LogWealth`` criterion by incorporating a concentration penalty based on the negative L2 norm of the difference between consecutive portfolio weight vectors. This penalty encourages the portfolio to be concentrated, increasing the potential for higher returns."
+msgstr "``LogWealthL2Concentration`` 準則通過引入基於連續投資組合權重向量之間差異的負 L2 範數的集中懲罰，擴展了 ``LogWealth`` 準則。該懲罰鼓勵投資組合集中，從而增加更高收益的潛力。"
+
+msgid "The ``L2Diversification`` criterion measures the diversification of a portfolio based on the L2 norm of the difference between consecutive portfolio weight vectors. This criterion encourages the portfolio to be diversified, reducing the concentration risk."
+msgstr "``L2Diversification`` 準則基於連續投資組合權重向量之間差異的 L2 範數來衡量投資組合的多樣化。該準則鼓勵投資組合實現多樣化，降低集中風險。"
+
+msgid "The ``L2Concentration`` criterion measures the concentration of a portfolio based on the negative L2 norm of the difference between consecutive portfolio weight vectors. This criterion encourages the portfolio to be concentrated, increasing the potential for higher returns."
+msgstr "``L2Concentration`` 準則基於連續投資組合權重向量之間差異的負 L2 範數來衡量投資組合的集中程度。該準則鼓勵投資組合集中，從而增加更高收益的潛力。"
+
+msgid "The ``SharpeRatio`` criterion evaluates the risk-adjusted return of the portfolios using the Sharpe Ratio. This criterion aims to maximize the Sharpe Ratio, which is the ratio of the mean excess return to the standard deviation of the excess return."
+msgstr "``SharpeRatio`` 準則使用夏普比率評估投資組合的風險調整收益。該準則旨在最大化夏普比率，即均值超額收益與超額收益標準差的比率。"
+
+msgid "The ``Volatility`` criterion measures the volatility of the portfolios based on the standard deviation of daily returns. This criterion aims to minimize the volatility of the model, reducing the risk of large losses."
+msgstr "``Volatility`` 準則基於每日收益的標準差來衡量投資組合的波動性。該準則旨在最小化模型的波動性，從而降低大額損失的風險。"
+
+msgid "The ``CustomCriterion`` criterion is a placeholder for the user to define their own custom loss criterion. This criterion allows the user to implement any custom loss function they desire, tailored to their specific needs."
+msgstr "``CustomCriterion`` 準則是用戶定義自訂損失準則的佔位符。該準則允許用戶實現任何他們所需的自訂損失函數，以滿足具體需求。"
+
+
+
+## Benchmark Results
+msgid "Benchmark Results"
+msgstr "基準測試結果"
+
+msgid "We will continue to update the following benchmark results. If you have proposed new (classic or data-driven) OLPS models, you can send us your paper/code link via :ref:`contact_us` or raise a pull request. We will add them to this repository and update the leaderboard as soon as possible."
+msgstr "我們將繼續更新以下基準結果。如果您提出了新的（經典或數據驅動的）OLPS 模型，可以通過 :ref:`contact_us` 發送您的論文/代碼鏈接給我們，或者提交拉取請求。我們會儘快將其添加到這個倉庫並更新排行榜。"
+
+msgid "Benchmark Results on Profitability"
+msgstr "盈利能力的基準結果"
+
+msgid "The benchmark results on profitability and the analysis of the results are available in the paper."
+msgstr "有關盈利能力的基準結果及其分析可在論文中找到。"
+
+msgid "Benchmark Results on Risk Resilience"
+msgstr "風險抵禦能力的基準結果"
+
+msgid "Besides the benchmark results of profitability, we further evaluate 2 vital risk metrics: Volatility Risk (VR) and Maximum Drawdown (MDD) on ``FinOL``. Table below reveals that:"
+msgstr "除了盈利能力的基準結果，我們還進一步評估了 2 個重要的風險指標：波動風險（VR）和最大回撤（MDD），如 ``FinOL`` 所示。下表揭示了："
+
+msgid "The risk profiles vary markedly across different OLPS methods. Methods like SSPO and PPT exhibit higher volatility due to their aggressive betting behaviors. In contrast, methods such as UP and ANTI produce lower risk."
+msgstr "不同 OLPS 方法的風險特徵差異顯著。像 SSPO 和 PPT 這樣的方法由於其激進的投注行為表現出更高的波動性。相反，像 UP 和 ANTI 這樣的方法則產生較低的風險。"
+
+msgid "For Pattern-matching methods, AICTR and KTPT undertake more risk exposures for pursuing higher returns."
+msgstr "對於模式匹配方法，AICTR 和 KTPT 承擔了更多的風險敞口以追求更高的回報。"
+
+msgid "Most Meta-learning methods exhibit moderate risk profiles comparable to bas. This validates their strength in balancing between return and risk by combining multiple sub-methods."
+msgstr "大多數元學習方法表現出與基準相當的中等風險特徵。這驗證了它們通過結合多種子方法在回報與風險之間平衡的能力。"
+
+msgid "Benchmark Results of VR and MDD on FinOL"
+msgstr "FinOL 上的 VR 和 MDD 基準結果"
+
+msgid "The analysis reveals that while certain OLPS methods can gain higher profitability, their improvement often accompanies greater risk exposures. Hence, an ideal OLPS method should maximize returns while controlling the downside risk. The benchmark results motivate the development of innovative mechanisms to manage risk in the data-driven OLPS field, such as adaptive position sizing, robust rebalancing rules, and risk-sensitive loss functions."
+msgstr "分析表明，儘管某些 OLPS 方法可以獲得更高的盈利能力，但其提升通常伴隨著更大的風險敞口。因此，理想的 OLPS 方法應該在控制下行風險的同時最大化回報。基準結果激勵了在數據驅動的 OLPS 領域開發創新機制來管理風險，如自適應倉位調整、穩健的再平衡規則和風險敏感的損失函數。"
+
+msgid "Benchmark Results on Practicality"
+msgstr "實用性的基準結果"
+
+msgid "We also examine 2 practical OLPS metrics: Average Turnover (ATO) and Running Time (RT). Table below presents the ATO results on ``FinOL``. Several key observations can be summarized:"
+msgstr "我們還考察了 2 個實用的 OLPS 指標：平均換手率（ATO）和運行時間（RT）。下表展示了 ``FinOL`` 上的 ATO 結果。可以總結出幾個關鍵觀察："
+
+msgid "Methods like UP and EG generate relatively low ATOs by stable rebalancing."
+msgstr "像 UP 和 EG 這樣的方法通過穩定的再平衡生成相對較低的 ATO。"
+
+msgid "However, some methods that fall into the Follow-the-loser classification (e.g., CWMR and OLMAR) exhibit high ATOs due to their frequent portfolio adjustment, which may raise practical concerns about high transaction costs."
+msgstr "然而，一些屬於跟隨失敗者分類的方法（例如 CWMR 和 OLMAR）由於頻繁調整投資組合而表現出高 ATO，這可能引發關於高交易成本的實際擔憂。"
+
+msgid "Most Meta-learning methods maintain ATO levels comparable to UP, which are lower than methods like PAMR with higher turnover rates. This demonstrates Meta-learning methods can effectively balance adaptability and trading frequencies."
+msgstr "大多數元學習方法的 ATO 水平與 UP 相當，低於換手率更高的 PAMR 方法。這表明元學習方法能夠有效平衡適應性和交易頻率。"
+
+msgid "Benchmark Results of ATO on FinOL"
+msgstr "FinOL 上的 ATO 基準結果"
+
+msgid "\"--\" indicates that the method incurs (almost) no transaction costs."
+msgstr "\"--\" 表示該方法產生（幾乎）沒有交易成本。"
+
+msgid "The results reveal a trade-off between profitability and practicality. Some methods gain high returns at the cost of heavy portfolio adjustments. Hence, an ideal data-driven OLPS should optimize returns under real-world constraints. The benchmark motivates developing mechanisms to lower rebalancing frequencies and reduce turnover."
+msgstr "結果顯示盈利能力與實用性之間存在權衡。一些方法在重度調整投資組合的代價下獲得高回報。因此，理想的數據驅動 OLPS 應該在現實約束下優化回報。基準促進了開發降低再平衡頻率和減少換手率的機制。"
+
+msgid "In addition to the evaluation of ATO, we also examine the Running Time (RT) metric as a practical measure of OLPS performance. Table below presents the RT results on the ``FinOL``. Several key observations can be summarized:"
+msgstr "除了對 ATO 的評估，我們還考察了運行時間（RT）指標，作為 OLPS 性能的實用衡量標準。下表展示了 ``FinOL`` 上的 RT 結果。可以總結出幾個關鍵觀察："
+
+msgid "Some OLPS methods have poor scalability with respect to the number of assets, particularly SCRP and SSPO. This is mainly because their past development relied heavily on the ``OLPS`` database, which fortunately does not involve any large-scale datasets."
+msgstr "一些 OLPS 方法在資產數量方面的可擴展性較差，特別是 SCRP 和 SSPO。這主要是因為它們過去的開發嚴重依賴於 ``OLPS`` 資料庫，而該資料庫恰好不涉及任何大規模數據集。"
+
+msgid "The majority of OLPS methods perform well in terms of running time."
+msgstr "大多數 OLPS 方法在運行時間方面表現良好。"
+
+msgid "Benchmark Results of RT on FinOL"
+msgstr "FinOL 上的 RT 基準結果"
+
+msgid "All time are reported in seconds."
+msgstr "所有時間均以秒為單位報告。"
+
+msgid "Model"
+msgstr "模型"
+
+msgid "RT is an important consideration that is often overlooked in backtesting but critical for real-world OLPS task. To address this challenge, ``FinOL`` offers researchers access to two large datasets: NYSE(N) and SP500. These datasets provide researchers with opportunities to develop OLPS methods that are not only profitable but also practical."
+msgstr "運行時間（RT）是一個重要的考慮因素，通常在回測中被忽視，但對現實中的 OLPS 任務至關重要。為了解決這一挑戰，``FinOL`` 為研究人員提供了兩個大型數據集：NYSE(N) 和 SP500。這些數據集為研究人員提供了開發既有盈利能力又具實用性的 OLPS 方法的機會。"
+
+
+## Elo 排名系統
+msgid "Elo Ranking System"
+msgstr "Elo 排名系統"
+
+msgid "The Elo ranking system, originally developed for two-player games like chess, is designed to provide a dynamic and quantitative measure of player (or model) skill levels based on their performance in head-to-head matches. By continuously updating ratings after each competition, the Elo system reflects the most current abilities of models, allowing for more accurate comparisons."
+msgstr "Elo 排名系統最初為象棋等雙人遊戲開發，旨在根據玩家（或模型）在對抗賽中的表現，提供動態的定量技能水平度量。通過在每場比賽後持續更新評級，Elo 系統反映了模型的最新能力，從而實現更準確的比較。"
+
+msgid "In the context of OLPS, comparing the performance of different methods across various datasets can be challenging. Given that a method may excel in one dataset but underperform in another, it becomes crucial to establish a ranking method for comparing methods across different datasets."
+msgstr "在 OLPS 的背景下，比較不同方法在各種數據集上的性能可能會很具挑戰性。考慮到某種方法在一個數據集上表現出色，但在另一個數據集上表現不佳，因此建立一種排名方法以比較不同數據集上的方法變得至關重要。"
+
+msgid "Initially, we created a simple linear updating version of the Elo ranking system. The core formula for updating the ratings of two competing models, :math:`a` and :math:`b`, is as follows:"
+msgstr "最初，我們創建了一個簡單的線性更新版本的 Elo 排名系統。更新兩個競爭模型 :math:`a` 和 :math:`b` 的評級的核心公式如下："
+
+msgid "Initialize ratings:"
+msgstr "初始化評級："
+
+msgid "Allow each method, excluding the BEST and BCRP hindsight methods, to compete against each other in a pairwise manner on the same dataset and metric:"
+msgstr "允許每種方法（不包括事後方法 BEST 和 BCRP）在相同的數據集和指標上以成對的方式相互競爭："
+
+msgid "For each battle between models :math:`a` and :math:`b`, calculate expected scores:"
+msgstr "對於模型 :math:`a` 和 :math:`b` 之間的每場較量，計算預期得分："
+
+msgid "where :math:`R_a` and :math:`R_b` are the current ratings of models :math:`a` and :math:`b`, respectively, and :math:`S=400` is the scaling factor we set."
+msgstr "其中 :math:`R_a` 和 :math:`R_b` 分別是模型 :math:`a` 和 :math:`b` 的當前評級，而 :math:`S=400` 是我們設定的縮放因子。"
+
+msgid "Determine actual scores:"
+msgstr "確定實際得分："
+
+msgid "If model :math:`a` wins: :math:`S_a = 1`"
+msgstr "如果模型 :math:`a` 勝出： :math:`S_a = 1`"
+
+msgid "If model :math:`b` wins: :math:`S_a = 0`"
+msgstr "如果模型 :math:`b` 勝出： :math:`S_a = 0`"
+
+msgid "If it's a tie: :math:`S_a = 0.5`"
+msgstr "如果是平局： :math:`S_a = 0.5`"
+
+msgid "Update ratings based on the battle outcome:"
+msgstr "根據比賽結果更新評級："
+
+msgid "where :math:`K` is the Elo update factor, :math:`R'_a` and :math:`R'_b` are the updated ratings after the battle."
+msgstr "其中 :math:`K` 是 Elo 更新因子，:math:`R'_a` 和 :math:`R'_b` 是戰鬥後的更新評級。"
+
+msgid "The initial implementation is detailed in the following code:"
+msgstr "初步實現的詳細代碼如下："
+
+msgid "However, we observed that even with a small Elo update factor (:math:`K`), the ranking system was sensitive to the order of battles. To mitigate this, we employed a bootstrap method to enhance the Elo ranking system, allowing us to obtain confidence intervals for the ratings. The key steps are as follows:"
+msgstr "然而，我們觀察到即使使用較小的 Elo 更新因子 (:math:`K`)，排名系統對戰鬥順序也很敏感。為了解決這個問題，我們採用了自助法來增強 Elo 排名系統，使我們能夠獲得評級的置信區間。關鍵步驟如下："
+
+msgid "We run the `compute_elo` function multiple times (e.g., 1,000 times) on bootstrap samples of the battle data."
+msgstr "我們在戰鬥數據的自助樣本上多次運行 `compute_elo` 函數（例如，1,000 次）。"
+
+msgid "This gives us a distribution of Elo ratings for each model, which we can then use to compute robust statistics like the median and confidence intervals."
+msgstr "這樣我們就得到了每個模型的 Elo 評級分佈，然後可以用來計算中位數和置信區間等穩健統計數據。"
+
+msgid "The final Elo rankings are based on the median Elo ratings across the bootstrap samples."
+msgstr "最終的 Elo 排名基於自助樣本中的中位數 Elo 評級。"
+
+msgid "This process is implemented in the following code:"
+msgstr "該過程在以下代碼中實現："
+
+msgid "This approach provides a principle of comparing different OLPS methods."
+msgstr "這種方法提供了一種比較不同 OLPS 方法的原則。"
+
+msgid "Elo Ranking Results on Profitability"
+msgstr "盈利能力的 Elo 排名結果"
+
+msgid "Bootstrap Estimates of Elo Ratings on Profitability"
+msgstr "盈利能力的 Elo 評級自助估計"
+
+msgid "Elo Ranking Results on Profitability"
+msgstr "盈利能力的 Elo 排名結果"
+
+msgid "Elo Rating"
+msgstr "Elo 評級"
+
+msgid "Rank"
+msgstr "排名"
+
+msgid "Elo Ranking Results on Risk Resilience"
+msgstr "風險抵禦能力的 Elo 排名結果"
+
+msgid "Bootstrap Estimates of Elo Ratings on Risk Resilience"
+msgstr "風險抵禦能力的 Elo 評級自助估計"
+
+msgid "Elo Ranking Results on Practicality"
+msgstr "實用性的 Elo 排名結果"
+
+msgid "Bootstrap Estimates of Elo Ratings on Profitability"
+msgstr "盈利能力的 Elo 評級自助估計"

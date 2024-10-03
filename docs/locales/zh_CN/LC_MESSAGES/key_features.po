@@ -2827,15 +2827,6 @@ msgstr "基准数据集"
 msgid "Rich Data Input"
 msgstr "丰富的数据输入"
 
-msgid "Image Data Input"
-msgstr "图像数据输入"
-
-msgid "Pre-built Models"
-msgstr "预构建模型"
-
-msgid "Optimizer Collection"
-msgstr "优化器集合"
-
 msgid "Extensive Baselines"
 msgstr "广泛的基线"
 
@@ -2843,6 +2834,7 @@ msgid "Comprehensive Metrics"
 msgstr "综合的指标"
 
 
+## Multiple Visual Tools
 msgid "Multiple Visual Tools"
 msgstr "多种可视化工具"
 
@@ -2922,6 +2914,9 @@ msgstr "DJIA 上雷达图的示例结果"
 
 
 ## Image Data Input
+msgid "Image Data Input"
+msgstr "图像数据输入"
+
 msgid "Basic Idea"
 msgstr "基本思想"
 
@@ -2936,7 +2931,6 @@ msgstr "缺点"
 
 msgid "Details"
 msgstr "细节"
-
 
 msgid "Why is it beneficial to encode market data as an image rather than in the more standard time-series numerical format? The first reason is that the leading CNN architectures are custom crafted for image analysis. Therefore, to enjoy the CNN's benefits of automated signal generation, it is useful to represent price data in the format naturally ingested by the CNN, that is, as an image. Second, representing time-series as an image allows the model to focus on relational attributes of the data that would be difficult to tease out with time-series methods. This is the same basic rationale for why humans illustrate patterns graphically rather than with lists of numbers. If a human can more readily detect patterns in images by consuming an entire data matrix through a single visualization, a statistical pattern recognition algorithm may benefit from doing so as well. Third, the process of imaging price and volume data converts all assets' data histories into a comparable scale. We show that this particular rescaling choice has large benefits for prediction in the panel of stocks. Fourth, technical trading hinges on the presence of geometric shapes visually defined and observed by human cognition. Technical traders have long used price charts as an information source to predict returns and make investment decisions."
 msgstr "为什么将市场数据编码为图像而不是更常见的时间序列数值格式是有益的呢？第一个原因是领先的CNN（卷积神经网络）架构是专门为图像分析设计的。因此，为了充分利用CNN自动生成信号的优势，将价格数据以自然被CNN摄入的形式表示为图像是有用的。第二个原因是将时间序列表示为图像可以让模型专注于数据的相关属性，而这些属性很难从时间序列方法中提取出来。这与人类用图形而不是数字列表来表示模式的基本理念是相同的。如果人类可以通过单一的可视化来浏览整个数据矩阵来更轻松地从图像中检测出模式，那么一个统计模式识别算法也可能从中受益。第三个原因是将价格和成交量数据图像化将所有资产的数据历史转换为可比的尺度。我们证明，对于股票组合中的股票而言，这种特定的缩放选择在预测方面具有很大的好处。第四，技术交易依赖于几何图形的存在，这些图形是通过人类认知视觉定义和观察的。技术交易者长期以来一直使用价格图表作为信息来源，以预测回报并做出投资决策。"
@@ -2993,7 +2987,11 @@ msgid "See :ref:`image_representation` for more details."
 msgstr "有关更多详细信息，请参见 :ref:`image_representation`。"
 
 
+
 ## Pre-built Models
+msgid "Pre-built Models"
+msgstr "预构建模型"
+
 msgid "See :mod:`~finol.model_layer` for more details."
 msgstr "有关更多详细信息，请参见 :mod:`~finol.model_layer`。"
 
@@ -3247,6 +3245,9 @@ msgstr "(Re-)Imag(in)ing Price Trends 的超参数。"
 
 
 ## Optimizer Collection
+msgid "Optimizer Collection"
+msgstr "优化器集合"
+
 msgid "Official PyTorch Optimizers"
 msgstr "PyTorch 官方优化器"
 
@@ -3510,7 +3511,7 @@ msgid "Initialize ratings:"
 msgstr "初始化评级："
 
 msgid "Allow each method, excluding the BEST and BCRP hindsight methods, to compete against each other in a pairwise manner on the same dataset and metric:"
-msgstr "允许每种方法（不包括 BEST 和 BCRP 回顾法）在相同的数据集和指标上以成对的方式相互竞争："
+msgstr "允许每种方法（不包括事后方法 BEST 和 BCRP）在相同的数据集和指标上以成对的方式相互竞争："
 
 msgid "For each battle between models :math:`a` and :math:`b`, calculate expected scores:"
 msgstr "对于模型 :math:`a` 和 :math:`b` 之间的每场较量，计算预期得分："
