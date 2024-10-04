@@ -224,7 +224,7 @@ msgid "Supported since 26 September 2024"
 msgstr "于 2024年9月26日 发布"
 
 msgid "New feature! ``FinOL`` now supports the `Image Input <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__ feature"
-msgstr "全新功能！``FinOL`` 现已支持 `CNN-JF <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__ 功能"
+msgstr "全新功能！``FinOL`` 现已支持 `图像输入 <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__ 功能"
 
 msgid "Supported since 26 September 2024"
 msgstr "于 2024年9月26日 发布"
