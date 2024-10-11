@@ -10,7 +10,7 @@ from captum.attr import Saliency
 from typing import List, Tuple, Dict, Union
 from finol.evaluation_layer.metric_calculator import MetricCalculator
 from finol.evaluation_layer.distiller_selector import DistillerSelector
-from finol.utils import load_config, portfolio_selection, actual_portfolio_selection
+from finol.utils import load_config, portfolio_selection, actual_portfolio_selection, add_prefix
 
 # plt.style.use("seaborn-paper")
 # plt.rcParams["font.family"] = "Microsoft YaHei"
@@ -59,7 +59,7 @@ class EconomicDistiller:
 
         :return: None or dictionary containing calculated evaluation metrics for the economic distillation model.
         """
-        model = torch.load(self.logdir + "/best_model_" + self.config["DATASET_NAME"] + ".pt").to(self.config["DEVICE"])
+        model = torch.load(self.logdir + "/" + add_prefix("best_model.pt")).to(self.config["DEVICE"])
         model.eval()
 
         if self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["Y_NAME"] == "Portfolios":
