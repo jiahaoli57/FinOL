@@ -237,38 +237,39 @@ class MetricCalculator:
         :param runtime: The runtime information. Required only when ``self.mode`` is ``ed`` (economic distillation).
         :return: Dictionary containing calculated evaluation metrics.
         """
-        if self.mode == "normal":
-            portfolios, labels, runtime, num_trading_periods = self.calculate_portfolios()
-        elif self.mode == "ed":
-            portfolios, labels = portfolios.cpu().detach().numpy(), labels.cpu().detach().numpy()
-            num_trading_periods, num_assets = portfolios.shape
+        with torch.no_grad():
+            if self.mode == "normal":
+                portfolios, labels, runtime, num_trading_periods = self.calculate_portfolios()
+            elif self.mode == "ed":
+                portfolios, labels = portfolios.cpu().detach().numpy(), labels.cpu().detach().numpy()
+                num_trading_periods, num_assets = portfolios.shape
 
-        # Profit Metrics
-        daily_returns, daily_cumulative_wealth, final_cumulative_wealth = self.calculate_final_cumulative_wealth(portfolios, labels)
-        annual_percentage_yield = self.calculate_annual_percentage_yield(num_trading_periods, final_cumulative_wealth)
-        sharpe_ratio = self.calculate_sharpe_ratio(daily_returns, annual_percentage_yield)
+            # Profit Metrics
+            daily_returns, daily_cumulative_wealth, final_cumulative_wealth = self.calculate_final_cumulative_wealth(portfolios, labels)
+            annual_percentage_yield = self.calculate_annual_percentage_yield(num_trading_periods, final_cumulative_wealth)
+            sharpe_ratio = self.calculate_sharpe_ratio(daily_returns, annual_percentage_yield)
 
-        # Risk Metrics
-        volatility_risk = self.calculate_volatility_risk(daily_returns)
-        daily_drawdown, daily_maximum_drawdown, maximum_drawdown = self.calculate_maximum_drawdown(daily_cumulative_wealth)
+            # Risk Metrics
+            volatility_risk = self.calculate_volatility_risk(daily_returns)
+            daily_drawdown, daily_maximum_drawdown, maximum_drawdown = self.calculate_maximum_drawdown(daily_cumulative_wealth)
 
-        # Practical Metrics
-        daily_turnover, transaction_costs_wealth = self.calculate_transaction_costs_wealth(portfolios, labels)
-        average_turnover = self.calculate_average_turnover(daily_turnover)
-        runtime = self.calculate_runtime(runtime)
+            # Practical Metrics
+            daily_turnover, transaction_costs_wealth = self.calculate_transaction_costs_wealth(portfolios, labels)
+            average_turnover = self.calculate_average_turnover(daily_turnover)
+            runtime = self.calculate_runtime(runtime)
 
-        calculate_metric_output = {
-            "logdir": self.logdir,
-            "DCW": daily_cumulative_wealth,
-            "CW": final_cumulative_wealth,
-            "APY": annual_percentage_yield,
-            "SR": sharpe_ratio,
-            "VR": volatility_risk,
-            "DDD": daily_drawdown,
-            "DMDD": daily_maximum_drawdown,
-            "MDD": maximum_drawdown,
-            "ATO": average_turnover,
-            "TCW": transaction_costs_wealth,
-            "RT": runtime,
-        }
-        return calculate_metric_output
+            calculate_metric_output = {
+                "logdir": self.logdir,
+                "DCW": daily_cumulative_wealth,
+                "CW": final_cumulative_wealth,
+                "APY": annual_percentage_yield,
+                "SR": sharpe_ratio,
+                "VR": volatility_risk,
+                "DDD": daily_drawdown,
+                "DMDD": daily_maximum_drawdown,
+                "MDD": maximum_drawdown,
+                "ATO": average_turnover,
+                "TCW": transaction_costs_wealth,
+                "RT": runtime,
+            }
+            return calculate_metric_output

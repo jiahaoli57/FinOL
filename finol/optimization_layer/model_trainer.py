@@ -162,10 +162,9 @@ class ModelTrainer:
             # "last_model": model,
             # "best_model": best_model
         }
-        # print(
-        #     best_model
-        # )
-        torch.save(model, self.logdir + "/" + add_prefix("last_model.pt"))
+
+        # torch.save(model, self.logdir + "/" + add_prefix("last_model.pt"))
+        torch.save(model, self.logdir + "/" + add_prefix("best_model.pt"))
         return train_model_output
 
 

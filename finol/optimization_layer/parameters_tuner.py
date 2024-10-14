@@ -33,7 +33,6 @@ class ParametersTuner:
         self.load_dataset_output = load_dataset_output
         self.train_loader = load_dataset_output["train_loader"]
         self.val_loader = load_dataset_output["val_loader"]
-        self.test_loader = load_dataset_output["test_loader_"]
         self.logdir = load_dataset_output["logdir"]
 
     def sample_params(self, trial: optuna.Trial) -> None:
@@ -48,13 +47,13 @@ class ParametersTuner:
 
         for param_name, param_space in model_sampled_params.items():
             param_type = param_space["type"]
-            param_range = param_space["range"]
-            param_step = param_space["step"]
 
             if param_type == "int":
-                self.sampled_params[param_name] = trial.suggest_int(param_name, *param_range, step=param_step)
+                self.sampled_params[param_name] = trial.suggest_int(param_name, *param_space["range"])
             elif param_type == "float":
-                self.sampled_params[param_name] = trial.suggest_float(param_name, *param_range, step=param_step)
+                self.sampled_params[param_name] = trial.suggest_float(param_name, *param_space["range"])
+            elif param_type == "categorical":
+                self.sampled_params[param_name] = trial.suggest_categorical(param_name, *param_space["choices"])
             else:
                 raise ValueError(f"Invalid parameter type: {param_type}")
 
@@ -74,9 +73,7 @@ class ParametersTuner:
 
         train_loss_list = []
         val_loss_list = []
-        test_loss_list = []
         best_val_loss = float("inf")
-        value = float("inf")
 
         for e in tqdm(range(self.config["NUM_EPOCHES"]), desc="Training"):
             model.train()
@@ -109,8 +106,8 @@ class ParametersTuner:
                     val_loss /= len(self.val_loader)
                     val_loss_list.append(val_loss)
                     # value = sum(val_loss_list) / len(val_loss_list)
-                    value = min(val_loss_list)  # use this
-                    # value = val_loss  # real time val loss
+                    # value = min(val_loss_list)  # lowest point
+                    value = val_loss  # final point
 
                     if val_loss < best_val_loss:
                         best_val_loss = val_loss
@@ -130,17 +127,18 @@ class ParametersTuner:
         :return: Initialized Optuna sampler object.
         """
         sampler_name = self.config["SAMPLER_NAME"]
-        sampler_kwargs = {"seed": self.config["MANUAL_SEED"]}
+        sampler_kwargs = {}
+        # sampler_kwargs = {"seed": self.config["MANUAL_SEED"]}
 
-        if sampler_name == "GridSampler":
-            model_sampled_params = self.config["MODEL_PARAMS_SPACE"][self.config["MODEL_NAME"]]
-            search_space = {}
-            for param_name, param_space in model_sampled_params.items():
-                param_type = param_space["type"]
-                param_range = param_space["range"]
-                if param_type == "int" or param_type == "float":
-                    search_space[param_name] = param_range
-            sampler_kwargs = {"search_space": search_space}
+        # if sampler_name == "GridSampler":
+        #     model_sampled_params = self.config["MODEL_PARAMS_SPACE"][self.config["MODEL_NAME"]]
+        #     search_space = {}
+        #     for param_name, param_space in model_sampled_params.items():
+        #         param_type = param_space["type"]
+        #         param_range = param_space["range"]
+        #         if param_type == "int" or param_type == "float":
+        #             search_space[param_name] = param_range
+        #     sampler_kwargs = {"search_space": search_space}
 
         return getattr(optuna.samplers, sampler_name)(**sampler_kwargs)
 

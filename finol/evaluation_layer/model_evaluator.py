@@ -30,9 +30,13 @@ class ModelEvaluator:
         economic_distillation_output = None
         if self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["INCLUDE_INTERPRETABILITY_ANALYSIS"] or self.config["INTERPRETABLE_ANALYSIS_CONFIG"]["INCLUDE_ECONOMIC_DISTILLATION"]:
             economic_distillation_output = EconomicDistiller(self.load_dataset_output, self.train_model_output).economic_distillation()
+            print("economic_distillation_output")
+            print(economic_distillation_output)
 
         # Step 1: Calculate the results of the model
         calculate_metric_output = MetricCalculator(self.load_dataset_output, self.train_model_output).calculate_metric()
+        print("calculate_metric_output")
+        print(calculate_metric_output)
 
         # Step 2: Calculate the results of the model
         load_benchmark_output = BenchmarkLoader(calculate_metric_output, economic_distillation_output).load_benchmark()
@@ -43,3 +47,4 @@ class ModelEvaluator:
         # send_message_dingding(load_benchmark_output)
         evaluate_model_output = load_benchmark_output
         return evaluate_model_output
+

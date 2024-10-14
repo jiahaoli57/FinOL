@@ -427,7 +427,7 @@ msgstr ""
 
 #: ../../source/api/config.rst:217
 msgid ""
-"``BruteForceSampler``, ``CmaEsSampler``, ``GridSampler``, "
+"``BruteForceSampler``, ``CmaEsSampler``, "
 "``NSGAIISampler``, ``NSGAIIISampler``, ``QMCSampler``, ``RandomSampler``,"
 " ``TPESampler``, ``GPSampler``."
 msgstr ""

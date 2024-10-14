@@ -44,8 +44,8 @@ class FinOLAPP:
         # self.root.option_add("*Font", default_font)
         # print(font.families())
 
-        # sv_ttk.set_theme("light")
-        sv_ttk.set_theme("dark")
+        sv_ttk.set_theme("light")
+        # sv_ttk.set_theme("dark")
 
         # self.root.tk.call('source', 'forest-light.tcl')
         # ttk.Style().theme_use("vista")  # ('winnative', 'clam', 'alt', 'default', 'classic', 'vista', 'xpnative')
@@ -130,14 +130,14 @@ class FinOLAPP:
         docs_frame = ttk.Frame(left_frame)
         docs_frame.pack(side='bottom', pady=10)
 
-        docs_left = ttk.Label(docs_frame, text="View Docs ↗", foreground="azure", cursor="hand2")
+        docs_left = ttk.Label(docs_frame, text="View Docs ↗", cursor="hand2")
         docs_left.pack(side='left', padx=8, pady=10)
         def open_docs_left(event):
             import webbrowser
             webbrowser.open_new("https://finol.readthedocs.io/en/latest/api/config.html")
         docs_left.bind("<Button-1>", open_docs_left)
 
-        docs_middle = ttk.Label(docs_frame, text="Github ↗", foreground="azure", cursor="hand2")
+        docs_middle = ttk.Label(docs_frame, text="Github ↗", cursor="hand2")
         docs_middle.pack(side='left', padx=8, pady=10)
         def open_docs_middle(event):
             import webbrowser
@@ -353,7 +353,7 @@ class FinOLAPP:
         self.create_entry(self.optimization_config_frame, "Number of Trials:", 101, 0, self.config["NUM_TRIALS"], "IntVar", ["NUM_TRIALS"])
 
         # SAMPLER_NAME
-        options = ["BruteForceSampler", "CmaEsSampler", "GridSampler", "NSGAIISampler", "NSGAIIISampler", "QMCSampler",
+        options = ["BruteForceSampler", "CmaEsSampler", "NSGAIISampler", "NSGAIIISampler", "QMCSampler",
                    "RandomSampler", "TPESampler", "GPSampler",]
         self.create_dropdown(self.optimization_config_frame, options, "Select Sampler:", 101, 2, options.index(self.config["SAMPLER_NAME"]), "StringVar", ["SAMPLER_NAME"])
 
@@ -421,7 +421,7 @@ class FinOLAPP:
         # 放置文本框
         # self.text = tk.Text(bottom_right_frame, width=130, height=15, font="TkDefaultFont", )
         # self.text_widget = tk.Text(bottom_right_frame, wrap=tk.WORD, width=130, height=20, font="TkDefaultFont", fg="blue", bg="lightyellow", bd=2, padx=10, pady=10, borderwidth=0)
-        self.text_widget = tk.Text(bottom_right_frame, wrap=tk.WORD, width=160, height=30,  bg="gray16", bd=2, padx=10, pady=10, borderwidth=0)
+        self.text_widget = tk.Text(bottom_right_frame, wrap=tk.WORD, width=160, height=30,  bg="gray90", bd=2, padx=10, pady=10, borderwidth=0)
         self.text_widget.pack(side=tk.LEFT, padx=10, pady=10, fill='both', expand=True)
 
         # 添加滚动条

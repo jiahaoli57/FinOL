@@ -129,10 +129,17 @@ class EconomicDistiller:
                 current_num_features = self.detailed_num_features[unit]
                 mean_result = torch.mean(every_day_att_mean[pre_num_features: current_num_features+pre_num_features])
                 plt.bar(unit, mean_result)
+                print(f"unit, mean_result: {unit, mean_result}")
                 pre_num_features = current_num_features
 
-            plt.xlabel("Features")
-            plt.ylabel("Importance of Features")
+            plot_labels = {
+                "en": ("Features", "Coefficients"),
+                "zh_CN": ("特征", "特征重要程度"),
+                "zh_TW": ("特徵", "特徵重要程度")
+            }
+            xlabel, ylabel = plot_labels[self.config["PLOT_LANGUAGE"]]
+            plt.xlabel(xlabel)
+            plt.ylabel(ylabel)
             plt.title(self.config["DATASET_NAME"])
             plt.grid(True)
             plt.tight_layout()
@@ -195,12 +202,14 @@ class EconomicDistiller:
             for i in range(mean_coef_array.shape[1]):
                 plt.plot(mean_coef_array[:, i], color="black", marker=self.config["MARKERS"][i], markevery=self.config["MARKEVERY"][self.config["DATASET_NAME"]], alpha=0.5)
             plt.title(self.config["DATASET_NAME"])
-            if self.config["PLOT_CHINESE"]:
-                plt.ylabel("特征重要程度")
-                plt.xlabel("交易期")
-            else:
-                plt.ylabel("Coefficients")
-                plt.xlabel("Trading Periods")
+            plot_labels = {
+                "en": ("Trading Periods", "Coefficients"),
+                "zh_CN": ("交易期", "特征重要程度"),
+                "zh_TW": ("交易期", "特徵重要程度")
+            }
+            xlabel, ylabel = plot_labels[self.config["PLOT_LANGUAGE"]]
+            plt.xlabel(xlabel)
+            plt.ylabel(ylabel)
             plt.legend(self.overall_feature_list)
             plt.grid(True)
             plt.show()
@@ -210,12 +219,14 @@ class EconomicDistiller:
             vmax = max(abs(np.max(mean_coef_array)), abs(np.min(mean_coef_array)))
             plt.imshow(mean_coef_array.T, aspect="auto", alpha=0.6, cmap="bwr", vmax=vmax, vmin=-vmax)
             plt.title(self.config["DATASET_NAME"])
-            if self.config["PLOT_CHINESE"]:
-                plt.ylabel("特征")
-                plt.xlabel("交易期")
-            else:
-                plt.ylabel("Feature")
-                plt.xlabel("Trading Periods")
+            plot_labels = {
+                "en": ("Trading Periods", "Feature"),
+                "zh_CN": ("交易期", "特征"),
+                "zh_TW": ("交易期", "特徵")
+            }
+            xlabel, ylabel = plot_labels[self.config["PLOT_LANGUAGE"]]
+            plt.xlabel(xlabel)
+            plt.ylabel(ylabel)
 
             overall_feature_list = []
             if self.config["PLOT_CHINESE"]:

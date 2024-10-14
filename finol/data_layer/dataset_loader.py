@@ -384,7 +384,7 @@ class DatasetLoader:
         test_start = pd.to_datetime(self.config["DATASET_SPLIT_CONFIG"][self.config["DATASET_NAME"]]["TEST_START_TIMESTAMP"])
         test_end = pd.to_datetime(self.config["DATASET_SPLIT_CONFIG"][self.config["DATASET_NAME"]]["TEST_END_TIMESTAMP"])
 
-        train = df[df.index <= train_end]
+        train = df[(df.index >= train_start) & (df.index <= train_end)]
         val = df[(df.index >= val_start) & (df.index <= val_end)]
         test = df[(df.index >= test_start) & (df.index <= test_end)]
         return train, val, test

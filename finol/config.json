@@ -5,7 +5,7 @@
     "CHECK_UPDATE": false,
     "DOWNLOAD_DATA": false,
     "_note2": "-------------------------------------- Data Layer Configuration ----------------------------------------",
-    "LOAD_LOCAL_DATALOADER": false,
+    "LOAD_LOCAL_DATALOADER": true,
     "DATASET_NAME": "DJIA",
     "DATASET_SPLIT_CONFIG": {
         "NYSE(O)": {
@@ -102,7 +102,7 @@
     "DATA_AUGMENTATION_CONFIG": {
         "WINDOW_DATA": {
             "INCLUDE_WINDOW_DATA": true,
-            "WINDOW_SIZE": 60
+            "WINDOW_SIZE": 30
         },
         "IMAGE_DATA": {
             "INCLUDE_IMAGE_DATA": false,
@@ -124,7 +124,7 @@
         "CustomDataset": 0
     },
     "_note3": "-------------------------------------- Model Layer Configuration ---------------------------------------",
-    "MODEL_NAME": "AlphaPortfolio",
+    "MODEL_NAME": "DNN",
     "MODEL_PARAMS": {
         "AlphaPortfolio": {
             "NUM_LAYERS": 3,
@@ -156,9 +156,9 @@
             "DROPOUT": 0.1
         },
         "DNN": {
-            "NUM_LAYERS": 2,
-            "HIDDEN_SIZE": 512,
-            "DROPOUT": 0.25
+            "NUM_LAYERS": 4,
+            "HIDDEN_SIZE": 32,
+            "DROPOUT": 0.0
         },
         "GRU": {
             "NUM_LAYERS": 2,
@@ -278,7 +278,7 @@
                 "type": "int",
                 "range": [
                     1,
-                    12
+                    4
                 ],
                 "step": 1
             },
@@ -294,7 +294,7 @@
                 "type": "float",
                 "range": [
                     0,
-                    0.5
+                    0
                 ],
                 "step": 0.05
             }
@@ -505,26 +505,26 @@
         }
     },
     "_note4": "----------------------------------- Optimization Layer Configuration -----------------------------------",
-    "NUM_EPOCHES": 200,
+    "NUM_EPOCHES": 10,
     "SAVE_EVERY": 1,
-    "OPTIMIZER_NAME": "AdamW",
+    "OPTIMIZER_NAME": "Adam",
     "LEARNING_RATE": 0.004,
     "CRITERION_NAME": "LogWealth",
     "LAMBDA_L2": 0.005,
-    "TUNE_PARAMETERS": false,
-    "NUM_TRIALS": 30,
+    "TUNE_PARAMETERS": true,
+    "NUM_TRIALS": 50,
     "SAMPLER_NAME": "RandomSampler",
-    "PRUNER_NAME": "MedianPruner",
+    "PRUNER_NAME": "NopPruner",
     "WRAPPED_PRUNER_NAME": "MedianPruner",
     "_note5": "------------------------------------ Evaluation Layer Configuration ------------------------------------",
-    "PLOT_LANGUAGE": "en",
+    "PLOT_LANGUAGE": "zh_CN",
     "PROP_WINNERS": 0.5,
     "INTERPRETABLE_ANALYSIS_CONFIG": {
         "INCLUDE_INTERPRETABILITY_ANALYSIS": false,
         "INCLUDE_ECONOMIC_DISTILLATION": false,
         "PROP_DISTILLED_FEATURES": 0.7,
         "DISTILLER_NAME": "Lasso",
-        "Y_NAME": "Portfolios"
+        "Y_NAME": "Scores"
     },
     "MARKERS": [
         "o",

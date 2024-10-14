@@ -225,7 +225,7 @@ Optimization Layer Configuration
 ~~~~~~~~~~~~~~~~
 
 :Type: str
-:Options:  ``BruteForceSampler``, ``CmaEsSampler``, ``GridSampler``, ``NSGAIISampler``, ``NSGAIIISampler``, ``QMCSampler``, ``RandomSampler``, ``TPESampler``, ``GPSampler``.
+:Options:  ``BruteForceSampler``, ``CmaEsSampler``, ``NSGAIISampler``, ``NSGAIIISampler``, ``QMCSampler``, ``RandomSampler``, ``TPESampler``, ``GPSampler``.
 :Description: Specifies the algorithm to be used for hyper-parameters tuning. See `optuna.samplers <https://optuna.readthedocs.io/en/stable/reference/samplers/index.html>`__ and `Which sampler should be used? <https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/003_efficient_optimization_algorithms.html#which-sampler-and-pruner-should-be-used>`__ for more details.
 
 ``PRUNER_NAME``

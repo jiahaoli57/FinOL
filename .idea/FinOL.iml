@@ -6,7 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/finol/logdir" />
       <excludeFolder url="file://$MODULE_DIR$/FinOL.egg-info" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.9 (FinOL)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Remote Python 3.8.10 (sftp://root@connect.bjb1.seetacloud.com:50478/root/miniconda3/bin/python3)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
