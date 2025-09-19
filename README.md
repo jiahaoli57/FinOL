@@ -9,7 +9,6 @@
 [![Read the Docs](https://readthedocs.org/projects/optuna/badge/?version=latest)](https://finol.readthedocs.io/en/latest/)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20windows%20%7C%20macos-lightgrey)](Platform)
 [![License](https://img.shields.io/github/license/jiahaoli57/FinOL)](LICENSE)
-[![PyPI Downloads](https://img.shields.io/pypi/dm/finol)](https://pypi.org/project/finol)
 
 [//]: # ([![Discord]&#40;https://img.shields.io/discord/1201132123722104902&#41;]&#40;https://discord.gg/KCXQt7r3&#41;)
 [//]: # ([![Document]&#40;https://img.shields.io/badge/docs-latest-red&#41;]&#40;https://finol.readthedocs.io/en/latest/&#41;)
@@ -31,8 +30,6 @@ but also develops extensive benchmark results for fair comparisons.
 
 | Update                                                                                                                               | Status                            | Label        |
 |--------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------|:-------------|
-| New release! ``FinOL`` is going to release the official website                                                                      | Coming soon......                 | Release      |
-| New metric! ``FinOL`` is going to support the [_t_-test](https://www.sciencedirect.com/science/article/pii/S0004370215000168) metric | Coming soon......                 | Enhancement  |
 | New feature! ``FinOL`` now supports the [Image Input](https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268) feature           | Supported since 26 September 2024 | Enhancement  |
 | New model! ``FinOL`` now supports the [CNN-JF](https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268) model                    | Supported since 26 September 2024 | Enhancement  |
 | New model! ``FinOL`` now supports the [AlphaStock](https://dl.acm.org/doi/abs/10.1145/3292500.3330647) model                         | Supported since 20 September 2024 | Enhancement  |
