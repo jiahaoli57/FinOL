@@ -23,12 +23,6 @@ but also develops extensive benchmark results for fair comparisons.
   * - Update
     - Status
     - Label
-  * - New release! ``FinOL`` is going to release the official website
-    - Coming soon......
-    - |:rocket:| Release
-  * - New metric! ``FinOL`` is going to support the `t-test <https://www.sciencedirect.com/science/article/pii/S0004370215000168>`__ metric
-    - Coming soon......
-    - |:hammer_and_wrench:| Enhancement
   * - New feature! ``FinOL`` now supports the `Image Input <https://onlinelibrary.wiley.com/doi/epdf/10.1111/jofi.13268>`__ feature
     - Supported since 26 September 2024
     - |:hammer_and_wrench:| Enhancement
